@@ -6,37 +6,39 @@
 
 
 design {                          /* top level struktura */
+  color:               #000000;   /* èerné písmo */
+  background:     #FFFFFF none;   /* pozadí bílé bez obrázku */
   display:               block;   /* celé je to blok */
   border:        solid red 1px;   /* s rámeèkem okolo sebe */
   margin:                  1em;   /* okolo je kus volného místa */
-	font:     1em "Arial" normal;   /* písmo standardní velikosti */
+	font:     normal 1em "Arial";   /* písmo standardní velikosti */
 }
 
 design header {                   /* souhrné informace jako blok */
   font-size:               2em;   /* vìtší písmo */
   display:               block;   /* je to blok */
   border-bottom: solid red 1px;   /* se spodní pøíèkou */
-  background-color:    #FFFFCC;   /* decentní barva pozadí */
-  margin:                 none;   /* bez okrajù */
+  background:     #FFFFCC none;   /* decentní barva pozadí bez obrázku */
+  margin:                  0px;   /* bez okrajù */
   padding-left:          0.5em;   /* vnitøní okraj vlevo */
   padding-right:         0.5em;   /* vnitøní okraj vpravo */
 }
 
 name-short {        /* krátké jméno */
   color:               #FF0000;   /* barevnì */
-  margin:                 none;   /* bez okrajù */
+  margin:                  0px;   /* bez okrajù */
   padding:                 0em;   /* bez výplnì */
 }
 
 version {           /* verze modulu */
   color:               #0000FF;   /* barevnì */
-  margin:                 none;   /* bez okrajù */
+  margin:                  0px;   /* bez okrajù */
   padding:                 0em;   /* bez výplnì */
 }
 
 state {             /* stav modulu */
   color:               #00CC00;   /* barevnì */
-  margin:                 none;   /* bez okrajù */
+  margin:                  0px;   /* bez okrajù */
   padding:                 0em;   /* bez výplnì */
 }
 
@@ -45,7 +47,7 @@ anotation {                       /* standardní text */
   margin:                  1em;   /* mezera vnì */
   border:        solid red 1px;   /* ohranièení */
   padding:               0.3em;   /* mezera uvnitø */
-  background-color:    #FFFFCC;   /* decentní barva pozadí */
+  background:     #FFFFCC none;   /* decentní barva pozadí bez obrázku */
 }
 
 br {                              /* odøádkování v odstavci */
