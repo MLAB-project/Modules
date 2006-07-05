@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="windows-1250"?>
-<?xml-stylesheet href="test.css" type="text/css" ?>
-<!DOCTYPE popis SYSTEM "test.dtd">
+<?xml version="1.0" encoding="windows-1250" ?>
+<?xml-stylesheet href="..\..\..\Web\CSS\ProjectInfo.css" type="text/css" ?>
+
 <design>
   <header>
+    <sort>
+      MODULE
+    </sort>
     <name-short>
       PICPGR3
     </name-short>
@@ -13,17 +16,43 @@
       active
     </state>
   </header>
-  <picture>
-    <img href="PICPGR301A_Small.jpg">Obrázek</img>
-  </picture>
-  <anotation lang="cs">
-    Modul programátoru procesorů PIC připojený na paralelni port PC. Obsahuje
-    obvody pro programování a napájecí zdroj +5V pro napájení cílové aplikace.
-    <br />
-    Další text.
-  </anotation>
-  <anotation lang="en">
-    Simple programmer for PIC processors. Uses PC printer port. Contains power
-    supply +5V for target design.
-  </anotation>
+  <data>
+    <name-long lang="cs">
+      Programátor procesorů PIC
+    </name-long>
+    <name-long lang="en">
+      Programmer for PIC processors
+    </name-long>
+    <authors>
+      <author>
+        Milan Horkel
+      </author>
+      <author>
+        Ferda Mravenec
+      </author>
+    </authors>
+    <picture>
+      PICPGR301A_Small.jpg
+    </picture>
+    <annotations>
+      <annotation lang="cs">
+        Modul programátoru procesorů PIC připojený na paralelní port PC. Obsahuje
+        obvody pro programování a napájecí zdroj +5V pro napájení cílové aplikace.
+        <br />
+        Další text.
+      </annotation>
+      <annotation lang="en">
+        Simple programmer for PIC processors. Uses PC printer port. Contains power
+        supply +5V for target design.
+      </annotation>
+    </annotations>
+    <errors>
+      <error lang="cs">
+        Žádné chyby.
+      </error>
+      <error lang="en">
+        No errors.
+      </error>
+    </errors>
+  </data>
 </design>
