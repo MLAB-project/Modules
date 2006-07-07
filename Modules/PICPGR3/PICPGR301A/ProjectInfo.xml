@@ -3,9 +3,9 @@
 <!DOCTYPE design SYSTEM "../../../Web/CSS/ProjectInfo.dtd">
 <design>
   <header>
-    <sort>
+    <type>
       MODULE
-    </sort>
+    </type>
     <name-short>
       PICPGR3
     </name-short>
@@ -15,6 +15,9 @@
     <state>
       active
     </state>
+    <sort-key>
+      PROGRAMMER CPU_PIC
+    </sort-key>
   </header>
   <data>
     <name-long lang="cs">
