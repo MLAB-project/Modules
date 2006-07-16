@@ -1,4 +1,0 @@
-<!ELEMENT design    (header, picture, anotation+)>
-<!ELEMENT header    (#PCDATA)>
-<!ELEMENT picture   (#PCDATA)>
-<!ELEMENT anotation (#PCDATA)>
