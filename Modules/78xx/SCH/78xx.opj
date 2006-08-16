@@ -1,0 +1,29 @@
+(ExpressProject "78xx"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\78xx.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x"))
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (TITLE_MLAB
+      (LibraryName "C:\LIBRARY\ORCAD9X\SYMBOLS.OLB")
+      (DeviceIndex "0"))
+    (JUMP2X3
+      (FullPartName "JUMP2X3.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\JUMP.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -4 -30 0 200 0 289"))
+      (Tab 0))))

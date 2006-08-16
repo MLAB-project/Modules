@@ -1,0 +1,31 @@
+*PADS-ECO-V3.0-MILS*
+*REMARK*  old file: C:\Program Files\padspwr\Files\ecogtmp0.asc
+*REMARK*  new file: C:\Program Files\padspwr\Files\ecogtmp1.asc
+*REMARK*  created by ECOGEN (Version 6.0g) on 7.5.2005 11:35:19
+*DELPIN*
+J5.1  N03369
+J5.2  N03338
+J5.3  N03369
+J5.4  N03338
+J6.1  N01097
+J6.2  N01066
+J6.3  N01097
+J6.4  N01066
+*DELPART*
+J5  JUMP2X2
+J6  JUMP2X2
+*PART*
+J1  JUMP2X3
+J2  JUMP2X3
+*NET*
+*SIGNAL*  N01066
+J1.2  J1.4  J1.6
+*SIGNAL*  N01097
+J1.1  J1.3  J1.5
+*SIGNAL*  N03338
+J2.2  J2.4  J2.6
+*SIGNAL*  N03369
+J2.1  J2.3  J2.5
+
+*REMARK*  Deleted pins: 8,  Added pins: 12
+*END*

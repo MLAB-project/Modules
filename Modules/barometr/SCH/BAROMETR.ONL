@@ -1,0 +1,446 @@
+(PCB BAROMETR
+ (description
+  (timeStamp "2005 06 07 15 42 43")
+  (program "CAPTURE.EXE" (Version "9.2.448 - D"))
+  (source "Original data from OrCAD/CAPTURE schematic")
+  (title "cidla")
+  (date "Tuesday, June 07, 2005")
+  (document "barometr")
+  (revision "1.00")
+  (organization "")
+  (address1 "")
+  (address2 "")
+  (address3 "")
+  (address4 "")
+  (partvaluecombine "{Value}")
+  (pcbfootprintcombine "{Device},{Value}@{PCB Footprint}"))
+ (structure )
+ (placement
+  (component "C-ELYTD"
+   (place C2
+    (property 
+     ("PCB Footprint" ELYTD)
+     (Device "C-ELYT")
+     (timestamp 00000531)
+     ("Source Package" "C-ELYTD")
+     (Value 47uF))))
+  (component FIDU
+   (place M8
+    (property 
+     ("PCB Footprint" FIDU)
+     (Device FIDU)
+     (timestamp 0000014C)
+     ("Source Package" FIDU)
+     (Value FIDU)))
+   (place M9
+    (property 
+     ("PCB Footprint" FIDU)
+     (Device FIDU)
+     (timestamp 0000015E)
+     ("Source Package" FIDU)
+     (Value FIDU))))
+  (component BAROMETER_MODULE
+   (place S1
+    (property 
+     ("PCB Footprint" ms5534a)
+     (Device ms5534a)
+     (timestamp 000002EA)
+     ("Source Package" BAROMETER_MODULE)
+     (Value BAROMETER_MODULE))))
+  (component 4049/SO
+   (place U1
+    (property 
+     ("PCB Footprint" SO14_150)
+     (Device SO14_150)
+     (timestamp 00000784)
+     ("Source Package" 4049/SO)
+     (Value 4049/SO))))
+  (component JUMP2X3
+   (place J1
+    (property 
+     ("PCB Footprint" JUMP2X3)
+     (Device JUMP2X3)
+     (timestamp 00000170)
+     ("Source Package" JUMP2X3)
+     (Value JUMP2X3))))
+  (component R0805
+   (place R1
+    (property 
+     ("PCB Footprint" R0805)
+     (Device R)
+     (timestamp 00000B2B)
+     ("Source Package" R0805)
+     (Value 15M)))
+   (place R2
+    (property 
+     ("PCB Footprint" R0805)
+     (Device R)
+     (timestamp 00000B41)
+     ("Source Package" R0805)
+     (Value 330K))))
+  (component JUMP2X4
+   (place J2
+    (property 
+     ("PCB Footprint" JUMP2X4)
+     (Device JUMP2X4)
+     (timestamp 000003AF)
+     ("Source Package" JUMP2X4)
+     (Value JUMP2X4))))
+  (component C0805
+   (place C1
+    (property 
+     ("PCB Footprint" C0805)
+     (Device C)
+     (timestamp 000001C6)
+     ("Source Package" C0805)
+     (Value 100nF)))
+   (place C3
+    (property 
+     ("PCB Footprint" C0805)
+     (Device C)
+     (timestamp 00000EF1)
+     ("Source Package" C0805)
+     (Value C0805)))
+   (place C4
+    (property 
+     ("PCB Footprint" C0805)
+     (Device C)
+     (timestamp 00000F07)
+     ("Source Package" C0805)
+     (Value C0805))))
+  (component CROSS
+   (place M5
+    (property 
+     ("PCB Footprint" CROSS)
+     (Device CROSS)
+     (timestamp 00000116)
+     ("Source Package" CROSS)
+     (Value CROSS)))
+   (place M6
+    (property 
+     ("PCB Footprint" CROSS)
+     (Device CROSS)
+     (timestamp 00000128)
+     ("Source Package" CROSS)
+     (Value CROSS)))
+   (place M7
+    (property 
+     ("PCB Footprint" CROSS)
+     (Device CROSS)
+     (timestamp 0000013A)
+     ("Source Package" CROSS)
+     (Value CROSS))))
+  (component HOLE_M3
+   (place M1
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 00000065)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3)))
+   (place M2
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 00000077)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3)))
+   (place M3
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 00000089)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3)))
+   (place M4
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 0000009B)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3))))
+  (component XTAL010/LG
+   (place X1
+    (property 
+     ("PCB Footprint" XTAL010/LG)
+     (Device XTAL)
+     (timestamp 00000662)
+     ("Source Package" XTAL010/LG)
+     (Value "32,768 kHz"))))
+  (component 1N4007
+   (place D1
+    (property 
+     ("PCB Footprint" DO41)
+     (Device D)
+     (timestamp 000001B0)
+     ("Source Package" 1N4007)
+     (Value 1N4007)))))
+ (library
+  (image XTAL010/LG
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_XTAL.OLB)
+    (Device XTAL))
+   (pin 999 A
+    (property 
+     (pinname A)
+     (pintype 4)))
+   (pin 999 B
+    (property 
+     (pinname B)
+     (pintype 4)))
+   (pin 999 G1
+    (property 
+     (pinname G1)
+     (pintype 4))))
+  (image 4049/SO
+   (property 
+    (sourcelib "C:\\PROGRAM FILES\\ORCADLITE 92\\CAPTURE\\LIBRARY\\GATE.OLB"))
+   (pin 999 3
+    (property 
+     (pinname I_A)
+     (pintype 0)))
+   (pin 999 2
+    (property 
+     (pinname O_A)
+     (pintype 2)))
+   (pin 999 1
+    (property 
+     (pinname VCC)
+     (pintype 7)))
+   (pin 999 8
+    (property 
+     (pinname VSS)
+     (pintype 7)))
+   (pin 999 5
+    (property 
+     (pinname I_B)
+     (pintype 0)))
+   (pin 999 4
+    (property 
+     (pinname O_B)
+     (pintype 2)))
+   (pin 999 7
+    (property 
+     (pinname I_C)
+     (pintype 0)))
+   (pin 999 6
+    (property 
+     (pinname O_C)
+     (pintype 2)))
+   (pin 999 9
+    (property 
+     (pinname I_D)
+     (pintype 0)))
+   (pin 999 10
+    (property 
+     (pinname O_D)
+     (pintype 2)))
+   (pin 999 11
+    (property 
+     (pinname I_E)
+     (pintype 0)))
+   (pin 999 12
+    (property 
+     (pinname O_E)
+     (pintype 2)))
+   (pin 999 14
+    (property 
+     (pinname I_F)
+     (pintype 0)))
+   (pin 999 15
+    (property 
+     (pinname O_F)
+     (pintype 2))))
+  (image R0805
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_RLC.OLB)
+    (Device R))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4))))
+  (image C0805
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_RLC.OLB)
+    (Device C))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4))))
+  (image "C-ELYTD"
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_RLC.OLB)
+    (Device "C-ELYT"))
+   (pin 999 A
+    (property 
+     (pinname A)
+     (pintype 4)))
+   (pin 999 C
+    (property 
+     (pinname C)
+     (pintype 4))))
+  (image BAROMETER_MODULE
+   (property 
+    (sourcelib C:\\LIBRARY\\KAKLIK\\ORCAD9X\\SENSORS.OLB))
+   (pin 999 5
+    (property 
+     (pinname MCLK)
+     (pintype 4)))
+   (pin 999 6
+    (property 
+     (pinname VDD)
+     (pintype 7)))
+   (pin 999 1
+    (property 
+     (pinname GND)
+     (pintype 7)))
+   (pin 999 4
+    (property 
+     (pinname DIN)
+     (pintype 0)))
+   (pin 999 3
+    (property 
+     (pinname DOUT)
+     (pintype 2)))
+   (pin 999 2
+    (property 
+     (pinname SCLK)
+     (pintype 4))))
+  (image HOLE_M3
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\PAD.OLB)
+    (Device PAD))
+   (pin 999 1
+    (property 
+     (pinname PIN)
+     (pintype 4))))
+  (image JUMP2X3
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\JUMP.OLB)
+    (Device JUMP2X3))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4)))
+   (pin 999 3
+    (property 
+     (pinname 3)
+     (pintype 4)))
+   (pin 999 4
+    (property 
+     (pinname 4)
+     (pintype 4)))
+   (pin 999 5
+    (property 
+     (pinname 5)
+     (pintype 4)))
+   (pin 999 6
+    (property 
+     (pinname 6)
+     (pintype 4))))
+  (image JUMP2X4
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\JUMP.OLB)
+    (Device JUMP2X4))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4)))
+   (pin 999 3
+    (property 
+     (pinname 3)
+     (pintype 4)))
+   (pin 999 4
+    (property 
+     (pinname 4)
+     (pintype 4)))
+   (pin 999 5
+    (property 
+     (pinname 5)
+     (pintype 4)))
+   (pin 999 6
+    (property 
+     (pinname 6)
+     (pintype 4)))
+   (pin 999 7
+    (property 
+     (pinname 7)
+     (pintype 4)))
+   (pin 999 8
+    (property 
+     (pinname 8)
+     (pintype 4))))
+  (image CROSS
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\SYMBOLS.OLB)
+    (Device CROSS)))
+  (image 1N4007
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_D.OLB)
+    (Device D))
+   (pin 999 A
+    (property 
+     (pinname A)
+     (pintype 4)))
+   (pin 999 C
+    (property 
+     (pinname C)
+     (pintype 4))))
+  (image FIDU
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\SYMBOLS.OLB)
+    (Device FIDU))))
+ (network
+  (net N02352
+   (pins
+     U1-4 U1-7))
+  (net N02430
+   (pins
+     U1-3 R1-1 C3-2 X1-A))
+  (net N02915
+   (pins
+     X1-B C4-2 R2-2))
+  (net N02317
+   (pins
+     U1-5 U1-2 R1-2 R2-1))
+  (net GND
+    (property 
+     (nettype S))
+   (pins
+     U1-8 J1-5 J1-6 M2-1 M4-1 S1-1 C4-1 U1-9 U1-11
+     J1-2 M3-1 M1-1 C1-1 C2-C D1-A J1-1 X1-G1 U1-14
+     C3-1))
+  (net VCC
+    (property 
+     (nettype S))
+   (pins
+     U1-1 S1-6 C2-A C1-2 D1-C J1-3 J1-4))
+  (net N01064
+   (pins
+     J2-4 S1-4 J2-3))
+  (net N00989
+   (pins
+     U1-6 J2-1 J2-2 S1-5))
+  (net N01139
+   (pins
+     J2-5 J2-6 S1-3))
+  (net N01214
+   (pins
+     J2-8 S1-2 J2-7)))
+)

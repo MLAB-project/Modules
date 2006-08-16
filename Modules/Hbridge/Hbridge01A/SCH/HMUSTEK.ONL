@@ -1,0 +1,608 @@
+(PCB HMUSTEK
+ (description
+  (timeStamp "2005 05 07 09 29 32")
+  (program "CAPTURE.EXE" (Version "9.2.448 CIS - D"))
+  (source "Original data from OrCAD/CAPTURE schematic")
+  (title "MLAB")
+  (date "Saturday, May 07, 2005")
+  (document "D:\\KAKLIK\\MLAB\\HBRIDGE\\HBRIDGE01A\\SCH\\HMUSTEK.DSN")
+  (revision "1.0")
+  (organization "")
+  (address1 "")
+  (address2 "")
+  (address3 "")
+  (address4 "")
+  (partvaluecombine "{Value}")
+  (pcbfootprintcombine "{Device}@{PCB Footprint}"))
+ (structure )
+ (placement
+  (component CK050
+   (place C1
+    (property 
+     ("PCB Footprint" CK050)
+     (Device C)
+     (timestamp 00001832)
+     ("Source Package" CK050)
+     (Value CK050))))
+  (component JUMP2
+   (place J10
+    (property 
+     ("PCB Footprint" JUMP2)
+     (Device JUMP2)
+     (timestamp 00001F14)
+     ("Source Package" JUMP2)
+     (Value FORW)))
+   (place J7
+    (property 
+     ("PCB Footprint" JUMP2)
+     (Device JUMP2)
+     (timestamp 00001E6B)
+     ("Source Package" JUMP2)
+     (Value RIGHT)))
+   (place J8
+    (property 
+     ("PCB Footprint" JUMP2)
+     (Device JUMP2)
+     (timestamp 00001E81)
+     ("Source Package" JUMP2)
+     (Value LEFT)))
+   (place J9
+    (property 
+     ("PCB Footprint" JUMP2)
+     (Device JUMP2)
+     (timestamp 00001EFE)
+     ("Source Package" JUMP2)
+     (Value BACK))))
+  (component FIDU
+   (place M1
+    (property 
+     ("PCB Footprint" FIDU)
+     (Device FIDU)
+     (timestamp 00000003)
+     ("Source Package" FIDU)
+     (Value FIDU)))
+   (place M2
+    (property 
+     ("PCB Footprint" FIDU)
+     (Device FIDU)
+     (timestamp 00000015)
+     ("Source Package" FIDU)
+     (Value FIDU))))
+  (component BC337
+   (place Q7
+    (property 
+     ("PCB Footprint" TO92)
+     (Device "T-CEB")
+     (timestamp 000002A9)
+     ("Source Package" BC337)
+     (Value BC337)))
+   (place Q8
+    (property 
+     ("PCB Footprint" TO92)
+     (Device "T-CEB")
+     (timestamp 000002C3)
+     ("Source Package" BC337)
+     (Value BC337)))
+   (place Q13
+    (property 
+     ("PCB Footprint" TO92)
+     (Device "T-CEB")
+     (timestamp 00000A2A)
+     ("Source Package" BC337)
+     (Value BC337)))
+   (place Q14
+    (property 
+     ("PCB Footprint" TO92)
+     (Device "T-CEB")
+     (timestamp 00000A44)
+     ("Source Package" BC337)
+     (Value BC337)))
+   (place Q15
+    (property 
+     ("PCB Footprint" TO92)
+     (Device "T-CEB")
+     (timestamp 00000A5E)
+     ("Source Package" BC337)
+     (Value BC337)))
+   (place Q2
+    (property 
+     ("PCB Footprint" TO92)
+     (Device "T-CEB")
+     (timestamp 00000219)
+     ("Source Package" BC337)
+     (Value BC337))))
+  (component LED3mm
+   (place D1
+    (property 
+     ("PCB Footprint" LED3)
+     (Device LED)
+     (timestamp 000000D5)
+     ("Source Package" LED3mm)
+     (Value LED3mm)))
+   (place D2
+    (property 
+     ("PCB Footprint" LED3)
+     (Device LED)
+     (timestamp 000000EB)
+     ("Source Package" LED3mm)
+     (Value LED3mm)))
+   (place D3
+    (property 
+     ("PCB Footprint" LED3)
+     (Device LED)
+     (timestamp 00000AE6)
+     ("Source Package" LED3mm)
+     (Value LED3mm)))
+   (place D4
+    (property 
+     ("PCB Footprint" LED3)
+     (Device LED)
+     (timestamp 00000AFC)
+     ("Source Package" LED3mm)
+     (Value LED3mm))))
+  (component JUMP2X3
+   (place J1
+    (property 
+     ("PCB Footprint" JUMP2X3)
+     (Device JUMP2X3)
+     (timestamp 00002211)
+     ("Source Package" JUMP2X3)
+     (Value JUMP2X3)))
+   (place J2
+    (property 
+     ("PCB Footprint" JUMP2X3)
+     (Device JUMP2X3)
+     (timestamp 00002241)
+     ("Source Package" JUMP2X3)
+     (Value JUMP2X3)))
+   (place J4
+    (property 
+     ("PCB Footprint" JUMP2X3)
+     (Device JUMP2X3)
+     (timestamp 000017D8)
+     ("Source Package" JUMP2X3)
+     (Value JUMP2X3))))
+  (component RL090
+   (place R1
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 0000013D)
+     ("Source Package" RL090)
+     (Value 220)))
+   (place R2
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 00000153)
+     ("Source Package" RL090)
+     (Value 220)))
+   (place R3
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 00000169)
+     ("Source Package" RL090)
+     (Value RL090)))
+   (place R4
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 0000017F)
+     ("Source Package" RL090)
+     (Value RL090)))
+   (place R5
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 00000195)
+     ("Source Package" RL090)
+     (Value RL090)))
+   (place R6
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 00000A78)
+     ("Source Package" RL090)
+     (Value 220)))
+   (place R7
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 00000A8E)
+     ("Source Package" RL090)
+     (Value 220)))
+   (place R8
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 00000AA4)
+     ("Source Package" RL090)
+     (Value 690)))
+   (place R9
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 00000ABA)
+     ("Source Package" RL090)
+     (Value 690)))
+   (place R10
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 00000AD0)
+     ("Source Package" RL090)
+     (Value 690))))
+  (component HOLE_M3
+   (place M6
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 000012C2)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3)))
+   (place M7
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 000012D4)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3)))
+   (place M8
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 000012E6)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3)))
+   (place M9
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 000012F8)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3))))
+  (component CROSS
+   (place M3
+    (property 
+     ("PCB Footprint" CROSS)
+     (Device CROSS)
+     (timestamp 00000027)
+     ("Source Package" CROSS)
+     (Value CROSS)))
+   (place M4
+    (property 
+     ("PCB Footprint" CROSS)
+     (Device CROSS)
+     (timestamp 00000039)
+     ("Source Package" CROSS)
+     (Value CROSS)))
+   (place M5
+    (property 
+     ("PCB Footprint" CROSS)
+     (Device CROSS)
+     (timestamp 0000004B)
+     ("Source Package" CROSS)
+     (Value CROSS))))
+  (component BD135
+   (place Q11
+    (property 
+     ("PCB Footprint" TO126)
+     (Device "T-EBC")
+     (timestamp 000009F6)
+     ("Source Package" BD135)
+     (Value BD135)))
+   (place Q12
+    (property 
+     ("PCB Footprint" TO126)
+     (Device "T-EBC")
+     (timestamp 00000A10)
+     ("Source Package" BD135)
+     (Value BD135)))
+   (place Q3
+    (property 
+     ("PCB Footprint" TO126)
+     (Device "T-EBC")
+     (timestamp 00000241)
+     ("Source Package" BD135)
+     (Value BD135)))
+   (place Q4
+    (property 
+     ("PCB Footprint" TO126)
+     (Device "T-EBC")
+     (timestamp 0000025B)
+     ("Source Package" BD135)
+     (Value BD135))))
+  (component 1N4007
+   (place D5
+    (property 
+     ("PCB Footprint" DO41)
+     (Device D)
+     (timestamp 0000181C)
+     ("Source Package" 1N4007)
+     (Value 1N4007))))
+  (component BD136
+   (place Q6
+    (property 
+     ("PCB Footprint" TO126)
+     (Device "T-EBC")
+     (timestamp 0000028F)
+     ("Source Package" BD136)
+     (Value BD136)))
+   (place Q9
+    (property 
+     ("PCB Footprint" TO126)
+     (Device "T-EBC")
+     (timestamp 000009C2)
+     ("Source Package" BD136)
+     (Value BD136)))
+   (place Q10
+    (property 
+     ("PCB Footprint" TO126)
+     (Device "T-EBC")
+     (timestamp 000009DC)
+     ("Source Package" BD136)
+     (Value BD136)))
+   (place Q5
+    (property 
+     ("PCB Footprint" TO126)
+     (Device "T-EBC")
+     (timestamp 00000275)
+     ("Source Package" BD136)
+     (Value BD136)))))
+ (library
+  (image BD136
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_T.OLB)
+    (Device "T-EBC"))
+   (pin 999 C
+    (property 
+     (pinname C)
+     (pintype 4)))
+   (pin 999 B
+    (property 
+     (pinname B)
+     (pintype 0)))
+   (pin 999 E
+    (property 
+     (pinname E)
+     (pintype 4))))
+  (image BC337
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_T.OLB)
+    (Device "T-CEB"))
+   (pin 999 C
+    (property 
+     (pinname C)
+     (pintype 4)))
+   (pin 999 B
+    (property 
+     (pinname B)
+     (pintype 0)))
+   (pin 999 E
+    (property 
+     (pinname E)
+     (pintype 4))))
+  (image RL090
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_RLC.OLB)
+    (Device R))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4))))
+  (image JUMP2
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\JUMP.OLB)
+    (Device JUMP2))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4))))
+  (image CK050
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_RLC.OLB)
+    (Device C))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4))))
+  (image FIDU
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\SYMBOLS.OLB)
+    (Device FIDU)))
+  (image JUMP2X3
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\JUMP.OLB)
+    (Device JUMP2X3))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4)))
+   (pin 999 3
+    (property 
+     (pinname 3)
+     (pintype 4)))
+   (pin 999 4
+    (property 
+     (pinname 4)
+     (pintype 4)))
+   (pin 999 5
+    (property 
+     (pinname 5)
+     (pintype 4)))
+   (pin 999 6
+    (property 
+     (pinname 6)
+     (pintype 4))))
+  (image CROSS
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\SYMBOLS.OLB)
+    (Device CROSS)))
+  (image HOLE_M3
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\PAD.OLB)
+    (Device PAD))
+   (pin 999 1
+    (property 
+     (pinname PIN)
+     (pintype 4))))
+  (image LED3mm
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_OPTO.OLB)
+    (Device LED))
+   (pin 999 A
+    (property 
+     (pinname A)
+     (pintype 4)))
+   (pin 999 C
+    (property 
+     (pinname C)
+     (pintype 4))))
+  (image 1N4007
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_D.OLB)
+    (Device D))
+   (pin 999 A
+    (property 
+     (pinname A)
+     (pintype 4)))
+   (pin 999 C
+    (property 
+     (pinname C)
+     (pintype 4))))
+  (image BD135
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_T.OLB)
+    (Device "T-EBC"))
+   (pin 999 C
+    (property 
+     (pinname C)
+     (pintype 4)))
+   (pin 999 B
+    (property 
+     (pinname B)
+     (pintype 0)))
+   (pin 999 E
+    (property 
+     (pinname E)
+     (pintype 4)))))
+ (network
+  (net N03589
+   (pins
+     R6-2 Q10-B))
+  (net N03499
+   (pins
+     Q12-B Q13-E))
+  (net N03434
+   (pins
+     R10-1 Q15-B))
+  (net N03715
+   (pins
+     Q14-E Q11-B))
+  (net N03297
+   (pins
+     R7-2 Q9-B))
+  (net N03241
+   (pins
+     R8-1 Q14-B))
+  (net N03470
+   (pins
+     Q13-B Q15-C R9-2))
+  (net VCC
+    (property 
+     (nettype S))
+   (pins
+     Q6-E Q5-E Q10-E Q9-E C1-2 D5-C J4-3 J4-4))
+  (net GND
+    (property 
+     (nettype S))
+   (pins
+     Q4-E Q2-E Q11-E Q15-E M6-1 M7-1 Q3-E M9-1 M8-1
+     Q12-E C1-1 D5-A J4-5 J4-6 J4-1 J4-2))
+  (net N03338
+   (pins
+     Q9-C J2-4 J2-2 Q12-C J2-6))
+  (net N03369
+   (pins
+     Q10-C J2-3 Q11-C J2-5 J2-1))
+  (net N03562
+   (pins
+     R6-1 D3-A))
+  (net N03533
+   (pins
+     D3-C Q13-C))
+  (net N03212
+   (pins
+     D4-C Q14-C))
+  (net N03270
+   (pins
+     R7-1 D4-A))
+  (net N07885
+   (pins
+     R9-1 J7-1 J7-2))
+  (net N03400
+   (pins
+     R8-2 R10-2 J8-1 J8-2))
+  (net N08068
+   (pins
+     R3-1 J9-1 J9-2))
+  (net N01128
+   (pins
+     R2-2 Q6-B))
+  (net N00985
+   (pins
+     R1-2 Q5-B))
+  (net N01454
+   (pins
+     R5-1 Q2-B))
+  (net N01640
+   (pins
+     R1-1 D2-A))
+  (net N01559
+   (pins
+     R2-1 D1-A))
+  (net N01358
+   (pins
+     Q8-B Q2-C R3-2))
+  (net N01164
+   (pins
+     D1-C Q8-C))
+  (net N01066
+   (pins
+     J1-4 J1-6 Q4-C J1-2 Q5-C))
+  (net N01193
+   (pins
+     Q8-E Q4-B))
+  (net N01266
+   (pins
+     D2-C Q7-C))
+  (net N02105
+   (pins
+     R4-1 Q7-B))
+  (net N01420
+   (pins
+     R5-2 R4-2 J10-1 J10-2))
+  (net N01324
+   (pins
+     Q3-B Q7-E))
+  (net N01097
+   (pins
+     J1-1 Q6-C J1-3 Q3-C J1-5)))
+)

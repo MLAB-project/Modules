@@ -1,0 +1,33 @@
+*PADS-ECO-V3.0-MILS*
+
+*REMARK* -- Untitled -- Sun Mar 06 10:37:38 2005
+
+
+*PART*
+D1 DO41
+
+*SET_ATTRIBUTE* PARTTYPE DO41
+"Value" ???
+
+*SET_ATTRIBUTE* DECAL DO41
+"Value" ???
+"Description" usm. dioda  do 1A  roztec 8.89mm, 350mils
+
+*NET*
+*SIGNAL* VCC 20
+J3.3 D1.1
+*SIGNAL* GND 20
+J3.1 D1.2
+*END*
+*PADS-ECO-V3.0-MILS*
+
+*REMARK* -- Untitled -- Sun Mar 06 10:49:36 2005
+
+
+*DELPIN*
+D1.2    GND
+
+*NET*
+*SIGNAL* GND 20
+D1.2 M4.1
+*END*

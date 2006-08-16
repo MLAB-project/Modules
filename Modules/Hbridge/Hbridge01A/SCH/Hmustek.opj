@@ -1,0 +1,137 @@
+(ExpressProject "Hmustek"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\hmustek.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (DRC_Scope "0")
+    (DRC_Action "0")
+    (DRC_Create_Warnings "FALSE")
+    (DRC_Check_Ports "FALSE")
+    (DRC_Check_Off-Page_Connectors "FALSE")
+    (DRC_Identical_References "TRUE")
+    (DRC_Type_Mismatch "TRUE")
+    (DRC_Report_Ports_and_Off-page_Connectors "FALSE")
+    (DRC_SDT_Compatibility "FALSE")
+    (DRC_Report_Off-grid_Objects "FALSE")
+    (DRC_Check_Unconnected_Nets "TRUE")
+    (DRC_Report_Netnames "FALSE")
+    (DRC_View_Output "FALSE")
+    (DRC_Report_File "D:\@KAKLIK\SCHEMATA\MLAB\HMUSTKY\HMUSTEK.DRC")
+    (Netlist_TAB "7")
+    (OTHER_Part_Value "{Value}")
+    (OTHER_Netlist_File "HMUSTEK.ASC")
+    (OTHER_Netlist_File2 "HMUSTEK.CMP")
+    (OTHER_View_Output "FALSE")
+    (OTHER_View_Output2 "FALSE")
+    (OTHER_Formatter "padspcb.dll")
+    (OTHER_PCB_Footprint "{Device}@{PCB Footprint}")
+    (OTHER_Switch0 "FALSE")
+    (OTHER_Switch1 "FALSE")
+    (OTHER_Switch2 "FALSE")
+    (OTHER_Switch3 "FALSE")
+    (OTHER_Switch4 "FALSE")
+    (OTHER_Switch5 "FALSE")
+    (OTHER_Switch6 "FALSE"))
+  (Folder "Outputs"
+    (File ".\hmustek.drc"
+      (Type "Report"))
+    (File ".\hmustek.asc"
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (LastUsedLibraryBrowseDirectory "C:\library\ORCAD9x")
+  (PartMRUSelector
+    (UNIPAD3
+      (FullPartName "UNIPAD3.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\PAD.OLB")
+      (DeviceIndex "0"))
+    (JUMP2X3
+      (FullPartName "JUMP2X3.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (JUMP2
+      (FullPartName "JUMP2.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (JUMP2X2
+      (FullPartName "JUMP2X2.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName "C:\LIBRARY\ORCAD9X\SYMBOLS.OLB")
+      (DeviceIndex "0"))
+    (VCC
+      (LibraryName "C:\LIBRARY\ORCAD9X\SYMBOLS.OLB")
+      (DeviceIndex "0"))
+    (CK050
+      (FullPartName "CK050.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (1N4007
+      (FullPartName "1N4007.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\COM_D.OLB")
+      (DeviceIndex "0"))
+    (JUMP2X4
+      (FullPartName "JUMP2X4.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (TITLE_MLAB
+      (LibraryName "C:\LIBRARY\ORCAD9X\SYMBOLS.OLB")
+      (DeviceIndex "0"))
+    (HOLE_M3
+      (FullPartName "HOLE_M3.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\PAD.OLB")
+      (DeviceIndex "0"))
+    (LED3mm
+      (FullPartName "LED3mm.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\COM_OPTO.OLB")
+      (DeviceIndex "0"))
+    (RL090
+      (FullPartName "RL090.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (BC337
+      (FullPartName "BC337.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\COM_T.OLB")
+      (DeviceIndex "0"))
+    (BD135
+      (FullPartName "BD135.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\COM_T.OLB")
+      (DeviceIndex "0"))
+    (BD136
+      (FullPartName "BD136.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\COM_T.OLB")
+      (DeviceIndex "0"))
+    (BC556
+      (FullPartName "BC556.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\COM_T.OLB")
+      (DeviceIndex "0"))
+    (CROSS
+      (FullPartName "CROSS.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\SYMBOLS.OLB")
+      (DeviceIndex "0"))
+    (FIDU
+      (FullPartName "FIDU.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\SYMBOLS.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\KAKLIK\MLAB\Hbridge\Hbridge01A\SCH\hmustek.dsn")
+      (Path "Design Resources"
+         "D:\KAKLIK\MLAB\Hbridge\Hbridge01A\SCH\hmustek.dsn" "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "D:\KAKLIK\MLAB\Hbridge\Hbridge01A\SCH\hmustek.dsn" "SCHEMATIC1"
+         "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -4 -30 0 200 0 293"))
+      (Tab 0))))
