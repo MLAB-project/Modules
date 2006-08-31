@@ -1,0 +1,26 @@
+*PADS-ECO-V3.0-MILS*
+*REMARK*  old file: C:\SW32\padspwr50\Files\ecogtmp0.asc
+*REMARK*  new file: C:\SW32\padspwr50\Files\ecogtmp1.asc
+*REMARK*  created by ECOGEN (Version 6.0g) on 18.4.2006 16:57:45
+*CHGPART*
+C3  C@C1206  C@C0805
+U1  DIP8_300@DIP8_300A  DIP8_300@DIP8_300
+U2  SO8_300@SO8_300  SO8_150@SO8_150
+*RENPART*
+U2  U3
+*NET*
+*SIGNAL*  GND
+U3.2  U3.3  U3.7
+
+*REMARK*  Deleted pins: 0,  Added pins: 3
+*END*
+*PADS-ECO-V3.0-MILS*
+
+*REMARK* -- OZDUAL.pcb -- Tue Apr 18 17:14:48 2006
+
+
+*DELPART*
+M7 CROSS
+M9 CROSS
+M8 CROSS
+*END*

@@ -51,7 +51,12 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Outputs"))
+      (Path "Design Resources" "D:\MLAB_kaklik\akcelerometr\SCH\gmetr.dsn")
+      (Path "Design Resources" "D:\MLAB_kaklik\akcelerometr\SCH\gmetr.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources" "D:\MLAB_kaklik\akcelerometr\SCH\gmetr.dsn"
+         "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -61,10 +66,10 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -4 -30 44 734 58 385")
-        (Scroll "148 105")
+        (Placement "44 2 3 -1 -1 -4 -23 44 866 44 490")
+        (Scroll "0 199")
         (Zoom "100")
         (Occurrence "/"))
-      (Path "D:\KAKLIK\MLAB\AKCELEROMETR\SCH\GMETR.DSN")
+      (Path "D:\MLAB_KAKLIK\AKCELEROMETR\SCH\GMETR.DSN")
       (Schematic "SCHEMATIC1")
       (Page "PAGE1"))))
