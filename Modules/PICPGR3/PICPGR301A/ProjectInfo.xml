@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="windows-1250" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <?xml-stylesheet href="../../../Web/CSS/ProjectInfo.css" type="text/css" ?>
 <!DOCTYPE design SYSTEM "../../../Web/CSS/ProjectInfo.dtd">
 <design>
@@ -21,7 +21,7 @@
   </header>
   <data>
     <name-long lang="cs">
-      Programátor procesorů PIC
+      ProgramĂˇtor procesorĹŻ PIC
     </name-long>
     <name-long lang="en">
       Programmer for PIC processors
@@ -39,10 +39,10 @@
     </picture>
     <annotations>
       <annotation lang="cs">
-        Modul programátoru procesorů PIC připojený na paralelní port PC. Obsahuje
-        obvody pro programování a napájecí zdroj +5V pro napájení cílové aplikace.
+        Modul programĂˇtoru procesorĹŻ PIC pĹ™ipojenĂ˝ na paralelnĂ­ port PC. Obsahuje
+        obvody pro programovĂˇnĂ­ a napĂˇjecĂ­ zdroj +5V pro napĂˇjenĂ­ cĂ­lovĂ© aplikace.
         <br />
-        Další text.
+        DalĹˇĂ­ text.
       </annotation>
       <annotation lang="en">
         Simple programmer for PIC processors. Uses PC printer port. Contains power
@@ -51,7 +51,7 @@
     </annotations>
     <errors>
       <error lang="cs">
-        Žádné chyby.
+        Ĺ˝ĂˇdnĂ© chyby.
       </error>
       <error lang="en">
         No errors.
