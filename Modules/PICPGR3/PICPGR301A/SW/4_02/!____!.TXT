@@ -1,0 +1,66 @@
+Programator pro PIC 16C84
+- dodelan hex format
+- dodelany prepinace ( XT, LP, ...., CP )
+- dodelana moznost spousteni programu v programatoru
+
+verze 1_3:
+- predelana procedura Delay tak, aby to chodilo i na rychlych PC
+
+verze 1_31:
+- dodelana konverze formatu souboru zejmena za ucelem snadne konverze
+  formatu HEX na format TEXT
+
+verze 1_32
+- zmenena knihovna DELAY za novou verzi ( podpora procesoru PentiumII 
+  nad 250MHz )
+
+verze 2.00
+- dopnena moznost programovani EPROM ( a OTP ) verze procesoru PIC
+- zmena v chovani prepinacu ( nejsou li nikde ani v datech ani jako
+  prepinace tak se config slovo neprogramuje
+- pro EPROM programovani se musi config slovo zadat jen v datech
+
+verze 3.00
+- odvozena z verze 2.01
+- zcela predelana vrstva propojeni s HW programatoru ( objektove, s vyhledem
+  na popdoru vice programovacich HW )
+- od verze 3.00 existuji 2 vyvojove podverze
+	VAR_MIHO - s prazdnou podporou vice hardwaru
+	VAR_PEFI - s doplnenou podporou programataru ALL03
+
+verze 3.01
+- jen znovu prelozena verze 3.00 v plne verzi s podporou jak puvodniho
+  maleho programatoru tak i programatoru ALL03
+- v teto verzi patrne nefunguji prikazy RUN, RESET a STOP
+
+verze 3.10
+- rozsahle opravy ( export a import dat, oprava prikazu RUN, STOP, RESET )
+
+verze 3.11
+- zavedeny konstanty do programu ( vyhled na procesory s vice ne 1K pameti )
+
+Udelat: - zlepsit helpy - popis formatu
+	- exit chybove kody ( program, verify a erase )
+	- pipnout pri chybe
+        - zautomatizovat rozpoznani formatu souboru pri importu
+        - v textovem formatu zavest nedefinovane hodnoty ( nejlepe ?? )
+        - v textovem formatu definovat komentare
+        - v textovem exportu uvadet v komentari vyznam configuracniho slova
+        - v HEX exportu exportovat jen platna data ( to bude obtizne,
+	  mozna bude nejsnazsi predelat datove buffery do objektu )
+
+verze 4.01
+- velmi rozsahle zmeny ve strukture programu
+- podpora mnoha druhu procesoru ( databaze ) - povinny parametr
+- error level
+- zmeny v programovacich algoritmech ( zmena casu )
+
+verze 4.02
+- primo vychazi z verze 4.01
+- doplnena podpora procesoru s algoritmem EPROM1 (stare procesory jako
+  je PIC12C508 a podobne)
+
+Udelat:	- podpora algoritmu EPROM3
+	- zpracovani prepinacu pro Cfg slovo jinych nez PIC16F
+	- export jen platnych dat ( HEX i TXT )
+
