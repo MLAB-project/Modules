@@ -1,0 +1,34 @@
+Paramatery a popis
+------------------
+
+Rozmer:		8400x6000mils (cca 213x153mm)
+Pocet vrstev:	1 (ale nelepta se}
+Tloustka:	2mm laminat + 35um med
+Prokoveni:	Ne
+Maska:		Ano
+Povrch:		HAL
+Vrtani:		Ano
+
+Jedna se o jednostranny plosny spoj tloustky 2mm s nepajivou maskou, 
+vrtanim a HAL. Medena vrstva je v cele plose souvisla, nelepta se.
+
+
+Technologicke operace
+---------------------
+
+Vykresleni filmu pro vrstvu nepajive masky
+Nepajiva maska na neleptanou med
+Vrtani
+HAL
+Ostrizeni na finalni rozmer
+
+
+Data
+----
+
+BOARD.PHO	Gerber - obrys desky
+TOP_MASK.PHO	Gerber - nepajiva maska
+DRILL.DRL	Excelon - vrtaci data
+DRILL.REP	Prumer vrtani - vrtak 3.4mm
+
+Data jsou ve formatu 3.5, jednotky jsou v mils.
