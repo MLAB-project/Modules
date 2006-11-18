@@ -1,0 +1,342 @@
+(PCB POWER_SW
+ (description
+  (timeStamp "2006 11 18 15 37 49")
+  (program "CAPTURE.EXE" (Version "9.2.448 - D"))
+  (source "Original data from OrCAD/CAPTURE schematic")
+  (title "4x Power Switch")
+  (date "Saturday, November 18, 2006")
+  (document "PowerSW")
+  (revision "1")
+  (organization "")
+  (address1 "")
+  (address2 "")
+  (address3 "")
+  (address4 "")
+  (partvaluecombine "{Value}")
+  (pcbfootprintcombine "{Device},{Value}@{PCB Footprint}"))
+ (structure )
+ (placement
+  (component JUMP2X4_CON
+   (place J2
+    (property 
+     ("PCB Footprint" JUMP2X4)
+     (Device JUMP2X4)
+     (timestamp 00012A2E)
+     ("Source Package" JUMP2X4_CON)
+     (Value JUMP2X4))))
+  (component ARK210/2
+   (place J3
+    (property 
+     ("PCB Footprint" ARK210/2)
+     (Device SCW2)
+     (timestamp 00012A0C)
+     ("Source Package" ARK210/2)
+     (Value ARK210/2)))
+   (place J4
+    (property 
+     ("PCB Footprint" ARK210/2)
+     (Device SCW2)
+     (timestamp 00013372)
+     ("Source Package" ARK210/2)
+     (Value ARK210/2)))
+   (place J5
+    (property 
+     ("PCB Footprint" ARK210/2)
+     (Device SCW2)
+     (timestamp 00013453)
+     ("Source Package" ARK210/2)
+     (Value ARK210/2)))
+   (place J6
+    (property 
+     ("PCB Footprint" ARK210/2)
+     (Device SCW2)
+     (timestamp 000134B3)
+     ("Source Package" ARK210/2)
+     (Value ARK210/2))))
+  (component 1N5818
+   (place D1
+    (property 
+     ("PCB Footprint" DO41)
+     (Device D)
+     (timestamp 00012B61)
+     ("Source Package" 1N5818)
+     (Value 1N5818)))
+   (place D2
+    (property 
+     ("PCB Footprint" DO41)
+     (Device D)
+     (timestamp 00012E3E)
+     ("Source Package" 1N5818)
+     (Value 1N5818)))
+   (place D3
+    (property 
+     ("PCB Footprint" DO41)
+     (Device D)
+     (timestamp 00012E64)
+     ("Source Package" 1N5818)
+     (Value 1N5818)))
+   (place D4
+    (property 
+     ("PCB Footprint" DO41)
+     (Device D)
+     (timestamp 00012E8B)
+     ("Source Package" 1N5818)
+     (Value 1N5818)))
+   (place D5
+    (property 
+     ("PCB Footprint" DO41)
+     (Device D)
+     (timestamp 000134F3)
+     ("Source Package" 1N5818)
+     (Value 1N5818))))
+  (component R0805
+   (place R1
+    (property 
+     ("PCB Footprint" R0805)
+     (Device R)
+     (timestamp 00000087)
+     ("Source Package" R0805)
+     (Value 100)))
+   (place R2
+    (property 
+     ("PCB Footprint" R0805)
+     (Device R)
+     (timestamp 0000009D)
+     ("Source Package" R0805)
+     (Value 100)))
+   (place R3
+    (property 
+     ("PCB Footprint" R0805)
+     (Device R)
+     (timestamp 000000B3)
+     ("Source Package" R0805)
+     (Value 100)))
+   (place R4
+    (property 
+     ("PCB Footprint" R0805)
+     (Device R)
+     (timestamp 000000C9)
+     ("Source Package" R0805)
+     (Value 100))))
+  (component SO8_2xNFET
+   (place Q1
+    (property 
+     ("PCB Footprint" SO8_2FET)
+     (Device SO8_2FET)
+     (timestamp 00000003)
+     ("Source Package" SO8_2xNFET)
+     (Value SO8_2xNFET_9926)))
+   (place Q2
+    (property 
+     ("PCB Footprint" SO8_2FET)
+     (Device SO8_2FET)
+     (timestamp 00000045)
+     ("Source Package" SO8_2xNFET)
+     (Value SO8_2xNFET_9926))))
+  (component HOLE_M3
+   (place M1
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 000127D8)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3)))
+   (place M2
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 000127EA)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3)))
+   (place M3
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 000127FC)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3)))
+   (place M4
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 0001280E)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3))))
+  (component JUMP2X1_CON
+   (place J1
+    (property 
+     ("PCB Footprint" JUMP2X1)
+     (Device JUMP2X1)
+     (timestamp 00012ACC)
+     ("Source Package" JUMP2X1_CON)
+     (Value JUMP2X1)))))
+ (library
+  (image R0805
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_RLC.OLB)
+    (Device R))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4))))
+  (image HOLE_M3
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\PAD.OLB)
+    (Device PAD))
+   (pin 999 1
+    (property 
+     (pinname PIN)
+     (pintype 4))))
+  (image JUMP2X1_CON
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\JUMP.OLB)
+    (Device JUMP2X1))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4))))
+  (image JUMP2X4_CON
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\JUMP.OLB)
+    (Device JUMP2X4))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4)))
+   (pin 999 3
+    (property 
+     (pinname 3)
+     (pintype 4)))
+   (pin 999 4
+    (property 
+     (pinname 4)
+     (pintype 4)))
+   (pin 999 5
+    (property 
+     (pinname 5)
+     (pintype 4)))
+   (pin 999 6
+    (property 
+     (pinname 6)
+     (pintype 4)))
+   (pin 999 7
+    (property 
+     (pinname 7)
+     (pintype 4)))
+   (pin 999 8
+    (property 
+     (pinname 8)
+     (pintype 4))))
+  (image ARK210/2
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_CON.OLB)
+    (Device SCW2))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4))))
+  (image 1N5818
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_D.OLB)
+    (Device D))
+   (pin 999 A
+    (property 
+     (pinname A)
+     (pintype 4)))
+   (pin 999 C
+    (property 
+     (pinname C)
+     (pintype 4))))
+  (image SO8_2xNFET
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_T.OLB)
+    (Device SO8_2FET))
+   (pin 999 D1
+    (property 
+     (pinname "D2_-1")
+     (pintype 4)))
+   (pin 999 G1
+    (property 
+     (pinname "G2_-1")
+     (pintype 0)))
+   (pin 999 S1
+    (property 
+     (pinname "S2_-1")
+     (pintype 4)))
+   (pin 999 D2
+    (property 
+     (pinname "D2_-2")
+     (pintype 4)))
+   (pin 999 G2
+    (property 
+     (pinname "G2_-2")
+     (pintype 0)))
+   (pin 999 S2
+    (property 
+     (pinname "S2_-2")
+     (pintype 4)))))
+ (network
+  (net N77576
+   (pins
+     R3-2 Q2-G1))
+  (net N77605
+   (pins
+     R4-2 Q2-G2))
+  (net N78132
+   (pins
+     R4-1 J2-3 J2-4))
+  (net N77715
+   (pins
+     D3-A J4-2 Q2-D1))
+  (net N77744
+   (pins
+     D4-A J4-1 Q2-D2))
+  (net VDD
+    (property 
+     (nettype S))
+   (pins
+     D1-C D2-C D3-C D4-C J5-2 J5-1 J6-1 D5-C))
+  (net N76250
+   (pins
+     R1-2 Q1-G1))
+  (net GND
+    (property 
+     (nettype S))
+   (pins
+     M3-1 M4-1 M1-1 M2-1 Q1-S1 J1-1 J1-2 Q1-S2 Q2-S1
+     Q2-S2 J6-2 D5-A))
+  (net N77186
+   (pins
+     R2-2 Q1-G2))
+  (net N76675
+   (pins
+     D1-A J3-2 Q1-D1))
+  (net N77773
+   (pins
+     J3-1 D2-A Q1-D2))
+  (net N78113
+   (pins
+     R3-1 J2-1 J2-2))
+  (net N80435
+   (pins
+     J2-5 J2-6 R1-1))
+  (net N77327
+   (pins
+     J2-7 J2-8 R2-1)))
+)
