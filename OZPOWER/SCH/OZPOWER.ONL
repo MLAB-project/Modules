@@ -1,0 +1,711 @@
+(PCB OZPOWER
+ (description
+  (timeStamp "2006 11 25 17 40 06")
+  (program "CAPTURE.EXE" (Version "9.10.157"))
+  (source "Original data from OrCAD/CAPTURE schematic")
+  (title "OZPOWER")
+  (date "Saturday, November 25, 2006")
+  (document "OZPOWER")
+  (revision "")
+  (organization "")
+  (address1 "")
+  (address2 "")
+  (address3 "")
+  (address4 "")
+  (partvaluecombine "{Value}")
+  (pcbfootprintcombine "{Device},{Value}@{PCB Footprint}"))
+ (structure )
+ (placement
+  (component CK050
+   (place C3
+    (property 
+     ("PCB Footprint" CK050)
+     (Device C)
+     (timestamp 00002B94)
+     ("Source Package" CK050)
+     (Value 220nF)))
+   (place C4
+    (property 
+     ("PCB Footprint" CK050)
+     (Device C)
+     (timestamp 00002C18)
+     ("Source Package" CK050)
+     (Value 100nF)))
+   (place C5
+    (property 
+     ("PCB Footprint" CK050)
+     (Device C)
+     (timestamp 00002C2E)
+     ("Source Package" CK050)
+     (Value 100nF)))
+   (place C6
+    (property 
+     ("PCB Footprint" CK050)
+     (Device C)
+     (timestamp 00003164)
+     ("Source Package" CK050)
+     (Value 220nF)))
+   (place C7
+    (property 
+     ("PCB Footprint" CK050)
+     (Device C)
+     (timestamp 00003A3E)
+     ("Source Package" CK050)
+     (Value 100p)))
+   (place C8
+    (property 
+     ("PCB Footprint" CK050)
+     (Device C)
+     (timestamp 00003A44)
+     ("Source Package" CK050)
+     (Value 2nF)))
+   (place C9
+    (property 
+     ("PCB Footprint" CK050)
+     (Device C)
+     (timestamp 00003A4A)
+     ("Source Package" CK050)
+     (Value 100nF)))
+   (place C10
+    (property 
+     ("PCB Footprint" CK050)
+     (Device C)
+     (timestamp 00003A50)
+     ("Source Package" CK050)
+     (Value 220nF))))
+  (component 1N5408
+   (place D1
+    (property 
+     ("PCB Footprint" DO201)
+     (Device D)
+     (timestamp 00003D01)
+     ("Source Package" 1N5408)
+     (Value 1N5408)))
+   (place D2
+    (property 
+     ("PCB Footprint" DO201)
+     (Device D)
+     (timestamp 00003D03)
+     ("Source Package" 1N5408)
+     (Value 1N5408))))
+  (component FIDU
+   (place M5
+    (property 
+     ("PCB Footprint" FIDU)
+     (Device FIDU)
+     (timestamp 00003C8A)
+     ("Source Package" FIDU)
+     (Value FIDU)))
+   (place M6
+    (property 
+     ("PCB Footprint" FIDU)
+     (Device FIDU)
+     (timestamp 00003C8C)
+     ("Source Package" FIDU)
+     (Value FIDU))))
+  (component ARK210/2
+   (place J5
+    (property 
+     ("PCB Footprint" ARK210/2)
+     (Device SCW2)
+     (timestamp 0000017D)
+     ("Source Package" ARK210/2)
+     (Value ARK210/2))))
+  (component UNIPAD2
+   (place J33
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 000022D5)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J34
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 000022F3)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J35
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 00002311)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J36
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 0000232F)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J37
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 0000234D)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J38
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 0000236B)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J39
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 00002389)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J40
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 00002633)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J41
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 00002637)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J10
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 00000592)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J42
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 0000263B)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J43
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 0000263F)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J11
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 000005B0)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J44
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 00002E05)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J12
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 00000545)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J45
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 00002E16)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J13
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 00000527)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J14
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 00000654)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J15
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 00000672)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J16
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 00000690)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J17
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 000006AE)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J18
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 000006CC)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J19
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 000005FA)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J20
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 00000618)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J21
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 00000636)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J22
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 000022B7)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J6
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 00002E27)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J7
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 00002E38)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J8
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 00002E49)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2)))
+   (place J9
+    (property 
+     ("PCB Footprint" UNIPAD2)
+     (Device UNIPAD2)
+     (timestamp 00002E82)
+     ("Source Package" UNIPAD2)
+     (Value UNIPAD2))))
+  (component ARK210/3
+   (place J4
+    (property 
+     ("PCB Footprint" ARK210/3)
+     (Device SCW3)
+     (timestamp 00002808)
+     ("Source Package" ARK210/3)
+     (Value Power))))
+  (component L165
+   (place U1
+    (property 
+     ("PCB Footprint" PENTAWATT)
+     (Device PENTAWATT)
+     (timestamp 00000164)
+     ("Source Package" L165)
+     (Value L165/LM675))))
+  (component RL090
+   (place R1
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 00003283)
+     ("Source Package" RL090)
+     (Value 1)))
+   (place R9
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 00003A56)
+     ("Source Package" RL090)
+     (Value 100)))
+   (place R10
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 00003A5C)
+     ("Source Package" RL090)
+     (Value 1k)))
+   (place R11
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 00003A62)
+     ("Source Package" RL090)
+     (Value 10k)))
+   (place R12
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 00003A68)
+     ("Source Package" RL090)
+     (Value 100k)))
+   (place R13
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 00003A92)
+     ("Source Package" RL090)
+     (Value 1M)))
+   (place R14
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 00003A98)
+     ("Source Package" RL090)
+     (Value RL090)))
+   (place R15
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 00003A9E)
+     ("Source Package" RL090)
+     (Value RL090)))
+   (place R16
+    (property 
+     ("PCB Footprint" RL090)
+     (Device R)
+     (timestamp 00003AA4)
+     ("Source Package" RL090)
+     (Value RL090))))
+  (component "C-ELYT-CE025X6"
+   (place C1
+    (property 
+     ("PCB Footprint" CE025X6)
+     (Device "C-ELYT")
+     (timestamp 00002A4A)
+     ("Source Package" "C-ELYT-CE025X6")
+     (Value 10uF)))
+   (place C2
+    (property 
+     ("PCB Footprint" CE025X6)
+     (Device "C-ELYT")
+     (timestamp 00002A60)
+     ("Source Package" "C-ELYT-CE025X6")
+     (Value 10uF))))
+  (component HOLE_M3
+   (place M1
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 000026A5)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3)))
+   (place M2
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 000026A7)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3)))
+   (place M3
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 000026A9)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3)))
+   (place M4
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 000026AB)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3))))
+  (component UNIPAD2_0
+   (place J1
+    (property 
+     ("PCB Footprint" FASTONB)
+     (Device FASTON)
+     (timestamp 00000E2B)
+     ("Source Package" UNIPAD2_0)
+     (Value UNIPAD2)))
+   (place J2
+    (property 
+     ("PCB Footprint" FASTONB)
+     (Device FASTON)
+     (timestamp 00000E3E)
+     ("Source Package" UNIPAD2_0)
+     (Value UNIPAD2)))
+   (place J3
+    (property 
+     ("PCB Footprint" FASTONB)
+     (Device FASTON)
+     (timestamp 0000291A)
+     ("Source Package" UNIPAD2_0)
+     (Value UNIPAD2)))))
+ (library
+  (image UNIPAD2
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\PAD.OLB)
+    (Device UNIPAD2))
+   (pin 999 1
+    (property 
+     (pinname X)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname X)
+     (pintype 4))))
+  (image L165
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\AMP.OLB)
+    (Device PENTAWATT))
+   (pin 999 4
+    (property 
+     (pinname OUT)
+     (pintype 2)))
+   (pin 999 2
+    (property 
+     (pinname "IN-")
+     (pintype 0)))
+   (pin 999 1
+    (property 
+     (pinname IN+)
+     (pintype 0)))
+   (pin 999 3
+    (property 
+     (pinname "V-")
+     (pintype 0)))
+   (pin 999 5
+    (property 
+     (pinname V+)
+     (pintype 0))))
+  (image RL090
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_RLC.OLB)
+    (Device R))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4))))
+  (image "C-ELYT-CE025X6"
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_RLC.OLB)
+    (Device "C-ELYT"))
+   (pin 999 A
+    (property 
+     (pinname A)
+     (pintype 4)))
+   (pin 999 C
+    (property 
+     (pinname C)
+     (pintype 4))))
+  (image CK050
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_RLC.OLB)
+    (Device C))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4))))
+  (image HOLE_M3
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\PAD.OLB)
+    (Device PAD))
+   (pin 999 1
+    (property 
+     (pinname PIN)
+     (pintype 4))))
+  (image UNIPAD2_0
+   (property 
+    (sourcelib D:\\KAKLIK\\MLAB\\HBRIDGE\\3PHBRIDGE01A\\3PHBRIDGE01A.DSN)
+    (Device UNIPAD2))
+   (pin 999 1
+    (property 
+     (pinname X)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname X)
+     (pintype 4))))
+  (image FIDU
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\SYMBOLS.OLB)
+    (Device FIDU)))
+  (image ARK210/3
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_CON.OLB)
+    (Device SCW3))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4)))
+   (pin 999 3
+    (property 
+     (pinname 3)
+     (pintype 4))))
+  (image 1N5408
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_D.OLB)
+    (Device D))
+   (pin 999 A
+    (property 
+     (pinname A)
+     (pintype 4)))
+   (pin 999 C
+    (property 
+     (pinname C)
+     (pintype 4))))
+  (image ARK210/2
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_CON.OLB)
+    (Device SCW2))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4)))))
+ (network
+  (net VCC
+    (property 
+     (nettype S))
+   (pins
+     J1-1 J1-2 C1-A D1-C C3-1 C5-1 J45-1 J45-2 U1-5
+     J4-1))
+  (net GND
+    (property 
+     (nettype S))
+   (pins
+     C6-2 M3-1 J9-1 J9-2 J5-2 C4-2 M2-1 M4-1 M1-1
+     J3-1 J3-2 C2-A C1-C J4-2 D2-C D1-A C5-2))
+  (net N015300
+   (pins
+     J19-1 J19-2 R9-2))
+  (net N090970
+   (pins
+     J39-1 J39-2 R16-1))
+  (net N097870
+   (pins
+     C7-1 J42-1 J42-2))
+  (net N097830
+   (pins
+     C8-2 J41-1 J41-2))
+  (net N017100
+   (pins
+     J17-1 J17-2 R11-1))
+  (net VEE
+    (property 
+     (nettype S))
+   (pins
+     C3-2 J4-3 J2-1 J2-2 J6-1 J6-2 C4-1 U1-3 D2-A
+     C2-C))
+  (net N089170
+   (pins
+     J33-1 J33-2 R14-2))
+  (net N089470
+   (pins
+     R15-2 J34-1 J34-2))
+  (net N014560
+   (pins
+     J11-1 J11-2 C10-1))
+  (net N013490
+   (pins
+     J12-1 J12-2 C10-2))
+  (net N097790
+   (pins
+     C7-2 J40-1 J40-2))
+  (net N097910
+   (pins
+     C8-1 J43-1 J43-2))
+  (net N014260
+   (pins
+     J10-1 J10-2 C9-1))
+  (net N013190
+   (pins
+     J13-1 J13-2 C9-2))
+  (net N089770
+   (pins
+     R16-2 J35-1 J35-2))
+  (net N090670
+   (pins
+     R15-1 J38-1 J38-2))
+  (net N090370
+   (pins
+     J37-1 J37-2 R14-1))
+  (net N090070
+   (pins
+     J36-1 J36-2 R13-1))
+  (net N088870
+   (pins
+     R13-2 J22-1 J22-2))
+  (net N016500
+   (pins
+     J15-1 J15-2 R9-1))
+  (net N015600
+   (pins
+     J20-1 J20-2 R10-2))
+  (net N016800
+   (pins
+     J16-1 J16-2 R10-1))
+  (net N015900
+   (pins
+     J21-1 J21-2 R11-2))
+  (net N017400
+   (pins
+     R12-1 J18-1 J18-2))
+  (net N016200
+   (pins
+     J14-1 J14-2 R12-2))
+  (net N12102
+   (pins
+     J8-1 J8-2 U1-2))
+  (net N12073
+   (pins
+     J7-1 J7-2 U1-1))
+  (net N11708
+   (pins
+     U1-4 J44-1 J44-2 J5-1 R1-1))
+  (net N12983
+   (pins
+     R1-2 C6-1)))
+)
