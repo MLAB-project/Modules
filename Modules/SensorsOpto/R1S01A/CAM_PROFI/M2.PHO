@@ -1,0 +1,97 @@
+*
+*
+G04 PowerPCB (Build Number 500.281.2.20) generated Gerber (RS-274-X) file*
+G04 PC Version=2.1*
+*
+%IN "Untitled"*%
+*
+%MOIN*%
+*
+%FSLAX35Y35*%
+*
+*
+*
+*
+G04 PC Standard Apertures*
+*
+*
+G04 Thermal Relief Aperture macro.*
+%AMTER*
+1,1,$1,0,0*
+1,0,$1-$2,0,0*
+21,0,$3,$4,0,0,45*
+21,0,$3,$4,0,0,135*
+%
+*
+*
+G04 Annular Aperture macro.*
+%AMANN*
+1,1,$1,0,0*
+1,0,$2,0,0*
+%
+*
+*
+G04 Odd Aperture macro.*
+%AMODD*
+1,1,$1,0,0*
+1,0,$1-0.005,0,0*
+%
+*
+*
+G04 PC Custom Aperture Macros*
+*
+*
+*
+*
+*
+*
+G04 PC Aperture Table*
+*
+%ADD030R,0.049X0.049*%
+%ADD033C,0.24622*%
+%ADD045R,0.085X0.085*%
+%ADD046C,0.085*%
+*
+*
+*
+*
+G04 PC Custom Flashes*
+G04 Layer Name Untitled - flashes*
+%LPD*%
+*
+*
+G04 PC Circuitry*
+G04 Layer Name Untitled - circuitry*
+%LPD*%
+*
+G54D30*
+G01X159200Y141850D02*
+Y140150D01*
+X166800Y141850D02*
+Y140150D01*
+X193300Y130400D02*
+Y131600D01*
+X185700Y130400D02*
+Y131600D01*
+X186800Y140400D02*
+Y141600D01*
+X179200Y140400D02*
+Y141600D01*
+G54D33*
+X130000Y130000D03*
+G54D45*
+X150000Y140000D03*
+Y130000D03*
+Y120000D03*
+X165000Y130000D03*
+Y120000D03*
+G54D46*
+X195000D03*
+Y140000D03*
+X175000Y130000D03*
+X204500Y135000D03*
+Y125000D03*
+X215500D03*
+Y135000D03*
+X0Y0D02*
+M02*
