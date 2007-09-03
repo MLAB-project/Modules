@@ -31,6 +31,9 @@
 // BUGS:
 // - back-EMF measurment is different in fast-collapse and low-collapse modes. This make control leading to different speeds in the two modes.
 
+#define BOARD_umHBridge
+#define H_BRIDGE
+
 #include <avr/pgmspace.h>
 #include <avr/interrupt.h>#include <avr/sleep.h>
 
@@ -39,8 +42,6 @@
 #include "usart.h"
 #include "twi_aap.h"
 #include "eeprom.h"
-
-#define H_BRIDGE
 
 void DebugStat();
 
