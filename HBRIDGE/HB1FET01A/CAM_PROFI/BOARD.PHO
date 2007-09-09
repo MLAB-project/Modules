@@ -3,7 +3,7 @@
 G04 PADS Layout (Build Number 2006.45.1) generated Gerber (RS-274-X) file*
 G04 PC Version=2.1*
 *
-%IN "HB2FET02A.pcb"*%
+%IN "HB1FET01A.pcb"*%
 *
 %MOIN*%
 *
@@ -53,26 +53,26 @@ G04 PC Aperture Table*
 *
 *
 G04 PC Copper Outlines (0)*
-G04 Layer Name HB2FET02A.pcb - dark (0)*
+G04 Layer Name HB1FET01A.pcb - dark (0)*
 %LPD*%
 *
 *
 G04 PC Area=Custom_Thermal*
 *
 G04 PC Custom Flashes*
-G04 Layer Name HB2FET02A.pcb - flashes*
+G04 Layer Name HB1FET01A.pcb - flashes*
 %LPD*%
 *
 *
 G04 PC Circuitry*
-G04 Layer Name HB2FET02A.pcb - circuitry*
+G04 Layer Name HB1FET01A.pcb - circuitry*
 %LPD*%
 *
 G54D25*
-G01X120000Y480000D02*
-X840000D01*
-Y120000*
-X120000*
-Y480000*
+G01X121000Y559000D02*
+X519000D01*
+Y121000*
+X121000*
+Y559000*
 X0Y0D02*
 M02*
