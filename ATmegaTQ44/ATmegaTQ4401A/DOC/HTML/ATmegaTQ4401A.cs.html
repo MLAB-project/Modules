@@ -116,7 +116,7 @@
       <h2> Zapojení modulu </h2>
       
       <p>
-        <img width="802" height="831" src="ATmegaTQ4401A_Pictures/image002.png"
+        <img width="892" height="924" src="ATmegaTQ4401A_Pictures/image002.png"
         alt="Schéma modulu">
       </p>
       
@@ -159,9 +159,13 @@
       
       <p>
         Firma ATMEL definovala dvě „standardní“ zapojení programovacího ISP
-        konektoru. Modul používá menší verzi se 6 vývody. Dále je na desce
-        osazen konektor pro JATG programování a ladění. JTAG rozhraní se
-        povoluje v&nbsp;konfiguračním slově a defaultně je zakázané.
+        konektoru. Modul používá menší verzi se 6 vývody.
+      </p>
+
+      <p>
+        Dále je na desce osazen konektor pro JATG programování a ladění. JTAG
+        rozhraní se povoluje v&nbsp;konfiguračním slově a defaultně je zakázané.
+        Když se používá JTAG nesmí být osazen kondenzátor C7.
       </p>
       
       <p>
@@ -244,8 +248,12 @@
           <td> 10nF </td>
         </tr>
         <tr>
-          <td> C2, C3, C4, C5, C6, C7 </td>
+          <td> C2, C3, C4, C5, C6 </td>
           <td> 100nF </td>
+        </tr>
+        <tr>
+          <td> C7 </td>
+          <td> #100nF (neosazovat) </td>
         </tr>
         <tr>
           <th colspan="2"> Elektrolytické kondenzátory </th>
