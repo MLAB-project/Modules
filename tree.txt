@@ -1,0 +1,19 @@
+AVR
+PIC
+CommIR
+CommRF
+CommSerial
+PowerSupply
+PowerSW
+H_Bridge
+Sensors
+HumanInterfaces
+Measuring
+HumanInterfaces
+Audio
+OpAmps
+
+This file defines order of directories. Script uses all nonempty 
+lines before first empty line. If in the scanned directory are 
+some extra directories then these extra directories are listed 
+at the end of the list sorted alphabetically.
