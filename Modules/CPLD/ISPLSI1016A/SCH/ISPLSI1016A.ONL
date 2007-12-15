@@ -1,0 +1,540 @@
+(PCB ISPLSI1016A
+ (description
+  (timeStamp "2007 12 15 10 48 59")
+  (program "CAPTURE.EXE" (Version "9.2.448 - D"))
+  (source "Original data from OrCAD/CAPTURE schematic")
+  (title "")
+  (date "Saturday, December 15, 2007")
+  (document "C:\\POPO\\ISPLSI1016A.DSN")
+  (revision "")
+  (organization "")
+  (address1 "")
+  (address2 "")
+  (address3 "")
+  (address4 "")
+  (partvaluecombine "{Value}")
+  (pcbfootprintcombine "{Device},{Value}@{PCB Footprint}"))
+ (structure )
+ (placement
+  (component JUMP2X3_CON
+   (place J5
+    (property 
+     ("PCB Footprint" JUMP2X3)
+     (Device JUMP2X3)
+     (timestamp 00001E11)
+     ("Source Package" JUMP2X3_CON)
+     (Value JUMP2X3)))
+   (place J6
+    (property 
+     ("PCB Footprint" JUMP2X3)
+     (Device JUMP2X3)
+     (timestamp 00001E3A)
+     ("Source Package" JUMP2X3_CON)
+     (Value JUMP2X3)))
+   (place J9
+    (property 
+     ("PCB Footprint" JUMP2X3)
+     (Device JUMP2X3)
+     (timestamp 00001CEA)
+     ("Source Package" JUMP2X3_CON)
+     (Value JUMP2X3))))
+  (component JUMP2X8_CON
+   (place J1
+    (property 
+     ("PCB Footprint" JUMP2X8)
+     (Device JUMP2X8)
+     (timestamp 000000C3)
+     ("Source Package" JUMP2X8_CON)
+     (Value JUMP2X8)))
+   (place J2
+    (property 
+     ("PCB Footprint" JUMP2X8)
+     (Device JUMP2X8)
+     (timestamp 00000119)
+     ("Source Package" JUMP2X8_CON)
+     (Value JUMP2X8)))
+   (place J3
+    (property 
+     ("PCB Footprint" JUMP2X8)
+     (Device JUMP2X8)
+     (timestamp 0000016F)
+     ("Source Package" JUMP2X8_CON)
+     (Value JUMP2X8)))
+   (place J4
+    (property 
+     ("PCB Footprint" JUMP2X8)
+     (Device JUMP2X8)
+     (timestamp 000001C5)
+     ("Source Package" JUMP2X8_CON)
+     (Value JUMP2X8))))
+  (component C0603
+   (place C2
+    (property 
+     ("PCB Footprint" C0603)
+     (Device C)
+     (timestamp 00002588)
+     ("Source Package" C0603)
+     (Value C0603))))
+  (component "C-ELYT-CE025X6"
+   (place C1
+    (property 
+     ("PCB Footprint" CE025X6)
+     (Device "C-ELYT")
+     (timestamp 000023B1)
+     ("Source Package" "C-ELYT-CE025X6")
+     (Value "C-ELYT-CE025X6"))))
+  (component JUMP2X1_CON
+   (place J7
+    (property 
+     ("PCB Footprint" JUMP2X1)
+     (Device JUMP2X1)
+     (timestamp 00001E63)
+     ("Source Package" JUMP2X1_CON)
+     (Value JUMP2X1)))
+   (place J8
+    (property 
+     ("PCB Footprint" JUMP2X1)
+     (Device JUMP2X1)
+     (timestamp 00001F76)
+     ("Source Package" JUMP2X1_CON)
+     (Value JUMP2X1))))
+  (component ISPLSI1016
+   (place U3
+    (property 
+     ("PCB Footprint" PLCC44)
+     (Device PLCC44)
+     (timestamp 0000171F)
+     ("Source Package" ISPLSI1016)
+     (Value ISPLSI1016)))))
+ (library
+  (image ISPLSI1016
+   (property 
+    (sourcelib C:\\POPO\\LATTICE.OLB))
+   (pin 999 VCC
+    (property 
+     (pinname VCC)
+     (pintype 7)))
+   (pin 999 GND
+    (property 
+     (pinname GND)
+     (pintype 7)))
+   (pin 999 I/O0
+    (property 
+     (pinname I/O0)
+     (pintype 1)))
+   (pin 999 I/O1
+    (property 
+     (pinname I/O1)
+     (pintype 1)))
+   (pin 999 I/O2
+    (property 
+     (pinname I/O2)
+     (pintype 1)))
+   (pin 999 I/O3
+    (property 
+     (pinname I/O3)
+     (pintype 1)))
+   (pin 999 I/O4
+    (property 
+     (pinname I/O4)
+     (pintype 1)))
+   (pin 999 I/O5
+    (property 
+     (pinname I/O5)
+     (pintype 1)))
+   (pin 999 I/O6
+    (property 
+     (pinname I/O6)
+     (pintype 1)))
+   (pin 999 I/O7
+    (property 
+     (pinname I/O7)
+     (pintype 1)))
+   (pin 999 I/O8
+    (property 
+     (pinname I/O8)
+     (pintype 1)))
+   (pin 999 I/O9
+    (property 
+     (pinname I/O9)
+     (pintype 1)))
+   (pin 999 I/O10
+    (property 
+     (pinname I/O10)
+     (pintype 1)))
+   (pin 999 I/O11
+    (property 
+     (pinname I/O11)
+     (pintype 1)))
+   (pin 999 I/O12
+    (property 
+     (pinname I/O12)
+     (pintype 1)))
+   (pin 999 I/O13
+    (property 
+     (pinname I/O13)
+     (pintype 1)))
+   (pin 999 I/O14
+    (property 
+     (pinname I/O14)
+     (pintype 1)))
+   (pin 999 I/O15
+    (property 
+     (pinname I/O15)
+     (pintype 1)))
+   (pin 999 I/O16
+    (property 
+     (pinname I/O16)
+     (pintype 1)))
+   (pin 999 I/O17
+    (property 
+     (pinname I/O17)
+     (pintype 1)))
+   (pin 999 I/O18
+    (property 
+     (pinname I/O18)
+     (pintype 1)))
+   (pin 999 I/O19
+    (property 
+     (pinname I/O19)
+     (pintype 1)))
+   (pin 999 I/O20
+    (property 
+     (pinname I/O20)
+     (pintype 1)))
+   (pin 999 I/O21
+    (property 
+     (pinname I/O21)
+     (pintype 1)))
+   (pin 999 I/O22
+    (property 
+     (pinname I/O22)
+     (pintype 1)))
+   (pin 999 I/O23
+    (property 
+     (pinname I/O23)
+     (pintype 1)))
+   (pin 999 I/O24
+    (property 
+     (pinname I/O24)
+     (pintype 1)))
+   (pin 999 I/O25
+    (property 
+     (pinname I/O25)
+     (pintype 1)))
+   (pin 999 I/O26
+    (property 
+     (pinname I/O26)
+     (pintype 1)))
+   (pin 999 I/O27
+    (property 
+     (pinname I/O27)
+     (pintype 1)))
+   (pin 999 I/O28
+    (property 
+     (pinname I/O28)
+     (pintype 1)))
+   (pin 999 I/O29
+    (property 
+     (pinname I/O29)
+     (pintype 1)))
+   (pin 999 I/O30
+    (property 
+     (pinname I/O30)
+     (pintype 1)))
+   (pin 999 I/O31
+    (property 
+     (pinname I/O31)
+     (pintype 1)))
+   (pin 999 SDO/IN1
+    (property 
+     (pinname SDO/IN1)
+     (pintype 1)))
+   (pin 999 I\\S\\P\\E\\N\\
+    (property 
+     (pinname I\\S\\P\\E\\N\\)
+     (pintype 0)))
+   (pin 999 SDI/IN0
+    (property 
+     (pinname SDI/IN0)
+     (pintype 0)))
+   (pin 999 MODE/IN2
+    (property 
+     (pinname MODE/IN2)
+     (pintype 0)))
+   (pin 999 IN3
+    (property 
+     (pinname IN3)
+     (pintype 0)))
+   (pin 999 Y0
+    (property 
+     (pinname Y0)
+     (pintype 0)))
+   (pin 999 Y1/R\\S\\T\\
+    (property 
+     (pinname Y1/R\\S\\T\\)
+     (pintype 0)))
+   (pin 999 Y2/SCLK
+    (property 
+     (pinname Y2/SCLK)
+     (pintype 0))))
+  (image "C-ELYT-CE025X6"
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_RLC.OLB)
+    (Device "C-ELYT"))
+   (pin 999 A
+    (property 
+     (pinname A)
+     (pintype 4)))
+   (pin 999 C
+    (property 
+     (pinname C)
+     (pintype 4))))
+  (image C0603
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_RLC.OLB)
+    (Device C))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4))))
+  (image JUMP2X8_CON
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\JUMP.OLB)
+    (Device JUMP2X8))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4)))
+   (pin 999 3
+    (property 
+     (pinname 3)
+     (pintype 4)))
+   (pin 999 4
+    (property 
+     (pinname 4)
+     (pintype 4)))
+   (pin 999 5
+    (property 
+     (pinname 5)
+     (pintype 4)))
+   (pin 999 6
+    (property 
+     (pinname 6)
+     (pintype 4)))
+   (pin 999 7
+    (property 
+     (pinname 7)
+     (pintype 4)))
+   (pin 999 8
+    (property 
+     (pinname 8)
+     (pintype 4)))
+   (pin 999 9
+    (property 
+     (pinname 9)
+     (pintype 4)))
+   (pin 999 10
+    (property 
+     (pinname 10)
+     (pintype 4)))
+   (pin 999 11
+    (property 
+     (pinname 11)
+     (pintype 4)))
+   (pin 999 13
+    (property 
+     (pinname 13)
+     (pintype 4)))
+   (pin 999 14
+    (property 
+     (pinname 14)
+     (pintype 4)))
+   (pin 999 15
+    (property 
+     (pinname 15)
+     (pintype 4)))
+   (pin 999 16
+    (property 
+     (pinname 16)
+     (pintype 4)))
+   (pin 999 12
+    (property 
+     (pinname 12)
+     (pintype 4))))
+  (image JUMP2X3_CON
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\JUMP.OLB)
+    (Device JUMP2X3))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4)))
+   (pin 999 3
+    (property 
+     (pinname 3)
+     (pintype 4)))
+   (pin 999 4
+    (property 
+     (pinname 4)
+     (pintype 4)))
+   (pin 999 5
+    (property 
+     (pinname 5)
+     (pintype 4)))
+   (pin 999 6
+    (property 
+     (pinname 6)
+     (pintype 4))))
+  (image JUMP2X1_CON
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\JUMP.OLB)
+    (Device JUMP2X1))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4)))))
+ (network
+  (net N09026
+   (pins
+     J7-1 J7-2 U3-I\\S\\P\\E\\N\\))
+  (net N08550
+   (pins
+     J5-5 J5-6 U3-SDI/IN0))
+  (net N00827
+   (pins
+     J1-1 J1-2 U3-I/O0))
+  (net N01105
+   (pins
+     U3-I/O2 J1-5 J1-6))
+  (net N01939
+   (pins
+     U3-I/O16 J3-1 J3-2))
+  (net N08431
+   (pins
+     J5-3 J5-4 U3-MODE/IN2))
+  (net N04580
+   (pins
+     J2-7 J2-8 U3-I/O11))
+  (net N02078
+   (pins
+     U3-I/O17 J3-3 J3-4))
+  (net N01522
+   (pins
+     J1-11 J1-12 U3-I/O5))
+  (net N01800
+   (pins
+     U3-I/O7 J1-15 J1-16))
+  (net N04997
+   (pins
+     J2-13 J2-14 U3-I/O14))
+  (net N08669
+   (pins
+     J6-1 J6-2 U3-Y0))
+  (net N08907
+   (pins
+     J6-5 J6-6 U3-Y2/SCLK))
+  (net N00966
+   (pins
+     J1-3 J1-4 U3-I/O1))
+  (net N08788
+   (pins
+     J6-3 J6-4 U3-Y1/R\\S\\T\\))
+  (net N02912
+   (pins
+     U3-I/O23 J3-15 J3-16))
+  (net N08295
+   (pins
+     U3-SDO/IN1 J8-1 J8-2))
+  (net N01244
+   (pins
+     J1-7 J1-8 U3-I/O3))
+  (net N03468
+   (pins
+     U3-I/O27 J4-7 J4-8))
+  (net N03746
+   (pins
+     U3-I/O29 J4-11 J4-12))
+  (net N01661
+   (pins
+     J1-13 J1-14 U3-I/O6))
+  (net N04163
+   (pins
+     J2-1 J2-2 U3-I/O8))
+  (net N04719
+   (pins
+     J2-9 J2-10 U3-I/O12))
+  (net N02495
+   (pins
+     U3-I/O20 J3-9 J3-10))
+  (net N02634
+   (pins
+     U3-I/O21 J3-11 J3-12))
+  (net N06930
+   (pins
+     J9-3 J9-4 U3-VCC C1-A C2-2))
+  (net N06228
+   (pins
+     J9-5 J9-6 U3-GND C2-1 C1-C J9-1 J9-2))
+  (net N01383
+   (pins
+     U3-I/O4 J1-9 J1-10))
+  (net N04302
+   (pins
+     J2-3 J2-4 U3-I/O9))
+  (net N03607
+   (pins
+     U3-I/O28 J4-9 J4-10))
+  (net N02356
+   (pins
+     U3-I/O19 J3-7 J3-8))
+  (net N04024
+   (pins
+     U3-I/O31 J4-15 J4-16))
+  (net N04441
+   (pins
+     J2-5 J2-6 U3-I/O10))
+  (net N02773
+   (pins
+     U3-I/O22 J3-13 J3-14))
+  (net N03190
+   (pins
+     U3-I/O25 J4-3 J4-4))
+  (net N03885
+   (pins
+     U3-I/O30 J4-13 J4-14))
+  (net N08312
+   (pins
+     J5-1 J5-2 U3-IN3))
+  (net N04858
+   (pins
+     J2-11 J2-12 U3-I/O13))
+  (net N02217
+   (pins
+     U3-I/O18 J3-5 J3-6))
+  (net N05136
+   (pins
+     J2-15 J2-16 U3-I/O15))
+  (net N03051
+   (pins
+     U3-I/O24 J4-1 J4-2))
+  (net N03329
+   (pins
+     U3-I/O26 J4-5 J4-6)))
+)
