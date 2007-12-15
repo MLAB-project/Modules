@@ -1,11 +1,11 @@
 (PCB ISPLSI1016A
  (description
-  (timeStamp "2007 12 15 10 48 59")
+  (timeStamp "2007 12 15 12 03 59")
   (program "CAPTURE.EXE" (Version "9.2.448 - D"))
   (source "Original data from OrCAD/CAPTURE schematic")
   (title "")
   (date "Saturday, December 15, 2007")
-  (document "C:\\POPO\\ISPLSI1016A.DSN")
+  (document "F:\\MLAB\\MODULES\\CPLD\\ISPLSI1016A\\SCH\\ISPLSI1016A.DSN")
   (revision "")
   (organization "")
   (address1 "")
@@ -83,6 +83,35 @@
      (timestamp 000023B1)
      ("Source Package" "C-ELYT-CE025X6")
      (Value "C-ELYT-CE025X6"))))
+  (component HOLE_M3
+   (place M1
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 00002C61)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3)))
+   (place M2
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 00002C73)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3)))
+   (place M3
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 00002C85)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3)))
+   (place M4
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 00002C97)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3))))
   (component JUMP2X1_CON
    (place J7
     (property 
@@ -98,6 +127,14 @@
      (timestamp 00001F76)
      ("Source Package" JUMP2X1_CON)
      (Value JUMP2X1))))
+  (component 1N4007
+   (place D1
+    (property 
+     ("PCB Footprint" DO41)
+     (Device D)
+     (timestamp 0000295E)
+     ("Source Package" 1N4007)
+     (Value 1N4007))))
   (component ISPLSI1016
    (place U3
     (property 
@@ -302,6 +339,14 @@
     (property 
      (pinname 2)
      (pintype 4))))
+  (image HOLE_M3
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\PAD.OLB)
+    (Device PAD))
+   (pin 999 1
+    (property 
+     (pinname PIN)
+     (pintype 4))))
   (image JUMP2X8_CON
    (property 
     (sourcelib C:\\LIBRARY\\ORCAD9X\\JUMP.OLB)
@@ -370,6 +415,18 @@
     (property 
      (pinname 12)
      (pintype 4))))
+  (image 1N4007
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_D.OLB)
+    (Device D))
+   (pin 999 A
+    (property 
+     (pinname A)
+     (pintype 4)))
+   (pin 999 C
+    (property 
+     (pinname C)
+     (pintype 4))))
   (image JUMP2X3_CON
    (property 
     (sourcelib C:\\LIBRARY\\ORCAD9X\\JUMP.OLB)
@@ -411,6 +468,17 @@
      (pinname 2)
      (pintype 4)))))
  (network
+  (net VCC
+    (property 
+     (nettype S))
+   (pins
+     U3-VCC J9-3 J9-4 D1-C C2-2 C1-A))
+  (net GND
+    (property 
+     (nettype S))
+   (pins
+     M2-1 M1-1 U3-GND D1-A C2-1 C1-C J9-5 J9-6 J9-1
+     J9-2 M4-1 M3-1))
   (net N09026
    (pins
      J7-1 J7-2 U3-I\\S\\P\\E\\N\\))
@@ -486,12 +554,6 @@
   (net N02634
    (pins
      U3-I/O21 J3-11 J3-12))
-  (net N06930
-   (pins
-     J9-3 J9-4 U3-VCC C1-A C2-2))
-  (net N06228
-   (pins
-     J9-5 J9-6 U3-GND C2-1 C1-C J9-1 J9-2))
   (net N01383
    (pins
      U3-I/O4 J1-9 J1-10))

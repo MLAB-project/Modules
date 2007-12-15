@@ -30,6 +30,20 @@
       (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
+    (VCC
+      (LibraryName "C:\PROGRAM FILES\ORCADLITE\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName "C:\PROGRAM FILES\ORCADLITE\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (HOLE_M3
+      (FullPartName "HOLE_M3.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\PAD.OLB")
+      (DeviceIndex "0"))
+    (1N4007
+      (FullPartName "1N4007.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD9X\COM_D.OLB")
+      (DeviceIndex "0"))
     (C0603
       (FullPartName "C0603.Normal")
       (LibraryName "C:\LIBRARY\ORCAD9X\COM_RLC.OLB")
@@ -54,9 +68,6 @@
       (FullPartName "ISPLSI1016.Normal")
       (LibraryName "C:\POPO\LATTICE.OLB")
       (DeviceIndex "0"))
-    (VCC
-      (LibraryName "C:\PROGRAM FILES\ORCADLITE\CAPTURE\LIBRARY\CAPSYM.OLB")
-      (DeviceIndex "0"))
     (ISPLSI1016/FP
       (FullPartName "ISPLSI1016/FP.Normal")
       (LibraryName "C:\PROGRAM FILES\ORCADLITE\CAPTURE\LIBRARY\PLD.OLB")
@@ -73,25 +84,18 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" "C:\popo\isplsi1016a.dsn")
-      (Path "Design Resources" "C:\popo\isplsi1016a.dsn" "SCHEMATIC1")
+      (Path "Design Resources"
+         "F:\MLAB\Modules\CPLD\ISPLSI1016A\SCH\isplsi1016a.dsn")
+      (Path "Design Resources"
+         "F:\MLAB\Modules\CPLD\ISPLSI1016A\SCH\isplsi1016a.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
-      (Path "Design Resources" "Library" ".\lattice.olb")
       (Path "Outputs")
-      (Select "Design Resources" "C:\popo\isplsi1016a.dsn" "SCHEMATIC1" "PAGE1"))
+      (Select "Design Resources"
+         "F:\MLAB\Modules\CPLD\ISPLSI1016A\SCH\isplsi1016a.dsn" "SCHEMATIC1"
+         "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -4 -23 0 256 0 625"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 2 3 -1 -1 -4 -23 66 888 66 512")
-        (Scroll "0 93")
-        (Zoom "100")
-        (Occurrence "/"))
-      (Path "C:\popo\ISPLSI1016A.dsn")
-      (Schematic "SCHEMATIC1")
-      (Page "PAGE1"))))
+        (Placement "44 2 3 -1 -1 -4 -23 0 256 0 625"))
+      (Tab 0))))
