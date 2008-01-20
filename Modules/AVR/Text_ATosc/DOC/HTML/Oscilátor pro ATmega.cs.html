@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> Oscilátor pro ATmega </title>
+    <meta name="keywords" content="odblokovat procesor AVR Atmel ATmega externí oscilátor">
+    <meta name="description" content="Jak odblokovat zaseknutý proceosr ATmega externím oscilátorem">
+    <!-- AUTOINCLUDE START "Page/Head.cs.ihtml" DO NOT REMOVE -->
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB.css" type="text/css" title="MLAB základní styl">
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB_Print.css" type="text/css" media="print">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../Web/PIC/MLAB.ico">
+    <script type="text/javascript" src="../../../../../Web/JS/MLAB_Menu.js"></script>
+    <!-- AUTOINCLUDE END -->
+  </head>
+
+  <body lang="cs">
+
+    <!-- AUTOINCLUDE START "Page/Header.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== HLAVICKA ============== -->
+    <div class="Header">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawHeader();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- AUTOINCLUDE START "Page/Menu.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== MENU ============== -->
+    <div class="Menu">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawMenu();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) menu je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- ============== TEXT ============== -->
+    <div class="Text">
+    
+      <p class="Title">
+        Oscilátor pro ATmega
+        <br>
+        aneb
+        <br>
+        Jak odseknout zaseknutý procesor
+      </p>
+
+      <p class="Autor">
+        Milan Horkel
+      </p>
+
+      <p class="Subtitle">
+        Procesory řady ATmega mají ve svém konfiguračním slově možnost
+        nastavení oscilátoru. Když se, třeba i omylem, nastaví externí
+        oscilátor a ten není připojen, nejde procesor programovat přes ISP
+        rozhraní. Léčba spočívá v&nbsp;použití externího oscilátoru.
+      </p>
+      
+      <p class="Subtitle">
+        <img width="640" height="344" src="OscATmega_files/image001.jpg"
+        alt="Pohled na oscilátor">
+      </p>
+
+      <p>
+        <a href="../Oscilátor pro ATmega.cs.pdf"><img class="NoBorder"
+           src="../../../../../Web/PIC/FileIco_PDF.ico"
+           alt="Acrobat">&nbsp;PDF verze</a>
+      </p>
+
+
+      <h1> V&nbsp;čem je problém </h1>
+      
+      <p>
+        Jádro pudla spočívá v&nbsp;tom, že se oscilátor procesoru používá i při
+        programování. Pokud je tedy nastaven externí oscilátor a ten není
+        připojen, nejde procesor naprogramovat. Stejná věc nastává, když je
+        nastaven krystalový oscilátor a není připojen krystal nebo externí RC
+        oscilátor a není připojen externí RC obvod.
+      </p>
+      
+      <p>
+        Proč procesory nepoužívají při programování vnitřní oscilátor, který
+        tak jako tak mají, není jasné. Snad aby se při výrobním programování
+        mohla nastavit nejvyšší frekvence pro komunikaci.
+      </p>
+      
+      <p>
+        <i>Tedy pokud máte procesor a ten vám nejde naprogramovat ještě
+        zdaleka nemusí být zničený ale jen špatně nastavený. Stačí si nedat při
+        programování pozor.</i>
+      </p>
+      
+      <p>
+        Různé procesory mají různé možnosti oscilátoru. Je vhodné kouknout se
+        do katalogového listu.
+      </p>
+      
+      <h1> Co zkusit jako první </h1>
+
+      <p>
+        Zaseklý procesor se oživuje asi v&nbsp;tomto pořadí (ne každý procesor
+        podporuje všechny možnosti):
+      </p>
+      
+      <ul>
+        <li>Zkusíme smazání součástky (bulk erase) </li>
+        <li>Nastavíme nižší komunikační rychlosti programátoru </li>
+        <li>Připojíme externí krystal (na frekvenci nezáleží, nesmí být vyšší než procesor umí) </li>
+        <li>Připojíme externí RC článek (pokud tuto možnost procesor vůbec má) </li>
+        <li>Připojíme externí oscilátor </li>
+        <li>Použijeme programátoru s&nbsp;paralelním vysokonapěťovým programováním </li>
+      </ul>
+      
+      <p>
+        Pokud se vám při experimentech s&nbsp;procesory povede zakázat
+        programování při nízkém napětí (low voltage programming), nezbude než
+        použít programátor, který podporuje programování s&nbsp;vysokým
+        programovacím napětím (high voltage programming, 12V). Tady nic jiného
+        nepomůže.
+      </p>
+      
+      <h1> Externí oscilátor – jak na to </h1>
+
+      <p>
+        Vezmeme nějaký vhodný oscilátor, třeba ze starého mainboardu. Vybereme
+        takový, který nemá frekvenci vyšší než procesor dovede a zapojíme ho
+        podle schématu.
+      </p>
+      
+      <p>
+        <img width="470" height="200" src="OscATmega_files/image002.png"
+        alt="Zapojení">
+      </p>
+      
+      <p>
+        U některých oscilátorů může být potřeba čtvrtou nožičku připojit na zem
+        nebo na plus aby oscilátor kmital.
+      </p>
+      
+      <p>
+        Dioda tam je proto, aby raději smrděla dioda než oscilátor při opačně
+        zapojeném napájení. Kondenzátor je blokovací, na hodnotě nezáleží.
+        Odpor ve výstupu je ochranný aby nebylo tak snadné oscilátor zničit.
+      </p>
+      
+      <p>
+        Dráty na vývody použijeme s&nbsp;nějakými logickými barvami, aby se
+        nedaly poplést. Červená na plus, modrá na mínus a nějaká neutrální na
+        výstup. Na konce dáme konektory KONPC.
+      </p>
+      
+      <p>
+        Provedení je zřejmé z&nbsp;obrázků. Pájíme součástky přímo na vývody
+        oscilátoru.
+      </p>
+      
+      <p>
+        <img width="472" height="350" src="OscATmega_files/image003.jpg"
+        alt="Obrázek pájení">
+      </p>
+      
+      <p>
+        Po ověření vystřihneme dírku do smršťovací bužírky, protáhneme dráty a
+        smrštíme nad zapalovačem. Nakonec vyřízneme okénko, aby byla vidět
+        frekvence oscilátoru.
+      </p>
+      
+      <p>
+        <img width="472" height="252" src="OscATmega_files/image004.jpg"
+        alt="Pohled zhora">
+      </p>
+      
+      <p>
+        <img width="472" height="286" src="OscATmega_files/image005.jpg"
+        alt="Pohled zdola">
+      </p>
+      
+      <h2> Co je uvnitř plechovky </h2>
+      
+      <p>
+        Pokud by vás zajímalo, co je uvnitř plechovky oscilátoru, tak tady je
+        do jedné vidět. V&nbsp;některých bývá integrovaný obvod, v&nbsp;jiných
+        jednoduchý oscilátor se 2 tranzistory. To kulaté vlevo je křemenný
+        výbrus (vypadá buď jako mléčné sklo nebo je úplně průhledný)
+        s&nbsp;napařenými stříbrnými elektrodami z&nbsp;obou stran výbrusu.
+        Frekvence je tím vyšší, čím je výbrus tenčí. Takhle vypadají krystaly
+        pro frekvence cca 1-25&nbsp;MHz.
+      </p>
+      
+      <p>
+        <img width="472" height="482" src="OscATmega_files/image006.jpg"
+        alt="Krystalový oscilátor - vnitřek">
+      </p>
+      
+    </div>
+
+    <!-- AUTOINCLUDE START "Page/Footer.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== PATIČKA ============== -->
+    <div class="Footer">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawFooter();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+  </body>
+</html>
