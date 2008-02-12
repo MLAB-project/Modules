@@ -1,0 +1,21 @@
+﻿//
+// Toto je popisný soubor pro popis obsahu adresáře (příklad)
+//
+
+[InfoShortDescription.en]
+  Small development programmer for PIC processors
+  
+[InfoShortDescription.cs]
+  Malý vývojový programátor pro procesory PIC
+
+[InfoLongDescription.en]
+  The programmer uses LPT port of PC and contains 5V voltage regulator so it can be used 
+  for powering target application. The programmer has tree state outputs and that is why it is 
+  not necessary to disconnect it from target application while debugging.
+
+[InfoLongDescription.cs]
+  Programátor se připojuje k LPT portu počítače PC a obsahuje stabilizátor 5V, který 
+  je možné využít pro napájení cílové aplikace. Programátor má třístavové výstupy a není
+  ho nutné během ladění odpojovat o cílové aplikace.
+
+[End]
