@@ -2,7 +2,7 @@ rem example for avrdude
 
 
 @echo off
-set PRG=stk500
+set PRG=stk500v2
 set PORT=com2
 pause
 echo * Step 2 - ATmega8535
@@ -14,6 +14,6 @@ pause
 avrdude -p atmega8535 -P %PORT% -c %PRG% -v -U lfuse:w:0xff:m -U hfuse:w:0xdb:m 
 
 pause
-avrdude -p mega8535 -P %PORT% -c %PRG% -U flash:w:stk500.hex:a
+avrdude -p atmega8535 -P %PORT% -c %PRG% -U flash:w:stk500.hex:a
 
 echo Set both Reset-Jumpers "ISP sel" J7  to "normal" now 2-3 close
