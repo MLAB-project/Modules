@@ -13,7 +13,6 @@ echo "ISP mega8535" 1-2 close
 pause
 avrdude -p atmega8535 -P %PORT% -c %PRG% -v -U lfuse:w:0xff:m -U hfuse:w:0xdb:m 
 
-pause
 avrdude -p atmega8535 -P %PORT% -c %PRG% -U flash:w:stk500.hex:a
 
 echo Set both Reset-Jumpers "ISP sel" J7  to "normal" now 2-3 close
