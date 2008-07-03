@@ -1,6 +1,6 @@
 *
 *
-G04 PADS Layout (Build Number 2006.45.1) generated Gerber (RS-274-X) file*
+G04 PADS Layout (Build Number 2007.21.1) generated Gerber (RS-274-X) file*
 G04 PC Version=2.1*
 *
 %IN "PIC16F87xTQ4401B_.pcb"*%
@@ -48,6 +48,7 @@ G04 PC Custom Aperture Macros*
 G04 PC Aperture Table*
 *
 %ADD017C,0.02*%
+%ADD024C,0.001*%
 %ADD038R,0.035X0.035*%
 %ADD040R,0.06X0.06*%
 %ADD054R,0.051X0.051*%
@@ -55,12 +56,10 @@ G04 PC Aperture Table*
 *
 *
 *
-G04 PC Copper Outlines (0)*
-G04 Layer Name PIC16F87xTQ4401B_.pcb - dark (0)*
+G04 PC Circuitry*
+G04 Layer Name PIC16F87xTQ4401B_.pcb - circuitry*
 %LPD*%
 *
-*
-G04 PC Area=Custom_Thermal*
 *
 G04 PC Custom Flashes*
 G04 Layer Name PIC16F87xTQ4401B_.pcb - flashes*
@@ -160,6 +159,7 @@ X00214569Y00219900D02*
 X00209369D01*
 X00214569Y00223000D02*
 X00209369D01*
+G54D24*
 G54D38*
 X00229200Y00251350D02*
 Y00249650D01*
