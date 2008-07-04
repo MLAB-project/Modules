@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> PIC16F87xTQ4401B </title>
+    <meta name="keywords" content="procesor Microchip PIC16F87x modul ">
+    <meta name="description" content="Projekt MLAB, Procesorový modul pro procesory MICROCHIP PIC16F87x v pouzdru TQFP44">
+    <!-- AUTOINCLUDE START "Page/Head.cs.ihtml" DO NOT REMOVE -->
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB.css" type="text/css" title="MLAB základní styl">
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB_Print.css" type="text/css" media="print">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../Web/PIC/MLAB.ico">
+    <script type="text/javascript" src="../../../../../Web/JS/MLAB_Menu.js"></script>
+    <!-- AUTOINCLUDE END -->
+  </head>
+
+  <body lang="cs">
+
+    <!-- AUTOINCLUDE START "Page/Header.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== HLAVICKA ============== -->
+    <div class="Header">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawHeader();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- AUTOINCLUDE START "Page/Menu.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== MENU ============== -->
+    <div class="Menu">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawMenu();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) menu je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- ============== TEXT ============== -->
+    <div class="Text">
+    
+      <p class="Title">
+        Modul pro procesory PIC16F87x v&nbsp;pouzdru TQFP44
+      </p>
+      
+      <p class=Autor>
+        Milan Horkel
+      </p>
+
+      <p class="Subtitle">
+        Další standardní procesorový modul pro procesory MICROCHIP řady
+        PIC16F87x v&nbsp;pouzdru TQFP44. Tyto procesory mají poměrně hodně
+        periferií a vstupních a výstupních vývodů a současně malou spotřebu.
+        Lze použít i další procesory v&nbsp;pouzdru TQFP44.
+      </p>
+      
+      <p class="Subtitle">
+        <img width="341" height="284" src="PIC16F87xTQ4401B_files/image001.jpg"
+        alt="Pohled ze strany součástek">
+        <img width="339" height="284" src="PIC16F87xTQ4401B_files/image002.jpg"
+        alt="Pohled ze strany spojů">
+      </p>
+      
+      <p>
+        <a href="../PIC16F87xTQ4401B.cs.pdf"><img class="NoBorder"
+           src="../../../../../Web/PIC/FileIco_PDF.ico"
+           alt="Acrobat">&nbsp;PDF verze</a>
+      </p>
+
+      <h1> Technické parametry </h1>
+      
+      <table>
+        <tr>
+          <th> Parametr </th>
+          <th> Hodnota </th>
+          <th> Poznámka </th>
+        </tr>
+        <tr>
+          <td> Procesor </td>
+          <td> PIC16F874&nbsp;/ 877&nbsp;/ 874A&nbsp;/ 877A&nbsp;/ 747&nbsp;/
+               777&nbsp;/ … </td>
+          <td> A další v pouzdru TQFP44 </td>
+        </tr>
+        <tr>
+          <td> Napájení </td>
+          <td> 2.0&nbsp;–&nbsp;5.5&nbsp;V </td>
+          <td> Dle procesoru a krystalu </td>
+        </tr>
+        <tr>
+          <td> Programování </td>
+          <td> ISP&nbsp;6&nbsp;PIN </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> Rozměry </td>
+          <td> 51&nbsp;x&nbsp;61&nbsp;x&nbsp;16&nbsp;mm </td>
+          <td> Výška na základnou </td>
+        </tr>
+      </table>
+      
+      <h1> Popis konstrukce </h1>
+      
+      <h2> Úvodem </h2>
+      
+      <p>
+        Procesorový modul je pokračováním předchozích modulů pro procesory řadu
+        PIC16F87x v&nbsp;pouzdrech o 28&nbsp;vývodech.
+      </p>
+      
+      <h2> Zapojení modulu </h2>
+      
+      <p>
+        Kromě samotného procesoru, který je připájen jsou na desce pomocné
+        obvody pro tento procesor. Prvním z&nbsp;nich je programovací konektor
+        J46 pro ISP programování procesoru. Dále jsou zde krystaly pro hlavní
+        oscilátor a pro oscilátor RTC (časovač T1). Krystaly obvykle
+        neosazujeme přímo ale osazujeme jen konektorové dutinky, aby bylo možno
+        použít krystaly dle potřeby. Dále je deska vybavena tlačítkem RESET.
+        Pro práci s&nbsp;A/D převodníkem jsou přímo na desce filtrační
+        kondenzátory, které je možné propojkami připojit na vstupy pro
+        referenční napětí. Pro práci s&nbsp;komunikací I2C jsou zde PullUp
+        odpory volitelné propojkami. V&nbsp;případě rozsáhlejších I2C sběrnice
+        je vhodné zmenšit hodnotu PullUp odporů až k&nbsp;hodnotě 3k3.
+      </p>
+      
+      <p>
+        <img width="405" height="170" src="PIC16F87xTQ4401B_files/image003.png"
+        alt="Schéma zapojení">
+      </p>
+      
+      <p>
+        Napájecí obvod je doplněn ochrannou diodou D1 proti přepólování zdroje.
+        Předpokládá se, že zdroj je opatřen omezením proudu na nějakou rozumnou
+        hodnotu. Před opačně připojeným akumulátorem nemá dioda D1 šanci.
+      </p>
+      
+      <p>
+        <img width="361" height="232" src="PIC16F87xTQ4401B_files/image004.png"
+        alt="Zapojení napájecí části">
+      </p>
+      
+      <p>
+        Deska dále obsahuje pomocné pole odporů a kondenzátorů pro obecné
+        použití.
+      </p>
+      
+      <p>
+        <img width="921" height="935" src="PIC16F87xTQ4401B_files/image005.png"
+        alt="Zapojení pomocných součástek">
+      </p>
+      
+      <h2> Mechanická konstrukce </h2>
+      
+      <p>
+        Standardní modul do stavebnice s&nbsp;rohovými upevňovacími sloupky.
+      </p>
+      
+      <h1> Osazení a oživení </h1>
+      
+      <h2> Osazení </h2>
+      
+      <p>
+        <img width="735" height="614" src="PIC16F87xTQ4401B_files/O1.png"
+        alt="Osaení, strana součástí">
+        <img width="735" height="618" src="PIC16F87xTQ4401B_files/O2.png"
+        alt="Osazení, strana spojů">
+      </p>
+      
+      <table class="Soupiska">
+        <tr>
+          <th> Reference </th>
+          <th> Hodnota </th>
+        </tr>
+        <tr>
+          <th colspan="2"> Odpory </th>
+        </tr>
+        <tr>
+          <td> R2 </td>
+          <td> 100 </td>
+        </tr>
+        <tr>
+          <td> R1, R3, R4, R5, R6, R7 </td>
+          <td> 10k </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Keramické kondenzátory </th>
+        </tr>
+        <tr>
+          <td> C6, C7 </td>
+          <td> 22pF </td>
+        </tr>
+        <tr>
+          <td> C8, C9 </td>
+          <td> 33pF </td>
+        </tr>
+        <tr>
+          <td> C4, C5, C10, C11, C12 </td>
+          <td> 10nF </td>
+        </tr>
+        <tr>
+          <td> C1, C2 </td>
+          <td> 100nF </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Elektrolytické kondenzátory </th>
+        </tr>
+        <tr>
+          <td> C3 </td>
+          <td> 10uF/6.3V </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Diody </th>
+        </tr>
+        <tr>
+          <td> D1 </td>
+          <td> 1N4007 </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Integrované obvody </th>
+        </tr>
+        <tr>
+          <td> U1 </td>
+          <td> PIC16F877A/PT </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Krystaly </th>
+        </tr>
+        <tr>
+          <td> X1 </td>
+          <td> 4.0MHz </td>
+        </tr>
+        <tr>
+          <td> X2 </td>
+          <td> 32768Hz </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Mechanické součástky </th>
+        </tr>
+        <tr>
+          <td> J1-J11, J12-J22, J23-J33, J34-J44 </td>
+          <td> JUMP2x11 </td>
+        </tr>
+        <tr>
+          <td> J47, J48, J49, J50, J51, J52, J53, J54, J55 </td>
+          <td> JUMP2 </td>
+        </tr>
+        <tr>
+          <td> J46 </td>
+          <td> JUMP6 </td>
+        </tr>
+        <tr>
+          <td> J45 </td>
+          <td> JUMP2X3 </td>
+        </tr>
+        <tr>
+          <td> J56+J58+J60, J57+J59+J61, J62+J64+J66, J63+J65+J67 </td>
+          <td> JUMP3 </td>
+        </tr>
+        <tr>
+          <td> SW1 </td>
+          <td> P-B1720 </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Konstrukční součástky </th>
+        </tr>
+        <tr>
+          <td> 4x </td>
+          <td> Šroub M3x12 </td>
+        </tr>
+        <tr>
+          <td> 4x </td>
+          <td> Podložka M3 </td>
+        </tr>
+        <tr>
+          <td> 4x </td>
+          <td> Sloupek M3x5 </td>
+        </tr>
+      </table>
+
+      <p>
+        Na místo krystalů je možné osadit dutinky z&nbsp;precizní patice, aby
+        bylo možné použít libovolný krystal bez nutnosti pájení.
+      </p>
+      
+      <p>
+        Při nahrazování procesorů řady 87x jinými, je nebytné ověřit, zda
+        uvažovaný procesor má shodné (kompatibilní) zapojení vývodů.
+      </p>
+      
+      <h2> Oživení </h2>
+      <p>
+        Není co oživovat. Kontrolujeme orientaci zapájení procesoru, zkraty a
+        rozumný proud při připojení napájení, který pro procesory PIC bývá
+        v&nbsp;desetinách a v&nbsp;celých miliampérech.
+      </p>
+
+    </div>
+
+    <!-- AUTOINCLUDE START "Page/Footer.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== PATIČKA ============== -->
+    <div class="Footer">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawFooter();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+  </body>
+</html>
