@@ -1,11 +1,13 @@
 ﻿[InfoShortDescription.en]
-﻿H-Bridge 6.8V/1A with Freescale MC17511A
+H-Bridge 6.8V/1A with Freescale MC17511A
 
 [InfoShortDescription.cs]
-﻿H-Můstek 6.8V/1A s obvodem Freescale MC17511A
+H-Můstek 6.8V/1A s obvodem Freescale MC17511A
 
 [InfoLongDescription.en]
-
+The module uses two Freescale H-Bridges MC17511A. 
+Power supply is 2.0-6.8V, current 1A, max 3A (per bridge). 
+It is intended for driving small motors.
 
 [InfoLongDescription.cs]
 Modul je osazen dvojicí integrovaných H-Můstků Freescale
