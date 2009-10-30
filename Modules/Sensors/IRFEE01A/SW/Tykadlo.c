@@ -4,6 +4,7 @@
 // (c)miho@mlab.cz
 //
 // 1.00 - zakladni funkcni verze
+// 1.01 - doplnena moznost s externim nastavenim parametru 
 
 // Prirazeni portu
 // ---------------
@@ -11,6 +12,9 @@
 // Procesor:
 //
 //   ATtiny13 @ 9.6MHz (interni RC oscilator, vypnuty preddelic 1:8)
+//                     (brown-out reset 2.7V)
+//   HIGH 0xFB
+//   LOW  0x7A
 //
 // Porty:
 //
@@ -38,9 +42,17 @@
 //   hystereze tak, aby vystupni signal byl stabilni a spolehlivy.
 //
 
-#define F_CPU			9600000UL	// 9.6MHz je maximální frekvence pro ATtiny
+#ifndef F_CPU
+#define F_CPU			9600000UL	// 9.6MHz je maximální interní frekvence pro ATtiny
+#endif
+
+#ifndef IR_FREQUENCY
 #define IR_FREQUENCY	36000UL		// Frekvece IR signalu
-#define CALIBRATION		-2			// Zpresneni kalibrace na 9.6MHz 0=nekompenzovat
+#endif
+
+#ifndef CALIBRATION
+#define CALIBRATION		0			// Zpresneni kalibrace na 9.6MHz 0=nekompenzovat
+#endif
 
 #include <avr/io.h>
 #include <util/delay.h>
