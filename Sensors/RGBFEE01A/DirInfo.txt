@@ -1,4 +1,8 @@
-﻿[InfoShortDescription.en]
+﻿//
+// Toto je popisný soubor pro popis obsahu adresáře
+//
+
+[InfoShortDescription.en]
 RGB Feeler - proximity colour sensitive sensor
 
 [InfoShortDescription.cs]
@@ -12,5 +16,7 @@ It uses A/D convertor to analyse bounced colour illumination.
 Čidlo využívá modulované RGB světlo pro bezdotykovou detekci předmětů a jejich barvy.
 Pro vyhodnocení signálu využívá A/D převodník procesoru. Barvu určuje podle síly 
 odraženého záření v závislosti na barvě.
+
+[SortPreferences]
 
 [End]
