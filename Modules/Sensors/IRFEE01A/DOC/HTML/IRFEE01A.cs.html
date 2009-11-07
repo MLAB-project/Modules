@@ -127,8 +127,8 @@
       <h2> Zapojení modulu </h2>
     
       <p>
-        Srdcem čidla je obvod U1, přijímač infračerveného signálu a procesor
-        ATtiny, který zajišťuje inteligenci čidla.
+        Srdcem čidla je obvod U1, přijímač infračerveného signálu a procesor 
+        ATtiny U2, který zajišťuje inteligenci čidla.
       </p>
       
       <p>
@@ -155,8 +155,8 @@
         Konektor J3 je standardní programovací konektor ATMEL ISP 6 PIN. Je
         zapojen obvyklým způsobem. Do procesoru se musí nahrát ovládací program
         přeložený pro příslušný nosný kmitočet použitého přijímače U1. Kmitočet
-        přijímače bývá uváděn v&nbsp;posledním dvojčíslí označení, zde tedy
-        38kHz.
+        přijímače bývá uváděn v&nbsp;posledním dvojčíslí označení, například 38
+        znamená 38kHz.
       </p>
       
       <h2> Přijímač IR (obvod U1) </h2>
@@ -215,7 +215,7 @@
       <h3> TSOP34838 – špatná volba </h3>
       
       <p>
-        Konkrétně přijímač TSOP34838 funguje tak, že s&nbsp;tím, jak se signál
+        Konkrétně přijímač TSOP348xx funguje tak, že s&nbsp;tím, jak se signál
         zeslabuje zvyšuje svou citlivost až nakonec signál ztratí. Jenže pak je
         třeba signál hodně zesílit, aby ho přijímač zase začal registrovat.
       </p>
@@ -229,10 +229,9 @@
       <h3> Jaký přijímač tedy použít? </h3>
       
       <p>
-        Nevím. Přijímač, který mám v&nbsp;šuplíku na sobě nemá žádné rozumné
-        označení. Zato funguje jedna báseň. Překážku čidlo zaregistruje a zase
-        ztratí v&nbsp;prakticky stejné vzdálenosti. Příležitostně zkusím
-        nakoupit různé přijímače a otestovat jejich použitelnost.
+        Přijímače OSRAM řady SFH5110-xx pracují správně. Překážku čidlo 
+        zaregistruje a zase ztratí v&nbsp;prakticky stejné vzdálenosti. Další
+        typy je třeba ověřit.
       </p>
       
       <table>
@@ -242,17 +241,20 @@
           <th> Poznámka </th>
         </tr>
         <tr>
-          <td> TSOP34828 </td>
-          <td> Vishay </td>
+          <td> TSOP348xx </td>
+          <td> VISHAY </td>
           <td> Má obrovskou hysterezi mezi zachycením signálu a jeho ztrátou </td>
         </tr>
         <tr>
-          <td> Neznámý </td>
-          <td> Osram? </td>
+          <td> SFH5110-33 <br>
+               SFH5110-36 <br>
+               SFH5110-38 <br>
+               SFH5110-40 </td>
+          <td> OSRAM </td>
           <td> Funguje výborně </td>
         </tr>
       </table>
-      
+
       <h2> Inteligence čidla </h2>
       
       <p>
