@@ -50,7 +50,7 @@
 #endif
 
 #ifndef IR_FREQUENCY
-#define IR_FREQUENCY	34000UL		// Frekvece IR signalu
+#define IR_FREQUENCY	36000UL		// Frekvece IR signalu
 #endif
 
 #ifndef CALIBRATION
@@ -81,7 +81,7 @@ ISR(TIMER2_COMP_vect)
 	static signed char InSuma;			// Zde se prumeruji shody
 
 	// Citac pulperiod symbolu
-	if(++SymbolLen>=(SYMBOL_LENGTH*2))
+	if(++SymbolLen>=(SYMBOL_LENGTH*2-1))
 	{
 
 		// Konec symbolu - zaciname citat pocet pulperiod od zacatku
