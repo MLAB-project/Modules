@@ -5,6 +5,7 @@
 //
 // 1.00 - zakladni funkcni verze
 // 1.01 - doplnena moznost s externim nastavenim parametru 
+// 1.02 - oprava spravneho poctu generovanych impulsu
 
 // Prirazeni portu
 // ---------------
@@ -78,7 +79,7 @@ ISR(TIM0_COMPA_vect)
 	static signed char InSuma;			// Zde se prumeruji shody
 
 	// Citac pulperiod symbolu
-	if(++SymbolLen>=(SYMBOL_LENGTH*2))
+	if(++SymbolLen>=(SYMBOL_LENGTH*2-1))
 	{
 
 		// Konec symbolu - zaciname citat pocet pulperiod od zacatku
