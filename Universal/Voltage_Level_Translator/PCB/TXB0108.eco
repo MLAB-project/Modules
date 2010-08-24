@@ -1,0 +1,181 @@
+*PADS-ECO-V2007.0-MILS*
+
+*REMARK* -- TXB0108.pcb -- Tue Aug 03 13:38:10 2010
+
+
+*PART*
+J6 JUMP2@JUMP2
+
+*SET_ATTRIBUTE* DECAL JUMP2
+"Description" jednorady hrebinek 2 piny
+
+*SET_ATTRIBUTE* PART J6
+"Description" jednorady hrebinek 2 piny
+
+*CHGPART*
+J3 JUMP1@JUMP1 JUMP2@JUMP2
+
+*SET_ATTRIBUTE* PART J3
+"Description" jednorady hrebinek 2 piny
+
+*DELPART*
+J6 JUMP2
+
+*PART*
+R3 R@R0805
+
+*SET_ATTRIBUTE* PARTTYPE R
+"Description" rezistory ruznych typu
+
+*SET_ATTRIBUTE* PART R1
+"Description" rezistory ruznych typu
+
+*SET_ATTRIBUTE* PART R2
+"Description" rezistory ruznych typu
+
+*SET_ATTRIBUTE* DECAL R0805
+"Description" rezistor SMD velikost 0805
+
+*SET_ATTRIBUTE* PART R3
+"Value" 390
+"Description" rezistory ruznych typu
+
+*NET*
+*SIGNAL* N00483 12
+J3.1 R3.2
+*SIGNAL* VCCA 12
+C1.A R3.1
+*SIGNAL* GND 12
+C1.C J3.2
+*END*
+*PADS-ECO-V2007.0-MILS*
+
+*REMARK* -- TXB0108.pcb -- Mon Aug 09 09:14:55 2010
+
+*MODIFY_GENERAL_RULES* CLEARANCE
+HIERARCHY_OBJECT  PCB:PCB
+MIN_TRACK_WIDTH           12
+REC_TRACK_WIDTH           60
+MAX_TRACK_WIDTH           200
+TRACK_TO_TRACK            6
+VIA_TO_TRACK              6
+VIA_TO_VIA                6
+PAD_TO_TRACK              6
+PAD_TO_VIA                6
+PAD_TO_PAD                6
+SMD_TO_TRACK              6
+SMD_TO_VIA                6
+SMD_TO_PAD                6
+SMD_TO_SMD                6
+COPPER_TO_TRACK           6
+COPPER_TO_VIA             6
+COPPER_TO_PAD             6
+COPPER_TO_SMD             6
+COPPER_TO_COPPER          6
+TEXT_TO_TRACK             6
+TEXT_TO_VIA               6
+TEXT_TO_PAD               6
+TEXT_TO_SMD               6
+OUTLINE_TO_TRACK          6
+OUTLINE_TO_VIA            6
+OUTLINE_TO_PAD            6
+OUTLINE_TO_SMD            6
+OUTLINE_TO_COPPER         6
+DRILL_TO_TRACK            6
+DRILL_TO_VIA              6
+DRILL_TO_PAD              6
+DRILL_TO_SMD              6
+DRILL_TO_COPPER           6
+SAME_NET_SMD_TO_VIA       6
+SAME_NET_SMD_TO_CRN       6
+SAME_NET_VIA_TO_VIA       6
+SAME_NET_PAD_TO_CRN       6
+SAME_NET_TRACK_TO_CRN     0
+DRILL_TO_DRILL            6
+BODY_TO_BODY              6
+
+*MODIFY_GENERAL_RULES* CLEARANCE
+HIERARCHY_OBJECT  PCB:PCB
+MIN_TRACK_WIDTH           12
+REC_TRACK_WIDTH           50
+MAX_TRACK_WIDTH           200
+TRACK_TO_TRACK            6
+VIA_TO_TRACK              6
+VIA_TO_VIA                6
+PAD_TO_TRACK              6
+PAD_TO_VIA                6
+PAD_TO_PAD                6
+SMD_TO_TRACK              6
+SMD_TO_VIA                6
+SMD_TO_PAD                6
+SMD_TO_SMD                6
+COPPER_TO_TRACK           6
+COPPER_TO_VIA             6
+COPPER_TO_PAD             6
+COPPER_TO_SMD             6
+COPPER_TO_COPPER          6
+TEXT_TO_TRACK             6
+TEXT_TO_VIA               6
+TEXT_TO_PAD               6
+TEXT_TO_SMD               6
+OUTLINE_TO_TRACK          6
+OUTLINE_TO_VIA            6
+OUTLINE_TO_PAD            6
+OUTLINE_TO_SMD            6
+OUTLINE_TO_COPPER         6
+DRILL_TO_TRACK            6
+DRILL_TO_VIA              6
+DRILL_TO_PAD              6
+DRILL_TO_SMD              6
+DRILL_TO_COPPER           6
+SAME_NET_SMD_TO_VIA       6
+SAME_NET_SMD_TO_CRN       6
+SAME_NET_VIA_TO_VIA       6
+SAME_NET_PAD_TO_CRN       6
+SAME_NET_TRACK_TO_CRN     0
+DRILL_TO_DRILL            6
+BODY_TO_BODY              6
+
+*MODIFY_GENERAL_RULES* CLEARANCE
+HIERARCHY_OBJECT  PCB:PCB
+MIN_TRACK_WIDTH           12
+REC_TRACK_WIDTH           40
+MAX_TRACK_WIDTH           200
+TRACK_TO_TRACK            6
+VIA_TO_TRACK              6
+VIA_TO_VIA                6
+PAD_TO_TRACK              6
+PAD_TO_VIA                6
+PAD_TO_PAD                6
+SMD_TO_TRACK              6
+SMD_TO_VIA                6
+SMD_TO_PAD                6
+SMD_TO_SMD                6
+COPPER_TO_TRACK           6
+COPPER_TO_VIA             6
+COPPER_TO_PAD             6
+COPPER_TO_SMD             6
+COPPER_TO_COPPER          6
+TEXT_TO_TRACK             6
+TEXT_TO_VIA               6
+TEXT_TO_PAD               6
+TEXT_TO_SMD               6
+OUTLINE_TO_TRACK          6
+OUTLINE_TO_VIA            6
+OUTLINE_TO_PAD            6
+OUTLINE_TO_SMD            6
+OUTLINE_TO_COPPER         6
+DRILL_TO_TRACK            6
+DRILL_TO_VIA              6
+DRILL_TO_PAD              6
+DRILL_TO_SMD              6
+DRILL_TO_COPPER           6
+SAME_NET_SMD_TO_VIA       6
+SAME_NET_SMD_TO_CRN       6
+SAME_NET_VIA_TO_VIA       6
+SAME_NET_PAD_TO_CRN       6
+SAME_NET_TRACK_TO_CRN     0
+DRILL_TO_DRILL            6
+BODY_TO_BODY              6
+
+*END*
