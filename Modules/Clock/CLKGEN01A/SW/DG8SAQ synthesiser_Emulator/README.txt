@@ -1,5 +1,13 @@
-News
+NEWS
 ====
+
+11.11.2010
+
+Firmware was edited to work without bootloader falashing tool.
+So simply program PIC18F4550.hex in to PIC18F4550v01A module with 20MHz crystal. 
+Connect it via I2C to CLKGEN01A. And you have wide tunable LO compatible with DG8SAQ USB Si570 synthesiser!   
+
+
 14 Apr 2009
 
 The UBW has 1 power indicator LED, and 2 blinking LED's usually used to indicate the

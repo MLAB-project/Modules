@@ -12,7 +12,7 @@
                     Low Pin Count USB Development Kit
                   The firmware may be modified for use on other USB 
                     platforms by editing this file (HardwareProfile.h)
- Compiler:  	Microchip C18 (for PIC18), C30 (for PIC24), 
+ Compiler:     Microchip C18 (for PIC18), C30 (for PIC24), 
                   or C32 (for PIC32)
  Company:       Microchip Technology, Inc.
 
@@ -61,8 +61,8 @@
                 #include "HardwareProfile - PIC32MX460F512L PIM.h"
             #elif defined(PIC32_USB_STARTER_KIT)
                 #include "HardwareProfile - PIC32 USB Starter Kit.h"
-			#else
-				#include "HardwareProfile - UBW32.h"
+         #else
+            #include "HardwareProfile - UBW32.h"
             #endif
         #elif defined(__32MX795F512L__)
             #if defined(PIC32MX795F512L_PIM)
@@ -83,15 +83,15 @@
 
     #if defined(__18CXX)
         #if defined(__18F4550)
-            #include "HardwareProfile - PICDEM FSUSB.h"
+            #include "HardwareProfile - UBW.h"
         #elif defined(__18F87J50)
             #include "HardwareProfile - PIC18F87J50 PIM.h"
         #elif defined(__18F14K50)
             #include "HardwareProfile - Low Pin Count USB Development Kit.h"
         #elif defined(__18F46J50)
             #include "HardwareProfile - PIC18F46J50 PIM.h"
-		#elif defined(__18F2550)
-			#include "HardwareProfile - UBW.h"
+      #elif defined(__18F2550)
+         #include "HardwareProfile - UBW.h"
         #endif
     #endif
 #endif

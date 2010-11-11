@@ -182,6 +182,9 @@
    #define BPF_S2_STATE   PORTAbits.RA2
 #endif
 
+#define PADDLE_DIT   PORTBbits.RB6
+#define PADDLE_DAH   PORTBbits.RB7
+
 #define LPF_0   LATAbits.LATA3
 #define LPF_1   LATAbits.LATA4
 #define LPF_2   LATAbits.LATA5
