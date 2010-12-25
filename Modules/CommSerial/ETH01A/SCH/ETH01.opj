@@ -1,0 +1,79 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (File ".\eth01.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (NoModify))
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (R0805
+      (FullPartName "R0805.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (JUMP2X1_CON
+      (FullPartName "JUMP2X1_CON.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (GND_EARTH
+      (LibraryName "C:\LIBRARY\ORCAD16X\SYMBOLS.OLB")
+      (DeviceIndex "0"))
+    (RJ45_2LED
+      (FullPartName "RJ45_2LED.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_CON.OLB")
+      (DeviceIndex "0"))
+    (JUMP2X1
+      (FullPartName "JUMP2X1.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (JUMP2X2
+      (FullPartName "JUMP2X2.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (JUMP2X18
+      (FullPartName "JUMP2X18.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (R-4B-SIP4B
+      (FullPartName "R-4B-SIP4B.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (C-ELYTC
+      (FullPartName "C-ELYTC.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (XTAL050
+      (FullPartName "XTAL050.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_XTAL.OLB")
+      (DeviceIndex "0"))
+    (TITLE_MLAB
+      (LibraryName "C:\LIBRARY\ORCAD16X\SYMBOLS.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\eth01.dsn")
+      (Path "Design Resources" ".\eth01.dsn" "SCHEMATIC1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 342"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 25 1438 25 409")
+        (Scroll "0 27")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\KAKL\DOCUMENTS\MLAB\MODULES\COMMSERIAL\ETH01A\SCH\ETH01.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "Ethernet")))
+  (LastUsedLibraryBrowseDirectory "C:\library\ORCAD16X")
+  (MPSSessionName "kakl"))
