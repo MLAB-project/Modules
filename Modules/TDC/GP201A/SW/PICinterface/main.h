@@ -33,7 +33,9 @@
 
 #use delay(clock=20000000)
 #use rs232(baud=9600,parity=N,xmit=PIN_B7,rcv=PIN_B6,bits=8)
-#use spi(DI=PIN_B1, DO=PIN_B0, CLK=PIN_B2, ENABLE=PIN_B3, stream=TDC_stream)   // uses software SPI
+
+#define TDC_ENABLE PIN_B3      //enable pin for SPI communication
+#use spi(DI=PIN_B1, DO=PIN_B0, CLK=PIN_B2, stream=TDC_stream, bits=32)   // uses software SPI
 
 
 
