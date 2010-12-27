@@ -16,12 +16,14 @@ void main()
    setup_comparator(NC_NC_NC_NC);
    setup_vref(FALSE);
 
-   //TDC_reset();
+   TDC_reset();
    //TDC_init();
+   TDC_setup_reg1();
    
    while(true)
    {
       delay_ms(500);
       printf("ret: %LX \n", TDC_get_reg1());
+//      printf("ret: %LX \n", TDC_get_measurement(1));
    };
 }
