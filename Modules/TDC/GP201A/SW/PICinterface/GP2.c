@@ -54,42 +54,42 @@ unsigned int16 phase_fire;
 void TDC_init()
 {
    output_low(TDC_ENABLE);
-   spi_xfer(TDC_stream,0x70);
+   spi_xfer(TDC_stream,0x70,8);
    output_high(TDC_ENABLE);
 }
 
 void TDC_reset()
 {
    output_low(TDC_ENABLE);
-   spi_xfer(TDC_stream,0x50);
+   spi_xfer(TDC_stream,0x50,8);
    output_high(TDC_ENABLE);
 }
 
 void TDC_start_cycle()
 {
    output_low(TDC_ENABLE);
-   spi_xfer(TDC_stream,0x01);
+   spi_xfer(TDC_stream,0x01,8);
    output_high(TDC_ENABLE);
 }
 
 void TDC_start_temp()
 {
    output_low(TDC_ENABLE);
-   spi_xfer(TDC_stream,0x02);
+   spi_xfer(TDC_stream,0x02,8);
    output_high(TDC_ENABLE);
 }
 
 void TDC_start_cal_resonator()
 {
    output_low(TDC_ENABLE);
-   spi_xfer(TDC_stream,0x03);
+   spi_xfer(TDC_stream,0x03,8);
    output_high(TDC_ENABLE);
 }
 
 void TDC_start_cal()
 {
    output_low(TDC_ENABLE);
-   spi_xfer(TDC_stream,0x04);
+   spi_xfer(TDC_stream,0x04,8);
    output_high(TDC_ENABLE);
 }
 
