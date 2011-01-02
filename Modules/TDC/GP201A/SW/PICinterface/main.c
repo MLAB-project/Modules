@@ -19,13 +19,18 @@ void main()
    setup_vref(FALSE);
 
    TDC_reset();
-   //TDC_init();
    
+   hit1=TDC_MRANGE2_HIT1_START;
+   hit2=TDC_MRANGE2_HIT2_1CH1;
+   hitin1=TDC_HITIN1_2;
+   hitin2=TDC_HITIN1_0;
+  
+   TDC_update_registers();
+      
    while(true)
    {
+      TDC_init();
       delay_ms(500);
-      printf("ret: %LX \n", TDC_get_reg1());
-//      printf("ret: %LX \n", TDC_get_measurement(1));
-
+      printf("measured: %LX, %LX, %LX, %LX \n", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
    };
 }

@@ -116,21 +116,24 @@
 #define  TDC_MRANGE2_HIT2_3CH1  4
 
 //register 2
+#define  TDC_INT_TIMEOUT  4
+#define  TDC_INT_ENDHIT  2
+#define  TDC_INT_ALU  1
 #define  TDC_CH1EDGE_RIS  0
 #define  TDC_CH1EDGE_FAL  1
+#define  TDC_CH2EDGE_RIS  0
+#define  TDC_CH2EDGE_FAL  1
 
 //register 3
-#define  TDC_TIM0MR2_256  0
-#define  TDC_TIM0MR2_1024  1
-#define  TDC_TIM0MR2_4096  2
-#define  TDC_TIM0MR2_16384  3
+#define  TDC_TIM0MR2_256CLKHS  0
+#define  TDC_TIM0MR2_1024CLKHS  1
+#define  TDC_TIM0MR2_4096CLKHS  2
+#define  TDC_TIM0MR2_16384CLKHS  3
 
 #define  TDC_ERRVAL_EN  1
 #define  TDC_ERRVAL_DIS  0
 
 //register 5
-#define  TDC_FIRE_PHASE  0
-#define  TDC_FIRE_PHASE_INV  1
 #define  TDC_REPEAT_FIRE_0  0
 #define  TDC_REPEAT_FIRE_1  1
 #define  TDC_REPEAT_FIRE_2  2
