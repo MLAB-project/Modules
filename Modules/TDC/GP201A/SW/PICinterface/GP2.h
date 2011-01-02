@@ -1,4 +1,4 @@
-#include "GP2.c"
+
 
 //register 0
 #define  TDC_NEG_START_INV  1
@@ -146,3 +146,4 @@
 #define  TDC_STARTNOISE_EN  1
 #define  TDC_STARTNOISE_DIS  0
 
+#include "GP2.c"

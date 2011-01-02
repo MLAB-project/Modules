@@ -2,6 +2,8 @@
 
 #include "GP2.h"
 
+#define VERSION   0.1
+
 void main()
 {
    setup_adc_ports(NO_ANALOGS|VSS_VDD);
@@ -18,12 +20,12 @@ void main()
 
    TDC_reset();
    //TDC_init();
-   TDC_setup_reg1();
    
    while(true)
    {
       delay_ms(500);
       printf("ret: %LX \n", TDC_get_reg1());
 //      printf("ret: %LX \n", TDC_get_measurement(1));
+
    };
 }
