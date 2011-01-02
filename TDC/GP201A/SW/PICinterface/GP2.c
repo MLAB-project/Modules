@@ -79,31 +79,19 @@ void TDC_setup_reg1()
    spi_xfer(TDC_stream,0x81,8);
    spi_xfer(TDC_stream,0x224000,24);   
    output_high(TDC_ENABLE);
-}
 
-void TDC_setup_reg2()
-{
    output_low(TDC_ENABLE);
    spi_xfer(TDC_stream,0xB1);
    output_high(TDC_ENABLE);
-}
 
-void TDC_setup_reg3()
-{
    output_low(TDC_ENABLE);
    spi_xfer(TDC_stream,0xB2);
    output_high(TDC_ENABLE);
-}
 
-void TDC_setup_reg4()
-{
    output_low(TDC_ENABLE);
    spi_xfer(TDC_stream,0xB3);
    output_high(TDC_ENABLE);
-}
 
-void TDC_setup_reg5()
-{
    output_low(TDC_ENABLE);
    spi_xfer(TDC_stream,0xB4);
    output_high(TDC_ENABLE);
