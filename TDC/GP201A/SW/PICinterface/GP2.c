@@ -46,7 +46,7 @@ unsigned int conf_fire=0;
 unsigned int1 en_startnoise=TDC_STARTNOISE_DIS;
 unsigned int1 dis_phasenoise=TDC_PHASENOISE_DIS;
 unsigned int repeat_fire=TDC_REPEAT_FIRE_0;
-unsigned int16 phase_fire;
+unsigned int16 phase_fire=0;
 
 //}TDC_registers;
 
