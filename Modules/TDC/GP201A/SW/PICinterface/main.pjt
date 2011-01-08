@@ -15,14 +15,16 @@ AdditionalOptionString=
 1=.\main.c
 [Windows]
 0=0000 %S 0 0 796 451 3 0
-[Units]
-Link=0
-Count=1
-1=.\main
 [Opened Files]
 1=.\main.c
-2=
-3=..\..\..\..\..\..\..\..\..\Program Files\PICC\Devices\18F4550.h
-4=GP2.c
+2=ds1820.c
+3=1wire.c
+4=
 5=GP2.h
 6=
+[Target Data]
+OptionString=-p +FH
+FileList=D:\MLAB\Modules\TDC\GP201A\SW\PICinterface\.\main.c
+[Units]
+Count=1
+1=.\main.c (main)

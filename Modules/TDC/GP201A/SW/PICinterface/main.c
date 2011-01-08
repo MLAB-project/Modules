@@ -1,15 +1,19 @@
 #include "main.h"
 
-#include "GP2.h"
-
 #define VERSION   0.1
 
 #define START  PIN_D4
 #define STOP1  PIN_D5
 #define STOP2  PIN_D6
+#include "GP2.h"
+
+#define ONE_WIRE_PIN       PIN_E2
+#include "ds1820.c"
 
 void main()
 {
+float temperature;
+
    setup_adc_ports(NO_ANALOGS|VSS_VDD);
    setup_adc(ADC_CLOCK_DIV_2);
    setup_psp(PSP_DISABLED);
@@ -45,20 +49,13 @@ void main()
       
    while(true)
    {
+      temperature = ds1820_read();
 
-/*      delay_ms(500);
-      hit2=0x00;
-      hit1=0x00;
-      TDC_update_registers();
-      printf("reg1: %X \n", TDC_get_reg1());
-
-      TDC_reset();
-      delay_ms(50);
-      printf("reg1: %X \n", TDC_get_reg1());
-*/
       TDC_init();
       delay_ms(50);
-      printf("status: %LX \n", TDC_get_status());
+      printf("Temp: %f \r\n", temperature);
+      delay_ms(50);
+      printf("status: %LX \r\n", TDC_get_status());
       delay_us(10);
       TDC_start_cycle();
       delay_us(10);
@@ -81,9 +78,9 @@ void main()
       output_low(STOP1);
 
       delay_ms(100);
-      printf("status: %LX \n", TDC_get_status());
+      printf("status: %LX \r\n", TDC_get_status());
       delay_ms(50);
-      printf("measured: %LX, %LX, %LX, %LX \n", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
+      printf("measured: %LX, %LX, %LX, %LX \r\n", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
       delay_ms(500);
       
    };
