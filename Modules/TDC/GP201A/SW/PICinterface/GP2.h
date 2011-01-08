@@ -34,7 +34,7 @@
 #define  TDC_CALPERIODS_8  2
 #define  TDC_CALPERIODS_16  3
 
-#define  TDC_DIV_FIRE_2  0
+#define  TDC_DIV_FIRE_2  1
 #define  TDC_DIV_FIRE_3  2
 #define  TDC_DIV_FIRE_4  3
 #define  TDC_DIV_FIRE_5  4
