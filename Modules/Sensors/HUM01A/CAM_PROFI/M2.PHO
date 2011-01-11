@@ -1,0 +1,100 @@
+*
+*
+G04 PADS 9.2 Build Number: 414666 generated Gerber (RS-274-X) file*
+G04 PC Version=2.1*
+*
+%IN "HUM01A.pcb"*%
+*
+%MOIN*%
+*
+%FSLAX35Y35*%
+*
+*
+*
+*
+G04 PC Standard Apertures*
+*
+*
+G04 Thermal Relief Aperture macro.*
+%AMTER*
+1,1,$1,0,0*
+1,0,$1-$2,0,0*
+21,0,$3,$4,0,0,45*
+21,0,$3,$4,0,0,135*
+%
+*
+*
+G04 Annular Aperture macro.*
+%AMANN*
+1,1,$1,0,0*
+1,0,$2,0,0*
+%
+*
+*
+G04 Odd Aperture macro.*
+%AMODD*
+1,1,$1,0,0*
+1,0,$1-0.005,0,0*
+%
+*
+*
+G04 PC Custom Aperture Macros*
+*
+*
+*
+*
+*
+*
+G04 PC Aperture Table*
+*
+%ADD024C,0.001*%
+%ADD059R,0.03008X0.08008*%
+%ADD060R,0.11X0.10016*%
+%ADD061R,0.072X0.055*%
+%ADD062R,0.09465X0.09858*%
+%ADD063R,0.081X0.081*%
+%ADD064C,0.25213*%
+%ADD065C,0.21*%
+*
+*
+*
+*
+G04 PC Circuitry*
+G04 Layer Name HUM01A.pcb - circuitry*
+%LPD*%
+*
+*
+G04 PC Custom Flashes*
+G04 Layer Name HUM01A.pcb - flashes*
+%LPD*%
+*
+*
+G04 PC Circuitry*
+G04 Layer Name HUM01A.pcb - circuitry*
+%LPD*%
+*
+G54D24*
+G54D59*
+G01X186000Y162996D03*
+X181000D03*
+X176000D03*
+G54D60*
+X181000Y206008D03*
+G54D61*
+X166000Y173800D03*
+Y166200D03*
+G54D62*
+X140000Y167961D03*
+Y188039D03*
+G54D63*
+X154164Y184747D03*
+Y174747D03*
+Y164747D03*
+G54D64*
+X140000Y140000D03*
+X180000D03*
+G54D65*
+X128000Y128000D03*
+X193000Y127000D03*
+X0Y0D02*
+M02*
