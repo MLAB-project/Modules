@@ -11,6 +11,37 @@
   (Folder "Outputs")
   (Folder "Referenced Projects")
   (PartMRUSelector
+    (OFF_PAGE_OUT_R
+      (LibraryName "C:\LIBRARY\ORCAD16X\SYMBOLS.OLB")
+      (DeviceIndex "0"))
+    (JUMP2X4_CON
+      (FullPartName "JUMP2X4_CON.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (C1206
+      (FullPartName "C1206.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (1N4007
+      (FullPartName "1N4007.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_D.OLB")
+      (DeviceIndex "0"))
+    (1N5408
+      (FullPartName "1N5408.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_D.OLB")
+      (DeviceIndex "0"))
+    (1N5820
+      (FullPartName "1N5820.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_D.OLB")
+      (DeviceIndex "0"))
+    (TSSO14_170
+      (FullPartName "TSSO14_170.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\DECALES.OLB")
+      (DeviceIndex "0"))
+    (BRIDGE-SQ
+      (FullPartName "BRIDGE-SQ.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_D.OLB")
+      (DeviceIndex "0"))
     (R0805
       (FullPartName "R0805.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
@@ -57,18 +88,19 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources" ".\eth01.dsn")
-      (Path "Design Resources" ".\eth01.dsn" "SCHEMATIC1"))
+      (Path "Design Resources" ".\eth01.dsn" "SCHEMATIC1")
+      (Path "Design Resources" ".\eth01.dsn" "Design Cache"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 0 217 0 414"))
+        (Placement "44 0 1 -1 -1 -8 -30 0 217 0 414"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 25 1156 25 512")
-        (Scroll "325 485")
+        (Placement "44 2 3 -1 -1 -8 -30 25 1156 25 512")
+        (Scroll "0 20")
         (Zoom "100")
         (Occurrence "/"))
       (Path
@@ -79,12 +111,12 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 75 1210 75 566")
-        (Scroll "0 32")
+        (Scroll "0 40")
         (Zoom "100")
         (Occurrence "/"))
       (Path
          "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\COMMSERIAL\ETH01A\SCH\ETH01.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "Power")))
+      (Page "PoE")))
   (LastUsedLibraryBrowseDirectory "C:\library\ORCAD16X")
   (MPSSessionName "kaklik"))
