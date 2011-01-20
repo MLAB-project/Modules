@@ -25,6 +25,8 @@
     (OTHER_Switch6 "FALSE"))
   (Folder "Outputs"
     (File ".\eth01.asc"
+      (Type "Report"))
+    (File ".\eth01.net"
       (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
@@ -131,13 +133,13 @@
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 217 0 414"))
+        (Placement "44 2 3 -1 -1 -8 -30 0 217 0 414"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 25 1156 25 512")
-        (Scroll "0 0")
+        (Placement "44 0 1 -1 -1 -8 -30 25 1156 25 512")
+        (Scroll "0 120")
         (Zoom "100")
         (Occurrence "/"))
       (Path
@@ -148,7 +150,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 75 1210 75 566")
-        (Scroll "0 142")
+        (Scroll "0 132")
         (Zoom "100")
         (Occurrence "/"))
       (Path
