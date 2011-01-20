@@ -7,10 +7,46 @@
       (Type "Schematic Design"))
     (BuildFileAddedOrDeleted "x")
     (CompileFileAddedOrDeleted "x")
-    (NoModify))
-  (Folder "Outputs")
+    (NoModify)
+    (Netlist_TAB "8")
+    (OTHER_Part_Value "{Value}")
+    (OTHER_Netlist_File "ETH01.asc")
+    (OTHER_Netlist_File2 "ETH01.CMP")
+    (OTHER_View_Output "FALSE")
+    (OTHER_View_Output2 "FALSE")
+    (OTHER_Formatter "orPadspcb.dll")
+    (OTHER_PCB_Footprint "{Device},{Value}@{PCB Footprint}")
+    (OTHER_Switch0 "FALSE")
+    (OTHER_Switch1 "FALSE")
+    (OTHER_Switch2 "FALSE")
+    (OTHER_Switch3 "FALSE")
+    (OTHER_Switch4 "FALSE")
+    (OTHER_Switch5 "FALSE")
+    (OTHER_Switch6 "FALSE"))
+  (Folder "Outputs"
+    (File ".\eth01.asc"
+      (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
+    (LED3mm
+      (FullPartName "LED3mm.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_OPTO.OLB")
+      (DeviceIndex "0"))
+    (HOLE_M3
+      (FullPartName "HOLE_M3.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\PAD.OLB")
+      (DeviceIndex "0"))
+    (JUMP2X2_CON
+      (FullPartName "JUMP2X2_CON.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (JUMP2
+      (FullPartName "JUMP2.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (OFF_PAGE_IN_L
+      (LibraryName "C:\LIBRARY\ORCAD16X\SYMBOLS.OLB")
+      (DeviceIndex "0"))
     (OFF_PAGE_OUT_R
       (LibraryName "C:\LIBRARY\ORCAD16X\SYMBOLS.OLB")
       (DeviceIndex "0"))
@@ -89,7 +125,8 @@
       (Path "Design Resources")
       (Path "Design Resources" ".\eth01.dsn")
       (Path "Design Resources" ".\eth01.dsn" "SCHEMATIC1")
-      (Path "Design Resources" ".\eth01.dsn" "Design Cache"))
+      (Path "Design Resources" ".\eth01.dsn" "Design Cache")
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -100,7 +137,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 2 3 -1 -1 -8 -30 25 1156 25 512")
-        (Scroll "0 20")
+        (Scroll "0 0")
         (Zoom "100")
         (Occurrence "/"))
       (Path
@@ -111,7 +148,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 75 1210 75 566")
-        (Scroll "0 40")
+        (Scroll "0 142")
         (Zoom "100")
         (Occurrence "/"))
       (Path
@@ -119,4 +156,5 @@
       (Schematic "SCHEMATIC1")
       (Page "PoE")))
   (LastUsedLibraryBrowseDirectory "C:\library\ORCAD16X")
-  (MPSSessionName "kaklik"))
+  (MPSSessionName "kaklik")
+  (ISPCBBASICLICENSE "false"))
