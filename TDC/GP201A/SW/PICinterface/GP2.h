@@ -16,7 +16,7 @@
 #define  TDC_TSELCLK_32KHZ  0
 #define  TDC_TSELCLK_128HS  1
 #define  TDC_TFAKENUM_2  0
-#define  TDC_TFAKENUM_7  1
+#define  TDC_TFAKENUM_8  1
 #define  TDC_TCYCLE_SHORT  0
 #define  TDC_TCYSLE_LONG  1
 #define  TDC_TPORTNUM_2  0
