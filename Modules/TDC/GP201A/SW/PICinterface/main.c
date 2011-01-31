@@ -53,23 +53,44 @@ float temperature;
    output_low(START);
    output_low(STOP1);
    output_low(STOP2);
- 
+
+   delay_ms(50);
+
+//write raw register values
+   output_low(TDC_ENABLE);
+   spi_xfer(TDC_stream,0x80338AE8,32);
+   output_high(TDC_ENABLE);
+
+   output_low(TDC_ENABLE);
+   spi_xfer(TDC_stream,0x81211400,32);
+   output_high(TDC_ENABLE);
+   
+   output_low(TDC_ENABLE);
+   spi_xfer(TDC_stream,0x82E03200,32);
+   output_high(TDC_ENABLE);
+
+   output_low(TDC_ENABLE);
+   spi_xfer(TDC_stream,0x83083300,32);
+   output_high(TDC_ENABLE);
+
+   output_low(TDC_ENABLE);
+   spi_xfer(TDC_stream,0x84203400,32);
+   output_high(TDC_ENABLE);
+
+   output_low(TDC_ENABLE);
+   spi_xfer(TDC_stream,0x85080000,32);
+   output_high(TDC_ENABLE);
+
    TDC_start_cal_resonator();
    delay_ms(50);
    printf("calibrate: %LX, %LX, %LX, %LX \r\n", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
-   TDC_start_cal();
-   delay_ms(50);
+//   TDC_start_cal();
+//   delay_ms(50);
       
    while(true)
    {
       temperature = ds1820_read();   
-      TDC_reset();
-   hitin1=TDC_HITIN1_2;
-   hitin2=TDC_HITIN2_1;
-   en_err_val=1;
-   TDC_update_registers();
-
-      delay_ms(50);
+      
       TDC_init();
       
       delay_ms(50);
@@ -77,31 +98,31 @@ float temperature;
       delay_ms(50);
       printf("status: %LX \r\n", TDC_get_status());
 
-//      TDC_start_cycle();
+      TDC_start_cycle();
 
-      delay_us(10);
+//      delay_us(10);
       output_high(START);
 //      delay_us(1);
       
-      delay_us(10);
-      output_low(START);
+      delay_us(100);
+//      output_low(START);
       
-//      output_high(STOP1);
+      output_high(STOP1);
 //      delay_us(10);
 //      delay_us(500);
 //      output_high(STOP1);
 //      delay_us(10);
-//      output_low(STOP1); 
+      output_low(STOP1); 
 //      delay_us(500); 
 //      output_high(STOP1);
-//      delay_us(10);
+      delay_us(10);
  //     output_low(STOP1);
       output_low(START);
 
 //      output_high(STOP2);
 //      delay_us(10);
 //      output_low(START);
-//      output_low(STOP1);      
+      output_high(STOP1);      
 //      output_low(STOP2);      
 //      delay_us(500);
 //      output_high(STOP2);
