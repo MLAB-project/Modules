@@ -41,7 +41,7 @@ float temperature;
    calibrate=TDC_CALIBRATE_DIS;
    disautocal=TDC_AUTOCAL_EN;
    
-   firenum=TDC_FIRENUM_0;
+   firenum=TDC_FIRENUM_1;
    div_fire=TDC_DIV_FIRE_2;
    
    Tcycle=TDC_TCYSLE_LONG;
@@ -91,14 +91,14 @@ float temperature;
    {
       temperature = ds1820_read();   
       
-      TDC_init();
+//      TDC_init();
       
       delay_ms(50);
       printf("Temp: %f \r\n", temperature);
       delay_ms(50);
       printf("status: %LX \r\n", TDC_get_status());
 
-      TDC_start_cycle();
+//      TDC_start_cycle();
 
 //      delay_us(10);
       output_high(START);
@@ -135,7 +135,7 @@ float temperature;
 
 
 //      delay_ms(10);
-//      TDC_start_temp();
+      TDC_start_temp();
 
       delay_ms(10);
       printf("status: %LX \r\n", TDC_get_status());
