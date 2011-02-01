@@ -28,12 +28,12 @@ float temperature;
 
    TDC_reset();
    
-/*   MRange=TDC_MRANGE1;
+   MRange=TDC_MRANGE2;
    hitin1=TDC_HITIN1_1;
    hitin2=TDC_HITIN2_0;
-   hit1=TDC_MRANGE1_HIT1_START;
-   hit2=TDC_MRANGE1_HIT2_1CH1;
-   en_int=0x0; // (TDC_INT_ALU | TDC_INT_ENDHIT | TDC_INT_TIMEOUT);
+   hit1=TDC_MRANGE2_HIT1_START;
+   hit2=TDC_MRANGE2_HIT2_1CH1;
+   en_int=(TDC_INT_ALU | TDC_INT_ENDHIT | TDC_INT_TIMEOUT);
    en_err_val=TDC_ERRVAL_EN;
    delval1=0x0;
    delval2=0x0;
@@ -49,7 +49,7 @@ float temperature;
    fakenum=TDC_TFAKENUM_2;
   
    TDC_update_registers();
-*/      
+      
    output_low(START);
    output_low(STOP1);
    output_low(STOP2);
@@ -57,7 +57,7 @@ float temperature;
    delay_ms(50);
 
 //write raw register values
-   output_low(TDC_ENABLE);
+/*   output_low(TDC_ENABLE);
    spi_xfer(TDC_stream,0x80338AE8,32);
    output_high(TDC_ENABLE);
 
@@ -80,7 +80,7 @@ float temperature;
    output_low(TDC_ENABLE);
    spi_xfer(TDC_stream,0x85080000,32);
    output_high(TDC_ENABLE);
-
+*/
    TDC_start_cal_resonator();
    delay_ms(50);
    printf("calibrate: %LX, %LX, %LX, %LX \r\n", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
@@ -127,7 +127,7 @@ float temperature;
 //      delay_us(500);
 //      output_high(STOP2);
 //      delay_us(10);
-//      output_low(STOP2); 
+      output_low(STOP1); 
 //      delay_us(500); 
 //      output_high(STOP2);
 //      delay_us(10);
