@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[czech]{babel}
 \usepackage{graphicx}
+\usepackage{pdfpages}
 \textwidth 16cm \textheight 25cm
 \topmargin -1.3cm 
 \oddsidemargin 0cm
@@ -31,32 +32,42 @@ Učelem tohoto modulu je poskytnout uživateli dostatečně kvalitní laditelný
 \begin{tabular}{|c|c|c|}
 \hline
 \multicolumn{1}{|c|}{Parametr} & \multicolumn{1}{|c|}{Hodnota} & \multicolumn{1}{|c|}{Poznámka} \\ \hline
-Napájecí napětí analogové části & $\pm$10V &  100mA \\ \hline
-Napájecí napětí digitální části & +5V &  300mA \\ \hline
-Napájecí napětí LNA & do +20V &  max 500mA \\ \hline
-Frekvenční rozsah  & 0,5 - 200 MHz & Při osazení vybranými součástkami i 450MHz \\ \hline
-IIP3  & $>$ 0dB & Předběžný údaj \\ \hline
-Šumové číslo  & $<$ 30dB & \\ \hline
+Napájecí napětí POWER  & max 5V &  160mA \\ \hline
+Napájecí napětí Vcore & +1,8V, 2,7V, 3,3V &  Záleží na konkrétním typu čipu Si5XX \\ \hline
+Frekvenční rozsah  & 10 - 1500 MHz & Záleží na konkrétním typu čipu Si5XX, obvykle 10-810MHz \\ \hline
+Fázový jitter  & $<$ 0,3ps & Pro obvody řady Si570 \\ \hline
 \end{tabular}
 \end{center}
 \end{table}
 
 \newpage
 \section{Popis konstrukce}
-
 \subsection{Zapojení}
+Zapojení modulu je řešeno tak, aby umožnilo připojení řídícího mikroprocesoru provozovaného na stejném i jiném napájecím napětí vůči čipu Si5XX. V konstrukci je proto využit převodník napěťových úrovní, který může být při jeho absenci přemostěn dvěma nulovými odpory.
 
+V případě provozování modulu na napájecím napětí různém od napajecího napětí Si570 si modul může stabilizovat napájení sám díky lineárnímu stabilizátoru. V takovém případě je ale přesto dát pozor, aby napájení nepřesáhlo dovolenéé napětí na translátoru, tedy hranici 5V.  
 
+\includepdf[pages={1},landscape=true]{../../SCH/CLKGEN.pdf}
+
+Jak je vidět ze zapojení, výstup je předpokládán diferenciální, avšak není problém osadit verzi čipu Si570 s CMOS výstupem. 
 
 \subsection{Odrušení}
 
+Vzhledem k tomu, že modul je ze své podstaty generátorem signálu, je s ním i třeba tak pracovat a dbát na dostatečné odrušení vůči jiným součástem aparatury. Tomuto výrazně pomáhá vhodná volba základní desky, z MLABu nejlépe ALBASE.
+
 \subsection{Mechanická konstrukce}
 
+Modul klasicky předpokládá uchycení na čtyřech šroubech, z důvodu vhodného odstínění je vhodné zabezpečit aby všechny šrouby byly vodivě spojeny s podložkou.  
+
 \section{Výroba a testování}
+Modul je z zdůvodu zabezpečení kvalitního blokování i na vysokých frekvencích (až 1,5GHz) navržen na dvouvrstvém silně prokoveném plošném spoji. A proto je obtížná jeho amatérská výroba.
 
 \subsubsection{Osazení}
 
+Modul je možné osadit i ručně, avšat je třeba dbát zvýšené opatrnosti kvůli alektrostatickým nábojům
+
 \subsubsection{Nastavení}
+Při připojení modulu k napájení generuje frekvenci nastavenou při výrobě v Silicon Labs. Je ale možné spřesnit generovanou frekvenci. K tomu je nutné zprovoznit komunikaci přes I2C sběrnici. 
 
 \section{Programové vybavení}
 
