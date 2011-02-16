@@ -30,6 +30,10 @@
       (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
+    (JUMP2X3_CON
+      (FullPartName "JUMP2X3_CON.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
+      (DeviceIndex "0"))
     (LED3mm
       (FullPartName "LED3mm.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\COM_OPTO.OLB")
@@ -127,7 +131,6 @@
       (Path "Design Resources")
       (Path "Design Resources" ".\eth01.dsn")
       (Path "Design Resources" ".\eth01.dsn" "SCHEMATIC1")
-      (Path "Design Resources" ".\eth01.dsn" "Design Cache")
       (Path "Outputs"))
     (HierarchyView)
     (Doc
@@ -139,7 +142,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 25 1156 25 512")
-        (Scroll "0 120")
+        (Scroll "253 90")
         (Zoom "100")
         (Occurrence "/"))
       (Path
@@ -150,7 +153,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 75 1210 75 566")
-        (Scroll "0 132")
+        (Scroll "0 102")
         (Zoom "100")
         (Occurrence "/"))
       (Path
