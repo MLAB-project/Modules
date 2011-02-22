@@ -30,6 +30,17 @@
       (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
+    (C0805
+      (FullPartName "C0805.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (L2T
+      (FullPartName "L2T.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\GEN_RLC.OLB")
+      (DeviceIndex "0"))
+    (GND_EARTH
+      (LibraryName "C:\LIBRARY\ORCAD16X\SYMBOLS.OLB")
+      (DeviceIndex "0"))
     (JUMP2X3_CON
       (FullPartName "JUMP2X3_CON.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
@@ -92,9 +103,6 @@
       (FullPartName "JUMP2X1_CON.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
       (DeviceIndex "0"))
-    (GND_EARTH
-      (LibraryName "C:\LIBRARY\ORCAD16X\SYMBOLS.OLB")
-      (DeviceIndex "0"))
     (RJ45_2LED
       (FullPartName "RJ45_2LED.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\COM_CON.OLB")
@@ -118,13 +126,6 @@
     (C-ELYTC
       (FullPartName "C-ELYTC.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
-      (DeviceIndex "0"))
-    (XTAL050
-      (FullPartName "XTAL050.Normal")
-      (LibraryName "C:\LIBRARY\ORCAD16X\COM_XTAL.OLB")
-      (DeviceIndex "0"))
-    (TITLE_MLAB
-      (LibraryName "C:\LIBRARY\ORCAD16X\SYMBOLS.OLB")
       (DeviceIndex "0")))
   (GlobalState
     (FileView
@@ -142,7 +143,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 25 1156 25 512")
-        (Scroll "189 225")
+        (Scroll "0 70")
         (Zoom "100")
         (Occurrence "/"))
       (Path
@@ -153,7 +154,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 75 1210 75 566")
-        (Scroll "0 102")
+        (Scroll "0 72")
         (Zoom "100")
         (Occurrence "/"))
       (Path
