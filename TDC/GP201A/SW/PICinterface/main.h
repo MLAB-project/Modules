@@ -35,7 +35,7 @@
 #use rs232(baud=9600,parity=N,xmit=PIN_B7,rcv=PIN_B6,bits=8)
 
 #define TDC_ENABLE PIN_B3      //enable pin for SPI communication with TDC
-#use spi(DI=PIN_B1, DO=PIN_B0, CLK=PIN_B2, stream=TDC_stream, bits=32)   // uses software SPI
+#use spi(DI=PIN_B1, DO=PIN_B0, CLK=PIN_B2, stream=TDC_stream, bits=32,baud=9600)   // uses software SPI
 
 
 
