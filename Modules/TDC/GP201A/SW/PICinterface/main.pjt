@@ -16,12 +16,13 @@ AdditionalOptionString=
 [Windows]
 0=0000 %S 0 0 796 451 3 0
 [Opened Files]
-1=.\main.c
-2=
-3=GP2.h
-4=
-5=
-6=
+1=main.c
+2=1wire.c
+3=ds1820.c
+4=GP2.c
+5=GP2.h
+6=main.h
+7=
 [Target Data]
 OptionString=-p +FH
 FileList=D:\MLAB\Modules\TDC\GP201A\SW\PICinterface\.\main.c
