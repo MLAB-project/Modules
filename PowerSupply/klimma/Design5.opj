@@ -1,0 +1,104 @@
+(ExpressProject "Design5"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\design5.dsn"
+      (Type "Schematic Design"))
+    (Netlist_TAB "8")
+    (OTHER_Part_Value "{Value}")
+    (OTHER_Netlist_File "DESIGN5.asc")
+    (OTHER_Netlist_File2 "DESIGN5.CMP")
+    (OTHER_View_Output "FALSE")
+    (OTHER_View_Output2 "FALSE")
+    (OTHER_Formatter "orPadspcb.dll")
+    (OTHER_PCB_Footprint "{Device},{Value}@{PCBfootprint}")
+    (OTHER_Switch0 "FALSE")
+    (OTHER_Switch1 "FALSE")
+    (OTHER_Switch2 "FALSE")
+    (OTHER_Switch3 "FALSE")
+    (OTHER_Switch4 "FALSE")
+    (OTHER_Switch5 "FALSE")
+    (OTHER_Switch6 "FALSE"))
+  (Folder "Outputs"
+    (File ".\design5.asc"
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (MPSSessionName "kregon")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\design5.dsn")
+      (Path "Design Resources" ".\design5.dsn" "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources" ".\design5.dsn" "SCHEMATIC1" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -30 0 200 0 220"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -4 -30 88 922 116 432")
+        (Scroll "0 168")
+        (Zoom "118")
+        (Occurrence "/"))
+      (Path "C:\ORCAD\ORCAD_16.3_DEMO\TOOLS\DESIGN5.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
+  (PartMRUSelector
+    (VCC_BAR
+      (LibraryName "C:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (JUMP1
+      (FullPartName "JUMP1.Normal")
+      (LibraryName "F:\ORCAD16X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (1N4007SMD
+      (FullPartName "1N4007SMD.Normal")
+      (LibraryName "F:\ORCAD16X\COM_D.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName "C:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (DIP8_300
+      (FullPartName "DIP8_300.Normal")
+      (LibraryName "F:\ORCAD16X\DECALES.OLB")
+      (DeviceIndex "0"))
+    (Diode_SMD
+      (FullPartName "Diode_SMD.Normal")
+      (LibraryName "F:\PROJDCSDG.OLB")
+      (DeviceIndex "0"))
+    (REG711
+      (FullPartName "REG711.Normal")
+      (LibraryName "F:\PROJDCSDG.OLB")
+      (DeviceIndex "0"))
+    (C0805
+      (FullPartName "C0805.Normal")
+      (LibraryName "F:\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (C-ELYTB
+      (FullPartName "C-ELYTB.Normal")
+      (LibraryName "F:\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (L1210
+      (FullPartName "L1210.Normal")
+      (LibraryName "F:\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (R0805
+      (FullPartName "R0805.Normal")
+      (LibraryName "F:\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (LF256/NS
+      (FullPartName "LF256/NS.Normal")
+      (LibraryName "F:\NAT_SEMI.OLB")
+      (DeviceIndex "0"))
+    (LTC1480
+      (FullPartName "LTC1480.Normal")
+      (LibraryName "F:\ORCAD16X\TRANSMITTERS.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory "F:\")
+  (ISPCBBASICLICENSE "false"))
