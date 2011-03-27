@@ -138,14 +138,23 @@
       (Path "Design Resources" ".\eth02.dsn")
       (Path "Design Resources" ".\eth02.dsn" "SCHEMATIC1")
       (Path "Design Resources" ".\eth02.dsn" "Design Cache")
-      (Path "Outputs")
-      (Select "Design Resources" ".\eth02.dsn"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 217 0 414"))
-      (Tab 0)))
+        (Placement "44 2 3 -1 -1 -4 -30 0 217 0 414"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -30 22 1016 29 611")
+        (Scroll "0 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "D:\MLAB\MODULES\COMMSERIAL\ETH02A\SCH\ETH02.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "Ethernet")))
   (LastUsedLibraryBrowseDirectory "C:\library\ORCAD16X")
   (MPSSessionName "Jakub Kákona")
   (ISPCBBASICLICENSE "false"))
