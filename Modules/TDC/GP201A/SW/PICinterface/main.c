@@ -48,8 +48,12 @@ void main()
    int16 ret16;
    int8 ret8;
 
+
    while(TRUE)
    {
+      delay_ms(100);
+
+
       TDC_reset();
       delay_ms(100);
    
@@ -95,9 +99,8 @@ void main()
       ble|=(0<<21)|(0<<20)|(0<<19)|(0<<16)|0;
       spi_xfer(TDC_stream,ble,32);
       output_high(TDC_ENABLE);
-      
-   
-   
+
+
    //----------------------------------------------- Vypis registru
       output_low(TDC_ENABLE);
       ret8=0;
