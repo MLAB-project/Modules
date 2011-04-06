@@ -17,15 +17,16 @@ AdditionalOptionString=
 0=0000 %S 0 0 796 451 3 0
 [Opened Files]
 1=main.c
-2=1wire.c
-3=ds1820.c
-4=GP2.c
-5=GP2.h
-6=main.h
-7=
+2=GP2.c
+3=
+4=GP2.h
+5=GP2.c
+6=ds1820.c
+7=1wire.c
+8=
 [Target Data]
 OptionString=-p +FH
-FileList=D:\MLAB\Modules\TDC\GP201A\SW\PICinterface\.\main.c
+FileList=D:\MLAB\Modules\TDC\GP201A\SW\PICinterface\main.c
 [Units]
 Count=1
-1=.\main.c (main)
+1=main (main)
