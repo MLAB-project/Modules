@@ -1,5 +1,7 @@
 
 
+#define TDC_CLKHS 5000000     // frequency of highspeed oscillator
+
 //register 0
 #define  TDC_NEG_START_INV  1
 #define  TDC_NEG_START  0
