@@ -58,7 +58,7 @@ void main()
       delay_ms(100);
    
    //----------------------------------------------- Nastaveni registru
-      output_low(TDC_ENABLE);
+/*      output_low(TDC_ENABLE);
       ble=0;
       ble=(8<<28)|(0<<24);    // write addres
       ble|=(0<<20)|(0<<16)|(0<<14)|(3<<12)|(1<<10)|(0<<9)|(0<<8)|(0<<7)|(1<<6)|(1<<5)|(0<<4)|(1<<3)|(0<<2)|(0<<1)|0;
@@ -99,7 +99,19 @@ void main()
       ble|=(0<<21)|(0<<20)|(0<<19)|(0<<16)|0;
       spi_xfer(TDC_stream,ble,32);
       output_high(TDC_ENABLE);
+*/
 
+   hit1=TDC_MRANGE2_HIT1_START;
+//   hit2=TDC_MRANGE2_HIT2_2CH1;
+   hitin1=TDC_HITIN1_4;
+   hitin2=TDC_HITIN2_0;
+   en_int= TDC_INT_ALU | TDC_INT_ENDHIT | TDC_INT_TIMEOUT;
+   en_err_val=TDC_ERRVAL_EN;
+   delval1=0x0;
+   delval2=0x0;
+   delval3=0x0;
+  
+   TDC_update_registers();
 
    //----------------------------------------------- Vypis registru
          
@@ -148,7 +160,7 @@ void main()
       
    //----------------------------------------------- Pocitani
       int32 nn;
-      for(nn=3;nn<=5;nn++)
+      for(nn=1;nn<=3;nn++)
       {
          delay_ms(500);
 
@@ -164,16 +176,21 @@ void main()
                   
          printf("%X\r\n",TDC_get_reg1());
       
-         // Next calculation
-         output_low(TDC_ENABLE);
-         ble=0;
-         ble=(8<<28)|(1<<24);    // write to reg1
-         ble|=(nn<<20)|(1<<16)|(0<<15)|(1<<14)|(0<<11)|(4<<8)|0x00;
-         spi_xfer(TDC_stream,ble,32);
-         output_high(TDC_ENABLE);
-         
-      }
-   
-   }
+         switch (nn)
+         {
+            case 1:
+               hit2=TDC_MRANGE2_HIT2_1CH1;
+               break;
 
+            case 2:
+               hit2=TDC_MRANGE2_HIT2_2CH1;
+               break;
+
+            case 3:
+               hit2=TDC_MRANGE2_HIT2_3CH1;
+               break;
+         }
+         TDC_update_reg1();
+      }  
+   }
 }
