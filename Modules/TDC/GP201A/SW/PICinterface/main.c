@@ -44,7 +44,7 @@ void main()
 0 0 0 0 0 1 0 0 Start_Cal_TDC
 */
 
-   int32 ble,ret32;
+   int32 ble;
    int16 ret16;
    int8 ret8;
 
@@ -60,7 +60,7 @@ void main()
    //----------------------------------------------- Nastaveni registru
       output_low(TDC_ENABLE);
       ble=0;
-      ble=(8<<28)|(0<<24);
+      ble=(8<<28)|(0<<24);    // write addres
       ble|=(0<<20)|(0<<16)|(0<<14)|(3<<12)|(1<<10)|(0<<9)|(0<<8)|(0<<7)|(1<<6)|(1<<5)|(0<<4)|(1<<3)|(0<<2)|(0<<1)|0;
       spi_xfer(TDC_stream,ble,32);
       output_high(TDC_ENABLE);
@@ -102,37 +102,8 @@ void main()
 
 
    //----------------------------------------------- Vypis registru
-      output_low(TDC_ENABLE);
-      ret8=0;
-      ret8=(0b1011<<4)|0;
-      spi_xfer(TDC_stream,ret8,8);
-      ret32=spi_xfer(TDC_stream,0,32);
-      output_high(TDC_ENABLE);
-      printf("- %LX ", ret32);
-   
-      output_low(TDC_ENABLE);
-      ret8=0;
-      ret8=(0b1011<<4)|1;
-      spi_xfer(TDC_stream,ret8,8);
-      ret32=spi_xfer(TDC_stream,0,32);
-      output_high(TDC_ENABLE);
-      printf("%LX ", ret32);
-   
-      output_low(TDC_ENABLE);
-      ret8=0;
-      ret8=(0b1011<<4)|2;
-      spi_xfer(TDC_stream,ret8,8);
-      ret32=spi_xfer(TDC_stream,0,32);
-      output_high(TDC_ENABLE);
-      printf("%LX ", ret32);
-   
-      output_low(TDC_ENABLE);
-      ret8=0;
-      ret8=(0b1011<<4)|3;
-      spi_xfer(TDC_stream,ret8,8);
-      ret32=spi_xfer(TDC_stream,0,32);
-      output_high(TDC_ENABLE);
-      printf("%LX ", ret32);
+         
+      printf("- %LX %LX %LX %LX ", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
    
       output_low(TDC_ENABLE);
       ret8=0;
@@ -142,13 +113,7 @@ void main()
       output_high(TDC_ENABLE);
       printf("[%Lu %Lu %Lu %Lu %Lu %Lu %Lu] ", (1&(ret16)>>12), (1&(ret16)>>11), (1&(ret16)>>10), 1&(ret16)>>9, 7&(ret16)>>6, 7&(ret16)>>3, 7&ret16);
       
-      output_low(TDC_ENABLE);
-      ret8=0;
-      ret8=(0b1011<<4)|5;
-      spi_xfer(TDC_stream,ret8,8);
-      ret8=spi_xfer(TDC_stream,0,8);
-      output_high(TDC_ENABLE);
-      printf("%X\r\n", ret8);
+      printf("%X\r\n",TDC_get_reg1());
    
    //----------------------------------------------- Mereni
    
@@ -186,59 +151,23 @@ void main()
       for(nn=3;nn<=5;nn++)
       {
          delay_ms(500);
-            
-         output_low(TDC_ENABLE);
-         ret8=0;
-         ret8=(0b1011<<4)|0;
-         spi_xfer(TDC_stream,ret8,8);
-         ret32=spi_xfer(TDC_stream,0,32);
-         output_high(TDC_ENABLE);
-         printf("* %LX ", ret32);
+
+         printf("* %LX %LX %LX %LX ", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
       
-         output_low(TDC_ENABLE);
-         ret8=0;
-         ret8=(0b1011<<4)|1;
-         spi_xfer(TDC_stream,ret8,8);
-         ret32=spi_xfer(TDC_stream,0,32);
-         output_high(TDC_ENABLE);
-         printf("%LX ", ret32);
-      
-         output_low(TDC_ENABLE);
-         ret8=0;
-         ret8=(0b1011<<4)|2;
-         spi_xfer(TDC_stream,ret8,8);
-         ret32=spi_xfer(TDC_stream,0,32);
-         output_high(TDC_ENABLE);
-         printf("%LX ", ret32);
-      
-         output_low(TDC_ENABLE);
-         ret8=0;
-         ret8=(0b1011<<4)|3;
-         spi_xfer(TDC_stream,ret8,8);
-         ret32=spi_xfer(TDC_stream,0,32);
-         output_high(TDC_ENABLE);
-         printf("%LX ", ret32);
-      
-         output_low(TDC_ENABLE);
+         output_low(TDC_ENABLE);  //status register
          ret8=0;
          ret8=(0b1011<<4)|4;
          spi_xfer(TDC_stream,ret8,8);
          ret16=spi_xfer(TDC_stream,0,16);
          output_high(TDC_ENABLE);
          printf("[%Lu %Lu %Lu %Lu %Lu %Lu %Lu] ", (1&(ret16)>>12), (1&(ret16)>>11), (1&(ret16)>>10), 1&(ret16)>>9, 7&(ret16)>>6, 7&(ret16)>>3, 7&ret16);
-         
-         output_low(TDC_ENABLE);
-         ret8=0;
-         ret8=(0b1011<<4)|5;
-         spi_xfer(TDC_stream,ret8,8);
-         ret8=spi_xfer(TDC_stream,0,8);
-         output_high(TDC_ENABLE);
-         printf("%X\r\n", ret8);
+                  
+         printf("%X\r\n",TDC_get_reg1());
       
          // Next calculation
          output_low(TDC_ENABLE);
          ble=0;
-         ble=(8<<28)|(1<<24);
+         ble=(8<<28)|(1<<24);    // write to reg1
          ble|=(nn<<20)|(1<<16)|(0<<15)|(1<<14)|(0<<11)|(4<<8)|0x00;
          spi_xfer(TDC_stream,ble,32);
          output_high(TDC_ENABLE);
