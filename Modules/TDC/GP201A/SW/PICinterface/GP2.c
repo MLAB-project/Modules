@@ -126,6 +126,20 @@ unsigned int8 ret;
    return ret;
 }
 
+void TDC_update_reg1()  // updates reg1 only 
+{
+   output_low(TDC_ENABLE);
+   spi_xfer(TDC_stream,0x81,8);
+   spi_xfer(TDC_stream,hit2,4);   
+   spi_xfer(TDC_stream,hit1,4);   
+   spi_xfer(TDC_stream,fast_init,1);   
+   spi_xfer(TDC_stream,1,1);   
+   spi_xfer(TDC_stream,hitin2,3);   
+   spi_xfer(TDC_stream,hitin1,3);   
+   spi_xfer(TDC_stream,0,8);   
+   output_high(TDC_ENABLE);
+}
+
 void TDC_update_registers()
 {
 //update reg0
@@ -148,17 +162,7 @@ void TDC_update_registers()
    spi_xfer(TDC_stream,neg_start,1);   
    output_high(TDC_ENABLE);
 
-// update reg1
-   output_low(TDC_ENABLE);
-   spi_xfer(TDC_stream,0x81,8);
-   spi_xfer(TDC_stream,hit2,4);   
-   spi_xfer(TDC_stream,hit1,4);   
-   spi_xfer(TDC_stream,fast_init,1);   
-   spi_xfer(TDC_stream,1,1);   
-   spi_xfer(TDC_stream,hitin2,3);   
-   spi_xfer(TDC_stream,hitin1,3);   
-   spi_xfer(TDC_stream,0,8);   
-   output_high(TDC_ENABLE);
+   TDC_update_reg1();             // update reg1
 
 // update reg2
    output_low(TDC_ENABLE);
@@ -196,3 +200,21 @@ void TDC_update_registers()
    output_high(TDC_ENABLE);
 }
 
+float TDC_mrange2_get_time(unsigned int shot)
+{
+         switch (shot)
+         {
+            case 1:
+               hit2=TDC_MRANGE2_HIT2_1CH1;
+               break;
+
+            case 2:
+               hit2=TDC_MRANGE2_HIT2_2CH1;
+               break;
+
+            case 3:
+               hit2=TDC_MRANGE2_HIT2_3CH1;
+               break;
+         }
+         TDC_update_reg1();
+}
