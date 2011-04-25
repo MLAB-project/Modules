@@ -98,7 +98,7 @@ unsigned int32 TDC_get_measurement(int num)
 unsigned int32 ret;
 
    output_low(TDC_ENABLE);
-   spi_xfer(TDC_stream,0xB0 + num - 1, 8);
+   spi_xfer(TDC_stream,0xB0 + num, 8);
    ret=spi_xfer(TDC_stream,0,32);
    output_high(TDC_ENABLE);
    return ret;
@@ -202,19 +202,46 @@ void TDC_update_registers()
 
 float TDC_mrange2_get_time(unsigned int shot)
 {
-         switch (shot)
-         {
-            case 1:
+unsigned int32 measurement;
+float time;
+
+   switch (shot)
+   {
+     case 1:
                hit2=TDC_MRANGE2_HIT2_1CH1;
                break;
 
-            case 2:
+     case 2:
                hit2=TDC_MRANGE2_HIT2_2CH1;
                break;
 
-            case 3:
+     case 3:
                hit2=TDC_MRANGE2_HIT2_3CH1;
                break;
-         }
-         TDC_update_reg1();
+   }
+   TDC_update_reg1();      // tell  to ALU which shot period must be computed
+   
+   Delay_ms(50);     // wait to computing of result
+   
+   measurement=TDC_get_measurement(7&TDC_get_status()); // read computed value on pointer result register address
+   
+
+   switch (clkhsdiv)
+   {
+     case TDC_CLKHSDIV_1:
+               time=(measurement/65536.0) * 1.0e6/TDC_CLKHS;
+               break;
+
+     case TDC_CLKHSDIV_2:
+               time=(measurement/65536.0) * 1.0e6/TDC_CLKHS * 2.0;
+               break;
+
+     case TDC_CLKHSDIV_4:
+               time=(measurement/65536.0) * 1.0e6/TDC_CLKHS * 4.0;
+               break;
+     case TDC_CLKHSDIV_8:
+               time=(measurement/65536.0) * 1.0e6/TDC_CLKHS * 8.0;
+               break;
+   }
+   return time;
 }
