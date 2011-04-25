@@ -47,12 +47,8 @@ void main()
    int16 ret16;
    int8 ret8;
 
-
-   while(TRUE)
-   {
-      delay_ms(100);
-      TDC_reset();
-      delay_ms(100);
+   TDC_reset();
+   delay_ms(100);
    
    //----------------------------------------------- Nastaveni registru
    hit1=TDC_MRANGE2_HIT1_START;
@@ -60,25 +56,16 @@ void main()
    hitin2=TDC_HITIN2_0;
    en_int= TDC_INT_ALU | TDC_INT_ENDHIT | TDC_INT_TIMEOUT;
    en_err_val=TDC_ERRVAL_EN;
+   clkhsdiv=TDC_CLKHSDIV_4;
    delval1=0x0;
    delval2=0x0;
    delval3=0x0;
   
    TDC_update_registers();
 
-   //----------------------------------------------- Vypis registru
-         
-      printf("- %LX %LX %LX %LX ", TDC_get_measurement(0), TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3));
-   
-      output_low(TDC_ENABLE);
-      ret8=0;
-      ret8=(0b1011<<4)|4;
-      spi_xfer(TDC_stream,ret8,8);
-      ret16=spi_xfer(TDC_stream,0,16);
-      output_high(TDC_ENABLE);
-      printf("[%Lu %Lu %Lu %Lu %Lu %Lu %Lu] ", (1&(ret16)>>12), (1&(ret16)>>11), (1&(ret16)>>10), 1&(ret16)>>9, 7&(ret16)>>6, 7&(ret16)>>3, 7&ret16);
-      
-      printf("%X\r\n",TDC_get_reg1());
+   while(TRUE)
+   {
+      delay_ms(100);
    
    //----------------------------------------------- Mereni
    
@@ -94,12 +81,11 @@ void main()
       
       output_high(START);
       output_low(START);
-      delay_us(15);
+      delay_us(150);
       
       output_high(STOP1);
       output_low(STOP1);
       delay_us(1);
-      
       
       output_high(STOP1);
       output_low(STOP1);
@@ -107,13 +93,11 @@ void main()
       
       output_high(STOP1);
       output_low(STOP1);
-      delay_us(1);
-   
-   
+      delay_us(1);   
       
    //----------------------------------------------- Pocitani
 
-         printf(" %3.7f %3.7f %3.7f ", TDC_mrange2_get_time(1), TDC_mrange2_get_time(2), TDC_mrange2_get_time(3));
+         printf("Time: %3.7f %3.7f %3.7f ", TDC_mrange2_get_time(1), TDC_mrange2_get_time(2), TDC_mrange2_get_time(3));
       
          output_low(TDC_ENABLE);  //status register
          ret8=0;
@@ -121,9 +105,17 @@ void main()
          spi_xfer(TDC_stream,ret8,8);
          ret16=spi_xfer(TDC_stream,0,16);
          output_high(TDC_ENABLE);
-         printf("[%Lu %Lu %Lu %Lu %Lu %Lu %Lu] ", (1&(ret16)>>12), (1&(ret16)>>11), (1&(ret16)>>10), 1&(ret16)>>9, 7&(ret16)>>6, 7&(ret16)>>3, 7&TDC_get_status());
-                  
-         printf("%X\r\n",TDC_get_reg1());
-      
+         printf("[%Lu %Lu %Lu %Lu %Lu %Lu %Lu]\r\n", (1&(ret16)>>12), (1&(ret16)>>11), (1&(ret16)>>10), 1&(ret16)>>9, 7&(ret16)>>6, 7&(ret16)>>3, 7&TDC_get_status());
+
+         TDC_start_temp();
+         output_low(TDC_ENABLE);  //status register
+         ret8=0;
+         ret8=(0b1011<<4)|4;
+         spi_xfer(TDC_stream,ret8,8);
+         ret16=spi_xfer(TDC_stream,0,16);
+         output_high(TDC_ENABLE);
+         printf("Temp: [%Lu %Lu %Lu %Lu %Lu %Lu %Lu] ", (1&(ret16)>>12), (1&(ret16)>>11), (1&(ret16)>>10), 1&(ret16)>>9, 7&(ret16)>>6, 7&(ret16)>>3, 7&TDC_get_status());
+         printf(" %LX %LX %LX %LX \r\n", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
+         
    }
 }

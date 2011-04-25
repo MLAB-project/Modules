@@ -98,7 +98,7 @@ unsigned int32 TDC_get_measurement(int num)
 unsigned int32 ret;
 
    output_low(TDC_ENABLE);
-   spi_xfer(TDC_stream,0xB0 + num, 8);
+   spi_xfer(TDC_stream,0xB0 + num - 1, 8);
    ret=spi_xfer(TDC_stream,0,32);
    output_high(TDC_ENABLE);
    return ret;
