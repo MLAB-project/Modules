@@ -51,6 +51,17 @@ unsigned int16 phase_fire=0;
 //}TDC_registers;
 
 
+/*
+1 0 0 0 0 ADR2 ADR1 ADR0 Write into address ADR
+1 0 1 1 0 ADR2 ADR1 ADR0 Read from address ADR
+0 1 1 1 0 0 0 0 Init
+0 1 0 1 0 0 0 0 Power On Reset
+0 0 0 0 0 0 0 1 Start_Cycle
+0 0 0 0 0 0 1 0 Start_Temp
+0 0 0 0 0 0 1 1 Start_Cal_Resonator
+0 0 0 0 0 1 0 0 Start_Cal_TDC
+*/
+
 void TDC_init()
 {
    output_low(TDC_ENABLE);
@@ -219,6 +230,83 @@ float time;
                hit2=TDC_MRANGE2_HIT2_3CH1;
                break;
    }
+   TDC_update_reg1();      // tell  to ALU which shot period must be computed
+   
+   Delay_ms(50);     // wait to computing of result
+   
+   measurement=TDC_get_measurement(7&TDC_get_status()); // read computed value on pointer result register address
+   
+
+   switch (clkhsdiv)
+   {
+     case TDC_CLKHSDIV_1:
+               time=(measurement/65536.0) * 1.0e6/TDC_CLKHS;
+               break;
+
+     case TDC_CLKHSDIV_2:
+               time=(measurement/65536.0) * 1.0e6/TDC_CLKHS * 2.0;
+               break;
+
+     case TDC_CLKHSDIV_4:
+               time=(measurement/65536.0) * 1.0e6/TDC_CLKHS * 4.0;
+               break;
+     case TDC_CLKHSDIV_8:
+               time=(measurement/65536.0) * 1.0e6/TDC_CLKHS * 8.0;
+               break;
+   }
+   return time;
+}
+
+float TDC_mrange1_get_time(unsigned int channel1, unsigned int shot1, unsigned int channel2, unsigned int shot2)
+{
+unsigned int32 measurement;
+float time;
+
+   switch (shot1)
+   {
+     case 0:
+               hit1=TDC_MRANGE1_HIT1_START;
+               break;
+     case 1:
+               if (channel1 == 1) hit1=TDC_MRANGE1_HIT1_1CH1; else hit1=TDC_MRANGE1_HIT1_1CH2;
+               break;
+
+     case 2:
+               if (channel1 == 1) hit1=TDC_MRANGE1_HIT1_2CH1; else hit1=TDC_MRANGE1_HIT1_2CH2;
+               break;
+
+     case 3:
+               if (channel1 == 1) hit1=TDC_MRANGE1_HIT1_3CH1; else hit1=TDC_MRANGE1_HIT1_3CH2;
+               break;
+
+     case 4:
+               if (channel1 == 1) hit1=TDC_MRANGE1_HIT1_4CH1; else hit1=TDC_MRANGE1_HIT1_4CH2;
+               break;
+   }
+
+   switch (shot2)
+   {
+     case 0:
+               hit2=TDC_MRANGE1_HIT2_START;
+               break;
+
+     case 1:
+               if (channel2 == 1) hit2=TDC_MRANGE1_HIT2_1CH1; else hit2=TDC_MRANGE1_HIT2_1CH2;
+               break;
+
+     case 2:
+               if (channel2 == 1)  hit2=TDC_MRANGE1_HIT2_2CH1; else hit2=TDC_MRANGE1_HIT2_2CH2;
+               break;
+
+     case 3:
+               if (channel2 == 1)  hit2=TDC_MRANGE1_HIT2_3CH1; else hit2=TDC_MRANGE1_HIT2_3CH2;
+               break;
+
+     case 4:
+               if (channel2 == 1)  hit2=TDC_MRANGE1_HIT2_4CH1; else hit2=TDC_MRANGE1_HIT2_4CH2;
+               break;
+   }
+
    TDC_update_reg1();      // tell  to ALU which shot period must be computed
    
    Delay_ms(50);     // wait to computing of result
