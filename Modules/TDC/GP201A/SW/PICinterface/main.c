@@ -140,8 +140,8 @@ void main()
       
    //----------------------------------------------- Pocitani
 
+         printf("Time1: %LX %LX %LX %LX \r\n", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
          printf("Time1: %3.7f %3.7f %3.7f ", TDC_mrange1_get_time(1,0,1,1), TDC_mrange1_get_time(2,0,2,1), TDC_mrange1_get_time(1,1,2,1));
-         printf("Time1: %LX %LX %LX %LX ", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
       
          output_low(TDC_ENABLE);  //status register
          ret8=0;
@@ -161,8 +161,8 @@ void main()
          spi_xfer(TDC_stream,ret8,8);
          ret16=spi_xfer(TDC_stream,0,16);
          output_high(TDC_ENABLE);
-         printf("Temp: [%Lu %Lu %Lu %Lu %Lu %Lu %Lu] ", (1&(ret16)>>12), (1&(ret16)>>11), (1&(ret16)>>10), 1&(ret16)>>9, 7&(ret16)>>6, 7&(ret16)>>3, 7&TDC_get_status());
-         printf(" %LX %LX %LX %LX \r\n", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
+         printf("Temp: %LX %LX %LX %LX ", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
+         printf(" [%Lu %Lu %Lu %Lu %Lu %Lu %Lu] \r\n", (1&(ret16)>>12), (1&(ret16)>>11), (1&(ret16)>>10), 1&(ret16)>>9, 7&(ret16)>>6, 7&(ret16)>>3, 7&TDC_get_status());
          
          
         
