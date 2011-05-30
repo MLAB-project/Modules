@@ -86,7 +86,7 @@ void main()
       
       delay_ms(200);
       
-      output_high(STOP2);  // Merime jenom jednim kanalem (druhy zrejme musi byt v H)
+      output_high(STOP2);  // Merime jenom jednim kanalem (druhy zrejme byt v H)
       
       output_high(START);
       output_low(START);
