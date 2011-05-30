@@ -106,7 +106,7 @@ void main()
       
    //----------------------------------------------- Pocitani
 
-         printf("Time2: %LX %LX %LX %LX ", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
+//         printf("Time2: %LX %LX %LX %LX ", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
 
       
          output_low(TDC_ENABLE);  //status register
@@ -151,7 +151,7 @@ void main()
       output_high(START);     // start of time measurement
 
       output_high(STOP2);
-     output_high(STOP1);
+      output_high(STOP1);
  
       output_low(STOP1);
       output_low(STOP2);
@@ -161,7 +161,7 @@ void main()
 
    //----------------------------------------------- Pocitani
 
-         printf("Time1: %LX %LX %LX %LX ", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
+//         printf("Time1: %LX %LX %LX %LX ", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
 
          output_low(TDC_ENABLE);  //status register
          ret8=0;
@@ -176,7 +176,19 @@ void main()
 
    /// -----------------------------------------------  Temperature masurement
 
+
+         TDC_reset();
+         portnum=TDC_TPORTNUM_4;
+         Tcycle=TDC_TCYCLE_SHORT;
+         fakenum=TDC_TFAKENUM_2;
+         selclkT=TDC_TSELCLK_128HS;
+
+         TDC_update_registers();
+
+         TDC_init();
          TDC_start_temp();
+         
+         
          output_low(TDC_ENABLE);  //status register
          ret8=0;
          ret8=(0b1011<<4)|4;
@@ -185,8 +197,5 @@ void main()
          output_high(TDC_ENABLE);
          printf("Temp: %LX %LX %LX %LX ", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
          printf(" [%Lu %Lu %Lu %Lu %Lu %Lu %Lu] \r\n", (1&(ret16)>>12), (1&(ret16)>>11), (1&(ret16)>>10), 1&(ret16)>>9, 7&(ret16)>>6, 7&(ret16)>>3, 7&TDC_get_status());
-         
-         
-        
    }
 }

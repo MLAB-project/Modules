@@ -20,7 +20,7 @@
 #define  TDC_TFAKENUM_2  0
 #define  TDC_TFAKENUM_8  1
 #define  TDC_TCYCLE_SHORT  0
-#define  TDC_TCYSLE_LONG  1
+#define  TDC_TCYCLE_LONG  1
 #define  TDC_TPORTNUM_2  0
 #define  TDC_TPORTNUM_4  1
 #define  TDC_CLKHS_OFF  0
