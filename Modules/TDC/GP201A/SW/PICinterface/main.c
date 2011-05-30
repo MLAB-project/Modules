@@ -37,7 +37,6 @@ void main()
    setup_ccp1(CCP_OFF);
    setup_comparator(NC_NC_NC_NC);// This device COMP currently not supported by the PICWizard
 
-
    set_tris_d(0x00);
 
    TDC_reset();
@@ -56,8 +55,7 @@ void main()
    
    while(TRUE)
    {
-
-
+   
    //----------------------------------------------- Nastaveni registru
    
    MRange=TDC_MRANGE2;     // sets measurement mode
