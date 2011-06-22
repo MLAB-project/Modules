@@ -1,0 +1,27 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: STMFlashLoader - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\MIJA~1.ICZ\LOCALS~1\Temp\RSP364.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_AFXDLL" /Fp"Debug/STMFlashLoader.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\projekts\ARM-ST32F\sw\UNPACK\Src\STMFlashLoader\STMFlashLoader.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\MIJA~1.ICZ\LOCALS~1\Temp\RSP364.tmp" 
+Creating command line "link.exe STBLLIB.lib Files.lib STUARTBLLIB.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/STMFlashLoader.pdb" /debug /machine:I386 /out:"Debug/STMFlashLoader.exe" /pdbtype:sept  ".\Debug\STMFlashLoader.obj" ".\Debug\Ini.obj" "
+<h3>Output Window</h3>
+Compiling...
+STMFlashLoader.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+STMFlashLoader.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
