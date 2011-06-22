@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "STMFlashLoader", "STMFlashLoader\STMFlashLoader.vcproj", "{5DED8251-B239-46C2-B2EE-087FF8D46398}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F9F56A1E-4355-4CC9-92E9-5815BDC57534} = {F9F56A1E-4355-4CC9-92E9-5815BDC57534}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "STBLLIB", "STBLLIB\STBLLIB.vcproj", "{F9F56A1E-4355-4CC9-92E9-5815BDC57534}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DED8251-B239-46C2-B2EE-087FF8D46398}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5DED8251-B239-46C2-B2EE-087FF8D46398}.Debug|Win32.Build.0 = Debug|Win32
+		{5DED8251-B239-46C2-B2EE-087FF8D46398}.Release|Win32.ActiveCfg = Release|Win32
+		{5DED8251-B239-46C2-B2EE-087FF8D46398}.Release|Win32.Build.0 = Release|Win32
+		{F9F56A1E-4355-4CC9-92E9-5815BDC57534}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F9F56A1E-4355-4CC9-92E9-5815BDC57534}.Debug|Win32.Build.0 = Debug|Win32
+		{F9F56A1E-4355-4CC9-92E9-5815BDC57534}.Release|Win32.ActiveCfg = Release|Win32
+		{F9F56A1E-4355-4CC9-92E9-5815BDC57534}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
