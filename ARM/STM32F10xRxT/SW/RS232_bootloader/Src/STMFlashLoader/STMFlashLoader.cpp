@@ -440,14 +440,16 @@ int main(int argc, char* argv[])
 				
 				// BOOT0 = High
 				STBL_SetDtr(TRUE);
-				Sleep(50);
+				Sleep(100);
 				// Reset = Low
 				STBL_SetRts(TRUE); 
 
-				Sleep(50);
+				Sleep(100);
 
 				// Reset = High
 				STBL_SetRts(FALSE); 
+				Sleep(100);
+				
 
 				STBL_SetDtr(FALSE); 
 				Sleep(100);
@@ -455,18 +457,19 @@ int main(int argc, char* argv[])
     COM_Open();
 
 				STBL_SetDtr(TRUE);
-				Sleep(50);
+				Sleep(100);
 				// Reset = Low
 				STBL_SetRts(TRUE); 
 
-				Sleep(50);
+				Sleep(100);
 
 				// Reset = High
 				STBL_SetRts(FALSE); 
+				Sleep(100);
 
 				STBL_SetDtr(FALSE); 
 				Sleep(500);
-				//Sleep(1000);
+
 				write_debug_info("Setting device to BOOT0", 0 ,0, 0, OK);
 
 				//printf("\n RTS set low. Press any key to continue ... 4"); 
@@ -674,9 +677,9 @@ int main(int argc, char* argv[])
 											BOOL VerifySuccess = TRUE;
 											_sleep(100);;
 
-#ifndef _VS6_USED
+//#ifndef _VS6_USED
 											int el;
-#endif
+//#endif
 											for (el=0; el< (int)NbElements;el++)
 											{
 												IMAGEELEMENT Element={0};
@@ -752,9 +755,9 @@ int main(int argc, char* argv[])
 
 						 printf("\nerasing %i sectors : ", sectors[0]);
 
-#ifndef _VS6_USED
+//#ifndef _VS6_USED
 						int i;
-#endif
+//#endif
 
 						 for(i = 1; i<= nsec; i++)
 						 {
@@ -1158,9 +1161,9 @@ int main(int argc, char* argv[])
 									BOOL VerifySuccess = TRUE;
 									_sleep(100);
 
-#ifndef _VS6_USED
+//#ifndef _VS6_USED
 									int el;
-#endif
+//#endif
 
 									for (el=0; el< (int)NbElements;el++)
 									{
@@ -1593,9 +1596,9 @@ int main(int argc, char* argv[])
 
 						 printf("\nenabling write protection %i sectors : ", sectors[0]);
 
-#ifndef _VS6_USED
+//#ifndef _VS6_USED
 						int i;
-#endif
+//#endif
 
 						 for(i = 1; i<= nsec; i++)
 						 {
