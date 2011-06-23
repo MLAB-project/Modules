@@ -1,7 +1,7 @@
 #ifndef __INI_H__
 #define __INI_H__
 
-#define _VS6_USED
+//!!!KAKL #define _VS6_USED
 
 #include <windows.h>
 #include <tchar.h>
