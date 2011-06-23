@@ -868,9 +868,9 @@ BOOL CALLBACK CIni:: __KeyPairProc(LPCTSTR lpString, LPVOID lpParam)
 	// extract the sub-string on left side of the '='
 	LPTSTR psz = new TCHAR[_tcslen(lpString) + 1];
 
-//#ifndef _VS6_USED
+#ifndef _VS6_USED
 	int i;
-//#endif 
+#endif 
 
 	for (int i = 0; &lpString[i] < p; i++)
 		psz[i] = lpString[i];

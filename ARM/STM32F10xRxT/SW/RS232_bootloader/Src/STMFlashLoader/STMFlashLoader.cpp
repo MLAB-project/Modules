@@ -677,9 +677,9 @@ int main(int argc, char* argv[])
 											BOOL VerifySuccess = TRUE;
 											_sleep(100);;
 
-//#ifndef _VS6_USED
+#ifndef _VS6_USED
 											int el;
-//#endif
+#endif
 											for (el=0; el< (int)NbElements;el++)
 											{
 												IMAGEELEMENT Element={0};
@@ -755,9 +755,9 @@ int main(int argc, char* argv[])
 
 						 printf("\nerasing %i sectors : ", sectors[0]);
 
-//#ifndef _VS6_USED
+#ifndef _VS6_USED
 						int i;
-//#endif
+#endif
 
 						 for(i = 1; i<= nsec; i++)
 						 {
@@ -1161,9 +1161,9 @@ int main(int argc, char* argv[])
 									BOOL VerifySuccess = TRUE;
 									_sleep(100);
 
-//#ifndef _VS6_USED
+#ifndef _VS6_USED
 									int el;
-//#endif
+#endif
 
 									for (el=0; el< (int)NbElements;el++)
 									{
@@ -1596,9 +1596,9 @@ int main(int argc, char* argv[])
 
 						 printf("\nenabling write protection %i sectors : ", sectors[0]);
 
-//#ifndef _VS6_USED
+#ifndef _VS6_USED
 						int i;
-//#endif
+#endif
 
 						 for(i = 1; i<= nsec; i++)
 						 {
