@@ -47,13 +47,13 @@ int main(void)
         GPIO_ResetBits(GPIOC, GPIO_Pin_4);
         GPIO_SetBits(GPIOB, GPIO_Pin_7);
         GPIO_ResetBits(GPIOB, GPIO_Pin_8);
-        Delay(0x4fFFFF);
+        Delay(0xffFFFF);
 
         GPIO_SetBits(GPIOC, GPIO_Pin_4);
         GPIO_ResetBits(GPIOC, GPIO_Pin_5);
         GPIO_SetBits(GPIOB, GPIO_Pin_8);
         GPIO_ResetBits(GPIOB, GPIO_Pin_7);
-        Delay(0x4fFFFF);
+        Delay(0xffFFFF);
 	}
 }
 
