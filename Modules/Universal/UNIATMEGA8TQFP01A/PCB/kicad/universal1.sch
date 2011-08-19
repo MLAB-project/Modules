@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Fri Aug 19 03:15:40 2011
+EESchema Schematic File Version 2  date Fri Aug 19 21:57:06 2011
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -38,10 +38,10 @@ EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
-Title "Paludarium"
+Title "ATMEGA/TL317/SMD proto-board"
 Date "19 aug 2011"
 Rev "1"
-Comp ""
+Comp "Roman Pavelka"
 Comment1 ""
 Comment2 ""
 Comment3 ""
