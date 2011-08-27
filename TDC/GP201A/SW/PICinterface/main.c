@@ -16,7 +16,8 @@
 
 void main()
 {
-/*   setup_adc_ports(NO_ANALOGS|VSS_VDD);
+
+/*   setup_adc_ports(NO_ANALOGS|VSS_VDD);       // for PIC18F4550
    setup_adc(ADC_CLOCK_DIV_2);
    setup_psp(PSP_DISABLED);
    setup_spi(SPI_SS_DISABLED);
