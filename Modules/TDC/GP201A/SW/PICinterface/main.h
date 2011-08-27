@@ -36,7 +36,7 @@
 #device adc=8
 
 #FUSES NOWDT                    //No Watch Dog Timer
-#FUSES HS                    //Internal RC Osc
+#FUSES HS                    //External crystal oscillator
 #FUSES NOPUT                    //No Power Up Timer
 #FUSES MCLR                     //Master Clear pin enabled
 #FUSES NOPROTECT                //Code not protected from reading
