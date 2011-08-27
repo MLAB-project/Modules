@@ -42,6 +42,7 @@ void main()
    en_int= TDC_INT_ALU | TDC_INT_ENDHIT | TDC_INT_TIMEOUT; // eneble all possible interrupt flags
    en_err_val=TDC_ERRVAL_EN;  // enable of error value output
    clkhsdiv=TDC_CLKHSDIV_4;   // divide clkHS by 4
+   firenum=TDC_FIRENUM_1;
    
    delval1=0x0;      // windowing disabled
    delval2=0x0;
