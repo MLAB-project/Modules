@@ -1,5 +1,7 @@
 #include "main.h"
 #include <math.h>
+
+#define  INTN_PIN    PIN_D7
 #include "GP2.h"
 
 #define VERSION   0.2
@@ -47,37 +49,35 @@ void main()
   
    TDC_update_registers();
 
-      delay_ms(100);
+   delay_ms(10);
 
-   //----------------------------------------------- Mereni 2
+   //----------------------------------------------- Measuring mode 2
    
       TDC_init();
-      
-      delay_ms(50);
-      
-      TDC_start_cycle();
-      
-      delay_ms(200);
+      delay_ms(50);      
+      TDC_start_cycle(); 
+      While(!input(INTN_PIN));      // waiting for interrupt flag
             
    //----------------------------------------------- Pocitani
 
 //         printf("Time2: %LX %LX %LX %LX ", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
 
       
-         output_low(TDC_ENABLE);  //status register
+         output_low(TDC_ENABLE);  //status register read
          ret8=0;
          ret8=(0b1011<<4)|4;
          spi_xfer(TDC_stream,ret8,8);
          ret16=spi_xfer(TDC_stream,0,16);
          output_high(TDC_ENABLE);
-         printf("[%Lu %Lu %Lu %Lu %Lu %Lu %Lu]\r\n", (1&(ret16)>>12), (1&(ret16)>>11), (1&(ret16)>>10), 1&(ret16)>>9, 7&(ret16)>>6, 7&(ret16)>>3, 7&TDC_get_status());
+         
+         printf("[%Lu %Lu %Lu %Lu %Lu %Lu %Lu]\r\n", (1&(ret16)>>12), (1&(ret16)>>11), (1&(ret16)>>10), 1&(ret16)>>9, 7&(ret16)>>6, 7&(ret16)>>3, 7&TDC_get_status()); //status register print
 
          printf("Time2: %3.7f %3.7f %3.7f \r\n", TDC_mrange2_get_time(1), TDC_mrange2_get_time(2), TDC_mrange2_get_time(3));
 
 
    //----------------------------------------------- Nastaveni registru
    
-   MRange=TDC_MRANGE1;
+/*   MRange=TDC_MRANGE1;
    hit1=TDC_MRANGE1_HIT1_NOAC;
    hit2=TDC_MRANGE1_HIT2_NOAC;
    hitin1=TDC_HITIN1_1;
@@ -115,7 +115,7 @@ void main()
 
    /// -----------------------------------------------  Temperature masurement
 
-
+*/
          TDC_reset();
          portnum=TDC_TPORTNUM_4;
          Tcycle=TDC_TCYCLE_SHORT;
