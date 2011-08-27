@@ -1,34 +1,14 @@
 #include "main.h"
 #include <math.h>
-
-#use fast_io (D)
+#include "GP2.h"
 
 #define VERSION   0.2
-
-#define START  PIN_D4
-#define STOP1  PIN_D5
-#define STOP2  PIN_D7
-
-#include "GP2.h"
 
 #define ONE_WIRE_PIN       PIN_E2
 #include "ds1820.c"
 
 void main()
 {
-
-/*   setup_adc_ports(NO_ANALOGS|VSS_VDD);       // for PIC18F4550
-   setup_adc(ADC_CLOCK_DIV_2);
-   setup_psp(PSP_DISABLED);
-   setup_spi(SPI_SS_DISABLED);
-   setup_wdt(WDT_OFF);
-   setup_timer_0(RTCC_INTERNAL);
-   setup_timer_1(T1_DISABLED);
-   setup_timer_2(T2_DISABLED,0,1);
-   setup_ccp1(CCP_OFF);
-   setup_comparator(NC_NC_NC_NC);
-   setup_vref(FALSE);
-*/
    setup_adc_ports(NO_ANALOGS|VSS_VDD);
    setup_adc(ADC_CLOCK_DIV_2);
    setup_spi(SPI_SS_DISABLED);
@@ -38,13 +18,7 @@ void main()
    setup_ccp1(CCP_OFF);
    setup_comparator(NC_NC_NC_NC);// This device COMP currently not supported by the PICWizard
 
-   set_tris_d(0x00);
-
    TDC_reset();
-
-   output_low(START);
-   output_low(STOP1);
-   output_low(STOP2);
 
    delay_ms(50);
 
@@ -84,25 +58,7 @@ void main()
       TDC_start_cycle();
       
       delay_ms(200);
-      
-      output_high(STOP2);  // Merime jenom jednim kanalem (druhy zrejme byt v H)
-      
-      output_high(START);
-      output_low(START);
-      delay_us(150);
-      
-      output_high(STOP1);
-      output_low(STOP1);
-      delay_us(1);
-      
-      output_high(STOP1);
-      output_low(STOP1);
-      delay_us(10);
-      
-      output_high(STOP1);
-      output_low(STOP1);
-      delay_us(1);   
-      
+            
    //----------------------------------------------- Pocitani
 
 //         printf("Time2: %LX %LX %LX %LX ", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
@@ -141,22 +97,6 @@ void main()
    //----------------------------------------------- Mereni 1
    
       TDC_init();
-      
-      delay_ms(50);
-      output_low(START);
-      output_low(STOP1);
-      output_low(STOP2);
-            
-      output_high(START);     // start of time measurement
-
-      output_high(STOP2);
-      output_high(STOP1);
- 
-      output_low(STOP1);
-      output_low(STOP2);
-      output_low(START);
-
-
 
    //----------------------------------------------- Pocitani
 
