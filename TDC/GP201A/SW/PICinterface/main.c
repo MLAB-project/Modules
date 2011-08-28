@@ -1,5 +1,7 @@
 #include "main.h"
 #include <math.h>
+#include <stdlib.h>
+
 
 #define  INTN_PIN    PIN_D7
 #include "GP2.h"
@@ -9,25 +11,72 @@
 #define ONE_WIRE_PIN       PIN_E2
 #include "ds1820.c"
 
-void main()
+
+void get_string(char* s, unsigned int8 max)
 {
-   setup_adc_ports(NO_ANALOGS|VSS_VDD);
-   setup_adc(ADC_CLOCK_DIV_2);
-   setup_spi(SPI_SS_DISABLED);
-   setup_timer_0(RTCC_INTERNAL|RTCC_DIV_1);
-   setup_timer_1(T1_DISABLED);
-   setup_timer_2(T2_DISABLED,0,1);
-   setup_ccp1(CCP_OFF);
-   setup_comparator(NC_NC_NC_NC);// This device COMP currently not supported by the PICWizard
+   unsigned int8 len;
+   char c;
 
+   --max;
+   len=0;
+   do {
+     c=getc();
+     if(c==8) {  // Backspace
+        if(len>0) {
+          len--;
+          putc(c);
+          putc(' ');
+          putc(c);
+        }
+     } else if ((c>=' ')&&(c<='~'))
+       if(len<=max) {
+         s[len++]=c;
+         putc(c);
+       }
+   } while(c!=13);
+   s[len]=0;
+}
+
+signed int16 get_int() {
+  char s[5];
+  signed int16 i;
+
+  get_string(s, 7);
+
+  i=atoi(s);
+  return(i);
+}
+
+void temperature_measurement()    ///  Temperature masurement by TDC and dallas sensor
+
+{
+//For temperature measurement TDC unit must be initialised in measurement mode2 this is not destribed in datasheet!!
    TDC_reset();
-   delay_ms(50);
-
-   while(TRUE)
-   {
+   en_int= TDC_INT_ALU | TDC_INT_ENDHIT | TDC_INT_TIMEOUT; // eneble all possible interrupt flags
+   en_err_val=TDC_ERRVAL_EN;  // enable of error value output
+   clkhsdiv=TDC_CLKHSDIV_4;   // divide clkHS by 4
    
-   //----------------------------------------------- Nastaveni registru
+         portnum=TDC_TPORTNUM_4;
+         Tcycle=TDC_TCYCLE_SHORT;
+         fakenum=TDC_TFAKENUM_2;
+         selclkT=TDC_TSELCLK_128HS;
 
+         TDC_update_registers();
+         delay_ms(10);
+
+         TDC_init();
+         delay_ms(50);      
+
+         TDC_start_temp();
+         While(input(INTN_PIN));      // waiting for interrupt flag
+         
+         printf("$TDC%s TMP %10LU %10LU %10LU %10LU ", VERSION,  TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
+         printf("%f \r\n",ds1820_read()+273.15);
+
+}
+
+void measurementM2()
+{
    TDC_reset();
    delay_ms(50);
    MRange=TDC_MRANGE2;     // sets measurement mode
@@ -61,10 +110,35 @@ void main()
       printf("$TDC%s M2 ", VERSION);
       printf("%3.7f %3.7f %3.7f \r\n", TDC_mrange2_get_time(1), TDC_mrange2_get_time(2), TDC_mrange2_get_time(3));
 
-      TDC_init();
+}
 
 
-   //----------------------------------------------- Nastaveni registru
+void main()
+{
+
+char command[20];
+char tmp[5];
+
+   setup_adc_ports(NO_ANALOGS|VSS_VDD);
+   setup_adc(ADC_CLOCK_DIV_2);
+   setup_spi(SPI_SS_DISABLED);
+   setup_timer_0(RTCC_INTERNAL|RTCC_DIV_1);
+   setup_timer_1(T1_DISABLED);
+   setup_timer_2(T2_DISABLED,0,1);
+   setup_ccp1(CCP_OFF);
+   setup_comparator(NC_NC_NC_NC);// This device COMP currently not supported by the PICWizard
+
+   TDC_reset();
+   delay_ms(50);
+
+   while(TRUE)
+   {
+     get_string(command, 20);
+   
+    strcpy(tmp,"TM");
+    if (stricmp(command, tmp)) temperature_measurement();
+    strcpy(tmp,"M2");
+    if (stricmp(command, tmp))  measurementM2();
    
 /*   MRange=TDC_MRANGE1;
    hit1=TDC_MRANGE1_HIT1_NOAC;
@@ -104,33 +178,6 @@ void main()
 
 
 */
-   /// -----------------------------------------------  Temperature masurement
-         TDC_reset();
-         delay_ms(50);
 
-//For temperature measurement TDC unit must be initialised in measurement mode2 this is not destribed in datasheet!!
-
-   hit1=TDC_MRANGE2_HIT1_START;
-   hitin1=TDC_HITIN1_4;    // set number of hits on channel 1
-   hitin2=TDC_HITIN2_0;    // disable channel 2 (normal state for this mode)
-   en_int= TDC_INT_ALU | TDC_INT_ENDHIT | TDC_INT_TIMEOUT; // eneble all possible interrupt flags
-   en_err_val=TDC_ERRVAL_EN;  // enable of error value output
-   clkhsdiv=TDC_CLKHSDIV_4;   // divide clkHS by 4
-   
-         portnum=TDC_TPORTNUM_4;
-         Tcycle=TDC_TCYCLE_SHORT;
-         fakenum=TDC_TFAKENUM_2;
-         selclkT=TDC_TSELCLK_128HS;
-
-         TDC_update_registers();
-         delay_ms(10);
-
-         TDC_init();
-         delay_ms(50);      
-
-         TDC_start_temp();
-         
-         printf("$TDC%s TMP %10LU %10LU %10LU %10LU ", VERSION,  TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
-         printf("%f \r\n",ds1820_read()+273.15);
    }
 }
