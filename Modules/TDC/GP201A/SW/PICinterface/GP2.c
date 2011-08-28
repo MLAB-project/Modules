@@ -74,6 +74,42 @@ void TDC_reset()
    output_low(TDC_ENABLE);
    spi_xfer(TDC_stream,0x50,8);
    output_high(TDC_ENABLE);
+
+//reset registers settings to default
+
+firenum=TDC_FIRENUM_0;
+div_fire=TDC_DIV_FIRE_2;
+calresnum=TDC_CALPERIODS_2;
+clkhsdiv=TDC_CLKHSDIV_1;
+start_clkhs=TDC_CLKHS_ON;
+portnum=TDC_TPORTNUM_4;
+Tcycle=TDC_TCYCLE_SHORT;
+fakenum=TDC_TFAKENUM_2;
+selclkT=TDC_TSELCLK_128HS;
+calibrate=TDC_CALIBRATE_EN;
+disautocal=TDC_AUTOCAL_EN;
+MRange=TDC_MRANGE2;
+neg_stop2=TDC_NEG_STOP2;
+neg_stop1=TDC_NEG_STOP1;
+neg_start=TDC_NEG_START;
+hit2=TDC_MRANGE1_HIT2_NOAC;
+hit1=TDC_MRANGE1_HIT1_NOAC;
+fast_init=TDC_FAST_INIT_DIS;
+hitin2=TDC_HITIN2_0;
+hitin1=TDC_HITIN1_0;
+en_int=TDC_INT_ALU;
+rfedge2=TDC_CH2EDGE_RIS;
+rfedge1=TDC_CH1EDGE_RIS;
+en_err_val=TDC_ERRVAL_DIS;
+tim0_mr2=TDC_TIM0MR2_16384CLKHS;
+delval1=0;
+delval2=0;
+delval3=0;
+conf_fire=0;
+en_startnoise=TDC_STARTNOISE_DIS;
+dis_phasenoise=TDC_PHASENOISE_DIS;
+repeat_fire=TDC_REPEAT_FIRE_0;
+phase_fire=0;
 }
 
 void TDC_start_cycle()
@@ -106,7 +142,7 @@ void TDC_start_cal()
 
 unsigned int32 TDC_get_measurement(int num)
 {
-unsigned int32 ret;
+unsigned int32 ret=0;
 
    output_low(TDC_ENABLE);
    spi_xfer(TDC_stream,0xB0 + num - 1, 8);
@@ -211,12 +247,12 @@ void TDC_update_registers()
    output_high(TDC_ENABLE);
 }
 
-float TDC_mrange2_get_time(unsigned int shot)
+float TDC_mrange2_get_time(unsigned int shot)      // read start to stop time distance of desired shot
 {
 unsigned int32 measurement;
 float time;
 
-   switch (shot)
+   switch (shot)     // determine which shot is desired to compute
    {
      case 1:
                hit2=TDC_MRANGE2_HIT2_1CH1;
@@ -230,14 +266,14 @@ float time;
                hit2=TDC_MRANGE2_HIT2_3CH1;
                break;
    }
-   TDC_update_reg1();      // tell  to ALU which shot period must be computed
+   TDC_update_reg1();      // tell  ALU which shot period must be computed
    
    Delay_ms(50);     // wait to computing of result
    
    measurement=TDC_get_measurement(7&TDC_get_status()); // read computed value on pointer result register address
    
 
-   switch (clkhsdiv)
+   switch (clkhsdiv)    // calibrate measurement data to microseconds from known register setting 
    {
      case TDC_CLKHSDIV_1:
                time=(measurement/65536.0) * 1.0e6/TDC_CLKHS;

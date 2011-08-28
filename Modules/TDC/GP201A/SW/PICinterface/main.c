@@ -4,7 +4,7 @@
 #define  INTN_PIN    PIN_D7
 #include "GP2.h"
 
-#define VERSION   0.2
+#define VERSION "0.2"
 
 #define ONE_WIRE_PIN       PIN_E2
 #include "ds1820.c"
@@ -21,20 +21,15 @@ void main()
    setup_comparator(NC_NC_NC_NC);// This device COMP currently not supported by the PICWizard
 
    TDC_reset();
-
    delay_ms(50);
 
-   int16 ret16;
-   int8 ret8;
-
-   TDC_reset();
-   delay_ms(100);
-   
    while(TRUE)
    {
    
    //----------------------------------------------- Nastaveni registru
-   
+
+   TDC_reset();
+   delay_ms(50);
    MRange=TDC_MRANGE2;     // sets measurement mode
    hit1=TDC_MRANGE2_HIT1_START;
    hitin1=TDC_HITIN1_4;    // set nomber of hits on channel 1
@@ -58,22 +53,15 @@ void main()
       delay_ms(50);      
       TDC_start_cycle(); 
       While(!input(INTN_PIN));      // waiting for interrupt flag
+      
+      // STOP2 INPUT MUST BE PULLED HIGH - else GP2 does not respond to stop pulses!
             
    //----------------------------------------------- Pocitani
 
-//         printf("Time2: %LX %LX %LX %LX ", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
+      printf("$TDC%s M2 ", VERSION);
+      printf("%3.7f %3.7f %3.7f \r\n", TDC_mrange2_get_time(1), TDC_mrange2_get_time(2), TDC_mrange2_get_time(3));
 
-      
-         output_low(TDC_ENABLE);  //status register read
-         ret8=0;
-         ret8=(0b1011<<4)|4;
-         spi_xfer(TDC_stream,ret8,8);
-         ret16=spi_xfer(TDC_stream,0,16);
-         output_high(TDC_ENABLE);
-         
-         printf("[%Lu %Lu %Lu %Lu %Lu %Lu %Lu]\r\n", (1&(ret16)>>12), (1&(ret16)>>11), (1&(ret16)>>10), 1&(ret16)>>9, 7&(ret16)>>6, 7&(ret16)>>3, 7&TDC_get_status()); //status register print
-
-         printf("Time2: %3.7f %3.7f %3.7f \r\n", TDC_mrange2_get_time(1), TDC_mrange2_get_time(2), TDC_mrange2_get_time(3));
+      TDC_init();
 
 
    //----------------------------------------------- Nastaveni registru
@@ -114,28 +102,35 @@ void main()
 
          printf("Time1: %3.7f %3.7f %3.7f \r\n", TDC_mrange1_get_time(1,0,1,1), TDC_mrange1_get_time(2,0,2,1), TDC_mrange1_get_time(1,1,2,1)); 
 
-   /// -----------------------------------------------  Temperature masurement
 
 */
+   /// -----------------------------------------------  Temperature masurement
          TDC_reset();
+         delay_ms(50);
+
+//For temperature measurement TDC unit must be initialised in measurement mode2 this is not destribed in datasheet!!
+
+   hit1=TDC_MRANGE2_HIT1_START;
+   hitin1=TDC_HITIN1_4;    // set number of hits on channel 1
+   hitin2=TDC_HITIN2_0;    // disable channel 2 (normal state for this mode)
+   en_int= TDC_INT_ALU | TDC_INT_ENDHIT | TDC_INT_TIMEOUT; // eneble all possible interrupt flags
+   en_err_val=TDC_ERRVAL_EN;  // enable of error value output
+   clkhsdiv=TDC_CLKHSDIV_4;   // divide clkHS by 4
+   
          portnum=TDC_TPORTNUM_4;
          Tcycle=TDC_TCYCLE_SHORT;
          fakenum=TDC_TFAKENUM_2;
          selclkT=TDC_TSELCLK_128HS;
 
          TDC_update_registers();
+         delay_ms(10);
 
          TDC_init();
+         delay_ms(50);      
+
          TDC_start_temp();
          
-         
-         output_low(TDC_ENABLE);  //status register
-         ret8=0;
-         ret8=(0b1011<<4)|4;
-         spi_xfer(TDC_stream,ret8,8);
-         ret16=spi_xfer(TDC_stream,0,16);
-         output_high(TDC_ENABLE);
-         printf("Temp: %LX %LX %LX %LX ", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
-         printf(" [%Lu %Lu %Lu %Lu %Lu %Lu %Lu] \r\n", (1&(ret16)>>12), (1&(ret16)>>11), (1&(ret16)>>10), 1&(ret16)>>9, 7&(ret16)>>6, 7&(ret16)>>3, 7&TDC_get_status());
+         printf("$TDC%s TMP %10LU %10LU %10LU %10LU ", VERSION,  TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
+         printf("%f \r\n",ds1820_read()+273.15);
    }
 }
