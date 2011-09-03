@@ -30,13 +30,13 @@
       (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
-    (JUMP2X1_CON
-      (FullPartName "JUMP2X1_CON.Normal")
-      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
-      (DeviceIndex "0"))
     (R0805
       (FullPartName "R0805.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (JUMP2X1_CON
+      (FullPartName "JUMP2X1_CON.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
       (DeviceIndex "0"))
     (SY100ELT22
       (FullPartName "SY100ELT22.Normal")
@@ -81,8 +81,7 @@
       (Path "Design Resources")
       (Path "Design Resources" ".\ttlpecl.dsn")
       (Path "Design Resources" ".\ttlpecl.dsn" "SCHEMATIC1")
-      (Path "Outputs")
-      (Select "Design Resources" ".\ttlpecl.dsn" "SCHEMATIC1" "PAGE1"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -93,7 +92,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 25 1069 25 512")
-        (Scroll "76 0")
+        (Scroll "76 90")
         (Zoom "100")
         (Occurrence "/"))
       (Path
