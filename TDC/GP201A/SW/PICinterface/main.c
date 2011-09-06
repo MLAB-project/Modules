@@ -135,13 +135,34 @@ void measurementM2(unsigned int hits)
 
 }
 
+void get_command(char *ptr, unsigned int max) // gets string of defined maximum lenght
+{
+char c=0;
+unsigned int len=0;
+
+   while ((c=getc()) != 13)
+   {
+      ptr[len]=c;
+      
+      if (len == max-2)
+      {
+         ptr[len+1]=0;
+         return;
+      }
+      len++;
+   }
+   
+   return;
+}
+
 
 void main()
 {
 
 char command[20];
 char tmp[5];
-unsigned int parameter;
+char *ptr;
+unsigned long parameter;
    setup_adc_ports(NO_ANALOGS|VSS_VDD);
    setup_adc(ADC_CLOCK_DIV_2);
    setup_spi(SPI_SS_DISABLED);
@@ -159,9 +180,9 @@ unsigned int parameter;
 
    while(TRUE)
    {
-    printf("$TDC%s->", VERSION);
-    fgets(command);
-    printf("%s\r\n", command);
+    printf("$TDC%s->", VERSION);    // print prompt
+    get_command(command, 20);    // receive command from terminal
+    printf("%s\r\n", command);   // echo received command
     
     strcpy(tmp,"TM");
     if (!strncmp(command, tmp, 2)) temperature_measurement();
@@ -169,8 +190,10 @@ unsigned int parameter;
     strcpy(tmp,"M2 ");
     if (!strncmp(command, tmp, 3))
     {
-      parameter=atoi(command[5]);
-    printf("%u\r\n",parameter);
+      parameter=strtol(command+3,&ptr,10);
+      
+    printf("%s\r\n", command+3);
+    printf("%lu\r\n",parameter);
       measurementM2(parameter);
     }
    
