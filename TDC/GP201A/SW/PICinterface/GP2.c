@@ -151,7 +151,7 @@ unsigned int32 ret=0;
    return ret;
 }
 
-unsigned int16 TDC_get_status()
+unsigned int16 TDC_get_status()     // reads status register
 {
 unsigned int16 ret;
 
@@ -298,6 +298,8 @@ float TDC_mrange1_get_time(unsigned int channel1, unsigned int shot1, unsigned i
 unsigned int32 measurement;
 float time;
 
+   Delay_ms(10);     // wait to computing of result
+
    switch (shot1)
    {
      case 0:
@@ -349,11 +351,13 @@ float time;
    
    measurement=TDC_get_measurement(7&TDC_get_status()); // read computed value on pointer result register address
    
+   printf("\r\n%Lu\r\n", (7&TDC_get_status())); 
+   printf("%Lu\r\n", measurement); 
 
    switch (clkhsdiv)
    {
      case TDC_CLKHSDIV_1:
-               time=(measurement/65536.0) * 1.0e6/TDC_CLKHS;
+               time=(measurement/65536.0)* 1.0e6/TDC_CLKHS;
                break;
 
      case TDC_CLKHSDIV_2:

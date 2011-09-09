@@ -39,28 +39,91 @@ void temperature_measurement()    ///  Temperature masurement by TDC and dallas 
 
 }
 
-void measurementM1()
+void measurementM1(unsigned int hits1,unsigned int hits2,)
 {
+   TDC_reset();
+   delay_ms(50);
+   en_int= TDC_INT_ALU | TDC_INT_ENDHIT | TDC_INT_TIMEOUT; // eneble all possible interrupt flags
+   en_err_val=TDC_ERRVAL_EN;  // enable of error value output
+   clkhsdiv=TDC_CLKHSDIV_4;   // divide clkHS by 2
+   firenum=TDC_FIRENUM_1;
+   calibrate=TDC_CALIBRATE_EN;
+   disautocal=TDC_AUTOCAL_EN;     // automatic calibration enabled
+   
+   rfedge2=TDC_CH2EDGE_FAL_RIS;     // stop channels input edge sensityvity selection
+   rfedge1=TDC_CH1EDGE_FAL_RIS;
+
    MRange=TDC_MRANGE1;
    hit1=TDC_MRANGE1_HIT1_NOAC;
    hit2=TDC_MRANGE1_HIT2_NOAC;
-   hitin1=TDC_HITIN1_1;
-   hitin2=TDC_HITIN2_1;
-   en_int= TDC_INT_ALU | TDC_INT_ENDHIT | TDC_INT_TIMEOUT;
-   en_err_val=TDC_ERRVAL_EN;
-   clkhsdiv=TDC_CLKHSDIV_4;
+
+
    delval1=0x0;
    delval2=0x0;
    delval3=0x0;
-  
+
+   switch(hits2)      // sets number of hits on channel 1
+   {
+      case 0:
+         hitin2=TDC_HITIN2_0;
+         break;
+
+      case 1:
+         hitin2=TDC_HITIN2_1;
+         break;
+
+      case 2:
+         hitin2=TDC_HITIN2_2;
+         break;
+
+      case 3:
+         hitin2=TDC_HITIN2_3;
+         break;
+
+      case 4:
+         hitin2=TDC_HITIN2_4;
+         break;
+
+      default: return;
+   }
+
+   switch(hits1)      // sets number of hits on channel 1
+   {
+      case 0:
+         hitin1=TDC_HITIN1_0;
+         break;
+
+      case 1:
+         hitin1=TDC_HITIN1_1;
+         break;
+
+      case 2:
+         hitin1=TDC_HITIN1_2;
+         break;
+
+      case 3:
+         hitin1=TDC_HITIN1_3;
+         break;
+
+      case 4:
+         hitin1=TDC_HITIN1_4;
+         break;
+
+      default: return;
+   }
+
    TDC_update_registers();
 
-      delay_ms(100);
+      delay_ms(50);
 
 
    //----------------------------------------------- Mereni 1
    
       TDC_init();
+//      TDC_start_cycle();   // Fire pulse generator activation 
+      delay_ms(100);
+
+      While(!input(INTN_PIN));      // waiting for interrupt flag
 
    //----------------------------------------------- Pocitani
 
@@ -75,26 +138,33 @@ void measurementM1()
 
          printf("[%Lu %Lu %Lu %Lu %Lu %Lu %Lu]\r\n", (1&(ret16)>>12), (1&(ret16)>>11), (1&(ret16)>>10), 1&(ret16)>>9, 7&(ret16)>>6, 7&(ret16)>>3, 7&TDC_get_status());
 */
-         printf("Time1: %3.7f %3.7f %3.7f \r\n", TDC_mrange1_get_time(1,0,1,1), TDC_mrange1_get_time(2,0,2,1), TDC_mrange1_get_time(1,1,2,1)); 
 
+      printf("[%Lu %Lu %Lu %Lu %Lu %Lu %Lu]\r\n", (1&(TDC_get_status())>>12), (1&(TDC_get_status())>>11), (1&(TDC_get_status())>>10), 1&(TDC_get_status())>>9, 7&(TDC_get_status())>>6, 7&(TDC_get_status())>>3, 7&TDC_get_status());
 
+      printf("$TDC%s M1 ", VERSION);
+      printf("%f %f", TDC_mrange1_get_time(1,1,1,2), TDC_mrange1_get_time(1,0,1,1));
+      
+     // syntax TDC_mrange1_get_time(Channel, shot, Channel , shot )
+     
+      printf("\r\n");
 }
 
 
 void measurementM2(unsigned int hits)
 {
+unsigned int i;
+
    TDC_reset();
    delay_ms(50);
    MRange=TDC_MRANGE2;     // sets measurement mode
-   hit1=TDC_MRANGE2_HIT1_START;
-//   hitin1=TDC_HITIN1_4;    // set nomber of hits on channel 1
+   hit1=TDC_MRANGE2_HIT1_START; // time is always counted from start pulse at this measurement mode
    hitin2=TDC_HITIN2_0;    // disable channel 2 (normal state for this mode)
    en_int= TDC_INT_ALU | TDC_INT_ENDHIT | TDC_INT_TIMEOUT; // eneble all possible interrupt flags
    en_err_val=TDC_ERRVAL_EN;  // enable of error value output
    clkhsdiv=TDC_CLKHSDIV_4;   // divide clkHS by 4
    firenum=TDC_FIRENUM_1;
    
-   switch(hits)
+   switch(hits)      // sets number of hits on channel 1
    {
       case 1:
          hitin1=TDC_HITIN1_2;
@@ -128,10 +198,11 @@ void measurementM2(unsigned int hits)
       
       // STOP2 INPUT MUST BE PULLED HIGH - else GP2 does not respond to stop pulses!
             
-   //----------------------------------------------- Pocitani
+   //----------------------------------------------- Calculate and print output
 
       printf("$TDC%s M2 ", VERSION);
-      printf("%3.7f %3.7f %3.7f \r\n", TDC_mrange2_get_time(1), TDC_mrange2_get_time(2), TDC_mrange2_get_time(3));
+      for(i=1;i<=hits;i++) printf(" %4.6f", TDC_mrange2_get_time(i));
+      printf("\r\n");
 
 }
 
@@ -152,6 +223,7 @@ unsigned int len=0;
       len++;
    }
    
+   ptr[len]=0;   
    return;
 }
 
@@ -162,7 +234,7 @@ void main()
 char command[20];
 char tmp[5];
 char *ptr;
-unsigned long parameter;
+unsigned long parameter, parameter2;
    setup_adc_ports(NO_ANALOGS|VSS_VDD);
    setup_adc(ADC_CLOCK_DIV_2);
    setup_spi(SPI_SS_DISABLED);
@@ -191,16 +263,17 @@ unsigned long parameter;
     if (!strncmp(command, tmp, 3))
     {
       parameter=strtol(command+3,&ptr,10);
-      
-    printf("%s\r\n", command+3);
-    printf("%lu\r\n",parameter);
       measurementM2(parameter);
     }
    
     strcpy(tmp,"M1 ");
     if (!strncmp(command, tmp, 3))
     {
-      measurementM1();
+      parameter=strtol(command+3,&ptr,10);
+      parameter2=strtol(ptr,&ptr,10);
+      printf("%lu\r\n", parameter);   // echo received command
+      printf("%lu\r\n", parameter2);   // echo received command
+      measurementM1(parameter, parameter2);
     }
 
    }
