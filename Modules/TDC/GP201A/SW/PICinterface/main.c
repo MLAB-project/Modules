@@ -198,9 +198,7 @@ unsigned int i;
       delay_ms(50);      
       TDC_start_cycle(); 
       While(!input(INTN_PIN));      // waiting for interrupt flag
-      
-      // STOP2 INPUT MUST BE PULLED HIGH - else GP2 does not respond to stop pulses!
-            
+                  
    //----------------------------------------------- Calculate and print output
 
       printf("$TDC%s M2 ", VERSION);

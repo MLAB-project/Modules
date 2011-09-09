@@ -60,7 +60,6 @@ void main()
 
     if(!input(MODE_SELECT))
     {
-      output_high(STOP2);  // Merime jenom jednim kanalem (druhy musi byt v H)
       while(!input(FIRE_DETECT));
 
       output_high(START);
