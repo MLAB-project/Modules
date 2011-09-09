@@ -344,6 +344,9 @@ float time;
                if (channel2 == 1)  hit2=TDC_MRANGE1_HIT2_4CH1; else hit2=TDC_MRANGE1_HIT2_4CH2;
                break;
    }
+   
+//   hit2=TDC_MRANGE1_HIT2_START;
+//   hit1=TDC_MRANGE1_HIT1_1CH1;
 
    TDC_update_reg1();      // tell  to ALU which shot period must be computed
    
@@ -351,7 +354,7 @@ float time;
    
    measurement=TDC_get_measurement(7&TDC_get_status()); // read computed value on pointer result register address
    
-   printf("\r\n%Lu\r\n", (7&TDC_get_status())); 
+   printf("%Lu\r\n", (7&TDC_get_status())); 
    printf("%Lu\r\n", measurement); 
 
    switch (clkhsdiv)

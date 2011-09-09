@@ -45,7 +45,7 @@ void measurementM1(unsigned int hits1,unsigned int hits2,)
    delay_ms(50);
    en_int= TDC_INT_ALU | TDC_INT_ENDHIT | TDC_INT_TIMEOUT; // eneble all possible interrupt flags
    en_err_val=TDC_ERRVAL_EN;  // enable of error value output
-   clkhsdiv=TDC_CLKHSDIV_4;   // divide clkHS by 2
+   clkhsdiv=TDC_CLKHSDIV_2;   // divide clkHS by 2
    firenum=TDC_FIRENUM_1;
    calibrate=TDC_CALIBRATE_EN;
    disautocal=TDC_AUTOCAL_EN;     // automatic calibration enabled
@@ -56,10 +56,6 @@ void measurementM1(unsigned int hits1,unsigned int hits2,)
    MRange=TDC_MRANGE1;
    hit1=TDC_MRANGE1_HIT1_NOAC;
    hit2=TDC_MRANGE1_HIT2_NOAC;
-
-
-//         hitin2=TDC_HITIN2_1;
-//         hitin1=TDC_HITIN1_1;
 
    delval1=0x0;
    delval2=0x0;
@@ -123,29 +119,19 @@ void measurementM1(unsigned int hits1,unsigned int hits2,)
    //----------------------------------------------- Mereni 1
    
       TDC_init();
-//      TDC_start_cycle();   // Fire pulse generator activation 
+      TDC_start_cycle();   // Fire pulse generator activation 
       delay_ms(100);
 
       While(!input(INTN_PIN));      // waiting for interrupt flag
 
    //----------------------------------------------- Pocitani
 
-//         printf("Time1: %LX %LX %LX %LX ", TDC_get_measurement(1), TDC_get_measurement(2), TDC_get_measurement(3), TDC_get_measurement(4));
-
-/*         output_low(TDC_ENABLE);  //status register
-         ret8=0;
-         ret8=(0b1011<<4)|4;
-         spi_xfer(TDC_stream,ret8,8);
-         ret16=spi_xfer(TDC_stream,0,16);
-         output_high(TDC_ENABLE);
-
-         printf("[%Lu %Lu %Lu %Lu %Lu %Lu %Lu]\r\n", (1&(ret16)>>12), (1&(ret16)>>11), (1&(ret16)>>10), 1&(ret16)>>9, 7&(ret16)>>6, 7&(ret16)>>3, 7&TDC_get_status());
-*/
-
       printf("[%Lu %Lu %Lu %Lu %Lu %Lu %Lu]\r\n", (1&(TDC_get_status())>>12), (1&(TDC_get_status())>>11), (1&(TDC_get_status())>>10), 1&(TDC_get_status())>>9, 7&(TDC_get_status())>>6, 7&(TDC_get_status())>>3, 7&TDC_get_status());
 
+      delay_ms(10);
+
       printf("$TDC%s M1 ", VERSION);
-      printf("%f %f", TDC_mrange1_get_time(1,1,1,2), TDC_mrange1_get_time(1,0,1,1));
+      printf("%5.6f %5.6f", TDC_mrange1_get_time(1,0,1,1), TDC_mrange1_get_time(2,1,2,0));
       
      // syntax TDC_mrange1_get_time(Channel, shot, Channel , shot )
      
@@ -272,10 +258,7 @@ unsigned long parameter, parameter2;
     {
       parameter=strtol(command+3,&ptr,10);
       parameter2=strtol(ptr,&ptr,10);
-      printf("%lu\r\n", parameter);   // echo received command
-      printf("%lu\r\n", parameter2);   // echo received command
       measurementM1(parameter, parameter2);
     }
-
    }
 }
