@@ -58,6 +58,9 @@ void measurementM1(unsigned int hits1,unsigned int hits2,)
    hit2=TDC_MRANGE1_HIT2_NOAC;
 
 
+//         hitin2=TDC_HITIN2_1;
+//         hitin1=TDC_HITIN1_1;
+
    delval1=0x0;
    delval2=0x0;
    delval3=0x0;
@@ -255,7 +258,7 @@ unsigned long parameter, parameter2;
     printf("$TDC%s->", VERSION);    // print prompt
     get_command(command, 20);    // receive command from terminal
     printf("%s\r\n", command);   // echo received command
-    
+
     strcpy(tmp,"TM");
     if (!strncmp(command, tmp, 2)) temperature_measurement();
 
