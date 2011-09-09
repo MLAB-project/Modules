@@ -1,6 +1,6 @@
 
 
-#define TDC_CLKHS 5000000     // frequency of highspeed oscillator
+#define TDC_CLKHS 6000000     // frequency of highspeed oscillator
 
 //register 0
 #define  TDC_NEG_START_INV  1
@@ -122,9 +122,9 @@
 #define  TDC_INT_ENDHIT  2
 #define  TDC_INT_ALU  1
 #define  TDC_CH1EDGE_RIS  0
-#define  TDC_CH1EDGE_FAL  1
+#define  TDC_CH1EDGE_FAL_RIS  1
 #define  TDC_CH2EDGE_RIS  0
-#define  TDC_CH2EDGE_FAL  1
+#define  TDC_CH2EDGE_FAL_RIS  1
 
 //register 3
 #define  TDC_TIM0MR2_256CLKHS  0
