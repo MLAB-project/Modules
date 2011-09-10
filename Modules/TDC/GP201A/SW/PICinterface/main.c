@@ -45,7 +45,7 @@ void measurementM1(unsigned int hits1,unsigned int hits2,)
    delay_ms(50);
    en_int= TDC_INT_ALU | TDC_INT_ENDHIT | TDC_INT_TIMEOUT; // eneble all possible interrupt flags
    en_err_val=TDC_ERRVAL_EN;  // enable of error value output
-   clkhsdiv=TDC_CLKHSDIV_2;   // divide clkHS by 2
+   clkhsdiv=TDC_CLKHSDIV_1;   // divide clkHS by 1
    firenum=TDC_FIRENUM_1;
    calibrate=TDC_CALIBRATE_EN;
    disautocal=TDC_AUTOCAL_EN;     // automatic calibration enabled
@@ -126,15 +126,13 @@ void measurementM1(unsigned int hits1,unsigned int hits2,)
 
    //----------------------------------------------- Pocitani
 
-      printf("[%Lu %Lu %Lu %Lu %Lu %Lu %Lu]\r\n", (1&(TDC_get_status())>>12), (1&(TDC_get_status())>>11), (1&(TDC_get_status())>>10), 1&(TDC_get_status())>>9, 7&(TDC_get_status())>>6, 7&(TDC_get_status())>>3, 7&TDC_get_status());
+//     printf("[%Lu %Lu %Lu %Lu %Lu %Lu %Lu]\r\n", (1&(TDC_get_status())>>12), (1&(TDC_get_status())>>11), (1&(TDC_get_status())>>10), 1&(TDC_get_status())>>9, 7&(TDC_get_status())>>6, 7&(TDC_get_status())>>3, 7&TDC_get_status());
 
       delay_ms(10);
 
       printf("$TDC%s M1 ", VERSION);
-      printf("%5.6f %5.6f", TDC_mrange1_get_time(1,0,1,1), TDC_mrange1_get_time(2,1,2,0));
-      
-     // syntax TDC_mrange1_get_time(Channel, shot, Channel , shot )
-     
+      printf("%5.6f %5.6f", TDC_mrange1_get_time(1,1,1,0), TDC_mrange1_get_time(2,1,2,0));
+// syntax TDC_mrange1_get_time(HIT1:[Channel, shot], HIT2:[Channel , shot])    time=HIT1-HIT2 and does not support negative output
       printf("\r\n");
 }
 
@@ -242,6 +240,11 @@ unsigned long parameter, parameter2;
     printf("$TDC%s->", VERSION);    // print prompt
     get_command(command, 20);    // receive command from terminal
     printf("%s\r\n", command);   // echo received command
+
+
+//    delay_ms(50);
+//    strcpy(command,"M1 1 1");
+
 
     strcpy(tmp,"TM");
     if (!strncmp(command, tmp, 2)) temperature_measurement();
