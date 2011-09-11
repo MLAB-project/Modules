@@ -131,7 +131,7 @@ void measurementM1(unsigned int hits1,unsigned int hits2,)
       delay_ms(10);
 
       printf("$TDC%s M1 ", VERSION);
-      printf("%5.6f %5.6f", TDC_mrange1_get_time(1,1,1,0), TDC_mrange1_get_time(2,1,2,0));
+      printf("%6.6f %6.6f", TDC_mrange1_get_time(1,1,1,0), TDC_mrange1_get_time(2,1,2,0));
 // syntax TDC_mrange1_get_time(HIT1:[Channel, shot], HIT2:[Channel , shot])    time=HIT1-HIT2 and does not support negative output
       printf("\r\n");
 }
@@ -148,7 +148,7 @@ unsigned int i;
    hitin2=TDC_HITIN2_0;    // disable channel 2 (normal state for this mode)
    en_int= TDC_INT_ALU | TDC_INT_ENDHIT | TDC_INT_TIMEOUT; // eneble all possible interrupt flags
    en_err_val=TDC_ERRVAL_EN;  // enable of error value output
-   clkhsdiv=TDC_CLKHSDIV_4;   // divide clkHS by 4
+   clkhsdiv=TDC_CLKHSDIV_2;   // divide clkHS by 4
    firenum=TDC_FIRENUM_1;
    
    switch(hits)      // sets number of hits on channel 1
@@ -232,7 +232,7 @@ unsigned long parameter, parameter2;
    TDC_reset();
    delay_ms(50);
 
-   printf("\r\n\r\n# TDC%s (C) 2011 Jakub Kakona\r\n",VERSION);   // Welcome message
+   printf("\r\n\r\n# TDC%s (C) 2011 Jakub Kakona kaklik@mlab.cz\r\n",VERSION);   // Welcome message
 //   printf("#%s\r\n",&REV[4]);
 
    while(TRUE)
