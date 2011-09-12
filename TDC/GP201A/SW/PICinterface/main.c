@@ -148,7 +148,7 @@ unsigned int i;
    hitin2=TDC_HITIN2_0;    // disable channel 2 (normal state for this mode)
    en_int= TDC_INT_ALU | TDC_INT_ENDHIT | TDC_INT_TIMEOUT; // eneble all possible interrupt flags
    en_err_val=TDC_ERRVAL_EN;  // enable of error value output
-   clkhsdiv=TDC_CLKHSDIV_2;   // divide clkHS by 4
+   clkhsdiv=TDC_CLKHSDIV_4;   // divide clkHS by 4
    firenum=TDC_FIRENUM_1;
    
    switch(hits)      // sets number of hits on channel 1
