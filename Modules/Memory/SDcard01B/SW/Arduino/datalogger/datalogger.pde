@@ -5,12 +5,12 @@
  to an SD card using the SD library.
  	
  The circuit:
- * analog sensors on analog ins 0, 1, and 2
+ * analog sensors on analog ins PC0, PC1, and PC2
  * SD card attached to SPI bus as follows:
- ** MOSI - pin 11
- ** MISO - pin 12
- ** CLK - pin 13
- ** CS - pin 4
+ ** MOSI - PB3
+ ** MISO - PB4
+ ** CLK - PB5
+ ** CS - PD4
  
  created  24 Nov 2010
  updated 2 Dec 2010
@@ -21,11 +21,6 @@
  */
 
 #include <SD.h>
-
-// On the Ethernet Shield, CS is pin 4. Note that even if it's not
-// used as the CS pin, the hardware CS pin (10 on most Arduino boards,
-// 53 on the Mega) must be left as an output or the SD library
-// functions will not work.
 const int chipSelect = 4;
 
 void setup()
@@ -45,10 +40,17 @@ void setup()
   Serial.println("card initialized.");
 }
 
+int count;
+
 void loop()
 {
+
   // make a string for assembling the data to log:
-  String dataString = "";
+  String dataString = "$";
+  delay(100);
+  dataString += String(count); // print number of measurement
+  dataString += ",";
+
 
   // read three sensors and append to the string:
   for (int analogPin = 0; analogPin < 3; analogPin++) {
@@ -69,6 +71,7 @@ void loop()
     dataFile.close();
     // print to the serial port too:
     Serial.println(dataString);
+    count++;
   }  
   // if the file isn't open, pop up an error:
   else {
