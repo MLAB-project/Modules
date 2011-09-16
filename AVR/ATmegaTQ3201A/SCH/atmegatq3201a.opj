@@ -30,6 +30,10 @@
       (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
+    (C0805
+      (FullPartName "C0805.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
     (XTAL050
       (FullPartName "XTAL050.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\COM_XTAL.OLB")
@@ -58,13 +62,13 @@
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 279"))
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 279"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 50 759 50 474")
-        (Scroll "0 130")
+        (Placement "44 0 1 -1 -1 -8 -30 50 759 50 474")
+        (Scroll "0 100")
         (Zoom "100")
         (Occurrence "/"))
       (Path
