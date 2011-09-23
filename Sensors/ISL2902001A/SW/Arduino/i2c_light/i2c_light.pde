@@ -17,6 +17,56 @@ void setup()
 
 int data = 0;
 
+void led_blink()
+{
+   digitalWrite(3, HIGH);   // set the LED on
+   delay(500);
+   digitalWrite(3, LOW);    // set the LED off
+   delay(500);
+}
+
+
+int set_light_sensor()
+{
+   // Setup device
+   Wire.beginTransmission(address); 
+   Wire.send(0x00);            // sends address
+   Wire.send(0b11100000);      // setup (eye light sensing; measurement range 2 [4000 lx])
+   Wire.endTransmission();     // stop transmitting
+   
+}
+
+int get_light_measurement()
+{
+int lux=0;
+
+   //  Connect to device and set register address
+   Wire.beginTransmission(address); 
+   Wire.send(0x01);            // sends address of LSB reagister 
+   Wire.endTransmission();     // stop transmitting
+   
+   //  Connect to device and request one byte
+   Wire.beginTransmission(address);
+   Wire.requestFrom(address, 1);
+   data = Wire.receive();
+   Wire.endTransmission();     // stop transmitting
+   lux=data;
+   
+   //  Connect to device and set register address
+   Wire.beginTransmission(address);
+   Wire.send(0x02);            // sends address of MSB register
+   Wire.endTransmission();     // stop transmitting
+   
+   //  Connect to device and request one byte
+   Wire.beginTransmission(address);
+   Wire.requestFrom(address, 1);
+   data = Wire.receive();
+   Wire.endTransmission();     // stop transmitting
+
+   lux+=data*256;  
+   return lux; 
+}
+
 void loop()
 {
   int lux=0;
@@ -74,61 +124,27 @@ void loop()
   Wire.endTransmission();     // stop transmitting
   //  Serial.print(data, HEX);
   lux+=data*256; 
-*/
 
   Serial.print((unsigned)lux, DEC);
+*/
+
+   set_light_sensor();
    
+   // Delay for measurement 
+   led_blink(); 
+   
+   //  Connect to device and set register address
+   Wire.beginTransmission(address); 
+   Wire.send(0x00);            // sends address
+   Wire.endTransmission();     // stop transmitting
+   //  Connect to device and request one byte
+   Wire.beginTransmission(address);
+   Wire.requestFrom(address, 1);
+   data = Wire.receive();
+   Wire.endTransmission();     // stop transmitting
+
+   // data print
    Serial.print(" luxIR=");
-   
-   // Setup device
-   Wire.beginTransmission(address); 
-   Wire.send(0x00);            // sends address
-   Wire.send(0b11100000);      // setup (eye light sensing; measurement range 2 [4000 lx])
-   Wire.endTransmission();     // stop transmitting
-   
-   // Delay for measurement
-   digitalWrite(3, HIGH);   // set the LED on
-   delay(500);
-   digitalWrite(3, LOW);    // set the LED off
-   delay(500);
-   
-   
-   //  Connect to device and set register address
-   Wire.beginTransmission(address); 
-   Wire.send(0x00);            // sends address
-   Wire.endTransmission();     // stop transmitting
-   //  Connect to device and request one byte
-   Wire.beginTransmission(address);
-   Wire.requestFrom(address, 1);
-   data = Wire.receive();
-   Wire.endTransmission();     // stop transmitting
-   //  Serial.print(data, HEX);
-   
-   //  Serial.print(" LSB=");
-   //  Connect to device and set register address
-   Wire.beginTransmission(address); 
-   Wire.send(0x01);            // sends address
-   Wire.endTransmission();     // stop transmitting
-   //  Connect to device and request one byte
-   Wire.beginTransmission(address);
-   Wire.requestFrom(address, 1);
-   data = Wire.receive();
-   Wire.endTransmission();     // stop transmitting
-   //  Serial.print(data, HEX);
-   lux=data;
-   
-   //  Serial.print(" MSB=");  
-   //  Connect to device and set register address
-   Wire.beginTransmission(address);
-   Wire.send(0x02);            // sends address
-   Wire.endTransmission();     // stop transmitting
-   //  Connect to device and request one byte
-   Wire.beginTransmission(address);
-   Wire.requestFrom(address, 1);
-   data = Wire.receive();
-   Wire.endTransmission();     // stop transmitting
-   //  Serial.print(data, HEX);
-   lux+=data*256;
-  Serial.println((unsigned)lux, DEC);
+   Serial.println((unsigned)get_light_measurement(), DEC);
 }
 
