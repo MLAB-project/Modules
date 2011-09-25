@@ -7,6 +7,12 @@
 #define SENSE_VIS 0
 #define SENSE_IR  1
 
+#define LIGHT_AUTORANGE  0
+#define LIGHT_RANGE1  1
+#define LIGHT_RANGE2  2
+#define LIGHT_RANGE3  3
+#define LIGHT_RANGE4  4
+
 
 void setup()
 {
