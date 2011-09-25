@@ -1,6 +1,7 @@
 // I2C Light Sensor
 
 #include <Wire.h>
+#include  <math.h>
 
 #define address 0x44 // A0 = L
 #define SENSE_VIS 0
@@ -18,6 +19,7 @@ void setup()
 }
 
 int data = 0;
+int light_sensor_setup;
 
 void led_blink()
 {
@@ -71,12 +73,12 @@ int command;
     Serial.print(data, BIN);
   }
   Wire.endTransmission();     // stop transmitting
-
+  light_sensor_setup=command;
 }
 
-int get_light_measurement()
+float get_light_measurement()
 {
-int lux=0;
+int ret=0;
 
    //  Connect to device and set register address
    Wire.beginTransmission(address); 
@@ -86,9 +88,8 @@ int lux=0;
    //  Connect to device and request one byte
    Wire.beginTransmission(address);
    Wire.requestFrom(address, 1);
-   data = Wire.receive();
+   ret = Wire.receive();
    Wire.endTransmission();     // stop transmitting
-   lux=data;
    
    //  Connect to device and set register address
    Wire.beginTransmission(address);
@@ -98,11 +99,10 @@ int lux=0;
    //  Connect to device and request one byte
    Wire.beginTransmission(address);
    Wire.requestFrom(address, 1);
-   data = Wire.receive();
+   ret +=256 * Wire.receive();
    Wire.endTransmission();     // stop transmitting
 
-   lux+=data*256;  
-   return lux; 
+   return (1000.0/pow(2.0,16)*ret);
 }
 
 void loop()
@@ -112,11 +112,11 @@ int lux=0;
    set_light_sensor(SENSE_VIS);  //setup sensor for visible measuring
    led_blink();    // Delay for measurement
    Serial.print("lux=");
-   Serial.println((unsigned)get_light_measurement(), DEC);
+   Serial.println(get_light_measurement(),2);
 
    set_light_sensor(SENSE_IR);  // setup sensor for infrared measuring
    led_blink(); // Delay for measurement
    Serial.print("luxIR="); 
-   Serial.println((unsigned)get_light_measurement(), DEC); // data print
+   Serial.println(get_light_measurement(), 2); // data print
 }
 
