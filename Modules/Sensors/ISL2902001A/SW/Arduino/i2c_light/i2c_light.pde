@@ -55,6 +55,23 @@ int command;
   Wire.send(0x00);            // sends address
   Wire.send(command);      // setup (eye light sensing; one time measurement; measurement range 1)
   Wire.endTransmission();     // stop transmitting
+  
+  
+   //  Connect to device and set register address
+  Wire.beginTransmission(address); 
+  Wire.send(0x00);            // sends address (command register)
+  Wire.endTransmission();     // stop transmitting
+  
+  //  verify written command byte
+  Wire.beginTransmission(address);  
+  Wire.requestFrom(address, 1);
+  if (command != Wire.receive())
+  { 
+    return 4;  
+    Serial.print(data, BIN);
+  }
+  Wire.endTransmission();     // stop transmitting
+
 }
 
 int get_light_measurement()
@@ -90,36 +107,16 @@ int lux=0;
 
 void loop()
 {
-  int lux=0;
+int lux=0;
 
-  set_light_sensor(SENSE_VIS);
-  
-  // Delay for measurement
-  led_blink(); 
-
-  //  Connect to device and set register address
-  Wire.beginTransmission(address); 
-  Wire.send(0x00);            // sends address (command register)
-  Wire.endTransmission();     // stop transmitting
-  
-  //  Connect to device and request command register settings
-  Wire.beginTransmission(address);
-  Wire.requestFrom(address, 1);
-  data = Wire.receive();
-  Wire.endTransmission();     // stop transmitting
-  Serial.print(data, BIN);
-
-  Serial.print("lux=");
+   set_light_sensor(SENSE_VIS);  //setup sensor for visible measuring
+   led_blink();    // Delay for measurement
+   Serial.print("lux=");
    Serial.println((unsigned)get_light_measurement(), DEC);
 
-
-   set_light_sensor(SENSE_IR);
-   
-   // Delay for measurement 
-   led_blink(); 
-   
-   // data print
-   Serial.print("luxIR=");
-   Serial.println((unsigned)get_light_measurement(), DEC);
+   set_light_sensor(SENSE_IR);  // setup sensor for infrared measuring
+   led_blink(); // Delay for measurement
+   Serial.print("luxIR="); 
+   Serial.println((unsigned)get_light_measurement(), DEC); // data print
 }
 
