@@ -1,5 +1,5 @@
 /*
-  SD card datalogger
+ SD card datalogger
  
  This example shows how to log data from three analog sensors 
  to an SD card using the SD library.
@@ -7,21 +7,15 @@
  The circuit:
  * analog sensors on analog ins PC0, PC1, and PC2
  * SD card attached to SPI bus as follows:
- ** MOSI - PB3
- ** MISO - PB4
+ ** MOSI/CMD - PB3
+ ** MISO/DAT0 - PB4
  ** CLK - PB5
- ** CS - PD4
- 
- created  24 Nov 2010
- updated 2 Dec 2010
- by Tom Igoe
- 
- This example code is in the public domain.
+ ** CD/DAT3 - PD4
  	 
  */
 
 #include <SD.h>
-const int chipSelect = 4;
+#define chipSelect  4
 
 void setup()
 {
@@ -46,7 +40,7 @@ void loop()
 {
 
   // make a string for assembling the data to log:
-  String dataString = "$";
+  String dataString = "$LOG";
   delay(100);
   dataString += String(count); // print number of measurement
   dataString += ",";
