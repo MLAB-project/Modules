@@ -1,0 +1,74 @@
+(ExpressProject "Hum01A"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\hum01a.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (Netlist_TAB "8")
+    (OTHER_Part_Value "{Value}")
+    (OTHER_Netlist_File "HUM01A.asc")
+    (OTHER_Netlist_File2 "HUM01A.CMP")
+    (OTHER_View_Output "FALSE")
+    (OTHER_View_Output2 "FALSE")
+    (OTHER_Formatter "orPadspcb.dll")
+    (OTHER_PCB_Footprint "{Device},{Value}@{PCB Footprint}")
+    (OTHER_Switch0 "FALSE")
+    (OTHER_Switch1 "FALSE")
+    (OTHER_Switch2 "FALSE")
+    (OTHER_Switch3 "FALSE")
+    (OTHER_Switch4 "FALSE")
+    (OTHER_Switch5 "FALSE")
+    (OTHER_Switch6 "FALSE"))
+  (Folder "Outputs"
+    (File ".\hum01a.asc"
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (FIDU_PASTE
+      (FullPartName "FIDU_PASTE.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\SYMBOLS.OLB")
+      (DeviceIndex "0"))
+    (FIDU
+      (FullPartName "FIDU.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\SYMBOLS.OLB")
+      (DeviceIndex "0"))
+    (HOLE_M3
+      (FullPartName "HOLE_M3.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\PAD.OLB")
+      (DeviceIndex "0"))
+    (C0805
+      (FullPartName "C0805.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (1N4007SMD
+      (FullPartName "1N4007SMD.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_D.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName "C:\LIBRARY\ORCAD16X\SYMBOLS.OLB")
+      (DeviceIndex "0"))
+    (JUMP3
+      (FullPartName "JUMP3.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (DS2401P_TSOC6
+      (FullPartName "DS2401P_TSOC6.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\MEMORY.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\hum01a.dsn")
+      (Path "Design Resources" ".\hum01a.dsn" "SCHEMATIC1")
+      (Path "Outputs"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 449"))
+      (Tab 0)))
+  (ISPCBBASICLICENSE "false"))
