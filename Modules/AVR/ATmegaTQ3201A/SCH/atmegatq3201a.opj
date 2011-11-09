@@ -22,11 +22,26 @@
     (OTHER_Switch4 "FALSE")
     (OTHER_Switch5 "FALSE")
     (OTHER_Switch6 "FALSE")
-    (NoModify))
+    (NoModify)
+    (BOM_Scope "0")
+    (BOM_Mode "0")
+    (BOM_Report_File
+       "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\AVR\ATMEGATQ3201A\SCH\ATMEGATQ3201A.BOM")
+    (BOM_Merge_Include "FALSE")
+    (BOM_Property_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_Header "Item\tQuantity\tReference\tPart")
+    (BOM_Include_File
+       "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\AVR\ATMEGATQ3201A\SCH\ATMEGATQ3201A.INC")
+    (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_One_Part_Per_Line "FALSE")
+    (Open_BOM_in_Excel "FALSE")
+    (BOM_View_Output "FALSE"))
   (Folder "Outputs"
     (File ".\atmegatq3201a.asc"
       (Type "Report"))
     (File ".\atmegatq3201a.net"
+      (Type "Report"))
+    (File ".\atmegatq3201a.bom"
       (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
@@ -62,16 +77,17 @@
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -4 -30 0 200 0 279"))
+        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 279"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -4 -30 22 839 29 332")
-        (Scroll "0 0")
+        (Placement "44 2 3 -1 -1 -8 -30 25 1125 25 516")
+        (Scroll "-62 62")
         (Zoom "100")
         (Occurrence "/"))
-      (Path "D:\MLAB\MODULES\AVR\ATMEGATQ3201A\SCH\ATMEGATQ3201A.DSN")
+      (Path
+         "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\AVR\ATMEGATQ3201A\SCH\ATMEGATQ3201A.DSN")
       (Schematic "SCHEMATIC1")
       (Page "PAGE2")))
-  (MPSSessionName "Jakub Kákona"))
+  (MPSSessionName "kaklik"))
