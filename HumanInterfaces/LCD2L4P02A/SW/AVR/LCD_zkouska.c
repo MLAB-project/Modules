@@ -1,0 +1,62 @@
+//Program pro vyzkouseni funkcnosti modulu s LCD a mikropocitacem ATmega8
+//MLAB 21.11.2011 (JACHO)
+
+//vytvoreno v programu AVR studio 4
+
+#include <avr/io.h>
+#include <stdio.h>
+#include <avr/iom8.h>
+#include "lcd.h"
+#include "lcd.c"
+#include <util/delay.h>
+
+
+#define MAXDISPLBUFFER	20	//buffer pro lcd display
+
+
+//----------------------------------------------------------------------------- 
+
+int main(void) 
+{ 
+    
+LCD_init();  //Inicializace LCD 
+
+char zasobnik[19];
+
+			sprintf(zasobnik,"LCD je OK"); //vlozi text do zasobnik
+			LCD_gotoxy(0,0);  //definuje kam se zacne zapisovat na LCD
+			ProcesDispl(zasobnik);
+			LCD_gotoxy(0,2);
+			ProcesDispl(zasobnik);
+			_delay_ms(1);
+
+
+return 0;
+
+
+
+}
+
+void ProcesDispl(char *data) //zajiöùuje tisk ¯etÏzce na lcd
+{
+	uint8_t a,b;
+
+	for (a=0;a<MAXDISPLBUFFER;a++)
+	{
+		switch (*(data+a))
+		{
+		case 0: *data = 0;return;
+		case '\n':	LCD_gotoxy(1,2);break;  //posun na druhej ¯·dek
+      	case '\r':	LCD_gotoxy(1,1);break;
+		case '\a':	LCD_gotoxy(6,2);break;	//posun na 2.¯·dek 6.polÌËko
+		case '\f':	LCD_gotoxy(1,1);
+					for (b=0;b<8;b++) LCD_putc(0x20);
+					LCD_gotoxy(1,2);
+					for (b=0;b<8;b++) LCD_putc(0x20);
+					LCD_gotoxy(1,1);
+					break;
+		default : 	LCD_putc(*(data+a));
+    	}
+	}
+	*data = 0;
+}
