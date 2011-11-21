@@ -11,6 +11,10 @@
 //PIN_E	PB1
 //PIN_RS	PB2
 
+
+//pri spravne funkci se na LCD zobrazi na prvem a druhem radku LCD je OK
+//je dulezite spravne propojit modulu, napajet je a mit spravne nastaveny konstrast (pro zacatek potenciometr do prostred drahy)
+
 #include <avr/io.h>
 #include <stdio.h>
 #include <avr/iom8.h>
