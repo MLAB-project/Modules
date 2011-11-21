@@ -3,6 +3,14 @@
 
 //vytvoreno v programu AVR studio 4
 
+//Propojení pinù modulu s LCD a ATmega8 (jejich nastavení se provádí v lcd.h)
+//PIN_D0	PC3
+//PIN_D1	PB4
+//PIN_D2	PB5
+//PIN_D3	PB3
+//PIN_E	PB1
+//PIN_RS	PB2
+
 #include <avr/io.h>
 #include <stdio.h>
 #include <avr/iom8.h>
