@@ -47,7 +47,7 @@
     (OTHER_Netlist_File2 "NFET4X01B.CMP")
     (OTHER_View_Output "FALSE")
     (OTHER_View_Output2 "FALSE")
-    (OTHER_Formatter "oraccel.dll")
+    (OTHER_Formatter "orPadspcb.dll")
     (OTHER_PCB_Footprint "{Device},{Value}@{PCB Footprint}")
     (OTHER_Switch0 "FALSE")
     (OTHER_Switch1 "FALSE")
@@ -62,16 +62,30 @@
     (File ".\nfet4x01b.asc"
       (Type "Report")))
   (Folder "Referenced Projects")
-  (PartMRUSelector)
+  (PartMRUSelector
+    (C-ELYTC
+      (FullPartName "C-ELYTC.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (FIDU_PASTE
+      (FullPartName "FIDU_PASTE.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\SYMBOLS.OLB")
+      (DeviceIndex "0"))
+    (JUMP2X1_CON
+      (FullPartName "JUMP2X1_CON.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (R1206
+      (FullPartName "R1206.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0")))
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "c:\users\kaklik\documents\svnmlab\modules\powersw\nfet4x01b\sch\nfet4x01b.dsn")
-      (Path "Design Resources"
-         "c:\users\kaklik\documents\svnmlab\modules\powersw\nfet4x01b\sch\nfet4x01b.dsn"
-         "SCHEMATIC1")
-      (Path "Outputs"))
+      (Path "Design Resources" ".\nfet4x01b.dsn")
+      (Path "Design Resources" ".\nfet4x01b.dsn" "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources" ".\nfet4x01b.dsn" "SCHEMATIC1" "PAGE"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -81,12 +95,12 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 100 1226 100 584")
-        (Scroll "0 0")
+        (Placement "44 0 1 -1 -1 -8 -30 25 1125 25 516")
+        (Scroll "0 10")
         (Zoom "100")
         (Occurrence "/"))
       (Path
-         "C:\USERS\KAKLIK\DOCUMENTS\SVNMLAB\MODULES\POWERSW\NFET4X01B\SCH\NFET4X01B.DSN")
+         "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\POWERSW\NFET4X01B\SCH\NFET4X01B.DSN")
       (Schematic "SCHEMATIC1")
       (Page "PAGE")))
   (MPSSessionName "kaklik")
