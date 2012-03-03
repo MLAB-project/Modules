@@ -3,7 +3,7 @@
 
 #FUSES NOWDT                    //No Watch Dog Timer
 #FUSES WDT128                   //Watch Dog Timer uses 1:128 Postscale
-#FUSES HS                       //High speed Osc (> 4mhz for PCM/PCH) (>10mhz for PCD)
+#FUSES INTRC_IO                 //Internal RC Osc, no CLKOUT
 #FUSES NOPROTECT                //Code not protected from reading
 #FUSES NOBROWNOUT               //No brownout reset
 #FUSES BORV20                   //Brownout reset at 2.0V
@@ -25,11 +25,11 @@
 #FUSES MCLR                     //Master Clear pin enabled
 #FUSES LPT1OSC                  //Timer1 configured for low-power operation
 #FUSES NOXINST                  //Extended set extension and Indexed Addressing mode disabled (Legacy mode)
-#FUSES PLL6                    //Divide By 12(48MHz oscillator input)
-#FUSES CPUDIV1                  //System Clock by 4
+#FUSES PLL12                    //Divide By 12(48MHz oscillator input)
+#FUSES CPUDIV1                  //System Clock by 1
 #FUSES USBDIV                   //USB clock source comes from PLL divide by 2
 #FUSES VREGEN                   //USB voltage regulator enabled
 #FUSES ICPRT                    //ICPRT enabled
 
-#use delay(clock=20000000)
+#use delay(clock=8000000)
 
