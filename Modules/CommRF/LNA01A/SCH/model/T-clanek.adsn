@@ -1,0 +1,4389 @@
+$begin 'AnsoftProject'
+	Created='Wed Jun 26 16:26:19 2002'
+	Product='Designer'
+	NextUniqueID=0
+	MoveBackwards=false
+	$begin 'Desktop'
+		Version(2, 1, 'SV')
+	$end 'Desktop'
+	$begin 'DesignMgrEnvironment'
+		CompInstCounter=6
+		GPortCounter=0
+		NetCounter=25
+	$end 'DesignMgrEnvironment'
+	$begin 'Datasets'
+		NextUniqueID=0
+		MoveBackwards=false
+		$begin 'DatasetDefinitions'
+		$end 'DatasetDefinitions'
+	$end 'Datasets'
+	$begin 'Definitions'
+		$begin 'Folders'
+			Definitions(7338, 10000, 1, 1, 0, false, false)
+			Components(7338, 9000, 8, 2, 1, false, false)
+			Materials(7338, 9001, 9, 3, 1, false, false)
+			Scripts(7338, 9007, 33500, 8, 1, false, false)
+			Symbols(7338, 9002, 10, 4, 1, false, false)
+			Footprints(7338, 9003, 11, 5, 1, false, false)
+			Padstacks(7338, 9004, 12, 6, 1, false, false)
+		$end 'Folders'
+		$begin 'Materials'
+			$begin 'gold'
+				permeability='0.99996'
+				conductivity='41000000'
+				ModTime=1025123067
+				Library=''
+				LibLocation='Project'
+			$end 'gold'
+			$begin 'Alumina'
+				permittivity='9.8'
+				dielectric_loss_tangent='0.0001'
+				ModTime=1025123067
+				Library=''
+				LibLocation='Project'
+			$end 'Alumina'
+		$end 'Materials'
+		$begin 'Scripts'
+		$end 'Scripts'
+		$begin 'Symbols'
+			$begin 'Lowpass'
+				ModTime=1025123067
+				Library=''
+				LibLocation='Project'
+				$begin 'PinDef'
+					Pin('P1', -0.00508, 0, 0, 'N', 0, 0.00254, false, 0, true, '', true, false)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, Text(-0.00508, 0.00127, 0, 1, 5, false, 'Arial', 0, 'Port0'))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('P2', 0.00508, 0, 3.14159265358979, 'N', 0, 0.00254, false, 0, true, '', true, false)
+					$begin 'PropDisplayMap'
+						PinName(2, 5, Text(0.00508, 0.00127, 0, 1, 5, false, 'Arial', 0, 'Port1'))
+					$end 'PropDisplayMap'
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 0, 0, 0, 0, 0.00508, 0.00508)
+				$end 'Graphics'
+			$end 'Lowpass'
+			$begin 'port_term'
+				ModTime=1038155973
+				Library=''
+				LibLocation='Project'
+				$begin 'PinDef'
+					Pin('c', 0, 0.01016, 6.28318, 'N', 0, 0, true, 0, true, '', false, false)
+				$end 'PinDef'
+				$begin 'Graphics'
+					Rect(0, 0, 12566272, 3.1416, -9.3315e-020, 0.00254, 0.00508, 0.01016)
+					Line(0, 1, 12566272, -0.0017145, -0.00508, 0.0017145, -0.00508)
+					Line(0, 1, 12566272, 0.001143, -0.005842, -0.001143, -0.005842)
+					Line(0, 1, 12566272, 0.0005715, -0.006604, -0.0005715, -0.006604)
+					Line(0, 1, 12566272, -1.02647e-018, 0.01016, -4.66575e-019, 0.005588, -0.001016, 0.00508, 0.001016, 0.004064, -0.001016, 0.003048, 0.001016, 0.002032, -0.001016, 0.001016, 0.001016, 1.51788e-018, 2.79945e-019, -0.000508, 0, -0.00508)
+				$end 'Graphics'
+				$begin 'PropDisplayMap'
+					InterfacePort(2, 5, Text(-0.00498726, 0.00661692, 0, 6, 5, false, 'Arial', 0, '[InterfacePort]'))
+					IZ(3, 5, Text(-0.00496743, -0.000528387, 0, 6, 5, false, 'Arial', 0, 'IZ=***'))
+					PNUM(3, 5, Text(-0.00497031, 0.00405229, 0, 6, 5, false, 'Arial', 0, 'PNUM=***'))
+					RZ(3, 5, Text(-0.00493086, 0.00176005, 0, 6, 5, false, 'Arial', 0, 'RZ=***'))
+				$end 'PropDisplayMap'
+			$end 'port_term'
+			$begin 'port_vsource'
+				ModTime=1038159655
+				Library=''
+				LibLocation='Project'
+				$begin 'PinDef'
+					Pin('c', 1.04083e-017, 0.0127, 6.28318, 'N', 0, 0, true, 0, true, '', false, false)
+				$end 'PinDef'
+				$begin 'Graphics'
+					Circle(0, 0, 12566272, 8.69151e-019, -0.003048, 0.00254)
+					Line(0, 1, 12566272, -0.0017145, -0.01016, 0.0017145, -0.01016)
+					Line(0, 1, 12566272, 0.001143, -0.010922, -0.001143, -0.010922)
+					Line(0, 1, 12566272, 0.0005715, -0.011684, -0.0005715, -0.011684)
+					Arc(0, 1, 12566272, 0.000727779, -0.00333622, 0.000796221, 0.328805, 2.81224)
+					Arc(0, 1, 12566272, -0.000810262, -0.00284226, 0.000810262, 3.46133, 5.96891)
+					Rect(0, 0, 12566272, 3.1416, 6.78883e-006, 0.00129294, 0.00761348, 0.0177825)
+					Line(0, 1, 12566272, 1.1802e-018, -0.005588, 2.17377e-018, -0.01016)
+					Line(0, 1, 12566272, -3.66144e-018, 0.0127, -2.23419e-018, 0.008128, -0.001016, 0.00762, 0.001016, 0.006604, -0.001016, 0.005588, 0.001016, 0.004572, -0.001016, 0.003556, 0.001016, 0.00254, -6.20311e-019, 0.002032, -3.09261e-019, -0.000508)
+				$end 'Graphics'
+				$begin 'PropDisplayMap'
+					RZ(3, 5, Text(-0.0064544, 0.00380618, 0, 6, 5, false, 'Arial', 0, 'RZ=***'))
+					IZ(3, 5, Text(-0.00655997, 0.00127294, 0, 6, 5, false, 'Arial', 0, 'IZ=***'))
+					p(2, 5, Text(-0.00672311, -0.000998953, 0, 6, 5, false, 'Arial', 0, '[p]'))
+					v(2, 5, Text(-0.00670868, -0.00355788, 0, 6, 5, false, 'Arial', 0, '[v]'))
+					PNUM(3, 5, Text(-0.0064426, 0.00609006, 0, 6, 5, false, 'Arial', 0, 'PNUM=***'))
+					InterfacePort(2, 5, Text(-0.0064171, 0.00867104, 0, 6, 5, false, 'Arial', 0, '[InterfacePort]'))
+				$end 'PropDisplayMap'
+			$end 'port_vsource'
+			$begin 'ind'
+				ModTime=1016057153
+				Library=''
+				LibLocation='Project'
+				$begin 'PinDef'
+					Pin('n1', -0.00508, 3.46945e-018, 0, 'N', 0, 0, false, 0, true, '', false, false)
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('n2', 0.00508, 3.46945e-018, 3.14159, 'N', 0, 0, false, 0, true, '', false, false)
+				$end 'PinDef'
+				$begin 'Graphics'
+					Arc(0, 1, 12566272, -6.93889e-018, 3.46945e-018, 0.00125687, 6.27976, 3.14498)
+					Arc(0, 1, 12566272, -0.00254, 3.46945e-018, 0.00127034, 6.2798, 3.14502)
+					Arc(0, 1, 12566272, 0.00254, 3.46945e-018, 0.00127277, 6.27981, 3.14494)
+					Line(0, 1, 12566272, -0.00508, 0, -0.00381, 0)
+					Line(0, 1, 12566272, 0.00381, 0, 0.00508, 0)
+				$end 'Graphics'
+				$begin 'PropDisplayMap'
+					L(2, 5, Text(2.1684e-019, -0.00232758, 0, 4, 5, false, 'Arial', 0, '[L]'))
+				$end 'PropDisplayMap'
+			$end 'ind'
+			$begin 'cap'
+				ModTime=1016056313
+				Library=''
+				LibLocation='Project'
+				$begin 'PinDef'
+					Pin('n1', -0.00508, 3.46945e-018, 0, 'N', 0, 0, false, 0, true, '', false, false)
+				$end 'PinDef'
+				$begin 'PinDef'
+					Pin('n2', 0.00508, 3.46945e-018, 3.14159, 'N', 0, 0, false, 0, true, '', false, false)
+				$end 'PinDef'
+				$begin 'Graphics'
+					Line(0, 1, 12566272, -0.0006985, 0.0017145, -0.0006985, -0.0017145)
+					Line(0, 1, 12566272, 0.0006985, 0.0017145, 0.0006985, -0.0017145)
+					Line(0, 1, 12566272, 0.00508, 0, 0.0006985, 0)
+					Line(0, 1, 12566272, -0.00508, 0, -0.0006985, 0)
+				$end 'Graphics'
+				$begin 'PropDisplayMap'
+					C(2, 5, Text(2.1684e-019, -0.00378531, 0, 4, 5, false, 'Arial', 0, '[C]'))
+				$end 'PropDisplayMap'
+			$end 'cap'
+			$begin 'ground_earth'
+				ModTime=1016213689
+				Library=''
+				LibLocation='Project'
+				$begin 'PinDef'
+					Pin('n1', 0, 0.00254, 4.71239, 'N', 0, 0, false, 0, true, '', false, false)
+				$end 'PinDef'
+				$begin 'Graphics'
+					Line(0, 1, 12566272, -4.33681e-019, 0.00254, -4.33681e-019, 4.33681e-019)
+					Line(0, 1, 12566272, 0.0017145, -4.33681e-019, -0.0017145, -4.33681e-019)
+					Line(0, 1, 12566272, -0.001143, -0.000762, 0.001143, -0.000762)
+					Line(0, 1, 12566272, -0.0005715, -0.001524, 0.0005715, -0.001524)
+				$end 'Graphics'
+			$end 'ground_earth'
+			$begin 'ArrowPwr'
+				ModTime=1073611622
+				Library='Symbols'
+				LibLocation='SysLibrary '
+				$begin 'PinDef'
+					Pin('n1', 0, 0, 0, 'N', 0, 0, false, 0, true, '', false, false)
+				$end 'PinDef'
+				$begin 'Graphics'
+					Polygon(0, 0, 12566272, -0.000508, 0.000508, 1.13687e-013, 0.001778, 0.000508, 0.000508)
+					Line(0, 1, 12566272, 1.13687e-013, -1.13687e-013, 1.13687e-013, 0.000508)
+				$end 'Graphics'
+			$end 'ArrowPwr'
+			$begin 'BarPwr'
+				ModTime=1073596596
+				Library='Symbols'
+				LibLocation='SysLibrary '
+				$begin 'PinDef'
+					Pin('n1', 0, 0, 0, 'N', 0, 0, false, 0, true, '', false, false)
+				$end 'PinDef'
+				$begin 'Graphics'
+					Line(0, 1, 12566272, 1.13687e-013, 0, 1.13687e-013, 0.00127)
+					Line(0, 1, 12566272, -0.001016, 0.00127, 0.001016, 0.00127)
+				$end 'Graphics'
+			$end 'BarPwr'
+			$begin 'ChassisGnd'
+				ModTime=1073597015
+				Library='Symbols'
+				LibLocation='SysLibrary '
+				$begin 'PinDef'
+					Pin('n1', 0, 0, 0, 'N', 0, 0, false, 0, true, '', false, false)
+				$end 'PinDef'
+				$begin 'Graphics'
+					Polygon(0, 0, 12566272, -0.00127, -1.13687e-013, 0.00127, -1.13687e-013, 1.13687e-013, -0.00127)
+				$end 'Graphics'
+			$end 'ChassisGnd'
+			$begin 'EarthGnd'
+				ModTime=1073538954
+				Library='Symbols'
+				LibLocation='SysLibrary '
+				$begin 'PinDef'
+					Pin('newpin0', 0, 0, 4.71239, 'N', 0, 0, false, 0, true, '', false, false)
+				$end 'PinDef'
+				$begin 'Graphics'
+					Line(0, 1, 12566272, -0.00127, -1.13687e-013, 0.00127, -1.13687e-013)
+					Line(0, 1, 12566272, 0.00127, -1.13687e-013, 0.000254, -0.001524)
+					Line(0, 1, 12566272, 0, -1.13687e-013, -0.001016, -0.001524)
+					Line(0, 1, 12566272, -0.00127, -1.13687e-013, -0.002286, -0.001524)
+				$end 'Graphics'
+			$end 'EarthGnd'
+			$begin 'Ground'
+				ModTime=1073538979
+				Library='Symbols'
+				LibLocation='SysLibrary '
+				$begin 'PinDef'
+					Pin('newpin0', 0, 0, 4.71239, 'N', 0, 0, false, 0, true, '', false, false)
+				$end 'PinDef'
+				$begin 'Graphics'
+					Line(0, 1, 12566272, -0.001778, 0, 0.001778, 0)
+					Line(0, 1, 12566272, -0.00127, -0.000508, 0.00127, -0.000508)
+					Line(0, 1, 12566272, -0.000762, -0.001016, 0.000762, -0.001016)
+					Line(0, 1, 12566272, -0.000254, -0.001524, 0.000254, -0.001524)
+				$end 'Graphics'
+			$end 'Ground'
+			$begin 'Ground2'
+				ModTime=1073604953
+				Library='Symbols'
+				LibLocation='SysLibrary '
+				$begin 'PinDef'
+					Pin('n1', 0, 0, 0, 'N', 0, 0, false, 0, true, '', false, false)
+				$end 'PinDef'
+				$begin 'Graphics'
+					Polygon(0, 0, 12566272, -0.00127, -1.13687e-013, 0.00127, -1.13687e-013, 1.13687e-013, -0.00127)
+					Text(0.000762, -0.000762, 0, 0, 1.27, false, 'Arial', 12566272, 'F')
+				$end 'Graphics'
+			$end 'Ground2'
+			$begin 'WavePwr'
+				ModTime=1073596694
+				Library='Symbols'
+				LibLocation='SysLibrary '
+				$begin 'PinDef'
+					Pin('n1', 0, 0, 0, 'N', 0, 0, false, 0, true, '', false, false)
+				$end 'PinDef'
+				$begin 'Graphics'
+					Line(0, 1, 12566272, 1.13687e-013, 0, 1.13687e-013, 0.00127)
+					Line(0, 1, 12566272, -0.00127, 0.00127, -0.001016, 0.001524, 0.001016, 0.001016, 0.00127, 0.00127)
+				$end 'Graphics'
+			$end 'WavePwr'
+		$end 'Symbols'
+		$begin 'Footprints'
+		$end 'Footprints'
+		$begin 'Padstacks'
+			$begin 'NoPad SMT East'
+				ModTime=1041541605
+				Library=''
+				LibLocation='Project'
+				$begin 'layers'
+					SLayer(Layer(N='Template', ID=0, T='signal', TB='template', Col=32512, Pat=5), Elev='mid', SubL(Th='0mil', LElev='0mil', R='0mil', Mat='copper'))
+				$end 'layers'
+				$begin 'pads'
+					$begin 'pad_on_layer'
+						layer=0
+						PadPort=true
+						$begin 'connection positions'
+							$begin 'position'
+								position(0, 0)
+								directions(0)
+							$end 'position'
+						$end 'connection positions'
+						$begin 'connected'
+							name='NoPad'
+							none()
+						$end 'connected'
+					$end 'pad_on_layer'
+				$end 'pads'
+			$end 'NoPad SMT East'
+		$end 'Padstacks'
+		$begin 'DefInfo'
+			Lowpass(4294967295, 2, '', 1025123067, '', 'Lowpass', '', '', '', '', '', '', '', 'Project')
+			IND(4294901763, 0, 'Ansoft built-in component', 1014231396, '', 'ind', '', '', 'Inductor', 'IND.htm', 'sercomponents.chm', 'ind.bmp', '', 'Project')
+			CAP(4294901763, 0, 'Ansoft built-in component', 1020711483, '', 'cap', '', '', 'Capacitor', 'CAP.htm', 'sercomponents.chm', 'cap.bmp', '', 'Project')
+		$end 'DefInfo'
+		$begin 'Compdefs'
+			$begin 'Lowpass'
+				Refbase='U'
+				NumParts=1
+				Terminal('P1', 'P1', 'A', false, 0, 0, 0)
+				Terminal('P2', 'P2', 'A', false, 2, 0, 0)
+				$begin 'Parameters'
+					ButtonProp('CircuitSolver', 'SD', '', '', '', 0)
+				$end 'Parameters'
+				$begin 'Properties'
+					TextProp('Representation', 'SD', '', 'Lowpass')
+					TextProp('Owner', 'SD', '', 'Circuit')
+				$end 'Properties'
+			$end 'Lowpass'
+			$begin 'IND'
+				Refbase='L'
+				NumParts=1
+				Terminal('n1', 'n1', 'A', false, 0, 0, 0)
+				Terminal('n2', 'n2', 'A', false, 0, 0, 0)
+				$begin 'Parameters'
+					VariableProp('L', 'D', 'Inductance', '10nH')
+					VariableProp('IT0', 'HD', 'Initial current value for transient analysis', '0mA')
+					ButtonProp('CircuitNetList', 'HD', '', 'IND:@ID %0 %1 ?L(L=@L) *IT0(IT0=@IT0)', 'IND:@ID %0 %1 ?L(L=@L) *IT0(IT0=@IT0)', 1)
+					ButtonProp('SystemNetList', 'HD', '', 'IND:@ID %0 %1 ?L(L=@L) *IT0(IT0=@IT0)', 'IND:@ID %0 %1 ?L(L=@L) *IT0(IT0=@IT0)', 1)
+					TextProp('ModelName', 'HD', '', 'IND')
+				$end 'Parameters'
+			$end 'IND'
+			$begin 'CAP'
+				Refbase='C'
+				NumParts=1
+				Terminal('n1', 'n1', 'A', false, 0, 0, 0)
+				Terminal('n2', 'n2', 'A', false, 0, 0, 0)
+				$begin 'Parameters'
+					VariableProp('C', 'D', 'Capacitance', '10pF')
+					VariableProp('VCT0', 'HD', 'Initial voltage value for transient analysis', '0mV')
+					ButtonProp('CircuitNetList', 'HD', '', 'CAP:@ID %0 %1 ?C(C=@C) *VCT0(VCT0=@VCT0)', 'CAP:@ID %0 %1 ?C(C=@C) *VCT0(VCT0=@VCT0)', 1)
+					ButtonProp('SystemNetList', 'HD', '', 'CAP:@ID %0 %1 ?C(C=@C) *VCT0(VCT0=@VCT0)', 'CAP:@ID %0 %1 ?C(C=@C) *VCT0(VCT0=@VCT0)', 1)
+					TextProp('ModelName', 'HD', '', 'CAP')
+				$end 'Parameters'
+			$end 'CAP'
+		$end 'Compdefs'
+	$end 'Definitions'
+	$begin 'CircuitEnvironment'
+		Version(1, 0)
+	$end 'CircuitEnvironment'
+	$begin 'PlanarEMEnvironment'
+		Version(1, 0)
+	$end 'PlanarEMEnvironment'
+	$begin 'FilterDesignEnvironment'
+	$end 'FilterDesignEnvironment'
+	$begin 'SchematicEnvironment'
+		Version(1, 0)
+	$end 'SchematicEnvironment'
+	$begin 'HFCircuit'
+		Name='Lowpass'
+		$begin 'Circuit'
+			ComponentName='Lowpass'
+			AutoFP=''
+			$begin 'GlobalPort'
+				PortName='0'
+			$end 'GlobalPort'
+			$begin 'IPort'
+				PortName='P1'
+				Public=true
+				Connectible=true
+				Direction='AnyDirection'
+				$begin 'Properties'
+					TextProp('pnum', 'OD', '', '1')
+					ButtonProp('EditPort', 'D', '', 'Edit', '', 0)
+					TextProp('source1', 'OD', '', 'PulseTime1')
+					ValueProp('rz', 'OD', '', '50Ohm', 0)
+					ValueProp('iz', 'OD', '', '0Ohm', 0)
+					TextProp('PortSymbol', 'OHD', '', '1')
+					ButtonProp('CircuitNetlist', 'HD', '', 'PORT:@InterfacePort %0 ?RefNode(@RefNode):( %1 ) PNUM=@pnum &($=#)^(Name,pnum,RefNode,type,InterfacePort,Direction,EditPort,PortSymbol)', 'PORT:@InterfacePort %0 ?RefNode(@RefNode):( %1 ) PNUM=@pnum &($=#)^(Name,pnum,RefNode,type,InterfacePort,Direction,EditPort,PortSymbol)', 1)
+				$end 'Properties'
+			$end 'IPort'
+			$begin 'IPort'
+				PortName='P2'
+				Public=true
+				Connectible=true
+				Direction='AnyDirection'
+				$begin 'Properties'
+					TextProp('pnum', 'OD', '', '2')
+					ButtonProp('EditPort', 'D', '', 'Edit', '', 0)
+					ValueProp('rz', 'OD', '', '50Ohm', 0)
+					ValueProp('iz', 'OD', '', '0Ohm', 0)
+					TextProp('PortSymbol', 'OHD', '', '1')
+					ButtonProp('CircuitNetlist', 'HD', '', 'PORT:@InterfacePort %0 ?RefNode(@RefNode):( %1 ) PNUM=@pnum &($=#)^(Name,pnum,RefNode,type,InterfacePort,Direction,EditPort,PortSymbol)', 'PORT:@InterfacePort %0 ?RefNode(@RefNode):( %1 ) PNUM=@pnum &($=#)^(Name,pnum,RefNode,type,InterfacePort,Direction,EditPort,PortSymbol)', 1)
+				$end 'Properties'
+			$end 'IPort'
+			$begin 'Compinst'
+				ID='2'
+				Status='Status'
+				CompName='IND'
+				AutoGenerated=false
+				AutoGeneratedName=''
+				$begin 'Properties'
+					TextProp('ID', 'SRID', '', '2')
+				$end 'Properties'
+				$begin 'Parameters'
+					ValueProp('L', 'OD', 'Inductance', '75nH', 0)
+				$end 'Parameters'
+			$end 'Compinst'
+			$begin 'Compinst'
+				ID='4'
+				Status='Status'
+				CompName='CAP'
+				AutoGenerated=false
+				AutoGeneratedName=''
+				$begin 'Properties'
+					TextProp('ID', 'SRID', '', '4')
+				$end 'Properties'
+				$begin 'Parameters'
+					ValueProp('C', 'OD', 'Capacitance', '8.2pF', 0)
+				$end 'Parameters'
+			$end 'Compinst'
+			$begin 'Compinst'
+				ID='5'
+				Status='Status'
+				CompName='CAP'
+				AutoGenerated=false
+				AutoGeneratedName=''
+				$begin 'Properties'
+					TextProp('ID', 'SRID', '', '5')
+				$end 'Properties'
+				$begin 'Parameters'
+					ValueProp('C', 'OD', 'Capacitance', '8.2pF', 0)
+				$end 'Parameters'
+			$end 'Compinst'
+			$begin 'Net'
+				NetName='P1'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+				NetInterfacePorts='P1'
+				NetPin('4', 1)
+			$end 'Net'
+			$begin 'Net'
+				NetName='0'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', false)
+				$end 'Properties'
+				NetGPorts='0'
+				NetPin('2', 0)
+			$end 'Net'
+			$begin 'Net'
+				NetName='P2'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+				NetInterfacePorts='P2'
+				NetPin('5', 0)
+			$end 'Net'
+			$begin 'Net'
+				NetName='net_24'
+				$begin 'Properties'
+					CheckboxProp('AlignMicrowavePorts', 'D', '', true)
+				$end 'Properties'
+				NetPin('4', 0)
+				NetPin('5', 1)
+				NetPin('2', 1)
+			$end 'Net'
+		$end 'Circuit'
+		$begin 'Schematic'
+			PPortCounter=0
+			$begin 'Page'
+				PageSize('A')
+				PageNumber=1
+				$begin 'SchGPort'
+					SchPortInst('ground_earth', '10', '0', 61, 0.03556, -0.07112, 0, false, 'ground_earth')
+					$begin 'PropDisplayMap'
+						PortName(2, 5, Text(0.03683, -0.07112, 0, 1, 10, false, 'Arial Narrow', 0, '0'))
+					$end 'PropDisplayMap'
+				$end 'SchGPort'
+				$begin 'SchIPort'
+					SchPortInst('defaultinterfaceport', '0', 'P1', 1, -2.94902990916057e-017, -0.0635, 0, false, 'port_vsource')
+				$end 'SchIPort'
+				$begin 'SchIPort'
+					SchPortInst('defaultinterfaceport', '4', 'P2', 29, 0.0762, -0.06096, 0, false, 'port_term')
+				$end 'SchIPort'
+				$begin 'SchCompDef'
+					SchCompInst('IND', 'A', '2', 22, '2', 'normal', 0.03556, -0.06096, 1.5707963267949, false)
+					$begin 'PropDisplayMap'
+						L(2, 5, Text(0.03788758, -0.06096, 1.5707963267949, 4, 5, false, 'Arial', 0, '75nH'))
+					$end 'PropDisplayMap'
+				$end 'SchCompDef'
+				$begin 'SchCompDef'
+					SchCompInst('CAP', 'A', '8', 47, '4', 'normal', 0.02286, -0.04572, 3.14159265358979, false)
+					$begin 'PropDisplayMap'
+						C(2, 5, Text(0.02286, -0.043698578888896, 0, 4, 5, false, 'Arial', 0, '8.2pF'))
+					$end 'PropDisplayMap'
+				$end 'SchCompDef'
+				$begin 'SchCompDef'
+					SchCompInst('CAP', 'A', '9', 49, '5', 'normal', 0.04826, -0.04572, 3.14159265358979, false)
+					$begin 'PropDisplayMap'
+						C(2, 5, Text(0.04826, -0.043698578888896, 0, 4, 5, false, 'Arial', 0, '8.2pF'))
+					$end 'PropDisplayMap'
+				$end 'SchCompDef'
+				$begin 'PageNet'
+					NetName='P1'
+					ID=65
+					Interface('P1', 1)
+					WireSeg(0, -0.0508, 0.01524, -0.0508, 28)
+					WireSeg(0.01524, -0.0508, 0.01524, -0.04572, 29)
+					WireSeg(0.01524, -0.04572, 0.01778, -0.04572, 30)
+				$end 'PageNet'
+				$begin 'PageNet'
+					NetName='0'
+					ID=76
+					Global('0', 61)
+					WireSeg(0.03556, -0.06858, 0.03556, -0.06604, 43)
+				$end 'PageNet'
+				$begin 'PageNet'
+					NetName='P2'
+					ID=79
+					Interface('P2', 29)
+					WireSeg(0.0762, -0.0508, 0.05588, -0.0508, 37)
+					WireSeg(0.05588, -0.0508, 0.05588, -0.04572, 38)
+					WireSeg(0.05588, -0.04572, 0.05334, -0.04572, 39)
+				$end 'PageNet'
+				$begin 'PageNet'
+					NetName='net_24'
+					ID=73
+					WireSeg(0.03556, -0.0508, 0.03048, -0.0508, 31)
+					WireSeg(0.03048, -0.0508, 0.03048, -0.04572, 32)
+					WireSeg(0.03048, -0.04572, 0.02794, -0.04572, 33)
+					WireSeg(0.03556, -0.0508, 0.04064, -0.0508, 34)
+					WireSeg(0.04064, -0.0508, 0.04064, -0.04572, 35)
+					WireSeg(0.04064, -0.04572, 0.04318, -0.04572, 36)
+					WireSeg(0.03556, -0.0508, 0.03556, -0.05588, 42)
+				$end 'PageNet'
+				$begin 'Properties'
+					TextProp('Title', 'SD', '', '<Page Title>')
+					TextProp('Author', 'SD', '', '')
+				$end 'Properties'
+			$end 'Page'
+			GridSetup(0.0254, 0.00254, 16772075, 16774645, true, true, 16777215)
+			hasWindowBeenOpened=false
+		$end 'Schematic'
+		$begin 'Layout'
+			BlackBox=false
+			DefUnits='mm'
+			NIdx=212
+			$begin 'Lyrs'
+				Layer(N='Measures', ID=0, T='measures', Col=4144959, Pat=1)
+				Layer(N='Rats', ID=1, T='rat', Col=16711680, Pat=1)
+				Layer(N='Errors', ID=2, T='error', Col=255, Pat=1)
+				Layer(N='Symbols', ID=3, T='symbol', Col=8323199, Pat=4)
+				Layer(N='Assembly', ID=4, T='assembly', TB='top', Col=16711680, Pat=3)
+				SLayer(Layer(N='Trace', ID=5, T='signal', TB='top', Col=32512, Pat=4), Elev='mid', SubL(Th='0mil', LElev='25mil', R='0mil', Mat='gold'))
+				SLayer(Layer(N='Dielectric', ID=6, T='dielectric', Col=127, Pat=7), Elev='none', SubL(Th='25mil', LElev='0mil', R='0mil', Mat='Alumina'))
+				SLayer(Layer(N='Ground', ID=7, T='metalizedsignal', Col=4144959, Pat=6), Elev='mid', SubL(Th='0mil', LElev='0mil', R='0mil', Mat='gold'))
+			$end 'Lyrs'
+			ActLyr='Trace'
+			Tol(2e-009, 1e-008, 1e-012)
+			$begin 'Pins'
+				$begin 'Pin'
+					Port(Id=3, PropDisps(PD(Id=0, PN='name', DispTyp='v', Style='<DefaultAnnotation>', Lyr=3, N='text100', x='0mil', y='0mil', F='Arial', Siz='12000mm', Wght=3, Just=4, Txt='P1')), N='P1')
+					Off(x='78.740157480315mil', y='0mil')
+					Pstk='NoPad SMT East'
+					LyrMap(U='forward', F(-1, -1, -1, -1, -1, 0, -1, -1), B(5))
+				$end 'Pin'
+				$begin 'Pin'
+					Port(Id=4, PropDisps(PD(Id=0, PN='name', DispTyp='v', Style='<DefaultAnnotation>', Lyr=3, N='text104', x='0mil', y='0mil', F='Arial', Siz='12000mm', Wght=3, Just=4, Txt='P2')), N='P2')
+					Off(x='78.740157480315mil', y='0mil')
+					Pstk='NoPad SMT East'
+					LyrMap(U='forward', F(-1, -1, -1, -1, -1, 0, -1, -1), B(5))
+				$end 'Pin'
+			$end 'Pins'
+			$begin 'Nets'
+				$begin 'Net'
+					N='P1'
+					Cl(Ports(Ids(3)))
+					Cl(PortInsts(Ids(1103)))
+				$end 'Net'
+				$begin 'Net'
+					N='P2'
+					Cl(Ports(Ids(4)))
+					Cl(PortInsts(Ids(1202)))
+				$end 'Net'
+				$begin 'Net'
+					N='net_24'
+					Cl(PortInsts(Ids(1102)))
+					Cl(PortInsts(Ids(1203)))
+					Cl(PortInsts(Ids(1003)))
+				$end 'Net'
+				$begin 'Net'
+					N='0'
+					Cl(PortInsts(Ids(1002)))
+				$end 'Net'
+			$end 'Nets'
+			$begin 'Comps'
+				$begin 'comp'
+					Lyr=3
+					N='2'
+					Def='__symbolFootprint_ind_0'
+					Pos(x='11.7348000000022mil', y='-2.800094mil', Scale='0.0254')
+					Lyrs(Map(U='forward', F(0, 1, 2, 3, -1, -1, -1, -1), B(0, 1, 2, 3)))
+					PortInsts(PI(Id=1002, N='n1', PId=0), PI(Id=1003, N='n2', PId=0))
+					IsCirc=false
+					CompInst='2'
+					RectWidth=0.00254
+				$end 'comp'
+				$begin 'comp'
+					Lyr=3
+					N='4'
+					Def='__symbolFootprint_cap_0'
+					Pos(x='-11.7348000000022mil', y='-3.7719mil', Scale='0.0254')
+					Lyrs(Map(U='forward', F(0, 1, 2, 3, -1, -1, -1, -1), B(0, 1, 2, 3)))
+					PortInsts(PI(Id=1102, N='n1', PId=0), PI(Id=1103, N='n2', PId=0))
+					IsCirc=false
+					CompInst='4'
+					RectWidth=0.00254
+				$end 'comp'
+				$begin 'comp'
+					Lyr=3
+					N='5'
+					Def='__symbolFootprint_cap_0'
+					Pos(x='-11.7348000000022mil', y='0mil', Scale='0.0254')
+					Lyrs(Map(U='forward', F(0, 1, 2, 3, -1, -1, -1, -1), B(0, 1, 2, 3)))
+					PortInsts(PI(Id=1202, N='n1', PId=0), PI(Id=1203, N='n2', PId=0))
+					IsCirc=false
+					CompInst='5'
+					RectWidth=0.00254
+				$end 'comp'
+			$end 'Comps'
+		$end 'Layout'
+		$begin 'ConfiguredLibs'
+			$begin 'SysLibraries'
+				Components='Circuit Elements'
+				Materials='Circuit Elements;Materials'
+				Symbols='Circuit Elements;Symbols'
+				Footprints='Circuit Elements;Footprints;Distributed Footprints'
+				Padstacks='Circuit Elements;Padstacks'
+				Scripts='Circuit Elements;Scripts'
+			$end 'SysLibraries'
+		$end 'ConfiguredLibs'
+		$begin 'ControlBlocks'
+			$begin 'printtoauditblock'
+				name='Group Delay'
+				printtoauditdata('18', 'Sweep', 'Lowpass', 'GD12(ckt=Lowpass)', 0)
+			$end 'printtoauditblock'
+			$begin 'printtoauditblock'
+				name='S11  S12'
+				printtoauditdata('18', 'Sweep', 'Lowpass', '{dB(S11(ckt=Lowpass))} {dB(S12(ckt=Lowpass))}', 0)
+			$end 'printtoauditblock'
+		$end 'ControlBlocks'
+		$begin 'portsrc_PulseTime1'
+			$begin 'Properties'
+				TextProp('primitive', 'OD', '', 'vpulse')
+				TextProp('Name', 'OD', '', 'PulseTime1')
+				ValueProp('v2', 'OUD', '', '1V', 0)
+				ValueProp('td', 'OUD', '', '0.1ns', 0)
+				ValueProp('tr', 'OUD', '', '0.1ns', 0)
+				ValueProp('tf', 'OUD', '', '0.1ns', 0)
+				ValueProp('w', 'OUD', '', '20ns', 0)
+				ValueProp('t', 'OUD', '', '50ns', 0)
+				NumberProp('v1', 'OD', '', 0, false)
+				ButtonProp('EditSource', 'D', '', 'Edit', '', 0)
+				TextProp('CircuitNetlist', 'HD', '', '.source @Name @primitive (&($=#)^(Name,primitive,EditSource))')
+			$end 'Properties'
+		$end 'portsrc_PulseTime1'
+		sourcemgr('portsrc_PulseTime1')
+		portmgr('P1', 'P2')
+		$begin 'Solutions'
+			$begin 'SimSetup'
+				TypeName='LinearFrequency'
+				ID=18
+				Name='NWA1'
+				$begin 'SweepDefinition'
+					Variable='F'
+					Data='LIN 0 200MHz 5MHz'
+					OffsetF1=false
+					Synchronize=0
+				$end 'SweepDefinition'
+				$begin 'Solution'
+					ID=19
+					Name='NWA1_18'
+					$begin 'SimDataExtractor'
+						SimValue('GD12(ckt=Lowpass)', 1, 49, false, 3, 0, 2, 0, true, false, 0, 1, 0, 1)
+						SimValue('S11(ckt=Lowpass)', 2, 90, false, 3, 0, 2, 0, false, false, 0, 1, 0, 1)
+						SimValue('S12(ckt=Lowpass)', 2, 90, false, 3, 0, 2, 0, false, false, 0, 1, 0, 1)
+						SimValue('GP', 1, 90, true, 3, 0, 2, 0, true, false, -1, 1, 0, 1)
+						SimValue('GT', 1, 90, true, 3, 0, 2, 0, true, false, -1, 1, 0, 1)
+						SimValue('VGIO', 2, 90, false, 3, 0, 2, 0, true, false, -1, 1, 0, 1)
+						SimValue('MSG', 1, 90, true, 3, 0, 2, 0, true, false, -1, 1, 0, 1)
+						SimValue('VGIN', 2, 90, false, 3, 0, 2, 0, true, false, -1, 1, 0, 1)
+						SimValue('VGSL', 2, 90, false, 3, 0, 2, 0, true, false, -1, 1, 0, 1)
+						SimValue('GA', 1, 90, true, 3, 0, 2, 0, true, false, -1, 1, 0, 1)
+						SimValue('UPG', 1, 90, true, 3, 0, 2, 0, true, false, -1, 1, 0, 1)
+						SimValue('GMAX', 1, 90, true, 3, 0, 2, 0, true, false, -1, 1, 0, 1)
+						SimValue('S11', 2, 90, false, 3, 0, 2, 0, false, false, -1, 1, 0, 1)
+						SimValue('K(ckt=Lowpass, Z1=(50.00 + j0.00))', 1, 90, false, 3, 0, 2, 0, false, false, -1, 1, 0, 1)
+						SimValue('Fmin(ckt=Lowpass, Z1=(50.00 + j0.00))', 1, 90, true, 3, 0, 2, 0, false, false, -1, 1, 0, 1)
+						SimValue('GMAX(ckt=Lowpass, Z1=(50.00 + j0.00))', 1, 90, true, 3, 0, 2, 0, false, false, -1, 1, 0, 1)
+						$begin 'Sweeps'
+							$begin 'Sweep'
+								Variable='F'
+								Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+								Units='GHz'
+							$end 'Sweep'
+						$end 'Sweeps'
+						$begin 'SolutionPointSets'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 1'
+								CurrentIndex=15
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, 0, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 1:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='GD12(ckt=Lowpass)', CatID=6, FuncID=0, IsInteger=false, Units='s', Y='GD12(ckt=Lowpass)')
+										$begin 'ExtTraceInfo'
+											NumPoints=0
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 2'
+								CurrentIndex=29
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, false, false, 0, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 2:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='S11(ckt=Lowpass)', CatID=3, FuncID=11, IsInteger=false, Units='', Y='dB(S11(ckt=Lowpass))')
+										$begin 'ExtTraceInfo'
+											NumPoints=0
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 2:Trace2D 2'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='S12(ckt=Lowpass)', CatID=3, FuncID=11, IsInteger=false, Units='', Y='dB(S12(ckt=Lowpass))')
+										$begin 'ExtTraceInfo'
+											NumPoints=0
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 3'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 3:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='GP', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(GP)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 4'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 4:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='GT', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(GT)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 5'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 5:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='VGIO', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(VGIO)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 6'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 6:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='VGIO', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(VGIO)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 7'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 7:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='MSG', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(MSG)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 8'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 8:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='VGIN', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(VGIN)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 9'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 9:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='VGSL', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(VGSL)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 10'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 10:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='VGIO', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(VGIO)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 11'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 11:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='GT', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(GT)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 12'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 12:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='GP', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(GP)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 13'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 13:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='GA', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(GA)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 14'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 14:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='UPG', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(UPG)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 15'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 15:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='GMAX', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(GMAX)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 16'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 16:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='MSG', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(MSG)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 17'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 17:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='MSG', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(MSG)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 18'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 18:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='MSG', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(MSG)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 19'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 19:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='GMAX', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(GMAX)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 20'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 20:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='UPG', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(UPG)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 21'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 21:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='GA', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(GA)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 22'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 22:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='VGIN', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(VGIN)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 23'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 23:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='VGSL', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(VGSL)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 24'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 24:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='VGIO', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(VGIO)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 25'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 25:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='GT', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(GT)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 26'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 26:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='GP', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(GP)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 27'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 27:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='VGIN', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(VGIN)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 28'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 28:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='VGSL', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(VGSL)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 29'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 29:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='VGIO', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(VGIO)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 30'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 30:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='GT', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(GT)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 31'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, false, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 31:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='S11', CatID=3, FuncID=0, IsInteger=false, Units='', Y='S11')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 32'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 32:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='GA', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(GA)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+							$begin 'SolutionPointSet'
+								name='NWA1_18:SolutionPointSet 33'
+								CurrentIndex=2
+								SolutionVersion=55
+								SimValueContext(3, 0, 2, 0, true, false, -1, 1, 0, 1)
+								$begin 'SubSweeps'
+									$begin 'F'
+										All=true
+										Indices()
+										$begin 'SweepBase'
+											Variable='F'
+											Column='0GHz;0.005GHz;0.01GHz;0.015GHz;0.02GHz;0.025GHz;0.03GHz;0.035GHz;0.04GHz;0.045GHz;0.05GHz;0.055GHz;0.06GHz;0.065GHz;0.07GHz;0.075GHz;0.08GHz;0.085GHz;0.09GHz;0.095GHz;0.1GHz;0.105GHz;0.11GHz;0.115GHz;0.12GHz;0.125GHz;0.13GHz;0.135GHz;0.14GHz;0.145GHz;0.15GHz;0.155GHz;0.16GHz;0.165GHz;0.17GHz;0.175GHz;0.18GHz;0.185GHz;0.19GHz;0.195GHz;0.2GHz'
+											Units='GHz'
+										$end 'SweepBase'
+									$end 'F'
+								$end 'SubSweeps'
+								$begin 'Traces'
+									$begin 'Trace2D'
+										name='NWA1_18:SolutionPointSet 33:Trace2D 1'
+										X(Desc='F', CatID=1, FuncID=0, IsInteger=false, Units='GHz', X='F')
+										Y(Desc='VGIO', CatID=28, FuncID=11, IsInteger=false, Units='', Y='dB(VGIO)')
+										$begin 'ExtTraceInfo'
+											NumPoints=4294967295
+											TraceType=0
+											Offset=0
+											XLabel=''
+											SamplingPeriod='0'
+										$end 'ExtTraceInfo'
+									$end 'Trace2D'
+								$end 'Traces'
+							$end 'SolutionPointSet'
+						$end 'SolutionPointSets'
+					$end 'SimDataExtractor'
+				$end 'Solution'
+				OptionsReferred=''
+				moredata('', false, '', '')
+				IsEnabled=true
+				VersionID=55
+				LinearFrequencyData(true, 0.1)
+			$end 'SimSetup'
+			$begin 'Version ID Map'
+				V=55
+				$begin 'Setup'
+					N='NWA1'
+					V=55
+					Soln(N='NWA1_18', V=55)
+				$end 'Setup'
+			$end 'Version ID Map'
+		$end 'Solutions'
+		SParamCircuitDef=false
+		Notes=$begin_cdata$		$end_cdata$
+		$begin 'AnimationSetups'
+		$end 'AnimationSetups'
+	$end 'HFCircuit'
+	$begin 'DataInstances'
+		DesignEditor='TopLevel'
+		Refdes('0', 'U1')
+		$begin 'CompInstances'
+			$begin 'Compinst'
+				ID='0'
+				Status='Status'
+				CompName='Lowpass'
+				AutoGenerated=false
+				AutoGeneratedName=''
+				GatesInUse()
+				$begin 'Properties'
+					TextProp('ID', 'SRID', '', '0')
+				$end 'Properties'
+			$end 'Compinst'
+		$end 'CompInstances'
+		$begin 'Instance'
+			DesignEditor='Lowpass'
+			ID='0'
+			Refdes('2', 'L2')
+			Refdes('4', 'C1')
+			Refdes('5', 'C2')
+			$begin 'HFCircuit'
+				$begin 'WindowPosition'
+					$begin 'EditorWindow'
+						Circuit(Schematic(View(WindowPos(5, -1, -1, -8, -30, 26, 31, 1071, 439), Extent(-0.5, -0.5, 1, 1, 3779.52755904, 3779.52755904, -0.0401918322010103, -0.0376240163096186, 0.15532368523305, 0.0494631973807628, 1.71705944010346))), Layout())
+					$end 'EditorWindow'
+					$begin 'ReportWindow'
+						'Group Delay'(Report2D())
+						'S11 S12'(Report2D())
+						'XY Plot 1'(Report2D())
+						'XY Plot 2'(Report2D())
+						'XY Plot 3'(Report2D())
+						'XY Plot 4'(Report2D())
+						'XY Plot 5'(Report2D())
+						'S-Parameters 1'(Report2D())
+						'XY Plot 6'(Report2D())
+						'XY Plot 7'(Report2D(View(WindowPos(3, -1, -1, -8, -30, 14, 167, 1054, 592))))
+					$end 'ReportWindow'
+				$end 'WindowPosition'
+				$begin 'Reports'
+					$begin 'Report2D'
+						name='Group Delay'
+						ReportType=0
+						DisplayType=1
+						Title=''
+						Domain=''
+						$begin 'Graph2Ds'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 1:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+						$end 'Graph2Ds'
+						$begin 'PlotInfo'
+							PlotType='XYPlot'
+							Frozen=false
+							MarkDirty=false
+							Subtitle=''
+							Filename='Lowpass'
+							CircuitTitle='<Design>'
+							Title='Group Delay'
+							DateLabel='<14 Feb 2005>'
+							TimeLabel='<09:59:08>'
+							Name='Ansoft Corporation'
+							DefaultTitle=false
+							Arrows=false
+							ZoomMode=false
+							ZoomType=1
+							UserSelectedTrace=-1
+							Rho=0
+							RhoMin=0
+							MarkerType='NoMarker'
+							MarkerScale='Mag-Phase'
+							UserSelectedMarkerPoint=0
+							SymbolDisplay=false
+							SymbolInterval=15
+							$begin 'Axis'
+								$begin 'Axis0'
+									AxisType='XAxis'
+									AxisIndex=0
+									AxisScale='Linear'
+									AxisName='F'
+									AxisLabel='DEFAULT'
+									AxisMax=200000000
+									AxisMin=0
+									AxisMajorDivision=4
+									AxisMinorDivision=5
+									AxisManualRescale=false
+									AxisAutoUnits=true
+									AxisSide='Left'
+									$begin 'Units'
+										UnitFieldWidth=4
+										UnitPrecision=2
+										ScientificNotation=0
+										CircuitUnits='Mega'
+										BaseType='Frequency'
+									$end 'Units'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'Axis0'
+								$begin 'Axis1'
+									AxisType='YAxis'
+									AxisIndex=1
+									AxisScale='Linear'
+									AxisName='GD12(ckt=Lowpass)'
+									AxisLabel='DEFAULT'
+									AxisMax=8e-009
+									AxisMin=0
+									AxisMajorDivision=4
+									AxisMinorDivision=4
+									AxisManualRescale=false
+									AxisAutoUnits=true
+									AxisSide='Left'
+									$begin 'Units'
+										UnitFieldWidth=4
+										UnitPrecision=2
+										ScientificNotation=0
+										CircuitUnits='Nano'
+										BaseType='Time'
+									$end 'Units'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'Axis1'
+							$end 'Axis'
+							DisplayMinorGrid=true
+							InitialGrid=1
+							DisplayGridLabel=true
+							DisplayTraceLabel=false
+							$begin 'Trace'
+								$begin 'TraceInfo0'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=16711680
+										ColorOdd=0
+										LineWidth=30
+										LineStyle=0
+										FillStyle=600
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo0'
+							$end 'Trace'
+							$begin 'AllAttributes'
+								BackGroundColor=16777215
+								ContrastColor=16777215
+								$begin 'TitleAttr'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=32
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=168
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TitleAttr'
+								$begin 'MajorGridAttr'
+									$begin 'Attribute'
+										Color=8421504
+										ColorOdd=65535
+										LineWidth=8
+										LineStyle=0
+										FillStyle=32
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=110
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'MajorGridAttr'
+								$begin 'MinorGridAttr'
+									$begin 'Attribute'
+										Color=12632256
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=32
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=110
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'MinorGridAttr'
+							$end 'AllAttributes'
+						$end 'PlotInfo'
+					$end 'Report2D'
+					$begin 'Report2D'
+						name='S11 S12'
+						ReportType=0
+						DisplayType=1
+						Title=''
+						Domain=''
+						$begin 'Graph2Ds'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 2:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 2:Trace2D 2'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+						$end 'Graph2Ds'
+						$begin 'PlotInfo'
+							PlotType='XYPlot'
+							Frozen=false
+							MarkDirty=false
+							Subtitle=''
+							Filename='Lowpass'
+							CircuitTitle='<Design>'
+							Title='S11 S12'
+							DateLabel='<14 Feb 2005>'
+							TimeLabel='<09:59:09>'
+							Name='Ansoft Corporation'
+							DefaultTitle=false
+							Arrows=false
+							ZoomMode=false
+							ZoomType=1
+							UserSelectedTrace=-1
+							Rho=0
+							RhoMin=0
+							MarkerType='NoMarker'
+							MarkerScale='Mag-Phase'
+							UserSelectedMarkerPoint=0
+							SymbolDisplay=false
+							SymbolInterval=15
+							$begin 'Axis'
+								$begin 'Axis0'
+									AxisType='XAxis'
+									AxisIndex=0
+									AxisScale='Linear'
+									AxisName='F'
+									AxisLabel='DEFAULT'
+									AxisMax=200000000
+									AxisMin=0
+									AxisMajorDivision=4
+									AxisMinorDivision=5
+									AxisManualRescale=false
+									AxisAutoUnits=true
+									AxisSide='Left'
+									$begin 'Units'
+										UnitFieldWidth=4
+										UnitPrecision=2
+										ScientificNotation=0
+										CircuitUnits='Mega'
+										BaseType='Frequency'
+									$end 'Units'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'Axis0'
+								$begin 'Axis1'
+									AxisType='YAxis'
+									AxisIndex=1
+									AxisScale='Linear'
+									AxisName='Y 1 '
+									AxisLabel='DEFAULT'
+									AxisMax=0
+									AxisMin=-150
+									AxisMajorDivision=3
+									AxisMinorDivision=5
+									AxisManualRescale=false
+									AxisAutoUnits=true
+									AxisSide='Left'
+									$begin 'Units'
+										UnitFieldWidth=4
+										UnitPrecision=2
+										ScientificNotation=0
+										CircuitUnits='NoUnits'
+										BaseType='None'
+									$end 'Units'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'Axis1'
+							$end 'Axis'
+							DisplayMinorGrid=true
+							InitialGrid=1
+							DisplayGridLabel=true
+							DisplayTraceLabel=false
+							$begin 'Trace'
+								$begin 'TraceInfo0'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=16711680
+										ColorOdd=0
+										LineWidth=30
+										LineStyle=0
+										FillStyle=600
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo0'
+								$begin 'TraceInfo1'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=255
+										ColorOdd=0
+										LineWidth=30
+										LineStyle=0
+										FillStyle=600
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo1'
+							$end 'Trace'
+							$begin 'AllAttributes'
+								BackGroundColor=16777215
+								ContrastColor=16777215
+								$begin 'TitleAttr'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=32
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=168
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TitleAttr'
+								$begin 'MajorGridAttr'
+									$begin 'Attribute'
+										Color=8421504
+										ColorOdd=65535
+										LineWidth=8
+										LineStyle=0
+										FillStyle=32
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=110
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'MajorGridAttr'
+								$begin 'MinorGridAttr'
+									$begin 'Attribute'
+										Color=12632256
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=32
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=110
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'MinorGridAttr'
+							$end 'AllAttributes'
+						$end 'PlotInfo'
+					$end 'Report2D'
+					$begin 'Report2D'
+						name='XY Plot 1'
+						ReportType=0
+						DisplayType=1
+						Title=''
+						Domain=''
+						$begin 'Graph2Ds'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 3:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 4:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 5:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 6:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+						$end 'Graph2Ds'
+						$begin 'PlotInfo'
+							PlotType='XYPlot'
+							Frozen=false
+							MarkDirty=false
+							Subtitle=''
+							Filename='Lowpass'
+							CircuitTitle='<Design>'
+							Title='XY Plot 1'
+							DateLabel='<20 Mar 2012>'
+							TimeLabel='<19:45:26>'
+							Name='Ansoft Corporation'
+							DefaultTitle=false
+							Arrows=false
+							ZoomMode=false
+							ZoomType=1
+							UserSelectedTrace=-1
+							Rho=0
+							RhoMin=0
+							MarkerType='NoMarker'
+							MarkerScale='Mag-Phase'
+							UserSelectedMarkerPoint=0
+							SymbolDisplay=false
+							SymbolInterval=15
+							$begin 'Axis'
+								$begin 'Axis0'
+									AxisType='XAxis'
+									AxisIndex=0
+									AxisScale='Linear'
+									AxisName='F'
+									AxisLabel='DEFAULT'
+									AxisMax=200000000
+									AxisMin=0
+									AxisMajorDivision=4
+									AxisMinorDivision=5
+									AxisManualRescale=false
+									AxisAutoUnits=true
+									AxisSide='Left'
+									$begin 'Units'
+										UnitFieldWidth=4
+										UnitPrecision=2
+										ScientificNotation=0
+										CircuitUnits='Mega'
+										BaseType='Frequency'
+									$end 'Units'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'Axis0'
+								$begin 'Axis1'
+									AxisType='YAxis'
+									AxisIndex=1
+									AxisScale='Linear'
+									AxisName='Y 1 '
+									AxisLabel='DEFAULT'
+									AxisMax=20
+									AxisMin=-40
+									AxisMajorDivision=6
+									AxisMinorDivision=5
+									AxisManualRescale=false
+									AxisAutoUnits=true
+									AxisSide='Left'
+									$begin 'Units'
+										UnitFieldWidth=4
+										UnitPrecision=2
+										ScientificNotation=0
+										CircuitUnits='NoUnits'
+										BaseType='None'
+									$end 'Units'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'Axis1'
+							$end 'Axis'
+							DisplayMinorGrid=true
+							InitialGrid=1
+							DisplayGridLabel=true
+							DisplayTraceLabel=false
+							$begin 'Trace'
+								$begin 'TraceInfo0'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=16711680
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo0'
+								$begin 'TraceInfo1'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=255
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo1'
+								$begin 'TraceInfo2'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=2129936
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo2'
+								$begin 'TraceInfo3'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=8388863
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo3'
+							$end 'Trace'
+							$begin 'AllAttributes'
+								BackGroundColor=16777215
+								ContrastColor=16777215
+								$begin 'TitleAttr'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=168
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TitleAttr'
+								$begin 'MajorGridAttr'
+									$begin 'Attribute'
+										Color=8421504
+										ColorOdd=65535
+										LineWidth=8
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=100
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'MajorGridAttr'
+								$begin 'MinorGridAttr'
+									$begin 'Attribute'
+										Color=12632256
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=100
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'MinorGridAttr'
+							$end 'AllAttributes'
+						$end 'PlotInfo'
+					$end 'Report2D'
+					$begin 'Report2D'
+						name='XY Plot 2'
+						ReportType=0
+						DisplayType=1
+						Title=''
+						Domain=''
+						$begin 'Graph2Ds'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 7:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+						$end 'Graph2Ds'
+						$begin 'PlotInfo'
+							PlotType='XYPlot'
+							Frozen=false
+							MarkDirty=false
+							Subtitle=''
+							Filename='Lowpass'
+							CircuitTitle='<Design>'
+							Title='XY Plot 2'
+							DateLabel='<20 Mar 2012>'
+							TimeLabel='<19:47:39>'
+							Name='Ansoft Corporation'
+							DefaultTitle=false
+							Arrows=false
+							ZoomMode=false
+							ZoomType=1
+							UserSelectedTrace=-1
+							Rho=0
+							RhoMin=0
+							MarkerType='NoMarker'
+							MarkerScale='Mag-Phase'
+							UserSelectedMarkerPoint=0
+							SymbolDisplay=false
+							SymbolInterval=15
+							$begin 'Axis'
+								$begin 'Axis0'
+									AxisType='XAxis'
+									AxisIndex=0
+									AxisScale='Linear'
+									AxisName='F'
+									AxisLabel='DEFAULT'
+									AxisMax=200000000
+									AxisMin=0
+									AxisMajorDivision=4
+									AxisMinorDivision=5
+									AxisManualRescale=false
+									AxisAutoUnits=true
+									AxisSide='Left'
+									$begin 'Units'
+										UnitFieldWidth=4
+										UnitPrecision=2
+										ScientificNotation=0
+										CircuitUnits='Mega'
+										BaseType='Frequency'
+									$end 'Units'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'Axis0'
+								$begin 'Axis1'
+									AxisType='YAxis'
+									AxisIndex=1
+									AxisScale='Linear'
+									AxisName='dB(MSG)'
+									AxisLabel='DEFAULT'
+									AxisMax=1
+									AxisMin=-1
+									AxisMajorDivision=4
+									AxisMinorDivision=5
+									AxisManualRescale=false
+									AxisAutoUnits=true
+									AxisSide='Left'
+									$begin 'Units'
+										UnitFieldWidth=4
+										UnitPrecision=2
+										ScientificNotation=0
+										CircuitUnits='NoUnits'
+										BaseType='None'
+									$end 'Units'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'Axis1'
+							$end 'Axis'
+							DisplayMinorGrid=true
+							InitialGrid=1
+							DisplayGridLabel=true
+							DisplayTraceLabel=false
+							$begin 'Trace'
+								$begin 'TraceInfo0'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=16711680
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo0'
+							$end 'Trace'
+							$begin 'AllAttributes'
+								BackGroundColor=16777215
+								ContrastColor=16777215
+								$begin 'TitleAttr'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=168
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TitleAttr'
+								$begin 'MajorGridAttr'
+									$begin 'Attribute'
+										Color=8421504
+										ColorOdd=65535
+										LineWidth=8
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=100
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'MajorGridAttr'
+								$begin 'MinorGridAttr'
+									$begin 'Attribute'
+										Color=12632256
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=100
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'MinorGridAttr'
+							$end 'AllAttributes'
+						$end 'PlotInfo'
+					$end 'Report2D'
+					$begin 'Report2D'
+						name='XY Plot 3'
+						ReportType=0
+						DisplayType=1
+						Title=''
+						Domain=''
+						$begin 'Graph2Ds'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 8:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 9:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 10:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 11:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 12:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 13:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 14:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 15:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 16:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 17:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+						$end 'Graph2Ds'
+						$begin 'PlotInfo'
+							PlotType='XYPlot'
+							Frozen=false
+							MarkDirty=false
+							Subtitle=''
+							Filename='Lowpass'
+							CircuitTitle='<Design>'
+							Title='XY Plot 3'
+							DateLabel='<20 Mar 2012>'
+							TimeLabel='<19:50:51>'
+							Name='Ansoft Corporation'
+							DefaultTitle=false
+							Arrows=false
+							ZoomMode=false
+							ZoomType=1
+							UserSelectedTrace=-1
+							Rho=0
+							RhoMin=0
+							MarkerType='NoMarker'
+							MarkerScale='Mag-Phase'
+							UserSelectedMarkerPoint=0
+							SymbolDisplay=false
+							SymbolInterval=15
+							$begin 'Axis'
+								$begin 'Axis0'
+									AxisType='XAxis'
+									AxisIndex=0
+									AxisScale='Linear'
+									AxisName='F'
+									AxisLabel='DEFAULT'
+									AxisMax=200000000
+									AxisMin=0
+									AxisMajorDivision=4
+									AxisMinorDivision=5
+									AxisManualRescale=false
+									AxisAutoUnits=true
+									AxisSide='Left'
+									$begin 'Units'
+										UnitFieldWidth=4
+										UnitPrecision=2
+										ScientificNotation=0
+										CircuitUnits='Mega'
+										BaseType='Frequency'
+									$end 'Units'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'Axis0'
+								$begin 'Axis1'
+									AxisType='YAxis'
+									AxisIndex=1
+									AxisScale='Linear'
+									AxisName='Y 1 '
+									AxisLabel='DEFAULT'
+									AxisMax=25
+									AxisMin=-100
+									AxisMajorDivision=5
+									AxisMinorDivision=5
+									AxisManualRescale=false
+									AxisAutoUnits=true
+									AxisSide='Left'
+									$begin 'Units'
+										UnitFieldWidth=4
+										UnitPrecision=2
+										ScientificNotation=0
+										CircuitUnits='NoUnits'
+										BaseType='None'
+									$end 'Units'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'Axis1'
+							$end 'Axis'
+							DisplayMinorGrid=true
+							InitialGrid=1
+							DisplayGridLabel=true
+							DisplayTraceLabel=false
+							$begin 'Trace'
+								$begin 'TraceInfo0'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=16711680
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo0'
+								$begin 'TraceInfo1'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=255
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo1'
+								$begin 'TraceInfo2'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=2129936
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo2'
+								$begin 'TraceInfo3'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=8388863
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo3'
+								$begin 'TraceInfo4'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo4'
+								$begin 'TraceInfo5'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=65280
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo5'
+								$begin 'TraceInfo6'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=16776960
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo6'
+								$begin 'TraceInfo7'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=12130560
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo7'
+								$begin 'TraceInfo8'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=16711680
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo8'
+								$begin 'TraceInfo9'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=255
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo9'
+							$end 'Trace'
+							$begin 'AllAttributes'
+								BackGroundColor=16777215
+								ContrastColor=16777215
+								$begin 'TitleAttr'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=168
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TitleAttr'
+								$begin 'MajorGridAttr'
+									$begin 'Attribute'
+										Color=8421504
+										ColorOdd=65535
+										LineWidth=8
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=100
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'MajorGridAttr'
+								$begin 'MinorGridAttr'
+									$begin 'Attribute'
+										Color=12632256
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=100
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'MinorGridAttr'
+							$end 'AllAttributes'
+						$end 'PlotInfo'
+					$end 'Report2D'
+					$begin 'Report2D'
+						name='XY Plot 4'
+						ReportType=0
+						DisplayType=1
+						Title=''
+						Domain=''
+						$begin 'Graph2Ds'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 18:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 19:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 20:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 21:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 22:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 23:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 24:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 25:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 26:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+						$end 'Graph2Ds'
+						$begin 'PlotInfo'
+							PlotType='XYPlot'
+							Frozen=false
+							MarkDirty=false
+							Subtitle=''
+							Filename='Lowpass'
+							CircuitTitle='<Design>'
+							Title='XY Plot 4'
+							DateLabel='<20 Mar 2012>'
+							TimeLabel='<19:51:57>'
+							Name='Ansoft Corporation'
+							DefaultTitle=false
+							Arrows=false
+							ZoomMode=false
+							ZoomType=1
+							UserSelectedTrace=-1
+							Rho=0
+							RhoMin=0
+							MarkerType='NoMarker'
+							MarkerScale='Mag-Phase'
+							UserSelectedMarkerPoint=0
+							SymbolDisplay=false
+							SymbolInterval=15
+							$begin 'Axis'
+								$begin 'Axis0'
+									AxisType='XAxis'
+									AxisIndex=0
+									AxisScale='Linear'
+									AxisName='F'
+									AxisLabel='DEFAULT'
+									AxisMax=200000000
+									AxisMin=0
+									AxisMajorDivision=4
+									AxisMinorDivision=5
+									AxisManualRescale=false
+									AxisAutoUnits=true
+									AxisSide='Left'
+									$begin 'Units'
+										UnitFieldWidth=4
+										UnitPrecision=2
+										ScientificNotation=0
+										CircuitUnits='Mega'
+										BaseType='Frequency'
+									$end 'Units'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'Axis0'
+								$begin 'Axis1'
+									AxisType='YAxis'
+									AxisIndex=1
+									AxisScale='Linear'
+									AxisName='Y 1 '
+									AxisLabel='DEFAULT'
+									AxisMax=50
+									AxisMin=-150
+									AxisMajorDivision=4
+									AxisMinorDivision=5
+									AxisManualRescale=false
+									AxisAutoUnits=true
+									AxisSide='Left'
+									$begin 'Units'
+										UnitFieldWidth=4
+										UnitPrecision=2
+										ScientificNotation=0
+										CircuitUnits='NoUnits'
+										BaseType='None'
+									$end 'Units'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'Axis1'
+							$end 'Axis'
+							DisplayMinorGrid=true
+							InitialGrid=1
+							DisplayGridLabel=true
+							DisplayTraceLabel=false
+							$begin 'Trace'
+								$begin 'TraceInfo0'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=16711680
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo0'
+								$begin 'TraceInfo1'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=255
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo1'
+								$begin 'TraceInfo2'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=2129936
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo2'
+								$begin 'TraceInfo3'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=8388863
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo3'
+								$begin 'TraceInfo4'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo4'
+								$begin 'TraceInfo5'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=65280
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo5'
+								$begin 'TraceInfo6'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=16776960
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo6'
+								$begin 'TraceInfo7'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=12130560
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo7'
+								$begin 'TraceInfo8'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=16711680
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo8'
+							$end 'Trace'
+							$begin 'AllAttributes'
+								BackGroundColor=16777215
+								ContrastColor=16777215
+								$begin 'TitleAttr'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=168
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TitleAttr'
+								$begin 'MajorGridAttr'
+									$begin 'Attribute'
+										Color=8421504
+										ColorOdd=65535
+										LineWidth=8
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=100
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'MajorGridAttr'
+								$begin 'MinorGridAttr'
+									$begin 'Attribute'
+										Color=12632256
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=100
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'MinorGridAttr'
+							$end 'AllAttributes'
+						$end 'PlotInfo'
+					$end 'Report2D'
+					$begin 'Report2D'
+						name='XY Plot 5'
+						ReportType=0
+						DisplayType=1
+						Title=''
+						Domain=''
+						$begin 'Graph2Ds'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 27:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 28:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 29:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 30:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+						$end 'Graph2Ds'
+						$begin 'PlotInfo'
+							PlotType='XYPlot'
+							Frozen=false
+							MarkDirty=false
+							Subtitle=''
+							Filename='Lowpass'
+							CircuitTitle='<Design>'
+							Title='XY Plot 5'
+							DateLabel='<20 Mar 2012>'
+							TimeLabel='<20:04:25>'
+							Name='Ansoft Corporation'
+							DefaultTitle=false
+							Arrows=false
+							ZoomMode=false
+							ZoomType=1
+							UserSelectedTrace=-1
+							Rho=0
+							RhoMin=0
+							MarkerType='NoMarker'
+							MarkerScale='Mag-Phase'
+							UserSelectedMarkerPoint=0
+							SymbolDisplay=false
+							SymbolInterval=15
+							$begin 'Axis'
+								$begin 'Axis0'
+									AxisType='XAxis'
+									AxisIndex=0
+									AxisScale='Linear'
+									AxisName='F'
+									AxisLabel='DEFAULT'
+									AxisMax=200000000
+									AxisMin=50000000
+									AxisMajorDivision=4
+									AxisMinorDivision=5
+									AxisManualRescale=true
+									AxisAutoUnits=true
+									AxisSide='Right'
+									$begin 'Units'
+										UnitFieldWidth=4
+										UnitPrecision=2
+										ScientificNotation=0
+										CircuitUnits='Mega'
+										BaseType='Frequency'
+									$end 'Units'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=400
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'Axis0'
+								$begin 'Axis1'
+									AxisType='YAxis'
+									AxisIndex=1
+									AxisScale='Linear'
+									AxisName='Y 1 '
+									AxisLabel='DEFAULT'
+									AxisMax=25
+									AxisMin=-50
+									AxisMajorDivision=6
+									AxisMinorDivision=5
+									AxisManualRescale=true
+									AxisAutoUnits=true
+									AxisSide='Left'
+									$begin 'Units'
+										UnitFieldWidth=4
+										UnitPrecision=2
+										ScientificNotation=0
+										CircuitUnits='NoUnits'
+										BaseType='None'
+									$end 'Units'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=400
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'Axis1'
+							$end 'Axis'
+							DisplayMinorGrid=true
+							InitialGrid=1
+							DisplayGridLabel=true
+							DisplayTraceLabel=false
+							$begin 'Trace'
+								$begin 'TraceInfo0'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=16711680
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo0'
+								$begin 'TraceInfo1'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=255
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo1'
+								$begin 'TraceInfo2'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=2129936
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo2'
+								$begin 'TraceInfo3'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=8388863
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo3'
+							$end 'Trace'
+							$begin 'AllAttributes'
+								BackGroundColor=16777215
+								ContrastColor=16777215
+								$begin 'TitleAttr'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=168
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TitleAttr'
+								$begin 'MajorGridAttr'
+									$begin 'Attribute'
+										Color=8421504
+										ColorOdd=65535
+										LineWidth=8
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=100
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'MajorGridAttr'
+								$begin 'MinorGridAttr'
+									$begin 'Attribute'
+										Color=12632256
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=100
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'MinorGridAttr'
+							$end 'AllAttributes'
+						$end 'PlotInfo'
+					$end 'Report2D'
+					$begin 'Report2D'
+						name='S-Parameters 1'
+						ReportType=0
+						DisplayType=5
+						Title='test title'
+						Domain=''
+						$begin 'Graph2Ds'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 31:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+						$end 'Graph2Ds'
+					$end 'Report2D'
+					$begin 'Report2D'
+						name='XY Plot 6'
+						ReportType=0
+						DisplayType=1
+						Title=''
+						Domain=''
+						$begin 'Graph2Ds'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 32:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+						$end 'Graph2Ds'
+						$begin 'PlotInfo'
+							PlotType='XYPlot'
+							Frozen=false
+							MarkDirty=false
+							Subtitle=''
+							Filename='Lowpass'
+							CircuitTitle='<Design>'
+							Title='XY Plot 6'
+							DateLabel='<20 Mar 2012>'
+							TimeLabel='<20:05:14>'
+							Name='Ansoft Corporation'
+							DefaultTitle=false
+							Arrows=false
+							ZoomMode=false
+							ZoomType=1
+							UserSelectedTrace=-1
+							Rho=0
+							RhoMin=0
+							MarkerType='NoMarker'
+							MarkerScale='Mag-Phase'
+							UserSelectedMarkerPoint=0
+							SymbolDisplay=false
+							SymbolInterval=15
+							$begin 'Axis'
+								$begin 'Axis0'
+									AxisType='XAxis'
+									AxisIndex=0
+									AxisScale='Linear'
+									AxisName='F'
+									AxisLabel='DEFAULT'
+									AxisMax=200000000
+									AxisMin=0
+									AxisMajorDivision=4
+									AxisMinorDivision=5
+									AxisManualRescale=false
+									AxisAutoUnits=true
+									AxisSide='Left'
+									$begin 'Units'
+										UnitFieldWidth=4
+										UnitPrecision=2
+										ScientificNotation=0
+										CircuitUnits='Mega'
+										BaseType='Frequency'
+									$end 'Units'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'Axis0'
+								$begin 'Axis1'
+									AxisType='YAxis'
+									AxisIndex=1
+									AxisScale='Linear'
+									AxisName='dB(GA)'
+									AxisLabel='DEFAULT'
+									AxisMax=1
+									AxisMin=0
+									AxisMajorDivision=5
+									AxisMinorDivision=4
+									AxisManualRescale=false
+									AxisAutoUnits=true
+									AxisSide='Left'
+									$begin 'Units'
+										UnitFieldWidth=4
+										UnitPrecision=2
+										ScientificNotation=0
+										CircuitUnits='NoUnits'
+										BaseType='None'
+									$end 'Units'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'Axis1'
+							$end 'Axis'
+							DisplayMinorGrid=true
+							InitialGrid=1
+							DisplayGridLabel=true
+							DisplayTraceLabel=false
+							$begin 'Trace'
+								$begin 'TraceInfo0'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=16711680
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo0'
+							$end 'Trace'
+							$begin 'AllAttributes'
+								BackGroundColor=16777215
+								ContrastColor=16777215
+								$begin 'TitleAttr'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=168
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TitleAttr'
+								$begin 'MajorGridAttr'
+									$begin 'Attribute'
+										Color=8421504
+										ColorOdd=65535
+										LineWidth=8
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=100
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'MajorGridAttr'
+								$begin 'MinorGridAttr'
+									$begin 'Attribute'
+										Color=12632256
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=100
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'MinorGridAttr'
+							$end 'AllAttributes'
+						$end 'PlotInfo'
+					$end 'Report2D'
+					$begin 'Report2D'
+						name='XY Plot 7'
+						ReportType=0
+						DisplayType=1
+						Title=''
+						Domain=''
+						$begin 'Graph2Ds'
+							$begin 'Graph2D'
+								TraceName='NWA1_18:SolutionPointSet 33:Trace2D 1'
+								Type='Continuous'
+								Axis='Y1'
+							$end 'Graph2D'
+						$end 'Graph2Ds'
+						$begin 'PlotInfo'
+							PlotType='XYPlot'
+							Frozen=false
+							MarkDirty=false
+							Subtitle=''
+							Filename='Lowpass'
+							CircuitTitle='<Design>'
+							Title='XY Plot 7'
+							DateLabel='<20 Mar 2012>'
+							TimeLabel='<20:09:24>'
+							Name='Ansoft Corporation'
+							DefaultTitle=false
+							Arrows=false
+							ZoomMode=false
+							ZoomType=1
+							UserSelectedTrace=-1
+							Rho=0
+							RhoMin=0
+							MarkerType='NoMarker'
+							MarkerScale='Mag-Phase'
+							UserSelectedMarkerPoint=0
+							SymbolDisplay=false
+							SymbolInterval=15
+							$begin 'Axis'
+								$begin 'Axis0'
+									AxisType='XAxis'
+									AxisIndex=0
+									AxisScale='Linear'
+									AxisName='F'
+									AxisLabel='DEFAULT'
+									AxisMax=200000000
+									AxisMin=0
+									AxisMajorDivision=4
+									AxisMinorDivision=5
+									AxisManualRescale=false
+									AxisAutoUnits=true
+									AxisSide='Left'
+									$begin 'Units'
+										UnitFieldWidth=4
+										UnitPrecision=2
+										ScientificNotation=0
+										CircuitUnits='Mega'
+										BaseType='Frequency'
+									$end 'Units'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'Axis0'
+								$begin 'Axis1'
+									AxisType='YAxis'
+									AxisIndex=1
+									AxisScale='Linear'
+									AxisName='dB(VGIO)'
+									AxisLabel='DEFAULT'
+									AxisMax=25
+									AxisMin=-125
+									AxisMajorDivision=6
+									AxisMinorDivision=5
+									AxisManualRescale=false
+									AxisAutoUnits=true
+									AxisSide='Left'
+									$begin 'Units'
+										UnitFieldWidth=4
+										UnitPrecision=2
+										ScientificNotation=0
+										CircuitUnits='NoUnits'
+										BaseType='None'
+									$end 'Units'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'Axis1'
+							$end 'Axis'
+							DisplayMinorGrid=true
+							InitialGrid=1
+							DisplayGridLabel=true
+							DisplayTraceLabel=false
+							$begin 'Trace'
+								$begin 'TraceInfo0'
+									TraceType='Continuous'
+									$begin 'Attribute'
+										Color=16711680
+										ColorOdd=0
+										LineWidth=10
+										LineStyle=0
+										FillStyle=600
+										Visible=false
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=160
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TraceInfo0'
+							$end 'Trace'
+							$begin 'AllAttributes'
+								BackGroundColor=16777215
+								ContrastColor=16777215
+								$begin 'TitleAttr'
+									$begin 'Attribute'
+										Color=0
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=168
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'TitleAttr'
+								$begin 'MajorGridAttr'
+									$begin 'Attribute'
+										Color=8421504
+										ColorOdd=65535
+										LineWidth=8
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=100
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'MajorGridAttr'
+								$begin 'MinorGridAttr'
+									$begin 'Attribute'
+										Color=12632256
+										ColorOdd=65535
+										LineWidth=1
+										LineStyle=0
+										FillStyle=0
+										Visible=true
+										$begin 'Font'
+											FaceName='Arial'
+											FontHeight=100
+											FontWeight=700
+											FontOrientation=0
+											FontEscapement=0
+											FontItalics=false
+											FontUnderline=false
+											FontStrikeOut=false
+										$end 'Font'
+									$end 'Attribute'
+								$end 'MinorGridAttr'
+							$end 'AllAttributes'
+						$end 'PlotInfo'
+					$end 'Report2D'
+				$end 'Reports'
+				$begin 'DCDisplayOption'
+					UseDefault=true
+					Current(true, 16711807, 3)
+					Voltage(true, 128, 3)
+					Font('Arial', 'Regular', 8)
+				$end 'DCDisplayOption'
+			$end 'HFCircuit'
+			$begin 'TopLayout'
+				DefaultUnits='mm'
+				DefaultAngleUnits='deg'
+				majorSize='10mil'
+				minorSize='1mil'
+				angleSnap='5deg'
+				PixelSnapTolerance=20
+				SnapTargetVertex_on=true
+				SnapTargetEdgeCenter_on=true
+				SnapTargetObjCenter_on=false
+				SnapTargetEdge_on=false
+				SnapTargetElecConnection_on=false
+				SnapTargetIntersection_on=false
+				SnapTargetGrid_on=true
+				SnapSourceVertex_on=true
+				SnapSourceEdgeCenter_on=true
+				SnapSourceObjCenter_on=false
+				SnapSourceEdge_on=false
+				SnapSourceElecConnection_on=false
+				$begin 'TextStyles'
+					TextStyle(N='<DefaultAnnotation>', F='Arial', Hght=12, Scale=false)
+					TextStyle(N='<DefaultAnnotationScaling>', F='Arial', Hght=12, Scale=false)
+					TextStyle(N='<DefaultMeasure>', Plot=true, F='RomanSimplex', Hght=10, Scale=false)
+					TextStyle(N='<DefaultPlotter>', Plot=true, F='RomanSimplex', Hght=50, HghtUnt='mil')
+					TextStyle(N='Small', F='Arial', Hght=12, Scale=false)
+					TextStyle(N='Large', F='Arial', Hght=12, Scale=false)
+					TextStyle(N='Notes', F='Arial', Hght=12, Scale=false)
+				$end 'TextStyles'
+				$begin 'TraceStyles'
+					TraceStyle(name='2mil', size='2mil', bendStyle=0, capStyle=0)
+					TraceStyle(name='5mil', size='5mil', bendStyle=1, capStyle=0)
+					TraceStyle(name='10mil', size='10mil', bendStyle=1, capStyle=1)
+					TraceStyle(name='20mil', size='20mil', bendStyle=2, capStyle=2)
+				$end 'TraceStyles'
+				'current via style'=''
+				'current pin style'=''
+				defaultholesize='25mil'
+				fillMode=false
+				drawMode=true
+				reversed=false
+				useFixedDrawingResolution=false
+				DrawingResolution='0mm'
+				snapToPort=true
+				showGrid=true
+				'show connection points'=true
+				'display vertex labels'=false
+				'preview selection'=false
+				'rectangle description'=1
+				majorColor=16772075
+				minorColor=16774645
+				currentTextStyle=0
+				currentTraceStyle=0
+				'background color'=16777215
+				'primary selection color'=255
+				'secondary selection color'=63
+				'sym footprint scaling'=0.0254
+				prevBounds(-1000, -1000, 1000, 1000)
+				prevMapFactor(1000, 1000)
+				prevOrigin(0, 0)
+				prevViewExtent(0, 0)
+				prevZoomScale=1
+				pageExtent(-0.1, -0.1, 0.1, 0.1)
+				$begin 'GerberPageSetup'
+				$end 'GerberPageSetup'
+			$end 'TopLayout'
+		$end 'Instance'
+	$end 'DataInstances'
+$end 'AnsoftProject'
