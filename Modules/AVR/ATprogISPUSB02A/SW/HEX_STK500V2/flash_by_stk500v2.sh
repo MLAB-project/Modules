@@ -1,4 +1,4 @@
-# Linux Shell Script
+#!/bin/bash
 # ATprogISPUSB02A fash script
 # Uses STK500v2 Programmer
 #echo "WARNING: Enables external clock. Make sure a crystal is connected to the ATmega8535! \
