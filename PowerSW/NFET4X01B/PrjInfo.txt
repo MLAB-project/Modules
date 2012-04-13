@@ -1,13 +1,17 @@
-﻿[InfoShortDescription.en]
-Simple IR reflexive sensor.
+﻿//
+// This is a project description file.
+//
 
+[InfoShortDescription.en]
+4NFET Power Driver
+  
 [InfoShortDescription.cs]
-Jednoduche reflexivni cidlo.
+4NFET výkonový budič
 
 [InfoLongDescription.en]
-
+There are 4 NFETs switching to GND. Parameters depending on type of soldered FETs. Inductive load is allowed.
 
 [InfoLongDescription.cs]
-Čidlo obsahuje pouze reflexní optron s odporovým trimrem a slouží k rozlišování tmavého a světlého povrchu. Dá se použít jak pro detekci čáry pro čárového robota tak i pro snímání otáčení pohonných kol.
+Modul slouží jako čtyřnásobný výkonový budič se spínáním do GND. Parametry závisí na typu osazených FET tranzistorů, předpokládá se pouzdro D-PAK. Spínaná zátěž může mít indukční charakter.
 
 [End]
