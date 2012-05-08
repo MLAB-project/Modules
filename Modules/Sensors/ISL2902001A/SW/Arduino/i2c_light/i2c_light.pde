@@ -17,7 +17,7 @@
 void setup()
 {
   Wire.begin(); // join i2c bus (address optional for master)
-  // I2C pins PD4, PD5
+  // I2C pins PC4 - , PC5 - 
   //
   pinMode(3, OUTPUT);  // LED pro blikani, aby bylo videt, ze to neco dela
   pinMode(5, OUTPUT);  // LED pro blikani, aby bylo videt, ze to neco dela
