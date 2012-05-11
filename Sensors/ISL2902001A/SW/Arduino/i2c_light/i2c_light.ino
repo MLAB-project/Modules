@@ -60,20 +60,20 @@ int command;
 
   // Setup device
   Wire.beginTransmission(address); 
-  Wire.send(0x00);            // sends address
-  Wire.send(command);      // setup (eye light sensing; one time measurement; measurement range 1)
+  Wire.write(0x00);            // sends address
+  Wire.write(command);      // setup (eye light sensing; one time measurement; measurement range 1)
   Wire.endTransmission();     // stop transmitting
   
   
    //  Connect to device and set register address
   Wire.beginTransmission(address); 
-  Wire.send(0x00);            // sends address (command register)
+  Wire.write(0x00);            // sends address (command register)
   Wire.endTransmission();     // stop transmitting
   
   //  verify written command byte
   Wire.beginTransmission(address);  
   Wire.requestFrom(address, 1);
-  if (command != Wire.receive())
+  if (command != Wire.read())
   { 
     return 4;  
     Serial.print(data, BIN);
@@ -88,24 +88,24 @@ int ret=0;
 
    //  Connect to device and set register address
    Wire.beginTransmission(address); 
-   Wire.send(0x01);            // sends address of LSB reagister 
+   Wire.write(0x01);            // sends address of LSB reagister 
    Wire.endTransmission();     // stop transmitting
    
    //  Connect to device and request one byte
    Wire.beginTransmission(address);
    Wire.requestFrom(address, 1);
-   ret = Wire.receive();
+   ret = Wire.read();
    Wire.endTransmission();     // stop transmitting
    
    //  Connect to device and set register address
    Wire.beginTransmission(address);
-   Wire.send(0x02);            // sends address of MSB register
+   Wire.write(0x02);            // sends address of MSB register
    Wire.endTransmission();     // stop transmitting
    
    //  Connect to device and request one byte
    Wire.beginTransmission(address);
    Wire.requestFrom(address, 1);
-   ret +=256 * Wire.receive();
+   ret +=256 * Wire.read();
    Wire.endTransmission();     // stop transmitting
 
    return (1000.0/pow(2.0,16)*ret);
