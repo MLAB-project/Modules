@@ -20,7 +20,6 @@ void setup()
   // I2C pins PC4 - , PC5 - 
   //
   pinMode(3, OUTPUT);  // LED pro blikani, aby bylo videt, ze to neco dela
-  pinMode(5, OUTPUT);  // LED pro blikani, aby bylo videt, ze to neco dela
   Serial.begin(9600);  // Zmerena intenzita osvetleni se bude vypisovat na seriovou linku
 }
 
@@ -29,9 +28,9 @@ int light_sensor_setup;
 
 void led_blink()
 {
-   digitalWrite(3, HIGH);   // set the LED on
+   digitalWrite(3, HIGH);   // set the LED off
    delay(500);
-   digitalWrite(3, LOW);    // set the LED off
+   digitalWrite(3, LOW);    // set the LED on
    delay(500);
 }
 
@@ -44,30 +43,30 @@ int command;
   {
     case SENSE_VIS:
     {
-       command=0b11000000;      // setup (eye light sensing; one time measurement; measurement range 1)
+       command=0b11000001;      // setup (eye light sensing; measurement range 2)
        break;
     }
 
     case SENSE_IR:
     {
-       command=0b11100000;      // setup (eye light sensing; measurement range 2 [4000 lx])
+       command=0b11100001;      // setup (eye light sensing; measurement range 2 [4000 lx])
        break;
     }
    
     default:
-     return 3;   
+       return 3;   
   }
 
   // Setup device
   Wire.beginTransmission(address); 
-  Wire.write(0x00);            // sends address
-  Wire.write(command);      // setup (eye light sensing; one time measurement; measurement range 1)
+  Wire.write(byte(0x00));            // sends address
+  Wire.write(byte(command));      // setup (eye light sensing; one time measurement; measurement range 1)
   Wire.endTransmission();     // stop transmitting
   
   
    //  Connect to device and set register address
   Wire.beginTransmission(address); 
-  Wire.write(0x00);            // sends address (command register)
+  Wire.write(byte(0x00));            // sends address (command register)
   Wire.endTransmission();     // stop transmitting
   
   //  verify written command byte
@@ -84,11 +83,11 @@ int command;
 
 float get_light_measurement()
 {
-int ret=0;
+   unsigned int ret=0;
 
    //  Connect to device and set register address
    Wire.beginTransmission(address); 
-   Wire.write(0x01);            // sends address of LSB reagister 
+   Wire.write(byte(0x01));            // sends address of LSB reagister 
    Wire.endTransmission();     // stop transmitting
    
    //  Connect to device and request one byte
@@ -99,7 +98,7 @@ int ret=0;
    
    //  Connect to device and set register address
    Wire.beginTransmission(address);
-   Wire.write(0x02);            // sends address of MSB register
+   Wire.write(byte(0x02));            // sends address of MSB register
    Wire.endTransmission();     // stop transmitting
    
    //  Connect to device and request one byte
@@ -108,7 +107,7 @@ int ret=0;
    ret +=256 * Wire.read();
    Wire.endTransmission();     // stop transmitting
 
-   return (1000.0/pow(2.0,16)*ret);
+   return (4000.0/pow(2.0,16)*ret);
 }
 
 void loop()
@@ -117,12 +116,13 @@ int lux=0;
 
    set_light_sensor(SENSE_VIS);  //setup sensor for visible measuring
    led_blink();    // Delay for measurement
-   Serial.print("lux=");
-   Serial.println(get_light_measurement(),2);
+   Serial.print("luxVIS\t");
+   Serial.print(get_light_measurement(),1);
+   Serial.print("\t");
 
    set_light_sensor(SENSE_IR);  // setup sensor for infrared measuring
    led_blink(); // Delay for measurement
-   Serial.print("luxIR="); 
-   Serial.println(get_light_measurement(), 2); // data print
+   Serial.print("luxIR\t"); 
+   Serial.println(get_light_measurement(),1); // data print
 }
 
