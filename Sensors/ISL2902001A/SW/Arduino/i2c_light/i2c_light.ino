@@ -21,6 +21,7 @@ void setup()
   //
   pinMode(3, OUTPUT);  // LED pro blikani, aby bylo videt, ze to neco dela
   Serial.begin(9600);  // Zmerena intenzita osvetleni se bude vypisovat na seriovou linku
+  Serial.println("LABduino luxmeter demo - (c) MLAB, kakl 2012");
 }
 
 int data = 0;
@@ -29,9 +30,9 @@ int light_sensor_setup;
 void led_blink()
 {
    digitalWrite(3, HIGH);   // set the LED off
-   delay(500);
+   delay(100);
    digitalWrite(3, LOW);    // set the LED on
-   delay(500);
+   delay(700);
 }
 
 
