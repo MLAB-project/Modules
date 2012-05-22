@@ -1,0 +1,30 @@
+[PROJECT]
+Target=D:\svnKaklik\programy\C\PIC\test\PIC16F887\blik.hex
+Development_Mode=
+Processor_Text=PIC16F887
+ToolSuite=CCS
+Processor=0x887F
+[D:\svnKaklik\programy\C\PIC\test\PIC16F887\blik]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=D:\svnKaklik\programy\C\PIC\test\PIC16F887\blik.c
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=blik.c
+2=blik.h
+3=C:\Program Files\PICC\devices\16F887.h
+4=..\..\..\..\..\..\MLAB\Modules\TDC\GP201A\SW\PICinterface\main.c
+5=..\..\..\..\..\..\MLAB\Modules\TDC\GP201A\SW\PICinterface\main.h
+6=
+[Target Data]
+OptionString=-p +FM
+FileList=D:\svnKaklik\programy\C\PIC\test\PIC16F887\blik.c
+[Units]
+Count=1
+1=blik (main)
