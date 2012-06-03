@@ -11,6 +11,40 @@
   (Folder "Outputs")
   (Folder "Referenced Projects")
   (PartMRUSelector
+    (R0805
+      (FullPartName "R0805.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (JUMP2X1_CON
+      (FullPartName "JUMP2X1_CON.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (VDD
+      (LibraryName "C:\LIBRARY\ORCAD16X\SYMBOLS.OLB")
+      (DeviceIndex "0"))
+    (C0805
+      (FullPartName "C0805.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (C-ELYTB
+      (FullPartName "C-ELYTB.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (1N4007
+      (FullPartName "1N4007.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_D.OLB")
+      (DeviceIndex "0"))
+    (JUMP2X3_CON
+      (FullPartName "JUMP2X3_CON.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (HOLE_M3
+      (FullPartName "HOLE_M3.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\PAD.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName "C:\LIBRARY\ORCAD16X\SYMBOLS.OLB")
+      (DeviceIndex "0"))
     (SSO28_210
       (FullPartName "SSO28_210.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\DECALES.OLB")
@@ -21,20 +55,24 @@
   (LastUsedLibraryBrowseDirectory "C:\library\ORCAD16X")
   (GlobalState
     (FileView
-      (Path "Design Resources"))
+      (Path "Design Resources")
+      (Path "Design Resources" ".\ldd.dsn")
+      (Path "Design Resources" ".\ldd.dsn" "SCHEMATIC1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -4 -30 0 200 0 548"))
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 548"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -4 -30 22 1016 29 611")
-        (Scroll "-43 0")
-        (Zoom "111")
+        (Placement "44 0 1 -1 -1 -8 -30 213 1335 126 606")
+        (Scroll "264 185")
+        (Zoom "162")
         (Occurrence "/"))
-      (Path "D:\MLAB\MODULES\POWERSW\LDD01A\SCH\LDD.DSN")
+      (Path
+         "C:\USERS\KAKLIK\DOCUMENTS\SVNMLAB\MODULES\POWERSW\LDD01A\SCH\LDD.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "PAGE1"))))
+      (Page "PAGE1")))
+  (MPSSessionName "kaklik"))
