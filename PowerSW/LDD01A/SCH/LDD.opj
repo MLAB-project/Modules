@@ -63,6 +63,14 @@
       (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
+    (DIP6_300
+      (FullPartName "DIP6_300.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\DECALES.OLB")
+      (DeviceIndex "0"))
+    (D-PHOTO_3mm
+      (FullPartName "D-PHOTO_3mm.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_OPTO.OLB")
+      (DeviceIndex "0"))
     (JUMP2X1_CON
       (FullPartName "JUMP2X1_CON.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
@@ -120,13 +128,13 @@
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -4 -30 0 200 0 548"))
+        (Placement "44 2 3 -1 -1 -4 -30 0 200 0 548"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -4 -30 22 1020 29 615")
-        (Scroll "0 0")
+        (Placement "44 0 1 -1 -1 -4 -30 22 1020 29 615")
+        (Scroll "0 11")
         (Zoom "100")
         (Occurrence "/"))
       (Path "D:\MLAB\MODULES\POWERSW\LDD01A\SCH\LDD.DSN")
