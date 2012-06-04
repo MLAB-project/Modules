@@ -63,6 +63,10 @@
       (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
+    (JUMP3
+      (FullPartName "JUMP3.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
+      (DeviceIndex "0"))
     (DIP6_300
       (FullPartName "DIP6_300.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\DECALES.OLB")
@@ -122,8 +126,7 @@
       (Path "Design Resources")
       (Path "Design Resources" ".\ldd.dsn")
       (Path "Design Resources" ".\ldd.dsn" "SCHEMATIC1")
-      (Path "Outputs")
-      (Select "Design Resources" ".\ldd.dsn" "SCHEMATIC1" "PAGE1"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -134,7 +137,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -4 -30 22 1020 29 615")
-        (Scroll "0 11")
+        (Scroll "0 0")
         (Zoom "100")
         (Occurrence "/"))
       (Path "D:\MLAB\MODULES\POWERSW\LDD01A\SCH\LDD.DSN")
