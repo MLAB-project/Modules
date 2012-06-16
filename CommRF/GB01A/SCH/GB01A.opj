@@ -80,10 +80,10 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" "D:\MLAB\Modules\CommRF\GB01A\SCH\gb01a.dsn")
-      (Path "Design Resources" "D:\MLAB\Modules\CommRF\GB01A\SCH\gb01a.dsn"
-         "SCHEMATIC1")
-      (Path "Outputs"))
+      (Path "Design Resources" ".\gb01a.dsn")
+      (Path "Design Resources" ".\gb01a.dsn" "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources" ".\gb01a.dsn" "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
