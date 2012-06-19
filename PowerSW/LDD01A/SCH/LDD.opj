@@ -63,6 +63,14 @@
       (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
+    (JUMP2X4_CON
+      (FullPartName "JUMP2X4_CON.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (R1206
+      (FullPartName "R1206.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
     (JUMP3
       (FullPartName "JUMP3.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
@@ -137,13 +145,12 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 25 1097 25 612")
-        (Scroll "-75 -4")
+        (Placement "44 2 3 -1 -1 -4 -30 22 1016 29 611")
+        (Scroll "0 1")
         (Zoom "100")
         (Occurrence "/"))
-      (Path
-         "C:\USERS\KAKLIK\DOCUMENTS\SVNMLAB\MODULES\POWERSW\LDD01A\SCH\LDD.DSN")
+      (Path "D:\MLAB\MODULES\POWERSW\LDD01A\SCH\LDD.DSN")
       (Schematic "SCHEMATIC1")
       (Page "PAGE1")))
-  (MPSSessionName "kaklik")
+  (MPSSessionName "Jakub Kákona")
   (ISPCBBASICLICENSE "false"))
