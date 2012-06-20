@@ -134,18 +134,17 @@
       (Path "Design Resources")
       (Path "Design Resources" ".\ldd.dsn")
       (Path "Design Resources" ".\ldd.dsn" "SCHEMATIC1")
-      (Path "Outputs")
-      (Select "Design Resources" ".\ldd.dsn" "SCHEMATIC1" "PAGE1"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -4 -30 0 200 0 548"))
+        (Placement "44 2 3 -1 -1 -4 -30 0 200 0 548"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -4 -30 22 1016 29 611")
+        (Placement "44 0 1 -1 -1 -4 -30 22 1016 29 611")
         (Scroll "0 1")
         (Zoom "100")
         (Occurrence "/"))
