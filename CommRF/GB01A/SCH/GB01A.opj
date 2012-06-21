@@ -82,18 +82,19 @@
       (Path "Design Resources")
       (Path "Design Resources" ".\gb01a.dsn")
       (Path "Design Resources" ".\gb01a.dsn" "SCHEMATIC1")
-      (Path "Outputs"))
+      (Path "Outputs")
+      (Select "Design Resources"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -4 -30 0 200 0 449"))
+        (Placement "44 0 1 -1 -1 -4 -30 0 200 0 449"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -4 -30 88 1086 116 702")
-        (Scroll "0 0")
+        (Placement "44 2 3 -1 -1 -4 -30 88 1086 116 702")
+        (Scroll "0 30")
         (Zoom "100")
         (Occurrence "/"))
       (Path "D:\MLAB\MODULES\COMMRF\GB01A\SCH\GB01A.DSN")
