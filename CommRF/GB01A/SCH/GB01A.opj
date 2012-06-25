@@ -30,6 +30,18 @@
       (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
+    (C0805
+      (FullPartName "C0805.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (C-ELYTB
+      (FullPartName "C-ELYTB.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (R1206
+      (FullPartName "R1206.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
     (BAR43SSMD
       (FullPartName "BAR43SSMD.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\COM_D.OLB")
@@ -37,10 +49,6 @@
     (HOLE_M3
       (FullPartName "HOLE_M3.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\PAD.OLB")
-      (DeviceIndex "0"))
-    (C0805
-      (FullPartName "C0805.Normal")
-      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
       (DeviceIndex "0"))
     (LM317T_TO220
       (FullPartName "LM317T_TO220.Normal")
@@ -83,19 +91,19 @@
       (Path "Design Resources" ".\gb01a.dsn")
       (Path "Design Resources" ".\gb01a.dsn" "SCHEMATIC1")
       (Path "Outputs")
-      (Select "Design Resources"))
+      (Select "Design Resources" ".\gb01a.dsn" "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -4 -30 0 200 0 449"))
+        (Placement "44 2 3 -1 -1 -4 -30 0 200 0 449"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -4 -30 88 1086 116 702")
-        (Scroll "0 30")
-        (Zoom "100")
+        (Placement "44 0 1 -1 -1 -4 -30 88 1086 116 702")
+        (Scroll "-122 -9")
+        (Zoom "62")
         (Occurrence "/"))
       (Path "D:\MLAB\MODULES\COMMRF\GB01A\SCH\GB01A.DSN")
       (Schematic "SCHEMATIC1")
