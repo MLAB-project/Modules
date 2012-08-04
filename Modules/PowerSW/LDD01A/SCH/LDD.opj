@@ -63,6 +63,10 @@
       (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
+    (JUMP3
+      (FullPartName "JUMP3.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
+      (DeviceIndex "0"))
     (JUMP2X4_CON
       (FullPartName "JUMP2X4_CON.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
@@ -70,10 +74,6 @@
     (R1206
       (FullPartName "R1206.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
-      (DeviceIndex "0"))
-    (JUMP3
-      (FullPartName "JUMP3.Normal")
-      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
       (DeviceIndex "0"))
     (DIP6_300
       (FullPartName "DIP6_300.Normal")
@@ -146,8 +146,8 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 25 1121 25 512")
-        (Scroll "0 0")
-        (Zoom "100")
+        (Scroll "-45 0")
+        (Zoom "82")
         (Occurrence "/"))
       (Path "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\POWERSW\LDD01A\SCH\LDD.DSN")
       (Schematic "SCHEMATIC1")
