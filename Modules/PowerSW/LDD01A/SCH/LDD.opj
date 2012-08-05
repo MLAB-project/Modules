@@ -134,20 +134,19 @@
       (Path "Design Resources")
       (Path "Design Resources" ".\ldd.dsn")
       (Path "Design Resources" ".\ldd.dsn" "SCHEMATIC1")
-      (Path "Outputs")
-      (Select "Design Resources" ".\ldd.dsn" "SCHEMATIC1" "PAGE1"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 548"))
+        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 548"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 25 1121 25 512")
-        (Scroll "-45 0")
-        (Zoom "82")
+        (Placement "44 2 3 -1 -1 -8 -30 25 1121 25 512")
+        (Scroll "538 444")
+        (Zoom "164")
         (Occurrence "/"))
       (Path "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\POWERSW\LDD01A\SCH\LDD.DSN")
       (Schematic "SCHEMATIC1")
