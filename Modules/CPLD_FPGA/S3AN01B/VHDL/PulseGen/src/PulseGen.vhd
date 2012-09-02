@@ -1,9 +1,8 @@
 ----------------------------------------------------------------------------------
 -- Company:        www.mlab.cz
--- Based on code writen by MIHO.
+-- Based on code written by MIHO.
 -- 
--- Create Date:    29/08/2011 
--- Design Name:    S3AN01A Test Design
+-- Design Name:    S3AN01A
 -- Project Name:   PulseGen
 -- Target Devices: XC3S50AN-4
 -- Tool versions:  ISE 13.3
