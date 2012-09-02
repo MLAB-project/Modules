@@ -1,10 +1,9 @@
 ----------------------------------------------------------------------------------
 -- Company:        www.mlab.cz
--- Engineer:       miho, kakl
+-- Based on code writen by MIHO.
 -- 
 -- Create Date:    29/08/2011 
 -- Design Name:    S3AN01A Test Design
--- Module Name:    PulseGen
 -- Project Name:   PulseGen
 -- Target Devices: XC3S50AN-4
 -- Tool versions:  ISE 13.3
@@ -12,7 +11,7 @@
 --
 -- Dependencies:   External PS/2 Keyboard has to be connected.
 --
--- Revision:       1.00 File Created
+-- Version:  $Id$
 --
 ----------------------------------------------------------------------------------
 
@@ -158,6 +157,7 @@ end to_bcd;
 	signal CT0:		unsigned(15 downto 0) := X"0000";	-- Timer
 	signal O1:	std_logic := '0';	-- Output 1
 	signal O2:	std_logic := '0'; -- Output 2
+	signal CTburst:		unsigned(15 downto 0) := X"0000";	-- Pulse counter
 	
 	-- LED Demo Signals
 	--	----------------
@@ -352,32 +352,53 @@ begin
 			end if;
 			
 			if PS2_Valid and PS2_Attribs(7)='0' then
-			   if PS2_Code = X"74" and T1<200 then T1<=T1+1; end if;
+			   if PS2_Code = X"74" and T1<2000 then T1<=T1+1; end if;
 			   if PS2_Code = X"6b" and T1>0 then T1<=T1-1; end if;
 			   if PS2_Code = X"75" and T2<200 then T2<=T2+1; end if;
 			   if PS2_Code = X"72" and T2>0 then T2<=T2-1; end if;
 				CT0<=X"0000";
 				O1<='0';
 				O2<='0';
+				CTburst<=X"0000";
 			end if;
 
-			if CT0=X"F000" then
-				CT0<=X"0000";
+			if PB(0)='1' then
+				T1<=X"0000";
+				T2<=X"0000";
+			end if;
+	
+			if DIPSW(0)='1' then
+				if CT0>X"F000" then
+					CT0<=X"0000";
+				else
+					CT0<=CT0+1;
+				end if;
 			else
-				CT0<=CT0+1;
+				if CT0>X"0200" then
+					CT0<=X"0000";
+				else
+					CT0<=CT0+1;
+				end if;			
 			end if;
 			
-			if CT0=X"0000" then
-				O1<='1';
+			if CTburst>2000 then
+				CTburst<=X"0000";
+			end if;
+
+			if (CTburst<1000) or (DIPSW(1)='0') then
+				if CT0=X"0000" then
+					O1<='1';
+				end if;
+				
+				if CT0=T1+X"0000" then
+					O2<='1';
+				end if;
 			end if;
 			
-			if CT0=T1 then
-				O2<='1';
-			end if;
-		
-			if CT0=(T2+T1) then
+			if CT0=T2+T1+X"0000" then
 				O1<='0';
 				O2<='0';
+				CTburst<=CTburst+1;
 			end if;
 			
 		end if;
@@ -416,6 +437,9 @@ begin
 	B(2)			<= O2;
 	DIF2N			<=	not O2;
 	B(3)			<=	not O2;
+	
+	VGA_R(0)		<=	O1; 
+	VGA_R(1)		<=	O2; 
 
 	--	Unused Signals
 	--	==============
