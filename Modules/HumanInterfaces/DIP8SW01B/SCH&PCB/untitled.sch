@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -812,11 +812,11 @@ paja-trb@seznam.cz
 <instance part="NAP1" gate="V+" x="48.26" y="-22.86"/>
 <instance part="NAP2" gate="V+" x="88.9" y="50.8"/>
 <instance part="GND2" gate="G$1" x="7.62" y="-45.72"/>
-<instance part="X1" gate="P4" x="25.4" y="-68.58" rot="R180"/>
-<instance part="X2" gate="P4" x="25.4" y="-76.2" rot="R180"/>
-<instance part="X3" gate="P4" x="25.4" y="-83.82" rot="R180"/>
-<instance part="X4" gate="P4" x="25.4" y="-91.44" rot="R180"/>
-<instance part="GND3" gate="G$1" x="35.56" y="-96.52"/>
+<instance part="X1" gate="P4" x="73.66" y="22.86" rot="R180"/>
+<instance part="X2" gate="P4" x="73.66" y="15.24" rot="R180"/>
+<instance part="X3" gate="P4" x="73.66" y="7.62" rot="R180"/>
+<instance part="X4" gate="P4" x="73.66" y="0" rot="R180"/>
+<instance part="GND3" gate="G$1" x="83.82" y="-5.08"/>
 <instance part="SV2" gate="-1" x="73.66" y="50.8" rot="R90"/>
 <instance part="SV2" gate="-2" x="81.28" y="50.8" rot="R90"/>
 <instance part="SV4" gate="-1" x="0" y="-35.56" rot="R90"/>
@@ -1096,21 +1096,21 @@ paja-trb@seznam.cz
 </segment>
 <segment>
 <pinref part="GND3" gate="G$1" pin="GND"/>
-<wire x1="35.56" y1="-96.52" x2="35.56" y2="-91.44" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="-5.08" x2="83.82" y2="0" width="0.1524" layer="91"/>
 <pinref part="X1" gate="P4" pin="P$1"/>
-<wire x1="35.56" y1="-91.44" x2="35.56" y2="-83.82" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="-83.82" x2="35.56" y2="-76.2" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="-76.2" x2="35.56" y2="-68.58" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="-68.58" x2="33.02" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="0" x2="83.82" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="7.62" x2="83.82" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="15.24" x2="83.82" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="22.86" x2="81.28" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="X2" gate="P4" pin="P$1"/>
-<wire x1="33.02" y1="-76.2" x2="35.56" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="15.24" x2="83.82" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="X3" gate="P4" pin="P$1"/>
-<wire x1="33.02" y1="-83.82" x2="35.56" y2="-83.82" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="7.62" x2="83.82" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="X4" gate="P4" pin="P$1"/>
-<wire x1="33.02" y1="-91.44" x2="35.56" y2="-91.44" width="0.1524" layer="91"/>
-<junction x="35.56" y="-91.44"/>
-<junction x="35.56" y="-83.82"/>
-<junction x="35.56" y="-76.2"/>
+<wire x1="81.28" y1="0" x2="83.82" y2="0" width="0.1524" layer="91"/>
+<junction x="83.82" y="0"/>
+<junction x="83.82" y="7.62"/>
+<junction x="83.82" y="15.24"/>
 </segment>
 </net>
 <net name="VCC" class="0">
