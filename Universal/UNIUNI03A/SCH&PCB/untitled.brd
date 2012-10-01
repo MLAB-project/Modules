@@ -87,6 +87,8 @@
 <rectangle x1="8.5" y1="0.7" x2="9.9" y2="8.1" layer="16" rot="R180"/>
 <rectangle x1="5.5" y1="-2.7" x2="6.9" y2="4.7" layer="16" rot="R270"/>
 <rectangle x1="13.3" y1="-2.7" x2="14.7" y2="4.7" layer="16" rot="R90"/>
+<dimension x1="20.22" y1="0.1" x2="20.22" y2="60.86" x3="29.3" y3="30.48" layer="48"/>
+<dimension x1="20.22" y1="60.86" x2="0.1" y2="60.86" x3="10.16" y3="64" layer="48"/>
 </plain>
 <libraries>
 <library name="moje">

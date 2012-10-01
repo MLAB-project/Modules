@@ -9,7 +9,7 @@
 <grid distance="1.27" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
@@ -82,6 +82,8 @@
 <rectangle x1="7" y1="33.4" x2="12.4" y2="35.2" layer="16"/>
 <rectangle x1="7" y1="30.9" x2="12.4" y2="32.7" layer="16"/>
 <rectangle x1="7" y1="28.3" x2="12.4" y2="30.1" layer="16"/>
+<dimension x1="0.1" y1="0.1" x2="91.34" y2="0.1" x3="45.72" y3="-10.16" layer="48"/>
+<dimension x1="0.1" y1="60.86" x2="0.1" y2="0.1" x3="-15.24" y3="30.48" layer="48"/>
 </plain>
 <libraries>
 <library name="moje">
