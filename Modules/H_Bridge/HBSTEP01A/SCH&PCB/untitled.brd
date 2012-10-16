@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8,18 +8,18 @@
 </settings>
 <grid distance="0.2" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
@@ -45,7 +45,7 @@
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tPadExt" color="7" fill="1" visible="no" active="no"/>
 <layer number="54" name="bPadExt" color="1" fill="1" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -108,6 +108,7 @@
 <text x="45.8" y="42" size="1.27" layer="21" rot="R180">IN2</text>
 <dimension x1="50.7" y1="0.1" x2="50.7" y2="50.7" x3="56.8" y3="25.4" layer="48"/>
 <dimension x1="0.1" y1="0.1" x2="50.7" y2="0.1" x3="25.4" y3="-7.2" layer="48"/>
+<text x="8.4" y="35.8" size="1.27" layer="26" rot="MR90">R6</text>
 </plain>
 <libraries>
 <library name="moje_io">
@@ -1946,39 +1947,39 @@ design rules under a new name.
 <attribute name="NAME" x="24.26" y="30.42" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="26.67" y="29.86" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="D1" library="moje_diody" package="SOT23" value="" x="31.48" y="19.99" smashed="yes" rot="MR90">
+<element name="D1" library="moje_diody" package="SOT23" value="BAT46SW" x="31.48" y="19.99" smashed="yes" rot="MR90">
 <attribute name="NAME" x="33.185" y="18.885" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="28.305" y="18.085" size="1.27" layer="28" rot="MR90"/>
 </element>
-<element name="R1" library="rcl" package="R0805" value="" x="14.74" y="28.44" smashed="yes" rot="MR270">
+<element name="R1" library="rcl" package="R0805" value="1K" x="14.74" y="28.44" smashed="yes" rot="MR270">
 <attribute name="NAME" x="16.275" y="29.73" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="17.28" y="29.075" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="R2" library="rcl" package="R0805" value="" x="12.3" y="27.06" smashed="yes" rot="MR90">
+<element name="R2" library="rcl" package="R0805" value="1K" x="12.3" y="27.06" smashed="yes" rot="MR90">
 <attribute name="NAME" x="11.77" y="28.825" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="9.76" y="26.425" size="1.27" layer="28" rot="MR90"/>
 </element>
-<element name="R3" library="rcl" package="R0805" value="" x="31.78" y="39.54" smashed="yes" rot="MR270">
+<element name="R3" library="rcl" package="R0805" value="68K" x="31.78" y="39.54" smashed="yes" rot="MR270">
 <attribute name="NAME" x="31.29" y="36.025" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="34.32" y="40.175" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="R4" library="rcl" package="R0805" value="" x="27.92" y="30.74" smashed="yes" rot="MR270">
+<element name="R4" library="rcl" package="R0805" value="1K" x="27.92" y="30.74" smashed="yes" rot="MR270">
 <attribute name="NAME" x="29.15" y="29.625" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="30.46" y="31.375" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="C1" library="rcl" package="C0805" value="" x="16.54" y="15.66" smashed="yes" rot="MR270">
+<element name="C1" library="rcl" package="C0805" value="100nF" x="16.54" y="15.66" smashed="yes" rot="MR270">
 <attribute name="NAME" x="17.93" y="14.47" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="19.08" y="16.93" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="C3" library="rcl" package="C0805" value="" x="29.34" y="23.2" smashed="yes" rot="MR180">
+<element name="C3" library="rcl" package="C0805" value="10nF" x="29.34" y="23.2" smashed="yes" rot="MR180">
 <attribute name="NAME" x="29.53" y="24.27" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="28.07" y="25.74" size="1.27" layer="28" rot="MR180"/>
 </element>
-<element name="C4" library="rcl" package="C0805" value="" x="27.67" y="19.99" smashed="yes" rot="MR90">
+<element name="C4" library="rcl" package="C0805" value="220nF" x="27.67" y="19.99" smashed="yes" rot="MR90">
 <attribute name="NAME" x="28.74" y="18.92" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="25.13" y="18.72" size="1.27" layer="28" rot="MR90"/>
 </element>
-<element name="C5" library="PaJa_C-tantal_SMD" package="B" value="1M/35V" x="14.28" y="20.9" smashed="yes" rot="MR180">
+<element name="C5" library="PaJa_C-tantal_SMD" package="B" value="10u/16V" x="14.28" y="20.9" smashed="yes" rot="MR180">
 <attribute name="NAME" x="15.7075" y="22.805" size="1.27" layer="26" rot="MR0"/>
 </element>
 <element name="CON1" library="PaJa_22" package="WAGO256" value="WAGO256" x="27.94" y="10.16" smashed="yes" rot="R90"/>
@@ -1995,7 +1996,7 @@ design rules under a new name.
 <attribute name="NAME" x="13.02" y="13.891" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="12.7" y="6.779" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="C7" library="rcl" package="C0805" value="" x="14.34" y="34.51" smashed="yes" rot="MR0">
+<element name="C7" library="rcl" package="C0805" value="100n" x="14.34" y="34.51" smashed="yes" rot="MR0">
 <attribute name="NAME" x="15.98" y="34.59" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="15.61" y="31.97" size="1.27" layer="28" rot="MR0"/>
 </element>
@@ -2010,19 +2011,19 @@ design rules under a new name.
 <attribute name="NAME" x="36.759" y="29.299" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="32.511" y="23.695" size="1.27" layer="28" rot="MR90"/>
 </element>
-<element name="D3" library="moje" package="SMA" value="" x="10.39" y="20.32" smashed="yes" rot="MR270">
+<element name="D3" library="moje" package="SMA" value="M4" x="10.39" y="20.32" smashed="yes" rot="MR270">
 <attribute name="NAME" x="11.695" y="23.1975" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="13.2475" y="23.495" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="C6" library="rcl" package="C0805" value="" x="26.2" y="33.8" smashed="yes" rot="MR180">
+<element name="C6" library="rcl" package="C0805" value="100n" x="26.2" y="33.8" smashed="yes" rot="MR180">
 <attribute name="NAME" x="27.47" y="34.87" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="24.93" y="36.34" size="1.27" layer="28" rot="MR180"/>
 </element>
-<element name="C8" library="rcl" package="C0805" value="" x="20.8" y="18.2" smashed="yes" rot="MR270">
+<element name="C8" library="rcl" package="C0805" value="100n" x="20.8" y="18.2" smashed="yes" rot="MR270">
 <attribute name="NAME" x="18.67" y="17.93" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="23.34" y="19.47" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="R5-PULLUP" library="rcl" package="R0805" value="" x="11" y="37" smashed="yes" rot="MR270">
+<element name="R6-PULLUP" library="rcl" package="R0805" value="1K" x="11" y="37" smashed="yes" rot="MR270">
 <attribute name="VALUE" x="13.54" y="37.635" size="1.27" layer="28" rot="MR270"/>
 </element>
 <element name="C9" library="rcl" package="C0805" value="100p" x="11" y="41.6" smashed="yes" rot="MR90">
@@ -2056,7 +2057,7 @@ design rules under a new name.
 <attribute name="NAME" x="49.479" y="37.06" size="1.27" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="44.4" y="33.809" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="R5" library="rcl" package="R0805" value="" x="39.6" y="36.6" smashed="yes" rot="MR0">
+<element name="R5" library="rcl" package="R0805" value="1K" x="39.6" y="36.6" smashed="yes" rot="MR0">
 <attribute name="NAME" x="38.035" y="36.07" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="40.235" y="34.06" size="1.27" layer="28" rot="MR0"/>
 </element>
@@ -2112,7 +2113,7 @@ design rules under a new name.
 <wire x1="17" y1="31.2" x2="20.8" y2="31.2" width="0.3048" layer="1"/>
 <wire x1="20.8" y1="31.2" x2="21" y2="31" width="0.3048" layer="1"/>
 <contactref element="C9" pad="1"/>
-<contactref element="R5-PULLUP" pad="1"/>
+<contactref element="R6-PULLUP" pad="1"/>
 <wire x1="11" y1="37.95" x2="8.95" y2="37.95" width="0.4064" layer="16"/>
 <wire x1="8.95" y1="37.95" x2="8" y2="37" width="0.4064" layer="16"/>
 <wire x1="8" y1="37" x2="8" y2="34.2" width="0.4064" layer="16"/>
@@ -2587,7 +2588,7 @@ design rules under a new name.
 <wire x1="12" y1="18.2" x2="16.6" y2="18.2" width="1.016" layer="1"/>
 <via x="16.6" y="18.2" extent="1-16" drill="0.8"/>
 <wire x1="10.39" y1="18.27" x2="7.63" y2="18.27" width="1.27" layer="16"/>
-<contactref element="R5-PULLUP" pad="2"/>
+<contactref element="R6-PULLUP" pad="2"/>
 <contactref element="R1" pad="2"/>
 <contactref element="R2" pad="2"/>
 <wire x1="13.01" y1="27.49" x2="12.49" y2="28.01" width="0.3048" layer="16"/>
