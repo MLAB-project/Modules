@@ -471,10 +471,10 @@ design rules under a new name.</description>
 <element name="C6" library="moje_C" package="C0805" value="0.22uF" x="10.24" y="16.43" smashed="yes" rot="MR0">
 <attribute name="NAME" x="10.71" y="17.35" size="1.27" layer="26" rot="MR0"/>
 </element>
-<element name="R3" library="moje_R" package="0805" value="DNP" x="14.49" y="12.43" smashed="yes" rot="MR0">
+<element name="R3" library="moje_R" package="0805" value="2k7" x="14.49" y="12.43" smashed="yes" rot="MR0">
 <attribute name="NAME" x="18.125" y="11.85" size="1.27" layer="26" rot="MR0"/>
 </element>
-<element name="R4" library="moje_R" package="0805" value="DNP" x="9.39" y="11.74" smashed="yes" rot="MR90">
+<element name="R4" library="moje_R" package="0805" value="2k7" x="9.39" y="11.74" smashed="yes" rot="MR90">
 <attribute name="NAME" x="8.76" y="8.315" size="1.27" layer="26" rot="MR90"/>
 </element>
 <element name="SV1" library="moje_hrebinky" package="MA05-2" value="" x="5.08" y="14.99" smashed="yes" rot="R270">
