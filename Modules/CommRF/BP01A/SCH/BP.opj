@@ -59,14 +59,9 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "C:\Users\kaklik\Documents\MLAB\Modules\CommRF\BP01A\SCH\bp.dsn")
-      (Path "Design Resources"
-         "C:\Users\kaklik\Documents\MLAB\Modules\CommRF\BP01A\SCH\bp.dsn"
-         "SCHEMATIC1")
-      (Select "Design Resources"
-         "C:\Users\kaklik\Documents\MLAB\Modules\CommRF\BP01A\SCH\bp.dsn"
-         "SCHEMATIC1" "PAGE1"))
+      (Path "Design Resources" ".\bp.dsn")
+      (Path "Design Resources" ".\bp.dsn" "SCHEMATIC1")
+      (Select "Design Resources" ".\bp.dsn" "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -77,10 +72,11 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 100 834 100 478")
-        (Scroll "0 295")
+        (Scroll "0 264")
         (Zoom "100")
         (Occurrence "/"))
       (Path "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\COMMRF\BP01A\SCH\BP.DSN")
       (Schematic "SCHEMATIC1")
       (Page "PAGE1")))
-  (ISPCBBASICLICENSE "false"))
+  (ISPCBBASICLICENSE "false")
+  (MPSSessionName "kaklik"))
