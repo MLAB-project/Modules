@@ -780,6 +780,7 @@ W = angled&lt;p&gt;
 <wire x1="-17.78" y1="50.8" x2="-17.78" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="-17.78" y1="60.96" x2="-5.08" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
+<junction x="-17.78" y="50.8"/>
 </segment>
 </net>
 <net name="GND" class="0">
