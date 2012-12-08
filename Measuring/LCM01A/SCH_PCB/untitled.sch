@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -599,6 +599,16 @@ W = angled&lt;p&gt;
 <package name="1210">
 <smd name="P$1" x="-1" y="0" dx="1.5" dy="2.1" layer="1"/>
 <smd name="P$2" x="1" y="0" dx="1.5" dy="2.1" layer="1"/>
+<wire x1="-1.905" y1="1.27" x2="-1.905" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="-1.27" x2="1.905" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="1.905" y2="1.27" width="0.127" layer="21"/>
+<wire x1="1.905" y1="1.27" x2="-1.905" y2="1.27" width="0.127" layer="21"/>
+<wire x1="-1.5875" y1="0.9525" x2="-1.5875" y2="-0.9525" width="0.127" layer="51"/>
+<wire x1="-1.5875" y1="-0.9525" x2="1.5875" y2="-0.9525" width="0.127" layer="51"/>
+<wire x1="1.5875" y1="-0.9525" x2="1.5875" y2="0.9525" width="0.127" layer="51"/>
+<wire x1="1.5875" y1="0.9525" x2="-1.5875" y2="0.9525" width="0.127" layer="51"/>
+<text x="-1.905" y="1.5875" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.905" y="-2.8575" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -855,8 +865,8 @@ paja-trb@seznam.cz
 <part name="C1" library="moje_C" deviceset="C0805" device="" value="100nF"/>
 <part name="C2" library="moje_C" deviceset="C0805" device="" value="680pF"/>
 <part name="C3" library="moje_C" deviceset="C0805" device="" value="1nF presny"/>
-<part name="C5" library="moje_C" deviceset="B" device="" value="4u7/10V"/>
-<part name="C6" library="moje_C" deviceset="B" device="" value="4u7/10V"/>
+<part name="C5" library="moje_C" deviceset="B" device="" value="10u/10V"/>
+<part name="C6" library="moje_C" deviceset="B" device="" value="10u/10V"/>
 <part name="R1" library="moje_R" deviceset="R0805" device="" value="47k"/>
 <part name="R2" library="moje_R" deviceset="R0805" device="" value="100k"/>
 <part name="R3" library="moje_R" deviceset="R0805" device="" value="100k"/>
@@ -881,12 +891,12 @@ paja-trb@seznam.cz
 <part name="GND4" library="moje" deviceset="GND" device=""/>
 <part name="C4" library="moje_C" deviceset="B" device="" value="10u/10V"/>
 <part name="CX-LX" library="moje_C" deviceset="SPEC_805" device=""/>
-<part name="C7" library="moje_C" deviceset="C0805" device=""/>
-<part name="L2" library="moje_L" deviceset="L1210" device=""/>
+<part name="C7" library="moje_C" deviceset="C0805" device="" value="100nF"/>
+<part name="L2" library="moje_L" deviceset="L1210" device="" value="BLM21PG300SN1D"/>
 <part name="SV2" library="moje_hrebinky" deviceset="MA03-2" device=""/>
 <part name="GND1" library="moje" deviceset="GND" device=""/>
 <part name="NAP1" library="PaJa_22" deviceset="+VCC" device=""/>
-<part name="C8" library="moje_C" deviceset="B" device=""/>
+<part name="C8" library="moje_C" deviceset="B" device="" value="10uF/10V"/>
 <part name="GND2" library="moje" deviceset="GND" device=""/>
 <part name="GND3" library="moje" deviceset="GND" device=""/>
 <part name="SV1" library="moje_hrebinky" deviceset="MA02-2" device=""/>
@@ -896,7 +906,7 @@ paja-trb@seznam.cz
 <part name="SV3" library="moje_hrebinky" deviceset="MA02-1" device=""/>
 <part name="C9" library="moje_C" deviceset="C0805" device="" value="100nF"/>
 <part name="GND12" library="moje" deviceset="GND" device=""/>
-<part name="C10" library="moje_C" deviceset="B" device=""/>
+<part name="C10" library="moje_C" deviceset="B" device="" value="10u/10V"/>
 <part name="GND18" library="moje" deviceset="GND" device=""/>
 </parts>
 <sheets>
@@ -918,13 +928,22 @@ paja-trb@seznam.cz
 <instance part="GND7" gate="G$1" x="-60.96" y="17.78" rot="MR0"/>
 <instance part="GND8" gate="G$1" x="-71.12" y="17.78" rot="MR0"/>
 <instance part="C1" gate="G$1" x="-83.82" y="58.42"/>
-<instance part="C2" gate="G$1" x="-101.6" y="-48.26" rot="R180"/>
+<instance part="C2" gate="G$1" x="-101.6" y="-48.26" smashed="yes" rot="R180">
+<attribute name="NAME" x="-103.124" y="-49.911" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-94.234" y="-49.911" size="1.778" layer="96" rot="R180"/>
+</instance>
 <instance part="C3" gate="G$1" x="-35.56" y="-43.18" smashed="yes" rot="R180">
 <attribute name="NAME" x="-37.084" y="-44.831" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-31.369" y="-42.164" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="C5" gate="G$1" x="-83.82" y="2.54" rot="R270"/>
-<instance part="C6" gate="G$1" x="-66.04" y="55.88" rot="R270"/>
+<instance part="C5" gate="G$1" x="-83.82" y="2.54" smashed="yes" rot="R270">
+<attribute name="NAME" x="-80.645" y="3.4925" size="1.6764" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-86.995" y="6.0325" size="1.6764" layer="96" rot="MR270"/>
+</instance>
+<instance part="C6" gate="G$1" x="-66.04" y="55.88" smashed="yes" rot="R270">
+<attribute name="NAME" x="-65.405" y="54.2925" size="1.6764" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-67.945" y="59.3725" size="1.6764" layer="96" rot="MR270"/>
+</instance>
 <instance part="R1" gate="G$1" x="-71.12" y="7.62" rot="R180"/>
 <instance part="R2" gate="G$1" x="-91.44" y="22.86" rot="R90"/>
 <instance part="R3" gate="G$1" x="-62.23" y="38.1" rot="R180"/>
@@ -951,16 +970,22 @@ paja-trb@seznam.cz
 <instance part="C4" gate="G$1" x="-101.6" y="-20.32" rot="R270"/>
 <instance part="CX-LX" gate="G$1" x="-111.76" y="-33.02" rot="R90"/>
 <instance part="C7" gate="G$1" x="-78.74" y="-93.98" smashed="yes">
-<attribute name="NAME" x="-74.676" y="-94.869" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-77.216" y="-97.409" size="1.778" layer="96"/>
+<attribute name="NAME" x="-77.216" y="-97.409" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-77.216" y="-99.949" size="1.778" layer="96"/>
 </instance>
-<instance part="L2" gate="G$1" x="-71.12" y="-91.44"/>
+<instance part="L2" gate="G$1" x="-71.12" y="-91.44" smashed="yes">
+<attribute name="VALUE" x="-83.185" y="-88.5825" size="1.778" layer="96"/>
+<attribute name="NAME" x="-82.8675" y="-85.725" size="1.778" layer="95"/>
+</instance>
 <instance part="SV2" gate="-1" x="-48.26" y="-86.36"/>
 <instance part="SV2" gate="-2" x="-48.26" y="-91.44"/>
 <instance part="SV2" gate="-3" x="-48.26" y="-96.52"/>
 <instance part="GND1" gate="G$1" x="-55.88" y="-96.52"/>
 <instance part="NAP1" gate="V+" x="-60.96" y="-81.28"/>
-<instance part="C8" gate="G$1" x="-83.82" y="-99.06" rot="R270"/>
+<instance part="C8" gate="G$1" x="-83.82" y="-99.06" smashed="yes" rot="R270">
+<attribute name="NAME" x="-83.185" y="-100.6475" size="1.6764" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-86.995" y="-95.5675" size="1.6764" layer="96" rot="MR270"/>
+</instance>
 <instance part="GND2" gate="G$1" x="-78.74" y="-104.14"/>
 <instance part="GND3" gate="G$1" x="-83.82" y="-104.14"/>
 <instance part="SV1" gate="-1" x="-88.9" y="-20.32" rot="R180"/>
@@ -975,7 +1000,10 @@ paja-trb@seznam.cz
 <instance part="SV3" gate="-2" x="-20.32" y="-38.1" rot="R180"/>
 <instance part="C9" gate="G$1" x="-20.32" y="40.64"/>
 <instance part="GND12" gate="G$1" x="-20.32" y="38.1" rot="MR0"/>
-<instance part="C10" gate="G$1" x="-73.66" y="-7.62" rot="R270"/>
+<instance part="C10" gate="G$1" x="-73.66" y="-7.62" smashed="yes" rot="R270">
+<attribute name="NAME" x="-70.485" y="-4.1275" size="1.6764" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-66.675" y="-1.5875" size="1.6764" layer="96" rot="MR270"/>
+</instance>
 <instance part="GND18" gate="G$1" x="-73.66" y="-10.16" rot="MR0"/>
 </instances>
 <busses>
@@ -1200,13 +1228,13 @@ paja-trb@seznam.cz
 <net name="N$9" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="S1B"/>
-<wire x1="-43.18" y1="-33.02" x2="-22.86" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="-33.02" x2="-25.4" y2="-33.02" width="0.1524" layer="91"/>
 <pinref part="SV3" gate="-1" pin="P$1"/>
 <pinref part="SV3" gate="-2" pin="P$1"/>
-<wire x1="-22.86" y1="-33.02" x2="-20.32" y2="-33.02" width="0.1524" layer="91"/>
-<wire x1="-20.32" y1="-38.1" x2="-22.86" y2="-38.1" width="0.1524" layer="91"/>
-<wire x1="-22.86" y1="-38.1" x2="-22.86" y2="-33.02" width="0.1524" layer="91"/>
-<junction x="-22.86" y="-33.02"/>
+<wire x1="-25.4" y1="-33.02" x2="-20.32" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="-38.1" x2="-25.4" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="-38.1" x2="-25.4" y2="-33.02" width="0.1524" layer="91"/>
+<junction x="-25.4" y="-33.02"/>
 </segment>
 </net>
 <net name="N$11" class="0">
