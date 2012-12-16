@@ -1,13 +1,13 @@
 ﻿//
-// Toto je popisný soubor pro popis obsahu adresáře (příklad)
+// Toto je popisný soubor pro popis obsahu adresáře
 //
 
 [InfoShortDescription.en]
   Xilinx Virtual Cable
-  
+
 [InfoShortDescription.cs]
   Xilinx Virtual Cable
-
+  
 [InfoLongDescription.en]
   Xilinx Virtual Cable (XVC in short) technology is based on fact
   that the JTAG communication is send across TCP/IP network.
@@ -16,7 +16,6 @@
   it is directly supported in ISE and ChipScope development SW.
   So it is easy to integrate own JTAG interface fully integrated
   into development SW.
-
 
 [InfoLongDescription.cs]
   Xilinx Virtual Cable (ve zkratce XVC) je technologie spočívající
@@ -28,5 +27,7 @@
   ve vývojovém balíku ISE pro práci s FPGA a CPLD firmy Xilinx.
   Lze tak snadno realizovat navázání vlastní varianty JTAG rozhraní
   do standardních vývojových nástrojů (ISE i ChipScope).
+
+[SortPreferences]
 
 [End]
