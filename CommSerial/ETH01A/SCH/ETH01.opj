@@ -133,7 +133,7 @@
       (Path "Design Resources" ".\eth01.dsn")
       (Path "Design Resources" ".\eth01.dsn" "SCHEMATIC1")
       (Path "Outputs")
-      (Select "Design Resources"))
+      (Select "Design Resources" ".\eth01.dsn" "SCHEMATIC1" "PoE"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -143,9 +143,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 25 1156 25 512")
-        (Scroll "0 150")
-        (Zoom "100")
+        (Placement "44 2 3 -1 -1 -8 -30 25 1069 25 512")
+        (Scroll "0 0")
+        (Zoom "94")
         (Occurrence "/"))
       (Path
          "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\COMMSERIAL\ETH01A\SCH\ETH01.DSN")
@@ -154,8 +154,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 75 1210 75 566")
-        (Scroll "0 72")
+        (Placement "44 0 1 -1 -1 -8 -30 75 1119 75 566")
+        (Scroll "0 207")
         (Zoom "100")
         (Occurrence "/"))
       (Path
