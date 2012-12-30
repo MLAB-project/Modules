@@ -1,0 +1,29 @@
+﻿//
+// Toto je popisný soubor pro popis obsahu adresáře (příklad)
+//
+
+[InfoShortDescription.en]
+  Xilinx Virtual Cable Sofware (program mlab_xvcd)
+  
+[InfoShortDescription.cs]
+  Xilinx Virtual Cable Sofware (program mlab_xvcd)
+
+[InfoLongDescription.en]
+  The mlab_xvcd program converts JTAG commands received across TCP/IP 
+  network via XVC protocol to outputs of the programming
+  cable (module) which is based on FTDI's USB chips like
+  popular FT232R, FT220X etc.
+  Used XVC protocol is directly supported by XILINX development
+  tools (both configuration tool IMPACT and debugging 
+  embedded logic analyzer ChipScope Analyzer).
+
+[InfoLongDescription.cs]
+  Program mlab_xvcd je obslužný program, který převádí JTAG příkazy
+  zasílané prostřednictvím XVC protokolu přes TCP/IP síť
+  na příslušné výstupy JTAG kabelu (modulku) založeného
+  na USB převodnících firmy FTDI (FT232R, FT220X, ...).
+  Protokol XVC přímo podporují vývojové nástroje XILINX
+  (nahrávání konfigurace program IMPACT a ladění pomocí 
+  logického analyzátoru ChipScope Analyzer).
+
+[End]

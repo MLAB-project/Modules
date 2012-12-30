@@ -1,0 +1,14 @@
+FTDI D2XX library, use latest version from http://www.ftdichip.com
+
+	ftd2xx.h
+	ftd2xx.lib
+
+Main program, pin configuration is here (in .h file)
+
+	mlab_xvcd.h
+	mlab_xvcd.cpp
+
+Hardware layer, uses FTDI D2XX library
+
+	mlab_xvcd_port_FTDI.h
+	mlab_xvcd_port_FTDI.cpp
