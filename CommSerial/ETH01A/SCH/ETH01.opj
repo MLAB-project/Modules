@@ -130,10 +130,14 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\eth01.dsn")
-      (Path "Design Resources" ".\eth01.dsn" "SCHEMATIC1")
+      (Path "Design Resources"
+         "C:\Users\kaklik\Documents\MLAB\Modules\CommSerial\ETH01A\SCH\eth01.dsn")
+      (Path "Design Resources"
+         "C:\Users\kaklik\Documents\MLAB\Modules\CommSerial\ETH01A\SCH\eth01.dsn"
+         "SCHEMATIC1")
       (Path "Outputs")
-      (Select "Design Resources" ".\eth01.dsn" "SCHEMATIC1" "PoE"))
+      (Select "Design Resources"
+         "C:\Users\kaklik\Documents\MLAB\Modules\CommSerial\ETH01A\SCH\eth01.dsn"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -143,8 +147,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 25 1069 25 512")
-        (Scroll "0 0")
+        (Placement "44 0 1 -1 -1 -8 -30 25 1069 25 512")
+        (Scroll "0 9")
         (Zoom "94")
         (Occurrence "/"))
       (Path
@@ -154,9 +158,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 75 1119 75 566")
-        (Scroll "0 207")
-        (Zoom "100")
+        (Placement "44 2 3 -1 -1 -8 -30 75 1119 75 566")
+        (Scroll "197 280")
+        (Zoom "132")
         (Occurrence "/"))
       (Path
          "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\COMMSERIAL\ETH01A\SCH\ETH01.DSN")
