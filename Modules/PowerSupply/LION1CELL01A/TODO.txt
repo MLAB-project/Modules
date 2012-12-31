@@ -1,8 +1,16 @@
-Modul pro jednu baterii LION a LI-POLYMER
+Chyby v zapojeni:
 
--IO pro nabijeni BQ2410x
--Ochranny IO http://www.gme.cz/obvody-pro-nabijeni-akumulatoru/nt1854-p331-055/
+	- Chybi ochranna zenerova dioda na vystupu nabijeciho obvodu. 
+	- I2C vystup ma nebezpecne nechranene napajeni. (Navic neni zvykem u slave zarizeni davat k dizpozici napajeci napeti) Reseni bud je do napajeni dat pojistku. A nebo zrusit tento typ vyvedeni I2C a zapojit jej pouze jako hrabinek 2x2 stejne jako napriklad na CLKGEN01B
+	- Ochranny obvod neodpoji akumulator uplne.. Lepsi by bylo, kdyby nevratna pojistka byla zarazena co nejblize k baterii a daokazala tak vyresit treba o pripadny zkrat nektere cesty na spodu modulu. 
+	-Alespon jeden napajeci vystup by mel byt umisteny tak, aby byl pred mericim odporem nabijeciho obvodu. Coz umozni nabijecimu obvodu nabit akumulator i v pripade, ze bude cele zarizeni zapojeno do nejakeho systemu.  
 
--TR k ochrannymu IO - IRF8313PbF
 
--modul pro diagnostiku stavu baterie:
+Na PCB:
+
+Lepe sloucit hrebinky (Idealne uplne zrusit samostatne 2x1)
+
+Termistor u mericiho obvodu umistit tak, aby cidlo bylo mozne vsunout co nejblize akumulatoru. A obvod tak meril co nejpresneji teplotu akumulatoru. Protoze je teo jedna z velicin, ktera se pouziva pri vypoctu zbytkove energie v akumulatoru.  U nabijeciho obvodu to uz tak kriticke neni, protoze tam ma termistor spise bezpecnostni funkci.. 
+
+Modul bude muset pravdepodobne byt lakovany, aby se zmensila sance zkratu na cestach modulu. 
+
