@@ -34,8 +34,8 @@ Modul je určen pro připojení procesorových modulů na sběrnici RS485.
 \hline
 \multicolumn{1}{|c|}{Parametr} & \multicolumn{1}{|c|}{Hodnota} & \multicolumn{1}{|c|}{Poznámka} \\ \hline
 Napájecí napětí & +5V &  30 mA \\ \hline
-Pracovní napětí  vstupů & do +10V &  \\ \hline
-Maximální budící proud  & 60 mA & \\ \hline
+Pracovní napětí  vstupů & do $\pm$ 10V &  \\ \hline
+Maximální budící proud výstupů & 60 mA & \\ \hline
 \end{tabular}
 \end{center}
 \end{table}
@@ -44,6 +44,10 @@ Maximální budící proud  & 60 mA & \\ \hline
 \section{Popis konstrukce}
 
 \subsection{Zapojení}
+
+Zapojení modulu je kompletně popsáno přiloženým schématem. Datové vývody sběrnice jsou uspořádány ve standardní konfiguraci MLAB, která je vhodná pro kratší mezimodulové spoje. 
+
+V případě potřeby použití modulu na delší spoj (desítky metrů) je vhodné na modulu osadit transily pro zvýšení odolnosti modulu.  
 
 \includepdf[pages={1},landscape=true]{../../SCH/TTLRS48501A.pdf}
 
@@ -55,10 +59,13 @@ Maximální budící proud  & 60 mA & \\ \hline
 
 \subsubsection{Osazení}
 
+Modul se osazuje standardním způsobem požívaným pro SMD součástky. 
+
 \subsubsection{Nastavení}
 
 \section{Programové vybavení}
 
+Samotný modul pro svoje  fungování nepotřebuje speciální firmware. Potřebuje však pro svojí správnou funkci pin řídící směr toku dat.  
 
 \begin{thebibliography}{99}
 %\bibitem{DR2G}{Původní konstrukce} 
