@@ -79,7 +79,7 @@ $DIMEXE
 9
 $DIMTXT
 40
-2.5
+5
 9
 $DIMTSZ
 40
@@ -91,7 +91,7 @@ $DIMAUNIT
 9
 $DIMADEC
 70
-0
+2
 9
 $DIMSTYLE
 2
@@ -125,8 +125,18 @@ $SPLINESEGS
 70
 8
 9
+$GRIDMODE
+70
+1
+9
 $SNAPSTYLE
 70
+0
+9
+$GRIDUNIT
+10
+0
+20
 0
 9
 $PINSBASE
@@ -1321,7 +1331,7 @@ Standard
 48
 0
 140
-2.5
+5
 141
 0.09
 142
@@ -2091,15 +2101,13 @@ AcDbDimension
 11
 5
 21
--54.625
+-53.375
 31
 0
 70
 32
 71
 5
-72
-0
 3
 Standard
 53
@@ -2259,7 +2267,7 @@ AcDbMText
 1
 UNIBOX01 - BH\PMERITKO: 1:1
 7
-STANDARD
+standard
 210
 0
 220
@@ -2295,7 +2303,7 @@ AcDbDimension
 30
 0
 11
-17.9866325711
+16.7366325711
 21
 18.75
 31
@@ -2304,6 +2312,8 @@ AcDbDimension
 32
 71
 5
+72
+0
 3
 Standard
 53
@@ -2419,7 +2429,7 @@ AcDbMText
 1
 2xø8
 7
-
+STANDARD
 210
 0
 220
@@ -2519,7 +2529,7 @@ AcDbMText
 1
 Ohyb
 7
-
+STANDARD
 210
 0
 220
@@ -2653,15 +2663,13 @@ AcDbDimension
 11
 -12.5
 21
--62.375
+-61.125
 31
 0
 70
 32
 71
 5
-72
-0
 3
 Standard
 53
@@ -2713,15 +2721,13 @@ AcDbDimension
 11
 -20
 21
--70.375
+-69.125
 31
 0
 70
 32
 71
 5
-72
-0
 3
 Standard
 53
@@ -2795,7 +2801,7 @@ AcDbDimension
 30
 0
 11
--81.875
+-83.125
 21
 24
 31
@@ -2804,8 +2810,6 @@ AcDbDimension
 32
 71
 5
-72
-0
 3
 Standard
 53
@@ -2857,7 +2861,7 @@ AcDbDimension
 30
 0
 11
--60.875
+-62.125
 21
 12
 31
@@ -2866,8 +2870,6 @@ AcDbDimension
 32
 71
 5
-72
-0
 3
 Standard
 53
@@ -2919,7 +2921,7 @@ AcDbDimension
 30
 0
 11
--24.2994238706
+-25.5494238706
 21
 -115
 31
@@ -2928,6 +2930,8 @@ AcDbDimension
 32
 71
 5
+72
+0
 3
 Standard
 53
