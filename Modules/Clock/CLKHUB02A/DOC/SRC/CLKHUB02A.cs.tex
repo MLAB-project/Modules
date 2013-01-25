@@ -15,7 +15,7 @@
 
 \thispagestyle{empty}
 \begin{abstract}
-Budič přesných digitálních hodin. Výstupy jsou v logice LVPECL nebo LVDS vyvedené na SATA konektory, které mají dva diferenční páry. Budič je použitelný do frekvence 3,5GHz.
+Budič přesných digitálních hodin. Výstupy jsou v logice LVPECL vyvedené na deset SATA konektorů. Vstup signálu může být LVPECL nebo LVDS, případně pro nízké frekvence i CMOS. Budič je použitelný do frekvence 3,5GHz. 
 \end{abstract}
 
 \begin{figure} [htbp]
@@ -33,13 +33,11 @@ Budič přesných digitálních hodin. Výstupy jsou v logice LVPECL nebo LVDS v
 \hline
 Parametr & Hodnota & Poznámka \\
 \hline
-Napájecí napětí POWER  & max 5V &  160mA \\ 
+Napájecí napětí & max 3,3V &  Záleží na konkrétním typu logiky \\ 
 \hline
-Napájecí napětí Vcore & +1,8V, 2,7V, 3,3V &  Záleží na konkrétním typu čipu Si5XX \\ 
+Frekvenční rozsah  & 0 - 3500 MHz &  \\ 
 \hline
-Frekvenční rozsah  & 10 - 1500 MHz & Záleží na konkrétním typu čipu Si5XX, obvykle 10-810MHz \\ 
-\hline
-Fázový jitter  & $<$ 0,3ps & Pro obvody řady Si570 \\ 
+Jitter výstupní hrany jednoho budiče & $<$ 0,3ps &  \\ 
 \hline
 \end{tabular}
 \end{center}
