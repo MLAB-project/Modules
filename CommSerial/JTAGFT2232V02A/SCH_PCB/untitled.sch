@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -3254,6 +3254,9 @@ W = angled&lt;p&gt;
 <rectangle x1="-2.3813" y1="-0.635" x2="-1.5875" y2="0.635" layer="51"/>
 <rectangle x1="1.5875" y1="-0.635" x2="2.3813" y2="0.635" layer="51"/>
 </package>
+<package name="SROUB3M">
+<pad name="P$1" x="0" y="0" drill="3.2" diameter="6.4516"/>
+</package>
 </packages>
 <symbols>
 <symbol name="POJISTKA">
@@ -3277,6 +3280,12 @@ W = angled&lt;p&gt;
 <text x="-2.54" y="-3.81" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 <pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="SROUB">
+<circle x="0" y="0" radius="2" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-2.032" y2="0" width="0.1778" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;name</text>
+<pin name="P$1" x="-7.62" y="0" visible="off" length="middle"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -3307,6 +3316,21 @@ W = angled&lt;p&gt;
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="K"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SROUB3M" prefix="X">
+<gates>
+<gate name="P4" symbol="SROUB" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SROUB3M">
+<connects>
+<connect gate="P4" pin="P$1" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -3469,6 +3493,11 @@ W = angled&lt;p&gt;
 <part name="U$66" library="moje_schz" deviceset="+1.8V" device=""/>
 <part name="D1" library="moje" deviceset="D-OB.SMA" device=""/>
 <part name="U$68" library="moje_schz" deviceset="GND" device=""/>
+<part name="X2" library="moje" deviceset="SROUB3M" device=""/>
+<part name="X3" library="moje" deviceset="SROUB3M" device=""/>
+<part name="X4" library="moje" deviceset="SROUB3M" device=""/>
+<part name="X5" library="moje" deviceset="SROUB3M" device=""/>
+<part name="U$69" library="moje_schz" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3681,6 +3710,11 @@ W = angled&lt;p&gt;
 <instance part="U$66" gate="G$1" x="-45.72" y="86.36"/>
 <instance part="D1" gate="G$1" x="-144.78" y="99.06" rot="R90"/>
 <instance part="U$68" gate="G$1" x="-144.78" y="93.98"/>
+<instance part="X2" gate="P4" x="208.28" y="-86.36" rot="R180"/>
+<instance part="X3" gate="P4" x="208.28" y="-93.98" rot="R180"/>
+<instance part="X4" gate="P4" x="208.28" y="-101.6" rot="R180"/>
+<instance part="X5" gate="P4" x="208.28" y="-109.22" rot="R180"/>
+<instance part="U$69" gate="G$1" x="220.98" y="-114.3"/>
 </instances>
 <busses>
 </busses>
@@ -4063,6 +4097,24 @@ W = angled&lt;p&gt;
 <pinref part="D1" gate="G$1" pin="A"/>
 <pinref part="U$68" gate="G$1" pin="GND"/>
 <wire x1="-144.78" y1="93.98" x2="-144.78" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="X2" gate="P4" pin="P$1"/>
+<pinref part="U$69" gate="G$1" pin="GND"/>
+<wire x1="215.9" y1="-86.36" x2="220.98" y2="-86.36" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="-86.36" x2="220.98" y2="-93.98" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="-93.98" x2="220.98" y2="-101.6" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="-101.6" x2="220.98" y2="-109.22" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="-109.22" x2="220.98" y2="-114.3" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="-109.22" x2="220.98" y2="-109.22" width="0.1524" layer="91"/>
+<pinref part="X5" gate="P4" pin="P$1"/>
+<pinref part="X3" gate="P4" pin="P$1"/>
+<wire x1="215.9" y1="-93.98" x2="220.98" y2="-93.98" width="0.1524" layer="91"/>
+<junction x="220.98" y="-109.22"/>
+<junction x="220.98" y="-93.98"/>
+<pinref part="X4" gate="P4" pin="P$1"/>
+<wire x1="215.9" y1="-101.6" x2="220.98" y2="-101.6" width="0.1524" layer="91"/>
+<junction x="220.98" y="-101.6"/>
 </segment>
 </net>
 <net name="DM" class="0">
