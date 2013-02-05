@@ -3412,10 +3412,8 @@ W = angled&lt;p&gt;
 <part name="C1" library="moje_C" deviceset="C0805" device="" value="100nF"/>
 <part name="C2" library="moje_C" deviceset="C0805" device="" value="100nF"/>
 <part name="C3" library="moje_C" deviceset="C0805" device="" value="100nF"/>
-<part name="C4" library="moje_C" deviceset="C0805" device="" value="100nF"/>
 <part name="C5" library="moje_C" deviceset="C0805" device="" value="100nF"/>
 <part name="C6" library="moje_C" deviceset="C0805" device="" value="100nF"/>
-<part name="C7" library="moje_C" deviceset="C0805" device="" value="100nF"/>
 <part name="U$31" library="moje_schz" deviceset="+1.8V" device=""/>
 <part name="U$32" library="moje_schz" deviceset="+3.3V" device=""/>
 <part name="U$33" library="moje_schz" deviceset="GND" device=""/>
@@ -3579,10 +3577,8 @@ W = angled&lt;p&gt;
 <instance part="C1" gate="G$1" x="-165.1" y="-107.95" rot="R180"/>
 <instance part="C2" gate="G$1" x="-154.94" y="-107.95" rot="R180"/>
 <instance part="C3" gate="G$1" x="-144.78" y="-107.95" rot="R180"/>
-<instance part="C4" gate="G$1" x="-132.08" y="-107.95" rot="R180"/>
 <instance part="C5" gate="G$1" x="-121.92" y="-107.95" rot="R180"/>
 <instance part="C6" gate="G$1" x="-111.76" y="-107.95" rot="R180"/>
-<instance part="C7" gate="G$1" x="-101.6" y="-107.95" rot="R180"/>
 <instance part="U$31" gate="G$1" x="-154.94" y="-99.06"/>
 <instance part="U$32" gate="G$1" x="-116.84" y="-99.06"/>
 <instance part="U$33" gate="G$1" x="-156.21" y="-114.3"/>
@@ -3916,10 +3912,8 @@ W = angled&lt;p&gt;
 <junction x="-121.92" y="-114.3"/>
 <junction x="-116.84" y="-114.3"/>
 <junction x="-111.76" y="-114.3"/>
-<pinref part="C4" gate="G$1" pin="1"/>
 <pinref part="C5" gate="G$1" pin="1"/>
 <pinref part="C6" gate="G$1" pin="1"/>
-<pinref part="C7" gate="G$1" pin="1"/>
 <pinref part="U$34" gate="G$1" pin="GND"/>
 </segment>
 <segment>
@@ -5334,10 +5328,8 @@ W = angled&lt;p&gt;
 <junction x="-121.92" y="-101.6"/>
 <junction x="-111.76" y="-101.6"/>
 <junction x="-116.84" y="-101.6"/>
-<pinref part="C4" gate="G$1" pin="2"/>
 <pinref part="C5" gate="G$1" pin="2"/>
 <pinref part="C6" gate="G$1" pin="2"/>
-<pinref part="C7" gate="G$1" pin="2"/>
 <pinref part="U$32" gate="G$1" pin="+3.3V"/>
 </segment>
 <segment>
@@ -5585,6 +5577,9 @@ W = angled&lt;p&gt;
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,39.37,20.32,U5P,VSS,GND,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
