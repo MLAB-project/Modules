@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -1327,12 +1327,12 @@ W = angled&lt;p&gt;
 <part name="C2" library="moje_C" deviceset="B" device="" value="10uF"/>
 <part name="GND4" library="moje" deviceset="GND" device=""/>
 <part name="GND5" library="moje" deviceset="GND" device=""/>
-<part name="D1" library="moje_diody" deviceset="LED1206" device=""/>
-<part name="R3" library="moje_R" deviceset="R0805" device=""/>
+<part name="D1" library="moje_diody" deviceset="LED1206" device="" value="CERVENA"/>
+<part name="R3" library="moje_R" deviceset="R0805" device="" value="150R"/>
 <part name="GND6" library="moje" deviceset="GND" device=""/>
 <part name="U$4" library="moje_schz" deviceset="+3.3V" device=""/>
-<part name="T1" library="moje_T" deviceset="BC807-16" device=""/>
-<part name="T2" library="moje_T" deviceset="BC807-16" device=""/>
+<part name="T1" library="moje_T" deviceset="BC807-16" device="" value="BC807"/>
+<part name="T2" library="moje_T" deviceset="BC807-16" device="" value="BC807"/>
 <part name="R4" library="moje_R" deviceset="R0805" device="" value="1k"/>
 <part name="R5" library="moje_R" deviceset="R0805" device="" value="4k7"/>
 <part name="R6" library="moje_R" deviceset="R0805" device="" value="4k7"/>
@@ -1342,8 +1342,8 @@ W = angled&lt;p&gt;
 <part name="GND9" library="moje" deviceset="GND" device=""/>
 <part name="U$5" library="moje_schz" deviceset="+3.3V" device=""/>
 <part name="U$6" library="moje_schz" deviceset="+3.3V" device=""/>
-<part name="T3" library="moje_T" deviceset="BC817" device=""/>
-<part name="T4" library="moje_T" deviceset="BC817" device=""/>
+<part name="T3" library="moje_T" deviceset="BC817" device="" value="BC817"/>
+<part name="T4" library="moje_T" deviceset="BC817" device="" value="BC817"/>
 <part name="R8" library="moje_R" deviceset="R0805" device="" value="1k"/>
 <part name="R9" library="moje_R" deviceset="R0805" device="" value="4k7"/>
 <part name="R10" library="moje_R" deviceset="R0805" device="" value="4k7"/>
@@ -1367,9 +1367,9 @@ W = angled&lt;p&gt;
 <part name="SV5" library="moje_hrebinky" deviceset="MA02-2" device=""/>
 <part name="U$12" library="moje_schz" deviceset="+3.3V" device=""/>
 <part name="SV6" library="moje_hrebinky" deviceset="MA07-2" device=""/>
-<part name="D2" library="moje_diody" deviceset="LED1206" device=""/>
-<part name="R13" library="moje_R" deviceset="R0805" device=""/>
-<part name="T5" library="moje_T" deviceset="BC817" device=""/>
+<part name="D2" library="moje_diody" deviceset="LED1206" device="" value="ZELENA"/>
+<part name="R13" library="moje_R" deviceset="R0805" device="" value="150R"/>
+<part name="T5" library="moje_T" deviceset="BC817" device="" value="BC817"/>
 <part name="R14" library="moje_R" deviceset="R0805" device=""/>
 <part name="GND16" library="moje" deviceset="GND" device=""/>
 <part name="SV7" library="moje_hrebinky" deviceset="MA02-1" device=""/>
@@ -1427,8 +1427,8 @@ W = angled&lt;p&gt;
 <wire x1="182.88" y1="-80.01" x2="182.88" y2="-13.97" width="0.1524" layer="97"/>
 <wire x1="182.88" y1="-13.97" x2="182.88" y2="55.88" width="0.1524" layer="97"/>
 <wire x1="182.88" y1="55.88" x2="182.88" y2="123.19" width="0.1524" layer="97"/>
-<wire x1="182.88" y1="123.19" x2="182.88" y2="176.53" width="0.1524" layer="97"/>
-<wire x1="182.88" y1="176.53" x2="12.7" y2="177.8" width="0.1524" layer="97"/>
+<wire x1="182.88" y1="123.19" x2="182.88" y2="177.8" width="0.1524" layer="97"/>
+<wire x1="182.88" y1="177.8" x2="12.7" y2="177.8" width="0.1524" layer="97"/>
 <wire x1="182.88" y1="123.19" x2="12.7" y2="123.19" width="0.1524" layer="97"/>
 <wire x1="182.88" y1="55.88" x2="12.7" y2="55.88" width="0.1524" layer="97"/>
 <wire x1="182.88" y1="-13.97" x2="148.59" y2="-13.97" width="0.1524" layer="97"/>
@@ -1438,7 +1438,7 @@ W = angled&lt;p&gt;
 <wire x1="148.59" y1="-13.97" x2="148.59" y2="-78.74" width="0.1524" layer="97"/>
 <wire x1="12.7" y1="177.8" x2="12.7" y2="185.42" width="0.1524" layer="97"/>
 <wire x1="12.7" y1="185.42" x2="182.88" y2="185.42" width="0.1524" layer="97"/>
-<wire x1="182.88" y1="185.42" x2="182.88" y2="176.53" width="0.1524" layer="97"/>
+<wire x1="182.88" y1="185.42" x2="182.88" y2="177.8" width="0.1524" layer="97"/>
 <text x="15.24" y="179.07" size="5.08" layer="97">GPS01A</text>
 <text x="48.26" y="179.07" size="5.08" layer="97">MLAB</text>
 <text x="69.85" y="179.07" size="5.08" layer="97">JACHO</text>
@@ -1469,8 +1469,14 @@ W = angled&lt;p&gt;
 <instance part="R3" gate="G$1" x="149.86" y="138.43" rot="R90"/>
 <instance part="GND6" gate="G$1" x="149.86" y="130.81"/>
 <instance part="U$4" gate="G$1" x="149.86" y="161.29"/>
-<instance part="T1" gate="A" x="67.31" y="101.6"/>
-<instance part="T2" gate="A" x="82.55" y="101.6"/>
+<instance part="T1" gate="A" x="67.31" y="101.6" smashed="yes">
+<attribute name="NAME" x="72.39" y="105.41" size="1.778" layer="95"/>
+<attribute name="VALUE" x="72.39" y="102.87" size="1.778" layer="96"/>
+</instance>
+<instance part="T2" gate="A" x="82.55" y="101.6" smashed="yes">
+<attribute name="NAME" x="90.17" y="102.87" size="1.778" layer="95"/>
+<attribute name="VALUE" x="90.17" y="100.33" size="1.778" layer="96"/>
+</instance>
 <instance part="R4" gate="G$1" x="57.15" y="101.6"/>
 <instance part="R5" gate="G$1" x="49.53" y="88.9" rot="R90"/>
 <instance part="R6" gate="G$1" x="69.85" y="88.9" rot="R90"/>
