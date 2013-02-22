@@ -1,5 +1,15 @@
 #include <main.h>
 
+/*
+MPL115A1 SDN - +5V (always power on)
+MPL115A1 CSN - PIN_C2
+MPL115A1 SDO - PIN_C4 (twisted?)
+MPL115A1 SDI - PIN_C5 (twisted?)
+MPL115A1 SCK - PIN_C3
+MPL115A1 GND - GND
+MPL115A1 VDD - +5V 
+*/
+
 #define CSN_SPI PIN_C2
 int8 address, uiTadc, data ;
 
