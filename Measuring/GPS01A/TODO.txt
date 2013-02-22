@@ -1,3 +1,14 @@
+Zrusit translacni tranzistory. Lze je nahradit odporovym delicem z +5V napajeni. Delic na USB_det by pak sel odpojit JUMPERem od 5V - v pripade pouziti 5V napajeni od jinud nez z USB.
+Na napajeni z USB zase pridat napajeci hrebinek, pojistku a tlumivku. 
+
+Translacni tranzistory na TXD nejsou treba vubec, protoze s modulem se bude vzdycky komunikovat v 3,3V logice.
+
+Pouzdro na zalohovaci baterii je mozna zbytecne taky.  Na horni strane modulu je dost mista na to, aby tam sla pripojit baterie na hrebinek 2x1. Plosky na pouzdro tam asi muzou zustat. Ale hrebinek by tam chtelo pridat.. 
+
+
+Vystup TIMEPULSE a hrebinek musi u sebe mit i GND (aby se dala udrzet vyoka kvalita signalu, z tohodle se prave odvozuji presne hodiny) Navrhoval bych konfiguraci hrebinku 2x2. 
+
+
 Konkurence:
 http://www.csgshop.com/product.php?id_product=35
 
@@ -5,6 +16,5 @@ http://store.diydrones.com/3DR_GPS_LEA_6_p/br-3drlea-6.htm
 (+eagle data)
 
 
-Vyresit napajeni z USB podle kapitoly 2.6.2.1 v MAX-7_NEO-7_LEA-7_HardwareIntegrationManual_(GPS.G7-HW-11006).pdf
 
-pipojit antenu podle odstavce 3.1.3 
+
