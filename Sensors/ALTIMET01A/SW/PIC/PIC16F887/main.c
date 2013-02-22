@@ -1,7 +1,4 @@
-#include <16f887.h>
-#fuses HS, NOWDT, NOPROTECT, BROWNOUT, PUT, NOLVP
-#use delay(clock = 20000000)
-#use rs232(baud=57600, xmit=PIN_C6, rcv=PIN_C7)
+#include <main.h>
 
 #define CSN_SPI PIN_C2
 int8 address, uiTadc, data ;
