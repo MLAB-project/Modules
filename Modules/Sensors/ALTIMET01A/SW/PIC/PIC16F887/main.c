@@ -1,13 +1,13 @@
 #include <main.h>
 
 /*
-MPL115A1 SDN - +5V (always power on)
-MPL115A1 CSN - PIN_C2
-MPL115A1 SDO - PIN_C4 (twisted?)
-MPL115A1 SDI - PIN_C5 (twisted?)
-MPL115A1 SCK - PIN_C3
+MPL115A1 SDN - +3.3V (always power on)
+MPL115A1 #CS - PIN_C2
+MPL115A1 DOUT - PIN_C4 (twisted?)
+MPL115A1 DIN - PIN_C5 (twisted?)
+MPL115A1 SCLK - PIN_C3
 MPL115A1 GND - GND
-MPL115A1 VDD - +5V 
+MPL115A1 VDD - +3.3V 
 */
 
 #define CSN_SPI PIN_C2
@@ -23,7 +23,7 @@ int8 address, uiTadc, data ;
 
 void main()
 {
-printf("Start\n\r");
+printf("Start \r\n");
 
 setup_spi(SPI_MASTER | SPI_MODE_0 | SPI_CLK_DIV_64);
 
@@ -61,7 +61,7 @@ delay_ms(100);
    delay_ms(1);
    output_high(CSN_SPI);
 
-   printf("%u\n\r", data);
+   printf("%u \r\n", data);
 
    //uiTadc = (unsigned int) data << 8;
    //printf("%u\n\r", uiTadc);
