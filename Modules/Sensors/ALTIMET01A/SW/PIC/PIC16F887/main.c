@@ -56,10 +56,13 @@ unsigned int8 c12_MSB, c12_LSB;
    spi_read(0x00);
    output_high(CSN_SPI);
    
-   a0 = (a0_MSB << 5) + (a0_LSB >> 3) + (a0_LSB & 0x07)/8.0;
+   a0 = ((unsigned int16) a0_MSB << 5) + (a0_LSB >> 3) + (a0_LSB & 0x07)/8.0;
    b1 = ((((b1_MSB & 0x1F) * 0x100) + b1_LSB) / 8192.0) - 3;
-   b2 = ((((b2_MSB - 0x80) << 8) + b2_LSB)/ 16384.0) - 2;
+   b2 = ((((unsigned int16) (b2_MSB - 0x80) << 8) + b2_LSB)/ 16384.0) - 2;
    c12 =(((c12_MSB * 0x100) + c12_LSB)/16777216.0);
+
+   printf("%4.3f %1.5f %1.5f %1.9f \r\n", a0, b1, b2, c12);
+
 }
 
 float MPL_get_pressure()
@@ -82,7 +85,6 @@ float Pcomp;
    LSB_data = spi_read(0x00);
    output_high(CSN_SPI);
 
-   printf("%lX  %lX\r\n", MSB_data, LSB_data);       
    ADC_pressure = (((unsigned int16) MSB_data << 8) + LSB_data ) >> 6;  // conversion of 8bit registers to 16bit variable 
 
    output_low(CSN_SPI);
@@ -93,12 +95,13 @@ float Pcomp;
    spi_read(0x00);
    output_high(CSN_SPI);
 
-   printf("%lX  %lX\r\n", MSB_data, LSB_data);       
    ADC_temperature = (((unsigned int16) MSB_data << 8) + LSB_data ) >> 6;  // conversion of 8bit registers to 16bit variable 
 
    printf("%lu  %lu \r\n", ADC_pressure, ADC_temperature);
    
    Pcomp = (a0 + (b1 + c12 * ADC_temperature) * ADC_pressure + b2 * ADC_temperature );
+
+   printf("%f \r\n", Pcomp);
 
    return (Pcomp * ((115.0 - 50.0)/1023.0) + 50.0);
 }
