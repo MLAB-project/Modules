@@ -18,10 +18,10 @@ MPL115A1 VDD - +3.3V
 #define SPI_MODE_2  (SPI_H_TO_L)
 #define SPI_MODE_3  (SPI_H_TO_L | SPI_XMIT_L_TO_H)
 
-unsigned int16 a0;
-unsigned int16 b1;
-unsigned int16 b2;
-unsigned int16 c12;
+signed int16 a0;
+signed int16 b1;
+signed int16 b2;
+signed int16 c12;
 
 
 int MPL_init()
@@ -64,24 +64,27 @@ unsigned int8 c12_MSB, c12_LSB;
 
 float MPL_get_pressure()
 {   
-int8 LSB_data, MSB_data;
-int16 ADC_pressure, ADC_temperature;
+unsigned int8 LSB_data, MSB_data;
+unsigned int16 ADC_pressure, ADC_temperature;
 
    output_low(CSN_SPI);        //Start temperature and pressure conversion
    spi_write(0x24);
    spi_write(0x00);
    output_high(CSN_SPI);
 
-   delay_ms(3);
+   delay_ms(10);
          
    output_low(CSN_SPI);     // get MSB for Pressure
    spi_write(0x80);
    LSB_data = spi_read(0x00);
    spi_write(0x82);              // get LSB for Pressure
    MSB_data = spi_read(0x00);
+   output_high(CSN_SPI);
 
+   printf("%lX  %lX\r\n", MSB_data, LSB_data);       
    ADC_pressure = ((int16) MSB_data << 8) + LSB_data;  // conversion of 8bit registers to 16bit variable 
 
+   output_low(CSN_SPI);
    spi_write(0x84);
    LSB_data = spi_read(0x00);
    spi_write(0x86);              // get LSB for Temperature
@@ -89,9 +92,10 @@ int16 ADC_pressure, ADC_temperature;
    spi_read(0x00);
    output_high(CSN_SPI);
 
+   printf("%lX  %lX\r\n", MSB_data, LSB_data);       
    ADC_temperature = ((int16) MSB_data << 8) + LSB_data;  // conversion of 8bit registers to 16bit variable 
 
-//   printf("%lX  %lX\r\n", ADC_pressure, ADC_temperature);       
+   printf("%lX  %lX\r\n", ADC_pressure, ADC_temperature);       
 
    return (a0 + (b1 + c12 * ADC_temperature) * ADC_pressure + b2 * ADC_temperature );
 }
@@ -107,7 +111,11 @@ void main()
 
    while(true)
    {
-      printf("%f \r\n", MPL_get_pressure());
-      delay_ms(100);
+//   MPL_init();
+//      printf("%f \r\n", MPL_get_pressure());
+//      printf("%ld %ld %ld %ld \r\n",a0, b1, b2, c12);
+MPL_get_pressure();
+
+      delay_ms(500);
    }
 }
