@@ -1,16 +1,16 @@
-ï»¿[InfoShortDescription.cs]
-TlakovÃ½ vÃ½Å¡komÄ›r a barometr
+[InfoShortDescription.cs]
+2x H-mùstek 2V - 11V
 
-ï»¿[InfoShortDescription.en]
-Preasure altimeter sensor
+?[InfoShortDescription.en]
+2x H-bridge 2V - 11V
 
 [InfoLongDescription.en]
-Breakout board for MPL115A1 or MPL115A2 integrated sensor chips. The sendor is capable to measure absolute pressure and temperature. It can be connectod to I2C bus. 
+H-bridge-based ICs DRV8835HB. Allows you to control two DC motors in the range voltage 2V to 11V and maximum current of 1.5 A on the engine, or parallel, where it is then possible to control the 3A engine. Or the module can be used to control a stepper motor. 
 
 [InfoLongDescription.cs]
-ÄŒidlo pro pÅ™esnÃ© mÄ›Å™enÃ­ vÃ½Å¡ky, tlaku a teploty s integrovanÃ½m obvodem MPL115A1 nebo MPL115A2.
+H-mùstek založený na IO DRV8835HB. Umožòuje øídit dva stejnosmìrné motory v rozmìtí napìtí 2V až 11V a maximálním proudem na motor 1,5A, nebo paralelní zapojení, kde je pak možné øídit 3A motor. Nebo je možné modul využít pro øízení jednoho krokového motoru.
 
 
 [InfoBuyUST]
-http://www.ust.cz/shop/product_info.php?cPath=22_28&products_id=185
+
 [End]
