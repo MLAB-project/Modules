@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -5980,11 +5980,11 @@ W = angled&lt;p&gt;
 <rectangle x1="4.826" y1="1.016" x2="5.334" y2="1.524" layer="51"/>
 <circle x="-6.35" y="-2.54" radius="0.127" width="0.127" layer="21"/>
 </package>
-<package name="SMD_SMA04-1">
-<smd name="3" x="0" y="-1" dx="1.2" dy="2" layer="1" rot="R90"/>
-<smd name="2" x="0" y="1" dx="1.2" dy="2" layer="1" rot="R90"/>
-<smd name="1" x="0" y="3" dx="1.2" dy="2" layer="1" rot="R90"/>
-<smd name="4" x="0" y="-3" dx="1.2" dy="2" layer="1" rot="R90"/>
+<package name="SMD_MA04-1">
+<smd name="3" x="0" y="-1" dx="1.2" dy="4" layer="1" rot="R90"/>
+<smd name="2" x="0" y="1" dx="1.2" dy="4" layer="1" rot="R90"/>
+<smd name="1" x="0" y="3" dx="1.2" dy="4" layer="1" rot="R90"/>
+<smd name="4" x="0" y="-3" dx="1.2" dy="4" layer="1" rot="R90"/>
 </package>
 </packages>
 <symbols>
@@ -6032,15 +6032,15 @@ W = angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="SMD_SMA04-01" prefix="SV" uservalue="yes">
+<deviceset name="SMD_MA04-01" prefix="SV" uservalue="yes">
 <gates>
-<gate name="-1" symbol="MA01-0" x="2.54" y="10.16"/>
-<gate name="-2" symbol="MA01-0" x="2.54" y="5.08"/>
-<gate name="-3" symbol="MA01-0" x="2.54" y="-2.54"/>
-<gate name="-4" symbol="MA01-0" x="2.54" y="-7.62"/>
+<gate name="-1" symbol="MA01-0" x="0" y="7.62"/>
+<gate name="-2" symbol="MA01-0" x="0" y="2.54"/>
+<gate name="-3" symbol="MA01-0" x="0" y="-2.54"/>
+<gate name="-4" symbol="MA01-0" x="0" y="-7.62"/>
 </gates>
 <devices>
-<device name="" package="SMD_SMA04-1">
+<device name="" package="SMD_MA04-1">
 <connects>
 <connect gate="-1" pin="P$1" pad="1"/>
 <connect gate="-2" pin="P$1" pad="2"/>
@@ -6097,19 +6097,19 @@ W = angled&lt;p&gt;
 </class>
 </classes>
 <parts>
-<part name="C1" library="rcl" deviceset="C-EU" device="C0805"/>
+<part name="C1" library="rcl" deviceset="C-EU" device="C0603"/>
 <part name="NAP1" library="PaJa_22" deviceset="+VCC" device=""/>
 <part name="GND1" library="PaJa_22" deviceset="GND" device=""/>
-<part name="R1" library="rcl" deviceset="R-EU_" device="R0805" value="10k"/>
-<part name="R2" library="rcl" deviceset="R-EU_" device="R0805" value="10k"/>
+<part name="R1" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="R2" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="NAP2" library="PaJa_22" deviceset="+VCC" device=""/>
 <part name="NAP3" library="PaJa_22" deviceset="+VCC" device=""/>
 <part name="X1" library="moje_cidla" deviceset="SHT25" device="" value="SHT25"/>
 <part name="SV1" library="moje_hrebinky" deviceset="MA05-2" device=""/>
-<part name="R3" library="rcl" deviceset="R-EU_" device="R0805" value="0R"/>
+<part name="R3" library="rcl" deviceset="R-EU_" device="R0603" value="0R"/>
 <part name="X2" library="moje" deviceset="SROUB3M" device=""/>
-<part name="SV3" library="moje_hrebinky" deviceset="SMD_SMA04-01" device=""/>
 <part name="GND2" library="PaJa_22" deviceset="GND" device=""/>
+<part name="SV2" library="moje_hrebinky" deviceset="SMD_MA04-01" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6148,11 +6148,11 @@ W = angled&lt;p&gt;
 <instance part="SV1" gate="-5" x="-46.99" y="-2.54" rot="R180"/>
 <instance part="R3" gate="G$1" x="8.89" y="-11.43"/>
 <instance part="X2" gate="P4" x="50.8" y="-38.1"/>
-<instance part="SV3" gate="-1" x="-45.72" y="-27.94"/>
-<instance part="SV3" gate="-2" x="-45.72" y="-22.86"/>
-<instance part="SV3" gate="-3" x="-45.72" y="-17.78"/>
-<instance part="SV3" gate="-4" x="-45.72" y="-12.7"/>
 <instance part="GND2" gate="ZEM" x="43.18" y="-40.64"/>
+<instance part="SV2" gate="-1" x="-45.72" y="-27.94"/>
+<instance part="SV2" gate="-2" x="-45.72" y="-22.86"/>
+<instance part="SV2" gate="-3" x="-45.72" y="-17.78"/>
+<instance part="SV2" gate="-4" x="-45.72" y="-12.7"/>
 </instances>
 <busses>
 </busses>
@@ -6182,12 +6182,10 @@ W = angled&lt;p&gt;
 <pinref part="SV1" gate="-3" pin="K"/>
 <wire x1="-41.91" y1="12.7" x2="-34.29" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="-34.29" y1="12.7" x2="-29.21" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="-39.37" y1="-22.86" x2="-38.1" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="-38.1" y1="-22.86" x2="-34.29" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="-34.29" y1="-22.86" x2="-34.29" y2="12.7" width="0.1524" layer="91"/>
 <junction x="-34.29" y="12.7"/>
-<pinref part="SV3" gate="-2" pin="P$1"/>
-<wire x1="-39.37" y1="-22.86" x2="-45.72" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-34.29" y1="-22.86" x2="-45.72" y2="-22.86" width="0.1524" layer="91"/>
+<pinref part="SV2" gate="-2" pin="P$1"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -6210,8 +6208,8 @@ W = angled&lt;p&gt;
 <wire x1="-39.37" y1="-2.54" x2="-29.21" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="-39.37" y1="-12.7" x2="-39.37" y2="-2.54" width="0.1524" layer="91"/>
 <junction x="-39.37" y="-2.54"/>
-<pinref part="SV3" gate="-4" pin="P$1"/>
 <wire x1="-45.72" y1="-12.7" x2="-39.37" y2="-12.7" width="0.1524" layer="91"/>
+<pinref part="SV2" gate="-4" pin="P$1"/>
 </segment>
 <segment>
 <pinref part="X2" gate="P4" pin="P$1"/>
@@ -6223,12 +6221,10 @@ W = angled&lt;p&gt;
 <pinref part="SV1" gate="-2" pin="K"/>
 <wire x1="-41.91" y1="20.32" x2="-31.75" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="-31.75" y1="20.32" x2="-29.21" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="-39.37" y1="-27.94" x2="-38.1" y2="-27.94" width="0.1524" layer="91"/>
-<wire x1="-38.1" y1="-27.94" x2="-31.75" y2="-27.94" width="0.1524" layer="91"/>
 <wire x1="-31.75" y1="-27.94" x2="-31.75" y2="20.32" width="0.1524" layer="91"/>
 <junction x="-31.75" y="20.32"/>
-<pinref part="SV3" gate="-1" pin="P$1"/>
-<wire x1="-39.37" y1="-27.94" x2="-45.72" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="-31.75" y1="-27.94" x2="-45.72" y2="-27.94" width="0.1524" layer="91"/>
+<pinref part="SV2" gate="-1" pin="P$1"/>
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
@@ -6253,8 +6249,8 @@ W = angled&lt;p&gt;
 <wire x1="-36.83" y1="5.08" x2="-29.21" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="-36.83" y1="-17.78" x2="-36.83" y2="5.08" width="0.1524" layer="91"/>
 <junction x="-36.83" y="5.08"/>
-<pinref part="SV3" gate="-3" pin="P$1"/>
 <wire x1="-45.72" y1="-17.78" x2="-36.83" y2="-17.78" width="0.1524" layer="91"/>
+<pinref part="SV2" gate="-3" pin="P$1"/>
 </segment>
 </net>
 <net name="N$1" class="0">
