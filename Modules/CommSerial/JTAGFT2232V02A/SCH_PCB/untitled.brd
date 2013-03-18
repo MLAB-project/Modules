@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2148,7 +2148,7 @@ W = angled&lt;p&gt;
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules>
+<designrules name="default">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
@@ -4393,15 +4393,6 @@ design rules under a new name.</description>
 <wire x1="72.644" y1="40.132" x2="69.784" y2="40.132" width="0.254" layer="16"/>
 </signal>
 </signals>
-<errors>
-<approved hash="11,16,0d892ba8d7b6f197"/>
-<approved hash="11,16,efc3a9c915a553af"/>
-<approved hash="4,16,ff978a077459c9cd"/>
-<approved hash="4,16,3fa088009a58e5fc"/>
-<approved hash="4,16,ca7ade6611ae05a9"/>
-<approved hash="4,16,4d0cafaf5d0fbeac"/>
-<approved hash="4,16,689d5f52aef79838"/>
-</errors>
 </board>
 </drawing>
 </eagle>
