@@ -1,16 +1,18 @@
-Chyby v zapojeni:
 
-	- Chybi ochranna zenerova dioda na vystupu nabijeciho obvodu. 
-	- I2C vystup ma nebezpecne nechranene napajeni. (Navic neni zvykem u slave zarizeni davat k dizpozici napajeci napeti) Reseni bud je do napajeni dat pojistku. A nebo zrusit tento typ vyvedeni I2C a zapojit jej pouze jako hrabinek 2x2 stejne jako napriklad na CLKGEN01B
-	- Ochranny obvod neodpoji akumulator uplne.. Lepsi by bylo, kdyby nevratna pojistka byla zarazena co nejblize k baterii a daokazala tak vyresit treba o pripadny zkrat nektere cesty na spodu modulu. 
-	-Alespon jeden napajeci vystup by mel byt umisteny tak, aby byl pred mericim odporem nabijeciho obvodu. Coz umozni nabijecimu obvodu nabit akumulator i v pripade, ze bude cele zarizeni zapojeno do nejakeho systemu.  
+Odpojovaci tranzistor IRLML6244 je skutecne P-FET? On ale nesmi za normalniho provozu sepnout..
 
+Proc je na vystupu hrebinek 2x4, kdyz tam nikdy nebude napajeci napeti vetsi, nez 5V? 
+Ma tam byt 2x3.
 
 Na PCB:
 
-Lepe sloucit hrebinky (Idealne uplne zrusit samostatne 2x1)
+Nechapu, jak je aktualne myslene umisteni mericiho termistoru, protoze jednoclankove pouzdro je ze spodu pokud vim hladke..   tormistory by ale osi sli dat dat do der misto upovnovacich sruobu, ktere stejne asi nebudeme pouzivat.. 
 
 Termistor u mericiho obvodu umistit tak, aby cidlo bylo mozne vsunout co nejblize akumulatoru. A obvod tak meril co nejpresneji teplotu akumulatoru. Protoze je teo jedna z velicin, ktera se pouziva pri vypoctu zbytkove energie v akumulatoru.  U nabijeciho obvodu to uz tak kriticke neni, protoze tam ma termistor spise bezpecnostni funkci.. 
+
+
+Pak taky nevim, jestli je u te civky skutecne nutne, abu tam byla takova smycka.. to bude hrozne zarit.. 
+
 
 Modul bude muset pravdepodobne byt lakovany, aby se zmensila sance zkratu na cestach modulu. 
 
