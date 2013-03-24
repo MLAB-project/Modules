@@ -3377,12 +3377,12 @@ W = angled&lt;p&gt;
 </classes>
 <parts>
 <part name="U6" library="DP-EagleLibrary" deviceset="93C46" device="" value="93C46"/>
-<part name="U2" library="dp_devices" deviceset="FT2232H" device=""/>
+<part name="U2" library="dp_devices" deviceset="FT2232H" device="" value="FT2232H"/>
 <part name="U3" library="fpga" deviceset="XC2C64A" device=""/>
 <part name="3.3V14" library="supply1" deviceset="+3V3" device="" value="3.3V"/>
 <part name="U4" library="40xx" deviceset="4066" device="D"/>
 <part name="U5" library="40xx" deviceset="4066" device="D"/>
-<part name="U1" library="dp_devices" deviceset="LD1117-3.3" device="SOT223"/>
+<part name="U1" library="dp_devices" deviceset="LD1117-3.3" device="SOT223" value="LD1117-3.3V"/>
 <part name="X1" library="moje_konektory" deviceset="USB_B" device=""/>
 <part name="U$1" library="moje_schz" deviceset="GND" device=""/>
 <part name="C28" library="moje_C" deviceset="C0805" device="" value="100nF"/>
@@ -3527,6 +3527,7 @@ W = angled&lt;p&gt;
 <sheet>
 <plain>
 <text x="-86.36" y="2.54" size="1.778" layer="91" font="vector">AC5 is clock out for LA</text>
+<text x="124.46" y="40.64" size="2.1844" layer="95">XC2C64A</text>
 </plain>
 <instances>
 <instance part="U6" gate="G$1" x="-53.34" y="-106.68"/>
@@ -3545,7 +3546,10 @@ W = angled&lt;p&gt;
 <instance part="U5" gate="C" x="25.4" y="-27.94"/>
 <instance part="U5" gate="D" x="25.4" y="-45.72"/>
 <instance part="U5" gate="P" x="39.37" y="27.94"/>
-<instance part="U1" gate="G$1" x="-109.22" y="99.06"/>
+<instance part="U1" gate="G$1" x="-109.22" y="99.06" smashed="yes">
+<attribute name="NAME" x="-119.38" y="111.76" size="1.4224" layer="95" ratio="10"/>
+<attribute name="VALUE" x="-111.76" y="111.76" size="1.4224" layer="96" ratio="10"/>
+</instance>
 <instance part="X1" gate="G$1" x="-180.34" y="101.6"/>
 <instance part="U$1" gate="G$1" x="-172.72" y="96.52"/>
 <instance part="C28" gate="G$1" x="-129.54" y="101.6"/>
