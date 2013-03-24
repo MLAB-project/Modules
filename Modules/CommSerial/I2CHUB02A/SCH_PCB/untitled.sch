@@ -1987,11 +1987,8 @@ W = angled&lt;p&gt;
 </segment>
 <segment>
 <pinref part="SV4" gate="-3" pin="P$1"/>
-<wire x1="269.24" y1="80.01" x2="287.02" y2="80.01" width="0.1524" layer="91"/>
-<wire x1="287.02" y1="80.01" x2="289.56" y2="80.01" width="0.1524" layer="91"/>
+<wire x1="269.24" y1="80.01" x2="289.56" y2="80.01" width="0.1524" layer="91"/>
 <wire x1="289.56" y1="80.01" x2="289.56" y2="100.33" width="0.1524" layer="91"/>
-<wire x1="287.02" y1="80.01" x2="287.02" y2="66.04" width="0.1524" layer="91"/>
-<junction x="287.02" y="80.01"/>
 <pinref part="U$17" gate="G$1" pin="+V1"/>
 </segment>
 <segment>
