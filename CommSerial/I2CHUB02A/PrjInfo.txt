@@ -1,13 +1,13 @@
-﻿[InfoShortDescription.en]
-Simple IR reflexive sensor.
+[InfoShortDescription.en]
+HUB for I2C bus.
 
 [InfoShortDescription.cs]
-Jednoduche reflexivni cidlo.
+HUB pro I2C sběrnici.
 
 [InfoLongDescription.en]
-
+Allows you to connect up to 8 I2C devices. Solution for connecting multiple I2C sensors with the same address on one bus. Possible to combine other voltage levels.
 
 [InfoLongDescription.cs]
-Čidlo obsahuje pouze reflexní optron s odporovým trimrem a slouží k rozlišování tmavého a světlého povrchu. Dá se použít jak pro detekci čáry pro čárového robota tak i pro snímání otáčení pohonných kol.
+Umožňuje připojit až 8 I2C zařízení. Řešení pro připojení více I2C senzorů se stejnou adresou na jednu sběrnici. Možno kombinovat i jiné napěťové úrovně.
 
 [End]
