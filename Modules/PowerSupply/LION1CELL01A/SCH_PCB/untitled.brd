@@ -1154,7 +1154,7 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="60.96" y="-13.97" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="31.75" y="0.889" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="L1" library="moje_L" package="DE1205-10" value="" x="23.235" y="26.885" smashed="yes" rot="MR270">
+<element name="L1" library="moje_L" package="DE1205-10" value="DE1205-10" x="23.235" y="26.885" smashed="yes" rot="MR270">
 <attribute name="NAME" x="19.425" y="30.695" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="28.315" y="30.695" size="1.27" layer="28" rot="MR270"/>
 </element>
@@ -1174,15 +1174,15 @@ design rules under a new name.</description>
 <attribute name="NAME" x="41.248" y="26.129" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="40.71" y="25.945" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="R13" library="moje_R" package="0805" value="1k5" x="12.065" y="10.16" smashed="yes" rot="MR90">
+<element name="R13" library="moje_R" package="0805" value="270R" x="12.065" y="10.16" smashed="yes" rot="MR90">
 <attribute name="NAME" x="14.565" y="12.013" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="9.525" y="9.525" size="1.27" layer="28" rot="MR90"/>
 </element>
-<element name="R14" library="moje_R" package="0805" value="1k5" x="15.875" y="10.16" smashed="yes" rot="MR90">
+<element name="R14" library="moje_R" package="0805" value="270R" x="15.875" y="10.16" smashed="yes" rot="MR90">
 <attribute name="NAME" x="18.27" y="12.034" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="13.335" y="9.525" size="1.27" layer="28" rot="MR90"/>
 </element>
-<element name="R15" library="moje_R" package="0805" value="1k5" x="19.685" y="10.16" smashed="yes" rot="MR90">
+<element name="R15" library="moje_R" package="0805" value="270R" x="19.685" y="10.16" smashed="yes" rot="MR90">
 <attribute name="NAME" x="22.056" y="12.172" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="17.145" y="9.525" size="1.27" layer="28" rot="MR90"/>
 </element>
@@ -1206,7 +1206,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="26.774" y="20.252" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="30.51" y="19.44" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="D2" library="moje" package="SMB" value="" x="20.58" y="38.93" smashed="yes" rot="MR0">
+<element name="D2" library="moje" package="SMB" value="M4" x="20.58" y="38.93" smashed="yes" rot="MR0">
 <attribute name="NAME" x="24.963" y="39.965" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="22.485" y="35.501" size="1.27" layer="28" rot="MR0"/>
 </element>
@@ -1308,23 +1308,23 @@ design rules under a new name.</description>
 <element name="D12" library="moje_diody" package="1206_2" value="" x="47.625" y="5.08" smashed="yes" rot="MR0">
 <attribute name="NAME" x="47.22" y="0.1" size="1.27" layer="26" rot="MR90"/>
 </element>
-<element name="R20" library="moje_R" package="0805" value="330R" x="62.865" y="9.525" smashed="yes" rot="MR270">
+<element name="R20" library="moje_R" package="0805" value="270R" x="62.865" y="9.525" smashed="yes" rot="MR270">
 <attribute name="NAME" x="61.979" y="10.801" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="65.405" y="10.16" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="R22" library="moje_R" package="0805" value="330R" x="58.42" y="8.89" smashed="yes" rot="MR180">
+<element name="R22" library="moje_R" package="0805" value="270R" x="58.42" y="8.89" smashed="yes" rot="MR180">
 <attribute name="NAME" x="56.546" y="11.292" size="1.27" layer="26" rot="MR180"/>
 <attribute name="VALUE" x="57.785" y="11.43" size="1.27" layer="28" rot="MR180"/>
 </element>
-<element name="R23" library="moje_R" package="0805" value="330R" x="55.245" y="9.525" smashed="yes" rot="MR270">
+<element name="R23" library="moje_R" package="0805" value="270R" x="55.245" y="9.525" smashed="yes" rot="MR270">
 <attribute name="NAME" x="53.975" y="10.16" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="57.785" y="10.16" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="R24" library="moje_R" package="0805" value="330R" x="51.435" y="9.525" smashed="yes" rot="MR270">
+<element name="R24" library="moje_R" package="0805" value="270R" x="51.435" y="9.525" smashed="yes" rot="MR270">
 <attribute name="NAME" x="50.165" y="10.16" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="53.975" y="10.16" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="R25" library="moje_R" package="0805" value="330R" x="47.625" y="9.525" smashed="yes" rot="MR270">
+<element name="R25" library="moje_R" package="0805" value="270R" x="47.625" y="9.525" smashed="yes" rot="MR270">
 <attribute name="NAME" x="46.355" y="10.16" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="50.165" y="10.16" size="1.27" layer="28" rot="MR270"/>
 </element>
@@ -1388,15 +1388,15 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="65.402" y="45.72" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="65.402" y="41.529" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="R5" library="moje_R" package="0805" value="" x="40.553" y="20.483" smashed="yes" rot="R180">
+<element name="R5" library="moje_R" package="0805" value="NCP21XV103J03RA" x="40.553" y="20.483" smashed="yes" rot="R180">
 <attribute name="NAME" x="39.654" y="18.037" size="1.27" layer="25"/>
 <attribute name="VALUE" x="41.188" y="23.023" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="D6" library="moje_diody" package="MINIMELF" value="" x="20.6" y="35.52" smashed="yes" rot="MR0">
+<element name="D6" library="moje_diody" package="MINIMELF" value="ZSMD-5V6" x="20.6" y="35.52" smashed="yes" rot="MR0">
 <attribute name="NAME" x="24.687" y="36.551" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="22.251" y="33.107" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="R6" library="moje_R" package="0805" value="" x="49.87" y="20.41" rot="R180"/>
+<element name="R6" library="moje_R" package="0805" value="NCP21XV103J03RA" x="49.87" y="20.41" rot="R180"/>
 <element name="SV2" library="moje_hrebinky" package="MA03-2" value="" x="42.35" y="45.72" smashed="yes">
 <attribute name="OC_NEWARK" value="unknown" x="42.35" y="45.72" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="42.35" y="45.72" size="1.778" layer="27" display="off"/>

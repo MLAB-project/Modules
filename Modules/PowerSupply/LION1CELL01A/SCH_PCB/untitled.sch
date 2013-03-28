@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1.27" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -1783,7 +1783,7 @@ W = angled&lt;p&gt;
 <parts>
 <part name="U1" library="bq24103" deviceset="BQ24103" device=""/>
 <part name="SV4" library="moje_hrebinky" deviceset="MA05-2" device=""/>
-<part name="L1" library="moje_L" deviceset="DE1205-10" device=""/>
+<part name="L1" library="moje_L" deviceset="DE1205-10" device="" value="DE1205-10"/>
 <part name="U$2" library="moje_baterky" deviceset="LION1" device=""/>
 <part name="U$4" library="moje_schz" deviceset="PIN" device="" value="+BAT"/>
 <part name="U$5" library="moje_schz" deviceset="PIN" device="" value="-BAT"/>
@@ -1791,15 +1791,15 @@ W = angled&lt;p&gt;
 <part name="C7" library="moje_C" deviceset="B" device="" value="10uF"/>
 <part name="R11" library="moje_R" deviceset="R0805" device="" value="10k"/>
 <part name="R12" library="moje_R" deviceset="R0805" device="" value="10k"/>
-<part name="R13" library="moje_R" deviceset="R0805" device="" value="1k5"/>
-<part name="R14" library="moje_R" deviceset="R0805" device="" value="1k5"/>
-<part name="R15" library="moje_R" deviceset="R0805" device="" value="1k5"/>
+<part name="R13" library="moje_R" deviceset="R0805" device="" value="270R"/>
+<part name="R14" library="moje_R" deviceset="R0805" device="" value="270R"/>
+<part name="R15" library="moje_R" deviceset="R0805" device="" value="270R"/>
 <part name="R16" library="moje_R" deviceset="R0805" device="" value="442k"/>
 <part name="R17" library="moje_R" deviceset="R0805" device="" value="9k31"/>
 <part name="R18" library="moje_R" deviceset="R0805" device="" value="7k5"/>
 <part name="R19" library="moje_R" deviceset="R0805" device="" value="7k5"/>
 <part name="R21" library="moje_R" deviceset="R0805" device="" value="0R1"/>
-<part name="D2" library="moje" deviceset="D-OB." device=""/>
+<part name="D2" library="moje" deviceset="D-OB." device="" value="M4"/>
 <part name="D1" library="moje_diody" deviceset="LED1206_2" device=""/>
 <part name="D3" library="moje_diody" deviceset="LED1206_2" device=""/>
 <part name="D4" library="moje_diody" deviceset="LED1206_2" device=""/>
@@ -1852,11 +1852,11 @@ W = angled&lt;p&gt;
 <part name="D10" library="moje_diody" deviceset="LED1206_2" device=""/>
 <part name="D11" library="moje_diody" deviceset="LED1206_2" device=""/>
 <part name="D12" library="moje_diody" deviceset="LED1206_2" device=""/>
-<part name="R20" library="moje_R" deviceset="R0805" device="" value="330R"/>
-<part name="R22" library="moje_R" deviceset="R0805" device="" value="330R"/>
-<part name="R23" library="moje_R" deviceset="R0805" device="" value="330R"/>
-<part name="R24" library="moje_R" deviceset="R0805" device="" value="330R"/>
-<part name="R25" library="moje_R" deviceset="R0805" device="" value="330R"/>
+<part name="R20" library="moje_R" deviceset="R0805" device="" value="270R"/>
+<part name="R22" library="moje_R" deviceset="R0805" device="" value="270R"/>
+<part name="R23" library="moje_R" deviceset="R0805" device="" value="270R"/>
+<part name="R24" library="moje_R" deviceset="R0805" device="" value="270R"/>
+<part name="R25" library="moje_R" deviceset="R0805" device="" value="270R"/>
 <part name="GND27" library="moje" deviceset="GND" device=""/>
 <part name="U$12" library="moje_schz" deviceset="PIN" device="" value="+BAT"/>
 <part name="U$13" library="moje_schz" deviceset="PIN" device="" value="P1"/>
@@ -1888,10 +1888,10 @@ W = angled&lt;p&gt;
 <part name="U$1" library="moje_schz" deviceset="PIN" device="" value="R2-2"/>
 <part name="U$7" library="moje_schz" deviceset="PIN" device="" value="+BAT2"/>
 <part name="SV3" library="moje_hrebinky" deviceset="MA04-2" device=""/>
-<part name="R5" library="moje_R" deviceset="TERMISTOR0805" device=""/>
+<part name="R5" library="moje_R" deviceset="TERMISTOR0805" device="" value="NCP21XV103J03RA"/>
 <part name="GND21" library="moje" deviceset="GND" device=""/>
-<part name="D6" library="moje_diody" deviceset="D-ZENEROVA" device=""/>
-<part name="R6" library="moje_R" deviceset="TERMISTOR0805" device=""/>
+<part name="D6" library="moje_diody" deviceset="D-ZENEROVA" device="" value="ZSMD-5V6"/>
+<part name="R6" library="moje_R" deviceset="TERMISTOR0805" device="" value="NCP21XV103J03RA"/>
 <part name="SV2" library="moje_hrebinky" deviceset="MA03-2" device=""/>
 </parts>
 <sheets>
@@ -2057,8 +2057,14 @@ W = angled&lt;p&gt;
 <instance part="SV3" gate="-4" x="90.17" y="-8.89"/>
 <instance part="R5" gate="G$1" x="160.02" y="50.8" rot="R90"/>
 <instance part="GND21" gate="G$1" x="33.02" y="38.1"/>
-<instance part="D6" gate="G$1" x="104.14" y="76.2" rot="R90"/>
-<instance part="R6" gate="G$1" x="63.5" y="-12.7" rot="R90"/>
+<instance part="D6" gate="G$1" x="104.14" y="76.2" smashed="yes" rot="R90">
+<attribute name="VALUE" x="106.6799" y="76.835" size="1.6764" layer="96" rot="MR180"/>
+<attribute name="NAME" x="102.235" y="76.2" size="1.6764" layer="95" rot="R90"/>
+</instance>
+<instance part="R6" gate="G$1" x="63.5" y="-12.7" smashed="yes" rot="R90">
+<attribute name="NAME" x="62.0014" y="-16.51" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="67.9196" y="-29.464" size="1.778" layer="96" rot="R90"/>
+</instance>
 <instance part="SV2" gate="-1" x="81.28" y="-102.87"/>
 <instance part="SV2" gate="-2" x="81.28" y="-110.49"/>
 <instance part="SV2" gate="-3" x="81.28" y="-116.84"/>
