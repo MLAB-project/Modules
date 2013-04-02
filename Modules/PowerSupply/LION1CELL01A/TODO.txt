@@ -1,18 +1,12 @@
+Opravit tlacitko.
+Zkontrolovat zda hlidaci obvod neni zrcadlovì.
+Pøidat popisku k WAGU + - a OUT
 
-Odpojovaci tranzistor IRLML6244 je skutecne P-FET? On ale nesmi za normalniho provozu sepnout..
-
-Proc je na vystupu hrebinek 2x4, kdyz tam nikdy nebude napajeci napeti vetsi, nez 5V? 
-Ma tam byt 2x3.
-
-Na PCB:
-
-Nechapu, jak je aktualne myslene umisteni mericiho termistoru, protoze jednoclankove pouzdro je ze spodu pokud vim hladke..   tormistory by ale osi sli dat dat do der misto upovnovacich sruobu, ktere stejne asi nebudeme pouzivat.. 
-
-Termistor u mericiho obvodu umistit tak, aby cidlo bylo mozne vsunout co nejblize akumulatoru. A obvod tak meril co nejpresneji teplotu akumulatoru. Protoze je teo jedna z velicin, ktera se pouziva pri vypoctu zbytkove energie v akumulatoru.  U nabijeciho obvodu to uz tak kriticke neni, protoze tam ma termistor spise bezpecnostni funkci.. 
+r21 0,1 nahradit 2512 
+r2 0,01 nahradit 1206
 
 
-Pak taky nevim, jestli je u te civky skutecne nutne, abu tam byla takova smycka.. to bude hrozne zarit.. 
-
+pull-up???
 
 V PrjInfo doplnit cesky popis.
 
