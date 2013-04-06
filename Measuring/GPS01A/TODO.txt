@@ -1,14 +1,12 @@
-Zrusit translacni tranzistory. Lze je nahradit odporovym delicem z +5V napajeni. Delic na USB_det by pak sel odpojit JUMPERem od 5V - v pripade pouziti 5V napajeni od jinud nez z USB.
-Na napajeni z USB zase pridat napajeci hrebinek, pojistku a tlumivku. 
-
-Translacni tranzistory na TXD nejsou treba vubec, protoze s modulem se bude vzdycky komunikovat v 3,3V logice.
-
-Pouzdro na zalohovaci baterii je mozna zbytecne taky.  Na horni strane modulu je dost mista na to, aby tam sla pripojit baterie na hrebinek 2x1. Plosky na pouzdro tam asi muzou zustat. Ale hrebinek by tam chtelo pridat.. 
 
 
-Vystup TIMEPULSE a hrebinek musi u sebe mit i GND (aby se dala udrzet vyoka kvalita signalu, z tohodle se prave odvozuji presne hodiny) Navrhoval bych konfiguraci hrebinku 2x2. 
 
-Diodu prohozená popiska u Vsuply usb a externí
+
+
+
+
+
+
 
 
 Asi zbytecne velke diry na SMA konektor.
