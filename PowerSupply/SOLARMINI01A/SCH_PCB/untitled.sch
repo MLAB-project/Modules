@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -687,7 +687,6 @@ W = angled&lt;p&gt;
 <part name="X3" library="moje" deviceset="SROUB3M" device=""/>
 <part name="X4" library="moje" deviceset="SROUB3M" device=""/>
 <part name="X5" library="moje" deviceset="SROUB3M" device=""/>
-<part name="GND8" library="moje" deviceset="GND" device=""/>
 <part name="R6" library="moje_R" deviceset="R1206" device="" value="0R"/>
 <part name="R3" library="moje_R" deviceset="R1206" device="" value="0R"/>
 <part name="D2" library="moje_diody" deviceset="D-SHOTKY-SMA" device=""/>
@@ -738,7 +737,6 @@ W = angled&lt;p&gt;
 <instance part="X3" gate="P4" x="-12.7" y="12.7"/>
 <instance part="X4" gate="P4" x="-12.7" y="5.08"/>
 <instance part="X5" gate="P4" x="-12.7" y="-2.54"/>
-<instance part="GND8" gate="G$1" x="-20.32" y="-7.62"/>
 <instance part="R6" gate="G$1" x="55.88" y="35.56"/>
 <instance part="R3" gate="G$1" x="0" y="60.96"/>
 <instance part="D2" gate="G$1" x="-20.32" y="35.56" rot="R270"/>
@@ -831,20 +829,6 @@ W = angled&lt;p&gt;
 <pinref part="GND7" gate="G$1" pin="GND"/>
 <wire x1="83.82" y1="22.86" x2="82.55" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="82.55" y1="22.86" x2="82.55" y2="17.78" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="X2" gate="P4" pin="P$1"/>
-<wire x1="-20.32" y1="20.32" x2="-20.32" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="X3" gate="P4" pin="P$1"/>
-<junction x="-20.32" y="12.7"/>
-<wire x1="-20.32" y1="12.7" x2="-20.32" y2="5.08" width="0.1524" layer="91"/>
-<pinref part="X4" gate="P4" pin="P$1"/>
-<junction x="-20.32" y="5.08"/>
-<wire x1="-20.32" y1="5.08" x2="-20.32" y2="-2.54" width="0.1524" layer="91"/>
-<pinref part="X5" gate="P4" pin="P$1"/>
-<junction x="-20.32" y="-2.54"/>
-<wire x1="-20.32" y1="-2.54" x2="-20.32" y2="-7.62" width="0.1524" layer="91"/>
-<pinref part="GND8" gate="G$1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="C6" gate="G$1" pin="2"/>
