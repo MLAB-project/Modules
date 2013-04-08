@@ -8,10 +8,10 @@
 </settings>
 <grid distance="0.05" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
@@ -44,7 +44,7 @@
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tPadExt" color="7" fill="1" visible="no" active="no"/>
 <layer number="54" name="bPadExt" color="1" fill="1" visible="no" active="no"/>
@@ -116,10 +116,10 @@
 <text x="27.43" y="20.88" size="1.778" layer="21">2013</text>
 <text x="26.045" y="23.43" size="1.778" layer="21">JACHO</text>
 <text x="45.72" y="42.665" size="1.27" layer="21" rot="R180">POWER</text>
-<text x="69.135" y="39.97" size="1.27" layer="21">SDA</text>
-<text x="69.135" y="37.43" size="1.27" layer="21">SCL</text>
-<text x="69.135" y="34.89" size="1.27" layer="21">HDQ</text>
-<text x="69.135" y="32.35" size="1.27" layer="21">GND</text>
+<text x="73.215" y="41.03" size="1.27" layer="21" rot="R180">SDA</text>
+<text x="73.215" y="38.47" size="1.27" layer="21" rot="R180">SCL</text>
+<text x="73.215" y="35.96" size="1.27" layer="21" rot="R180">HDQ</text>
+<text x="73.215" y="33.4" size="1.27" layer="21" rot="R180">GND</text>
 <text x="79.295" y="42.17" size="1.27" layer="21" rot="R270">FUEL GAUGE</text>
 <text x="27.305" y="30.48" size="1.27" layer="21" rot="R90">1 - STAT1</text>
 <text x="29.845" y="30.48" size="1.27" layer="21" rot="R90">2 - PG</text>
@@ -141,7 +141,7 @@
 <text x="19.3" y="31.65" size="1.27" layer="21" rot="R90">POWER IN</text>
 <text x="61.7" y="39.65" size="1.27" layer="21">OUT 3V3</text>
 <text x="65.9" y="35.15" size="1.27" layer="21" rot="R90">GND</text>
-<text x="41.75" y="1.15" size="1.27" layer="21">100 % --------------- &gt; 0 %</text>
+<text x="41.75" y="1.7" size="1.27" layer="21">100 % --------------- &gt; 0 %</text>
 <text x="68.8" y="42.715" size="1.27" layer="21" rot="R180">STABLE</text>
 <text x="9.2" y="22.3" size="1.27" layer="16" font="vector" rot="MR90">JACHO</text>
 <text x="7.65" y="23.15" size="1.27" layer="16" font="vector" rot="MR90">2013</text>
