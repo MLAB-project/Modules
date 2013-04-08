@@ -111,11 +111,11 @@
 <wire x1="0.254" y1="50.546" x2="0.254" y2="0.254" width="0" layer="20"/>
 <dimension x1="81.18" y1="0.1" x2="81.18" y2="50.7" x3="90.805" y3="25.4" layer="48"/>
 <dimension x1="0.1" y1="0.1" x2="81.18" y2="0.1" x3="40.64" y3="-10.16" layer="48"/>
-<text x="20.365" y="45.71" size="1.778" layer="21">LION1CELL01B</text>
+<text x="20.315" y="46.66" size="1.778" layer="21">LION1CELL01B</text>
 <text x="26.245" y="43.17" size="1.778" layer="21">MLAB</text>
 <text x="27.43" y="20.88" size="1.778" layer="21">2013</text>
 <text x="26.045" y="23.43" size="1.778" layer="21">JACHO</text>
-<text x="45.67" y="50.215" size="1.27" layer="21" rot="R180">POWER</text>
+<text x="45.72" y="42.665" size="1.27" layer="21" rot="R180">POWER</text>
 <text x="69.135" y="39.97" size="1.27" layer="21">SDA</text>
 <text x="69.135" y="37.43" size="1.27" layer="21">SCL</text>
 <text x="69.135" y="34.89" size="1.27" layer="21">HDQ</text>
@@ -128,21 +128,21 @@
 <text x="37.465" y="30.48" size="1.27" layer="21" rot="R90">5 - CELLS</text>
 <text x="10.16" y="3.81" size="1.27" layer="21" rot="R90">ON</text>
 <text x="15.24" y="2.54" size="1.27" layer="21" rot="R90">DONE</text>
-<text x="20.32" y="0.635" size="1.27" layer="21" rot="R90">CHARGE</text>
-<text x="20.735" y="50.215" size="1.27" layer="21" rot="R180">POWER IN</text>
-<text x="27.305" y="0.635" size="1.27" layer="21" rot="R90">1</text>
-<text x="29.845" y="0.635" size="1.27" layer="21" rot="R90">2</text>
-<text x="32.385" y="0.635" size="1.27" layer="21" rot="R90">3</text>
-<text x="34.925" y="0.635" size="1.27" layer="21" rot="R90">4</text>
-<text x="37.465" y="0.635" size="1.27" layer="21" rot="R90">5</text>
-<text x="43.92" y="42.815" size="1.27" layer="21" rot="R180">OUT</text>
+<text x="20.37" y="1.085" size="1.27" layer="21" rot="R90">CHARGE</text>
+<text x="20.585" y="42.715" size="1.27" layer="21" rot="R180">POWER IN</text>
+<text x="27.355" y="1.035" size="1.27" layer="21" rot="R90">1</text>
+<text x="29.895" y="1.035" size="1.27" layer="21" rot="R90">2</text>
+<text x="32.435" y="1.035" size="1.27" layer="21" rot="R90">3</text>
+<text x="34.975" y="1.035" size="1.27" layer="21" rot="R90">4</text>
+<text x="37.515" y="1.035" size="1.27" layer="21" rot="R90">5</text>
+<text x="44.07" y="40.965" size="1.27" layer="21" rot="R180">OUT</text>
 <wire x1="61.65" y1="31.85" x2="66.2" y2="31.85" width="0.2" layer="21"/>
 <text x="50.25" y="30.25" size="1.27" layer="21">OUT</text>
 <text x="19.3" y="31.65" size="1.27" layer="21" rot="R90">POWER IN</text>
-<text x="61.75" y="41.4" size="1.27" layer="21">OUT 3V3</text>
+<text x="61.7" y="39.65" size="1.27" layer="21">OUT 3V3</text>
 <text x="65.9" y="35.15" size="1.27" layer="21" rot="R90">GND</text>
 <text x="41.75" y="1.15" size="1.27" layer="21">100 % --------------- &gt; 0 %</text>
-<text x="68.8" y="50.215" size="1.27" layer="21" rot="R180">STABLE</text>
+<text x="68.8" y="42.715" size="1.27" layer="21" rot="R180">STABLE</text>
 <text x="9.2" y="22.3" size="1.27" layer="16" font="vector" rot="MR90">JACHO</text>
 <text x="7.65" y="23.15" size="1.27" layer="16" font="vector" rot="MR90">2013</text>
 <text x="11.1" y="48" size="1.27" layer="16" font="vector" rot="MR270">MLAB</text>
@@ -3135,7 +3135,7 @@ design rules under a new name.</description>
 <via x="35.77" y="42.34" extent="1-16" drill="0.5"/>
 <via x="37.04" y="42.34" extent="1-16" drill="0.5"/>
 <via x="38.31" y="42.34" extent="1-16" drill="0.5"/>
-<via x="39.58" y="42.34" extent="1-16" drill="0.5"/>
+<via x="35.73" y="41.14" extent="1-16" drill="0.5"/>
 <via x="40.825" y="36.53" extent="1-16" drill="0.5"/>
 <via x="17.145" y="23.495" extent="1-16" drill="0.5"/>
 <via x="17.145" y="24.765" extent="1-16" drill="0.5"/>
@@ -3144,10 +3144,10 @@ design rules under a new name.</description>
 <via x="14.445" y="24.765" extent="1-16" drill="0.5"/>
 <via x="14.455" y="23.515" extent="1-16" drill="0.5"/>
 <via x="17.145" y="33.02" extent="1-16" drill="0.5"/>
-<via x="18.415" y="33.02" extent="1-16" drill="0.5"/>
+<via x="17.165" y="34.22" extent="1-16" drill="0.5"/>
 <via x="19.685" y="31.75" extent="1-16" drill="0.5"/>
 <via x="17.145" y="31.75" extent="1-16" drill="0.5"/>
-<via x="18.415" y="31.75" extent="1-16" drill="0.5"/>
+<via x="17.165" y="35.25" extent="1-16" drill="0.5"/>
 <via x="17.145" y="30.48" extent="1-16" drill="0.5"/>
 <via x="18.415" y="30.48" extent="1-16" drill="0.5"/>
 <via x="19.685" y="30.48" extent="1-16" drill="0.5"/>
