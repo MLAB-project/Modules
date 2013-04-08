@@ -14,11 +14,11 @@
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
@@ -44,7 +44,7 @@
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tPadExt" color="7" fill="1" visible="no" active="no"/>
 <layer number="54" name="bPadExt" color="1" fill="1" visible="no" active="no"/>
@@ -4001,33 +4001,6 @@ design rules under a new name.</description>
 <wire x1="62.7" y1="33.55" x2="62.68" y2="33.55" width="0" layer="19" extent="16-16"/>
 </signal>
 </signals>
-<errors>
-<approved hash="4,16,827816e2a92c10b5"/>
-<approved hash="5,16,9da2e9d442967dfd"/>
-<approved hash="5,16,4b1ac63aa4776fb6"/>
-<approved hash="5,16,7590a6e67ddad33a"/>
-<approved hash="5,16,7590a6e67ddad33a"/>
-<approved hash="19,16,eb4e85c7f057c8ce"/>
-<approved hash="19,16,e25f0b5e854e6071"/>
-<approved hash="5,16,80ede7b5d5866dc8"/>
-<approved hash="19,16,6a0398fc0375d89f"/>
-<approved hash="19,16,e7450db0821c654b"/>
-<approved hash="5,16,762bfa94112ee40c"/>
-<approved hash="19,16,de832c84a2e85c89"/>
-<approved hash="5,16,10fa7581352dfdc4"/>
-<approved hash="5,16,10fa7581352dfdc4"/>
-<approved hash="19,16,19c24fa274542234"/>
-<approved hash="19,16,2f76791679142f74"/>
-<approved hash="19,16,25c207a23c551e35"/>
-<approved hash="19,16,2a733a133a202a40"/>
-<approved hash="19,16,e5c707a73c50de30"/>
-<approved hash="19,16,a8753c153c13a873"/>
-<approved hash="19,16,11ddb32e31009fcd"/>
-<approved hash="19,16,14e7b47c37ee9ad7"/>
-<approved hash="19,16,f2054568c73a7c31"/>
-<approved hash="19,16,825779e42871a32e"/>
-<approved hash="19,16,fd27f376256e24d6"/>
-</errors>
 </board>
 </drawing>
 </eagle>
