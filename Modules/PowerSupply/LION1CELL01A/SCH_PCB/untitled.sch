@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -5561,7 +5561,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="GND31" library="moje" deviceset="GND" device=""/>
 <part name="GND32" library="moje" deviceset="GND" device=""/>
 <part name="GND33" library="moje" deviceset="GND" device=""/>
-<part name="U$9" library="moje_schz" deviceset="PIN" device="" value="+BAT"/>
+<part name="U$9" library="moje_schz" deviceset="PIN" device="" value="+BAT2"/>
 <part name="R10" library="moje_R" deviceset="R0603" device="" value="287k"/>
 <part name="R28" library="moje_R" deviceset="R0603" device="" value="51k1"/>
 <part name="SV5" library="moje_hrebinky" deviceset="MA03-2" device=""/>
@@ -5619,7 +5619,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <wire x1="-41.91" y1="128.27" x2="-41.91" y2="139.7" width="0.3048" layer="97"/>
 <wire x1="184.15" y1="139.7" x2="184.15" y2="128.27" width="0.3048" layer="97"/>
 <text x="22.86" y="-16.51" size="1.778" layer="97">REG25</text>
-<text x="43.18" y="-148.59" size="1.778" layer="91">IN</text>
 <text x="97.79" y="-144.78" size="1.778" layer="97">1u5</text>
 <text x="177.8" y="-160.02" size="1.778" layer="97">3V3</text>
 <text x="175.26" y="-157.48" size="1.778" layer="97">OUTPUT</text>
@@ -6060,23 +6059,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <junction x="154.94" y="81.28"/>
 <wire x1="154.94" y1="81.28" x2="165.1" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="R21" gate="G$1" pin="2"/>
-</segment>
-<segment>
-<pinref part="X10" gate="G$1" pin="VIN"/>
-<wire x1="81.28" y1="-153.67" x2="52.07" y2="-153.67" width="0.1524" layer="91"/>
-<wire x1="52.07" y1="-153.67" x2="43.18" y2="-153.67" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="-153.67" x2="33.02" y2="-153.67" width="0.1524" layer="91"/>
-<pinref part="C16" gate="G$1" pin="2"/>
-<wire x1="33.02" y1="-153.67" x2="30.48" y2="-153.67" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="-156.21" x2="43.18" y2="-153.67" width="0.1524" layer="91"/>
-<junction x="43.18" y="-153.67"/>
-<wire x1="43.18" y1="-153.67" x2="43.18" y2="-149.86" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="-156.21" x2="33.02" y2="-153.67" width="0.1524" layer="91"/>
-<junction x="33.02" y="-153.67"/>
-<pinref part="C20" gate="G$1" pin="C_EL+"/>
-<pinref part="X9" gate="G$1" pin="VCC"/>
-<wire x1="52.07" y1="-153.67" x2="52.07" y2="-161.29" width="0.1524" layer="91"/>
-<junction x="52.07" y="-153.67"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -6633,6 +6615,22 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <wire x1="139.7" y1="81.28" x2="139.7" y2="90.17" width="0.1524" layer="91"/>
 <wire x1="139.7" y1="90.17" x2="144.78" y2="90.17" width="0.1524" layer="91"/>
 <pinref part="R21" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="X10" gate="G$1" pin="VIN"/>
+<wire x1="81.28" y1="-153.67" x2="52.07" y2="-153.67" width="0.1524" layer="91"/>
+<wire x1="52.07" y1="-153.67" x2="43.18" y2="-153.67" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="-153.67" x2="33.02" y2="-153.67" width="0.1524" layer="91"/>
+<pinref part="C16" gate="G$1" pin="2"/>
+<wire x1="33.02" y1="-153.67" x2="30.48" y2="-153.67" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="-156.21" x2="43.18" y2="-153.67" width="0.1524" layer="91"/>
+<junction x="43.18" y="-153.67"/>
+<wire x1="33.02" y1="-156.21" x2="33.02" y2="-153.67" width="0.1524" layer="91"/>
+<junction x="33.02" y="-153.67"/>
+<pinref part="C20" gate="G$1" pin="C_EL+"/>
+<pinref part="X9" gate="G$1" pin="VCC"/>
+<wire x1="52.07" y1="-153.67" x2="52.07" y2="-161.29" width="0.1524" layer="91"/>
+<junction x="52.07" y="-153.67"/>
 </segment>
 </net>
 <net name="N$16" class="0">
