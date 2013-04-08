@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -642,6 +642,101 @@ W = angled&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="moje_C">
+<packages>
+<package name="B">
+<wire x1="0.7937" y1="-0.3175" x2="0.7937" y2="0.3175" width="0.127" layer="21"/>
+<wire x1="0.4762" y1="0" x2="1.1112" y2="0" width="0.127" layer="21"/>
+<wire x1="-1.5875" y1="-1.4287" x2="-1.5875" y2="1.4287" width="0.127" layer="21"/>
+<wire x1="-1.5875" y1="1.4287" x2="1.9051" y2="1.4287" width="0.127" layer="21"/>
+<wire x1="1.9051" y1="1.4287" x2="1.9051" y2="-1.4287" width="0.127" layer="21"/>
+<wire x1="1.9051" y1="-1.4287" x2="-1.5875" y2="-1.4287" width="0.127" layer="21"/>
+<smd name="-" x="-1.905" y="0" dx="2.54" dy="1.27" layer="1" rot="R90"/>
+<smd name="+" x="2.2225" y="0" dx="2.54" dy="1.27" layer="1" rot="R90"/>
+<text x="-1.5875" y="1.905" size="1.27" layer="25">&gt;Name</text>
+<text x="-1.905" y="-3.175" size="1.27" layer="27">&gt;Value</text>
+<rectangle x1="-1.9049" y1="-1.1113" x2="-1.5875" y2="1.1113" layer="51"/>
+<rectangle x1="1.9051" y1="-1.1113" x2="2.2225" y2="1.1113" layer="51"/>
+<rectangle x1="1.1113" y1="-1.4288" x2="1.905" y2="1.4288" layer="51"/>
+</package>
+<package name="C0805">
+<wire x1="-0.381" y1="0.66" x2="0.381" y2="0.66" width="0.1016" layer="51"/>
+<wire x1="-0.356" y1="-0.66" x2="0.381" y2="-0.66" width="0.1016" layer="51"/>
+<smd name="1" x="-0.95" y="0" dx="1.3" dy="1.5" layer="1"/>
+<smd name="2" x="0.95" y="0" dx="1.3" dy="1.5" layer="1"/>
+<text x="-1.27" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.27" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.0922" y1="-0.7239" x2="-0.3421" y2="0.7262" layer="51"/>
+<rectangle x1="0.3556" y1="-0.7239" x2="1.1057" y2="0.7262" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="C_EL">
+<wire x1="-2.5473" y1="0.9547" x2="-1.2753" y2="0.9547" width="0.155" layer="94"/>
+<wire x1="-1.9112" y1="1.5908" x2="-1.9112" y2="0.3188" width="0.155" layer="94"/>
+<wire x1="-0.7938" y1="1.7463" x2="-0.1588" y2="1.7463" width="0.254" layer="94"/>
+<wire x1="-0.1588" y1="1.7463" x2="-0.1588" y2="-1.5875" width="0.254" layer="94"/>
+<wire x1="-0.1588" y1="-1.5875" x2="-0.7938" y2="-1.5875" width="0.254" layer="94"/>
+<wire x1="-0.7938" y1="-1.5875" x2="-0.7938" y2="0" width="0.254" layer="94"/>
+<wire x1="-0.7938" y1="0" x2="-0.7938" y2="1.7463" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="0" x2="-0.7938" y2="0" width="0.152" layer="94"/>
+<wire x1="0.7937" y1="0" x2="1.27" y2="0" width="0.152" layer="94"/>
+<text x="1.5875" y="0.635" size="1.6764" layer="95">&gt;Name</text>
+<text x="1.5875" y="-0.635" size="1.6764" layer="96" rot="MR180">&gt;Value</text>
+<rectangle x1="0.3175" y1="-1.7463" x2="0.9525" y2="1.905" layer="94"/>
+<pin name="C_EL+" x="-2.54" y="0" visible="off" length="point" direction="pas"/>
+<pin name="C_EL-" x="2.54" y="0" visible="off" length="point" direction="pas" rot="R180"/>
+<wire x1="-1.27" y1="0" x2="-2.54" y2="0" width="0.127" layer="94"/>
+<wire x1="1.27" y1="0" x2="2.54" y2="0" width="0.127" layer="94"/>
+</symbol>
+<symbol name="C">
+<wire x1="0" y1="1.27" x2="0" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="0" y1="-1.27" x2="0" y2="-0.762" width="0.1524" layer="94"/>
+<text x="1.524" y="1.651" size="1.778" layer="95">&gt;NAME</text>
+<text x="1.524" y="-3.429" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-2.032" y1="-0.762" x2="2.032" y2="-0.254" layer="94"/>
+<rectangle x1="-2.032" y1="0.254" x2="2.032" y2="0.762" layer="94"/>
+<pin name="1" x="0" y="2.54" visible="off" length="point" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="2" x="0" y="-2.54" visible="off" length="point" direction="pas" swaplevel="1" rot="R90"/>
+<wire x1="0" y1="-1.27" x2="0" y2="-2.54" width="0.127" layer="94"/>
+<wire x1="0" y1="1.27" x2="0" y2="2.54" width="0.127" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="B" prefix="C" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="C_EL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="B">
+<connects>
+<connect gate="G$1" pin="C_EL+" pad="+"/>
+<connect gate="G$1" pin="C_EL-" pad="-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="C0805" prefix="C" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="C" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="C0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -685,6 +780,10 @@ W = angled&lt;p&gt;
 <part name="SV2" library="moje_hrebinky" deviceset="MA06-2" device=""/>
 <part name="U$12" library="moje_schz" deviceset="+VCC" device=""/>
 <part name="U$13" library="moje_schz" deviceset="GND" device=""/>
+<part name="U$14" library="moje_schz" deviceset="+VCC" device=""/>
+<part name="U$15" library="moje_schz" deviceset="GND" device=""/>
+<part name="C1" library="moje_C" deviceset="B" device=""/>
+<part name="C2" library="moje_C" deviceset="C0805" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -738,6 +837,10 @@ W = angled&lt;p&gt;
 <instance part="SV2" gate="-6" x="85.09" y="49.53" rot="R270"/>
 <instance part="U$12" gate="G$2" x="66.04" y="57.15"/>
 <instance part="U$13" gate="G$1" x="67.31" y="-13.97"/>
+<instance part="U$14" gate="G$2" x="104.14" y="80.01"/>
+<instance part="U$15" gate="G$1" x="104.14" y="63.5"/>
+<instance part="C1" gate="G$1" x="104.14" y="71.12" rot="R270"/>
+<instance part="C2" gate="G$1" x="110.49" y="71.12"/>
 </instances>
 <busses>
 </busses>
@@ -827,6 +930,16 @@ W = angled&lt;p&gt;
 <junction x="67.31" y="-1.27"/>
 <junction x="67.31" y="6.35"/>
 </segment>
+<segment>
+<pinref part="U$15" gate="G$1" pin="GND"/>
+<wire x1="104.14" y1="63.5" x2="104.14" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="C_EL-"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="104.14" y1="66.04" x2="104.14" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="110.49" y1="66.04" x2="110.49" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="110.49" y1="66.04" x2="104.14" y2="66.04" width="0.1524" layer="91"/>
+<junction x="104.14" y="66.04"/>
+</segment>
 </net>
 <net name="+VCC" class="0">
 <segment>
@@ -853,6 +966,16 @@ W = angled&lt;p&gt;
 <segment>
 <pinref part="SV2" gate="-1" pin="K"/>
 <pinref part="U$12" gate="G$2" pin="+VCC"/>
+</segment>
+<segment>
+<pinref part="U$14" gate="G$2" pin="+VCC"/>
+<wire x1="104.14" y1="77.47" x2="104.14" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="C_EL+"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="104.14" y1="76.2" x2="104.14" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="76.2" x2="110.49" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="110.49" y1="76.2" x2="110.49" y2="73.66" width="0.1524" layer="91"/>
+<junction x="104.14" y="76.2"/>
 </segment>
 </net>
 <net name="N$3" class="0">
