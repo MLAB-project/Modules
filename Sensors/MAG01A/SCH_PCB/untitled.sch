@@ -474,11 +474,11 @@ W = angled&lt;p&gt;
 <part name="GND1" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND2" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND3" library="SparkFun" deviceset="GND" device=""/>
-<part name="C4" library="moje_C" deviceset="C0805" device="" value="4.7uF"/>
-<part name="C5" library="moje_C" deviceset="C0805" device="" value="0.1uF"/>
-<part name="C6" library="moje_C" deviceset="C0805" device="" value="0.22uF"/>
+<part name="C1" library="moje_C" deviceset="C0805" device="" value="4.7uF"/>
+<part name="C3" library="moje_C" deviceset="C0805" device="" value="0.1uF"/>
+<part name="C2" library="moje_C" deviceset="C0805" device="" value="0.22uF"/>
+<part name="R2" library="moje_R" deviceset="R0805" device="" value="2k7"/>
 <part name="R3" library="moje_R" deviceset="R0805" device="" value="2k7"/>
-<part name="R4" library="moje_R" deviceset="R0805" device="" value="2k7"/>
 <part name="SV1" library="moje_hrebinky" deviceset="MA05-2" device=""/>
 <part name="X1" library="moje" deviceset="SROUB3M" device=""/>
 <part name="X2" library="moje" deviceset="SROUB3M" device=""/>
@@ -502,20 +502,20 @@ W = angled&lt;p&gt;
 <instance part="GND1" gate="1" x="-22.86" y="-7.62"/>
 <instance part="GND2" gate="1" x="-12.7" y="-7.62"/>
 <instance part="GND3" gate="1" x="50.8" y="12.7"/>
-<instance part="C4" gate="G$1" x="-22.86" y="0"/>
-<instance part="C5" gate="G$1" x="50.8" y="20.32"/>
-<instance part="C6" gate="G$1" x="30.48" y="0"/>
-<instance part="R3" gate="G$1" x="30.48" y="20.32" rot="R90"/>
-<instance part="R4" gate="G$1" x="38.1" y="20.32" rot="R90"/>
+<instance part="C1" gate="G$1" x="-22.86" y="0"/>
+<instance part="C3" gate="G$1" x="50.8" y="20.32"/>
+<instance part="C2" gate="G$1" x="30.48" y="0"/>
+<instance part="R2" gate="G$1" x="30.48" y="20.32" rot="R90"/>
+<instance part="R3" gate="G$1" x="38.1" y="20.32" rot="R90"/>
 <instance part="SV1" gate="-1" x="-12.7" y="-17.78" rot="R180"/>
 <instance part="SV1" gate="-2" x="-12.7" y="-25.4" rot="R180"/>
 <instance part="SV1" gate="-3" x="-12.7" y="-33.02" rot="R180"/>
 <instance part="SV1" gate="-4" x="-12.7" y="-40.64" rot="R180"/>
 <instance part="SV1" gate="-5" x="-12.7" y="-48.26" rot="R180"/>
-<instance part="X1" gate="P4" x="38.1" y="-25.4"/>
-<instance part="X2" gate="P4" x="38.1" y="-35.56"/>
-<instance part="X3" gate="P4" x="50.8" y="-25.4"/>
-<instance part="X4" gate="P4" x="50.8" y="-35.56"/>
+<instance part="X1" gate="P4" x="22.86" y="-19.05"/>
+<instance part="X2" gate="P4" x="22.86" y="-29.21"/>
+<instance part="X3" gate="P4" x="35.56" y="-19.05"/>
+<instance part="X4" gate="P4" x="35.56" y="-29.21"/>
 <instance part="R1" gate="G$1" x="22.86" y="33.02" rot="R90"/>
 </instances>
 <busses>
@@ -527,9 +527,9 @@ W = angled&lt;p&gt;
 <wire x1="30.48" y1="15.24" x2="30.48" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="12.7" x2="40.64" y2="12.7" width="0.1524" layer="91"/>
 <junction x="30.48" y="12.7"/>
-<label x="38.1" y="12.7" size="1.778" layer="95"/>
+<label x="41.91" y="12.7" size="1.778" layer="95"/>
 <pinref part="U1" gate="G$1" pin="SCL"/>
-<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="R2" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="SV1" gate="-2" pin="K"/>
@@ -542,9 +542,9 @@ W = angled&lt;p&gt;
 <wire x1="38.1" y1="10.16" x2="38.1" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="10.16" x2="40.64" y2="10.16" width="0.1524" layer="91"/>
 <junction x="38.1" y="10.16"/>
-<label x="38.1" y="10.16" size="1.778" layer="95"/>
+<label x="41.91" y="10.16" size="1.778" layer="95"/>
 <pinref part="U1" gate="G$1" pin="SDA"/>
-<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="R3" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="SV1" gate="-4" pin="K"/>
@@ -558,7 +558,7 @@ W = angled&lt;p&gt;
 <wire x1="22.86" y1="7.62" x2="30.48" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="7.62" x2="30.48" y2="5.08" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="SETP"/>
-<pinref part="C6" gate="G$1" pin="1"/>
+<pinref part="C2" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -568,19 +568,19 @@ W = angled&lt;p&gt;
 <wire x1="22.86" y1="-5.08" x2="30.48" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="-5.08" x2="30.48" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="SETC"/>
-<pinref part="C6" gate="G$1" pin="2"/>
+<pinref part="C2" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
 <wire x1="-22.86" y1="-5.08" x2="-22.86" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<pinref part="C4" gate="G$1" pin="2"/>
+<pinref part="C1" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <wire x1="50.8" y1="17.78" x2="50.8" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
-<pinref part="C5" gate="G$1" pin="2"/>
+<pinref part="C3" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <wire x1="-12.7" y1="-5.08" x2="-12.7" y2="0" width="0.1524" layer="91"/>
@@ -605,7 +605,7 @@ W = angled&lt;p&gt;
 <segment>
 <wire x1="-22.86" y1="7.62" x2="-10.16" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="C1"/>
-<pinref part="C4" gate="G$1" pin="1"/>
+<pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="-22.86" y1="5.08" x2="-22.86" y2="7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -632,9 +632,9 @@ W = angled&lt;p&gt;
 <junction x="50.8" y="27.94"/>
 <pinref part="U1" gate="G$1" pin="S1"/>
 <pinref part="U1" gate="G$1" pin="VDD"/>
-<pinref part="C5" gate="G$1" pin="1"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="R3" gate="G$1" pin="2"/>
-<pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="22.86" y1="38.1" x2="22.86" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 </segment>

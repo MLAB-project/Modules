@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -6157,7 +6157,7 @@ W = angled&lt;p&gt;
 <part name="X2" library="moje" deviceset="SROUB3M" device=""/>
 <part name="GND2" library="PaJa_22" deviceset="GND" device=""/>
 <part name="SV2" library="moje_hrebinky" deviceset="SMD_MA04-01" device=""/>
-<part name="D1" library="moje" deviceset="D-OB.SMA" device=""/>
+<part name="D1" library="moje" deviceset="D-OB.SMA" device="" value="BZV55C-3,6V"/>
 <part name="GND3" library="PaJa_22" deviceset="GND" device=""/>
 </parts>
 <sheets>
@@ -6196,8 +6196,8 @@ W = angled&lt;p&gt;
 <instance part="SV1" gate="-4" x="-46.99" y="5.08" rot="R180"/>
 <instance part="SV1" gate="-5" x="-46.99" y="-2.54" rot="R180"/>
 <instance part="R3" gate="G$1" x="8.89" y="-11.43"/>
-<instance part="X2" gate="P4" x="50.8" y="-38.1"/>
-<instance part="GND2" gate="ZEM" x="43.18" y="-40.64"/>
+<instance part="X2" gate="P4" x="7.62" y="-30.48"/>
+<instance part="GND2" gate="ZEM" x="0" y="-33.02"/>
 <instance part="SV2" gate="-1" x="-45.72" y="-27.94"/>
 <instance part="SV2" gate="-2" x="-45.72" y="-22.86"/>
 <instance part="SV2" gate="-3" x="-45.72" y="-17.78"/>
