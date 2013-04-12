@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -782,8 +782,8 @@ W = angled&lt;p&gt;
 <part name="U$13" library="moje_schz" deviceset="GND" device=""/>
 <part name="U$14" library="moje_schz" deviceset="+VCC" device=""/>
 <part name="U$15" library="moje_schz" deviceset="GND" device=""/>
-<part name="C1" library="moje_C" deviceset="B" device=""/>
-<part name="C2" library="moje_C" deviceset="C0805" device=""/>
+<part name="C1" library="moje_C" deviceset="B" device="" value="47uF"/>
+<part name="C2" library="moje_C" deviceset="C0805" device="" value="100nF"/>
 </parts>
 <sheets>
 <sheet>
@@ -837,10 +837,10 @@ W = angled&lt;p&gt;
 <instance part="SV2" gate="-6" x="85.09" y="49.53" rot="R270"/>
 <instance part="U$12" gate="G$2" x="66.04" y="57.15"/>
 <instance part="U$13" gate="G$1" x="67.31" y="-13.97"/>
-<instance part="U$14" gate="G$2" x="104.14" y="80.01"/>
-<instance part="U$15" gate="G$1" x="104.14" y="63.5"/>
-<instance part="C1" gate="G$1" x="104.14" y="71.12" rot="R270"/>
-<instance part="C2" gate="G$1" x="110.49" y="71.12"/>
+<instance part="U$14" gate="G$2" x="5.08" y="41.91"/>
+<instance part="U$15" gate="G$1" x="5.08" y="22.86"/>
+<instance part="C1" gate="G$1" x="5.08" y="33.02" rot="R270"/>
+<instance part="C2" gate="G$1" x="11.43" y="33.02"/>
 </instances>
 <busses>
 </busses>
@@ -932,13 +932,13 @@ W = angled&lt;p&gt;
 </segment>
 <segment>
 <pinref part="U$15" gate="G$1" pin="GND"/>
-<wire x1="104.14" y1="63.5" x2="104.14" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="22.86" x2="5.08" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="C_EL-"/>
 <pinref part="C2" gate="G$1" pin="2"/>
-<wire x1="104.14" y1="66.04" x2="104.14" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="110.49" y1="66.04" x2="110.49" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="110.49" y1="66.04" x2="104.14" y2="66.04" width="0.1524" layer="91"/>
-<junction x="104.14" y="66.04"/>
+<wire x1="5.08" y1="25.4" x2="5.08" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="11.43" y1="25.4" x2="11.43" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="11.43" y1="25.4" x2="5.08" y2="25.4" width="0.1524" layer="91"/>
+<junction x="5.08" y="25.4"/>
 </segment>
 </net>
 <net name="+VCC" class="0">
@@ -969,13 +969,13 @@ W = angled&lt;p&gt;
 </segment>
 <segment>
 <pinref part="U$14" gate="G$2" pin="+VCC"/>
-<wire x1="104.14" y1="77.47" x2="104.14" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="39.37" x2="5.08" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="C_EL+"/>
 <pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="104.14" y1="76.2" x2="104.14" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="76.2" x2="110.49" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="110.49" y1="76.2" x2="110.49" y2="73.66" width="0.1524" layer="91"/>
-<junction x="104.14" y="76.2"/>
+<wire x1="5.08" y1="38.1" x2="5.08" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="38.1" x2="11.43" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="11.43" y1="38.1" x2="11.43" y2="35.56" width="0.1524" layer="91"/>
+<junction x="5.08" y="38.1"/>
 </segment>
 </net>
 <net name="N$3" class="0">

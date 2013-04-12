@@ -3835,7 +3835,7 @@ paja-trb@seznam.cz
 </class>
 </classes>
 <parts>
-<part name="X1" library="moje_cidla" deviceset="MPL3115A2" device="" value="FFF"/>
+<part name="X1" library="moje_cidla" deviceset="MPL3115A2" device="" value="MPL3115A2"/>
 <part name="C1" library="rcl" deviceset="C-EU" device="C0805" value="100nF"/>
 <part name="C2" library="rcl" deviceset="C-EU" device="C0805" value="10uF"/>
 <part name="C3" library="rcl" deviceset="C-EU" device="C0805" value="100nF"/>

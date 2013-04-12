@@ -12,39 +12,39 @@
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
-<layer number="32" name="bCream" color="7" fill="5" visible="yes" active="yes"/>
-<layer number="33" name="tFinish" color="6" fill="3" visible="yes" active="yes"/>
-<layer number="34" name="bFinish" color="6" fill="6" visible="yes" active="yes"/>
-<layer number="35" name="tGlue" color="7" fill="4" visible="yes" active="yes"/>
-<layer number="36" name="bGlue" color="7" fill="5" visible="yes" active="yes"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
-<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
-<layer number="44" name="Drills" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tPadExt" color="7" fill="1" visible="no" active="no"/>
 <layer number="54" name="bPadExt" color="1" fill="1" visible="no" active="no"/>
@@ -57,16 +57,16 @@
 <layer number="96" name="Values" color="7" fill="1" visible="no" active="no"/>
 <layer number="97" name="Info" color="7" fill="1" visible="no" active="no"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="no" active="no"/>
-<layer number="100" name="PaJa" color="12" fill="7" visible="yes" active="yes"/>
-<layer number="101" name="Doplnky" color="5" fill="1" visible="yes" active="yes"/>
-<layer number="102" name="Kola" color="11" fill="7" visible="yes" active="yes"/>
-<layer number="103" name="Popisy" color="2" fill="8" visible="yes" active="yes"/>
-<layer number="104" name="Zapojeni" color="6" fill="7" visible="yes" active="yes"/>
+<layer number="100" name="PaJa" color="12" fill="7" visible="no" active="yes"/>
+<layer number="101" name="Doplnky" color="5" fill="1" visible="no" active="yes"/>
+<layer number="102" name="Kola" color="11" fill="7" visible="no" active="yes"/>
+<layer number="103" name="Popisy" color="2" fill="8" visible="no" active="yes"/>
+<layer number="104" name="Zapojeni" color="6" fill="7" visible="no" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="no" active="no"/>
 <layer number="200" name="200bmp" color="1" fill="10" visible="no" active="no"/>
-<layer number="231" name="Eagle3D_PG1" color="14" fill="1" visible="yes" active="yes"/>
-<layer number="232" name="Eagle3D_PG2" color="14" fill="2" visible="yes" active="yes"/>
-<layer number="233" name="Eagle3D_PG3" color="14" fill="4" visible="yes" active="yes"/>
+<layer number="231" name="Eagle3D_PG1" color="14" fill="1" visible="no" active="yes"/>
+<layer number="232" name="Eagle3D_PG2" color="14" fill="2" visible="no" active="yes"/>
+<layer number="233" name="Eagle3D_PG3" color="14" fill="4" visible="no" active="yes"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
 <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
 <layer number="254" name="OrgLBR" color="13" fill="1" visible="no" active="no"/>
@@ -594,7 +594,7 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="X1" library="moje_io" package="TSS0P24" value="" x="22.225" y="19.685" smashed="yes" rot="MR180">
+<element name="X1" library="moje_io" package="TSS0P24" value="TCA9548A" x="22.225" y="19.685" smashed="yes" rot="MR180">
 <attribute name="NAME" x="21.4122" y="19.9344" size="1.016" layer="26" ratio="10" rot="MR180"/>
 <attribute name="VALUE" x="27.4112" y="21.7678" size="1.016" layer="28" ratio="10" rot="MR270"/>
 </element>
@@ -605,11 +605,11 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="12.7" y="31.75" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="9.779" y="34.29" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="R1" library="moje_R" package="0805" value="4k7" x="19.685" y="29.21" smashed="yes" rot="MR0">
+<element name="R1" library="moje_R" package="0805" value="10k" x="19.685" y="29.21" smashed="yes" rot="MR0">
 <attribute name="NAME" x="17.78" y="32.0675" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="20.32" y="26.67" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="R2" library="moje_R" package="0805" value="4k7" x="19.685" y="26.67" smashed="yes" rot="MR0">
+<element name="R2" library="moje_R" package="0805" value="10k" x="19.685" y="26.67" smashed="yes" rot="MR0">
 <attribute name="NAME" x="17.78" y="28.2575" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="20.32" y="24.13" size="1.27" layer="28" rot="MR0"/>
 </element>
@@ -620,11 +620,11 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="15.24" y="31.75" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="12.319" y="34.29" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="R3" library="moje_R" package="0805" value="" x="19.685" y="35.56" smashed="yes" rot="MR0">
+<element name="R3" library="moje_R" package="0805" value="10k" x="19.685" y="35.56" smashed="yes" rot="MR0">
 <attribute name="NAME" x="17.78" y="38.1" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="20.32" y="33.02" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="R4" library="moje_R" package="0805" value="" x="19.685" y="33.02" smashed="yes" rot="MR0">
+<element name="R4" library="moje_R" package="0805" value="10k" x="19.685" y="33.02" smashed="yes" rot="MR0">
 <attribute name="NAME" x="17.78" y="35.2425" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="20.32" y="30.48" size="1.27" layer="28" rot="MR0"/>
 </element>
@@ -635,11 +635,11 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="34.925" y="31.75" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="37.846" y="29.21" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="R5" library="moje_R" package="0805" value="" x="30.7975" y="33.02" smashed="yes" rot="MR180">
+<element name="R5" library="moje_R" package="0805" value="10k" x="30.7975" y="33.02" smashed="yes" rot="MR180">
 <attribute name="NAME" x="31.75" y="32.0675" size="1.27" layer="26" rot="MR180"/>
 <attribute name="VALUE" x="30.1625" y="35.56" size="1.27" layer="28" rot="MR180"/>
 </element>
-<element name="R6" library="moje_R" package="0805" value="" x="30.7975" y="35.56" smashed="yes" rot="MR180">
+<element name="R6" library="moje_R" package="0805" value="10k" x="30.7975" y="35.56" smashed="yes" rot="MR180">
 <attribute name="NAME" x="31.75" y="34.6075" size="1.27" layer="26" rot="MR180"/>
 <attribute name="VALUE" x="30.1625" y="38.1" size="1.27" layer="28" rot="MR180"/>
 </element>
@@ -650,11 +650,11 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="37.465" y="31.75" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="40.386" y="29.21" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="R7" library="moje_R" package="0805" value="" x="30.7975" y="26.67" smashed="yes" rot="MR180">
+<element name="R7" library="moje_R" package="0805" value="10k" x="30.7975" y="26.67" smashed="yes" rot="MR180">
 <attribute name="NAME" x="31.75" y="25.4" size="1.27" layer="26" rot="MR180"/>
 <attribute name="VALUE" x="30.1625" y="29.21" size="1.27" layer="28" rot="MR180"/>
 </element>
-<element name="R8" library="moje_R" package="0805" value="" x="30.7975" y="29.21" smashed="yes" rot="MR180">
+<element name="R8" library="moje_R" package="0805" value="10k" x="30.7975" y="29.21" smashed="yes" rot="MR180">
 <attribute name="NAME" x="31.75" y="28.575" size="1.27" layer="26" rot="MR180"/>
 <attribute name="VALUE" x="30.1625" y="31.75" size="1.27" layer="28" rot="MR180"/>
 </element>
@@ -665,11 +665,11 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="34.925" y="8.89" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="37.846" y="6.35" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="R9" library="moje_R" package="0805" value="" x="30.7975" y="10.16" smashed="yes" rot="MR180">
+<element name="R9" library="moje_R" package="0805" value="10k" x="30.7975" y="10.16" smashed="yes" rot="MR180">
 <attribute name="NAME" x="32.385" y="8.5725" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="30.1625" y="12.7" size="1.27" layer="28" rot="MR180"/>
 </element>
-<element name="R10" library="moje_R" package="0805" value="" x="30.7975" y="12.7" smashed="yes" rot="MR180">
+<element name="R10" library="moje_R" package="0805" value="10k" x="30.7975" y="12.7" smashed="yes" rot="MR180">
 <attribute name="NAME" x="32.385" y="11.1125" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="30.1625" y="15.24" size="1.27" layer="28" rot="MR180"/>
 </element>
@@ -680,11 +680,11 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="37.465" y="8.89" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="40.386" y="6.35" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="R11" library="moje_R" package="0805" value="" x="30.7975" y="3.81" smashed="yes" rot="MR180">
+<element name="R11" library="moje_R" package="0805" value="10k" x="30.7975" y="3.81" smashed="yes" rot="MR180">
 <attribute name="NAME" x="32.385" y="1.905" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="30.1625" y="6.35" size="1.27" layer="28" rot="MR180"/>
 </element>
-<element name="R12" library="moje_R" package="0805" value="" x="30.7975" y="6.35" smashed="yes" rot="MR180">
+<element name="R12" library="moje_R" package="0805" value="10k" x="30.7975" y="6.35" smashed="yes" rot="MR180">
 <attribute name="NAME" x="32.385" y="5.08" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="30.1625" y="8.89" size="1.27" layer="28" rot="MR180"/>
 </element>
@@ -695,11 +695,11 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="12.7" y="8.89" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="9.779" y="11.43" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="R13" library="moje_R" package="0805" value="" x="19.685" y="6.35" smashed="yes" rot="MR0">
+<element name="R13" library="moje_R" package="0805" value="10k" x="19.685" y="6.35" smashed="yes" rot="MR0">
 <attribute name="NAME" x="16.8275" y="4.445" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="20.32" y="3.81" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="R14" library="moje_R" package="0805" value="" x="19.685" y="3.81" smashed="yes" rot="MR0">
+<element name="R14" library="moje_R" package="0805" value="10k" x="19.685" y="3.81" smashed="yes" rot="MR0">
 <attribute name="NAME" x="16.8275" y="0.9525" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="20.32" y="1.27" size="1.27" layer="28" rot="MR0"/>
 </element>
@@ -710,11 +710,11 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="15.24" y="8.89" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="12.319" y="11.43" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="R15" library="moje_R" package="0805" value="" x="19.685" y="12.7" smashed="yes" rot="MR0">
+<element name="R15" library="moje_R" package="0805" value="10k" x="19.685" y="12.7" smashed="yes" rot="MR0">
 <attribute name="NAME" x="18.0975" y="15.24" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="20.32" y="10.16" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="R16" library="moje_R" package="0805" value="" x="19.685" y="10.16" smashed="yes" rot="MR0">
+<element name="R16" library="moje_R" package="0805" value="10k" x="19.685" y="10.16" smashed="yes" rot="MR0">
 <attribute name="NAME" x="16.8275" y="8.255" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="20.32" y="7.62" size="1.27" layer="28" rot="MR0"/>
 </element>
@@ -725,15 +725,15 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="8.89" y="20.32" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="13.081" y="19.05" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="R17" library="moje_R" package="0805" value="4k7" x="4.445" y="17.78" smashed="yes" rot="MR0">
+<element name="R17" library="moje_R" package="0805" value="10k" x="4.445" y="17.78" smashed="yes" rot="MR0">
 <attribute name="NAME" x="4.445" y="15.5575" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="5.08" y="15.24" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="R18" library="moje_R" package="0805" value="4k7" x="4.445" y="20.32" smashed="yes" rot="MR0">
+<element name="R18" library="moje_R" package="0805" value="10k" x="4.445" y="20.32" smashed="yes" rot="MR0">
 <attribute name="NAME" x="2.54" y="21.9075" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="5.08" y="17.78" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="R19" library="moje_R" package="0805" value="4k7" x="4.445" y="22.86" smashed="yes" rot="MR0">
+<element name="R19" library="moje_R" package="0805" value="10k" x="4.445" y="22.86" smashed="yes" rot="MR0">
 <attribute name="NAME" x="4.445" y="23.8125" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="5.08" y="20.32" size="1.27" layer="28" rot="MR0"/>
 </element>
@@ -753,7 +753,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="11.43" y="21.2725" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="11.43" y="22.225" size="1.27" layer="28" rot="MR90"/>
 </element>
-<element name="C2" library="moje_C" package="C0805" value="100nF" x="30.00375" y="15.08125" smashed="yes" rot="MR180">
+<element name="C1" library="moje_C" package="C0805" value="100nF" x="30.00375" y="15.08125" smashed="yes" rot="MR180">
 <attribute name="NAME" x="31.59125" y="16.35125" size="1.27" layer="26" rot="MR180"/>
 <attribute name="VALUE" x="28.73375" y="17.62125" size="1.27" layer="28" rot="MR180"/>
 </element>
@@ -764,7 +764,7 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="45.72" y="13.0175" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="41.529" y="14.2875" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="D1" library="moje" package="SMA" value="" x="40.64" y="13.335" smashed="yes" rot="MR270">
+<element name="D5" library="moje" package="SMA" value="M4" x="40.64" y="13.335" smashed="yes" rot="MR270">
 <attribute name="NAME" x="42.8625" y="14.605" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="43.4975" y="16.51" size="1.27" layer="28" rot="MR270"/>
 </element>
@@ -772,19 +772,19 @@ design rules under a new name.</description>
 <element name="X3" library="moje" package="SROUB3M" value="SROUB3M" x="5.08" y="35.56" smashed="yes"/>
 <element name="X4" library="moje" package="SROUB3M" value="SROUB3M" x="45.72" y="5.08" smashed="yes"/>
 <element name="X5" library="moje" package="SROUB3M" value="SROUB3M" x="45.72" y="35.56" smashed="yes"/>
-<element name="D4" library="moje_diody" package="SMA" value="TRANSIL" x="9.2075" y="29.5275" smashed="yes" rot="MR90">
-<attribute name="NAME" x="10.795" y="26.3525" size="1.27" layer="26" rot="MR90"/>
+<element name="D4" library="moje_diody" package="SMA" value="SMBJ5.0A" x="9.2075" y="29.5275" smashed="yes" rot="MR90">
+<attribute name="NAME" x="6.6675" y="28.2575" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="6.35" y="26.3525" size="1.27" layer="28" rot="MR90"/>
 </element>
-<element name="D10" library="moje_diody" package="SMA" value="TRANSIL" x="9.2075" y="11.1125" smashed="yes" rot="MR270">
+<element name="D1" library="moje_diody" package="SMA" value="SMBJ5.0A" x="9.2075" y="11.1125" smashed="yes" rot="MR270">
 <attribute name="NAME" x="7.9375" y="12.7" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="12.065" y="14.2875" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="D16" library="moje_diody" package="SMA" value="TRANSIL" x="40.64" y="34.29" smashed="yes" rot="MR270">
+<element name="D2" library="moje_diody" package="SMA" value="SMBJ5.0A" x="40.64" y="34.29" smashed="yes" rot="MR270">
 <attribute name="NAME" x="41.275" y="40.005" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="43.4975" y="37.465" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="D22" library="moje_diody" package="SMA" value="TRANSIL" x="40.64" y="6.35" smashed="yes" rot="MR270">
+<element name="D3" library="moje_diody" package="SMA" value="SMBJ5.0A" x="40.64" y="6.35" smashed="yes" rot="MR270">
 <attribute name="NAME" x="41.275" y="3.4925" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="43.4975" y="9.525" size="1.27" layer="28" rot="MR270"/>
 </element>
@@ -796,7 +796,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="41.5925" y="28.575" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="44.1325" y="29.845" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="C4" library="moje_C" package="B" value="10uF" x="43.815" y="20.32" smashed="yes" rot="MR0">
+<element name="C2" library="moje_C" package="B" value="10uF" x="43.815" y="20.32" smashed="yes" rot="MR0">
 <attribute name="NAME" x="45.4025" y="22.225" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="45.72" y="17.145" size="1.27" layer="28" rot="MR0"/>
 </element>
@@ -833,13 +833,13 @@ design rules under a new name.</description>
 <contactref element="X1" pad="21"/>
 <contactref element="R21" pad="1"/>
 <contactref element="R23" pad="1"/>
-<contactref element="C2" pad="2"/>
+<contactref element="C1" pad="2"/>
 <contactref element="D4" pad="A"/>
-<contactref element="D10" pad="A"/>
-<contactref element="D16" pad="A"/>
-<contactref element="D22" pad="A"/>
+<contactref element="D1" pad="A"/>
+<contactref element="D2" pad="A"/>
+<contactref element="D3" pad="A"/>
 <contactref element="X6" pad="1"/>
-<contactref element="C4" pad="-"/>
+<contactref element="C2" pad="-"/>
 <contactref element="C3" pad="-"/>
 <contactref element="SV11" pad="6"/>
 <contactref element="SV11" pad="5"/>
@@ -864,7 +864,7 @@ design rules under a new name.</description>
 <via x="15.24" y="21.11375" extent="1-16" drill="0.4"/>
 <contactref element="SV10" pad="6"/>
 <contactref element="SV10" pad="5"/>
-<contactref element="D1" pad="A"/>
+<contactref element="D5" pad="A"/>
 <contactref element="SV10" pad="2"/>
 <contactref element="SV10" pad="1"/>
 <contactref element="X2" pad="P$1"/>
@@ -923,12 +923,12 @@ design rules under a new name.</description>
 </signal>
 <signal name="+VCC">
 <contactref element="X6" pad="3"/>
-<contactref element="C4" pad="+"/>
+<contactref element="C2" pad="+"/>
 <contactref element="SW1" pad="1"/>
 <contactref element="SW1" pad="2"/>
 <contactref element="SV10" pad="3"/>
 <contactref element="SV10" pad="4"/>
-<contactref element="D1" pad="K"/>
+<contactref element="D5" pad="K"/>
 <wire x1="38.1889" y1="23.1013" x2="38.1889" y2="20.2311" width="0.6096" layer="16"/>
 <wire x1="28.09875" y1="22.86" x2="30.63875" y2="22.86" width="0.6096" layer="16"/>
 <wire x1="30.63875" y1="22.86" x2="31.115" y2="22.86" width="0.6096" layer="16"/>
@@ -1347,7 +1347,7 @@ design rules under a new name.</description>
 <contactref element="R20" pad="2"/>
 <contactref element="R18" pad="2"/>
 <contactref element="R19" pad="2"/>
-<contactref element="C2" pad="1"/>
+<contactref element="C1" pad="1"/>
 <contactref element="SW1" pad="3"/>
 <wire x1="3.495" y1="22.86" x2="3.495" y2="20.32" width="0.4064" layer="16"/>
 <wire x1="3.495" y1="20.16375" x2="3.4925" y2="20.16125" width="0.4064" layer="16"/>
@@ -1388,7 +1388,7 @@ design rules under a new name.</description>
 <contactref element="R4" pad="2"/>
 <contactref element="R3" pad="2"/>
 <contactref element="SV3" pad="3"/>
-<contactref element="D10" pad="K"/>
+<contactref element="D1" pad="K"/>
 <contactref element="R6" pad="2"/>
 <contactref element="R5" pad="2"/>
 <contactref element="SV4" pad="3"/>
@@ -1398,14 +1398,14 @@ design rules under a new name.</description>
 <contactref element="R12" pad="2"/>
 <contactref element="R11" pad="2"/>
 <contactref element="SV7" pad="3"/>
-<contactref element="D22" pad="K"/>
+<contactref element="D3" pad="K"/>
 <contactref element="R14" pad="2"/>
 <contactref element="R13" pad="2"/>
 <contactref element="SV8" pad="3"/>
 <contactref element="R16" pad="2"/>
 <contactref element="R15" pad="2"/>
 <contactref element="SV5" pad="3"/>
-<contactref element="D16" pad="K"/>
+<contactref element="D2" pad="K"/>
 <contactref element="SW1" pad="4"/>
 <wire x1="18.735" y1="33.02" x2="18.735" y2="35.245" width="0.254" layer="16"/>
 <wire x1="18.735" y1="35.245" x2="18.89125" y2="35.40125" width="0.254" layer="16"/>

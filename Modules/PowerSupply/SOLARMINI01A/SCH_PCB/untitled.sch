@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -658,7 +658,7 @@ W = angled&lt;p&gt;
 </class>
 </classes>
 <parts>
-<part name="X1" library="moje_io" deviceset="SPV1040" device=""/>
+<part name="X1" library="moje_io" deviceset="SPV1040" device="" value="SPV1040"/>
 <part name="C1" library="moje_C" deviceset="C" device="" value="47uF"/>
 <part name="C2" library="moje_C" deviceset="C0805" device="" value="1nF"/>
 <part name="C3" library="moje_C" deviceset="C0805" device="" value="1uF"/>
@@ -670,7 +670,7 @@ W = angled&lt;p&gt;
 <part name="R5" library="moje_R" deviceset="R0805" device="" value="1k"/>
 <part name="R7" library="moje_R" deviceset="R0805" device=""/>
 <part name="R8" library="moje_R" deviceset="R0805" device=""/>
-<part name="D1" library="moje_diody" deviceset="D-TRANSIL" device="" value="P6SMB6.8A-LF"/>
+<part name="D1" library="moje_diody" deviceset="D-TRANSIL" device="" value="SMBJ5.0A"/>
 <part name="L1" library="moje_L" deviceset="DE1205-10" device="" value="10uH"/>
 <part name="SV1" library="moje_konektory" deviceset="WAGO256" device=""/>
 <part name="SV2" library="moje_konektory" deviceset="WAGO256" device=""/>
@@ -689,9 +689,9 @@ W = angled&lt;p&gt;
 <part name="X5" library="moje" deviceset="SROUB3M" device=""/>
 <part name="R6" library="moje_R" deviceset="R1206" device="" value="0R"/>
 <part name="R3" library="moje_R" deviceset="R1206" device="" value="0R"/>
-<part name="D2" library="moje_diody" deviceset="D-SHOTKY-SMA" device=""/>
-<part name="C6" library="moje_C" deviceset="C0805" device=""/>
-<part name="C7" library="moje_C" deviceset="B" device=""/>
+<part name="D2" library="moje_diody" deviceset="D-SHOTKY-SMA" device="" value="15MQ040N"/>
+<part name="C6" library="moje_C" deviceset="C0805" device="" value="100nF"/>
+<part name="C7" library="moje_C" deviceset="B" device="" value="10uF"/>
 <part name="GND9" library="moje" deviceset="GND" device=""/>
 <part name="GND10" library="moje" deviceset="GND" device=""/>
 <part name="SV5" library="moje_hrebinky" deviceset="MA01-1" device=""/>
@@ -705,7 +705,10 @@ W = angled&lt;p&gt;
 <text x="85.09" y="27.94" size="2.54" layer="91">OUT</text>
 </plain>
 <instances>
-<instance part="X1" gate="G$1" x="-5.08" y="45.72"/>
+<instance part="X1" gate="G$1" x="-5.08" y="45.72" smashed="yes">
+<attribute name="NAME" x="-7.62" y="54.61" size="1.27" layer="95"/>
+<attribute name="VALUE" x="0" y="54.61" size="1.27" layer="96"/>
+</instance>
 <instance part="C1" gate="G$1" x="-55.88" y="46.99" rot="R270"/>
 <instance part="C2" gate="G$1" x="-29.21" y="36.83"/>
 <instance part="C3" gate="G$1" x="30.48" y="41.91"/>
@@ -733,17 +736,17 @@ W = angled&lt;p&gt;
 <instance part="GND5" gate="G$1" x="68.58" y="10.16"/>
 <instance part="GND6" gate="G$1" x="77.47" y="17.78"/>
 <instance part="GND7" gate="G$1" x="82.55" y="17.78"/>
-<instance part="X2" gate="P4" x="-12.7" y="20.32"/>
-<instance part="X3" gate="P4" x="-12.7" y="12.7"/>
-<instance part="X4" gate="P4" x="-12.7" y="5.08"/>
-<instance part="X5" gate="P4" x="-12.7" y="-2.54"/>
+<instance part="X2" gate="P4" x="-11.43" y="19.05"/>
+<instance part="X3" gate="P4" x="-11.43" y="11.43"/>
+<instance part="X4" gate="P4" x="-25.4" y="19.05"/>
+<instance part="X5" gate="P4" x="-25.4" y="11.43"/>
 <instance part="R6" gate="G$1" x="55.88" y="35.56"/>
 <instance part="R3" gate="G$1" x="0" y="60.96"/>
 <instance part="D2" gate="G$1" x="-20.32" y="35.56" rot="R270"/>
 <instance part="C6" gate="G$1" x="5.08" y="22.86"/>
-<instance part="C7" gate="G$1" x="12.7" y="22.86" rot="R270"/>
+<instance part="C7" gate="G$1" x="17.78" y="22.86" rot="R270"/>
 <instance part="GND9" gate="G$1" x="5.08" y="16.51"/>
-<instance part="GND10" gate="G$1" x="12.7" y="16.51"/>
+<instance part="GND10" gate="G$1" x="17.78" y="16.51"/>
 <instance part="SV5" gate="G$1" x="17.78" y="60.96" rot="R180"/>
 </instances>
 <busses>
@@ -838,7 +841,7 @@ W = angled&lt;p&gt;
 <segment>
 <pinref part="C7" gate="G$1" pin="C_EL-"/>
 <pinref part="GND10" gate="G$1" pin="GND"/>
-<wire x1="12.7" y1="16.51" x2="12.7" y2="19.05" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="16.51" x2="17.78" y2="19.05" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -888,8 +891,8 @@ W = angled&lt;p&gt;
 <wire x1="-15.24" y1="35.56" x2="-15.24" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="30.48" x2="5.08" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="D1" gate="G$1" pin="K"/>
-<wire x1="5.08" y1="30.48" x2="12.7" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="30.48" x2="39.37" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="30.48" x2="17.78" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="30.48" x2="39.37" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="39.37" y1="29.21" x2="39.37" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="C_EL+"/>
 <wire x1="39.37" y1="30.48" x2="39.37" y2="34.29" width="0.1524" layer="91"/>
@@ -910,9 +913,9 @@ W = angled&lt;p&gt;
 <pinref part="C6" gate="G$1" pin="1"/>
 <wire x1="5.08" y1="27.94" x2="5.08" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="C7" gate="G$1" pin="C_EL+"/>
-<wire x1="12.7" y1="26.67" x2="12.7" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="26.67" x2="17.78" y2="30.48" width="0.1524" layer="91"/>
 <junction x="5.08" y="30.48"/>
-<junction x="12.7" y="30.48"/>
+<junction x="17.78" y="30.48"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -944,6 +947,7 @@ W = angled&lt;p&gt;
 <wire x1="68.58" y1="25.4" x2="68.58" y2="24.13" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="24.13" x2="68.58" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="24.13" x2="58.42" y2="24.13" width="0.1524" layer="91"/>
+<junction x="68.58" y="24.13"/>
 </segment>
 </net>
 <net name="N$9" class="0">
