@@ -1,10 +1,10 @@
 [PROJECT]
-Target=C:\Users\Honza\Documents\pic\I2C_vlhkost\main.hex
+Target=main.hex
 Development_Mode=
 Processor_Text=PIC16F887
 ToolSuite=CCS
 Processor=0x887F
-[C:\Users\Honza\Documents\pic\I2C_vlhkost\main]
+[main]
 Type=4
 Path=
 FileList=
@@ -12,13 +12,17 @@ BuildTool=
 OptionString=
 AdditionalOptionString=
 [mru-list]
-1=C:\Users\Honza\Documents\pic\I2C_vlhkost\main.c
+1=.\main.c
 [Windows]
 0=0000 %S 0 0 796 451 3 0
-[Units]
-Link=0
-Count=1
-1=C:\Users\Honza\Documents\pic\I2C_vlhkost\main
 [Opened Files]
 1=main.c
-2=
+2=main.h
+3=C:\Program Files (x86)\PICC\devices\16F887.h
+4=
+[Target Data]
+OptionString=-p +FM
+FileList=Z:\home\kaklik\MLAB\Modules\Sensors\SHT25V01A\SW\PIC16F887\main.c
+[Units]
+Count=1
+1=main (main)

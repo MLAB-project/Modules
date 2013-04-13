@@ -1,20 +1,19 @@
-#include "C:\Users\Honza\Documents\pic\I2C_vlhkost\main.h"
+#include <16F887.h>
+#device adc=8
 
+#FUSES NOWDT                 	//No Watch Dog Timer
+#FUSES INTRC                 	//Internal RC Osc
+#FUSES NOPUT                 	//No Power Up Timer
+#FUSES MCLR                  	//Master Clear pin enabled
+#FUSES NOPROTECT             	//Code not protected from reading
+#FUSES NOCPD                 	//No EE protection
+#FUSES NOBROWNOUT            	//No brownout reset
+#FUSES IESO                  	//Internal External Switch Over mode enabled
+#FUSES FCMEN                 	//Fail-safe clock monitor enabled
+#FUSES NOLVP                 	//No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O
+#FUSES NODEBUG               	//No Debug mode for ICD
+#FUSES NOWRT                 	//Program memory not write protected
+#FUSES BORV40                	//Brownout reset at 4.0V
 
+#use delay(clock=8000000)
 
-
-void main()
-{
-
-   setup_adc_ports(NO_ANALOGS|VSS_VDD);
-   setup_adc(ADC_CLOCK_DIV_2);
-   setup_spi(SPI_SS_DISABLED);
-   setup_timer_0(RTCC_INTERNAL|RTCC_DIV_1);
-   setup_timer_1(T1_DISABLED);
-   setup_timer_2(T2_DISABLED,0,1);
-   setup_ccp1(CCP_OFF);
-   setup_comparator(NC_NC_NC_NC);// This device COMP currently not supported by the PICWizard
-
-   //TODO: User Code
-
-}
