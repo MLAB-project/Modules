@@ -1,10 +1,4 @@
-#include "C:\Users\Honza\Documents\pic\I2C_vlhkost\main.h"
-
-#define EEPROM_SDA  PIN_B0
-#define EEPROM_SCL  PIN_B1
-#use i2c(master, sda=EEPROM_SDA, scl=EEPROM_SCL)
-#use rs232(baud=9600,parity=N,xmit=PIN_B3,rcv=PIN_B2,bits=8) //rcv TXD xmit RXD
-
+#include "main.h"
 
 void main()
 {
