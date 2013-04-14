@@ -15,7 +15,6 @@ unsigned int8 reg;
   i2c_start();     // Start condition
   i2c_write(0x80); // Device address
   i2c_write(0xE7);    // Device command
-//  i2c_stop();      // Stop condition
 
   i2c_start();     // Start condition
   i2c_write(0x81); // Device address
@@ -43,9 +42,7 @@ unsigned int16 data;
    LSB=i2c_read(1);
    Check=i2c_read(0);
    i2c_stop();
-   
-   printf("%X %X  %X\r\n",MSB, LSB, Check);   
-   
+      
    LSB = LSB >> 2; // trow out status bits
 
    data = (((unsigned int16) MSB << 8) + (LSB << 4));
@@ -71,7 +68,7 @@ unsigned int16 data;
    Check=i2c_read(0);
    i2c_stop(); 
 
-   printf("%X %X  %X\r\n",MSB, LSB, Check);   
+//   printf("%X %X  %X\r\n",MSB, LSB, Check);   
 
    LSB = LSB >> 2; // trow out status bits
 

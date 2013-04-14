@@ -1,4 +1,4 @@
-CCS PCM C Compiler, Version 4.106, 47914               14-IV-13 01:31
+CCS PCM C Compiler, Version 4.106, 47914               14-IV-13 10:31
 
                Filename: D:\MLAB\Modules\Sensors\SHT25V01A\SW\PIC16F887\main.lst
 
@@ -288,7 +288,6 @@ CCS PCM C Compiler, Version 4.106, 47914               14-IV-13 01:31
 0159:  MOVLW  E7
 015A:  MOVWF  26
 015B:  CALL   0AE
-.................... //  i2c_stop();      // Stop condition 
 ....................  
 ....................   i2c_start();     // Start condition 
 015C:  BSF    20.4
