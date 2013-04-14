@@ -1,5 +1,5 @@
 ÀÄmain
-   ÀÄMAIN  1/344  Ram=5
+   ÀÄMAIN  1/322  Ram=6
       ÃÄ??0??
       ÃÄSHT25_soft_reset  0/56  Ram=0
       ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
@@ -8,14 +8,19 @@
       ³  ÃÄ@PUTCHAR_1_  0/34  Ram=1
       ³  ÀÄ@PUTCHAR_1_  0/34  Ram=1
       ÃÄ@delay_ms1  0/20  Ram=1
-      ÃÄSHT25_setup  0/130  Ram=3
+      ÃÄSHT25_setup  0/200  Ram=3
       ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
       ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
       ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
       ³  ÃÄ@I2C_READ_1  0/69  Ram=3
       ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
       ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
-      ³  ÀÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÀÄ@I2C_READ_1  0/69  Ram=3
       ÃÄ@PSTRINGCN7_69  0/79  Ram=4
       ³  ÃÄ@PUTCHAR_1_  0/34  Ram=1
       ³  ÀÄ@PUTCHAR_1_  0/34  Ram=1
@@ -23,19 +28,6 @@
       ³  ÃÄ@PUTCHAR_1_  0/34  Ram=1
       ³  ÀÄ@PUTCHAR_1_  0/34  Ram=1
       ÃÄ@PUTCHAR_1_  0/34  Ram=1
-      ÃÄ@PUTCHAR_1_  0/34  Ram=1
-      ÃÄ@PUTCHAR_1_  0/34  Ram=1
-      ÃÄSHT25_setup  0/130  Ram=3
-      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
-      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
-      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
-      ³  ÃÄ@I2C_READ_1  0/69  Ram=3
-      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
-      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
-      ³  ÀÄ@I2C_WRITE_1  0/74  Ram=1
-      ÃÄ@PSTRINGCN7_69  0/79  Ram=4
-      ³  ÃÄ@PUTCHAR_1_  0/34  Ram=1
-      ³  ÀÄ@PUTCHAR_1_  0/34  Ram=1
       ÃÄ@PRINTF_X_69  0/33  Ram=2
       ³  ÃÄ@PUTCHAR_1_  0/34  Ram=1
       ³  ÀÄ@PUTCHAR_1_  0/34  Ram=1
@@ -43,7 +35,7 @@
       ÃÄ@PUTCHAR_1_  0/34  Ram=1
       ÃÄ@PUTCHAR_1_  0/34  Ram=1
       ÃÄ@delay_ms1  0/20  Ram=1
-      ÃÄSHT25_get_temp  0/205  Ram=9
+      ÃÄSHT25_get_temp  0/207  Ram=9
       ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
       ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
       ³  ÃÄ@delay_ms1  0/20  Ram=1
