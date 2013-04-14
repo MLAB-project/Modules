@@ -1,65 +1,67 @@
 
-ROM used: 2165 (26%)
-          2337 (29%) including unused fragments
+ROM used: 2319 (28%)
+          2392 (29%) including unused fragments
 
           4 Average locations per line
-          37 Average locations per statement
+          34 Average locations per statement
 
-RAM used: 10 (3%) at main() level
-          36 (10%) worst case
+RAM used: 11 (3%) at main() level
+          37 (10%) worst case
 
 Stack used: 2 worst case (out of 8 total available)
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  107    58 100  main.c
+  133    68 100  main.c
    23     0   0  main.h
-  423     0   0  C:\Program Files\PICC\devices\16F887.h
+  423     0   0  C:\Program Files (x86)\PICC\devices\16F887.h
 ----- -----
-  553    58 Total
+  579    68 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
 0     20   1   1             @delay_ms1
 0     69   3   3             @I2C_READ_1
 0     74   3   1             @I2C_WRITE_1
-0     34   2   1             @PUTCHAR_1_
-0     92   4   1   167  2.2  SHT25_setup
-0    205   9   9   558  6.0  SHT25_get_temp
+0     34   1   1             @PUTCHAR_1_
+0     56   2   0    68  0.6  SHT25_soft_reset
+0    130   6   3   349  4.0  SHT25_setup
+0    205   9   9   572  6.0  SHT25_get_temp
 0     29   1   2             @ITOF
 0    202   9  14             @DIVFF
 0    117   5  13             @MULFF
-0    321  15  16             @ADDFF
-0    182   8   9   538  6.0  SHT25_get_hum
-1    289  13   4   231  2.2  MAIN
-0     25   1   0             @const102
+0    321  14  16             @ADDFF
+0    182   8   9   552  6.0  SHT25_get_hum
+1    344  15   5   763  5.2  MAIN
+0     25   1   0             @const104
 0     72   3   3             @PSTRINGC7_69
-0      7   0   0             @const104
-0     79   4   4             @PSTRINGCN7_69
-0     35   2   2             @PRINTF_X_69
-0      6   0   0             @const110
+0      7   0   0             @const106
+0     79   3   4             @PSTRINGCN7_69
+0     33   1   2             @PRINTF_X_69
+0      7   0   0             @const112
+0      6   0   0             @const113
  Inline        5             @FTOSD
 0     66   3  13             @DIV3232
-0    231  11  13             @PRINTF_L32D_69FPFPF
-0      6   0   0             @const119
+0    231  10  13             @PRINTF_L32D_69FPFPF
+0      6   0   0             @const122
 
 Program metrics:
-    Functions               4
-    Statements              58
-    Comments                99
-    Volume (V)              2053
-    Difficilty (D)          14.3
-    Effort to implement (E) 29400
-    Time to implement (T)   27 minutes
-    Est Delivered Bugs (B)  0
+    Functions               5
+    Statements              68
+    Comments                104
+    Volume (V)              3203
+    Difficilty (D)          19.6
+    Effort to implement (E) 62707
+    Time to implement (T)   58 minutes
+    Est Delivered Bugs (B)  1
     Cyclomatic Complexity   1
-    Maintainability (MI)    145
+    Maintainability (MI)    130
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
-00004-007FF  1872  172  
-00800-00FFF   289  1759  
+00004-007FF  1971  73  
+00800-00FFF   344  1704  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  
 
