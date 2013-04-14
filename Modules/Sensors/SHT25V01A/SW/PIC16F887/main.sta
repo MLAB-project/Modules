@@ -12,11 +12,11 @@ Stack used: 2 worst case (out of 8 total available)
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  108    58 100  main.c
+  107    58 100  main.c
    23     0   0  main.h
   423     0   0  C:\Program Files\PICC\devices\16F887.h
 ----- -----
-  554    58 Total
+  553    58 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
@@ -26,15 +26,15 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0     34   2   1             @PUTCHAR_1_
 0     92   4   1   167  2.2  SHT25_setup
 0    205   9   9   558  6.0  SHT25_get_temp
-0     29   1   2    55  1.1  @ITOF
-0    202   9  14   535  6.1  @DIVFF
-0    117   5  13   161  2.1  @MULFF
+0     29   1   2             @ITOF
+0    202   9  14             @DIVFF
+0    117   5  13             @MULFF
 0    321  15  16             @ADDFF
 0    182   8   9   538  6.0  SHT25_get_hum
 1    289  13   4   231  2.2  MAIN
-0     25   1   0   611  5.9  @const102
-0     72   3   3     3  0.0  @PSTRINGC7_69
-0      7   0   0   231  2.2  @const104
+0     25   1   0             @const102
+0     72   3   3             @PSTRINGC7_69
+0      7   0   0             @const104
 0     79   4   4             @PSTRINGCN7_69
 0     35   2   2             @PRINTF_X_69
 0      6   0   0             @const110
@@ -44,16 +44,16 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0      6   0   0             @const119
 
 Program metrics:
-    Functions               10
+    Functions               4
     Statements              58
-    Comments                100
-    Volume (V)              4841
-    Difficilty (D)          33.1
-    Effort to implement (E) 160293
-    Time to implement (T)   2 hours, 28 minutes
-    Est Delivered Bugs (B)  1
+    Comments                99
+    Volume (V)              2053
+    Difficilty (D)          14.3
+    Effort to implement (E) 29400
+    Time to implement (T)   27 minutes
+    Est Delivered Bugs (B)  0
     Cyclomatic Complexity   1
-    Maintainability (MI)    61
+    Maintainability (MI)    145
 
  Segment     Used  Free
 -----------  ----  ----

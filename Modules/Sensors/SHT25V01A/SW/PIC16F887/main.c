@@ -8,6 +8,8 @@ void SHT25_soft_reset()
   i2c_stop();      // Stop condition
 }
 
+SHT_
+
 unsigned int8 SHT25_setup()
 {
 unsigned int8 reg;
@@ -15,7 +17,6 @@ unsigned int8 reg;
   i2c_start();     // Start condition
   i2c_write(0x80); // Device address
   i2c_write(0xE7);    // Device command
-//  i2c_stop();      // Stop condition
 
   i2c_start();     // Start condition
   i2c_write(0x81); // Device address
