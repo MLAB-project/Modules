@@ -2,7 +2,7 @@
 #device adc=8
 
 #FUSES NOWDT                    //No Watch Dog Timer
-#FUSES INTRC                    //Internal RC Osc
+#FUSES INTRC_IO                    //Internal RC Osc
 #FUSES NOPUT                    //No Power Up Timer
 #FUSES MCLR                     //Master Clear pin enabled
 #FUSES NOPROTECT                //Code not protected from reading
@@ -18,5 +18,5 @@
 #use delay(clock=8000000)
 
 #use i2c(master, sda=PIN_C4, scl=PIN_C3)
-#use rs232(baud=9600,parity=N,xmit=PIN_B3,rcv=PIN_B2,bits=8) //rcv TXD xmit RXD
+#use rs232(baud=9600,parity=N,xmit=PIN_B7,rcv=PIN_B6,bits=8) //rcv TXD xmit RXD
 
