@@ -1,22 +1,24 @@
 
-ROM used: 2319 (28%)
-          2392 (29%) including unused fragments
+ROM used: 2363 (29%)
+          2370 (29%) including unused fragments
 
           4 Average locations per line
-          34 Average locations per statement
+          31 Average locations per statement
 
-RAM used: 11 (3%) at main() level
-          37 (10%) worst case
+RAM used: 12 (3%) at main() level
+          38 (10%) worst case
 
 Stack used: 2 worst case (out of 8 total available)
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  133    68 100  main.c
+   43    26  34  main.c
    23     0   0  main.h
-  423     0   0  C:\Program Files (x86)\PICC\devices\16F887.h
+  423     0   0  C:\Program Files\PICC\devices\16F887.h
+   14     0   0  SHT25.h
+   92    51  66  SHT25.c
 ----- -----
-  579    68 Total
+  595    77 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
@@ -24,21 +26,20 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0     69   3   3             @I2C_READ_1
 0     74   3   1             @I2C_WRITE_1
 0     34   1   1             @PUTCHAR_1_
-0     56   2   0    68  0.6  SHT25_soft_reset
-0    130   6   3   349  4.0  SHT25_setup
-0    205   9   9   572  6.0  SHT25_get_temp
+0     56   2   0    55  1.1  SHT25_soft_reset
+0    200   8   3   550  4.0  SHT25_setup
+0    207   9   9   572  6.0  SHT25_get_temp
 0     29   1   2             @ITOF
 0    202   9  14             @DIVFF
 0    117   5  13             @MULFF
 0    321  14  16             @ADDFF
 0    182   8   9   552  6.0  SHT25_get_hum
-1    344  15   5   763  5.2  MAIN
-0     25   1   0             @const104
+1    322  14   6   831  5.7  MAIN
+0     25   1   0             @const105
 0     72   3   3             @PSTRINGC7_69
-0      7   0   0             @const106
+0      8   0   0             @const107
 0     79   3   4             @PSTRINGCN7_69
 0     33   1   2             @PRINTF_X_69
-0      7   0   0             @const112
 0      6   0   0             @const113
  Inline        5             @FTOSD
 0     66   3  13             @DIV3232
@@ -47,21 +48,21 @@ Page ROM  %  RAM   Vol Diff  Functions:
 
 Program metrics:
     Functions               5
-    Statements              68
-    Comments                104
-    Volume (V)              3203
-    Difficilty (D)          19.6
-    Effort to implement (E) 62707
-    Time to implement (T)   58 minutes
+    Statements              77
+    Comments                124
+    Volume (V)              3540
+    Difficilty (D)          21.1
+    Effort to implement (E) 74648
+    Time to implement (T)   1 hours, 9 minutes
     Est Delivered Bugs (B)  1
-    Cyclomatic Complexity   1
-    Maintainability (MI)    130
+    Cyclomatic Complexity   2
+    Maintainability (MI)    142
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
-00004-007FF  1971  73  
-00800-00FFF   344  1704  
+00004-007FF  2037  7  
+00800-00FFF   322  1726  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  
 
