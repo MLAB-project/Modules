@@ -1,0 +1,63 @@
+
+ROM used: 788 (10%)
+          788 (10%) including unused fragments
+
+          1 Average locations per line
+          12 Average locations per statement
+
+RAM used: 7 (2%) at main() level
+          22 (6%) worst case
+
+Stack used: 3 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   43    22  32  main.c
+   20     0   0  main.h
+  423     0   0  ..\..\..\..\..\Program Files (x86)\PICC\devices\16F887.h
+   19     0   0  HMC5883L.h
+  102    46  68  HMC5883L.c
+----- -----
+  607    68 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     22   3   1             @delay_ms1
+ Inline        3   357  1.4  @I2C_READ_1
+0     52   7   1   113  1.3  @I2C_WRITE_1
+0     34   4   1   152  2.2  @PUTCHAR_1_
+0    107  14   1   152  2.2  mag_read
+0     21   3   6   129  4.6  mag_vypocet
+0     26   3   4   171  2.7  mag_readX
+0     26   3   4   171  2.7  mag_readY
+0     26   3   4   171  2.7  mag_readZ
+0    221  28   1   658  3.3  MAIN
+0      9   1   0    44  1.9  @const99
+0     70   9   3   257  7.2  @PSTRINGC7_68
+0     12   2   0             @const101
+0     15   2   0  1071  8.0  @const102
+0     15   2   0             @const106
+0    128  16   9             @PRINTF_LD_68
+
+Program metrics:
+    Functions               12
+    Statements              68
+    Comments                109
+    Volume (V)              5531
+    Difficilty (D)          39.8
+    Effort to implement (E) 220066
+    Time to implement (T)   3 hours, 24 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   3
+    Maintainability (MI)    61
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   784  1260  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

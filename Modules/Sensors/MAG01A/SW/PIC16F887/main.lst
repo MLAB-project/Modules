@@ -1,0 +1,746 @@
+CCS PCM C Compiler, Version 4.106, 47914               16-4-13 18:24
+
+               Filename: c:\users\honza\documents\pic\i2c_magnetometr\main.lst
+
+               ROM used: 788 words (10%)
+                         Largest free fragment is 2048
+               RAM used: 7 (2%) at main() level
+                         22 (6%) worst case
+               Stack:    3 locations
+
+*
+0000:  MOVLW  02
+0001:  MOVWF  0A
+0002:  GOTO   237
+0003:  NOP
+.................... //Magnetometr Jan Chroust 2013 
+.................... //vypise hodnoty jednotlivych os 
+....................  
+.................... #include "main.h" 
+.................... #include <16F887.h> 
+.................... //////// Standard Header file for the PIC16F887 device //////////////// 
+.................... #device PIC16F887 
+.................... #list 
+....................  
+.................... #device adc=8 
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES INTRC                 	//Internal RC Osc 
+.................... #FUSES NOPUT                 	//No Power Up Timer 
+.................... #FUSES MCLR                  	//Master Clear pin enabled 
+.................... #FUSES NOPROTECT             	//Code not protected from reading 
+.................... #FUSES NOCPD                 	//No EE protection 
+.................... #FUSES NOBROWNOUT            	//No brownout reset 
+.................... #FUSES IESO                  	//Internal External Switch Over mode enabled 
+.................... #FUSES FCMEN                 	//Fail-safe clock monitor enabled 
+.................... #FUSES NOLVP                 	//No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES NODEBUG               	//No Debug mode for ICD 
+.................... #FUSES NOWRT                 	//Program memory not write protected 
+.................... #FUSES BORV40                	//Brownout reset at 4.0V 
+....................  
+.................... #use delay(clock=8000000) 
+*
+0221:  MOVLW  28
+0222:  MOVWF  04
+0223:  BCF    03.7
+0224:  MOVF   00,W
+0225:  BTFSC  03.2
+0226:  GOTO   234
+0227:  MOVLW  02
+0228:  MOVWF  78
+0229:  CLRF   77
+022A:  DECFSZ 77,F
+022B:  GOTO   22A
+022C:  DECFSZ 78,F
+022D:  GOTO   229
+022E:  MOVLW  97
+022F:  MOVWF  77
+0230:  DECFSZ 77,F
+0231:  GOTO   230
+0232:  DECFSZ 00,F
+0233:  GOTO   227
+0234:  BCF    0A.3
+0235:  BCF    0A.4
+0236:  GOTO   310 (RETURN)
+....................  
+....................  
+....................  
+.................... #define EEPROM_SDA  PIN_B0 
+.................... #define EEPROM_SCL  PIN_B1 
+.................... #use i2c(master, sda=EEPROM_SDA, scl=EEPROM_SCL) 
+*
+009F:  MOVLW  08
+00A0:  MOVWF  78
+00A1:  NOP
+00A2:  BCF    06.1
+00A3:  BSF    03.5
+00A4:  BCF    06.1
+00A5:  NOP
+00A6:  BCF    03.5
+00A7:  RLF    2C,F
+00A8:  BCF    06.0
+00A9:  BTFSS  03.0
+00AA:  GOTO   0AE
+00AB:  BSF    03.5
+00AC:  BSF    06.0
+00AD:  BCF    03.5
+00AE:  BTFSC  03.0
+00AF:  GOTO   0B3
+00B0:  BSF    03.5
+00B1:  BCF    06.0
+00B2:  BCF    03.5
+00B3:  BSF    03.5
+00B4:  BSF    06.1
+00B5:  BCF    03.5
+00B6:  BTFSS  06.1
+00B7:  GOTO   0B6
+00B8:  DECFSZ 78,F
+00B9:  GOTO   0A1
+00BA:  NOP
+00BB:  BCF    06.1
+00BC:  BSF    03.5
+00BD:  BCF    06.1
+00BE:  NOP
+00BF:  BSF    06.0
+00C0:  NOP
+00C1:  NOP
+00C2:  BSF    06.1
+00C3:  BCF    03.5
+00C4:  BTFSS  06.1
+00C5:  GOTO   0C4
+00C6:  CLRF   78
+00C7:  NOP
+00C8:  BTFSC  06.0
+00C9:  BSF    78.0
+00CA:  BCF    06.1
+00CB:  BSF    03.5
+00CC:  BCF    06.1
+00CD:  BCF    03.5
+00CE:  BCF    06.0
+00CF:  BSF    03.5
+00D0:  BCF    06.0
+00D1:  BCF    03.5
+00D2:  RETURN
+*
+0107:  MOVLW  08
+0108:  MOVWF  2D
+0109:  MOVF   77,W
+010A:  MOVWF  2E
+010B:  BSF    03.5
+010C:  BSF    06.0
+010D:  NOP
+010E:  BSF    06.1
+010F:  BCF    03.5
+0110:  BTFSS  06.1
+0111:  GOTO   110
+0112:  BTFSC  06.0
+0113:  BSF    03.0
+0114:  BTFSS  06.0
+0115:  BCF    03.0
+0116:  RLF    78,F
+0117:  NOP
+0118:  BSF    03.5
+0119:  BCF    06.1
+011A:  BCF    03.5
+011B:  BCF    06.1
+011C:  DECFSZ 2D,F
+011D:  GOTO   10B
+011E:  BSF    03.5
+011F:  BSF    06.0
+0120:  NOP
+0121:  BCF    03.5
+0122:  BCF    06.0
+0123:  MOVF   2E,W
+0124:  BTFSC  03.2
+0125:  GOTO   129
+0126:  BSF    03.5
+0127:  BCF    06.0
+0128:  BCF    03.5
+0129:  NOP
+012A:  BSF    03.5
+012B:  BSF    06.1
+012C:  BCF    03.5
+012D:  BTFSS  06.1
+012E:  GOTO   12D
+012F:  NOP
+0130:  BCF    06.1
+0131:  BSF    03.5
+0132:  BCF    06.1
+0133:  NOP
+0134:  BCF    03.5
+0135:  BCF    06.0
+0136:  BSF    03.5
+0137:  BCF    06.0
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_B3,rcv=PIN_B2,bits=8) //rcv TXD xmit RXD 
+*
+0037:  BSF    03.5
+0038:  BCF    06.3
+0039:  BCF    03.5
+003A:  BCF    06.3
+003B:  MOVLW  08
+003C:  MOVWF  78
+003D:  GOTO   03E
+003E:  NOP
+003F:  BSF    78.7
+0040:  GOTO   04F
+0041:  BCF    78.7
+0042:  RRF    30,F
+0043:  BTFSC  03.0
+0044:  BSF    06.3
+0045:  BTFSS  03.0
+0046:  BCF    06.3
+0047:  BSF    78.6
+0048:  GOTO   04F
+0049:  BCF    78.6
+004A:  DECFSZ 78,F
+004B:  GOTO   042
+004C:  GOTO   04D
+004D:  NOP
+004E:  BSF    06.3
+004F:  MOVLW  3F
+0050:  MOVWF  04
+0051:  DECFSZ 04,F
+0052:  GOTO   051
+0053:  NOP
+0054:  BTFSC  78.7
+0055:  GOTO   041
+0056:  BTFSC  78.6
+0057:  GOTO   049
+0058:  RETURN
+....................  
+.................... #include "HMC5883L.h" 
+.................... #define MAG_ADDR_R  0x3D //addresa pro cteni 
+.................... #define MAG_ADDR_W  0x3C 
+....................  
+....................  
+.................... //Konstanty nastavujici rozsah 
+.................... //pro void set_mag_roz (unsigned int8 h) 
+.................... #define MAG_ROZ088  0x00 
+.................... #define MAG_ROZ130  0x20 
+.................... #define MAG_ROZ190  0x40 
+.................... #define MAG_ROZ250  0x60 
+.................... #define MAG_ROZ400  0x80 
+.................... #define MAG_ROZ470  0xA0 
+.................... #define MAG_ROZ560  0xC0 
+.................... #define MAG_ROZ810  0xE0 
+....................  
+....................  
+.................... #include "HMC5883L.c" 
+.................... void set_mag (void) //uvodni nastaveni na kontinualni mereni, rozsah ± 8.1 Ga, frekvence mereni 15HZ 
+.................... { 
+....................   i2c_start();       //nastavení Configuration Register A 
+....................   I2C_Write(MAG_ADDR_W);      
+....................   I2C_Write(0x00);    
+....................   I2C_Write(0x70); 
+....................   i2c_stop(); 
+....................   Delay_ms(6); 
+....................     
+....................   i2c_start();       //nastavení Configuration Register B 
+....................   I2C_Write(MAG_ADDR_W);      
+....................   I2C_Write(0x01);    
+....................   I2C_Write(MAG_ROZ810); 
+....................   i2c_stop(); 
+....................  
+....................   Delay_ms(6); 
+....................  
+....................   i2c_start();          //nastveni Mode Register  
+....................   I2C_Write(MAG_ADDR_W);      
+....................   I2C_Write(0x02);    
+....................   I2C_Write(0x00); 
+....................   i2c_stop(); 
+....................   Delay_ms(6);   
+.................... } 
+....................  
+.................... void set_mag_roz (unsigned int8 h) //nastavy rozsah 
+.................... { 
+....................  
+.................... // 
+....................    
+....................     
+....................   i2c_start();        
+....................   I2C_Write(MAG_ADDR_W);      
+....................   I2C_Write(0x01);    
+....................   I2C_Write(h); 
+....................   i2c_stop(); 
+....................  
+....................   Delay_ms(6); 
+....................  
+....................   
+.................... } 
+....................  
+....................  
+.................... byte mag_read(byte reg) //pro cteni reg 
+.................... { 
+....................   
+....................    i2c_start(); 
+*
+00D3:  BSF    03.5
+00D4:  BSF    06.0
+00D5:  NOP
+00D6:  BSF    06.1
+00D7:  NOP
+00D8:  BCF    03.5
+00D9:  BCF    06.0
+00DA:  BSF    03.5
+00DB:  BCF    06.0
+00DC:  NOP
+00DD:  BCF    03.5
+00DE:  BCF    06.1
+00DF:  BSF    03.5
+00E0:  BCF    06.1
+....................    I2C_Write(MAG_ADDR_W); 
+00E1:  MOVLW  3C
+00E2:  BCF    03.5
+00E3:  MOVWF  2C
+00E4:  CALL   09F
+....................    I2C_write(reg); 
+00E5:  MOVF   2B,W
+00E6:  MOVWF  2C
+00E7:  CALL   09F
+....................    i2c_stop(); 
+00E8:  BSF    03.5
+00E9:  BCF    06.0
+00EA:  NOP
+00EB:  BSF    06.1
+00EC:  BCF    03.5
+00ED:  BTFSS  06.1
+00EE:  GOTO   0ED
+00EF:  NOP
+00F0:  GOTO   0F1
+00F1:  NOP
+00F2:  BSF    03.5
+00F3:  BSF    06.0
+00F4:  NOP
+....................    i2c_start(); 
+00F5:  BSF    06.0
+00F6:  NOP
+00F7:  BSF    06.1
+00F8:  NOP
+00F9:  BCF    03.5
+00FA:  BCF    06.0
+00FB:  BSF    03.5
+00FC:  BCF    06.0
+00FD:  NOP
+00FE:  BCF    03.5
+00FF:  BCF    06.1
+0100:  BSF    03.5
+0101:  BCF    06.1
+....................    I2C_Write(MAG_ADDR_R); 
+0102:  MOVLW  3D
+0103:  BCF    03.5
+0104:  MOVWF  2C
+0105:  CALL   09F
+....................    reg=i2c_read(0); 
+0106:  CLRF   77
+*
+0138:  MOVF   78,W
+0139:  BCF    03.5
+013A:  MOVWF  2B
+....................   return reg; 
+013B:  MOVF   2B,W
+013C:  MOVWF  78
+.................... } 
+013D:  RETURN
+....................  
+....................  
+.................... signed int16 mag_vypocet(unsigned int8 h, unsigned int8 l) //prepocet na 16bit cislo 
+.................... { 
+.................... signed int16 x; 
+.................... x = (((unsigned int16) h << 8) + l ); 
+013E:  CLRF   30
+013F:  MOVF   2B,W
+0140:  MOVWF  2F
+0141:  MOVWF  30
+0142:  CLRF   2F
+0143:  MOVF   2C,W
+0144:  ADDWF  2F,W
+0145:  MOVWF  78
+0146:  MOVF   30,W
+0147:  MOVWF  7A
+0148:  BTFSC  03.0
+0149:  INCF   7A,F
+014A:  MOVF   78,W
+014B:  MOVWF  2D
+014C:  MOVF   7A,W
+014D:  MOVWF  2E
+.................... return x;    
+014E:  MOVF   2D,W
+014F:  MOVWF  78
+0150:  MOVF   2E,W
+0151:  MOVWF  79
+.................... } 
+0152:  RETURN
+....................  
+....................  
+.................... signed int16 mag_readX(void) //nacteni osy x 
+.................... { 
+.................... unsigned int8 h,l; 
+.................... signed int16 x; 
+.................... h=mag_read(0x03); 
+0153:  MOVLW  03
+0154:  MOVWF  2B
+0155:  CALL   0D3
+0156:  MOVF   78,W
+0157:  MOVWF  27
+.................... l=mag_read(0x04); 
+0158:  MOVLW  04
+0159:  MOVWF  2B
+015A:  CALL   0D3
+015B:  MOVF   78,W
+015C:  MOVWF  28
+.................... x=mag_vypocet(h,l); 
+015D:  MOVF   27,W
+015E:  MOVWF  2B
+015F:  MOVF   28,W
+0160:  MOVWF  2C
+0161:  CALL   13E
+0162:  MOVF   79,W
+0163:  MOVWF  2A
+0164:  MOVF   78,W
+0165:  MOVWF  29
+.................... return x; 
+0166:  MOVF   29,W
+0167:  MOVWF  78
+0168:  MOVF   2A,W
+0169:  MOVWF  79
+....................     
+.................... } 
+016A:  BCF    0A.3
+016B:  BCF    0A.4
+016C:  GOTO   2B5 (RETURN)
+....................  
+....................  
+.................... signed int16 mag_readY(void) //nacteni osy x 
+.................... { 
+.................... unsigned int8 h,l; 
+.................... signed int16 x; 
+.................... h=mag_read(0x07); 
+016D:  MOVLW  07
+016E:  MOVWF  2B
+016F:  CALL   0D3
+0170:  MOVF   78,W
+0171:  MOVWF  27
+.................... l=mag_read(0x08); 
+0172:  MOVLW  08
+0173:  MOVWF  2B
+0174:  CALL   0D3
+0175:  MOVF   78,W
+0176:  MOVWF  28
+.................... x=mag_vypocet(h,l); 
+0177:  MOVF   27,W
+0178:  MOVWF  2B
+0179:  MOVF   28,W
+017A:  MOVWF  2C
+017B:  CALL   13E
+017C:  MOVF   79,W
+017D:  MOVWF  2A
+017E:  MOVF   78,W
+017F:  MOVWF  29
+.................... return x; 
+0180:  MOVF   29,W
+0181:  MOVWF  78
+0182:  MOVF   2A,W
+0183:  MOVWF  79
+....................     
+.................... } 
+0184:  BCF    0A.3
+0185:  BCF    0A.4
+0186:  GOTO   2BA (RETURN)
+....................  
+....................  
+.................... signed int16 mag_readZ(void) //nacteni osy x 
+.................... { 
+.................... unsigned int8 h,l; 
+.................... signed int16 x; 
+.................... h=mag_read(0x05); 
+0187:  MOVLW  05
+0188:  MOVWF  2B
+0189:  CALL   0D3
+018A:  MOVF   78,W
+018B:  MOVWF  27
+.................... l=mag_read(0x06); 
+018C:  MOVLW  06
+018D:  MOVWF  2B
+018E:  CALL   0D3
+018F:  MOVF   78,W
+0190:  MOVWF  28
+.................... x=mag_vypocet(h,l); 
+0191:  MOVF   27,W
+0192:  MOVWF  2B
+0193:  MOVF   28,W
+0194:  MOVWF  2C
+0195:  CALL   13E
+0196:  MOVF   79,W
+0197:  MOVWF  2A
+0198:  MOVF   78,W
+0199:  MOVWF  29
+.................... return x; 
+019A:  MOVF   29,W
+019B:  MOVWF  78
+019C:  MOVF   2A,W
+019D:  MOVWF  79
+....................     
+.................... } 
+019E:  BCF    0A.3
+019F:  BCF    0A.4
+01A0:  GOTO   2BF (RETURN)
+....................  
+....................  
+....................  
+....................  
+....................  
+.................... void main() 
+.................... { 
+*
+0237:  CLRF   04
+0238:  BCF    03.7
+0239:  MOVLW  1F
+023A:  ANDWF  03,F
+023B:  MOVLW  71
+023C:  BSF    03.5
+023D:  MOVWF  0F
+023E:  MOVF   0F,W
+023F:  BCF    06.3
+0240:  BCF    03.5
+0241:  BSF    06.3
+0242:  BSF    03.5
+0243:  BSF    03.6
+0244:  MOVF   09,W
+0245:  ANDLW  C0
+0246:  MOVWF  09
+0247:  BCF    03.6
+0248:  BCF    1F.4
+0249:  BCF    1F.5
+024A:  MOVLW  00
+024B:  BSF    03.6
+024C:  MOVWF  08
+024D:  BCF    03.5
+024E:  CLRF   07
+024F:  CLRF   08
+0250:  CLRF   09
+....................  
+....................    setup_adc_ports(NO_ANALOGS|VSS_VDD); 
+*
+0254:  BSF    03.5
+0255:  BSF    03.6
+0256:  MOVF   09,W
+0257:  ANDLW  C0
+0258:  MOVWF  09
+0259:  BCF    03.6
+025A:  BCF    1F.4
+025B:  BCF    1F.5
+025C:  MOVLW  00
+025D:  BSF    03.6
+025E:  MOVWF  08
+....................    setup_adc(ADC_CLOCK_DIV_2); 
+025F:  BCF    03.5
+0260:  BCF    03.6
+0261:  BCF    1F.6
+0262:  BCF    1F.7
+0263:  BSF    03.5
+0264:  BCF    1F.7
+0265:  BCF    03.5
+0266:  BSF    1F.0
+....................    setup_spi(SPI_SS_DISABLED); 
+0267:  BCF    14.5
+0268:  BCF    20.5
+0269:  MOVF   20,W
+026A:  BSF    03.5
+026B:  MOVWF  07
+026C:  BCF    03.5
+026D:  BSF    20.4
+026E:  MOVF   20,W
+026F:  BSF    03.5
+0270:  MOVWF  07
+0271:  BCF    03.5
+0272:  BCF    20.3
+0273:  MOVF   20,W
+0274:  BSF    03.5
+0275:  MOVWF  07
+0276:  MOVLW  01
+0277:  BCF    03.5
+0278:  MOVWF  14
+0279:  MOVLW  00
+027A:  BSF    03.5
+027B:  MOVWF  14
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_1); 
+027C:  MOVF   01,W
+027D:  ANDLW  C7
+027E:  IORLW  08
+027F:  MOVWF  01
+....................    setup_timer_1(T1_DISABLED); 
+0280:  BCF    03.5
+0281:  CLRF   10
+....................    setup_timer_2(T2_DISABLED,0,1); 
+0282:  MOVLW  00
+0283:  MOVWF  78
+0284:  MOVWF  12
+0285:  MOVLW  00
+0286:  BSF    03.5
+0287:  MOVWF  12
+....................    setup_ccp1(CCP_OFF); 
+0288:  BCF    03.5
+0289:  BSF    20.2
+028A:  MOVF   20,W
+028B:  BSF    03.5
+028C:  MOVWF  07
+028D:  BCF    03.5
+028E:  CLRF   17
+028F:  BSF    03.5
+0290:  CLRF   1B
+0291:  CLRF   1C
+0292:  MOVLW  01
+0293:  MOVWF  1D
+....................    setup_comparator(NC_NC_NC_NC);// This device COMP currently not supported by the PICWizard 
+0294:  BCF    03.5
+0295:  BSF    03.6
+0296:  CLRF   07
+0297:  CLRF   08
+0298:  CLRF   09
+....................  
+.................... printf("Magnetometr:  \r\n",); 
+0299:  MOVLW  04
+029A:  MOVWF  0D
+029B:  MOVLW  00
+029C:  MOVWF  0F
+029D:  BCF    03.6
+029E:  CALL   059
+.................... printf("(c)mlab JACHO 2013:  \r\n",); 
+029F:  MOVLW  0D
+02A0:  BSF    03.6
+02A1:  MOVWF  0D
+02A2:  MOVLW  00
+02A3:  MOVWF  0F
+02A4:  BCF    03.6
+02A5:  CALL   059
+.................... printf("Vysledky z jednotlivych os:\r\n",); 
+02A6:  MOVLW  19
+02A7:  BSF    03.6
+02A8:  MOVWF  0D
+02A9:  MOVLW  00
+02AA:  MOVWF  0F
+02AB:  BCF    03.6
+02AC:  CALL   059
+.................... signed int16 X,Y,Z; 
+....................  
+....................  
+.................... while(true) 
+.................... {   
+....................    printf("Vysledky z jednotlivych os:\r\n",); 
+02AD:  MOVLW  28
+02AE:  BSF    03.6
+02AF:  MOVWF  0D
+02B0:  MOVLW  00
+02B1:  MOVWF  0F
+02B2:  BCF    03.6
+02B3:  CALL   059
+....................    X=mag_readX(); 
+02B4:  GOTO   153
+02B5:  MOVF   79,W
+02B6:  MOVWF  22
+02B7:  MOVF   78,W
+02B8:  MOVWF  21
+....................    Y=mag_readY(); 
+02B9:  GOTO   16D
+02BA:  MOVF   79,W
+02BB:  MOVWF  24
+02BC:  MOVF   78,W
+02BD:  MOVWF  23
+....................    Z=mag_readZ(); 
+02BE:  GOTO   187
+02BF:  MOVF   79,W
+02C0:  MOVWF  26
+02C1:  MOVF   78,W
+02C2:  MOVWF  25
+....................    printf("X: %Ld \r\n", X); 
+02C3:  MOVLW  58
+02C4:  MOVWF  30
+02C5:  CALL   037
+02C6:  MOVLW  3A
+02C7:  MOVWF  30
+02C8:  CALL   037
+02C9:  MOVLW  20
+02CA:  MOVWF  30
+02CB:  CALL   037
+02CC:  MOVLW  10
+02CD:  MOVWF  04
+02CE:  MOVF   22,W
+02CF:  MOVWF  28
+02D0:  MOVF   21,W
+02D1:  MOVWF  27
+02D2:  CALL   1A1
+02D3:  MOVLW  20
+02D4:  MOVWF  30
+02D5:  CALL   037
+02D6:  MOVLW  0D
+02D7:  MOVWF  30
+02D8:  CALL   037
+02D9:  MOVLW  0A
+02DA:  MOVWF  30
+02DB:  CALL   037
+....................    printf("Y %Ld \r\n", Y); 
+02DC:  MOVLW  59
+02DD:  MOVWF  30
+02DE:  CALL   037
+02DF:  MOVLW  20
+02E0:  MOVWF  30
+02E1:  CALL   037
+02E2:  MOVLW  10
+02E3:  MOVWF  04
+02E4:  MOVF   24,W
+02E5:  MOVWF  28
+02E6:  MOVF   23,W
+02E7:  MOVWF  27
+02E8:  CALL   1A1
+02E9:  MOVLW  20
+02EA:  MOVWF  30
+02EB:  CALL   037
+02EC:  MOVLW  0D
+02ED:  MOVWF  30
+02EE:  CALL   037
+02EF:  MOVLW  0A
+02F0:  MOVWF  30
+02F1:  CALL   037
+....................    printf("Z: %Ld \r\n", Z); 
+02F2:  MOVLW  5A
+02F3:  MOVWF  30
+02F4:  CALL   037
+02F5:  MOVLW  3A
+02F6:  MOVWF  30
+02F7:  CALL   037
+02F8:  MOVLW  20
+02F9:  MOVWF  30
+02FA:  CALL   037
+02FB:  MOVLW  10
+02FC:  MOVWF  04
+02FD:  MOVF   26,W
+02FE:  MOVWF  28
+02FF:  MOVF   25,W
+0300:  MOVWF  27
+0301:  CALL   1A1
+0302:  MOVLW  20
+0303:  MOVWF  30
+0304:  CALL   037
+0305:  MOVLW  0D
+0306:  MOVWF  30
+0307:  CALL   037
+0308:  MOVLW  0A
+0309:  MOVWF  30
+030A:  CALL   037
+....................    Delay_ms(2000);   
+030B:  MOVLW  08
+030C:  MOVWF  27
+030D:  MOVLW  FA
+030E:  MOVWF  28
+030F:  GOTO   221
+0310:  DECFSZ 27,F
+0311:  GOTO   30D
+....................     
+.................... } 
+0312:  GOTO   2AD
+.................... } 
+0313:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2CF5   INTRC NOWDT NOPUT MCLR NOPROTECT NOCPD NOBROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 3FFF   NOWRT BORV40
