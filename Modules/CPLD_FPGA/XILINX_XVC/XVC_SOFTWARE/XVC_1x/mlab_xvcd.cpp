@@ -12,6 +12,7 @@
 // 1.01 2012_09 Added parameter for device selection
 // 1.02 2012_12 Error handling and debugged
 // 1.03 2012_12 Release version ready to publish
+// 1.04 2013_04 Socket Bind Error with eplanation (multiple instance of XVC Server)
 //
 //
 // Purpose:
@@ -79,6 +80,7 @@
 //
 //   Linux version (Winsock library differs).
 //   External definition of JTAG pins.
+//   Enable Socket Number (to be able to run multiple XVC Servers), now it is constant XVC_TCP_PORT (should be only a default)
 
 
 // Library Definitions
@@ -465,7 +467,9 @@ int __cdecl main(int argc, char *argv[])
 	iResult = bind(ListenSocket, result->ai_addr, (int)result->ai_addrlen);
 	if (iResult == SOCKET_ERROR)
 	{
-		fprintf(stderr, "Bind failed with error: %d\n", WSAGetLastError());
+		int LastError=WSAGetLastError();
+		fprintf(stderr, "Bind failed with error: %d\n", LastError);
+		if (LastError==10048) fprintf(stderr, "Trying to start second instance of XVC Server?\n");
 		freeaddrinfo(result);
 		closesocket(ListenSocket);
 		WSACleanup();
@@ -487,7 +491,7 @@ int __cdecl main(int argc, char *argv[])
 	iResult = listen(ListenSocket, SOMAXCONN);
 	if (iResult == SOCKET_ERROR)
 	{
-		printf("listen failed with error: %d\n", WSAGetLastError());
+		fprintf(stderr, "listen failed with error: %d\n", WSAGetLastError());
 		closesocket(ListenSocket);
 		WSACleanup();
 		jtagClosePort();
@@ -507,7 +511,7 @@ int __cdecl main(int argc, char *argv[])
 		ClientSocket = accept(ListenSocket, &ClientSocetAddr, &ClientSocetAddrLen);
 		if (ClientSocket == INVALID_SOCKET)
 		{
-			printf("accept failed with error: %d\n", WSAGetLastError());
+			fprintf(stderr, "accept failed with error: %d\n", WSAGetLastError());
 			closesocket(ListenSocket);
 			WSACleanup();
 			jtagClosePort();

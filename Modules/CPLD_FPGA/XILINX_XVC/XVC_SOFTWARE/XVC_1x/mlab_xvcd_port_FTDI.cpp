@@ -162,12 +162,20 @@ int jtagOpenPort(int findDeviceBy, char *findDeviceByStr)
 		if (ftStatus == FT_OK)
 		{
 			printf("Device %d\n", i);
-			printf("  Description       \"%s\"\n", Description);
-			printf("  SerialNumber      \"%s\"\n", SerialNumber);
-			//printf("  Flags             0x%x\n",   Flags);
-			//printf("  Type              0x%x\n",   Type);
-			//printf("  ID                0x%x\n",   ID);
-			printf("  Location          0x%x\n\n", LocId);
+			if (Flags && FT_FLAGS_OPENED)
+			{
+				printf("  Description       Device is used by another process\n");
+			}
+			else
+			{
+				printf("  Description       \"%s\"\n", Description);
+				printf("  SerialNumber      \"%s\"\n", SerialNumber);
+				//printf("  Flags             0x%x\n",   Flags);
+				//printf("  Type              0x%x\n",   Type);
+				//printf("  ID                0x%x\n",   ID);
+				printf("  Location          0x%x\n", LocId);
+			}
+			printf("\n");
 		}
 	}
 
