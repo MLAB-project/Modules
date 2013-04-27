@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -3804,18 +3804,20 @@ paja-trb@seznam.cz
 <symbols>
 <symbol name="SROUB">
 <circle x="0" y="0" radius="2" width="0.254" layer="94"/>
-<pin name="P$1" x="-7" y="0" length="middle" direction="pas"/>
+<wire x1="-2.54" y1="0" x2="-2.032" y2="0" width="0.1778" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;name</text>
+<pin name="P$1" x="-7.62" y="0" visible="off" length="middle"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="SROUB3M" prefix="X" uservalue="yes">
+<deviceset name="SROUB3M" prefix="X">
 <gates>
-<gate name="G$1" symbol="SROUB" x="0" y="0"/>
+<gate name="P4" symbol="SROUB" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="SROUB3M">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="P4" pin="P$1" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -3869,6 +3871,7 @@ paja-trb@seznam.cz
 <text x="-101.6" y="-99.06" size="1.778" layer="91">VCC</text>
 <text x="-101.6" y="-104.14" size="1.778" layer="91">SDA</text>
 <text x="-101.6" y="-109.22" size="1.778" layer="91">GND</text>
+<text x="-63.5" y="-78.74" size="1.778" layer="95">X5</text>
 </plain>
 <instances>
 <instance part="X1" gate="G$1" x="-86.36" y="-53.34"/>
@@ -3886,11 +3889,13 @@ paja-trb@seznam.cz
 </instance>
 <instance part="NAP1" gate="V+" x="-121.92" y="-30.48"/>
 <instance part="GND1" gate="ZEM" x="-121.92" y="-68.58"/>
-<instance part="SV3" gate="G$1" x="-114.3" y="-109.22" rot="R180"/>
-<instance part="X2" gate="G$1" x="-45.72" y="-88.9"/>
-<instance part="X3" gate="G$1" x="-45.72" y="-81.28"/>
-<instance part="X4" gate="G$1" x="-60.96" y="-88.9"/>
-<instance part="X5" gate="G$1" x="-60.96" y="-81.28"/>
+<instance part="SV3" gate="G$1" x="-114.3" y="-109.22" smashed="yes" rot="R180">
+<attribute name="NAME" x="-114.3" y="-113.03" size="1.4224" layer="95" rot="R180"/>
+</instance>
+<instance part="X2" gate="P4" x="-45.72" y="-88.9"/>
+<instance part="X3" gate="P4" x="-45.72" y="-81.28"/>
+<instance part="X4" gate="P4" x="-60.96" y="-88.9"/>
+<instance part="X5" gate="P4" x="-60.96" y="-81.28" smashed="yes"/>
 <instance part="SV1" gate="-1" x="-88.9" y="-81.28" rot="R180"/>
 <instance part="SV1" gate="-2" x="-88.9" y="-88.9" rot="R180"/>
 <instance part="SV1" gate="-3" x="-88.9" y="-96.52" rot="R180"/>
@@ -3914,11 +3919,12 @@ paja-trb@seznam.cz
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="-121.92" y1="-35.56" x2="-109.22" y2="-35.56" width="0.1524" layer="91"/>
 <wire x1="-109.22" y1="-35.56" x2="-109.22" y2="-38.1" width="0.1524" layer="91"/>
-<wire x1="-109.22" y1="-35.56" x2="-101.6" y2="-35.56" width="0.1524" layer="91"/>
-<pinref part="X1" gate="G$1" pin="VDD"/>
-<wire x1="-101.6" y1="-35.56" x2="-101.6" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="-109.22" y1="-35.56" x2="-104.14" y2="-35.56" width="0.1524" layer="91"/>
 <junction x="-121.92" y="-35.56"/>
 <junction x="-109.22" y="-35.56"/>
+<pinref part="X1" gate="G$1" pin="VDD"/>
+<wire x1="-101.6" y1="-45.72" x2="-104.14" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="-104.14" y1="-45.72" x2="-104.14" y2="-35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="-83.82" y1="-96.52" x2="-81.28" y2="-96.52" width="0.1524" layer="91"/>
