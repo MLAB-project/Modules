@@ -40,6 +40,7 @@ void setup()
   setParam(5, 0xd0, 2); // ACC
   setParam(6, 0xd0, 2); // DEC
   setParam(7, 0, 2); // MAX_SPEED
+  Serial.println("Testovaci program pro HBSTEP01A");
 }
 
 int readInt()
