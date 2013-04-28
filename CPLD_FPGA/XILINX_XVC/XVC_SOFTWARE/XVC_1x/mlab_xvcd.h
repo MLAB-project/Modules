@@ -1,7 +1,7 @@
 // Program Version
 // ---------------
 
-#define VERSION						"1.03"							// Program version
+#define VERSION						"1.05"							// Program version
 
 
 // JTAG Port Definitions

@@ -12,7 +12,8 @@
 // 1.01 2012_09 Added parameter for device selection
 // 1.02 2012_12 Error handling and debugged
 // 1.03 2012_12 Release version ready to publish
-// 1.04 2013_04 Socket Bind Error with eplanation (multiple instance of XVC Server)
+// 1.04 2013_04 Socket Bind Error with explanation (multiple instance of XVC Server)
+// 1.05 2013-04 Test FTDI cable during wait for Accept (to stop the server immediately when cable is disconnected)
 //
 //
 // Purpose:
@@ -58,7 +59,7 @@
 //   Ask Google about Xilinx Virtual Cable.
 //
 //
-// Translation:
+// Compilation:
 //
 //   MS Visual C++ 2010 Express (free, registration required)
 //   Create new empty project for Win32 Console Application and name project mlab_xvcd (to build mlab_xvcd.exe)
@@ -469,7 +470,7 @@ int __cdecl main(int argc, char *argv[])
 	{
 		int LastError=WSAGetLastError();
 		fprintf(stderr, "Bind failed with error: %d\n", LastError);
-		if (LastError==10048) fprintf(stderr, "Trying to start second instance of XVC Server?\n");
+		if (LastError==WSAEADDRINUSE) fprintf(stderr, "Trying to start second instance of XVC Server?\n");
 		freeaddrinfo(result);
 		closesocket(ListenSocket);
 		WSACleanup();
@@ -505,14 +506,61 @@ int __cdecl main(int argc, char *argv[])
 		printf("  Listen\n");
 		jtagSetLED(true);
 
-		// Accept a client SOCKET
+		// Set ListenSocket to non-blocking mode
+		// We need during waiting for Accept to detect FTDI disconnect
+		u_long iMode = 1;
+		iResult = ioctlsocket(ListenSocket, FIONBIO, &iMode);
+		if (iResult != NO_ERROR)
+		{
+			fprintf(stderr, "ioctlsocket failed with error: %ld\n", iResult);
+			WSACleanup();
+			jtagClosePort();
+			return -2;
+		}
+
+		// Accept a client SOCKET (wait for Accept)
 		sockaddr ClientSocetAddr;
 		int ClientSocetAddrLen = sizeof(sockaddr);
-		ClientSocket = accept(ListenSocket, &ClientSocetAddr, &ClientSocetAddrLen);
-		if (ClientSocket == INVALID_SOCKET)
+		do 
 		{
-			fprintf(stderr, "accept failed with error: %d\n", WSAGetLastError());
-			closesocket(ListenSocket);
+			// Try Accept (non-blocking)
+			ClientSocket = accept(ListenSocket, &ClientSocetAddr, &ClientSocetAddrLen);
+			if (ClientSocket == INVALID_SOCKET)
+			{
+				// Accept Error
+				if (WSAGetLastError() != WSAEWOULDBLOCK)
+				{
+					fprintf(stderr, "accept failed with error: %d\n", WSAGetLastError());
+					closesocket(ListenSocket);
+					WSACleanup();
+					jtagClosePort();
+					return -2;
+				}
+				// Not yet Accepted
+				{
+					// Check FTDI
+					if (!CheckCable())
+					{
+						fprintf(stderr, "XVC Cable unexpectadly disconnected\n");
+						closesocket(ListenSocket);
+						WSACleanup();
+						jtagClosePort();
+						return -2;
+					}
+					// Sleep some time (do not eat CPU time for nothong)
+					//nanosleep();
+					Sleep(100);	//ms
+				}
+			}
+		}
+		while (ClientSocket == INVALID_SOCKET);
+
+		// Set (Accepted) Socket to blocking mode
+		iMode = 0;
+		iResult = ioctlsocket(ClientSocket, FIONBIO, &iMode);
+		if (iResult != NO_ERROR)
+		{
+			fprintf(stderr, "ioctlsocket failed with error: %ld\n", iResult);
 			WSACleanup();
 			jtagClosePort();
 			return -2;
