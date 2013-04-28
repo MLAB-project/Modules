@@ -477,3 +477,15 @@ int jtagScan(const unsigned char *TMS, const unsigned char *TDI, unsigned char *
 
 	return 0;
 }
+
+// Check if Cable is still connected and accesible
+// True is o.k.
+bool CheckCable()
+{
+	FT_STATUS ftStatus;
+
+	DWORD lpdwAmountInRxQueue, lpdwAmountInTxQueue, lpdwEventStatus;
+
+	ftStatus = FT_GetStatus(ftHandle, &lpdwAmountInRxQueue, &lpdwAmountInTxQueue, &lpdwEventStatus);
+	return (ftStatus==FT_OK);
+}

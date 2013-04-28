@@ -78,4 +78,8 @@ int jtagClosePort();
 // Turn LED On during processing
 int jtagScan(const unsigned char *TMS, const unsigned char *TDI, unsigned char *TDO, int bits);
 
+// Check if Cable is still connected and accesible
+// True is o.k.
+bool CheckCable();
+
 #endif
