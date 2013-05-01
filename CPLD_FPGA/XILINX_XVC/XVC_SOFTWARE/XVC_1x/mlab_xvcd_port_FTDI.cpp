@@ -78,27 +78,27 @@ void jtagPrintPinNames(int pinMask)
 void jtagCheckPinConfig()
 {
 	// Check CBUS usage
-	if ( (PORT_TCK) > 0x00FF )
+	if ( PORT_TCK > 0x00FF )
 		fprintf(stderr, "\nFTDI: INTERNAL ERROR: TCK can't use CBUS signal"), exit(2);
-	if ( (PORT_TCK) == 0 )
+	if ( PORT_TCK == 0 )
 		fprintf(stderr, "\nFTDI: INTERNAL ERROR: TCK not defined"), exit(2);
 	
-	if ( (PORT_TDI) > 0x00FF )
+	if ( PORT_TDI > 0x00FF )
 		fprintf(stderr, "\nFTDI: INTERNAL ERROR: TDI can't use CBUS signal"), exit(2);
-	if ( (PORT_TDI) == 0 )
+	if ( PORT_TDI == 0 )
 		fprintf(stderr, "\nFTDI: INTERNAL ERROR: TDI not defined"), exit(2);
 
-	if ( (PORT_TDO) > 0x00FF )
+	if ( PORT_TDO > 0x00FF )
 		fprintf(stderr, "\nFTDI: INTERNAL ERROR: TDO can't use CBUS signal"), exit(2);
-	if ( (PORT_TDO) == 0 )
+	if ( PORT_TDO == 0 )
 		fprintf(stderr, "\nFTDI: INTERNAL ERROR: TDO not defined"), exit(2);
 
-	if ( (PORT_TMS) > 0x00FF)
+	if ( PORT_TMS > 0x00FF)
 		fprintf(stderr, "\nFTDI: INTERNAL ERROR: TMS can't use CBUS signal"), exit(2);
-	if ( (PORT_TMS) == 0 )
+	if ( PORT_TMS == 0 )
 		fprintf(stderr, "\nFTDI: INTERNAL ERROR: TMS not defined"), exit(2);
 
-	if ( (PORT_LED) > 0x0FFF)
+	if ( PORT_LED > 0x0FFF)
 		fprintf(stderr, "\nFTDI: INTERNAL ERROR: LED can't use CBUS signal > 3"), exit(2);
 }
 
@@ -162,7 +162,7 @@ int jtagOpenPort(int findDeviceBy, char *findDeviceByStr)
 		if (ftStatus == FT_OK)
 		{
 			printf("Device %d\n", i);
-			if (Flags && FT_FLAGS_OPENED)
+			if (Flags & FT_FLAGS_OPENED)
 			{
 				printf("  Description       Device is used by another process\n");
 			}
@@ -244,7 +244,7 @@ int jtagOpenPort(int findDeviceBy, char *findDeviceByStr)
 	}
 
 	// Set BitBang Mode
-	ftStatus = FT_SetBitMode(ftHandle, (UCHAR)IO_OUTPUT_MASK, FT_BITMODE_SYNC_BITBANG);		//FT_BITMODE_SYNC_BITBANG / FT_BITMODE_ASYNC_BITBANG
+	ftStatus = FT_SetBitMode(ftHandle, (UCHAR)(0xFF & IO_OUTPUT_MASK), FT_BITMODE_SYNC_BITBANG);		//FT_BITMODE_SYNC_BITBANG / FT_BITMODE_ASYNC_BITBANG
 	if (ftStatus == FT_OK)
 	{
 		// printf("Set BitBang Mode\n");
@@ -295,7 +295,7 @@ void jtagSetLED(bool LedEnable)
 {
 
 	// DBUS Connected LED (BitBang Mode)
-	LedMask = LedEnable ? PORT_LED & 0xFF : 0;	// Set mask for jtagScan function
+	LedMask = LedEnable ? (PORT_LED & 0xFF) : 0;	// Set mask for jtagScan function
 	if (PORT_LED & 0xFF)
 	{
 		// Set / Reset LED Pin
@@ -309,18 +309,16 @@ void jtagSetLED(bool LedEnable)
 	}
 
 	// CBUS Connected LED (BitBang Mode) 1 and 0 state of the port
-	const unsigned char On  = ( (((PORT_LED) & 0x0F00) >> 4) | (((PORT_LED) & 0x0F00) >> 8) );
-	const unsigned char Off = ( (((PORT_LED) & 0x0F00) >> 4)                                );
+	const unsigned char On  = ( ((PORT_LED & 0x0F00) >> 4) | ((PORT_LED & 0x0F00) >> 8) );
+	const unsigned char Off = ( ((PORT_LED & 0x0F00) >> 4)                                );
 
 	if (On)
 	{
-		FT_STATUS ftStatus;
-
 		// Set / Reset LED Pin
-		ftStatus = FT_SetBitMode(ftHandle, LedEnable ? On : Off, FT_BITMODE_CBUS_BITBANG);
+		FT_SetBitMode(ftHandle, LedEnable ? On : Off, FT_BITMODE_CBUS_BITBANG);
 
 		// Return to used Mode
-		ftStatus = FT_SetBitMode(ftHandle, (UCHAR)IO_OUTPUT_MASK, FT_BITMODE_SYNC_BITBANG);		//FT_BITMODE_SYNC_BITBANG / FT_BITMODE_ASYNC_BITBANG
+		FT_SetBitMode(ftHandle, (UCHAR)(0xFF & IO_OUTPUT_MASK), FT_BITMODE_SYNC_BITBANG);		//FT_BITMODE_SYNC_BITBANG / FT_BITMODE_ASYNC_BITBANG
 	}
 }
 
@@ -357,12 +355,12 @@ int jtagClosePort()
 
 
 // Send data to JTAG port and bring returned data
-int jtagScan(const unsigned char *TMS, const unsigned char *TDI, unsigned char *TDO, int bits)
+int jtagScan(const unsigned char *TMS, const unsigned char *TDI, unsigned char *TDO, unsigned int bits)
 {
 	FT_STATUS ftStatus;
 	DWORD BytesWritten;
 	DWORD BytesReceived;
-	int r, t;
+	unsigned int r, t;
 
 	// Decompose TDI and TMS byte array to raw bitstream
 	//(1 TDI bit + 1 TMS bit --> 1 byte + 1 byte with TCK)
@@ -377,12 +375,12 @@ int jtagScan(const unsigned char *TMS, const unsigned char *TDI, unsigned char *
 	jtagSetLED(true);
 
 	// Prepare transmit data to buffer
-	for (int i = 0; i < bits; ++i)
+	for (unsigned int i = 0; i < bits; ++i)
 	{
 		unsigned char v = 0 | LedMask;	// LED On / Off (on DBUS)
 		if (TMS[i/8] & (1<<(i&7)))
 		{
-			v |= (PORT_TMS);
+			v |= PORT_TMS;
 			// printf("T");
 		}	
 		else
@@ -391,7 +389,7 @@ int jtagScan(const unsigned char *TMS, const unsigned char *TDI, unsigned char *
 		}
 		if (TDI[i/8] & (1<<(i&7)))
 		{
-			v |= (PORT_TDI);
+			v |= PORT_TDI;
 			// printf("|");
 		}
 		else
@@ -399,7 +397,7 @@ int jtagScan(const unsigned char *TMS, const unsigned char *TDI, unsigned char *
 			// printf(".");
 		}
 		buffer[i * 2 + 0] = v;
-		buffer[i * 2 + 1] = v | (PORT_TCK);
+		buffer[i * 2 + 1] = v | PORT_TCK;
 	}
 	PinStatus = buffer[bits*2-1];
 	// printf("\n");
@@ -422,7 +420,7 @@ int jtagScan(const unsigned char *TMS, const unsigned char *TDI, unsigned char *
 				return -2;
 		}
 
-		int i = 0;
+		unsigned int i = 0;
 		
 		while (i < t)
 		{
@@ -457,9 +455,9 @@ int jtagScan(const unsigned char *TMS, const unsigned char *TDI, unsigned char *
 	// Pack TDO bitstream from receive buffer to byte array
 	memset(TDO, 0, (bits + 7) / 8);
 	
-	for (int i = 0; i < bits; ++i)
+	for (unsigned int i = 0; i < bits; ++i)
 	{
-		if (buffer[i * 2 + 1] & (PORT_TDO))
+		if (buffer[i * 2 + 1] & PORT_TDO)
 		{
 			TDO[i/8] |= 1 << (i&7);
 			// printf("H");

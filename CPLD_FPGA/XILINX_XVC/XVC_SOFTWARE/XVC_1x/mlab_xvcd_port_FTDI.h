@@ -35,14 +35,22 @@
 #undef UNICODE
 #define WIN32_LEAN_AND_MEAN
 
-#include <windows.h>														// Windows Console Application
 #include <stdlib.h>														//	Standard Library (exit, atoi, ...)
 #include <stdio.h>														//	Standard IO (printf, ...)
 #include "mlab_xvcd.h"															//	Program Config (pin defs, settings, ...)
 
+#ifdef WIN32
+#include <windows.h>														// Windows Console Application
+#else
+#include <string.h>
+#endif
+
 // Link with library
-#include "ftd2xx.h"														// FTDI Library
-#pragma comment (lib, "ftd2xx.lib")									// Tell MS compiller to link with this library
+#ifdef WIN32
+#include "lib_win32\ftd2xx.h"														// FTDI Library
+#else
+#include "lib_linux_i386/ftd2xx.h"
+#endif
 
 
 // Public Definitions
@@ -76,7 +84,7 @@ int jtagClosePort();
 
 // Send data to JTAG port and bring returned data
 // Turn LED On during processing
-int jtagScan(const unsigned char *TMS, const unsigned char *TDI, unsigned char *TDO, int bits);
+int jtagScan(const unsigned char *TMS, const unsigned char *TDI, unsigned char *TDO, unsigned int bits);
 
 // Check if Cable is still connected and accesible
 // True is o.k.

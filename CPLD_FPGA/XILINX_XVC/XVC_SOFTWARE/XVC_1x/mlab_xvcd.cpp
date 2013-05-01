@@ -14,6 +14,7 @@
 // 1.03 2012_12 Release version ready to publish
 // 1.04 2013_04 Socket Bind Error with explanation (multiple instance of XVC Server)
 // 1.05 2013-04 Test FTDI cable during wait for Accept (to stop the server immediately when cable is disconnected)
+// 1.06 2013-04 Added support for Linux (thanks to Martin Poviser)
 //
 //
 // Purpose:
@@ -59,17 +60,20 @@
 //   Ask Google about Xilinx Virtual Cable.
 //
 //
-// Compilation:
+// Compilation for Windows:
 //
 //   MS Visual C++ 2010 Express (free, registration required)
 //   Create new empty project for Win32 Console Application and name project mlab_xvcd (to build mlab_xvcd.exe)
 //   Header Files   / Add / Existing Items - all .h   files
-//   Resource Files / Add / Existing Items - all .lib files
 //   Source Files   / Add / Existing Items - all .cpp files
+//   Library Files  / Add / Existing Items - all .lib .h files from lib_win32 directory
 //   Select Release version (no debug info)
 //   Set static linkage Project Properties / Configuration Release / Configuration Properties 
 //      / Code Generation / Runtime Library = Multithreaded (/MT)
 //
+// Compilation for Linux:
+//
+//   On Ubuntu 12.04LTS just run the .sh file
 //
 // Problems:
 //
@@ -91,19 +95,61 @@
 #define WIN32_LEAN_AND_MEAN
 
 #include "mlab_xvcd.h"													// Program Configuration
-#include <windows.h>														// Windows Console Application
-#include <winsock2.h>													// Windows WinSock2
-#include <ws2tcpip.h>													// Windows WinSock2
 #include <stdlib.h>														//	Standard Library (exit, atoi, ...)
 #include <stdio.h>														//	Standard IO (printf, ...)
 #include <signal.h>														// CTRL+C handling
 
+#ifdef WIN32
+
+#include <windows.h>														// Windows Console Application
+#include <winsock2.h>													// Windows WinSock2
+#include <ws2tcpip.h>													// Windows WinSock2
+
 // Link with library
 #pragma comment (lib, "Ws2_32.lib")
+//#pragma comment (lib, "../lib_win32/ftd2xx.lib")				// Add this file to Resources
+
+#else // not WIN32
+
+#include "lib_linux_i386/WinTypes.h"
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <unistd.h>
+#include <netdb.h>
+
+#endif
 
 #define XVC_RX_BUFLEN				(XVC_JTAG_LEN/8*2+20)		// Length of receive buffer in bytes (command+length+TMSbuffer+TDIbuffer)
 #define XVC_TX_BUFLEN				(XVC_JTAG_LEN/8)				// Length of transmit buffer in bytes (TDObuffer)
 
+#ifdef WIN32
+
+typedef int socklen_t;
+
+#else //not WIN32
+
+typedef int SOCKET;
+
+#define SOCKET_ERROR	-1
+#define INVALID_SOCKET	-1
+
+void closesocket(int socket)
+{
+	close(socket);
+}
+
+void WSACleanup()
+{
+}
+
+int WSAGetLastError()
+{
+	return errno;
+}
+
+#endif
 
 // JTAG state machine
 // ------------------
@@ -168,7 +214,7 @@ int handleData(SOCKET ClientSocket)
 
 		// Read Command
 		char command[16];
-		int commandLen = 0;
+		unsigned int commandLen = 0;
 
 		// Read String terminated by ':'
 		do
@@ -220,14 +266,14 @@ int handleData(SOCKET ClientSocket)
 		char buffer[2048];
 
 		// Read Data (data string for TMS and TDI)
-		int nr_bytes = (len + 7) / 8;
+		unsigned int nr_bytes = (len + 7) / 8;
 		if (nr_bytes * 2 > sizeof(buffer))
 		{
 			fprintf(stderr, "Buffer Size Exceeded\n");
 			return -2;
 		}
 
-		int iReceivedBytes=0;
+		unsigned int iReceivedBytes=0;
 		while (iReceivedBytes<nr_bytes * 2)
 		{
 			iResult = recv(ClientSocket, buffer+iReceivedBytes, nr_bytes * 2 - iReceivedBytes, 0);
@@ -302,7 +348,7 @@ int handleData(SOCKET ClientSocket)
 
 
 // Stop Handler - switch JTAG port off and stop program
-void stopHandler(int sig)
+void stopHandler(int)
 {
 	jtagClosePort();
 	exit(1);
@@ -326,7 +372,7 @@ void Help(char *progName)
 }
 
 
-int __cdecl main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	// Variables
 	bool verbose = true;
@@ -388,7 +434,7 @@ int __cdecl main(int argc, char *argv[])
 	{
 		// Empty String - find device by number and number is empty
 		findDeviceBy = 0;
-		findDeviceByStr = "";
+		findDeviceByStr = (char *)"";
 	}
 
 	// Find, Init and Open FTDI USB Chip
@@ -402,13 +448,14 @@ int __cdecl main(int argc, char *argv[])
 	signal(SIGINT,  &stopHandler);
 
 	printf("Starting Network Server\n");
-	WSADATA wsaData;
 	int iResult;
 
 	SOCKET ListenSocket = INVALID_SOCKET;
 	SOCKET ClientSocket = INVALID_SOCKET;
 
+#ifdef WIN32
 	// Initialize Winsock
+	WSADATA wsaData;
 	iResult = WSAStartup(MAKEWORD(2,2), &wsaData);
 	if (iResult != 0)
 	{
@@ -416,6 +463,7 @@ int __cdecl main(int argc, char *argv[])
 		jtagClosePort();
 		return -2;
 	}
+#endif
 
 	// Display HostName and Address
 	char sMyName[255];
@@ -436,7 +484,7 @@ int __cdecl main(int argc, char *argv[])
 
 	// Create Protocol Structure
 	struct addrinfo hints;
-	ZeroMemory(&hints, sizeof(hints));
+	memset(&hints, 0, sizeof(hints));
 	hints.ai_family   = AF_INET;			// IP6
 	hints.ai_socktype = SOCK_STREAM;		// Reliable two-way connection
 	hints.ai_protocol = IPPROTO_TCP;		// Protocol TCP
@@ -457,7 +505,7 @@ int __cdecl main(int argc, char *argv[])
 	ListenSocket = socket(result->ai_family, result->ai_socktype, result->ai_protocol);
 	if (ListenSocket == INVALID_SOCKET)
 	{
-		fprintf(stderr, "socket failed with error: %ld\n", WSAGetLastError());
+		fprintf(stderr, "socket failed with error: %d\n", WSAGetLastError());
 		freeaddrinfo(result);
 		WSACleanup();
 		jtagClosePort();
@@ -470,7 +518,12 @@ int __cdecl main(int argc, char *argv[])
 	{
 		int LastError=WSAGetLastError();
 		fprintf(stderr, "Bind failed with error: %d\n", LastError);
-		if (LastError==WSAEADDRINUSE) fprintf(stderr, "Trying to start second instance of XVC Server?\n");
+#ifdef WIN32
+		if (LastError==WSAEADDRINUSE) 
+#else
+		if (LastError==EADDRINUSE)
+#endif
+			fprintf(stderr, "Trying to start second instance of XVC Server?\n");
 		freeaddrinfo(result);
 		closesocket(ListenSocket);
 		WSACleanup();
@@ -508,6 +561,8 @@ int __cdecl main(int argc, char *argv[])
 
 		// Set ListenSocket to non-blocking mode
 		// We need during waiting for Accept to detect FTDI disconnect
+
+#ifdef WIN32
 		u_long iMode = 1;
 		iResult = ioctlsocket(ListenSocket, FIONBIO, &iMode);
 		if (iResult != NO_ERROR)
@@ -517,10 +572,19 @@ int __cdecl main(int argc, char *argv[])
 			jtagClosePort();
 			return -2;
 		}
+#else
+		iResult = fcntl(ListenSocket, F_GETFL, 0);
+		if (iResult < 0 || fcntl(ListenSocket, F_SETFL, iResult | O_NONBLOCK) < 0)
+		{
+			fprintf(stderr, "fcntl failed with error: %d\n", errno);
+			jtagClosePort();
+			return -2;
+		}
+#endif
 
 		// Accept a client SOCKET (wait for Accept)
 		sockaddr ClientSocetAddr;
-		int ClientSocetAddrLen = sizeof(sockaddr);
+		socklen_t ClientSocetAddrLen = sizeof(sockaddr);
 		do 
 		{
 			// Try Accept (non-blocking)
@@ -528,7 +592,11 @@ int __cdecl main(int argc, char *argv[])
 			if (ClientSocket == INVALID_SOCKET)
 			{
 				// Accept Error
+#ifdef WIN32
 				if (WSAGetLastError() != WSAEWOULDBLOCK)
+#else
+				if (WSAGetLastError() != EAGAIN && WSAGetLastError() != EWOULDBLOCK)
+#endif
 				{
 					fprintf(stderr, "accept failed with error: %d\n", WSAGetLastError());
 					closesocket(ListenSocket);
@@ -541,21 +609,26 @@ int __cdecl main(int argc, char *argv[])
 					// Check FTDI
 					if (!CheckCable())
 					{
-						fprintf(stderr, "XVC Cable unexpectadly disconnected\n");
+						fprintf(stderr, "XVC Cable unexpectedly disconnected\n");
 						closesocket(ListenSocket);
 						WSACleanup();
 						jtagClosePort();
 						return -2;
 					}
 					// Sleep some time (do not eat CPU time for nothong)
-					//nanosleep();
+#ifdef WIN32
 					Sleep(100);	//ms
+#else
+					usleep(100000); //us
+#endif
 				}
 			}
 		}
 		while (ClientSocket == INVALID_SOCKET);
 
 		// Set (Accepted) Socket to blocking mode
+
+#ifdef WIN32
 		iMode = 0;
 		iResult = ioctlsocket(ClientSocket, FIONBIO, &iMode);
 		if (iResult != NO_ERROR)
@@ -565,6 +638,15 @@ int __cdecl main(int argc, char *argv[])
 			jtagClosePort();
 			return -2;
 		}
+#else
+		iResult = fcntl(ListenSocket, F_GETFL, 0);
+		if (iResult < 0 || fcntl(ListenSocket, F_SETFL, iResult & ~O_NONBLOCK) < 0)
+		{
+			fprintf(stderr, "fcntl failed with error: %d\n", errno);
+			jtagClosePort();
+			return -2;
+		}
+#endif
 
 		// Print Accepted + Address
 		printf("  Accepted          ");
@@ -584,6 +666,7 @@ int __cdecl main(int argc, char *argv[])
 			if (iResult>=0)
 			{
 				printf(".");
+				fflush(stdout);
 				Cnt++;
 				if (Cnt>40)
 				{
@@ -605,7 +688,11 @@ int __cdecl main(int argc, char *argv[])
 		if (iResult==-2)
 		{
 			fprintf(stderr, "  Disconnect\n");
+#ifdef WIN32
 			iResult = shutdown(ClientSocket, SD_SEND);
+#else
+			iResult = shutdown(ClientSocket, SHUT_WR);
+#endif
 			if (iResult == SOCKET_ERROR)
 			{
 				fprintf(stderr, "shutdown failed with error: %d\n", WSAGetLastError());

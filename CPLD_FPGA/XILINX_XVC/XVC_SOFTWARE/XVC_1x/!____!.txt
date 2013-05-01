@@ -1,9 +1,15 @@
-FTDI D2XX library, use latest version from http://www.ftdichip.com
+FTDI D2XX library (for Windows), use latest version from http://www.ftdichip.com/Drivers/D2XX.htm
 
-	ftd2xx.h
-	ftd2xx.lib
+	lib_win\ftd2xx.h		<-- CDM v2.08.28 Certified\ftd2xx.h
+	lib_win\ftd2xx.lib		<-- CDM v2.08.28 Certified\i386\ftd2xx.lib
 
-Main program, pin configuration is here (in .h file)
+FTDI D2XX library (for Linux), use latest version from http://www.ftdichip.com/Drivers/D2XX.htm
+
+	lib_linux_i386\WinTypes.h	<-- libftd2xx1.1.12.tar.gz/release/WinTypes.h
+	lib_linux_i386\ftd2xx.h		<-- libftd2xx1.1.12.tar.gz/release/examples/ftd2xx.h
+	lib_linux_i386\libftd2xx.a	<-- libftd2xx1.1.12.tar.gz/release/build/i386/libftd2xx.a
+
+Main program, pin configuration is here in .h file
 
 	mlab_xvcd.h
 	mlab_xvcd.cpp
