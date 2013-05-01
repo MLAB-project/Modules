@@ -1,7 +1,7 @@
 // Program Version
 // ---------------
 
-#define VERSION						"1.05"							// Program version
+#define VERSION						"1.06"							// Program version
 
 
 // JTAG Port Definitions
@@ -11,11 +11,11 @@
 #include "mlab_xvcd_port_FTDI.h"
 
 // JTAG Port Pin Masks (look at mlab_xvcd_port_FTDI.h for pin names)
-#define PORT_TCK						FTDI_TXD							//	JTAG TCK (output)
-#define PORT_TDI						FTDI_RXD							//	JTAG TDI (output)
-#define PORT_TDO						FTDI_RTS							// JTAG TDO (input)
-#define PORT_TMS						FTDI_CTS							//	JTAG TMS (output)
-#define PORT_LED						FTDI_RI | CBUS3				// Activituy LED (output)
+#define PORT_TCK						( FTDI_TXD )					//	JTAG TCK (output)
+#define PORT_TDI						( FTDI_RXD )					//	JTAG TDI (output)
+#define PORT_TDO						( FTDI_RTS )					// JTAG TDO (input)
+#define PORT_TMS						( FTDI_CTS )					//	JTAG TMS (output)
+#define PORT_LED						( FTDI_RI | CBUS3 )			// Activituy LED (output)
 
 // FTDI Settings
 #define BAUD_RATE						1000000							// Baoud Rate (mult it by 16)
