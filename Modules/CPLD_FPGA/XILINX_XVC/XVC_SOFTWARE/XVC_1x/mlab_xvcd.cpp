@@ -13,8 +13,10 @@
 // 1.02 2012_12 Error handling and debugged
 // 1.03 2012_12 Release version ready to publish
 // 1.04 2013_04 Socket Bind Error with explanation (multiple instance of XVC Server)
-// 1.05 2013-04 Test FTDI cable during wait for Accept (to stop the server immediately when cable is disconnected)
-// 1.06 2013-04 Added support for Linux (thanks to Martin Poviser)
+// 1.05 2013_04 Test FTDI cable during wait for Accept (to stop the server immediately when cable is disconnected)
+// 1.06 2013_04 Added support for Linux (thanks to Martin Poviser)
+// 1.07 2013_04 Rewritten Host Address function for Linux (function gethostbyname returns 127.0.1.1 on Debian systems)
+//              Solved compatibility problems on Linux (FT_SetLatncyTimer requires delay, udev problem with ftdi_sio driver)
 //
 //
 // Purpose:
@@ -83,7 +85,6 @@
 //
 // Possible improvements:
 //
-//   Linux version (not fully functional yet).
 //   External definition of JTAG pins.
 //   Enable Socket Number (to be able to run multiple XVC Servers), now it is constant XVC_TCP_PORT (should be only a default)
 
@@ -118,6 +119,9 @@
 #include <errno.h>
 #include <unistd.h>
 #include <netdb.h>
+#include <net/if.h>
+#include <sys/ioctl.h>
+#include <arpa/inet.h>
 
 #endif
 
@@ -465,10 +469,13 @@ int main(int argc, char *argv[])
 	}
 #endif
 
-	// Display HostName and Address
+	// Display HostName
 	char sMyName[255];
 	gethostname(sMyName, sizeof(sMyName));
 	printf("  Host Name         %s\n", sMyName);
+
+	// Display Address
+#ifdef WIN32
 	hostent * pHostInfo;
 	pHostInfo = gethostbyname(sMyName);
 	printf("  Network Name      %s\n", pHostInfo->h_name);
@@ -481,6 +488,33 @@ int main(int argc, char *argv[])
 		}
 		printf("%d\n", (unsigned char)pHostInfo->h_addr_list[0][pHostInfo->h_length-1]);
 	}
+#else
+	int TempSocket;
+	struct ifreq ifreqs[20];
+	struct ifconf ic;
+
+	ic.ifc_len = sizeof ifreqs;
+	ic.ifc_req = ifreqs;
+
+	TempSocket = socket(AF_INET, SOCK_DGRAM, 0);
+	if (TempSocket < 0) {
+		perror("socket");
+		return -2;
+	}
+
+	if (ioctl(TempSocket, SIOCGIFCONF, &ic) < 0) {
+		perror("SIOCGIFCONF");
+		return -2;
+	}
+
+	for (int i = 0; i < ic.ifc_len/sizeof(struct ifreq); ++i)
+	{
+		if (ifreqs[i].ifr_name[0]!='l')// remove lo
+			printf("  Host Address      %s: %s\n",
+			ifreqs[i].ifr_name,
+			inet_ntoa(((struct sockaddr_in*)&ifreqs[i].ifr_addr)->sin_addr));
+	}
+#endif
 
 	// Create Protocol Structure
 	struct addrinfo hints;
