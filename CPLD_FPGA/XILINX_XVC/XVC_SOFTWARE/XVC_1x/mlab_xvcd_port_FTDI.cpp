@@ -1,6 +1,15 @@
 // Include FTDI library
 #include "mlab_xvcd_port_FTDI.h"
 
+#ifdef WIN32
+
+#include <windows.h>														// Windows Console Application (Sleep)
+
+#else
+
+#include <unistd.h>				// sleep
+
+#endif
 
 // JTAG Output Pin Mask
 #define IO_OUTPUT_MASK				(PORT_TCK|PORT_TDI|PORT_TMS|PORT_LED)		// Mask for all Output Pins
@@ -285,6 +294,14 @@ int jtagOpenPort(int findDeviceBy, char *findDeviceByStr)
 		fprintf(stderr, "FTDI: Set USB Latency Timer Failed %d\n", ftStatus);
 	}
 
+	// Fix (without this delay the next FT_Read hang for ever)
+	// My Linux i5 notebook requires at least 2500us
+#ifdef WIN32
+	Sleep(10);	//ms
+#else
+	usleep(10000); //us
+#endif
+
 	printf("\n");
 	return 0;
 }
@@ -293,9 +310,8 @@ int jtagOpenPort(int findDeviceBy, char *findDeviceByStr)
 // Enable or Disable Activity LED
 void jtagSetLED(bool LedEnable)
 {
-
 	// DBUS Connected LED (BitBang Mode)
-	LedMask = LedEnable ? (PORT_LED & 0xFF) : 0;	// Set mask for jtagScan function
+	LedMask = LedEnable ? (0xFF & PORT_LED) : 0;	// Set mask for jtagScan function
 	if (PORT_LED & 0xFF)
 	{
 		// Set / Reset LED Pin
@@ -305,7 +321,6 @@ void jtagSetLED(bool LedEnable)
 		unsigned char Dummy;
 		FT_Write(ftHandle, &DataOut, 1, &BytesWritten );	// Send 1 byte
 		FT_Read (ftHandle, &Dummy,   1, &BytesReceived);	// Read 1 byte
-//printf("[PinStatus %x DataOut %x]", PinStatus, DataOut);
 	}
 
 	// CBUS Connected LED (BitBang Mode) 1 and 0 state of the port
