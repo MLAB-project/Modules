@@ -1,7 +1,7 @@
 // MLAB Xilinx Virtual Cable Network Server
 // ----------------------------------------
 //
-// (c) miho 2012 http://www.mlab.cz/PermaLink/XVC_SOFTWARE
+// (c) miho 2012, 2013 http://www.mlab.cz/PermaLink/XVC_SOFTWARE
 //
 // This program if free.
 //
@@ -83,7 +83,7 @@
 //
 // Possible improvements:
 //
-//   Linux version (Winsock library differs).
+//   Linux version (not fully functional yet).
 //   External definition of JTAG pins.
 //   Enable Socket Number (to be able to run multiple XVC Servers), now it is constant XVC_TCP_PORT (should be only a default)
 
@@ -381,7 +381,7 @@ int main(int argc, char *argv[])
 	printf("\n");
 	printf("Xilinx Virtual Cable Network Server\n");
 	printf("===================================\n");
-	printf("(c) miho 2012 v " VERSION "\n\n");
+	printf("(c) miho " YEAR " v " VERSION "\n\n");
 
 	// Get program name
 	char *cp;

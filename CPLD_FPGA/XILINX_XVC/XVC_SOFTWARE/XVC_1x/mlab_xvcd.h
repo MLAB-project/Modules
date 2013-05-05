@@ -2,7 +2,7 @@
 // ---------------
 
 #define VERSION						"1.06"							// Program version
-
+#define YEAR                     "2013"							// Year of the program
 
 // JTAG Port Definitions
 // ---------------------
