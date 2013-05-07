@@ -1,7 +1,7 @@
 //Jan Chroust 15.4.2013
 
 
-#include "C:\Users\Honza\Documents\pic\I2C_altimet\main.h"
+#include "main.h"
 
 #define EEPROM_SDA  PIN_B0
 #define EEPROM_SCL  PIN_B1
