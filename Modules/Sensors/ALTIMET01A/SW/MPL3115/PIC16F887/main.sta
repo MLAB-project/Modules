@@ -12,11 +12,11 @@ Stack used: 3 worst case (out of 8 total available)
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  159    67 100  main.c
+  149    67 100  main.c
    20     0   0  main.h
-  423     0   0  ..\..\..\..\..\Program Files (x86)\PICC\devices\16F887.h
+  423     0   0  C:\Program Files (x86)\PICC\devices\16F887.h
 ----- -----
-  602    67 Total
+  592    67 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
@@ -30,10 +30,10 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0     86   4  13   206  4.3  mpl3115_T
 0     29   1   2             @ITOF
 0    202   9  14             @DIVFF
-0    321  14  16   395  5.3  @ADDFF
+0    321  14  16             @ADDFF
 0    111   5  17   289  5.3  mpl3115_A
 0    174   8  22   411  5.7  mpl3115_P
- Inline        4   321  2.7  @DTOF
+ Inline        4             @DTOF
 1    217  10  13   365  2.7  MAIN
 0     13   1   0             @const110
 0     72   3   3             @PSTRINGC7_68
@@ -48,16 +48,16 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0     33   1   3             @PSTRINGCN_68
 
 Program metrics:
-    Functions               9
+    Functions               7
     Statements              67
-    Comments                98
-    Volume (V)              4404
-    Difficilty (D)          28.9
-    Effort to implement (E) 127218
-    Time to implement (T)   1 hours, 58 minutes
+    Comments                101
+    Volume (V)              3128
+    Difficilty (D)          20.8
+    Effort to implement (E) 64966
+    Time to implement (T)   1 hours, 0 minutes
     Est Delivered Bugs (B)  1
     Cyclomatic Complexity   1
-    Maintainability (MI)    60
+    Maintainability (MI)    83
 
  Segment     Used  Free
 -----------  ----  ----

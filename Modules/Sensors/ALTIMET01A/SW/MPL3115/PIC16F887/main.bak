@@ -1,3 +1,6 @@
+//Jan Chroust 15.4.2013
+
+
 #include "C:\Users\Honza\Documents\pic\I2C_altimet\main.h"
 
 #define EEPROM_SDA  PIN_B0
@@ -5,7 +8,7 @@
 #use i2c(master, sda=EEPROM_SDA, scl=EEPROM_SCL)
 #use rs232(baud=9600,parity=N,xmit=PIN_B3,rcv=PIN_B2,bits=8) //rcv TXD xmit RXD
 
-#define MPL3115_ADDR_R  0xC1
+#define MPL3115_ADDR_R  0xC1 //addresa pro cteni
 #define MPL3115_ADDR_W  0xC0
 
 
@@ -114,24 +117,11 @@ p = (float)((m << 10)|(c<<2)|(l>>6)) + l1;
  return p;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 void main()
  {
 
    float p, t, a;
  printf("Tlakomer nebo vyskomer \r\n",);
-
-
  
  while(TRUE)
  { 
