@@ -1,0 +1,90 @@
+004     @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @TRIS_C
+021     main.STAV1
+022     main.STAV2
+023-024 main.SOUCET
+025-026 main.SOUCET1
+027     main.LSB
+028     main.ZK
+029     main.k
+02A     i
+02B     @delay_ms1.P1
+02B     @I2C_READ_1.P2
+02B     @PSTRINGCN7_69.P3
+02B     @PRINTF_X_69.P4
+02B     @I2C_WRITE_1.P5
+02B     @PSTRINGC7_69.@SCRATCH1
+02C     @PRINTF_X_69.P1
+02C     @I2C_READ_1.@SCRATCH1
+02C     @PSTRINGC7_69.@SCRATCH2
+02C     @PSTRINGCN7_69.@SCRATCH1
+02D     @I2C_READ_1.@SCRATCH2
+02D     @PSTRINGC7_69.@SCRATCH3
+02D     @PSTRINGCN7_69.@SCRATCH2
+02E     @PSTRINGCN7_69.@SCRATCH3
+02F     @PUTCHAR_1_.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+00D6  @delay_ms1
+00EA  @I2C_READ_1
+008C  @I2C_WRITE_1
+0020  @PUTCHAR_1_
+01A1  main
+0004  @const78
+0044  @PSTRINGC7_69
+0010  @const87
+0131  @PSTRINGCN7_69
+0180  @PRINTF_X_69
+0016  @const93
+01A1  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Honza\Documents\pic\I2C_bat_pam\LED_BAT7\
+
+Project Files:
+    main.c
+    main.h
+    ..\..\..\..\..\..\Program Files (x86)\PICC\devices\16F887.h
+
+Units:
+    C:\Users\Honza\Documents\pic\I2C_bat_pam\LED_BAT7\main (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.PJT
+    Call Tree:   main.tre
+    Statistics:  main.sta
