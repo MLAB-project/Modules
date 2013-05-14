@@ -1,11 +1,9 @@
-//Jan Chroust 15.4.2013
-
+#define VERSION "0.1"
+#define ID "$Id: main.c 2916 2013-04-14 17:42:03Z kaklik $"
 
 #include "main.h"
 
-#define EEPROM_SDA  PIN_B0
-#define EEPROM_SCL  PIN_B1
-#use i2c(master, sda=EEPROM_SDA, scl=EEPROM_SCL)
+#use i2c(master, sda=PIN_B0, scl=PIN_B1)
 #use rs232(baud=9600,parity=N,xmit=PIN_B3,rcv=PIN_B2,bits=8) //rcv TXD xmit RXD
 
 #define MPL3115_ADDR_R  0xC1 //addresa pro cteni
@@ -80,8 +78,8 @@ float mpl3115_T (void) //teplota ve stupnich
 int m;
 float l, t;
  
-   m= mpl3115_read (0x04);
-   l= (float)(mpl3115_read(0x05)>>4)/16.0;
+   m = mpl3115_read (0x04);
+   l = (float)(mpl3115_read(0x05)>>4)/16.0;
    t = (float)(M + L); 
  return t;
 }
@@ -92,9 +90,9 @@ float mpl3115_A (void) //vyska v m
 int16 m, c;
 float l, a;
  
-m= mpl3115_read (0x01);
-c= mpl3115_read (0x02);  
-l= (float)(mpl3115_read(0x03)>>4)/16.0;
+m = mpl3115_read (0x01);
+c = mpl3115_read (0x02);  
+l = (float)(mpl3115_read(0x03)>>4)/16.0;
 a = (float)((m << 8)|c) + l;
  return a;
 }
@@ -107,9 +105,9 @@ unsigned int16 c;
 unsigned int l;
 float p, l1;
  
-m= mpl3115_read (0x01);
-c= mpl3115_read (0x02);  
-l=mpl3115_read(0x03);
+m = mpl3115_read (0x01);
+c = mpl3115_read (0x02);  
+l = mpl3115_read(0x03);
 
 l1= (float)(l>>4)/4.0;
 p = (float)((m << 10)|(c<<2)|(l>>6)) + l1;
@@ -135,14 +133,12 @@ void main()
    a=mpl3115_A();
 
 
-   printf("Teplota: %10.4f(stupne)\r\n", t);
+   printf("Teplota: %1.4f\r\n", t);
    printf("Tlak: %10.4f(Pa)\r\n", p);
    printf("Výška: %10.4f(m)\r\n", a);
 
-delay_ms (1000);
-}
-
-
+   delay_ms (1000);
+  }
 }
 
 

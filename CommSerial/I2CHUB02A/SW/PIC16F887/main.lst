@@ -1,6 +1,6 @@
-CCS PCM C Compiler, Version 4.106, 47914               30-4-13 23:58
+CCS PCM C Compiler, Version 4.106, 47914               14-V-13 19:16
 
-               Filename: c:\users\honza\documents\pic\i2c_hub\main.lst
+               Filename: Z:\home\kaklik\svnMLAB\Modules\CommSerial\I2CHUB02A\SW\PIC16F887\main.lst
 
                ROM used: 468 words (6%)
                          Largest free fragment is 2048
@@ -13,8 +13,6 @@ CCS PCM C Compiler, Version 4.106, 47914               30-4-13 23:58
 0001:  MOVWF  0A
 0002:  GOTO   155
 0003:  NOP
-.................... //#include "C:\Users\Honza\Documents\pic\I2C_HUB\main.h" 
-....................  
 .................... #include "main.h" 
 .................... #include <16F887.h> 
 .................... //////// Standard Header file for the PIC16F887 device //////////////// 
@@ -67,10 +65,7 @@ CCS PCM C Compiler, Version 4.106, 47914               30-4-13 23:58
 .................... //ADRESA pro èteni 0xE1 
 .................... //pro zápis 0xE0 
 ....................  
-....................  
-.................... #define EEPROM_SDA  PIN_C4 
-.................... #define EEPROM_SCL  PIN_C3 
-.................... #use i2c(master, sda=EEPROM_SDA, scl=EEPROM_SCL) 
+.................... #use i2c(master, sda=PIN_C4, scl=PIN_C3) 
 *
 0083:  MOVLW  08
 0084:  MOVWF  78
