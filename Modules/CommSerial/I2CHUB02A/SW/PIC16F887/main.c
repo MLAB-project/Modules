@@ -1,14 +1,9 @@
-//#include "C:\Users\Honza\Documents\pic\I2C_HUB\main.h"
-
 #include "main.h"
 //I2CHUB
 //ADRESA pro èteni 0xE1
 //pro zápis 0xE0
 
-
-#define EEPROM_SDA  PIN_C4
-#define EEPROM_SCL  PIN_C3
-#use i2c(master, sda=EEPROM_SDA, scl=EEPROM_SCL)
+#use i2c(master, sda=PIN_C4, scl=PIN_C3)
 #use rs232(baud=9600,parity=N,xmit=PIN_C7,rcv=PIN_C6,bits=8) //rcv TXD xmit RXD
 
 void setHUB(int d) //vstupuje 1-8
