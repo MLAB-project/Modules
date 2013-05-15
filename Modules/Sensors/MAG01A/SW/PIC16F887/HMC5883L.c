@@ -1,101 +1,85 @@
-void set_mag (void) //uvodni nastaveni na kontinualni mereni, rozsah ± 8.1 Ga, frekvence mereni 15HZ
+// i2c slave addresses
+#define HMC5883L_WRT_ADDR  0x3C
+#define HMC5883L_READ_ADDR 0x3D
+
+// Register addresses
+#define HMC5883L_CFG_A_REG 0x00
+#define HMC5883L_CFG_B_REG 0x01
+#define HMC5883L_MODE_REG  0x02
+#define HMC5883L_X_MSB_REG 0x03
+
+//------------------------------
+// Low level routines
+//------------------------------
+void hmc5883l_write_reg(int8 reg, int8 data)
 {
-  i2c_start();       //nastavení Configuration Register A
-  I2C_Write(MAG_ADDR_W);     
-  I2C_Write(0x00);   
-  I2C_Write(0x70);
-  i2c_stop();
-  Delay_ms(6);
-   
-  i2c_start();       //nastavení Configuration Register B
-  I2C_Write(MAG_ADDR_W);     
-  I2C_Write(0x01);   
-  I2C_Write(MAG_ROZ810);
-  i2c_stop();
-
-  Delay_ms(6);
-
-  i2c_start();          //nastveni Mode Register 
-  I2C_Write(MAG_ADDR_W);     
-  I2C_Write(0x02);   
-  I2C_Write(0x00);
-  i2c_stop();
-  Delay_ms(6);  
+i2c_start();
+i2c_write(HMC5883L_WRT_ADDR);
+i2c_write(reg);
+i2c_write(data);
+i2c_stop();
 }
 
-void set_mag_roz (unsigned int8 h) //nastavy rozsah
+//------------------------------
+int8 hmc5883l_read_reg(int8 reg)
 {
+int8 retval;
 
-//
-  
-   
-  i2c_start();       
-  I2C_Write(MAG_ADDR_W);     
-  I2C_Write(0x01);   
-  I2C_Write(h);
-  i2c_stop();
+i2c_start();
+i2c_write(HMC5883L_WRT_ADDR);
+i2c_write(reg);
+i2c_start();
+i2c_write(HMC5883L_READ_ADDR);
+retval = i2c_read(0);
+i2c_stop();
 
-  Delay_ms(6);
+return(retval);
+}
 
+//------------------------------
+typedef struct
+{
+signed int16 x;
+signed int16 y;
+signed int16 z;
+}hmc5883l_result;
+
+// This global structure holds the values read
+// from the HMC5883L x,y,z registers.
+hmc5883l_result compass = {0,0,0};
+
+//------------------------------
+void hmc5883l_read_data(void)
+{
+unsigned int8 x_lsb;
+unsigned int8 x_msb;
+
+unsigned int8 y_lsb;
+unsigned int8 y_msb;
+
+unsigned int8 z_lsb;
+unsigned int8 z_msb;
+
+i2c_start();
+i2c_write(HMC5883L_WRT_ADDR);
+i2c_write(HMC5883L_X_MSB_REG);  // Point to X-msb register
+i2c_start();
+i2c_write(HMC5883L_READ_ADDR);
+
+x_msb = i2c_read();
+x_lsb = i2c_read();
+
+z_msb = i2c_read();
+z_lsb = i2c_read();   
+
+y_msb = i2c_read();
+y_lsb = i2c_read(0); // do a NACK on last read
+
+i2c_stop();
  
+// Combine high and low bytes into 16-bit values.
+compass.x = make16(x_msb, x_lsb);
+compass.y = make16(y_msb, y_lsb);
+compass.z = make16(z_msb, z_lsb);
 }
-
-
-byte mag_read(byte reg) //pro cteni reg
-{
- 
-   i2c_start();
-   I2C_Write(MAG_ADDR_W);
-   I2C_write(reg);
-   i2c_stop();
-   i2c_start();
-   I2C_Write(MAG_ADDR_R);
-   reg=i2c_read(0);
-  return reg;
-}
-
-
-signed int16 mag_vypocet(unsigned int8 h, unsigned int8 l) //prepocet na 16bit cislo
-{
-signed int16 x;
-x = (((unsigned int16) h << 8) + l );
-return x;   
-}
-
-
-signed int16 mag_readX(void) //nacteni osy x
-{
-unsigned int8 h,l;
-signed int16 x;
-h=mag_read(0x03);
-l=mag_read(0x04);
-x=mag_vypocet(h,l);
-return x;
-   
-}
-
-
-signed int16 mag_readY(void) //nacteni osy x
-{
-unsigned int8 h,l;
-signed int16 x;
-h=mag_read(0x07);
-l=mag_read(0x08);
-x=mag_vypocet(h,l);
-return x;
-   
-}
-
-
-signed int16 mag_readZ(void) //nacteni osy x
-{
-unsigned int8 h,l;
-signed int16 x;
-h=mag_read(0x05);
-l=mag_read(0x06);
-x=mag_vypocet(h,l);
-return x;
-   
-}
-
 

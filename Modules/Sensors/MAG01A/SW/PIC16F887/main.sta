@@ -1,60 +1,55 @@
 
-ROM used: 972 (12%)
-          972 (12%) including unused fragments
+ROM used: 821 (10%)
+          821 (10%) including unused fragments
 
-          2 Average locations per line
+          1 Average locations per line
           15 Average locations per statement
 
-RAM used: 12 (3%) at main() level
-          22 (6%) worst case
+RAM used: 18 (5%) at main() level
+          27 (7%) worst case
 
-Stack used: 3 worst case (out of 8 total available)
+Stack used: 2 worst case (out of 8 total available)
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   32    19  29  main.c
+   70    28  50  main.c
    22     0   0  main.h
   423     0   0  C:\Program Files (x86)\PICC\devices\16F887.h
    19     0   0  HMC5883L.h
-  102    46  71  HMC5883L.c
+   86    28  50  HMC5883L.c
 ----- -----
-  598    65 Total
+  620    56 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
-0     20   2   1             @delay_ms1
- Inline        3   357  1.4  @I2C_READ_1
-0     74   8   1   113  1.3  @I2C_WRITE_1
+0     69   8   3   357  1.4  @I2C_READ_1
+0     74   9   1   113  1.3  @I2C_WRITE_1
 0     36   4   1   152  2.2  @PUTCHAR_1_
-0    178  18   0   357  1.4  set_mag
-0    155  16   1   152  2.2  mag_read
-0     21   2   6   129  4.6  mag_vypocet
-0     26   3   4   171  2.7  mag_readX
-0     26   3   4   171  2.7  mag_readY
-0     26   3   4   171  2.7  mag_readZ
-0    181  19   6   587  3.3  MAIN
-0      9   1   0             @const102
-0     70   7   3             @PSTRINGC7_69
-0     12   1   0             @const104
-0      6   1   0             @const105
-0    128  13   9             @PRINTF_LD_69
+0     57   7   2   102  1.8  hmc5883l_write_reg
+0    127  15   6   627  3.5  hmc5883l_read_data
+0    229  28   6  1048  7.4  MAIN
+0      9   1   0   171  2.7  @const100
+0     70   9   3   171  2.7  @PSTRINGC7_69
+0     12   1   0   171  2.7  @const102
+0      6   1   0   587  3.3  @const103
+0    128  16   9             @PRINTF_LD_69
 
 Program metrics:
     Functions               10
-    Statements              65
-    Comments                99
-    Volume (V)              3874
-    Difficilty (D)          23.6
-    Effort to implement (E) 91333
-    Time to implement (T)   1 hours, 25 minutes
+    Statements              56
+    Comments                119
+    Volume (V)              5424
+    Difficilty (D)          29.5
+    Effort to implement (E) 160169
+    Time to implement (T)   2 hours, 28 minutes
     Est Delivered Bugs (B)  1
-    Cyclomatic Complexity   1
-    Maintainability (MI)    60
+    Cyclomatic Complexity   4
+    Maintainability (MI)    70
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
-00004-007FF   968  1076  
+00004-007FF   817  1227  
 00800-00FFF     0  2048  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  
