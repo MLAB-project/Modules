@@ -1,46 +1,45 @@
-004-005 @READ_PROGRAM_MEMORY8.P1
-004     @WRITE_PROGRAM_MEMORY8.P2
+004     @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
 015     CCP_1_LOW
 015     CCP_1
 016     CCP_1_HIGH
-01B     CCP_2
 01B     CCP_2_LOW
+01B     CCP_2
 01C     CCP_2_HIGH
 020     @TRIS_C
 021-022 MAIN.x
 023-024 MAIN.Y
 025-026 MAIN.Z
-027-028 @PRINTF_LD_68.P1
-027     mag_readZ.h
+027     @delay_ms1.P1
 027     mag_readX.h
+027-028 @PRINTF_LD_69.P1
 027     mag_readY.h
-027     MAIN.@SCRATCH1
-027     @PSTRINGC7_68.@SCRATCH1
+027     mag_readZ.h
+027     @PSTRINGC7_69.@SCRATCH1
 028     mag_readX.l
-028     @delay_ms1.P1
 028     mag_readY.l
 028     mag_readZ.l
-028     @PSTRINGC7_68.@SCRATCH2
-029-02A mag_readY.x
+028     @PSTRINGC7_69.@SCRATCH2
 029-02A mag_readX.x
+029-02A mag_readY.x
 029-02A mag_readZ.x
-029     @PSTRINGC7_68.@SCRATCH3
-029     @PRINTF_LD_68.@SCRATCH1
-02A     @PRINTF_LD_68.@SCRATCH2
-02B     mag_read.reg
+029     @PSTRINGC7_69.@SCRATCH3
+029     @PRINTF_LD_69.@SCRATCH1
+02A     @PRINTF_LD_69.@SCRATCH2
 02B     mag_vypocet.h
-02B     @PRINTF_LD_68.@SCRATCH3
+02B     mag_read.reg
+02B     @PRINTF_LD_69.@SCRATCH3
 02C     mag_vypocet.l
 02C     @I2C_WRITE_1.P1
 02C     @I2C_READ_1.P2
-02C     @PRINTF_LD_68.@SCRATCH4
+02C     @PRINTF_LD_69.@SCRATCH4
 02D-02E mag_vypocet.x
 02D     @I2C_READ_1.@SCRATCH1
-02D     @PRINTF_LD_68.@SCRATCH5
+02D     @PRINTF_LD_69.@SCRATCH5
 02E     @I2C_READ_1.@SCRATCH2
-02E     @PRINTF_LD_68.@SCRATCH6
+02E     @PRINTF_LD_69.@SCRATCH6
 02F     mag_vypocet.@SCRATCH1
-02F     @PRINTF_LD_68.@SCRATCH7
+02F     @PRINTF_LD_69.@SCRATCH7
 030     @PUTCHAR_1_.P1
 030     mag_vypocet.@SCRATCH2
 077     @SCRATCH
@@ -54,23 +53,23 @@
 10D-10E @WRITE_PROGRAM_MEMORY8.P2
 
 ROM Allocation:
-0221  @delay_ms1
-0107  @I2C_READ_1
-009F  @I2C_WRITE_1
-0037  @PUTCHAR_1_
-00D3  mag_read
-013E  mag_vypocet
-0153  mag_readX
-016D  mag_readY
-0187  mag_readZ
-0237  MAIN
-0004  @const99
-0059  @PSTRINGC7_68
-000D  @const101
-0019  @const102
-0028  @const106
-01A1  @PRINTF_LD_68
-0237  @cinit
+0069  @delay_ms1
+01EB  @I2C_READ_1
+001F  @I2C_WRITE_1
+012F  @PUTCHAR_1_
+007D  set_mag
+0199  mag_read
+0234  mag_vypocet
+0249  mag_readX
+0263  mag_readY
+027D  mag_readZ
+0317  MAIN
+0004  @const102
+0153  @PSTRINGC7_69
+000D  @const104
+0019  @const105
+0297  @PRINTF_LD_69
+0317  @cinit
 
 
 User Memory space: 
@@ -78,17 +77,17 @@ User Memory space:
 User Memory space: 
 
 Project Directory:
-    c:\users\honza\documents\pic\i2c_magnetometr\
+    Z:\home\kaklik\svnMLAB\Modules\Sensors\MAG01A\SW\PIC16F887\
 
 Project Files:
     main.c
     main.h
-    ..\..\..\..\..\Program Files (x86)\PICC\devices\16F887.h
+    C:\Program Files (x86)\PICC\devices\16F887.h
     HMC5883L.h
     HMC5883L.c
 
 Units:
-    c:\users\honza\documents\pic\i2c_magnetometr\main (main)
+    Z:\home\kaklik\svnMLAB\Modules\Sensors\MAG01A\SW\PIC16F887\main (main)
 
 Compiler Settings:
     Processor:      PIC16F887
