@@ -1,9 +1,10 @@
 #include "main.h"
 #include "HMC5883L.h"
+#include <math.h>
 
 void main()
 {
-int1 last;
+float last,b,anemo_speed;
 unsigned int16 anemo_round=0;
 unsigned int16 i;
 
@@ -46,21 +47,22 @@ hmc5883l_write_reg(HMC5883L_MODE_REG, 0x00);
 while(TRUE)
   {
 
-   for( i=0;i<=1000;i++)
-   {
-//      delay_ms(); 
-      hmc5883l_read_data();   
+//   for(i=0;i<=10;i++)
+//   {
+     hmc5883l_read_data();   
+   
+//     b = atan2((float)compass.y,(float)compass.x); // vypocet azimutu z kartezskych souradnic
+//     b = (b/3.141596)*180;  // prevod na stupne
+//     b += 180;
 
-      if(compass.x < 0)
-      {
-         if(last == 1) anemo_round++;
-         last=0;
-      }
-      if(compass.x > 0) last=1;
-   }
+//     anemo_speed += (b-last);
+//     last=b;
+//     delay_ms(10);
+//   }
+//   anemo_speed=anemo_speed/10;
 
-   printf("%6Ld %6Ld %6Ld %6Ld \n\r", compass.x, compass.y, compass.z, anemo_round);
-   anemo_round=0;
+   printf("%6Ld %6Ld %6Ld \n\r", compass.x, compass.y, compass.z);
+//   delay_ms(100);
   }    
 
 }
