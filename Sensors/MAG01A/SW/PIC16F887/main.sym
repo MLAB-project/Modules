@@ -8,34 +8,35 @@
 01C     CCP_2_HIGH
 020     @TRIS_C
 021-026 compass
-027.0   MAIN.last
-028-029 MAIN.anemo_round
-02A-02B MAIN.i
-02C-02D @PRINTF_LD_69.P1
-02C     hmc5883l_write_reg.reg
-02C     hmc5883l_read_data.x_lsb
-02C     MAIN.@SCRATCH1
-02C     @PSTRINGC7_69.@SCRATCH1
-02D     hmc5883l_write_reg.data
-02D     hmc5883l_read_data.x_msb
-02D     @PSTRINGC7_69.@SCRATCH2
-02E     hmc5883l_read_data.y_lsb
-02E     @PSTRINGC7_69.@SCRATCH3
-02E     @PRINTF_LD_69.@SCRATCH1
-02F     hmc5883l_read_data.y_msb
-02F     @PRINTF_LD_69.@SCRATCH2
-030     hmc5883l_read_data.z_lsb
-030     @PRINTF_LD_69.@SCRATCH3
-031     hmc5883l_read_data.z_msb
-031     @PRINTF_LD_69.@SCRATCH4
-032     @I2C_WRITE_1.P1
-032     @I2C_READ_1.P2
-032     @PRINTF_LD_69.@SCRATCH5
-033     @I2C_READ_1.@SCRATCH1
-033     @PRINTF_LD_69.@SCRATCH6
-034     @I2C_READ_1.@SCRATCH2
-034     @PRINTF_LD_69.@SCRATCH7
-035     @PUTCHAR_1_.P1
+027-02A MAIN.last
+02B-02E MAIN.b
+02F-032 MAIN.anemo_speed
+033-034 MAIN.anemo_round
+035-036 MAIN.i
+037-038 @PRINTF_LD_69.P1
+037     hmc5883l_write_reg.reg
+037     hmc5883l_read_data.x_lsb
+037     @PSTRINGC7_69.@SCRATCH1
+038     hmc5883l_read_data.x_msb
+038     hmc5883l_write_reg.data
+038     @PSTRINGC7_69.@SCRATCH2
+039     hmc5883l_read_data.y_lsb
+039     @PSTRINGC7_69.@SCRATCH3
+039     @PRINTF_LD_69.@SCRATCH1
+03A     hmc5883l_read_data.y_msb
+03A     @PRINTF_LD_69.@SCRATCH2
+03B     hmc5883l_read_data.z_lsb
+03B     @PRINTF_LD_69.@SCRATCH3
+03C     hmc5883l_read_data.z_msb
+03C     @PRINTF_LD_69.@SCRATCH4
+03D     @I2C_WRITE_1.P1
+03D     @I2C_READ_1.P2
+03D     @PRINTF_LD_69.@SCRATCH5
+03E     @I2C_READ_1.@SCRATCH1
+03E     @PRINTF_LD_69.@SCRATCH6
+03F     @I2C_READ_1.@SCRATCH2
+03F     @PRINTF_LD_69.@SCRATCH7
+040     @PUTCHAR_1_.P1
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -43,22 +44,23 @@
 07A     @SCRATCH
 107.6   C1OUT
 108.6   C2OUT
-10D-10E @WRITE_PROGRAM_MEMORY8.P1
-10D-10E @READ_PROGRAM_MEMORY8.P2
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
 
 ROM Allocation:
-010C  @I2C_READ_1
+010B  @I2C_READ_1
 001F  @I2C_WRITE_1
 00A2  @PUTCHAR_1_
 0069  hmc5883l_write_reg
-0151  hmc5883l_read_data
-0250  MAIN
-0004  @const100
-00C6  @PSTRINGC7_69
-000D  @const102
-0019  @const103
-01D0  @PRINTF_LD_69
-0250  @cinit
+0150  hmc5883l_read_data
+0800  atan2
+024F  MAIN
+0004  @const237
+00C5  @PSTRINGC7_69
+000D  @const239
+0019  @const240
+01CF  @PRINTF_LD_69
+024F  @cinit
 
 
 User Memory space: 
@@ -74,6 +76,7 @@ Project Files:
     C:\Program Files (x86)\PICC\devices\16F887.h
     HMC5883L.h
     HMC5883L.c
+    C:\Program Files (x86)\PICC\drivers\math.h
 
 Units:
     Z:\home\kaklik\svnMLAB\Modules\Sensors\MAG01A\SW\PIC16F887\main (main)

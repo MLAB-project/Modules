@@ -1,5 +1,5 @@
 ÀÄmain
-   ÀÄMAIN  0/229  Ram=6
+   ÀÄMAIN  0/184  Ram=16
       ÃÄ??0??
       ÃÄhmc5883l_write_reg  0/57  Ram=2
       ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
@@ -14,14 +14,14 @@
       ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
       ³  ÀÄ@I2C_WRITE_1  0/74  Ram=1
       ÃÄ@PSTRINGC7_69  0/70  Ram=3
-      ³  ÃÄ@PUTCHAR_1_  0/36  Ram=1
-      ³  ÀÄ@PUTCHAR_1_  0/36  Ram=1
+      ³  ÃÄ@PUTCHAR_1_  0/35  Ram=1
+      ³  ÀÄ@PUTCHAR_1_  0/35  Ram=1
       ÃÄ@PSTRINGC7_69  0/70  Ram=3
-      ³  ÃÄ@PUTCHAR_1_  0/36  Ram=1
-      ³  ÀÄ@PUTCHAR_1_  0/36  Ram=1
+      ³  ÃÄ@PUTCHAR_1_  0/35  Ram=1
+      ³  ÀÄ@PUTCHAR_1_  0/35  Ram=1
       ÃÄ@PSTRINGC7_69  0/70  Ram=3
-      ³  ÃÄ@PUTCHAR_1_  0/36  Ram=1
-      ³  ÀÄ@PUTCHAR_1_  0/36  Ram=1
+      ³  ÃÄ@PUTCHAR_1_  0/35  Ram=1
+      ³  ÀÄ@PUTCHAR_1_  0/35  Ram=1
       ÃÄhmc5883l_read_data  0/127  Ram=6
       ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
       ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
@@ -33,16 +33,13 @@
       ³  ÃÄ@I2C_READ_1  0/69  Ram=3
       ³  ÀÄ@I2C_READ_1  0/69  Ram=3
       ÃÄ@PRINTF_LD_69  0/128  Ram=9
-      ³  ÀÄ@PUTCHAR_1_  0/36  Ram=1
-      ÃÄ@PUTCHAR_1_  0/36  Ram=1
+      ³  ÀÄ@PUTCHAR_1_  0/35  Ram=1
+      ÃÄ@PUTCHAR_1_  0/35  Ram=1
       ÃÄ@PRINTF_LD_69  0/128  Ram=9
-      ³  ÀÄ@PUTCHAR_1_  0/36  Ram=1
-      ÃÄ@PUTCHAR_1_  0/36  Ram=1
+      ³  ÀÄ@PUTCHAR_1_  0/35  Ram=1
+      ÃÄ@PUTCHAR_1_  0/35  Ram=1
       ÃÄ@PRINTF_LD_69  0/128  Ram=9
-      ³  ÀÄ@PUTCHAR_1_  0/36  Ram=1
-      ÃÄ@PUTCHAR_1_  0/36  Ram=1
-      ÃÄ@PRINTF_LD_69  0/128  Ram=9
-      ³  ÀÄ@PUTCHAR_1_  0/36  Ram=1
-      ÃÄ@PUTCHAR_1_  0/36  Ram=1
-      ÃÄ@PUTCHAR_1_  0/36  Ram=1
-      ÀÄ@PUTCHAR_1_  0/36  Ram=1
+      ³  ÀÄ@PUTCHAR_1_  0/35  Ram=1
+      ÃÄ@PUTCHAR_1_  0/35  Ram=1
+      ÃÄ@PUTCHAR_1_  0/35  Ram=1
+      ÀÄ@PUTCHAR_1_  0/35  Ram=1

@@ -1,2 +1,7 @@
-      Memory usage:   ROM=10%      RAM=5% - 7%
-      0 Errors,  0 Warnings.
+>>> Warning 202 "main.c" Line 7(7,11): Variable never used:   last
+>>> Warning 202 "main.c" Line 7(12,13): Variable never used:   b
+>>> Warning 202 "main.c" Line 7(14,25): Variable never used:   anemo_speed
+>>> Warning 202 "main.c" Line 8(16,27): Variable never used:   anemo_round
+>>> Warning 202 "main.c" Line 9(16,17): Variable never used:   i
+      Memory usage:   ROM=9%      RAM=8% - 10%
+      0 Errors,  5 Warnings.

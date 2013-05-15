@@ -1,7 +1,7 @@
-D G "__PCM__" 0 44 ""4.106""
-D G "__DEVICE__" 0 44 "887"
-D G "__DATE__" 0 44 ""14-IV-13""
-D G "__TIME__" 0 44 ""13:00:06"" "SHT25  sensor demo firmware"
+D G "__PCM__" 0 47 ""4.106""
+D G "__DEVICE__" 0 47 "887"
+D G "__DATE__" 0 47 ""15-V-13""
+D G "__TIME__" 0 47 ""22:58:57"" "SHT25  sensor demo firmware"
 d G "PIN_A0" 2 20 "40"
 d G "PIN_A1" 2 21 "41"
 d G "PIN_A2" 2 22 "42"
@@ -322,7 +322,9 @@ C L "SHT25_get_hum" 4 3 1 "FUNCTION"
 F G "MAIN" 0 8 "void()"
 V L "i" 0 10 "int8"
 V L "sht_config" 0 10 "int8"
-C L "MAIN" 0 27 1 "FUNCTION"
+V L "temperature" 0 11 "float"
+V L "humidity" 0 11 "float"
+C L "MAIN" 0 30 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep_ulpwu" 1 0
