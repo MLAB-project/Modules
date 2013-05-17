@@ -1,13 +1,3 @@
-// i2c slave addresses
-#define HMC5883L_WRT_ADDR  0x3C
-#define HMC5883L_READ_ADDR 0x3D
-
-// Register addresses
-#define HMC5883L_CFG_A_REG 0x00
-#define HMC5883L_CFG_B_REG 0x01
-#define HMC5883L_MODE_REG  0x02
-#define HMC5883L_X_MSB_REG 0x03
-
 //------------------------------
 // Low level routines
 //------------------------------

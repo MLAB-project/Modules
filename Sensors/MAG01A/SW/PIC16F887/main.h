@@ -16,6 +16,6 @@
 #FUSES BORV40                   //Brownout reset at 4.0V
 
 #use delay(clock=8000000)
-#use i2c(master, sda=PIN_C4, scl=PIN_C3)
-#use rs232(baud=115200,parity=N,xmit=PIN_C7,rcv=PIN_C6,bits=8) //rcv TXD xmit RXD
+#use i2c(Master,Slow,sda=PIN_C4,scl=PIN_C3)
+#use rs232(baud=9600,parity=N,xmit=PIN_C7,rcv=PIN_C6,bits=8) //rcv TXD xmit RXD
 
