@@ -17,15 +17,12 @@ AdditionalOptionString=
 0=0000 %S 0 0 796 451 3 0
 [Opened Files]
 1=main.c
-2=main.h
+2=
 3=C:\Program Files (x86)\PICC\devices\16F887.h
-4=MPL115A1.c
-5=
-6=..\1wire.c
-7=
+4=
 [Target Data]
 OptionString=-p +FM
-FileList=Z:\home\kaklik\svnMLAB\Modules\Sensors\ALTIMET01A\SW\MPL115A1\PIC\PIC16F887\main.c
+FileList=Z:\home\kaklik\svnMLAB\Modules\Sensors\ALTIMET01A\SW\MPL3115\PIC16F887\main.c
 [Units]
 Count=1
 1=main (main)
