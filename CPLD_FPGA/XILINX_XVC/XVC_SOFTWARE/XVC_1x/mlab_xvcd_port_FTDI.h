@@ -49,7 +49,7 @@
 #ifdef WIN32
 #include "lib_win32\ftd2xx.h"														// FTDI Library
 #else
-#include "lib_linux_i386/ftd2xx.h"
+#include "lib_linux/ftd2xx.h"
 #endif
 
 

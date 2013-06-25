@@ -17,6 +17,7 @@
 // 1.06 2013_04 Added support for Linux (thanks to Martin Poviser)
 // 1.07 2013_04 Rewritten Host Address function for Linux (function gethostbyname returns 127.0.1.1 on Debian systems)
 //              Solved compatibility problems on Linux (FT_SetLatncyTimer requires delay, udev problem with ftdi_sio driver)
+// 1.08 2013_06 Added linux x86_64 variant
 //
 //
 // Purpose:
@@ -112,7 +113,7 @@
 
 #else // not WIN32
 
-#include "lib_linux_i386/WinTypes.h"
+#include "lib_linux/WinTypes.h"
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <fcntl.h>

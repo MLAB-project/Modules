@@ -208,7 +208,7 @@ int jtagOpenPort(int findDeviceBy, char *findDeviceByStr)
 		if (findDeviceBy==FT_OPEN_BY_LOCATION)
 		{
 			// Open device (location is number, not string)
-			int findDeviceByInt = atoiEx(findDeviceByStr);
+			long int findDeviceByInt = atoiEx(findDeviceByStr);
 			ftStatus = FT_OpenEx((void*)findDeviceByInt, findDeviceBy, &ftHandle);
 		}
 		else
