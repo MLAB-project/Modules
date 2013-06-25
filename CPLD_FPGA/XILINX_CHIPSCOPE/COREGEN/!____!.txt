@@ -1,0 +1,20 @@
+CoreGenerator Project Files
+---------------------------
+
+Software:	ISE 14.5 (WebPack)
+Device:		Spartan3AN XC3S50AN-4TQG144C
+
+
+Input (source) Files
+--------------------
+
+S3AN01_ChipScopeILA.cgp		- Core Generator Project File (used by GUI CoreGen)
+
+ChipScope_ICON.xco		- ChipScope Config Block Configuration File
+ChipScope_ILA_18_1024.xco	- ChipScope Integrated Logic Analyser Configuration File 18 bits 1024 smaples
+ChipScope_ILA_9_2048.xco	- ChipScope Integrated Logic Analyser Configuration File 9 bits 2048 smaples
+ChipScope_VIO_FreqSel.xco	- ChipScope Virtul IO Configuration File (used for Frequency Selection)
+ChipScope_VIO_UserOut.xco	- ChipScope Virtul IO Configuration File (used for User Output)
+
+All other files may be deleted. Open .cgp file in CoreGenerator and let it regenerate
+all cores.

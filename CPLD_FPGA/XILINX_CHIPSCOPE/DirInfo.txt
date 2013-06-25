@@ -1,0 +1,33 @@
+﻿//
+// Toto je popisný soubor pro popis obsahu adresáře
+//
+
+[InfoShortDescription.en]
+  Xilinx ChipScope Demo
+
+[InfoShortDescription.cs]
+  Xilinx ChipScope Demo
+  
+[InfoLongDescription.en]
+  ChipScope IP Core from Xilinx company enable us to add pretty
+  powerful logic analyser into our own FPGA design. It is necessary
+  to have a valid license for generation of bitfile but not for
+  usage and debugging. The text here shows a realisation of
+  an universal logic analyser in Spartan device  on MLAB
+  board S3AN01. It shows the use of Xilinx Virtual Cable technology
+  as well.
+  The maximum achieved sampling rate is 170 MS/s with 9 or 18 input channels.
+
+[InfoLongDescription.cs]
+  IP jádro ChipScope firmy Xilinx umožňuje vložit do vlastního návrhu
+  FPGA obvodu docela výkonný logický analyzátor. K překladu takového
+  obvodu potřebujeme příslušnou licenci, ale pro použití (ladění)
+  už ne. Uvedený článek ukazuje realizaci univerzálního logického
+  analyzátoru v obvodu Spartan na desce S3AN01 ze stavebnice MLAB
+  a to současně s použitím technologie Xilinx Virtual Cable
+  s přenosem JTAG příkazů po síti.
+  Maximální dosažená rychlost vzorkování je 170 MS/s na 9 nebo 18 kanálech.
+
+[SortPreferences]
+
+[End]
