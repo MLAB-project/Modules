@@ -10,6 +10,11 @@ FTDI D2XX library (for Linux), use latest version from http://www.ftdichip.com/D
 	lib_linux\i386\libftd2xx.a	<-- libftd2xx1.1.12.tar.gz/release/build/i386/libftd2xx.a
 	lib_linux\x86_64\libftd2xx.a	<-- libftd2xx1.1.12.tar.gz/release/build/x86_64/libftd2xx.a
 
+FTDI D2XX library (for Raspberry Linux), use Raspberry fixed library (I have one from http://lightput.com/download.html)
+The difference is in vfp setting.
+
+	lib_linux\arm926vfp\libftd2xx.a	<-- libftd2xx1.1.12_Raspberry_Pi_Fix.tar.gz/release/build/arm926/libftd2xx.a
+
 Main program, pin configuration is here in .h file
 
 	mlab_xvcd.h
