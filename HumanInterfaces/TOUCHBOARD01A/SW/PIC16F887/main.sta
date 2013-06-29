@@ -1,0 +1,58 @@
+
+ROM used: 1007 (12%)
+          1007 (12%) including unused fragments
+
+          2 Average locations per line
+          27 Average locations per statement
+
+RAM used: 7 (2%) at main() level
+          19 (5%) worst case
+
+Stack used: 2 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   67    37 100  main.c
+   20     0   0  main.h
+  423     0   0  C:\Program Files (x86)\PICC\devices\16F887.h
+----- -----
+  510    37 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     22   2   1             @delay_ms1
+0     69   7   3             @I2C_READ_1
+0     74   7   1             @I2C_WRITE_1
+0     34   3   1             @PUTCHAR_1_
+0    484  48   1  1067  3.9  main
+0     12   1   0             @const78
+0     72   7   3             @PSTRINGC7_69
+0     11   1   0             @const83
+0     79   8   4             @PSTRINGCN7_69
+0     21   2   3             @DIV88
+0    101  10   6             @PRINTF_D_69
+0     12   1   0             @const92
+0     12   1   0             @const93
+
+Program metrics:
+    Functions               1
+    Statements              37
+    Comments                87
+    Volume (V)              1098
+    Difficilty (D)          3.4
+    Effort to implement (E) 3758
+    Time to implement (T)   3 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    123
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF  1003  1041  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+
