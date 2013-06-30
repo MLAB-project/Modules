@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -6060,25 +6060,6 @@ W = angled&lt;p&gt;
 <package name="SROUB3M">
 <pad name="P$1" x="0" y="0" drill="3.2" diameter="6.4516"/>
 </package>
-<package name="SMA">
-<description>SMA</description>
-<wire x1="-2.2225" y1="0.635" x2="2.2225" y2="0.635" width="0.127" layer="51"/>
-<wire x1="-2.2225" y1="-0.635" x2="2.2225" y2="-0.635" width="0.127" layer="51"/>
-<wire x1="0.3175" y1="0" x2="-0.3175" y2="0.4763" width="0.127" layer="21"/>
-<wire x1="-0.3175" y1="0.4763" x2="-0.3175" y2="0" width="0.127" layer="21"/>
-<wire x1="-0.3175" y1="0" x2="-0.3175" y2="-0.4763" width="0.127" layer="21"/>
-<wire x1="-0.3175" y1="-0.4763" x2="0.3175" y2="0" width="0.127" layer="21"/>
-<wire x1="0.3175" y1="0" x2="0.3175" y2="0.4763" width="0.127" layer="21"/>
-<wire x1="0.3175" y1="0" x2="0.3175" y2="-0.4763" width="0.127" layer="21"/>
-<wire x1="-0.3175" y1="0" x2="-1.1113" y2="0" width="0.127" layer="21"/>
-<wire x1="0.3175" y1="0" x2="1.1113" y2="0" width="0.127" layer="21"/>
-<smd name="A" x="-2.05" y="0" dx="1.8" dy="1.7" layer="1"/>
-<smd name="K" x="2.05" y="0" dx="1.8" dy="1.7" layer="1"/>
-<text x="-3.175" y="1.5875" size="1.27" layer="25">&gt;NAME</text>
-<text x="-3.175" y="-2.8575" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-2.3813" y1="-0.635" x2="-1.5875" y2="0.635" layer="51"/>
-<rectangle x1="1.5875" y1="-0.635" x2="2.3813" y2="0.635" layer="51"/>
-</package>
 </packages>
 <symbols>
 <symbol name="SROUB">
@@ -6086,17 +6067,6 @@ W = angled&lt;p&gt;
 <wire x1="-2.54" y1="0" x2="-2.032" y2="0" width="0.1778" layer="94"/>
 <text x="-2.54" y="2.54" size="1.778" layer="95">&gt;name</text>
 <pin name="P$1" x="-7.62" y="0" visible="off" length="middle"/>
-</symbol>
-<symbol name="D-OB.">
-<wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="1.27" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
-<wire x1="1.27" y1="1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="1.27" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="1.27" y1="0" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
-<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
-<text x="-2.54" y="-3.81" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-<pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -6115,16 +6085,49 @@ W = angled&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="D-OB.SMA" prefix="D" uservalue="yes">
-<description>SMA</description>
+</devicesets>
+</library>
+<library name="moje_diody">
+<packages>
+<package name="MINIMELF">
+<wire x1="1.3208" y1="0.7874" x2="-1.3208" y2="0.7874" width="0.1524" layer="51"/>
+<wire x1="1.3208" y1="-0.7874" x2="-1.3208" y2="-0.7874" width="0.1524" layer="51"/>
+<wire x1="0.5" y1="0.5" x2="-0.5" y2="0" width="0.2032" layer="21"/>
+<wire x1="-0.5" y1="0" x2="0.5" y2="-0.5" width="0.2032" layer="21"/>
+<wire x1="0.5" y1="-0.5" x2="0.5" y2="0.5" width="0.2032" layer="21"/>
+<smd name="C" x="-1.7" y="0" dx="1.4" dy="1.8" layer="1"/>
+<smd name="A" x="1.7" y="0" dx="1.4" dy="1.8" layer="1"/>
+<text x="-1.651" y="1.143" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.651" y="-2.413" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.8542" y1="-0.8636" x2="-1.2954" y2="0.8636" layer="51"/>
+<rectangle x1="1.2954" y1="-0.8636" x2="1.8542" y2="0.8636" layer="51"/>
+<rectangle x1="-0.8636" y1="-0.7874" x2="-0.254" y2="0.7874" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="D-ZENEROVA">
+<wire x1="2.3812" y1="1.27" x2="2.3812" y2="0" width="0.254" layer="94"/>
+<wire x1="2.3812" y1="0" x2="2.3812" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0.1587" y1="-1.27" x2="0.1587" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0.1587" y1="1.27" x2="2.3812" y2="0" width="0.254" layer="94"/>
+<wire x1="2.3812" y1="0" x2="0.1587" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="2.3812" y1="1.27" x2="1.905" y2="1.27" width="0.254" layer="94"/>
+<text x="-0.0001" y="-1.905" size="1.6764" layer="96" rot="MR180">&gt;Value</text>
+<text x="0" y="1.905" size="1.6764" layer="95">&gt;NAME</text>
+<pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+<pin name="K" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="D-ZENEROVA" prefix="D" uservalue="yes">
 <gates>
-<gate name="G$1" symbol="D-OB." x="0" y="0"/>
+<gate name="G$1" symbol="D-ZENEROVA" x="-2.54" y="0"/>
 </gates>
 <devices>
-<device name="" package="SMA">
+<device name="" package="MINIMELF">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="K"/>
+<connect gate="G$1" pin="K" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -6157,8 +6160,8 @@ W = angled&lt;p&gt;
 <part name="X2" library="moje" deviceset="SROUB3M" device=""/>
 <part name="GND2" library="PaJa_22" deviceset="GND" device=""/>
 <part name="SV2" library="moje_hrebinky" deviceset="SMD_MA04-01" device=""/>
-<part name="D1" library="moje" deviceset="D-OB.SMA" device="" value="BZV55C-3,6V"/>
 <part name="GND3" library="PaJa_22" deviceset="GND" device=""/>
+<part name="D1" library="moje_diody" deviceset="D-ZENEROVA" device="" value="BZV55C-3,6V"/>
 </parts>
 <sheets>
 <sheet>
@@ -6202,8 +6205,8 @@ W = angled&lt;p&gt;
 <instance part="SV2" gate="-2" x="-45.72" y="-22.86"/>
 <instance part="SV2" gate="-3" x="-45.72" y="-17.78"/>
 <instance part="SV2" gate="-4" x="-45.72" y="-12.7"/>
-<instance part="D1" gate="G$1" x="11.43" y="8.89" rot="R90"/>
-<instance part="GND3" gate="ZEM" x="11.43" y="2.54"/>
+<instance part="GND3" gate="ZEM" x="11.43" y="0"/>
+<instance part="D1" gate="G$1" x="11.43" y="6.35" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -6228,11 +6231,11 @@ W = angled&lt;p&gt;
 <pinref part="R1" gate="G$1" pin="2"/>
 <pinref part="NAP2" gate="V+" pin="VCC"/>
 <wire x1="1.27" y1="11.43" x2="1.27" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="D1" gate="G$1" pin="C"/>
 <wire x1="1.27" y1="12.7" x2="1.27" y2="13.97" width="0.1524" layer="91"/>
 <wire x1="1.27" y1="12.7" x2="11.43" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="11.43" y1="12.7" x2="11.43" y2="11.43" width="0.1524" layer="91"/>
 <junction x="1.27" y="12.7"/>
+<pinref part="D1" gate="G$1" pin="K"/>
 </segment>
 <segment>
 <pinref part="SV1" gate="-3" pin="K"/>
@@ -6272,9 +6275,9 @@ W = angled&lt;p&gt;
 <pinref part="GND2" gate="ZEM" pin="GND"/>
 </segment>
 <segment>
-<pinref part="D1" gate="G$1" pin="A"/>
 <pinref part="GND3" gate="ZEM" pin="GND"/>
-<wire x1="11.43" y1="5.08" x2="11.43" y2="6.35" width="0.1524" layer="91"/>
+<pinref part="D1" gate="G$1" pin="A"/>
+<wire x1="11.43" y1="3.81" x2="11.43" y2="2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SCL" class="0">
