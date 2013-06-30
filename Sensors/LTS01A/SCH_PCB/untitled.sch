@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -6058,15 +6058,15 @@ W = angled&lt;p&gt;
 <library name="moje_io">
 <packages>
 <package name="TDFN8">
-<smd name="1" x="-1.4224" y="0.762" dx="0.762" dy="0.3048" layer="1"/>
-<smd name="2" x="-1.4224" y="0.254" dx="0.762" dy="0.3048" layer="1"/>
-<smd name="3" x="-1.4224" y="-0.254" dx="0.762" dy="0.3048" layer="1"/>
-<smd name="4" x="-1.4224" y="-0.762" dx="0.762" dy="0.3048" layer="1"/>
-<smd name="5" x="1.4224" y="-0.762" dx="0.762" dy="0.3048" layer="1"/>
-<smd name="6" x="1.4224" y="-0.254" dx="0.762" dy="0.3048" layer="1"/>
-<smd name="7" x="1.4224" y="0.254" dx="0.762" dy="0.3048" layer="1"/>
-<smd name="8" x="1.4224" y="0.762" dx="0.762" dy="0.3048" layer="1"/>
-<smd name="9" x="0" y="0" dx="1.6002" dy="1.6002" layer="1"/>
+<smd name="1" x="-1.4224" y="0.975" dx="0.762" dy="0.3148" layer="1"/>
+<smd name="2" x="-1.4224" y="0.325" dx="0.762" dy="0.3148" layer="1"/>
+<smd name="3" x="-1.4224" y="-0.325" dx="0.762" dy="0.3148" layer="1"/>
+<smd name="4" x="-1.4224" y="-0.975" dx="0.762" dy="0.3148" layer="1"/>
+<smd name="5" x="1.4224" y="-0.975" dx="0.762" dy="0.3148" layer="1"/>
+<smd name="6" x="1.4224" y="-0.325" dx="0.762" dy="0.3148" layer="1"/>
+<smd name="7" x="1.4224" y="0.325" dx="0.762" dy="0.3148" layer="1"/>
+<smd name="8" x="1.4224" y="0.975" dx="0.762" dy="0.3148" layer="1"/>
+<smd name="9" x="0" y="0" dx="1.5" dy="2.3" layer="1"/>
 <wire x1="2.0574" y1="-1.2446" x2="-2.0574" y2="-1.2446" width="0.1524" layer="39"/>
 <wire x1="-2.0574" y1="-1.2446" x2="-2.0574" y2="1.2446" width="0.1524" layer="39"/>
 <wire x1="-2.0574" y1="1.2446" x2="2.0574" y2="1.2446" width="0.1524" layer="39"/>
@@ -6126,6 +6126,56 @@ W = angled&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="moje_diody">
+<packages>
+<package name="MINIMELF">
+<wire x1="1.3208" y1="0.7874" x2="-1.3208" y2="0.7874" width="0.1524" layer="51"/>
+<wire x1="1.3208" y1="-0.7874" x2="-1.3208" y2="-0.7874" width="0.1524" layer="51"/>
+<wire x1="0.5" y1="0.5" x2="-0.5" y2="0" width="0.2032" layer="21"/>
+<wire x1="-0.5" y1="0" x2="0.5" y2="-0.5" width="0.2032" layer="21"/>
+<wire x1="0.5" y1="-0.5" x2="0.5" y2="0.5" width="0.2032" layer="21"/>
+<smd name="C" x="-1.7" y="0" dx="1.4" dy="1.8" layer="1"/>
+<smd name="A" x="1.7" y="0" dx="1.4" dy="1.8" layer="1"/>
+<text x="-1.651" y="1.143" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.651" y="-2.413" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.8542" y1="-0.8636" x2="-1.2954" y2="0.8636" layer="51"/>
+<rectangle x1="1.2954" y1="-0.8636" x2="1.8542" y2="0.8636" layer="51"/>
+<rectangle x1="-0.8636" y1="-0.7874" x2="-0.254" y2="0.7874" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="D-ZENEROVA">
+<wire x1="2.3812" y1="1.27" x2="2.3812" y2="0" width="0.254" layer="94"/>
+<wire x1="2.3812" y1="0" x2="2.3812" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0.1587" y1="-1.27" x2="0.1587" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0.1587" y1="1.27" x2="2.3812" y2="0" width="0.254" layer="94"/>
+<wire x1="2.3812" y1="0" x2="0.1587" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="2.3812" y1="1.27" x2="1.905" y2="1.27" width="0.254" layer="94"/>
+<text x="-0.0001" y="-1.905" size="1.6764" layer="96" rot="MR180">&gt;Value</text>
+<text x="0" y="1.905" size="1.6764" layer="95">&gt;NAME</text>
+<pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+<pin name="K" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="D-ZENEROVA" prefix="D" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="D-ZENEROVA" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="MINIMELF">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="K" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -6164,6 +6214,8 @@ W = angled&lt;p&gt;
 <part name="SV4" library="moje_hrebinky" deviceset="MA01-1" device=""/>
 <part name="SV1" library="moje_hrebinky" deviceset="MA05-2" device=""/>
 <part name="R10" library="rcl" deviceset="R-EU_" device="R0603" value="0R"/>
+<part name="D1" library="moje_diody" deviceset="D-ZENEROVA" device="" value="BZV55C-3,6V"/>
+<part name="GND2" library="PaJa_22" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6228,6 +6280,8 @@ W = angled&lt;p&gt;
 <instance part="SV1" gate="-4" x="-54.61" y="7.62" rot="R180"/>
 <instance part="SV1" gate="-5" x="-54.61" y="0" rot="R180"/>
 <instance part="R10" gate="G$1" x="-43.18" y="30.48"/>
+<instance part="D1" gate="G$1" x="5.08" y="-5.08" rot="R90"/>
+<instance part="GND2" gate="ZEM" x="5.08" y="-10.16"/>
 </instances>
 <busses>
 </busses>
@@ -6278,7 +6332,12 @@ W = angled&lt;p&gt;
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
 <pinref part="NAP7" gate="V+" pin="VCC"/>
-<wire x1="-6.35" y1="1.27" x2="-6.35" y2="-1.27" width="0.1524" layer="91"/>
+<wire x1="-6.35" y1="1.27" x2="-6.35" y2="0" width="0.1524" layer="91"/>
+<pinref part="D1" gate="G$1" pin="K"/>
+<wire x1="-6.35" y1="0" x2="-6.35" y2="-1.27" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="0" x2="5.08" y2="0" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="0" x2="-6.35" y2="0" width="0.1524" layer="91"/>
+<junction x="-6.35" y="0"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -6317,6 +6376,10 @@ W = angled&lt;p&gt;
 <pinref part="R9" gate="G$1" pin="2"/>
 <pinref part="GND6" gate="ZEM" pin="GND"/>
 <wire x1="59.69" y1="-26.67" x2="59.69" y2="-25.4" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="D1" gate="G$1" pin="A"/>
+<pinref part="GND2" gate="ZEM" pin="GND"/>
 </segment>
 </net>
 <net name="SCL" class="0">
