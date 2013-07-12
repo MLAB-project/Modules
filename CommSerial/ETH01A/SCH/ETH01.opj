@@ -65,6 +65,14 @@
       (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
+    (FIDU
+      (FullPartName "FIDU.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\SYMBOLS.OLB")
+      (DeviceIndex "0"))
+    (FIDU_PASTE
+      (FullPartName "FIDU_PASTE.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\SYMBOLS.OLB")
+      (DeviceIndex "0"))
     (JUMP2X4
       (FullPartName "JUMP2X4.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
@@ -153,14 +161,6 @@
     (RJ45_2LED
       (FullPartName "RJ45_2LED.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\COM_CON.OLB")
-      (DeviceIndex "0"))
-    (JUMP2X1
-      (FullPartName "JUMP2X1.Normal")
-      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
-      (DeviceIndex "0"))
-    (JUMP2X2
-      (FullPartName "JUMP2X2.Normal")
-      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
       (DeviceIndex "0")))
   (GlobalState
     (FileView
@@ -173,13 +173,13 @@
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 217 0 414"))
+        (Placement "44 2 3 -1 -1 -8 -30 0 217 0 414"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 25 1069 25 512")
-        (Scroll "81 111")
+        (Placement "44 0 1 -1 -1 -8 -30 25 1069 25 512")
+        (Scroll "0 506")
         (Zoom "116")
         (Occurrence "/"))
       (Path
@@ -190,7 +190,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 75 1119 75 566")
-        (Scroll "250 215")
+        (Scroll "240 358")
         (Zoom "132")
         (Occurrence "/"))
       (Path
