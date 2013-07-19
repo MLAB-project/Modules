@@ -12,11 +12,11 @@ Stack used: 2 worst case (out of 8 total available)
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   51    26 100  main.c
+   53    26 100  main.c
    20     0   0  main.h
   423     0   0  C:\Program Files (x86)\PICC\devices\16F887.h
 ----- -----
-  494    26 Total
+  496    26 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
@@ -42,14 +42,14 @@ Page ROM  %  RAM   Vol Diff  Functions:
 Program metrics:
     Functions               1
     Statements              26
-    Comments                84
+    Comments                86
     Volume (V)              840
     Difficilty (D)          3.5
     Effort to implement (E) 2918
     Time to implement (T)   3 minutes
     Est Delivered Bugs (B)  0
     Cyclomatic Complexity   1
-    Maintainability (MI)    133
+    Maintainability (MI)    132
 
  Segment     Used  Free
 -----------  ----  ----
