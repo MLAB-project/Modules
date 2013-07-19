@@ -5,6 +5,8 @@
 #use i2c(master, sda=S_SDA, scl=S_SCL)
 #use rs232(baud=9600,parity=N,xmit=PIN_B3,rcv=PIN_B2,bits=8) //rcv TXD xmit RXD
 
+//Adresa pro VDD, VDD, VDD W 0x9E R 0x9F
+//Adresa pro GND GND GND W 0x90 R 0x91
 
 void main()
 {
@@ -31,11 +33,11 @@ float t;
 
 
    i2c_start();
-   I2C_Write(0x9E);
+   I2C_Write(0x90);
    I2C_write(0x00);
    i2c_stop();
    i2c_start();
-   I2C_Write(0x9F);
+   I2C_Write(0x91);
    MSB=i2c_read(1);
    LSB=i2c_read(0);
    i2c_stop(); 
