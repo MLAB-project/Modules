@@ -1,8 +1,4 @@
-﻿//
-// Toto je popisný soubor pro popis obsahu adresáře (příklad)
-//
-
-[InfoShortDescription.en]
+﻿[InfoShortDescription.en]
   USB to JTAG converter
   
 [InfoShortDescription.cs]
@@ -12,6 +8,6 @@
   The module allow J-TAG programming via USB.
 
 [InfoLongDescription.cs]
-Modul slouží jako základní J-TAG programátor. Vyižívá čip pd FTDI.   
+  Modul slouží jako základní J-TAG programátor. Využívá čip od FTDI.   
 
 [End]
