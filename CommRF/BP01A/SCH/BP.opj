@@ -22,9 +22,25 @@
     (OTHER_Switch4 "FALSE")
     (OTHER_Switch5 "FALSE")
     (OTHER_Switch6 "FALSE")
-    (OTHER_Formatter "orPadspcb.dll"))
+    (OTHER_Formatter "orPadspcb.dll")
+    (BOM_Scope "0")
+    (BOM_Mode "0")
+    (BOM_Report_File
+       "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\COMMRF\BP01A\SCH\BP.BOM")
+    (BOM_Merge_Include "FALSE")
+    (BOM_Property_Combine_7.0
+       "{Quantity}\t{Reference}\t{PCB footprint}\t{Value}")
+    (BOM_Header "Quantity\tReference\tPCBfootprint\tPart")
+    (BOM_Include_File
+       "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\COMMRF\BP01A\SCH\BP.INC")
+    (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_One_Part_Per_Line "FALSE")
+    (Open_BOM_in_Excel "FALSE")
+    (BOM_View_Output "FALSE"))
   (Folder "Outputs"
     (File ".\bp.asc"
+      (Type "Report"))
+    (File ".\bp.bom"
       (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
@@ -62,25 +78,17 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\bp.dsn")
-      (Path "Design Resources" ".\bp.dsn" "SCHEMATIC1")
-      (Path "Outputs")
-      (Select "Design Resources" ".\bp.dsn" "SCHEMATIC1" "PAGE1"))
+      (Path "Design Resources"
+         "C:\Users\kaklik\Documents\MLAB\Modules\CommRF\BP01A\SCH\bp.dsn")
+      (Path "Design Resources"
+         "C:\Users\kaklik\Documents\MLAB\Modules\CommRF\BP01A\SCH\bp.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 367"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 50 784 50 459")
-        (Scroll "0 0")
-        (Zoom "100")
-        (Occurrence "/"))
-      (Path "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\COMMRF\BP01A\SCH\BP.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "PAGE1")))
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 367"))
+      (Tab 0)))
   (ISPCBBASICLICENSE "false")
   (MPSSessionName "kaklik"))

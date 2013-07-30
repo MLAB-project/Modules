@@ -22,11 +22,27 @@
     (OTHER_Switch3 "FALSE")
     (OTHER_Switch4 "FALSE")
     (OTHER_Switch5 "FALSE")
-    (OTHER_Switch6 "FALSE"))
+    (OTHER_Switch6 "FALSE")
+    (BOM_Scope "0")
+    (BOM_Mode "0")
+    (BOM_Report_File
+       "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\COMMRF\GB01A\SCH\GB01A.BOM")
+    (BOM_Merge_Include "FALSE")
+    (BOM_Property_Combine_7.0
+       "{Quantity}\t{Reference}\t{PCB footprint}\t{Value}")
+    (BOM_Header "Quantity\tReference\tPCBfootprint\tPart")
+    (BOM_Include_File
+       "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\COMMRF\GB01A\SCH\GB01A.INC")
+    (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_One_Part_Per_Line "FALSE")
+    (Open_BOM_in_Excel "FALSE")
+    (BOM_View_Output "FALSE"))
   (Folder "Outputs"
     (File ".\gb01a.asc"
       (Type "Report"))
     (File ".\gb01a.net"
+      (Type "Report"))
+    (File ".\gb01a.bom"
       (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
@@ -88,14 +104,13 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\gb01a.dsn")
-      (Path "Design Resources" ".\gb01a.dsn" "SCHEMATIC1")
       (Path "Outputs")
-      (Select "Design Resources" ".\gb01a.dsn" "SCHEMATIC1" "PAGE1"))
+      (Select "Design Resources"
+         "C:\Users\kaklik\Documents\MLAB\Modules\CommRF\GB01A\SCH\gb01a.dsn"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 449"))
+        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 449"))
       (Tab 0)))
   (MPSSessionName "kaklik"))
