@@ -558,6 +558,9 @@ W = angled&lt;p&gt;
 <rectangle x1="-2.3813" y1="-0.635" x2="-1.5875" y2="0.635" layer="51"/>
 <rectangle x1="1.5875" y1="-0.635" x2="2.3813" y2="0.635" layer="51"/>
 </package>
+<package name="SROUB3M">
+<pad name="P$1" x="0" y="0" drill="3.2" diameter="6.4516"/>
+</package>
 </packages>
 <symbols>
 <symbol name="D-OB.">
@@ -571,6 +574,12 @@ W = angled&lt;p&gt;
 <pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 <pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 </symbol>
+<symbol name="SROUB">
+<circle x="0" y="0" radius="2" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-2.032" y2="0" width="0.1778" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;name</text>
+<pin name="P$1" x="-7.62" y="0" visible="off" length="middle"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="D-OB.SMA" prefix="D" uservalue="yes">
@@ -583,6 +592,21 @@ W = angled&lt;p&gt;
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="K"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SROUB3M" prefix="X">
+<gates>
+<gate name="P4" symbol="SROUB" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SROUB3M">
+<connects>
+<connect gate="P4" pin="P$1" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -774,6 +798,10 @@ W = angled&lt;p&gt;
 <part name="U$17" library="moje_schz" deviceset="+5V" device=""/>
 <part name="SV5" library="moje_hrebinky" deviceset="MA03-2" device=""/>
 <part name="U$18" library="moje_schz" deviceset="GND" device=""/>
+<part name="X1" library="moje" deviceset="SROUB3M" device=""/>
+<part name="X2" library="moje" deviceset="SROUB3M" device=""/>
+<part name="X3" library="moje" deviceset="SROUB3M" device=""/>
+<part name="X4" library="moje" deviceset="SROUB3M" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -831,6 +859,10 @@ W = angled&lt;p&gt;
 <instance part="SV5" gate="-2" x="119.38" y="30.48"/>
 <instance part="SV5" gate="-3" x="119.38" y="26.67"/>
 <instance part="U$18" gate="G$1" x="113.03" y="21.59"/>
+<instance part="X1" gate="P4" x="162.56" y="71.12"/>
+<instance part="X2" gate="P4" x="162.56" y="63.5"/>
+<instance part="X3" gate="P4" x="162.56" y="55.88"/>
+<instance part="X4" gate="P4" x="162.56" y="48.26"/>
 </instances>
 <busses>
 </busses>
