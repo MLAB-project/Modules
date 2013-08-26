@@ -4,11 +4,6 @@
 
 void main()
 {
-float last,b,anemo_speed;
-unsigned int16 anemo_round=0;
-unsigned int16 i;
-
-//signed int16 X,Y,Z;
   setup_adc_ports(NO_ANALOGS|VSS_VDD);
   setup_adc(ADC_CLOCK_DIV_2);
   setup_spi(SPI_SS_DISABLED);
@@ -16,17 +11,17 @@ unsigned int16 i;
   setup_timer_1(T1_DISABLED);
   setup_timer_2(T2_DISABLED,0,1);
   setup_ccp1(CCP_OFF);
-  setup_comparator(NC_NC_NC_NC);// This device COMP currently not supported by the PICWizard
+  setup_comparator(NC_NC_NC_NC);
 
   printf("Magnetometr:  \r\n",);
-  printf("(c)mlab JACHO 2013:  \r\n",);
+  printf("(c)mlab.cz kaklik 2013:  \r\n",);
   printf("X, Y, Z \r\n",);
 
 
 // Init the HMC5883L.  Set Mode register for
 // continuous measurements.
 hmc5883l_write_reg(HMC5883L_CFG_A_REG, 0x18);      // no average, maximal update range
-hmc5883l_write_reg(HMC5883L_CFG_B_REG, 0xE0);      // maximal range
+hmc5883l_write_reg(HMC5883L_CFG_B_REG, 0x00);      // minimal range
 hmc5883l_write_reg(HMC5883L_MODE_REG, 0x00);
 
 // Continuously read and display the x,y,z results.

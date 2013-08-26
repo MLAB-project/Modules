@@ -1,12 +1,11 @@
-#include "D:\Honza\MLAB\Modules\Sensors\LTS01A\SW\PIC16F887\main.h"
+#include "main.h"
 
-#define S_SDA  PIN_C3
-#define S_SCL  PIN_C4
+#define S_SDA  PIN_C4
+#define S_SCL  PIN_C3
 #use i2c(master, sda=S_SDA, scl=S_SCL)
-#use rs232(baud=9600,parity=N,xmit=PIN_B3,rcv=PIN_B2,bits=8) //rcv TXD xmit RXD
+#use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8)
 
-//Adresa pro VDD, VDD, VDD W 0x9E R 0x9F
-//Adresa pro GND GND GND W 0x90 R 0x91
+#include "../LTS01.h"
 
 void main()
 {
@@ -20,33 +19,13 @@ void main()
    setup_ccp1(CCP_OFF);
    setup_comparator(NC_NC_NC_NC);// This device COMP currently not supported by the PICWizard
 
-printf("Simple Thermomether  \r\n",);
-printf("(c) MLAB 2013 JACHO  \r\n",);
-
-signed int8 MSB;
-byte LSB;
-float t;
+printf("Simple Thermomether with LTS01A sensor \r\n",);
+printf("(c) MLAB.cz 2013 JACHO  \r\n",);
   
   while(TRUE)
  { 
-   
-
-
-   i2c_start();
-   I2C_Write(0x90);
-   I2C_write(0x00);
-   i2c_stop();
-   i2c_start();
-   I2C_Write(0x91);
-   MSB=i2c_read(1);
-   LSB=i2c_read(0);
-   i2c_stop(); 
-   
-    t = (float)(LSB)/256.0;
-    t = (float)(MSB+t); 
-
-printf("Teplota: %f (C)\r\n", t);
-delay_ms(500);
+   printf("T: %f\r\n", LTS01_get_temp());
+   delay_ms(500);
  } 
 }
 
