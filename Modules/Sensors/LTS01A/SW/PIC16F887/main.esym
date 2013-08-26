@@ -1,7 +1,7 @@
-D G "__PCM__" 0 54 ""4.106""
-D G "__DEVICE__" 0 54 "887"
-D G "__DATE__" 0 54 ""19-7-13""
-D G "__TIME__" 0 54 ""17:14:42"" "Standard Header file for the PIC16F887 device ////////////////"
+D G "__PCM__" 0 33 ""4.106""
+D G "__DEVICE__" 0 33 "887"
+D G "__DATE__" 0 33 ""26-VIII-13""
+D G "__TIME__" 0 33 ""18:26:57"" "Standard Header file for the PIC16F887 device ////////////////"
 d G "PIN_A0" 2 20 "40"
 d G "PIN_A1" 2 21 "41"
 d G "PIN_A2" 2 22 "42"
@@ -273,14 +273,14 @@ d G "INT_RB4" 2 417 "0x0100B08"
 d G "INT_RB5" 2 418 "0x0200B08"
 d G "INT_RB6" 2 419 "0x0400B08"
 d G "INT_RB7" 2 420 "0x0800B08"
-D G "S_SDA" 0 3 "PIN_C3"
-D G "S_SCL" 0 4 "PIN_C4"
-C L "main" 0 8 2 "FUNCTION"
-F G "main" 0 11 "void()"
-C L "main" 0 8 1 "FUNCTION"
-V L "MSB" 0 26 "sint8"
-V L "LSB" 0 27 "int8"
-V L "t" 0 28 "float"
+D G "S_SDA" 0 3 "PIN_C4"
+D G "S_SCL" 0 4 "PIN_C3"
+D G "LTS01A_address" 3 4 "0x90"
+F G "LTS01_get_temp" 4 1 "float()"
+V L "MSB" 4 3 "int8"
+V L "LSB" 4 3 "int8"
+F G "MAIN" 0 10 "void()"
+C L "MAIN" 0 20 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep_ulpwu" 1 0
@@ -413,3 +413,5 @@ F B "puts" 1 2
 F B "getch" 0 1
 F B "gets" 1 3
 F B "kbhit" 0 1
+F B "set_uart_speed" 1 3
+F B "setup_uart" 1 3
