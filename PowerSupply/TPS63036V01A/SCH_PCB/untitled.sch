@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -561,14 +561,14 @@ W = angled&lt;p&gt;
 <wire x1="0.925" y1="0.425" x2="0.925" y2="-0.425" width="0.1016" layer="51"/>
 <wire x1="0.925" y1="-0.425" x2="-0.925" y2="-0.425" width="0.1016" layer="51"/>
 <wire x1="-0.925" y1="-0.425" x2="-0.925" y2="0.425" width="0.1016" layer="51"/>
-<smd name="A1" x="-0.75" y="-0.25" dx="0.3" dy="0.3" layer="1" roundness="100" stop="no" cream="no"/>
-<smd name="B1" x="-0.25" y="-0.25" dx="0.3" dy="0.3" layer="1" roundness="100" stop="no" cream="no"/>
-<smd name="C1" x="0.25" y="-0.25" dx="0.3" dy="0.3" layer="1" roundness="100" stop="no" cream="no"/>
-<smd name="C2" x="0.25" y="0.25" dx="0.3" dy="0.3" layer="1" roundness="100" stop="no" cream="no"/>
-<smd name="A2" x="-0.75" y="0.25" dx="0.3" dy="0.3" layer="1" roundness="100" stop="no" cream="no"/>
-<smd name="D1" x="0.75" y="-0.25" dx="0.3" dy="0.3" layer="1" roundness="100" stop="no" cream="no"/>
-<smd name="D2" x="0.75" y="0.25" dx="0.3" dy="0.3" layer="1" roundness="100" stop="no" cream="no"/>
-<smd name="B2" x="-0.25" y="0.25" dx="0.3" dy="0.3" layer="1" roundness="100" stop="no" cream="no"/>
+<smd name="A1" x="-0.75" y="-0.25" dx="0.3" dy="0.3" layer="1" roundness="100" cream="no"/>
+<smd name="B1" x="-0.25" y="-0.25" dx="0.3" dy="0.3" layer="1" roundness="100" cream="no"/>
+<smd name="C1" x="0.25" y="-0.25" dx="0.3" dy="0.3" layer="1" roundness="100" cream="no"/>
+<smd name="C2" x="0.25" y="0.25" dx="0.3" dy="0.3" layer="1" roundness="100" cream="no"/>
+<smd name="A2" x="-0.75" y="0.25" dx="0.3" dy="0.3" layer="1" roundness="100" cream="no"/>
+<smd name="D1" x="0.75" y="-0.25" dx="0.3" dy="0.3" layer="1" roundness="100" cream="no"/>
+<smd name="D2" x="0.75" y="0.25" dx="0.3" dy="0.3" layer="1" roundness="100" cream="no"/>
+<smd name="B2" x="-0.25" y="0.25" dx="0.3" dy="0.3" layer="1" roundness="100" cream="no"/>
 <text x="-0.725" y="0.725" size="1.27" layer="25">&gt;NAME</text>
 <text x="-0.725" y="-1.925" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.925" y1="-0.4" x2="-0.475" y2="-0.175" layer="51"/>

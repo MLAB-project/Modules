@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -22,8 +22,8 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="yes" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="yes" active="yes"/>
@@ -77,8 +77,8 @@
 <wire x1="20.066" y1="0.254" x2="20.066" y2="40.386" width="0" layer="20"/>
 <wire x1="20.066" y1="40.386" x2="0.254" y2="40.386" width="0" layer="20"/>
 <wire x1="0.254" y1="40.386" x2="0.254" y2="0.254" width="0" layer="20"/>
-<dimension x1="20.066" y1="0.254" x2="20.066" y2="40.386" x3="28.448" y3="20.32" layer="48"/>
-<dimension x1="0.254" y1="0.254" x2="20.066" y2="0.254" x3="10.16" y3="-7.874" layer="48"/>
+<dimension x1="20.066" y1="0.254" x2="20.066" y2="40.386" x3="28.448" y3="20.32" textsize="3.5" layer="48"/>
+<dimension x1="0.254" y1="0.254" x2="20.066" y2="0.254" x3="10.16" y3="-7.874" textsize="3.5" layer="48"/>
 <text x="10.033" y="1.016" size="1.27" layer="21" rot="R90">TPS63036</text>
 <text x="13.081" y="8.509" size="1.27" layer="21">MLAB</text>
 <text x="8.8265" y="38.227" size="1.27" layer="21" rot="R270">JACHO</text>
@@ -104,14 +104,14 @@
 <wire x1="0.925" y1="0.425" x2="0.925" y2="-0.425" width="0.1016" layer="51"/>
 <wire x1="0.925" y1="-0.425" x2="-0.925" y2="-0.425" width="0.1016" layer="51"/>
 <wire x1="-0.925" y1="-0.425" x2="-0.925" y2="0.425" width="0.1016" layer="51"/>
-<smd name="A1" x="-0.75" y="-0.25" dx="0.3" dy="0.3" layer="1" roundness="100" stop="no" cream="no"/>
-<smd name="B1" x="-0.25" y="-0.25" dx="0.3" dy="0.3" layer="1" roundness="100" stop="no" cream="no"/>
-<smd name="C1" x="0.25" y="-0.25" dx="0.3" dy="0.3" layer="1" roundness="100" stop="no" cream="no"/>
-<smd name="C2" x="0.25" y="0.25" dx="0.3" dy="0.3" layer="1" roundness="100" stop="no" cream="no"/>
-<smd name="A2" x="-0.75" y="0.25" dx="0.3" dy="0.3" layer="1" roundness="100" stop="no" cream="no"/>
-<smd name="D1" x="0.75" y="-0.25" dx="0.3" dy="0.3" layer="1" roundness="100" stop="no" cream="no"/>
-<smd name="D2" x="0.75" y="0.25" dx="0.3" dy="0.3" layer="1" roundness="100" stop="no" cream="no"/>
-<smd name="B2" x="-0.25" y="0.25" dx="0.3" dy="0.3" layer="1" roundness="100" stop="no" cream="no"/>
+<smd name="A1" x="-0.75" y="-0.25" dx="0.3" dy="0.3" layer="1" roundness="100" cream="no"/>
+<smd name="B1" x="-0.25" y="-0.25" dx="0.3" dy="0.3" layer="1" roundness="100" cream="no"/>
+<smd name="C1" x="0.25" y="-0.25" dx="0.3" dy="0.3" layer="1" roundness="100" cream="no"/>
+<smd name="C2" x="0.25" y="0.25" dx="0.3" dy="0.3" layer="1" roundness="100" cream="no"/>
+<smd name="A2" x="-0.75" y="0.25" dx="0.3" dy="0.3" layer="1" roundness="100" cream="no"/>
+<smd name="D1" x="0.75" y="-0.25" dx="0.3" dy="0.3" layer="1" roundness="100" cream="no"/>
+<smd name="D2" x="0.75" y="0.25" dx="0.3" dy="0.3" layer="1" roundness="100" cream="no"/>
+<smd name="B2" x="-0.25" y="0.25" dx="0.3" dy="0.3" layer="1" roundness="100" cream="no"/>
 <text x="-0.725" y="0.725" size="1.27" layer="25">&gt;NAME</text>
 <text x="-0.725" y="-1.925" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.925" y1="-0.4" x2="-0.475" y2="-0.175" layer="51"/>
@@ -338,7 +338,7 @@ W = angled&lt;p&gt;
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules>
+<designrules name="default">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
