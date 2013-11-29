@@ -14,3 +14,7 @@ plot "test_hum.log" using 0:1 with lines title "Temperature", "" using 0:2 with 
 set output "Heating_alter2.png" 
 plot "test_hum2.log" using 0:1 with lines title "Temperature", "" using 0:2 with lines title "Humidity", "" using 0:4 with lines title "Heating"
 
+
+set output "outdoor_test.png" 
+plot "TempHum.log" using 1:3 with lines title "Temperature", "" using 1:4 with lines title "Humidity"
+
