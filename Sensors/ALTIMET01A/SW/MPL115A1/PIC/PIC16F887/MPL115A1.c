@@ -54,6 +54,8 @@ unsigned int8 c12_MSB, c12_LSB;
    output_high(CSN_SPI);
  
  // translate to floating point number
+
+printf("%d %d %d %d %d %d %d %d ",a0_MSB, a0_LSB,b1_MSB, b1_LSB, b2_MSB, b2_LSB, c12_MSB, c12_LSB);
    
    a0 = ((unsigned int16) a0_MSB << 5) + (a0_LSB >> 3) + (a0_LSB & 0x07)/8.0;
    b1 = ((((b1_MSB & 0x1F) * 0x100) + b1_LSB) / 8192.0) - 3;
