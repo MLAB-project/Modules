@@ -13,7 +13,7 @@ from pymlab import config
 
 if len(sys.argv) != 2:
     sys.stderr.write("Invalid number of arguments.\n")
-    sys.stderr.write("Usage: %s PORT ADDRESS\n" % (sys.argv[0], ))
+    sys.stderr.write("Usage: %s #I2CPORT\n" % (sys.argv[0], ))
     sys.exit(1)
 
 port    = eval(sys.argv[1])
@@ -22,45 +22,81 @@ port    = eval(sys.argv[1])
 #### Sensor Configuration ###########################################
 
 cfg = config.Config(
-	bus = [
-#		{
-#		    "type": "i2chub",
-#		    "address": 0x70,
-#		    
-#		    "children": [
-#				{
-#					"type": "i2chub",
-#					"address": 0x70,
-#					"channel": 1,
-#					
-#				},
-#		    ],
-#		},
-
+    port = port,
+    bus = [
         {
-            "name":          "altimet",
-            "type":        "altimet01",
+            "type": "i2chub",
+            "address": 0x72,
+            
+            "children": [
+                {
+                    "type": "i2chub",
+                    "address": 0x70,
+                    "channel": 3,
+                    "children": [
+                                {"name": "altimet1", "type": "altimet01" , "channel": 0, },   
+                                {"name": "altimet2", "type": "altimet01" , "channel": 3, },   
+                                {"name": "altimet3", "type": "altimet01" , "channel": 4, },   
+                                {"name": "altimet4", "type": "altimet01" , "channel": 5, },   
+                                {"name": "altimet5", "type": "altimet01" , "channel": 6, },   
+                                {"name": "altimet6", "type": "altimet01" , "channel": 7, },   
+                    ], 
+                },
+                {"name": "altimet8", "type": "altimet01" , "channel": 6, },
+            ],
         },
 
+#        {
+#            "type": "i2chub",
+#            "address": 0x72,
+#           "children": [
+#                   {"name": "altimet", "type": "altimet01" , "channel": 6, },
+#        ],
+#       },
 
-	],
+
+    ],
 )
 cfg.initialize()
 
-gauge = cfg.get_device("altimet")
+gauge1 = cfg.get_device("altimet1")
+gauge2 = cfg.get_device("altimet2")
+gauge3 = cfg.get_device("altimet3")
+gauge4 = cfg.get_device("altimet4")
+gauge5 = cfg.get_device("altimet5")
+gauge6 = cfg.get_device("altimet6")
 
+gauge8 = cfg.get_device("altimet8")
+time.sleep(0.5)
 
 #### Data Logging ###################################################
+
 
 try:
     with open("temperature.log", "a") as f:
         while True:
-	    sys.stdout.write("Start measurement now? [ENTER]")
+            sys.stdout.write("Start measurement now? [ENTER]")
             sys.stdin.readline()
-            (t, p) = gauge.get_tp()
-            sys.stdout.write(" Temperature: %.2f  Pressure: %d Note: " % (t, p, ))
+            gauge1.route()
+            (t1, p1) = gauge1.get_tp()
+            gauge2.route()
+            (t2, p2) = gauge2.get_tp()
+            gauge3.route()
+            (t3, p3) = gauge3.get_tp()
+            gauge4.route()
+            (t4, p4) = gauge4.get_tp()
+            gauge5.route()
+            (t5, p5) = gauge5.get_tp()
+            gauge6.route()
+            (t6, p6) = gauge6.get_tp()
+#            gauge7.route()
+#            (t7, p7) = gauge7.get_tp()
+            gauge8.route()
+            (t8, p8) = gauge8.get_tp()
+
+            sys.stdout.write(" Temperature: %.2f %.2f %.2f %.2f %.2f %.2f %.2f  Pressure: %d %d %d %d %d %d %d Note: " % (t1, t2, t3, t4, t5, t6, t8, p1, p2, p3, p4, p5, p6, p8, ))
             note = sys.stdin.readline()
-            f.write("%d\t%s\t%.2f\t%d\t%s\n" % (time.time(), datetime.datetime.now().isoformat(), t, p, note, ))
+            f.write("%d\t%s\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%s\n" % (time.time(), datetime.datetime.now().isoformat(),t1, t2, t3, t4, t5, t6, t8, p1, p2, p3, p4, p5, p6, p8, note, ))
             sys.stdout.flush()
             time.sleep(0.5)
 except KeyboardInterrupt:
