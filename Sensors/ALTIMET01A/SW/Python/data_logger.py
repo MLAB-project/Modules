@@ -5,6 +5,7 @@
 import time
 import datetime
 import sys
+import serial
 
 from pymlab import config
 
@@ -71,6 +72,12 @@ time.sleep(0.5)
 
 #### Data Logging ###################################################
 
+ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)
+print ser.name
+ser.write("hello")
+#http://pyserial.sourceforge.net/shortintro.html
+line = ser.readline()   # read a '\n' terminated line
+ser.close()
 
 try:
     with open("temperature.log", "a") as f:

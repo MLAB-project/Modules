@@ -61,7 +61,7 @@ unsigned int16 data;
       
    LSB = LSB >> 2; // trow out status bits
 
-   data = (((unsigned int16) MSB << 8) + (LSB << 4));
+   data = (((unsigned int16) MSB << 8) + (LSB << 2));
    return(-46.85 + 175.72*((float)data/0xFFFF));
 }
 
@@ -85,7 +85,7 @@ unsigned int16 data;
 
    LSB = LSB >> 2; // trow out status bits
 
-   data = (((unsigned int16) MSB << 8) + (LSB << 4) );
+   data = (((unsigned int16) MSB << 8) + (LSB << 2) );
    return( -6.0 + 125.0*((float)data/0xFFFF));
 }      
 
