@@ -60,6 +60,8 @@
     (File ".\clkdiv.drc"
       (Type "Report"))
     (File ".\clkdiv.asc"
+      (Type "Report"))
+    (File ".\clkdiv.net"
       (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
@@ -89,8 +91,7 @@
       (Path "Design Resources")
       (Path "Design Resources" ".\clkdiv.dsn")
       (Path "Design Resources" ".\clkdiv.dsn" "SCHEMATIC1")
-      (Path "Outputs")
-      (Select "Design Resources" ".\clkdiv.dsn" "SCHEMATIC1" "PAGE1"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
