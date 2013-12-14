@@ -63,8 +63,20 @@
       (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
+    (JUMP2X1_CON
+      (FullPartName "JUMP2X1_CON.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (TP
+      (FullPartName "TP.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\PAD.OLB")
+      (DeviceIndex "0"))
     (JUMP2X2_CON
       (FullPartName "JUMP2X2_CON.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
+      (DeviceIndex "0"))
+    (JUMP2X3
+      (FullPartName "JUMP2X3.Normal")
       (LibraryName "C:\LIBRARY\ORCAD16X\JUMP.OLB")
       (DeviceIndex "0"))
     (SO16_150
@@ -89,11 +101,12 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 25 1582 25 642")
-        (Scroll "-157 8")
+        (Scroll "-157 0")
         (Zoom "103")
         (Occurrence "/"))
       (Path
          "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\CLOCK\CLKDIV01A\SCH\CLKDIV.DSN")
       (Schematic "SCHEMATIC1")
       (Page "PAGE1")))
-  (MPSSessionName "kaklik"))
+  (MPSSessionName "kaklik")
+  (LastUsedLibraryBrowseDirectory "C:\library\ORCAD16X\OnSemiconductor"))
