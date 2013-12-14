@@ -91,19 +91,20 @@
       (Path "Design Resources")
       (Path "Design Resources" ".\clkdiv.dsn")
       (Path "Design Resources" ".\clkdiv.dsn" "SCHEMATIC1")
-      (Path "Outputs"))
+      (Path "Outputs")
+      (Select "Design Resources" ".\clkdiv.dsn" "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 579"))
+        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 579"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 25 1582 25 642")
-        (Scroll "-157 0")
-        (Zoom "103")
+        (Placement "44 2 3 -1 -1 -8 -30 25 1582 25 642")
+        (Scroll "595 457")
+        (Zoom "206")
         (Occurrence "/"))
       (Path
          "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\CLOCK\CLKDIV01A\SCH\CLKDIV.DSN")
