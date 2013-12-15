@@ -754,7 +754,7 @@ W = angled&lt;p&gt;
 <connects>
 <connect gate="G$1" pin="EN" pad="3"/>
 <connect gate="G$1" pin="FB" pad="8"/>
-<connect gate="G$1" pin="GND" pad="7 11 12 13 14 15 16 17 18 19"/>
+<connect gate="G$1" pin="GND" pad="7 11 12 13 14 15 16 17 18 19 P$1 P$2 P$3 P$4 P$5"/>
 <connect gate="G$1" pin="L1" pad="1"/>
 <connect gate="G$1" pin="L2" pad="10"/>
 <connect gate="G$1" pin="PG" pad="5"/>
