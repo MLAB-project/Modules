@@ -82,7 +82,7 @@ try:
             sys.stdin.readline()
 
             ser.write(':DISP?\n')
-            Prefstart = ser.readline(100)
+            Prefstart = eval(ser.readline(100))
 
             gauge1.route()
             (t1, p1) = gauge1.get_tp()
@@ -102,7 +102,7 @@ try:
             (t8, p8) = gauge8.get_tp()
 
             ser.write(':DISP?\n')
-            Prefstop = ser.readline(100)
+            Prefstop = eval(ser.readline(100))
 
             sys.stdout.write(" Temperature: %.2f %.2f %.2f %.2f %.2f %.2f %.2f   Pressure: %d %d %d %d %d %d %d %s %s Note: " % (t1, t2, t3, t4, t5, t6, t8, p1, p2, p3, p4, p5, p6, p8, Prefstart,  Prefstop ))
             note = sys.stdin.readline()
