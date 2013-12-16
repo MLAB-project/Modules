@@ -72,12 +72,8 @@ time.sleep(0.5)
 
 #### Data Logging ###################################################
 
-#ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)
-#print ser.name
-#ser.write("hello")
-#http://pyserial.sourceforge.net/shortintro.html
-#line = ser.readline()   # read a '\n' terminated line
-#ser.close()
+sys.stdout.write("ALTIMET data acquisition system started \n")
+
 
 try:
     with open("temperature.log", "a") as f:
@@ -101,9 +97,9 @@ try:
             gauge8.route()
             (t8, p8) = gauge8.get_tp()
 
-            sys.stdout.write(" Temperature: %.2f %.2f %.2f %.2f %.2f %.2f %.2f  Pressure: %d %d %d %d %d %d %d Note: " % (t1, t2, t3, t4, t5, t6, t8, p1, p2, p3, p4, p5, p6, p8, ))
+            sys.stdout.write(" Temperature: %.2f %.2f %.2f %.2f %.2f %.2f %.2f   Pressure: %d %d %d %d %d %d %d Note: " % (t1, t2, t3, t4, t5, t6, t8, p1, p2, p3, p4, p5, p6, p8 ))
             note = sys.stdin.readline()
-            f.write("%d\t%s\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%s\n" % (time.time(), datetime.datetime.now().isoformat(),t1, t2, t3, t4, t5, t6, t8, p1, p2, p3, p4, p5, p6, p8, note, ))
+            f.write("%d\t%s\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%s\n" % (time.time(), datetime.datetime.now().isoformat(),t1, t2, t3, t4, t5, t6, t8, p1, p2, p3, p4, p5, p6, p8,  note, ))
             sys.stdout.flush()
             time.sleep(0.5)
 except KeyboardInterrupt:
