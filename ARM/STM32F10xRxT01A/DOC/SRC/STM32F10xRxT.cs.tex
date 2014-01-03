@@ -49,6 +49,14 @@ Progra  & $<$ 30dB & \\ \hline
 
 \subsection{Zapojení}
 
+Modul obsahuje CPU a základní součástky potřebné pro jeho funkci. Nahrávání firmware do modulu je možné přes několik rozhraní:
+
+\begin{itemize}
+  \item[USB] - nahrávání kódu přes USB se provádí utilitou dfu-util. Pro bližší informace viz wiki MLAB. 
+  \item[UART] - stm32flash, Pro bližší informace viz wiki MLAB
+  \item[JTAG] - OpenOCD, Pro bližší informace viz wiki MLAB.
+\end{itemize}
+
 \includepdf[pages={1},landscape=true]{../../SCH/STM32F10xRxT.pdf}
 
 \subsection{Odrušení}
