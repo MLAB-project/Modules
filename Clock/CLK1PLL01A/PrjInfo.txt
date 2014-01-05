@@ -1,0 +1,21 @@
+﻿[InfoShortDescription.en]
+PLL clock generator
+
+[InfoShortDescription.cs]
+Hodinový PLL generátor
+
+[InfoLongDescription.en]
+PLL clock generator with Texas Instruments chip CDCE913. Contains VCXO with external xtal and
+one internal PLL. It has three LVCMOS outputs with individual frequency dividers capable to
+generate ut to 230MHz clocks. The chip is programmable via I2C and configuration may be saved
+to internal EEPROM.
+
+[InfoLongDescription.cs]
+PLL hodinový generátor s obvodem Texas Instruments CDCE913. Obsahuje VCXO s externím krystalem
+a jeden obvod PLL. Má tři LVCMOS výstupy s individuálními deličkami frekvence a je schopen
+generovat hodiny do frekvence 230MHz. Programuje se přes I1C a nastavení je možné uložit do
+vnitřní EEPROM.
+
+[InfoBuyUST]
+
+[End]
