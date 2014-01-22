@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# Python driver for MLAB MAG01A module with HMC5888L Magnetometer sensor wrapper class
+# Python driver for MLAB ALTIMET01A module with HMC5888L Magnetometer sensor wrapper class
 
 import time
 import datetime
