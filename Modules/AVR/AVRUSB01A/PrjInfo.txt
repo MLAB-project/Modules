@@ -1,0 +1,21 @@
+﻿//
+// Toto je popisný soubor pro popis obsahu adresáře (příklad)
+//
+
+[InfoShortDescription.en]
+  USB module for AVR processors
+  
+[InfoShortDescription.cs]
+  Modul USB pro AVR procesory
+    
+[InfoLongDescription.en]
+  Processor module for AVR software version of (Low Speed) USB. May be used 
+  as ISP AVR programmer (with USBasp firmware), or USB to I2C convertor (with
+  i2c-tiny-usb firmware). Uses ATmega88 in TQFP32 package.
+
+[InfoLongDescription.cs]
+  Procesorový modul pro softwarově realizované USB rozhraní na procesoru AVR ATmega88
+  v pouzdru TQFP32. Může se použít jako ISP programátor pro AVR procesory (s firmwarem
+  USBasp), nebo jako převodník USB na I2C (s firmwarem i2c-tiny-usb).
+
+[End]
