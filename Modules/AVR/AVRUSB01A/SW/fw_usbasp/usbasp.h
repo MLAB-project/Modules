@@ -11,6 +11,17 @@
 #ifndef USBASP_H_
 #define USBASP_H_
 
+/* PORTS Definitions */
+#define LED_RED_PORT       C
+#define LED_RED_BIT        0
+#define LED_GREEN_PORT     C
+#define LED_GREEN_BIT      1
+#define CLKSW_PORT         D
+#define CLKSW_BIT          0
+#define PORTB_UNUSED_MASK  (1<<PB1 | 1<<PB0)
+#define PORTC_UNUSED_MASK  (1<<PC5 | 1<<PC4 | 1<<PC3 | 1<<PC2)
+#define PORTD_UNUSED_MASK  (1<<PD7 | 1<<PD6 | 1<<PD5 | 1<<PD3 | 1<<PD1)
+
 /* USB function call identifiers */
 #define USBASP_FUNC_CONNECT     1
 #define USBASP_FUNC_DISCONNECT  2
@@ -61,10 +72,20 @@
 #define USBASP_ISP_SCK_750    11  /* 750 kHz   */
 #define USBASP_ISP_SCK_1500   12  /* 1.5 MHz   */
 
+/* Macros for Port (enables to easily define IO signals) */
+#define GLUE(A,B) A##B
+#define DDR(PORT_LETTER)  GLUE(DDR, PORT_LETTER)		// Makes DDRC  from DDR(C) etc.
+#define PORT(PORT_LETTER) GLUE(PORT,PORT_LETTER)		// Makes PORTC from PORT(C)
+#define PIN(PORT_LETTER)  GLUE(PIN, PORT_LETTER)		// Makes PINC  from PIN(C)
+
 /* macros for gpio functions */
-#define ledRedOn()    PORTC &= ~(1 << PC1)
-#define ledRedOff()   PORTC |= (1 << PC1)
-#define ledGreenOn()  PORTC &= ~(1 << PC0)
-#define ledGreenOff() PORTC |= (1 << PC0)
+#define ledRedOn()    PORT(LED_RED_PORT)   &= ~(1 << LED_RED_BIT)	// Active L
+#define ledRedOff()   PORT(LED_RED_PORT)   |=  (1 << LED_RED_BIT)
+#define ledGreenOn()  PORT(LED_GREEN_PORT) &= ~(1 << LED_GREEN_BIT)	// Active L
+#define ledGreenOff() PORT(LED_GREEN_PORT) |=  (1 << LED_GREEN_BIT)
+#define ledInit()     DDR(LED_RED_PORT)    |=  (1 << LED_RED_BIT),\
+                      DDR(LED_GREEN_PORT)  |=  (1 << LED_GREEN_BIT)	// Outputs
+#define clkswInit()   DDR(CLKSW_PORT)      &= ~(1 << CLKSW_BIT),\
+                      PORT(CLKSW_PORT)     |=  (1 << CLKSW_BIT)		// Input with PullUp
 
 #endif /* USBASP_H_ */

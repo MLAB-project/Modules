@@ -11,6 +11,9 @@
  * PC2 SCK speed option.
  * GND  -> slow (8khz SCK),
  * open -> software set speed (default is 375kHz SCK)
+ *
+ * 2014_02_09 miho@mlab.cz - cleaned code and defined IO port better, automatic compile prodcess for more target CPUs
+ *
  */
 
 #include <avr/io.h>
@@ -44,7 +47,7 @@ uchar usbFunctionSetup(uchar data[8]) {
 	if (data[1] == USBASP_FUNC_CONNECT) {
 
 		/* set SCK speed */
-		if ((PINC & (1 << PC2)) == 0) {
+		if ((PIN(CLKSW_PORT) & (1 << CLKSW_BIT)) == 0) {
 			ispSetSCKOption(USBASP_ISP_SCK_8);
 		} else {
 			ispSetSCKOption(prog_sck);
@@ -303,28 +306,33 @@ uchar usbFunctionWrite(uchar *data, uchar len) {
 int main(void) {
 	uchar i, j;
 
-	/* no pullups on USB and ISP pins */
-	PORTD = 0;
-	PORTB = 0;
-	/* all outputs except PD2 = INT0 */
-	DDRD = ~(1 << 2);
+	/* unused pins with pullups */
+	PORTB = PORTB_UNUSED_MASK;
+	PORTC = PORTC_UNUSED_MASK;
+	PORTD = PORTD_UNUSED_MASK;
+
+	/* LED ports as output */
+	ledInit();
+	ledGreenOn();
+        ledRedOff();
+
+	/* CLKSW input with PullUp (external jumper to GND) */
+	clkswInit();
 
 	/* output SE0 for USB reset */
-	DDRB = ~0;
-	j = 0;
+	DDR(USB_CFG_IOPORTNAME) |= (1 << USB_CFG_DPLUS_BIT | 1<<USB_CFG_DMINUS_BIT);
+
 	/* USB Reset by device only required on Watchdog Reset */
+	j = 0;
 	while (--j) {
 		i = 0;
 		/* delay >10ms for USB reset */
 		while (--i)
 			;
 	}
-	/* all USB and ISP pins inputs */
-	DDRB = 0;
 
-	/* all inputs except PC0, PC1 */
-	DDRC = 0x03;
-	PORTC = 0xfe;
+	/* all USB and ISP pins inputs */
+	DDR(USB_CFG_IOPORTNAME) &= ~(1 << USB_CFG_DPLUS_BIT | 1<<USB_CFG_DMINUS_BIT);
 
 	/* init timer */
 	clockInit();
@@ -337,4 +345,3 @@ int main(void) {
 	}
 	return 0;
 }
-

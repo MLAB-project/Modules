@@ -2,14 +2,36 @@
 #   Makefile for usbasp
 #   20061119   Thomas Fischl        original
 #   20061120   Hanns-Konrad Unger   help: and TARGET=atmega48 added
-#
+#   20140209   Milan Horkel         added automatic built for more targets
 
-# TARGET=atmega8    HFUSE=0xc9  LFUSE=0xef
-# TARGET=atmega48   HFUSE=0xdd  LFUSE=0xff
-# TARGET=at90s2313
-TARGET=atmega8
-HFUSE=0xc9
-LFUSE=0xef
+ALL_TARGETS=atmega8 atmega88
+
+# Default target
+# --------------
+
+ifndef $(TARGET)
+	TARGET=atmega88
+endif
+
+
+# Define target dependent constants
+# ---------------------------------
+
+ifeq ($(TARGET), atmega88)
+	HFUSE=0xc9
+	LFUSE=0xef
+endif
+
+ifeq ($(TARGET), atmega8)
+	HFUSE=0xc9
+	LFUSE=0xef
+endif
+
+ifeq ($(TARGET), atmega8)
+	HFUSE=0xdd
+	LFUSE=0xff
+endif
+
 
 
 # ISP=bsd      PORT=/dev/parport0
@@ -23,11 +45,12 @@ PORT=/dev/usb/ttyUSB0
 help:
 	@echo "Usage: make                same as make help"
 	@echo "       make help           same as make"
-	@echo "       make main.hex       create main.hex"
+	@echo "       make all            build HEX for all target CPUs"
+	@echo "       make hex            create HEX for default target CPU"
 	@echo "       make clean          remove redundant data"
-	@echo "       make disasm         disasm main"
-	@echo "       make flash          upload main.hex into flash"
-	@echo "       make fuses          program fuses"
+	@echo "       make disasm         create listing"
+	@echo "       make flash          upload HEX into flash (for default target CPU)"
+	@echo "       make fuses          program fuses (for default target CPU)"
 	@echo "       make avrdude        test avrdude"
 	@echo "Current values:"
 	@echo "       TARGET=${TARGET}"
@@ -55,28 +78,33 @@ OBJECTS = usbdrv/usbdrv.o usbdrv/usbdrvasm.o usbdrv/oddebug.o isp.o clock.o tpi.
 .c.s:
 	$(COMPILE) -S $< -o $@
 
-clean:
-	rm -f main.hex main.lst main.obj main.cof main.list main.map main.eep.hex main.bin *.o main.s usbdrv/*.o
+cleantmp:
+	rm -f usbasp.lst usbasp.obj usbasp.cof usbasp.list usbasp.map usbasp.bin *.o main.s usbdrv/*.o
+
+clean: cleantmp
+	rm -f usbasp_$(TARGET).hex usbasp_$(TARGET).eep.hex
 
 # file targets:
-main.bin:	$(OBJECTS)
-	$(COMPILE) -o main.bin $(OBJECTS) -Wl,-Map,main.map
+usbasp.bin: $(OBJECTS)
+	$(COMPILE) -o usbasp.bin $(OBJECTS) -Wl,-Map,usbasp.map
 
-main.hex:	main.bin
-	rm -f main.hex main.eep.hex
-	avr-objcopy -j .text -j .data -O ihex main.bin main.hex
-#	./checksize main.bin
+usbasp.hex: usbasp_$(TARGET).hex
+
+usbasp_$(TARGET).hex: usbasp.bin
+	rm -f usbasp_$(TARGET).hex usbasp_$(TARGET).eep.hex
+	avr-objcopy -j .text -j .data -O ihex usbasp.bin $@
+#	./checksize usbasp.bin
 # do the checksize script as our last action to allow successful compilation
 # on Windows with WinAVR where the Unix commands will fail.
 
-disasm:	main.bin
-	avr-objdump -d main.bin
+disasm:	usbasp.bin
+	avr-objdump -d usbasp.bin
 
 cpp:
 	$(COMPILE) -E main.c
 
 flash:
-	avrdude -c ${ISP} -p ${TARGET} -P ${PORT} -U flash:w:main.hex
+	avrdude -c ${ISP} -p ${TARGET} -P ${PORT} -U flash:w:usbasp.hex
 
 fuses:
 	avrdude -c ${ISP} -p ${TARGET} -P ${PORT} -u -U hfuse:w:$(HFUSE):m -U lfuse:w:$(LFUSE):m
@@ -131,5 +159,17 @@ UISP = uisp -dprog=$S -dserial=$(SERIAL) -dpart=auto
 
 uisp:	all
 	$(UISP) --erase
-	$(UISP) --upload --verify if=main.hex
+	$(UISP) --upload --verify if=usbasp_$(TARGET).hex
 
+# Execute these steps for each target CPU
+# Do not remove empty line in this definition!
+define EXEC
+	rm -f usbasp_$(1).hex
+	make TARGET=$(1) cleantmp
+	make TARGET=$(1) usbasp_$(1).hex
+
+endef
+
+ALL:
+	@$(foreach III,$(ALL_TARGETS),$(call EXEC,$(III)))
+	@make cleantmp
