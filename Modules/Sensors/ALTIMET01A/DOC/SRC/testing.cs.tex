@@ -4,71 +4,95 @@
 \usepackage[czech]{babel}
 \usepackage{graphicx}
 \usepackage{pdfpages}
+\usepackage{listings}             % Include the listings-package
 \textwidth 16cm \textheight 25cm
 \topmargin -1.3cm 
 \oddsidemargin 0cm
 \usepackage{footnote}
 \pagestyle{empty}
 \begin{document}
-\title{Šablona MLAB}
-\author{Jakub Kákona, kaklik@mlab.cz}
+\title{Testování modulu ALTIMET01A}
+\author{Jakub Kákona, Eva Pomíchalová; kaklik@mlab.cz}
 \maketitle
 
 \thispagestyle{empty}
 \begin{abstract}
+Při realizaci projektu ABL01A bylo zjištěno, že snímání tlaku z čidla MPL3115A2 funguje navzdory specifikaci výrobce minimálně do výšky 16 km což je cca 10 kPa. Na druhou stranu interní tlakový atmosférický model je použitelný pouze do výšky cca 10 km ve větších výškách vykazuje značné nepřesnosti. Cílem tohoto dokumentu je popsat přesnější měření a kalibrace čidla v případě použití v barometrickém výškoměru pro balonovou sondu ABL01A
 \end{abstract}
 
 \begin{figure} [htbp]
 \begin{center}
-\includegraphics [width=80mm] {./img/SDRX01B_Top_Big.JPG} 
+\includegraphics [width=80mm] {./img/altimet01a_testing_setup.jpg} 
 \end{center}
 \end{figure}
 
 \begin{figure} [b]
-\includegraphics [width=25mm] {./img/SDRX01B_QRcode.png} 
+\includegraphics [width=25mm] {./img/ALTIMET01A_QRcode.png} 
 \end{figure}
 
 \newpage
 \tableofcontents
-
-
-\section{Technické parametry}
-\begin{table}[htbp]
-\begin{center}
-\begin{tabular}{|c|c|c|}
-\hline
-\multicolumn{1}{|c|}{Parametr} & \multicolumn{1}{|c|}{Hodnota} & \multicolumn{1}{|c|}{Poznámka} \\ \hline
-Napájecí napětí analogové části & $\pm$10V &  100mA \\ \hline
-Napájecí napětí digitální části & +5V &  300mA \\ \hline
-Napájecí napětí LNA & do +20V &  max 500mA \\ \hline
-Frekvenční rozsah  & 0,5 - 200 MHz & Při osazení vybranými součástkami i 450MHz \\ \hline
-IIP3  & $>$ 0dB & Předběžný údaj \\ \hline
-Šumové číslo  & $<$ 30dB & \\ \hline
-\end{tabular}
-\end{center}
-\end{table}
-
 \newpage
+
 \section{Popis konstrukce}
 
-\subsection{Zapojení}
+Realizace testovacího systému pro čidlo MPL3115A2 využívá modulu I2CHUB02A, který umožňuje testování více čidel najednou. Čidla jsou tak společně umístěna ve vakuovém zvonu s řízeným tlakem a naměřené tlaky jsou společně s teplotami vyčítány I$^2$C sběrnici. Paralelně k těmto hodnotám je z řídícího počítače ještě vyčítán tlak měřený z referenčního měřícího přístroje DPI 145. 
 
-\subsection{Odrušení}
-
-\subsection{Mechanická konstrukce}
-
-\section{Výroba a testování}
-
-\subsubsection{Osazení}
-
-\subsubsection{Nastavení}
+Měřící přístroj DPI 145 byl do systému zapojen přes rozhraní RS232 za použití převodníku  RS232-USB. 
 
 \section{Programové vybavení}
 
+Pro vyčítání čidel a záznam naměřených hodnot byl použit Python. Využívající speciálně vytvořenou knihovnu  \cite{MLAB-I2c-modules}. Tato knihovna řeší komunikaci se sensory MPL3115A2 v modulech ALTIMET01A. Samotný program je pak umístěn v dokumentační složce modulu ALTIMET01A \cite{data_logger}.
+
+Na začánku programu je nadefinována topologie zapojení modulů, což je viditelné v následujícím bloku kódu (Odsazení bylo upraveno za účelem vložení na šířku stránky).
+
+\lstset{language=Python}
+\begin{lstlisting}[frame=single]
+cfg = config.Config(
+    port = port,
+    bus = [
+        {
+            "type": "i2chub",
+            "address": 0x72,
+            
+            "children": [
+                {
+                    "type": "i2chub",
+                    "address": 0x70,
+                    "channel": 3,
+                    "children": [
+{"name": "altimet1", "type": "altimet01" , "channel": 0, },   
+{"name": "altimet2", "type": "altimet01" , "channel": 3, },   
+{"name": "altimet3", "type": "altimet01" , "channel": 4, },   
+{"name": "altimet4", "type": "altimet01" , "channel": 5, },   
+{"name": "altimet5", "type": "altimet01" , "channel": 6, },   
+{"name": "altimet6", "type": "altimet01" , "channel": 7, },   
+                    ], 
+                },
+{"name": "altimet8", "type": "altimet01" , "channel": 6, },
+            ],
+        },
+    ],
+)
+cfg.initialize()
+\end{lstlisting}
+
+Grafickou realizaci této topologie představuje obrázek \ref{test_setup_blocks}
+
+\begin{figure} [htbp]
+\centering
+\includegraphics [width=220mm, angle=90, origin=c] {./img/test_setup.png}
+\caption{Zapojení jednotlivých modulů v testovacím přípravku.}
+\label{test_setup_blocks}
+\end{figure}
+
+\subsection{Čtení dat z přístroje DPI145}
+
 
 \begin{thebibliography}{99}
-\bibitem{DR2G}{Původní konstrukce} 
-\href{http:// odkaz na nejakou zajimavou konstrukci}{odkaz na nejakou zajimavou konstrukci}
-
+\bibitem{MLAB-I2c-modules}{https://github.com/MLAB-project/MLAB-I2c-modules} 
+\href{https://github.com/MLAB-project/MLAB-I2c-modules}{MLAB-I2c-modules}
+\bibitem{data_logger}{svn://svn.mlab.cz/mlab/Modules/Sensors/ALTIMET01A/SW/Python} 
+\href{svn://svn.mlab.cz/mlab/Modules/Sensors/ALTIMET01A/SW/Python}{MLAB-I2c-modules}
 \end{thebibliography}
 \end{document}
