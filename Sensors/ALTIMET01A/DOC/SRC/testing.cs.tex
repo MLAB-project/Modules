@@ -36,7 +36,7 @@ Při realizaci projektu ABL01A bylo zjištěno, že snímání tlaku z čidla MP
 
 \section{Popis konstrukce}
 
-Realizace testovacího systému pro čidlo MPL3115A2 využívá modulu I2CHUB02A, který umožňuje testování více čidel najednou. Čidla jsou tak společně umístěna ve vakuovém zvonu s řízeným tlakem a naměřené tlaky jsou společně s teplotami vyčítány I$^2$C sběrnici. Sběrnice I$^2$C byla z řídícího počítače vyvedena přes převodník USB-AVR-i2c. 
+Realizace testovacího systému pro čidlo MPL3115A2 využívá modulu I2CHUB02A, který umožňuje testování více čidel najednou. Čidla jsou tak společně umístěna ve vakuovém zvonu s řízeným tlakem a naměřené tlaky jsou společně s teplotami vyčítány I$^2$C sběrnici. Sběrnice I$^2$C byla z řídícího počítače vyvedena přes převodník i2c-avr-USB \cite{i2c-avr-USB}. 
 Paralelně k hodnotám získaných z modulů ALTIMET je z řídícího počítače ještě vyčítán tlak měřený z referenčního měřícího přístroje DPI 145. 
 
 Měřící přístroj DPI 145 byl do systému zapojen přes rozhraní RS232 za použití převodníku  RS232-USB. Nastavení komunikace je Parity=none, Speed=9600, Handshaking=none. (Způsob nastavení je možné nalézt v návodu k DPI145). 
@@ -112,12 +112,14 @@ Data jsou přijata ve formě stringu. Pro získání numerické proměnné by by
 
 \subsection{Systém sběru dat z tlakových čidel}
 
-Pro testování modulu ALTIMET01A s tlakovým čidlem MPL3115A2 byl vytvořen testovací přípravek využívající I2C a převodník USB-avr-i2c. Měřící systém byl ovládán skriptem napsaným v jazyce Python spouštěném na linuxovém počítači.  
+Pro testování modulu ALTIMET01A s tlakovým čidlem MPL3115A2 byl vytvořen testovací přípravek využívající I2C a převodník i2c-avr-USB. Měřící systém byl ovládán skriptem napsaným v jazyce Python spouštěném na linuxovém počítači.  
 
 \begin{thebibliography}{99}
 \bibitem{MLAB-I2c-modules}{https://github.com/MLAB-project/MLAB-I2c-modules} 
 \href{https://github.com/MLAB-project/MLAB-I2c-modules}{MLAB-I2c-modules}
 \bibitem{data_logger}{svn://svn.mlab.cz/mlab/Modules/Sensors/ALTIMET01A/SW/Python} 
 \href{svn://svn.mlab.cz/mlab/Modules/Sensors/ALTIMET01A/SW/Python}{MLAB-I2c-modules}
+\bibitem{i2c_avr_USB}{http://wiki.mlab.cz/doku.php?id=cs:i2c\_avr\_usb} 
+\href{http://wiki.mlab.cz/doku.php?id=cs:i2c_avr_usb}{i2c-avr-USB}
 \end{thebibliography}
 \end{document}
