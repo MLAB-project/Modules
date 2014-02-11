@@ -12,7 +12,7 @@
 \pagestyle{empty}
 \begin{document}
 \title{Testování modulu ALTIMET01A}
-\author{Jakub Kákona, Eva Pomíchalová; kaklik@mlab.cz}
+\author{Jakub Kákona, Eva Pomíchalová; kaklik@mlab.cz, evapomichal@gmail.com}
 \maketitle
 
 \thispagestyle{empty}
@@ -108,11 +108,123 @@ ser.close()
 
 Data jsou přijata ve formě stringu. Pro získání numerické proměnné by bylo třeba je parserovat  a vyhledávat číselný obsah. 
 
-\section{Výsledky}
+\section{Měření}
+
+Blokové schéma měření je zobrazeno na obrázku \ref{test_block_scheme}.
+
+\begin{figure} [htbp]
+\centering
+\includegraphics [width=100mm, origin=c] {./img/Diagram1.png}
+\caption{Blokové schéma zapojení měření.}
+\label{test_block_scheme}
+\end{figure}
 
 \subsection{Systém sběru dat z tlakových čidel}
-
 Pro testování modulu ALTIMET01A s tlakovým čidlem MPL3115A2 byl vytvořen testovací přípravek využívající I2C a převodník i2c-avr-USB. Měřící systém byl ovládán skriptem napsaným v jazyce Python spouštěném na linuxovém počítači.  
+
+\subsection{Výsledky}
+
+Byly provedeny 3 měření z nichž použitelné byly 2 sady dat. V první sadě bylo použito pouze 5 senzorů, 1 byl nefunkční. V druhé sadě bylo stoupání ukončeno ve výšce přibližně 16 km z časových důvodů. Nicméně získaná data jsou pro účely práce dostačující.
+
+Na obrázku \ref{KorekceTlaku} je porovnání údajů ze senzorů oproti údajům z DPI 145. Naměřené hodnoty byly proloženy polynomem prvního stupně. Hodnoty koeficientů pro jednotlivé senzory jsou následující.
+
+\newpage
+
+\begin{verbatim}
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+k1              = 0.998531         +/- 0.0004952    (0.04959%)
+q1              = 1.00027          +/- 25.23        (2522%)
+
+k2              = 0.999998         +/- 0.0005202    (0.05202%)
+q2              = 1                +/- 26.47        (2646%)
+
+k3              = 0.998286         +/- 0.0002962    (0.02967%)
+q3              = 171.628          +/- 15.05        (8.77%)
+
+k4              = 0.999579         +/- 0.001141     (0.1142%)
+q4              = 1.00012          +/- 58.07        (5807%
+
+k5              = 1.00002          +/- 0.0002655    (0.02655%)
+q5              = 84.5852          +/- 13.49        (15.95%)
+
+k6              = 1.00217          +/- 1.274e+10    (1.271e+12%)
+q6              = 1.00217          +/- 1.274e+10    (1.271e+12%)
+\end{verbatim}
+
+Při bližším zkoumání grafu v části s nízkými hodnotami tlaku \ref{KorekceTlakuZoom}, lze nalézt drobné odchylky hodnot od aproximace přímkou. Pokud by tyto odchylky byly několikanásobně větší, znamenalo by to, že senzory neměří přesně oproti DPI145. Odchylky jsou však jen drobné, proto lze usuzovat, že senzory měří i ve vyšších výškách než udává výrobce minimálně s takovou přesností jako DPI145.
+
+Pro rozšíření informací o přístrojích používaných v laboratoři se lze podívat na obrázek \ref{stoupani}, na kterém vidíme rychlost "stoupání" do výšky téměř 19 km. Stoupání bylo simulováno vývěvou, která odsávala vzduch z vakuového zvonu, ve kterém byly uloženy senzory. Tlak vzduchu byl regulován ručně studentem provádějícím měření přes regulátor, který je zachycen na obrázku na úvodní stránce zprávy.
+
+Výška byla vypočítána pomocí barometrické rovnice. Pro zajímavost lze porovnat zobrazení závislosti tlaku a výšky vypočítané pomocí barometrické rovnice z naměřených "kalibrovaných" hodnot \ref{tlak_vyska} a stejnou závislost v grafu pro mezinárodní standardní atmosféru \ref{MSA}. 
+
+\begin{figure} [htbp]
+\centering
+\includegraphics [width=130mm, origin=c] {./img/KorekceTlaku.png}
+\caption{Senzory vs. DPI145.}
+\label{KorekceTlaku}
+\end{figure}
+
+\begin{figure} [htbp]
+\centering
+\includegraphics [width=130mm, origin=c] {./img/KorekceTlakuZoom.png}
+\caption{Proklad polynomem - nízké hodnoty tlaku.}
+\label{KorekceTlakuZoom}
+\end{figure}
+
+\begin{figure} [htbp]
+\centering
+\includegraphics [width=130mm, origin=c] {./img/Stoupani.png}
+\caption{Stoupání.}
+\label{stoupani}
+\end{figure}
+
+\begin{figure} [htbp]
+\centering
+\includegraphics [width=130mm, origin=c] {./img/Tlak_vyska.png}
+\caption{Tlak vs. výška.}
+\label{tlak_vyska}
+\end{figure}
+
+\begin{figure} [htbp]
+\centering
+\includegraphics [width=100mm, origin=c] {./img/graf.png}
+\caption{Mezinárodní standardní atmosféra.}
+\label{MSA}
+\end{figure}
+
+\subsection{Nejistota}
+Nejistotu lze spočítat podle následujících vzorců. Byla spočítaná tzv. rozšířená nejistota. Vzorec platí za předpokladu, že chyby jsou rovnoměrně rozložené.
+$u_{DPI}$ označuje nejistotu tlakoměru DPI145, $u_s$ označuje nejistotu senzorů udávanou výrobcem v rozsahu 70-110 kPa. $u_{st}$ je potom tzv. standardní nejistota a $u_{aug}$ nejistota rošířená.
+
+\begin{equation}
+u_{DPI} = 0.0002 \cdot rdg + 0.0001 \cdot FS
+\end{equation}
+\begin{equation}
+u_{s} = 0.005 kPa
+\end{equation}
+\begin{equation}
+u_{st} = \sqrt{u_{DPI}^{2}+u_{s}^{2}}
+\end{equation}
+\begin{equation}
+u_{aug} = \frac{2}{\sqrt{3}} \cdot u_{st}
+\end{equation}
+
+Například pro naměřenou hodnotu tlaku 0.30259 kPa vyjde nejistota 0.30669 kPa. Tato chyba je oproti chybě senzorů udávané výrobcem velmi vysoká. Proto není možné senzory pomocí přístroje DPI145 kalibrovat. Přesnost DPI145 by bylo vhodné vylepšit vhodnějším nastavením rozsahu, to by ovšem zmenšilo chybu pouze 2.6x což stále není přesnější než senzory.
+
+\subsection{Závěr}
+
+\begin{itemize}
+\item Při měření byla udělána chyba v nastavení rozsahu přístroje DPI145. Z hlediska nejistoty by bylo vhodnější nastavit menší rozsah.
+\item Použité přístroje nevykázaly žádné potíže ani ve výškách vyšších než 11 km. Pouze vakuování zvonu ve vyšších výškách trvalo delší dobu.
+\item Senzory měří i mimo výrobcem udávaný rozsah (ve větších výškách) a to minimálně se stejnou přesností jako přístroj DPI145.
+\item Senzory jsou v rozsahu udávaném výrobcem dle jejich výrobce přesnější než přístroj DPI145.
+\item Senzory není možné kalibrovat pomocí přístroje DPI145.
+\item Naměřené hodnoty přibližně odpovídají hodnotám MSA, barometrická rovnice byla použita správně. Do cca 18 km nejsou vykázány žádné výrazné změny oproti MSA, ačkoli obecně barometrická rovnice platí pouze do 11 km. Pro účely tohoto měření a zobrazení postačí.
+\end{itemize}
+
+
 
 \begin{thebibliography}{99}
 \bibitem{MLAB-I2c-modules}{https://github.com/MLAB-project/MLAB-I2c-modules} 
