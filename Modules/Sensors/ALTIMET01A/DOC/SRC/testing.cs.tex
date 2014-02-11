@@ -12,11 +12,12 @@
 \pagestyle{empty}
 \begin{document}
 \title{Testování modulu ALTIMET01A}
-\author{Jakub Kákona, Eva Pomíchalová; kaklik@mlab.cz, evapomichal@gmail.com}
+\author{Jakub Kákona, Eva Pomíchalová;\\ kaklik@mlab.cz, evapomichal@gmail.com}
 \maketitle
 
 \thispagestyle{empty}
 \begin{abstract}
+\noindent
 Při realizaci projektu ABL01A bylo zjištěno, že snímání tlaku z čidla MPL3115A2 funguje navzdory specifikaci výrobce minimálně do výšky 16 km což je cca 10 kPa. Na druhou stranu interní tlakový atmosférický model je použitelný pouze do výšky cca 10 km ve větších výškách vykazuje značné nepřesnosti. Cílem tohoto dokumentu je popsat přesnější měření a kalibrace čidla v případě použití v barometrickém výškoměru pro balonovou sondu ABL01A
 \end{abstract}
 
@@ -36,7 +37,7 @@ Při realizaci projektu ABL01A bylo zjištěno, že snímání tlaku z čidla MP
 
 \section{Popis konstrukce}
 
-Realizace testovacího systému pro čidlo MPL3115A2 využívá modulu I2CHUB02A, který umožňuje testování více čidel najednou. Čidla jsou tak společně umístěna ve vakuovém zvonu s řízeným tlakem a naměřené tlaky jsou společně s teplotami vyčítány I$^2$C sběrnici. Sběrnice I$^2$C byla z řídícího počítače vyvedena přes převodník i2c-avr-USB \cite{i2c-avr-USB}. 
+Realizace testovacího systému pro čidlo MPL3115A2 využívá modulu I2CHUB02A, který umožňuje testování více čidel najednou. Čidla jsou tak společně umístěna ve vakuovém zvonu s řízeným tlakem a naměřené tlaky jsou společně s teplotami vyčítány I$^2$C sběrnici. Sběrnice I$^2$C byla z řídícího počítače vyvedena přes převodník i2c-avr-USB \cite{i2c_avr_USB}. 
 Paralelně k hodnotám získaných z modulů ALTIMET je z řídícího počítače ještě vyčítán tlak měřený z referenčního měřícího přístroje DPI 145. 
 
 Měřící přístroj DPI 145 byl do systému zapojen přes rozhraní RS232 za použití převodníku  RS232-USB. Nastavení komunikace je Parity=none, Speed=9600, Handshaking=none. (Způsob nastavení je možné nalézt v návodu k DPI145). 
@@ -126,7 +127,7 @@ Pro testování modulu ALTIMET01A s tlakovým čidlem MPL3115A2 byl vytvořen te
 
 Byly provedeny 3 měření z nichž použitelné byly 2 sady dat. V první sadě bylo použito pouze 5 senzorů, 1 byl nefunkční. V druhé sadě bylo stoupání ukončeno ve výšce přibližně 16 km z časových důvodů. Nicméně získaná data jsou pro účely práce dostačující.
 
-Na obrázku \ref{KorekceTlaku} je porovnání údajů ze senzorů oproti údajům z DPI 145. Naměřené hodnoty byly proloženy polynomem prvního stupně. Hodnoty koeficientů pro jednotlivé senzory jsou následující.
+Na obrázku \ref{KorekceTlaku} je porovnání údajů ze senzorů oproti údajům z DPI 145. Naměřené hodnoty byly proloženy přímkou. Hodnoty koeficientů pro jednotlivé senzory jsou následující.
 
 \newpage
 
@@ -169,7 +170,7 @@ Výška byla vypočítána pomocí barometrické rovnice. Pro zajímavost lze po
 \begin{figure} [htbp]
 \centering
 \includegraphics [width=130mm, origin=c] {./img/KorekceTlakuZoom.png}
-\caption{Proklad polynomem - nízké hodnoty tlaku.}
+\caption{Hodnoty proložené přímkou - detail pro nízké hodnoty tlaku.}
 \label{KorekceTlakuZoom}
 \end{figure}
 
@@ -216,12 +217,12 @@ Například pro naměřenou hodnotu tlaku 0.30259 kPa vyjde nejistota 0.30669 kP
 \subsection{Závěr}
 
 \begin{itemize}
-\item Při měření byla udělána chyba v nastavení rozsahu přístroje DPI145. Z hlediska nejistoty by bylo vhodnější nastavit menší rozsah.
+\item Nebyl nastaven optimálně měřící rozsah přístroje DPI145. Z hlediska nejistoty by bylo vhodnější nastavit menší rozsah.
 \item Použité přístroje nevykázaly žádné potíže ani ve výškách vyšších než 11 km. Pouze vakuování zvonu ve vyšších výškách trvalo delší dobu.
 \item Senzory měří i mimo výrobcem udávaný rozsah (ve větších výškách) a to minimálně se stejnou přesností jako přístroj DPI145.
-\item Senzory jsou v rozsahu udávaném výrobcem dle jejich výrobce přesnější než přístroj DPI145.
+\item Senzory jsou v rozsahu udávaném výrobcem dle jejich katalogového listu přesnější než přístroj DPI145.
 \item Senzory není možné kalibrovat pomocí přístroje DPI145.
-\item Naměřené hodnoty přibližně odpovídají hodnotám MSA, barometrická rovnice byla použita správně. Do cca 18 km nejsou vykázány žádné výrazné změny oproti MSA, ačkoli obecně barometrická rovnice platí pouze do 11 km. Pro účely tohoto měření a zobrazení postačí.
+\item Naměřené hodnoty přibližně odpovídají hodnotám MSA. Do cca 18 km nejsou vykázány žádné výrazné změny oproti MSA, ačkoli obecně barometrická rovnice platí pouze do 11 km. Pro účely tohoto měření a zobrazení postačí.
 \end{itemize}
 
 
