@@ -18,7 +18,9 @@ h5(x)=(T0/tau)*((p0/f5(x))**(R*tau)-1)
 
 #plot "mereni_tlaku_16122013.log" using ($10):($17*100000) with linespoints title "P1", f1(x), "" using ($11):($17*100000) axes x1y1 with linespoints title "P2", f2(x), "" using ($12):($17*100000) axes x1y1 with linespoints title "P3", f3(x), "" using ($14):($17*100000) axes x1y1 with linespoints title "P4", f4(x), "" using ($15):($17*100000) axes x1y1 with linespoints title "P5", f5(x)
 
-
+a=1
+b=1
+c=1
 
 f1(x)=a*x+b*x**2+c 
 fit f1(x) "mereni_tlaku_16122013.log" using ($10/1000):(h1($10)) via a, b, c
