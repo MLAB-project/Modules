@@ -175,6 +175,6 @@ define EXEC
 
 endef
 
-ALL:
+all:
 	@$(foreach III,$(ALL_TARGETS),$(call EXEC,$(III)))
 	@make cleantmp
