@@ -17,21 +17,16 @@ endif
 # Define target dependent constants
 # ---------------------------------
 
+ifeq ($(TARGET), atmega8)
+	HFUSE=0xC9
+	LFUSE=0x9F
+endif
+
 ifeq ($(TARGET), atmega88)
-	HFUSE=0xc9
-	LFUSE=0xef
+	EFUSE=0xF9
+	HFUSE=0xDE
+	LFUSE=0xD7
 endif
-
-ifeq ($(TARGET), atmega8)
-	HFUSE=0xc9
-	LFUSE=0xef
-endif
-
-ifeq ($(TARGET), atmega8)
-	HFUSE=0xdd
-	LFUSE=0xff
-endif
-
 
 
 # ISP=bsd      PORT=/dev/parport0
@@ -112,8 +107,11 @@ fuses:
 avrdude:
 	avrdude -c ${ISP} -p ${TARGET} -P ${PORT} -v
 
+# Fuse atmega8
+# ------------
 # Fuse atmega8 high byte HFUSE:
-# 0xc9 = 1 1 0 0   1 0 0 1 <-- BOOTRST (boot reset vector at 0x0000)
+# 0xD9 = 1 1 0 1   1 0 0 1 = Factory Default Value
+# 0xC9 = 1 1 0 0   1 0 0 1 <-- BOOTRST (boot reset vector at 0x0000)
 #        ^ ^ ^ ^   ^ ^ ^------ BOOTSZ0
 #        | | | |   | +-------- BOOTSZ1
 #        | | | |   + --------- EESAVE (don't preserve EEPROM over chip erase)
@@ -122,33 +120,40 @@ avrdude:
 #        | +------------------ WDTON (WDT not always on)
 #        +-------------------- RSTDISBL (reset pin is enabled)
 # Fuse atmega8 low byte LFUSE:
-# 0x9f = 1 0 0 1   1 1 1 1
+# 0xE1 = 1 1 1 0   0 0 0 1 = Factory Default Value
+# 0x9F = 1 0 0 1   1 1 1 1
 #        ^ ^ \ /   \--+--/
 #        | |  |       +------- CKSEL 3..0 (external >8M crystal)
 #        | |  +--------------- SUT 1..0 (crystal osc, BOD enabled)
 #        | +------------------ BODEN (BrownOut Detector enabled)
 #        +-------------------- BODLEVEL (2.7V)
 #
-# Fuse atmega48 high byte hfuse:
-# 0xdf = 1 1 0 1   1 1 1 1     factory setting
+# Fuse atmega88
+# -------------
+# Fuse atmega88 extended byte:
+# 0xF9 = 1 1 1 1   1 0 0 1 = Factory Default Value (default value is used)
+# 0xF9 = 1 1 1 1   1 0 0 1 <-- BOOTRST (select vetor)
+#                      \+/
+#                       +----- BOOTSZ1..0 (Select Boot Size)
+# Fuse high byte:
+# 0xDF   1 1 0 1   1 1 1 1 = Factory Default Value (default value may be used)
+# 0xDE = 1 1 0 1   1 1 1 0
 #        ^ ^ ^ ^   ^ \-+-/
-#        | | | |   |   +------ BODLEVEL (Brown out disabled)
-#        | | | |   + --------- EESAVE (don't preserve EEPROM over chip erase)
+#        | | | |   |   +------ BODLEVEL (1.7-2.0V)
+#        | | | |   +---------- EESAVE (don't preserve EEPROM over chip erase)
 #        | | | +-------------- WDTON (WDT not always on)
-#        | | +---------------- SPIEN (allow serial programming)
-#        | +------------------ DWEN (debug wire is disabled)
-#        +-------------------- RSTDISBL (reset pin is enabled)
-# 0xdd = ext.reset, no DW, SPI, no watchdog, no save eeprom, BOD 2.7V
-# Fuse atmega48 low byte lfuse:
-# 0x62 = 0 1 1 0   0 0 1 0     factory setting
+#        | | +---------------- SPIEN (allow serial programming)!!!
+#        | +------------------ DWEN (debug wire not enabled)
+#        +-------------------- RSTDISBL (reset pin is not disabled)
+# Fuse low byte:
+# 0x62   0 1 1 0   0 0 1 0 = Factory Default Value (must be programmed to use xosc)
+# 0xD7 = 1 1 0 1   0 1 1 1
 #        ^ ^ \ /   \--+--/
-#        | |  |       +------- CKSEL 3..0 (internal 8Mhz Oszillator)
-#        | |  +--------------- SUT 1..0 (start-up time)
-#        | +------------------ CKOUT (no clock output)
-#        +-------------------- CKDIV8 (divide clock by 8)
-# 0xdc = divide/1,no clock output,fast raising power,low Pw Oszil. 3..8 Mhz
-# 0xe0 = divide/1,no clock output,fast raising power,external Oszil.
-# 0xff = divide/1,no clock output,slow raising power,low Pw Oszil 8..  Mhz
+#        | |  |       +------- CKSEL 3..0 (full swing xosc, BOD enabled)
+#        | |  +--------------- SUT 1..0 (startup timer - see CKSEL)
+#        | +------------------ CKOUT (clock output is not enabled)
+#        +-------------------- CLKDIV8 (clock divider is not enabled)
+
 
 
 SERIAL = `echo /dev/tty.USA19QI*`
