@@ -22,11 +22,26 @@
     (OTHER_Switch3 "FALSE")
     (OTHER_Switch4 "FALSE")
     (OTHER_Switch5 "FALSE")
-    (OTHER_Switch6 "FALSE"))
+    (OTHER_Switch6 "FALSE")
+    (BOM_Scope "0")
+    (BOM_Mode "0")
+    (BOM_Report_File
+       "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\TRANSLATORS\TTLPECL01A\SCH\TTLPECL.BOM")
+    (BOM_Merge_Include "FALSE")
+    (BOM_Property_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_Header "Item\tQuantity\tReference\tPart")
+    (BOM_Include_File
+       "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\TRANSLATORS\TTLPECL01A\SCH\TTLPECL.INC")
+    (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_One_Part_Per_Line "FALSE")
+    (Open_BOM_in_Excel "FALSE")
+    (BOM_View_Output "FALSE"))
   (Folder "Outputs"
     (File ".\ttlpecl.asc"
       (Type "Report"))
     (File ".\ttlpecl.net"
+      (Type "Report"))
+    (File ".\ttlpecl.bom"
       (Type "Report")))
   (Folder "Referenced Projects")
   (PartMRUSelector
@@ -81,7 +96,8 @@
       (Path "Design Resources")
       (Path "Design Resources" ".\ttlpecl.dsn")
       (Path "Design Resources" ".\ttlpecl.dsn" "SCHEMATIC1")
-      (Path "Outputs"))
+      (Path "Outputs")
+      (Select "Design Resources" ".\ttlpecl.dsn" "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
