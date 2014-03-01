@@ -74,11 +74,34 @@ potisku modulu vedle SATA konektoru permanentním fixem.
 
 \subsection{Osazení}
 
+\begin{figure} [htbp]
+%trim option's parameter order: left bottom right top
+  \includegraphics[trim = 90mm 132mm 85mm 132mm, clip, width=8cm]{../../CAM_DOC/O1.pdf}
+  \includegraphics[trim = 90mm 132mm 85mm 132mm, clip, width=8cm]{../../CAM_DOC/O2.pdf}
+  \caption{Rozložení součástek na vrchní a spodní straně plošného spoje modulu.}
+\end{figure}
+
+\begin{tabular}{ccc}
+Označení & Typ & Pouzdro\\ 
+C1 & 100nF & SMA \\ 
+D1 & M4 & SMA \\ 
+J1 & JUMP2X3 &  \\ 
+J8 & SATA connector &  \\
+(J9,J10,J11,J12) & JUMP2X4 \\
+R1,R2	 & 33	& 0805\\
+R3,R4,R7,R8	&	130 & 0805\\
+R5,R6,R9,R10	&	82 & 0805\\
+U1	&	SY100ELT22(23) & SO8 \\
+\end{tabular} 
+
 \subsection{Ověření funkce}
+
+Moduly otestujeme navzájem proti sobě tak, že použijeme variantu modulu pro převod z LVPECL na LVTTL a variantu modulu pro převod LVTTL na LVPECL. Oba moduly pak propojíme SATA kabelem a vyzkoušíme přenos logických úrovní. 
+
 
 \section{Použití modulu}
 
-\subsubsection{Napájení}
+\subsection{Napájení}
 
 Napájecí napětí modulu by mělo odpovídat napájecímu napětí související
 logiky. A je 3,3V pro LVPECL a LVTTL a +5V pro PECL a TTL logiku. Je ale silně doporučeno moduly používat pouze s napájecím napětím 3,3 V.  
