@@ -11,7 +11,7 @@ http://www.mlab.cz/PermaLink/AVRUSB01
 
 - the code itself has to be modifyied so that it vas possible to reconfigure IO pins for
   different hardware (minor changes in main function and in header file)
-- make process was automated so that "make all" creates all configuraed target binaries 
+- make process was automated so that "make all" creates all configured target binaries 
   (for ATmega8 and ATmega88)
 
 - binary files for MLAB hardware is in bin directory
