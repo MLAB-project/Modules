@@ -16,7 +16,7 @@ UISP = uisp -dprog=stk200
 
 DEFINES += -DDEBUG
 DEFINES += -DDEBUG_LEVEL=1
-COMPILE = avr-gcc -Wall -O2 -Iusbdrv -I. -mmcu=atmega8 $(DEFINES)
+COMPILE = avr-gcc -Wall -O2 -Iusbdrv -I. -mmcu=atmega88 $(DEFINES)
 
 OBJECTS = usbdrv/usbdrv.o usbdrv/usbdrvasm.o usbdrv/oddebug.o main.o
 
@@ -37,24 +37,31 @@ all:	firmware.hex
 .c.s:
 	$(COMPILE) -S $< -o $@
 
+# Fuse extended byte:
+# 0xF9 = 1 1 1 1   1 0 0 1 <<<----Default Value (default value is used)
+# 0xF9 = 1 1 1 1   1 0 0 1 <-- BOOTRST (select vetor)
+#                      \+/
+#                       +----- BOOTSZ1..0 (Select Boot Size)
 # Fuse high byte:
-# 0xc9 = 1 1 0 0   1 0 0 1 <-- BOOTRST (boot reset vector at 0x0000)
-#        ^ ^ ^ ^   ^ ^ ^------ BOOTSZ0
-#        | | | |   | +-------- BOOTSZ1
-#        | | | |   + --------- EESAVE (don't preserve EEPROM over chip erase)
-#        | | | +-------------- CKOPT (full output swing)
-#        | | +---------------- SPIEN (allow serial programming)
-#        | +------------------ WDTON (WDT not always on)
-#        +-------------------- RSTDISBL (reset pin is enabled)
+# 0xDF   1 1 0 1   1 1 1 1 <<<----Default Value (default value may be used)
+# 0xDE = 1 1 0 1   1 1 1 0
+#        ^ ^ ^ ^   ^ \-+-/
+#        | | | |   |   +------ BODLEVEL (1.7-2.0V)
+#        | | | |   +---------- EESAVE (don't preserve EEPROM over chip erase)
+#        | | | +-------------- WDTON (WDT not always on)
+#        | | +---------------- SPIEN (allow serial programming)!!!
+#        | +------------------ DWEN (debug wire not enabled)
+#        +-------------------- RSTDISBL (reset pin is not disabled)
 # Fuse low byte:
-# 0x9f = 1 0 0 1   1 1 1 1
+# 0x62   0 1 1 0   0 0 1 0 <<<----Default Value (must be programmed to use xosc)
+# 0xD7 = 1 1 0 1   0 1 1 1
 #        ^ ^ \ /   \--+--/
-#        | |  |       +------- CKSEL 3..0 (external >8M crystal)
-#        | |  +--------------- SUT 1..0 (crystal osc, BOD enabled)
-#        | +------------------ BODEN (BrownOut Detector enabled)
-#        +-------------------- BODLEVEL (2.7V)
+#        | |  |       +------- CKSEL 3..0 (full swing xosc, BOD enabled)
+#        | |  +--------------- SUT 1..0 (startup timer - see CKSEL)
+#        | +------------------ CKOUT (clock output is not enabled)
+#        +-------------------- CLKDIV8 (clock divider is not enabled)
 fuse:
-	$(UISP) --wr_fuse_h=0xc9 --wr_fuse_l=0x9f
+	$(UISP) --wr_fuse_h=0xDE --wr_fuse_l=0xD7
 
 
 clean:
@@ -72,10 +79,10 @@ firmware.hex:	firmware.bin
 # on Windows with WinAVR where the Unix commands will fail.
 
 program: firmware.hex
-	avrdude -c usbasp -p atmega8 -U lfuse:w:0x9f:m -U hfuse:w:0xc9:m -U flash:w:firmware.hex
+	avrdude -c usbasp -p atmega88 -U lfuse:w:0xD7:m -U hfuse:w:0xDE:m -U flash:w:firmware.hex
 
 program-nodep:
-	avrdude -c usbasp -p atmega8 -U lfuse:w:0x9f:m -U hfuse:w:0xc9:m -U flash:w:firmware.hex
+	avrdude -c usbasp -p atmega88 -U lfuse:w:0xD7:m -U hfuse:w:0xDE:m -U flash:w:firmware.hex
 
 disasm:	firmware.bin
 	avr-objdump -d firmware.bin

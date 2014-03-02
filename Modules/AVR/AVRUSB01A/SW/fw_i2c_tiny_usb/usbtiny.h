@@ -10,15 +10,12 @@
 // The D+ and D- USB signals should be connected to two pins of the same
 // I/O port. The following macros define the port letter and the input
 // bit numbers:
-#if! defined (__AVR_ATtiny45__)
-#define	USBTINY_PORT			C
-#define	USBTINY_DPLUS			1
-#define	USBTINY_DMINUS			0
-#else
-#define	USBTINY_PORT			B
-#define	USBTINY_DPLUS			2
-#define	USBTINY_DMINUS			0
-#endif
+
+#include "config.h"
+
+#define USBTINY_PORT			CONFIG_USB_PORT
+#define USBTINY_DPLUS			CONFIG_USB_DPLUS
+#define USBTINY_DMINUS			CONFIG_USB_DMINUS
 
 // The D+ signal should be connected to an interrupt input to trigger an
 // interrupt at the start of a packet. When you use the same pin for the
