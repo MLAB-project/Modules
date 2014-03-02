@@ -4,22 +4,11 @@ http://www.mlab.cz/PermaLink/AVRUSB01
 
 - original firmare from http://www.harbaum.org/till/i2c_tiny_usb/i2c_tiny_usb-2009-02-10.zip
 
-
-
-
-
-
--------
-
-
-- the original package contains drivers as well, please use them
-
-- hardware supports Green LED (always on)
-- hardware supports Red LED (busy indicator)
-- hardware supports jumper for slowing down SPI clocks (just install jumper on J6 to position RX-GND)
+- the original package contains drivers as well
 
 - the code itself has to be modifyied so that it vas possible to reconfigure IO pins for
-  different hardware (minor changes in main function and in header file)
+  different hardware (minor changes in main function and in header file, new file config.h)
+
 - make process was automated so that "make all" creates all configuraed target binaries 
   (for ATmega8 and ATmega88)
 
@@ -36,4 +25,3 @@ http://www.mlab.cz/PermaLink/AVRUSB01
 	ISP_SCK         PB5
 	GreenLED        PC1 (active L)
 	RedLedLED       PC0 (active L)
-	Slow SPI CLK    PD0 (to GND)
