@@ -1,5 +1,8 @@
 # Supported targets: 
 #	atmega8 atmega88 attiny45 (attiny45 is not usable in a board AVRUSB01A, it has different package)
+#
+# If compiled on Linux do this
+#	chmod +x checksize
 
 ALL_TARGETS=atmega8 atmega88 attiny45
 
@@ -21,5 +24,5 @@ define EXEC
 
 endef
 
-ALL:
+all:
 	@$(foreach III,$(ALL_TARGETS),$(call EXEC,$(III)))
