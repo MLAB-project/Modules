@@ -38,7 +38,8 @@ all:	firmware.hex
 	$(COMPILE) -S $< -o $@
 
 # Fuse high byte:
-# 0xc9 = 1 1 0 0   1 0 0 1 <-- BOOTRST (boot reset vector at 0x0000)
+# 0xD9 = 1 1 0 1   1 0 0 1 = Factory Default Value
+# 0xC9 = 1 1 0 0   1 0 0 1 <-- BOOTRST (boot reset vector at 0x0000)
 #        ^ ^ ^ ^   ^ ^ ^------ BOOTSZ0
 #        | | | |   | +-------- BOOTSZ1
 #        | | | |   + --------- EESAVE (don't preserve EEPROM over chip erase)
@@ -47,7 +48,8 @@ all:	firmware.hex
 #        | +------------------ WDTON (WDT not always on)
 #        +-------------------- RSTDISBL (reset pin is enabled)
 # Fuse low byte:
-# 0x9f = 1 0 0 1   1 1 1 1
+# 0xE1 = 1 1 1 0   0 0 0 1 = Factory Default Value
+# 0x9F = 1 0 0 1   1 1 1 1
 #        ^ ^ \ /   \--+--/
 #        | |  |       +------- CKSEL 3..0 (external >8M crystal)
 #        | |  +--------------- SUT 1..0 (crystal osc, BOD enabled)

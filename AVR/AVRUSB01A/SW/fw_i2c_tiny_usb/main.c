@@ -44,32 +44,23 @@
 
 #include <util/delay.h>
 
+#include "config.h"
+
+// Include USB library (AVRUSB or USBTINY)
+// -------------------
+
 #ifndef USBTINY
-// use avrusb library
-#include "usbdrv.h"
-#include "oddebug.h"
+	// use avrusb library
+	#include "usbdrv.h"
+	#include "oddebug.h"
 #else
-// use usbtiny library 
-#include "usb.h"
-#include "usbtiny.h"
-typedef byte_t uchar;
-
-#if! defined (__AVR_ATtiny45__)
-#define USBDDR DDRC
-#define USB_CFG_IOPORT PORTC
-#else
-#define USBDDR DDRB
-#define USB_CFG_IOPORT PORTB
+	// use usbtiny library 
+	#include "usb.h"
+	#include "usbtiny.h"
+	typedef byte_t uchar;
+	#define usbInit()  usb_init()
+	#define usbPoll()  usb_poll()
 #endif
-
-#define USB_CFG_DMINUS_BIT USBTINY_DMINUS
-#define USB_CFG_DPLUS_BIT USBTINY_DPLUS
-
-#define usbInit()  usb_init()
-#define usbPoll()  usb_poll()
-#endif
-
-#define ENABLE_SCL_EXPAND
 
 /* commands from USB, must e.g. match command ids in kernel driver */
 #define CMD_ECHO       0
@@ -553,16 +544,16 @@ int	main(void) {
 #endif
 
   /* clear usb ports */
-  USB_CFG_IOPORT   &= (uchar)~((1<<USB_CFG_DMINUS_BIT)|(1<<USB_CFG_DPLUS_BIT));
+  PORT(CONFIG_USB_PORT)  &= (uchar)~((1<<CONFIG_USB_DMINUS)|(1<<CONFIG_USB_DPLUS));
 
   /* make usb data lines outputs */
-  USBDDR    |= ((1<<USB_CFG_DMINUS_BIT)|(1<<USB_CFG_DPLUS_BIT));
+  DDR(CONFIG_USB_PORT)   |= ((1<<CONFIG_USB_DMINUS)|(1<<CONFIG_USB_DPLUS));
 
   /* USB Reset by device only required on Watchdog Reset */
   _delay_loop_2(40000);   // 10ms
 
   /* make usb data lines inputs */
-  USBDDR &= ~((1<<USB_CFG_DMINUS_BIT)|(1<<USB_CFG_DPLUS_BIT));
+  DDR(CONFIG_USB_PORT) &= ~((1<<CONFIG_USB_DMINUS)|(1<<CONFIG_USB_DPLUS));
 
   usbInit();
 
