@@ -44,7 +44,6 @@ time.sleep(0.5)
 sys.stdout.write("ALTIMET data acquisition system started \n")
 
 try:
-    with open("temperature.log", "a") as f:
         while True:
             gauge.route()
             (t1, p1) = gauge.get_tp()
