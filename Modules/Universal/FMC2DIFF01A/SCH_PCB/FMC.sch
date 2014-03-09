@@ -31,12 +31,13 @@ LIBS:contrib
 LIBS:valves
 LIBS:con-cypressindustries
 LIBS:Universal
+LIBS:sata7-67491-1030
 LIBS:FMC2DIFF-cache
 EELAYER 24 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 2 4
 Title ""
 Date ""
 Rev ""
@@ -932,10 +933,4 @@ Wire Wire Line
 	9300 5600 10300 5600
 Wire Wire Line
 	10300 5600 10300 5500
-$Sheet
-S -800 8550 1100 600 
-U 531BC008
-F0 "miniSAS" 50
-F1 "diff_connectors.sch" 50
-$EndSheet
 $EndSCHEMATC
