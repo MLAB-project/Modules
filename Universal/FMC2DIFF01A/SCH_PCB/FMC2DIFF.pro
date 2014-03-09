@@ -1,7 +1,5 @@
-update=Čt 6. březen 2014, 19:43:30 CET
-last_client=eeschema
-[general]
-version=1
+update=Ne 9. březen 2014, 18:48:50 CET
+last_client=kicad
 [eeschema]
 version=1
 PageLayoutDescrFile=
@@ -46,3 +44,5 @@ LibName29=contrib
 LibName30=valves
 LibName31=con-cypressindustries
 LibName32=Universal
+[general]
+version=1
