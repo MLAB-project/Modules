@@ -36,7 +36,7 @@ EELAYER 24 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
+Sheet 4 5
 Title ""
 Date ""
 Rev ""
@@ -46,4 +46,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L SATA7-32009-10X X?
+U 1 1 531CB571
+P 2500 2050
+F 0 "X?" H 2400 2450 50  0000 L BNN
+F 1 "SATA7-32009-10X" H 2400 1600 50  0000 L BNN
+F 2 "con-cypressindustries-CCATA_32009_10X" H 2500 2200 50  0001 C CNN
+F 3 "" H 2500 2050 60  0000 C CNN
+	1    2500 2050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
