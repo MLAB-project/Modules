@@ -1,5 +1,7 @@
-update=Ne 9. březen 2014, 18:48:50 CET
-last_client=kicad
+update=Ne 9. březen 2014, 21:19:12 CET
+last_client=eeschema
+[general]
+version=1
 [eeschema]
 version=1
 PageLayoutDescrFile=
@@ -10,7 +12,7 @@ NetFmtName=
 RptD_X=0
 RptD_Y=100
 RptLab=1
-LabSize=60
+LabSize=55
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -44,5 +46,4 @@ LibName29=contrib
 LibName30=valves
 LibName31=con-cypressindustries
 LibName32=Universal
-[general]
-version=1
+LibName33=sata7-67491-1030
