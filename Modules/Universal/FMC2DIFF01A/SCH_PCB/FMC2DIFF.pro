@@ -1,5 +1,5 @@
-update=Ne 9. březen 2014, 21:19:12 CET
-last_client=eeschema
+update=Ne 9. březen 2014, 23:36:50 CET
+last_client=cvpcb
 [general]
 version=1
 [eeschema]
@@ -47,3 +47,29 @@ LibName30=valves
 LibName31=con-cypressindustries
 LibName32=Universal
 LibName33=sata7-67491-1030
+[pcbnew]
+[pcbnew/libraries]
+LibName1=con-cypressindustries
+LibName2=sockets
+LibName3=connect
+LibName4=discret
+LibName5=pin_array
+LibName6=divers
+LibName7=smd_capacitors
+LibName8=smd_resistors
+LibName9=smd_crystal&oscillator
+LibName10=smd_dil
+LibName11=smd_transistors
+LibName12=libcms
+LibName13=display
+LibName14=led
+LibName15=dip_sockets
+LibName16=pga_sockets
+LibName17=valves
+LibName18=Universal
+LibDir=
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
