@@ -1,7 +1,5 @@
-update=Ne 9. březen 2014, 23:36:50 CET
-last_client=cvpcb
-[general]
-version=1
+update=Út 11. březen 2014, 20:32:26 CET
+last_client=kicad
 [eeschema]
 version=1
 PageLayoutDescrFile=
@@ -73,3 +71,5 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
+[general]
+version=1
