@@ -1,8 +1,8 @@
 EESchema Schematic File Version 2
+LIBS:conn
 LIBS:power
 LIBS:device
 LIBS:transistors
-LIBS:conn
 LIBS:linear
 LIBS:regul
 LIBS:74xx
@@ -29,9 +29,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:con-cypressindustries
-LIBS:Universal
-LIBS:sata7-67491-1030
+LIBS:konektory
 LIBS:FMC2DIFF-cache
 EELAYER 24 0
 EELAYER END
