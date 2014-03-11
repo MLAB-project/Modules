@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2014-03-05 BZR 4734)-product date = Út 11. březen 2014, 20:27:58 CET
+Cmp-Mod V01 Created by CvPcb (2014-03-05 BZR 4734)-product date = St 12. březen 2014, 00:44:00 CET
 
 BeginCmp
 TimeStamp = /531CA823/5318C1F0;
@@ -12,6 +12,48 @@ TimeStamp = /531CAD57/531CCCDB;
 Reference = J2;
 ValeurCmp = SATA7-67491-1030;
 IdModule  = mojeKonektory:SATA-7_THT_VERT;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/531F7F71;
+Reference = J3;
+ValeurCmp = SATA7-67491-1030;
+IdModule  = MOLEX_67491-1030;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/531F7EF3;
+Reference = J4;
+ValeurCmp = SATA7-67491-1030;
+IdModule  = MOLEX_67491-1030;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/531F7F93;
+Reference = J5;
+ValeurCmp = SATA7-67491-1030;
+IdModule  = MOLEX_67491-1030;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD5A/531F7DD7;
+Reference = J6;
+ValeurCmp = SAS_mini_1888174;
+IdModule  = mojeKonektory:SAS_mini_1888174;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD5A/531F9589;
+Reference = J7;
+ValeurCmp = SAS_mini_1888174;
+IdModule  = mojeKonektory:SAS_mini_1888174;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD5A/531F9E3C;
+Reference = J8;
+ValeurCmp = JUMP_3X2_CONN;
+IdModule  = Jumpery_MLAB:Pin_Header_Straight_2x03;
 EndCmp
 
 EndListe

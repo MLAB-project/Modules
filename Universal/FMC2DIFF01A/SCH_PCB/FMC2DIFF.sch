@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:Jumpers
 LIBS:conn
 LIBS:power
 LIBS:device
