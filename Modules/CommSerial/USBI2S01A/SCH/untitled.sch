@@ -1386,7 +1386,7 @@ W = angled&lt;p&gt;
 <pinref part="X1" gate="G$1" pin="/RST"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="VIO" class="0">
 <segment>
 <wire x1="-20.32" y1="58.42" x2="-22.86" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="58.42" x2="-27.94" y2="58.42" width="0.1524" layer="91"/>
@@ -1415,49 +1415,49 @@ W = angled&lt;p&gt;
 <wire x1="17.78" y1="55.88" x2="17.78" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$14" class="0">
+<net name="SUSPEND" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="SUSPEND"/>
 <pinref part="SV2" gate="-1" pin="K"/>
 <wire x1="20.32" y1="48.26" x2="17.78" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$17" class="0">
+<net name="/SUSPEND" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="/SUSPEND"/>
 <pinref part="SV2" gate="-2" pin="K"/>
 <wire x1="20.32" y1="43.18" x2="17.78" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$18" class="0">
+<net name="GP10" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="GPIO10-TX"/>
 <pinref part="SV2" gate="-3" pin="K"/>
 <wire x1="20.32" y1="38.1" x2="17.78" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$19" class="0">
+<net name="GP11" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="GPIO11-RX"/>
 <pinref part="SV2" gate="-4" pin="K"/>
 <wire x1="20.32" y1="33.02" x2="17.78" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$20" class="0">
+<net name="GP2" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="GPIO2-VOL-"/>
 <pinref part="SV2" gate="-5" pin="K"/>
 <wire x1="20.32" y1="27.94" x2="17.78" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$21" class="0">
+<net name="GP3" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="GPIO3-VOL+"/>
 <pinref part="SV2" gate="-6" pin="K"/>
 <wire x1="20.32" y1="22.86" x2="17.78" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$22" class="0">
+<net name="GP4" class="0">
 <segment>
 <pinref part="D5" gate="G$1" pin="C"/>
 <wire x1="20.32" y1="15.24" x2="38.1" y2="15.24" width="0.1524" layer="91"/>
@@ -1472,7 +1472,7 @@ W = angled&lt;p&gt;
 <wire x1="20.32" y1="17.78" x2="22.86" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$23" class="0">
+<net name="GP6" class="0">
 <segment>
 <pinref part="SV2" gate="-8" pin="K"/>
 <wire x1="22.86" y1="7.62" x2="22.86" y2="12.7" width="0.1524" layer="91"/>
@@ -1484,27 +1484,27 @@ W = angled&lt;p&gt;
 <wire x1="48.26" y1="12.7" x2="48.26" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$24" class="0">
+<net name="SCK" class="0">
 <segment>
 <pinref part="SV3" gate="-1" pin="K"/>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="27.94" y1="2.54" x2="33.02" y2="2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$25" class="0">
+<net name="SDIN" class="0">
 <segment>
 <pinref part="SV3" gate="-2" pin="K"/>
 <pinref part="R7" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="N$26" class="0">
+<net name="SDOUT" class="0">
 <segment>
 <pinref part="SV3" gate="-3" pin="K"/>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="27.94" y1="-7.62" x2="33.02" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$27" class="0">
+<net name="GP5" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="GPIO5-TXTDACSEL0"/>
 <wire x1="17.78" y1="-25.4" x2="27.94" y2="-25.4" width="0.1524" layer="91"/>
@@ -1513,7 +1513,7 @@ W = angled&lt;p&gt;
 <wire x1="27.94" y1="-27.94" x2="33.02" y2="-27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$28" class="0">
+<net name="GP1" class="0">
 <segment>
 <pinref part="SV3" gate="-7" pin="K"/>
 <wire x1="33.02" y1="-22.86" x2="27.94" y2="-22.86" width="0.1524" layer="91"/>
@@ -1522,7 +1522,7 @@ W = angled&lt;p&gt;
 <wire x1="27.94" y1="-20.32" x2="17.78" y2="-20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$29" class="0">
+<net name="GP0" class="0">
 <segment>
 <pinref part="SV3" gate="-6" pin="K"/>
 <wire x1="33.02" y1="-17.78" x2="33.02" y2="-15.24" width="0.1524" layer="91"/>
@@ -1530,7 +1530,7 @@ W = angled&lt;p&gt;
 <wire x1="33.02" y1="-15.24" x2="17.78" y2="-15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$30" class="0">
+<net name="EXTCLK" class="0">
 <segment>
 <pinref part="SV3" gate="-4" pin="K"/>
 <pinref part="X1" gate="G$1" pin="EXTCLK"/>
@@ -1586,49 +1586,49 @@ W = angled&lt;p&gt;
 <wire x1="25.4" y1="-45.72" x2="17.78" y2="-45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$16" class="0">
+<net name="GP9" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="GPIO9-CLKOUT"/>
 <pinref part="SV4" gate="-6" pin="K"/>
 <wire x1="43.18" y1="-50.8" x2="17.78" y2="-50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$38" class="0">
+<net name="GP08" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="GPIO8--CTSDACSEL3"/>
 <pinref part="SV4" gate="-7" pin="K"/>
 <wire x1="43.18" y1="-55.88" x2="17.78" y2="-55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$39" class="0">
+<net name="GP7" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="GPIO7-RTSDACSEL2"/>
 <pinref part="SV4" gate="-8" pin="K"/>
 <wire x1="43.18" y1="-60.96" x2="17.78" y2="-60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$40" class="0">
+<net name="SDA" class="0">
 <segment>
 <pinref part="R9" gate="G$1" pin="2"/>
 <pinref part="SV4" gate="-1" pin="K"/>
 <wire x1="43.18" y1="-30.48" x2="27.94" y2="-30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$41" class="0">
+<net name="SCL" class="0">
 <segment>
 <pinref part="R10" gate="G$1" pin="2"/>
 <pinref part="SV4" gate="-2" pin="K"/>
 <wire x1="43.18" y1="-35.56" x2="35.56" y2="-35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$42" class="0">
+<net name="MCLK" class="0">
 <segment>
 <pinref part="R11" gate="G$1" pin="2"/>
 <pinref part="SV4" gate="-3" pin="K"/>
 <wire x1="43.18" y1="-40.64" x2="27.94" y2="-40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$43" class="0">
+<net name="LRCK" class="0">
 <segment>
 <pinref part="R12" gate="G$1" pin="2"/>
 <pinref part="SV4" gate="-5" pin="K"/>
@@ -1640,11 +1640,6 @@ W = angled&lt;p&gt;
 <pinref part="SV6" gate="-2" pin="K"/>
 <wire x1="-78.74" y1="-5.08" x2="-83.82" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="FIR1" gate="G$1" pin="OUT"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<wire x1="58.42" y1="-25.4" x2="58.42" y2="-22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
