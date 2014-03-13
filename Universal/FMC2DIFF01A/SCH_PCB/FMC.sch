@@ -31,6 +31,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:konektory
+LIBS:clock
 LIBS:FMC2DIFF-cache
 EELAYER 24 0
 EELAYER END
