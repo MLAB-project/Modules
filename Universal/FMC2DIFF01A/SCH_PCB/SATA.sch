@@ -1,6 +1,6 @@
 EESchema Schematic File Version 2
-LIBS:Jumpers
 LIBS:conn
+LIBS:Jumpers
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -324,9 +324,9 @@ Wire Wire Line
 	2350 4300 2250 4300
 Connection ~ 2250 4300
 Text GLabel 1950 3900 0    55   BiDi ~ 0
-LA05_P
+LA23_P
 Text GLabel 1950 3800 0    55   BiDi ~ 0
-LA05_N
+LA23_N
 Wire Wire Line
 	1950 3800 2100 3800
 Wire Wire Line
@@ -340,9 +340,9 @@ Wire Wire Line
 Wire Wire Line
 	2200 3900 2100 3800
 Text GLabel 1950 4200 0    55   BiDi ~ 0
-LA09_N
+LA26_N
 Text GLabel 1950 4100 0    55   BiDi ~ 0
-LA09_P
+LA26_P
 Wire Wire Line
 	1950 4100 2100 4100
 Wire Wire Line
@@ -430,4 +430,72 @@ F 3 "" H 5000 4050 60  0000 C CNN
 	1    5000 4050
 	1    0    0    -1  
 $EndComp
+$Comp
+L C C?
+U 1 1 5321D20F
+P 8400 1700
+F 0 "C?" H 8400 1800 40  0000 L CNN
+F 1 "C" H 8406 1615 40  0000 L CNN
+F 2 "" H 8438 1550 30  0000 C CNN
+F 3 "" H 8400 1700 60  0000 C CNN
+	1    8400 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5321D31A
+P 8700 1700
+F 0 "C?" H 8750 1800 50  0000 L CNN
+F 1 "CP1" H 8750 1600 50  0000 L CNN
+F 2 "" H 8700 1700 60  0000 C CNN
+F 3 "" H 8700 1700 60  0000 C CNN
+	1    8700 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 3V3 #PWR?
+U 1 1 5321D331
+P 8550 1300
+F 0 "#PWR?" H 8550 1400 40  0001 C CNN
+F 1 "3V3" H 8550 1425 40  0000 C CNN
+F 2 "" H 8550 1300 60  0000 C CNN
+F 3 "" H 8550 1300 60  0000 C CNN
+	1    8550 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 1300 8550 1400
+Wire Wire Line
+	8400 1400 8700 1400
+Wire Wire Line
+	8400 1400 8400 1500
+Wire Wire Line
+	8700 1400 8700 1500
+Connection ~ 8550 1400
+$Comp
+L DGND #PWR?
+U 1 1 5321D501
+P 8400 2050
+F 0 "#PWR?" H 8400 2050 40  0001 C CNN
+F 1 "DGND" H 8400 1980 40  0000 C CNN
+F 2 "" H 8400 2050 60  0000 C CNN
+F 3 "" H 8400 2050 60  0000 C CNN
+	1    8400 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L DGND #PWR?
+U 1 1 5321D515
+P 8700 2050
+F 0 "#PWR?" H 8700 2050 40  0001 C CNN
+F 1 "DGND" H 8700 1980 40  0000 C CNN
+F 2 "" H 8700 2050 60  0000 C CNN
+F 3 "" H 8700 2050 60  0000 C CNN
+	1    8700 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 1900 8400 2050
+Wire Wire Line
+	8700 1900 8700 2050
 $EndSCHEMATC

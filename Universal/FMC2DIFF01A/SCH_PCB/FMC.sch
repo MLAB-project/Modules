@@ -1,6 +1,6 @@
 EESchema Schematic File Version 2
-LIBS:Jumpers
 LIBS:conn
+LIBS:Jumpers
 LIBS:power
 LIBS:device
 LIBS:transistors
