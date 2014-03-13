@@ -1,4 +1,4 @@
-update=St 12. březen 2014, 00:30:15 CET
+update=Čt 13. březen 2014, 20:51:20 CET
 last_client=eeschema
 [pcbnew]
 [pcbnew/libraries]
@@ -34,14 +34,14 @@ PageLayoutDescrFile=
 SubpartIdSeparator=0
 SubpartFirstId=65
 LibDir=/home/kaklik/svn/library/KiCAD/symbols
-NetFmtName=
+NetFmtName=PcbnewAdvanced
 RptD_X=0
 RptD_Y=100
 RptLab=1
 LabSize=55
 [eeschema/libraries]
-LibName1=Jumpers
-LibName2=conn
+LibName1=conn
+LibName2=Jumpers
 LibName3=power
 LibName4=device
 LibName5=transistors
@@ -72,3 +72,4 @@ LibName29=atmel
 LibName30=contrib
 LibName31=valves
 LibName32=konektory
+LibName33=clock

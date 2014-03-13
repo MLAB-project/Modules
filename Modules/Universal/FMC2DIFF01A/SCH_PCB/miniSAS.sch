@@ -1,6 +1,6 @@
 EESchema Schematic File Version 2
-LIBS:Jumpers
 LIBS:conn
+LIBS:Jumpers
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -351,13 +351,13 @@ LA07_N
 Text GLabel 1850 4350 0    55   BiDi ~ 0
 LA07_P
 Text GLabel 1850 4550 0    55   BiDi ~ 0
-LA03_P
+LA05_P
 Text GLabel 1850 4650 0    55   BiDi ~ 0
-LA03_N
+LA05_N
 Text GLabel 1850 4750 0    55   BiDi ~ 0
-LA08_P
+LA13_P
 Text GLabel 1850 4850 0    55   BiDi ~ 0
-LA08_N
+LA13_N
 Text GLabel 1850 5050 0    55   BiDi ~ 0
 LA11_N
 Text GLabel 1850 5150 0    55   BiDi ~ 0
@@ -451,29 +451,29 @@ F 3 "" H 5400 5700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 5100 3950 0    55   BiDi ~ 0
-LA13_N
+LA03_N
 Text GLabel 5100 4050 0    55   BiDi ~ 0
-LA13_P
+LA03_P
 Text GLabel 5100 4250 0    55   BiDi ~ 0
-LA17_N_CC
+LA08_N
 Text GLabel 5100 4350 0    55   BiDi ~ 0
-LA17_P_CC
+LA08_P
 Text GLabel 5100 4550 0    55   BiDi ~ 0
-LA12_P
+LA09_P
 Text GLabel 5100 4650 0    55   BiDi ~ 0
-LA12_N
+LA09_N
 Text GLabel 5100 4750 0    55   BiDi ~ 0
-LA16_P
+LA17_P_CC
 Text GLabel 5100 4850 0    55   BiDi ~ 0
-LA16_N
+LA17_N_CC
 Text GLabel 5100 5050 0    55   BiDi ~ 0
-LA23_N
+LA12_N
 Text GLabel 5100 5150 0    55   BiDi ~ 0
-LA23_P
+LA12_P
 Text GLabel 5100 5350 0    55   BiDi ~ 0
-LA26_N
+LA16_N
 Text GLabel 5100 5450 0    55   BiDi ~ 0
-LA26_P
+LA16_P
 Wire Wire Line
 	5100 4650 5600 4650
 Wire Wire Line
