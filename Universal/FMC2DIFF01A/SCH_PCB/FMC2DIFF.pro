@@ -1,5 +1,5 @@
-update=Čt 13. březen 2014, 20:51:20 CET
-last_client=eeschema
+update=Sat 15 Mar 2014 00:00:27 CET
+last_client=kicad
 [pcbnew]
 [pcbnew/libraries]
 LibName1=con-cypressindustries
@@ -26,8 +26,6 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
-[general]
-version=1
 [eeschema]
 version=1
 PageLayoutDescrFile=
@@ -73,3 +71,5 @@ LibName30=contrib
 LibName31=valves
 LibName32=konektory
 LibName33=clock
+[general]
+version=1
