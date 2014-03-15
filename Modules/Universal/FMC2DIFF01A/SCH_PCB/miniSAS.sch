@@ -351,10 +351,10 @@ Text GLabel 1850 4250 0    55   BiDi ~ 0
 LA07_N
 Text GLabel 1850 4350 0    55   BiDi ~ 0
 LA07_P
-Text GLabel 1850 4550 0    55   BiDi ~ 0
-LA05_P
-Text GLabel 1850 4650 0    55   BiDi ~ 0
-LA05_N
+Text GLabel 5100 4750 0    55   BiDi ~ 0
+LA10_P
+Text GLabel 5100 4850 0    55   BiDi ~ 0
+LA10_N
 Text GLabel 1850 4750 0    55   BiDi ~ 0
 LA13_P
 Text GLabel 1850 4850 0    55   BiDi ~ 0
@@ -459,21 +459,21 @@ Text GLabel 5100 4250 0    55   BiDi ~ 0
 LA08_N
 Text GLabel 5100 4350 0    55   BiDi ~ 0
 LA08_P
-Text GLabel 5100 4550 0    55   BiDi ~ 0
+Text GLabel 1850 4550 0    55   BiDi ~ 0
 LA09_P
-Text GLabel 5100 4650 0    55   BiDi ~ 0
+Text GLabel 1850 4650 0    55   BiDi ~ 0
 LA09_N
-Text GLabel 5100 4750 0    55   BiDi ~ 0
-LA17_P_CC
-Text GLabel 5100 4850 0    55   BiDi ~ 0
-LA17_N_CC
-Text GLabel 5100 5050 0    55   BiDi ~ 0
-LA12_N
-Text GLabel 5100 5150 0    55   BiDi ~ 0
-LA12_P
-Text GLabel 5100 5350 0    55   BiDi ~ 0
-LA16_N
 Text GLabel 5100 5450 0    55   BiDi ~ 0
+LA17_P_CC
+Text GLabel 5100 5350 0    55   BiDi ~ 0
+LA17_N_CC
+Text GLabel 5100 4650 0    55   BiDi ~ 0
+LA12_N
+Text GLabel 5100 4550 0    55   BiDi ~ 0
+LA12_P
+Text GLabel 5100 5050 0    55   BiDi ~ 0
+LA16_N
+Text GLabel 5100 5150 0    55   BiDi ~ 0
 LA16_P
 Wire Wire Line
 	5100 4650 5600 4650
