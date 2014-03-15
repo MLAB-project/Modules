@@ -1,4 +1,4 @@
-update=Sat 15 Mar 2014 00:00:27 CET
+update=Sat 15 Mar 2014 02:00:55 CET
 last_client=kicad
 [pcbnew]
 [pcbnew/libraries]
