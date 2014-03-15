@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2014-03-14 BZR 4749)-product date = Fri 14 Mar 2014 23:37:49 CET
+Cmp-Mod V01 Created by CvPcb (2014-03-14 BZR 4749)-product date = Sat 15 Mar 2014 16:53:45 CET
 
 BeginCmp
 TimeStamp = /531CAD57/53236524;
@@ -19,6 +19,13 @@ TimeStamp = /531CAD57/53236848;
 Reference = C3;
 ValeurCmp = CP1;
 IdModule  = Capacitors_SMD:c_tant_B;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CA823/53247A6E;
+Reference = C4;
+ValeurCmp = C;
+IdModule  = SMD_Packages:SM0805;
 EndCmp
 
 BeginCmp
@@ -96,6 +103,27 @@ TimeStamp = /531CA823/53237068;
 Reference = J11;
 ValeurCmp = JUMP_2X2_CONN;
 IdModule  = MLAB_Jumpery:Pin_Header_Straight_2x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CA823/5324751D;
+Reference = P1;
+ValeurCmp = CONN_1;
+IdModule  = Connect:PINTST;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CA823/532474F5;
+Reference = P2;
+ValeurCmp = CONN_1;
+IdModule  = Connect:PINTST;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CA823/53247509;
+Reference = P3;
+ValeurCmp = CONN_1;
+IdModule  = Connect:PINTST;
 EndCmp
 
 BeginCmp
