@@ -213,9 +213,9 @@ LA06_P
 Text GLabel 1850 2500 0    55   BiDi ~ 0
 LA06_N
 Text GLabel 1850 2800 0    55   BiDi ~ 0
-LA10_N
+LA05_N
 Text GLabel 1850 2900 0    55   BiDi ~ 0
-LA10_P
+LA05_P
 $Comp
 L SATA7-67491-1030 J10
 U 1 1 5320E51C
@@ -858,10 +858,6 @@ Wire Wire Line
 Wire Wire Line
 	9200 4950 9400 5150
 Wire Wire Line
-	6450 3400 7500 3400
-Wire Wire Line
-	6450 3300 7400 3300
-Wire Wire Line
 	2400 5250 3250 5250
 Wire Wire Line
 	2400 5050 3250 5050
@@ -969,4 +965,16 @@ Wire Wire Line
 	4900 5050 4900 5500
 Wire Wire Line
 	4900 5500 5300 5500
+Wire Wire Line
+	6700 3400 6600 3300
+Wire Wire Line
+	6700 3300 6600 3400
+Wire Wire Line
+	6600 3300 6450 3300
+Wire Wire Line
+	6600 3400 6450 3400
+Wire Wire Line
+	6700 3300 7400 3300
+Wire Wire Line
+	6700 3400 7500 3400
 $EndSCHEMATC
