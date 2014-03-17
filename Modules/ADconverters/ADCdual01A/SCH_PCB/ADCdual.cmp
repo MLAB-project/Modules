@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2014-jan-25)-product date = Mon 17 Mar 2014 21:05:36 CET
+Cmp-Mod V01 Created by CvPcb (2014-jan-25)-product date = Mon 17 Mar 2014 21:37:24 CET
 
 BeginCmp
 TimeStamp = /5325D593;
@@ -138,6 +138,13 @@ TimeStamp = /5325F323;
 Reference = C20;
 ValeurCmp = 100nF;
 IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /53275986;
+Reference = D1;
+ValeurCmp = DIODE;
+IdModule  = SMD_Packages:DO-214AC(SMA);
 EndCmp
 
 BeginCmp
