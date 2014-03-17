@@ -1,6 +1,6 @@
-update=Mon 17 Mar 2014 00:52:29 CET
+update=Mon 17 Mar 2014 18:43:54 CET
 version=1
-last_client=kicad
+last_client=eeschema
 [cvpcb]
 version=1
 NetIExt=net
@@ -43,6 +43,8 @@ LibName13=led
 LibName14=dip_sockets
 LibName15=pga_sockets
 LibName16=valves
+[general]
+version=1
 [eeschema]
 version=1
 PageLayoutDescrFile=
@@ -90,5 +92,3 @@ LibName32=valves
 LibName33=sata7-67491-1030
 LibName34=konektory
 LibName35=Jumpers
-[general]
-version=1
