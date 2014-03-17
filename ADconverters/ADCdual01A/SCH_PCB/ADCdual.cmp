@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2014-03-11 BZR 4742)-product date = Mon 17 Mar 2014 17:51:09 CET
+Cmp-Mod V01 Created by CvPcb (2014-jan-25)-product date = Mon 17 Mar 2014 21:05:36 CET
 
 BeginCmp
 TimeStamp = /5325D593;
@@ -249,28 +249,28 @@ BeginCmp
 TimeStamp = /53272432;
 Reference = P1;
 ValeurCmp = CONN_1;
-IdModule  = Mounting_Holes:MountingHole_3mm;
+IdModule  = MLAB_Mechanical:MountingHole_3mm;
 EndCmp
 
 BeginCmp
 TimeStamp = /53272446;
 Reference = P2;
 ValeurCmp = CONN_1;
-IdModule  = Mounting_Holes:MountingHole_3mm;
+IdModule  = MLAB_Mechanical:MountingHole_3mm;
 EndCmp
 
 BeginCmp
 TimeStamp = /5327245A;
 Reference = P3;
 ValeurCmp = CONN_1;
-IdModule  = Mounting_Holes:MountingHole_3mm;
+IdModule  = MLAB_Mechanical:MountingHole_3mm;
 EndCmp
 
 BeginCmp
 TimeStamp = /5327246E;
 Reference = P4;
 ValeurCmp = CONN_1;
-IdModule  = Mounting_Holes:MountingHole_3mm;
+IdModule  = MLAB_Mechanical:MountingHole_3mm;
 EndCmp
 
 BeginCmp
@@ -361,7 +361,7 @@ BeginCmp
 TimeStamp = /5324D398;
 Reference = U1;
 ValeurCmp = LT6600;
-IdModule  = SMD_Packages:SO8N;
+IdModule  = SMD_Packages:SO8E;
 EndCmp
 
 BeginCmp
