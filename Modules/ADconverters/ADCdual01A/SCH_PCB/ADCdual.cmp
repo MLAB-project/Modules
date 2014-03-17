@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2014-03-11 BZR 4742)-product date = Po 17. březen 2014, 01:08:30 CET
+Cmp-Mod V01 Created by CvPcb (2014-03-11 BZR 4742)-product date = Mon 17 Mar 2014 17:51:09 CET
 
 BeginCmp
 TimeStamp = /5325D593;
@@ -246,6 +246,34 @@ IdModule  = Pin_Headers:Pin_Header_Straight_1x03;
 EndCmp
 
 BeginCmp
+TimeStamp = /53272432;
+Reference = P1;
+ValeurCmp = CONN_1;
+IdModule  = Mounting_Holes:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /53272446;
+Reference = P2;
+ValeurCmp = CONN_1;
+IdModule  = Mounting_Holes:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5327245A;
+Reference = P3;
+ValeurCmp = CONN_1;
+IdModule  = Mounting_Holes:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5327246E;
+Reference = P4;
+ValeurCmp = CONN_1;
+IdModule  = Mounting_Holes:MountingHole_3mm;
+EndCmp
+
+BeginCmp
 TimeStamp = /5325CEE2;
 Reference = R1;
 ValeurCmp = 1580R;
@@ -304,28 +332,28 @@ EndCmp
 BeginCmp
 TimeStamp = /5325E606;
 Reference = R9;
-ValeurCmp = R;
+ValeurCmp = 127R;
 IdModule  = Kaklik_smd_pouzdra:SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5325E5DE;
 Reference = R10;
-ValeurCmp = R;
+ValeurCmp = 82R;
 IdModule  = Kaklik_smd_pouzdra:SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5325E61A;
 Reference = R11;
-ValeurCmp = R;
+ValeurCmp = 127R;
 IdModule  = Kaklik_smd_pouzdra:SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5325E5F2;
 Reference = R12;
-ValeurCmp = R;
+ValeurCmp = 82R;
 IdModule  = Kaklik_smd_pouzdra:SM0805;
 EndCmp
 
@@ -351,7 +379,7 @@ IdModule  = SMD_Packages:SOT223;
 EndCmp
 
 BeginCmp
-TimeStamp = /5324E1F9;
+TimeStamp = /53264E4D;
 Reference = U4;
 ValeurCmp = LTC2271;
 IdModule  = Kaklik_smd_pouzdra:QFN52+1EP_HandSoldering;
