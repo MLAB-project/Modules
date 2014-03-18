@@ -30,8 +30,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:konektory
 LIBS:clock
+LIBS:konektory
 LIBS:FMC2DIFF-cache
 EELAYER 24 0
 EELAYER END
@@ -58,9 +58,9 @@ F 3 "" H 5450 6150 60  0000 C CNN
 	1    5450 6150
 	1    0    0    -1  
 $EndComp
-Text GLabel 2150 6450 0    55   BiDi ~ 0
+Text GLabel 1850 2600 0    55   BiDi ~ 0
 GBTCLK0_M2C_P
-Text GLabel 2150 6250 0    55   BiDi ~ 0
+Text GLabel 1850 2500 0    55   BiDi ~ 0
 GBTCLK0_M2C_N
 Text GLabel 2150 5050 0    55   BiDi ~ 0
 LA01_N_CC
@@ -208,9 +208,9 @@ F 3 "" H 2150 3150 60  0000 C CNN
 	1    2150 3150
 	1    0    0    -1  
 $EndComp
-Text GLabel 1850 2600 0    55   BiDi ~ 0
+Text GLabel 2150 6450 0    55   BiDi ~ 0
 LA06_P
-Text GLabel 1850 2500 0    55   BiDi ~ 0
+Text GLabel 2150 6250 0    55   BiDi ~ 0
 LA06_N
 Text GLabel 1850 2800 0    55   BiDi ~ 0
 LA05_N
