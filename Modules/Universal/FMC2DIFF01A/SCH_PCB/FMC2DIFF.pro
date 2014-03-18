@@ -1,4 +1,4 @@
-update=Sun 16 Mar 2014 01:06:23 CET
+update=Tue 18 Mar 2014 14:27:46 CET
 last_client=eeschema
 [cvpcb]
 version=1
@@ -72,5 +72,5 @@ LibName28=opto
 LibName29=atmel
 LibName30=contrib
 LibName31=valves
-LibName32=konektory
-LibName33=clock
+LibName32=clock
+LibName33=konektory
