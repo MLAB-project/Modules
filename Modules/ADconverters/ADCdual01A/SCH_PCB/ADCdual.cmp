@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2014-jan-25)-product date = Mon 17 Mar 2014 21:37:24 CET
+Cmp-Mod V01 Created by CvPcb (2014-jan-25)-product date = Tue 18 Mar 2014 13:14:05 CET
 
 BeginCmp
 TimeStamp = /5325D593;
@@ -239,17 +239,31 @@ IdModule  = Kaklik_konektory:SATA-7_THT_VERT;
 EndCmp
 
 BeginCmp
-TimeStamp = /5324E3C5;
-Reference = K1;
-ValeurCmp = CONN_3;
-IdModule  = Pin_Headers:Pin_Header_Straight_1x03;
+TimeStamp = /53283460;
+Reference = J14;
+ValeurCmp = SENSE;
+IdModule  = MLAB_Jumpery:Pin_Header_Straight_1x03;
 EndCmp
 
 BeginCmp
-TimeStamp = /5324E3D9;
-Reference = K2;
+TimeStamp = /53283479;
+Reference = J15;
+ValeurCmp = PAR/SER;
+IdModule  = MLAB_Jumpery:Pin_Header_Straight_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /5328458E;
+Reference = J16;
 ValeurCmp = CONN_3;
-IdModule  = Pin_Headers:Pin_Header_Straight_1x03;
+IdModule  = MLAB_Jumpery:Pin_Header_Straight_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /532845A7;
+Reference = J17;
+ValeurCmp = CONN_1;
+IdModule  = MLAB_Jumpery:Pin_Header_Straight_1x01;
 EndCmp
 
 BeginCmp
@@ -362,6 +376,34 @@ TimeStamp = /5325E5F2;
 Reference = R12;
 ValeurCmp = 82R;
 IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /532835A9;
+Reference = R13;
+ValeurCmp = 10k;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /532835BD;
+Reference = R14;
+ValeurCmp = 10k;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /532835E8;
+Reference = R15;
+ValeurCmp = 10k;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /532835EE;
+Reference = R16;
+ValeurCmp = 10k;
+IdModule  = SMD_Packages:SM0805;
 EndCmp
 
 BeginCmp
