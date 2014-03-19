@@ -352,9 +352,9 @@ LA07_N
 Text GLabel 1850 4350 0    55   BiDi ~ 0
 LA07_P
 Text GLabel 5100 4750 0    55   BiDi ~ 0
-LA10_P
+LA14_P
 Text GLabel 5100 4850 0    55   BiDi ~ 0
-LA10_N
+LA14_N
 Text GLabel 1850 4750 0    55   BiDi ~ 0
 LA13_P
 Text GLabel 1850 4850 0    55   BiDi ~ 0

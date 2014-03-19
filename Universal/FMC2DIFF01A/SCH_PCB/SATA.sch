@@ -89,13 +89,13 @@ F 3 "" H 4700 1800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 4400 1250 0    55   BiDi ~ 0
-DP0_C2M_P
+LA05_P
 Text GLabel 4400 1150 0    55   BiDi ~ 0
-DP0_C2M_N
+LA05_N
 Text GLabel 4400 1450 0    55   BiDi ~ 0
-DP0_M2C_N
+LA10_N
 Text GLabel 4400 1550 0    55   BiDi ~ 0
-DP0_M2C_P
+LA10_P
 $Comp
 L SATA7-67491-1030 J4
 U 1 1 531F7EF3
