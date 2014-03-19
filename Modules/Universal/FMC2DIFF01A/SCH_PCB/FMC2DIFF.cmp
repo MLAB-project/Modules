@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2014-03-14 BZR 4749)-product date = Sat 15 Mar 2014 16:53:45 CET
+Cmp-Mod V01 Created by CvPcb (2014-jan-25)-product date = Wed 19 Mar 2014 12:02:06 CET
 
 BeginCmp
 TimeStamp = /531CAD57/53236524;
@@ -109,21 +109,21 @@ BeginCmp
 TimeStamp = /531CA823/5324751D;
 Reference = P1;
 ValeurCmp = CONN_1;
-IdModule  = Connect:PINTST;
+IdModule  = Measurement_Points:Measurement_Point_Round-SMD-Pad_Small;
 EndCmp
 
 BeginCmp
 TimeStamp = /531CA823/532474F5;
 Reference = P2;
 ValeurCmp = CONN_1;
-IdModule  = Connect:PINTST;
+IdModule  = Measurement_Points:Measurement_Point_Round-SMD-Pad_Small;
 EndCmp
 
 BeginCmp
 TimeStamp = /531CA823/53247509;
 Reference = P3;
 ValeurCmp = CONN_1;
-IdModule  = Connect:PINTST;
+IdModule  = Measurement_Points:Measurement_Point_Round-SMD-Pad_Small;
 EndCmp
 
 BeginCmp
