@@ -59,9 +59,9 @@ F 3 "" H 5450 6150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 1850 2600 0    55   BiDi ~ 0
-GBTCLK0_M2C_P
+LA18_P_CC
 Text GLabel 1850 2500 0    55   BiDi ~ 0
-GBTCLK0_M2C_N
+LA18_N_CC
 Text GLabel 2150 5050 0    55   BiDi ~ 0
 LA01_N_CC
 Text GLabel 2150 5250 0    55   BiDi ~ 0
@@ -213,9 +213,9 @@ LA06_P
 Text GLabel 2150 6250 0    55   BiDi ~ 0
 LA06_N
 Text GLabel 1850 2800 0    55   BiDi ~ 0
-LA05_N
+LA27_N
 Text GLabel 1850 2900 0    55   BiDi ~ 0
-LA05_P
+LA27_P
 $Comp
 L SATA7-67491-1030 J10
 U 1 1 5320E51C
