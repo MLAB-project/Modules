@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# Python driver for MLAB ALTIMET01A module with HMC5888L Magnetometer sensor wrapper class
+# Python example utility for MLAB ALTIMET01A testing bed with DPI145.
 
 import time
 import datetime
