@@ -14,15 +14,17 @@
 //
 // History
 //   2014 01 31 - First demo
+//   2014 02 07 - Added support for Comon Anoda / Comon Catoda
 
 
 // System Configuration
 #define F_CPU 4000000					// Do not forget to set FUSEs to external XTAL osc with DIV/8 off and connect xtal
 
 // LED Display - Configuration
-#define LED_DIGITS_PORT		C			// Digits Port (common anodas)
-#define LED_DIGITS			4			// Number of display digits (1..8)
-#define LED_SEGMENTS_PORT	D			// Segments Port (catodas)
+#define LED_COMON_ANODA		0			// 0=Comon Catoda / 1=Comon Anoda
+#define LED_DIGITS_PORT		C			// Digits Port (common anodas or comon catodas)
+#define LED_DIGITS			6			// Number of display digits (1..8)
+#define LED_SEGMENTS_PORT	D			// Segments Port (catodas or anodas)
 #define LED_SEGMENTS		8			// Usualy 7 or 8 (bit 0 is A)
 #define TICKS_PER_SEC		500			// Number of interrupts per second ( >250 to look steady)
 
@@ -65,19 +67,34 @@
 unsigned char Convert(unsigned char Number)
 {
 	// 7 Segment Decoder Table
+	//    A
+	//   ---
+	// F|   | B
+	//  | G |
+	//   ---
+	// E|   | C
+	//  |   |
+	//   --- * H
+	//    D
 	const unsigned char Decoder[] = 
 	{
 	//	  HGFEDCBA
 		0b00111111,		// 0
-		0b00000011,		// 1
-		0b01101101,		// 2
-		0b01100111,		// 3
-		0b01010011,		// 4
-		0b01110110,		// 5
-		0b01111110,		// 6
-		0b00100011,		// 7
+		0b00000110,		// 1
+		0b01011011,		// 2
+		0b01001111,		// 3
+		0b01100110,		// 4
+		0b01101101,		// 5
+		0b01111101,		// 6
+		0b00000111,		// 7
 		0b01111111,		// 8
-		0b01110111		// 9
+		0b01101111,		// 9
+		0b01110111,		// A
+		0b01111100,		// b
+		0b00111001,		// C
+		0b01011100,		// d
+		0b01111001,		// E
+		0b01110000		// F
 	};
 
 	// Decoding Function
@@ -167,14 +184,27 @@ ISR(TIMER1_COMPA_vect)
 	case 2: Segments = Convert(Minutes);
 			break;
 	case 3: Segments = Convert(Minutes10);
+			break;
+	case 4: Segments = Convert(Hours);
+			break;
+	case 5: Segments = Convert(Hours10);
+			break;
 	}
-
-	// LED display update - All digits off
-	PORT(LED_DIGITS_PORT) &= ~LED_DIGITS_MASK;	// common anoda 0=off
-	// LED display update - New segments combination
-	PORT(LED_SEGMENTS_PORT) = (PORT(LED_SEGMENTS_PORT) & ~LED_SEGMENTS_MASK) | (~Segments & LED_SEGMENTS_MASK);
-	// LED display update - One digit on
-	PORT(LED_DIGITS_PORT) |= (LED_DIGITS_MASK & DisplayDigitMask); // (common anoda 1=on)
+	#if LED_COMON_ANODA==0
+		// LED display update - All digits off
+		PORT(LED_DIGITS_PORT) |= LED_DIGITS_MASK;	// common catoda 1=off
+		// LED display update - New segments combination
+		PORT(LED_SEGMENTS_PORT) = (PORT(LED_SEGMENTS_PORT) & ~LED_SEGMENTS_MASK) | (Segments & LED_SEGMENTS_MASK);
+		// LED display update - One digit on
+		PORT(LED_DIGITS_PORT) &= ~(LED_DIGITS_MASK & DisplayDigitMask); // (common anoda 0=on)
+	#else
+		// LED display update - All digits off
+		PORT(LED_DIGITS_PORT) &= ~LED_DIGITS_MASK;	// common anoda 0=off
+		// LED display update - New segments combination
+		PORT(LED_SEGMENTS_PORT) = (PORT(LED_SEGMENTS_PORT) & ~LED_SEGMENTS_MASK) | (~Segments & LED_SEGMENTS_MASK);
+		// LED display update - One digit on
+		PORT(LED_DIGITS_PORT) |= (LED_DIGITS_MASK & DisplayDigitMask); // (common anoda 1=on)
+	#endif
 }
 
 
