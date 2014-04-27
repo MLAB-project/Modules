@@ -18,9 +18,9 @@ unsigned int i;
 i=0;
  for(i=0;i<100;i++)
  {
-  output_low(BEEPER);
+  output_low(BEEP);
   delay_ms(1);
-  output_high(BEEPER);
+  output_low(BEEP);
   delay_ms(1);
  }
 }
