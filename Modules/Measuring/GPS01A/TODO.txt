@@ -2,6 +2,8 @@ Ve schema je spatne oznaceny SMA konektor. Je tam schematicka znacka pro Jack a 
 
 Jsou obecne dost mizerne provedeny popisky
 
+LED u timepulse musi byt urcite ZELENA, ne cervena. A to kvuli tomu, ze cervena led ma mensi ubytek napeti, tim vice zatezuje vystup o na vystupu pak neni dostatecny vykon pro spinani logickych vstupu dalsich obvodu. 
+
 --------------
 Mozna uz vyresene:
 
