@@ -131,7 +131,7 @@ def print_xml(p, sensor, res):
 
 
 def plot_results(block, measurements, flt_idx, flt_meas, cp0, np0, cp1, np1, sensor_ref):
-    """Plot calibration results in 2D graphs."""
+    """Plot calibration results."""
     plt.subplot(3, 1, 1)
     plt.plot(measurements[:, 0])
     plt.plot(measurements[:, 1])
@@ -139,8 +139,8 @@ def plot_results(block, measurements, flt_idx, flt_meas, cp0, np0, cp1, np1, sen
     plt.plot(flt_idx, flt_meas[:, 0], 'ro')
     plt.plot(flt_idx, flt_meas[:, 1], 'ro')
     plt.plot(flt_idx, flt_meas[:, 2], 'ro')
-    plt.xlabel('sample number')
-    plt.ylabel('miligauss')
+    plt.xlabel('time (s)')
+    plt.ylabel('ADC')
     plt.title('Raw sensors')
 
     plt.subplot(3, 2, 3)
@@ -149,16 +149,10 @@ def plot_results(block, measurements, flt_idx, flt_meas, cp0, np0, cp1, np1, sen
     plt.plot(cp0[:, 2])
     plt.plot(-sensor_ref*np.ones(len(flt_meas)))
     plt.plot(sensor_ref*np.ones(len(flt_meas)))
-    plt.xlabel('sample number')
-    plt.ylabel('-')
-    plt.title('First approximation')
 
     plt.subplot(3, 2, 4)
     plt.plot(np0)
     plt.plot(sensor_ref*np.ones(len(flt_meas)))
-    plt.xlabel('sample number')
-    plt.ylabel('-')
-    plt.title('magnitude')
 
     plt.subplot(3, 2, 5)
     plt.plot(cp1[:, 0])
@@ -166,16 +160,10 @@ def plot_results(block, measurements, flt_idx, flt_meas, cp0, np0, cp1, np1, sen
     plt.plot(cp1[:, 2])
     plt.plot(-sensor_ref*np.ones(len(flt_meas)))
     plt.plot(sensor_ref*np.ones(len(flt_meas)))
-    plt.xlabel('sample number')
-    plt.ylabel('-')
-    plt.title('separate axes')
 
     plt.subplot(3, 2, 6)
     plt.plot(np1)
     plt.plot(sensor_ref*np.ones(len(flt_meas)))
-    plt.xlabel('sample number')
-    plt.ylabel('-')
-    plt.title('magnitude')
 
     # if we want to have another plot we only draw the figure (non-blocking)
     # also in matplotlib before 1.0.0 there is only one call to show possible
