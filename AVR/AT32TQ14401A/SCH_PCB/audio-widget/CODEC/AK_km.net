@@ -1,0 +1,875 @@
+# EESchema Netlist Version 1.1 created  30/11/2009-20:16:46
+(
+ ( 4B1425D1 SM0805  C114 0.1u {Lib=C}
+  (    1 12.288MHz_I_2 )
+  (    2 GND )
+ )
+ ( 4A60B98A SM1206  C111 10u {Lib=C}
+  (    1 +5V )
+  (    2 GNDA )
+ )
+ ( 4A60AD02 SM1206  C109 10u {Lib=C}
+  (    1 +3.3V )
+  (    2 GND )
+ )
+ ( 4A60AC3E SM1206  C106 100u {Lib=C}
+  (    1 N-000028 )
+  (    2 GNDA )
+ )
+ ( 4A60AC36 SM1206  C105 100u {Lib=C}
+  (    1 N-000025 )
+  (    2 GNDA )
+ )
+ ( 4A60A9F3 SM1206  C102 100u {Lib=C}
+  (    1 GNDA )
+  (    2 N-000029 )
+ )
+ ( 4A60A9F0 SM1206  C103 100u {Lib=C}
+  (    1 GNDA )
+  (    2 N-000030 )
+ )
+ ( 4A608D1B SM0805  C113 0.1u {Lib=C}
+  (    1 +3.3V )
+  (    2 GND )
+ )
+ ( 4A608B7D FOX_HC73  X101 FXO_HC735-12.288 {Lib=FOX_HC73}
+  (    1 OSC_Disable_2 )
+  (    2 GND )
+  (    3 12.288MHz_I_2 )
+  (    4 +3.3V )
+ )
+ ( 4A42AEB7 SM0805  C110 0.1u {Lib=C}
+  (    1 +3.3V )
+  (    2 GND )
+ )
+ ( 4A42AE9D SM0805  C112 0.1u {Lib=C}
+  (    1 +5V )
+  (    2 GNDA )
+ )
+ ( 4A42ADDE SM0805  C107 0.22u {Lib=C}
+  (    1 N-000026 )
+  (    2 GNDA )
+ )
+ ( 4A42ADDA SM0805  C104 0.22u {Lib=C}
+  (    1 N-000025 )
+  (    2 N-000028 )
+ )
+ ( 4A42AD60 SM0805  C108 0.22u {Lib=C}
+  (    1 GNDA )
+  (    2 N-000027 )
+ )
+ ( 4A429E45 SM0805  C101 0.22u {Lib=C}
+  (    1 N-000029 )
+  (    2 N-000030 )
+ )
+ ( 4A3FAECC SO28  U100 AK5394A {Lib=AK5394A}
+  (    1 N-000025 )
+  (    2 N-000028 )
+  (    3 N-000026 )
+  (    4 AINL+_2 )
+  (    5 AINL-_2 )
+  (    6 AD_ZCAL_2 )
+  (    7 +3.3V )
+  (    8 GND )
+  (    9 AD_CAL_2 )
+  (   10 AD_RSTN_2 )
+  (   11 AD_SMODE2_2 )
+  (   12 AD_SMODE1_2 )
+  (   13 AD_LRCK_2 )
+  (   14 AD_SCLK_2 )
+  (   15 AD_SDATA_2 )
+  (   16 AD_FSYNC_2 )
+  (   17 12.288MHz_I_2 )
+  (   18 AD_DFS0_2 )
+  (   19 AD_HPFE_2 )
+  (   20 AD_DFS1_2 )
+  (   21 GNDA )
+  (   22 GNDA )
+  (   23 +5V )
+  (   24 AINR-_2 )
+  (   25 AINR+_2 )
+  (   26 N-000027 )
+  (   27 N-000030 )
+  (   28 N-000029 )
+ )
+ ( 4B12F104 SM0805  R101 10k {Lib=R}
+  (    1 +3.3V )
+  (    2 OSC_Disable_2 )
+ )
+ ( 4B12F0FB SM0805  R102 10k {Lib=R}
+  (    1 +3.3V )
+  (    2 AD_HPFE_2 )
+ )
+ ( 4B12F0F7 SM0805  R103 10k {Lib=R}
+  (    1 +3.3V )
+  (    2 AD_DFS1_2 )
+ )
+ ( 4B12F0F5 SM0805  R104 10k {Lib=R}
+  (    1 +3.3V )
+  (    2 AD_DFS0_2 )
+ )
+ ( 4B12F0F0 SM0805  R105 10k {Lib=R}
+  (    1 +3.3V )
+  (    2 AD_SMODE2_2 )
+ )
+ ( 4B12F0E3 SM0805  R106 10k {Lib=R}
+  (    1 +3.3V )
+  (    2 AD_SMODE1_2 )
+ )
+ ( 4B12EEF7 SIL-3  J101 CONN_3 {Lib=CONN_3}
+  (    1 LIN_3 )
+  (    2 GNDA )
+  (    3 RIN_3 )
+ )
+ ( 4B12EEE8 SIL-3  J102 CONN_3 {Lib=CONN_3}
+  (    1 +5V )
+  (    2 GND )
+  (    3 +3.3V )
+ )
+ ( 4B12EED7 PIN_ARRAY_6X2  JB100 CONN_6X2 {Lib=CONN_6X2}
+  (    1 OSC_Disable_2 )
+  (    2 GND )
+  (    3 AD_HPFE_2 )
+  (    4 GND )
+  (    5 AD_DFS1_2 )
+  (    6 GND )
+  (    7 AD_DFS0_2 )
+  (    8 GND )
+  (    9 AD_SMODE2_2 )
+  (   10 GND )
+  (   11 AD_SMODE1_2 )
+  (   12 GND )
+ )
+ ( 4B12EEC0 SIL-8  J100 CONN_8 {Lib=CONN_8}
+  (    1 AD_SDATA_2 )
+  (    2 AD_FSYNC_2 )
+  (    3 12.288MHz_I_2 )
+  (    4 AD_ZCAL_2 )
+  (    5 AD_CAL_2 )
+  (    6 AD_RSTN_2 )
+  (    7 AD_LRCK_2 )
+  (    8 AD_SCLK_2 )
+ )
+ ( 4A85B9A1 SSOP-16  U201 LT6232 {Lib=LT6232}
+  (    1  ? )
+  (    2  ? )
+  (    3  ? )
+  (    4 +5V )
+  (    5 2vBias_4 )
+  (    6 N-000044 )
+  (    7 N-000036 )
+  (   10 N-000037 )
+  (   11 N-000045 )
+  (   12 ABIAS+_4 )
+  (   13 GNDA )
+  (   14 ABIAS-_4 )
+  (   15 N-000042 )
+  (   16 N-000031 )
+ )
+ ( 4B12DE7B SSOP-16  U202 LT6232 {Lib=LT6232}
+  (    1 N-000046 )
+  (    2 N-000039 )
+  (    3 ABIAS-_4 )
+  (    4 +5V )
+  (    5 ABIAS+_4 )
+  (    6 N-000041 )
+  (    7 N-000038 )
+  (   10 N-000032 )
+  (   11 N-000040 )
+  (   12 2vBias_4 )
+  (   13 GNDA )
+  (   14  ? )
+  (   15  ? )
+  (   16  ? )
+ )
+ ( 4A85C69F SM1206  C203 68u {Lib=CAPAPOL}
+  (    1 N-000047 )
+  (    2 N-000036 )
+ )
+ ( 4A85C699 SM1206  C205 68u {Lib=CAPAPOL}
+  (    1 N-000043 )
+  (    2 N-000034 )
+ )
+ ( 4A85C68B SM1206  C208 68u {Lib=CAPAPOL}
+  (    1 N-000035 )
+  (    2 N-000032 )
+ )
+ ( 4A85C688 SM1206  C210 68u {Lib=CAPAPOL}
+  (    1 N-000048 )
+  (    2 N-000033 )
+ )
+ ( 4A85C669 SM1206  C218 68u {Lib=CAPAPOL}
+  (    1 N-000033 )
+  (    2 RIN_3 )
+ )
+ ( 4A85C62F SM1206  C217 68u {Lib=CAPAPOL}
+  (    1 N-000034 )
+  (    2 LIN_3 )
+ )
+ ( 4A85B9ED SM0805  C211 10u {Lib=C}
+  (    1 ABIAS+_4 )
+  (    2 GNDA )
+ )
+ ( 4A85B9EC SM0805  C212 100nF {Lib=C}
+  (    1 ABIAS+_4 )
+  (    2 GNDA )
+ )
+ ( 4A6B1FA1 SM0805  R218 20 {Lib=R}
+  (    1 ABIAS+_4 )
+  (    2 ABIAS-_4 )
+ )
+ ( 4A60CA50 SM0805  C215 10u {Lib=C}
+  (    1 2vBias_4 )
+  (    2 GNDA )
+ )
+ ( 4A60CA4B SM0805  C213 10u {Lib=C}
+  (    1 ABIAS-_4 )
+  (    2 GNDA )
+ )
+ ( 4A47B2FF SM0805  C214 100nF {Lib=C}
+  (    1 ABIAS-_4 )
+  (    2 GNDA )
+ )
+ ( 4A47B2FE SM0805  R219 1800 {Lib=R}
+  (    1 ABIAS-_4 )
+  (    2 2vBias_4 )
+ )
+ ( 4A4152B7 SM0805  C206 2.2p {Lib=C}
+  (    1 AINR+_2 )
+  (    2 AINR-_2 )
+ )
+ ( 4A4152B4 SM0805  R214 91 {Lib=R}
+  (    1 AINR-_2 )
+  (    2 N-000046 )
+ )
+ ( 4A4152B3 SM0805  C209 1nF {Lib=C}
+  (    1 N-000046 )
+  (    2 N-000039 )
+ )
+ ( 4A4152B2 SM0805  C207 1nF {Lib=C}
+  (    1 N-000038 )
+  (    2 N-000041 )
+ )
+ ( 4A4152B0 SM0805  R216 1.2k {Lib=R}
+  (    1 N-000039 )
+  (    2 N-000048 )
+ )
+ ( 4A4152AF SM0805  R211 1.2k {Lib=R}
+  (    1 N-000041 )
+  (    2 N-000035 )
+ )
+ ( 4A4152AE SM0805  R209 91 {Lib=R}
+  (    1 AINR+_2 )
+  (    2 N-000038 )
+ )
+ ( 4A4152AD SM0805  R215 1.2k {Lib=R}
+  (    1 AINR-_2 )
+  (    2 N-000039 )
+ )
+ ( 4A4152AC SM0805  R210 1.2k {Lib=R}
+  (    1 AINR+_2 )
+  (    2 N-000041 )
+ )
+ ( 4A4152AB SM0805  R212 1.2k {Lib=R}
+  (    1 N-000032 )
+  (    2 N-000040 )
+ )
+ ( 4A4152AA SM0805  R213 1.2k {Lib=R}
+  (    1 N-000040 )
+  (    2 N-000033 )
+ )
+ ( 4A41521D SM0805  C216 100nF {Lib=C}
+  (    1 2vBias_4 )
+  (    2 GNDA )
+ )
+ ( 4A415209 SM0805  R220 10k {Lib=R}
+  (    1 2vBias_4 )
+  (    2 GNDA )
+ )
+ ( 4A4151FC SM0805  R217 10k {Lib=R}
+  (    1 +5V )
+  (    2 ABIAS+_4 )
+ )
+ ( 4A3FDA2B SM0805  C201 2.2pf {Lib=C}
+  (    1 AINL+_2 )
+  (    2 AINL-_2 )
+ )
+ ( 4A3FD55B SM0805  R206 91 {Lib=R}
+  (    1 AINL-_2 )
+  (    2 N-000031 )
+ )
+ ( 4A3FD528 SM0805  C204 1nF {Lib=C}
+  (    1 N-000031 )
+  (    2 N-000042 )
+ )
+ ( 4A3FD4DD SM0805  C202 1nF {Lib=C}
+  (    1 N-000037 )
+  (    2 N-000045 )
+ )
+ ( 4A3FD367 SM0805  R208 1.2k {Lib=R}
+  (    1 N-000042 )
+  (    2 N-000043 )
+ )
+ ( 4A3FD358 SM0805  R203 1.2k {Lib=R}
+  (    1 N-000045 )
+  (    2 N-000047 )
+ )
+ ( 4A3FD333 SM0805  R201 91 {Lib=R}
+  (    1 AINL+_2 )
+  (    2 N-000037 )
+ )
+ ( 4A3FD323 SM0805  R207 1.2k {Lib=R}
+  (    1 AINL-_2 )
+  (    2 N-000042 )
+ )
+ ( 4A3FD316 SM0805  R202 1.2k {Lib=R}
+  (    1 AINL+_2 )
+  (    2 N-000045 )
+ )
+ ( 4A3FD303 SM0805  R204 1.2k {Lib=R}
+  (    1 N-000036 )
+  (    2 N-000044 )
+ )
+ ( 4A3FD2F0 SM0805  R205 1.2k {Lib=R}
+  (    1 N-000044 )
+  (    2 N-000034 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C114
+ SM*
+ C?
+ C1-1
+$endlist
+$component C111
+ SM*
+ C?
+ C1-1
+$endlist
+$component C109
+ SM*
+ C?
+ C1-1
+$endlist
+$component C106
+ SM*
+ C?
+ C1-1
+$endlist
+$component C105
+ SM*
+ C?
+ C1-1
+$endlist
+$component C102
+ SM*
+ C?
+ C1-1
+$endlist
+$component C103
+ SM*
+ C?
+ C1-1
+$endlist
+$component C113
+ SM*
+ C?
+ C1-1
+$endlist
+$component C110
+ SM*
+ C?
+ C1-1
+$endlist
+$component C112
+ SM*
+ C?
+ C1-1
+$endlist
+$component C107
+ SM*
+ C?
+ C1-1
+$endlist
+$component C104
+ SM*
+ C?
+ C1-1
+$endlist
+$component C108
+ SM*
+ C?
+ C1-1
+$endlist
+$component C101
+ SM*
+ C?
+ C1-1
+$endlist
+$component R101
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R102
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R103
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R104
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R105
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R106
+ R?
+ SM0603
+ SM0805
+$endlist
+$component C203
+ CP*
+ SM*
+$endlist
+$component C205
+ CP*
+ SM*
+$endlist
+$component C208
+ CP*
+ SM*
+$endlist
+$component C210
+ CP*
+ SM*
+$endlist
+$component C218
+ CP*
+ SM*
+$endlist
+$component C217
+ CP*
+ SM*
+$endlist
+$component C211
+ SM*
+ C?
+ C1-1
+$endlist
+$component C212
+ SM*
+ C?
+ C1-1
+$endlist
+$component R218
+ R?
+ SM0603
+ SM0805
+$endlist
+$component C215
+ SM*
+ C?
+ C1-1
+$endlist
+$component C213
+ SM*
+ C?
+ C1-1
+$endlist
+$component C214
+ SM*
+ C?
+ C1-1
+$endlist
+$component R219
+ R?
+ SM0603
+ SM0805
+$endlist
+$component C206
+ SM*
+ C?
+ C1-1
+$endlist
+$component R214
+ R?
+ SM0603
+ SM0805
+$endlist
+$component C209
+ SM*
+ C?
+ C1-1
+$endlist
+$component C207
+ SM*
+ C?
+ C1-1
+$endlist
+$component R216
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R211
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R209
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R215
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R210
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R212
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R213
+ R?
+ SM0603
+ SM0805
+$endlist
+$component C216
+ SM*
+ C?
+ C1-1
+$endlist
+$component R220
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R217
+ R?
+ SM0603
+ SM0805
+$endlist
+$component C201
+ SM*
+ C?
+ C1-1
+$endlist
+$component R206
+ R?
+ SM0603
+ SM0805
+$endlist
+$component C204
+ SM*
+ C?
+ C1-1
+$endlist
+$component C202
+ SM*
+ C?
+ C1-1
+$endlist
+$component R208
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R203
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R201
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R207
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R202
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R204
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R205
+ R?
+ SM0603
+ SM0805
+$endlist
+$endfootprintlist
+}
+{ Pin List by Nets
+Net 1 "GND"
+ C114 2
+ C109 2
+ C113 2
+ X101 2
+ C110 2
+ U100 8
+ J102 2
+ JB100 12
+ JB100 10
+ JB100 8
+ JB100 6
+ JB100 4
+ JB100 2
+Net 2 "GNDA"
+ C111 2
+ C106 2
+ C105 2
+ C102 1
+ C103 1
+ C112 2
+ C107 2
+ C108 1
+ U100 21
+ U100 22
+ J101 2
+ U201 13
+ C211 2
+ C212 2
+ U202 13
+ C215 2
+ C213 2
+ C214 2
+ C216 2
+ R220 2
+Net 3 "RIN_3"
+ J101 3
+ C218 2
+Net 4 "+3.3V"
+ C109 1
+ C113 1
+ X101 4
+ C110 1
+ U100 7
+ R101 1
+ R102 1
+ R103 1
+ R104 1
+ R105 1
+ R106 1
+ J102 3
+Net 5 "+5V"
+ C111 1
+ C112 1
+ U100 23
+ J102 1
+ U201 4
+ U202 4
+ R217 1
+Net 6 "AD_DFS1_2"
+ U100 20
+ R103 2
+ JB100 5
+Net 7 "AD_FSYNC_2"
+ U100 16
+ J100 2
+Net 8 "AD_SCLK_2"
+ U100 14
+ J100 8
+Net 9 "AD_SMODE1_2"
+ U100 12
+ R106 2
+ JB100 11
+Net 10 "AD_RSTN_2"
+ U100 10
+ J100 6
+Net 11 "AD_ZCAL_2"
+ U100 6
+ J100 4
+Net 12 "AINR+_2"
+ U100 25
+ C206 1
+ R209 1
+ R210 1
+Net 13 "AINL+_2"
+ U100 4
+ C201 1
+ R201 1
+ R202 1
+Net 14 "AINL-_2"
+ U100 5
+ C201 2
+ R206 1
+ R207 1
+Net 15 "AINR-_2"
+ U100 24
+ C206 2
+ R214 1
+ R215 1
+Net 16 "OSC_Disable_2"
+ X101 1
+ R101 2
+ JB100 1
+Net 17 "AD_CAL_2"
+ U100 9
+ J100 5
+Net 18 "AD_SMODE2_2"
+ U100 11
+ R105 2
+ JB100 9
+Net 19 "AD_LRCK_2"
+ U100 13
+ J100 7
+Net 20 "AD_SDATA_2"
+ U100 15
+ J100 1
+Net 21 "AD_HPFE_2"
+ U100 19
+ R102 2
+ JB100 3
+Net 22 "AD_DFS0_2"
+ U100 18
+ R104 2
+ JB100 7
+Net 23 "LIN_3"
+ J101 1
+ C217 2
+Net 24 "12.288MHz_I_2"
+ C114 1
+ X101 3
+ U100 17
+ J100 3
+Net 25 ""
+ C105 1
+ C104 1
+ U100 1
+Net 26 ""
+ C107 1
+ U100 3
+Net 27 ""
+ C108 2
+ U100 26
+Net 28 ""
+ C106 1
+ C104 2
+ U100 2
+Net 29 ""
+ C102 2
+ C101 1
+ U100 28
+Net 30 ""
+ C103 2
+ C101 2
+ U100 27
+Net 31 ""
+ U201 16
+ R206 2
+ C204 1
+Net 32 ""
+ C208 2
+ U202 10
+ R212 1
+Net 33 ""
+ C210 2
+ C218 1
+ R213 2
+Net 34 ""
+ C205 2
+ C217 1
+ R205 2
+Net 35 ""
+ C208 1
+ R211 2
+Net 36 ""
+ C203 2
+ U201 7
+ R204 1
+Net 37 ""
+ U201 10
+ C202 1
+ R201 2
+Net 38 ""
+ U202 7
+ C207 1
+ R209 2
+Net 39 ""
+ U202 2
+ C209 2
+ R216 1
+ R215 2
+Net 40 ""
+ U202 11
+ R212 2
+ R213 1
+Net 41 ""
+ U202 6
+ C207 2
+ R211 1
+ R210 2
+Net 42 ""
+ U201 15
+ C204 2
+ R208 1
+ R207 2
+Net 43 ""
+ C205 1
+ R208 2
+Net 44 ""
+ U201 6
+ R204 2
+ R205 1
+Net 45 ""
+ U201 11
+ C202 2
+ R203 1
+ R202 2
+Net 46 ""
+ U202 1
+ R214 2
+ C209 1
+Net 47 ""
+ C203 1
+ R203 2
+Net 48 ""
+ C210 1
+ R216 2
+Net 49 "2vBias_4"
+ U201 5
+ U202 12
+ C215 1
+ R219 2
+ C216 1
+ R220 1
+Net 52 "ABIAS+_4"
+ U201 12
+ C211 1
+ C212 1
+ U202 5
+ R218 1
+ R217 2
+Net 53 "ABIAS-_4"
+ U202 3
+ U201 14
+ R218 2
+ C213 1
+ C214 1
+ R219 1
+}
+#End

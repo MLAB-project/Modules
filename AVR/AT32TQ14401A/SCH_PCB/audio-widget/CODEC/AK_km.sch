@@ -1,0 +1,181 @@
+EESchema Schematic File Version 1
+LIBS:power,Avr32AK,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./AK_km.cache
+EELAYER 23  0
+EELAYER END
+$Descr A4 11700 8267
+Sheet 1 4
+Title "AK_km Analog Input Board"
+Date "30 nov 2009"
+Rev "V1.0"
+Comp "Weyr Associates"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	4500 3550 3650 3550
+Wire Wire Line
+	8950 5300 9650 5300
+Wire Wire Line
+	8950 4600 9050 4600
+Wire Wire Line
+	7950 5000 7000 5000
+Wire Wire Line
+	7000 5000 7000 5850
+Wire Wire Line
+	7000 5850 4050 5850
+Wire Wire Line
+	4050 5850 4050 3550
+Wire Wire Line
+	7950 5200 7300 5200
+Wire Wire Line
+	7300 5200 7300 6000
+Wire Wire Line
+	7300 6000 1700 6000
+Wire Wire Line
+	1700 6000 1700 4150
+Wire Wire Line
+	1700 4150 1950 4150
+Wire Wire Line
+	3950 2450 3950 3150
+Wire Wire Line
+	3950 2450 9050 2450
+Wire Wire Line
+	9050 2450 9050 4600
+Wire Wire Line
+	3800 3700 3800 2150
+Wire Wire Line
+	3800 2150 9400 2150
+Wire Wire Line
+	9400 2150 9400 4750
+Wire Wire Line
+	7950 4100 6700 4100
+Wire Wire Line
+	7950 3900 6700 3900
+Wire Wire Line
+	7950 3700 6700 3700
+Wire Wire Line
+	7950 3500 6700 3500
+Wire Wire Line
+	7950 3300 6700 3300
+Wire Wire Line
+	7950 3100 6700 3100
+Wire Wire Line
+	3650 4200 4500 4200
+Wire Wire Line
+	3650 4000 4500 4000
+Wire Wire Line
+	3950 3150 4500 3150
+Wire Wire Line
+	3650 3250 4500 3250
+Wire Wire Line
+	3650 3900 4500 3900
+Wire Wire Line
+	3650 4100 4500 4100
+Wire Wire Line
+	6700 4350 7950 4350
+Wire Wire Line
+	7950 3200 6700 3200
+Wire Wire Line
+	7950 3400 6700 3400
+Wire Wire Line
+	7950 3600 6700 3600
+Wire Wire Line
+	7950 3800 6700 3800
+Wire Wire Line
+	7950 4000 6700 4000
+Wire Wire Line
+	7950 4200 6700 4200
+Wire Wire Line
+	4500 3700 3650 3700
+Connection ~ 3800 3700
+Wire Wire Line
+	7950 5450 7650 5450
+Wire Wire Line
+	7650 5450 7650 6200
+Wire Wire Line
+	7650 6200 1450 6200
+Wire Wire Line
+	1450 6200 1450 3900
+Wire Wire Line
+	1450 3900 1950 3900
+Wire Wire Line
+	9650 5300 9650 1850
+Wire Wire Line
+	9650 1850 3700 1850
+Wire Wire Line
+	3700 1850 3700 3250
+Connection ~ 3700 3250
+Wire Wire Line
+	9400 4750 8950 4750
+Wire Wire Line
+	6700 4500 7950 4500
+Connection ~ 4050 3550
+$Sheet
+S 4500 2950 2200 2700
+F0 "CODEC" 60
+F1 "AK_km_CODEC.sch" 60
+F2 "Analog Ground" B L 4500 3550 60 
+F3 "AINL-" I L 4500 3900 60 
+F4 "AINL+" I L 4500 4000 60 
+F5 "AINR-" I L 4500 4100 60 
+F6 "AINR+" I L 4500 4200 60 
+F7 "AD_ZCAL" I R 6700 3100 60 
+F8 "AD_CAL" O R 6700 3200 60 
+F9 "AD_RSTN" I R 6700 3300 60 
+F10 "AD_SMODE2" I R 6700 3400 60 
+F11 "AD_SMODE1" I R 6700 3500 60 
+F12 "AD_LRCK" B R 6700 3600 60 
+F13 "AD_SCLK" B R 6700 3700 60 
+F14 "AD_SDATA" O R 6700 3800 60 
+F15 "AD_FSYNC" B R 6700 3900 60 
+F16 "AD_HPFE" I R 6700 4000 60 
+F17 "AD_DFS1" I R 6700 4100 60 
+F18 "AD_DFS0" I R 6700 4200 60 
+F19 "System Ground" B L 4500 3250 60 
+F20 "3.3v Power" I L 4500 3150 60 
+F21 "OSC_Disable" I R 6700 4350 60 
+F22 "5v Power" B L 4500 3700 60 
+F23 "12.288MHz_I" O R 6700 4500 60 
+$EndSheet
+$Sheet
+S 7950 2900 1000 2650
+F0 "Connectors" 60
+F1 "AK_km_Connectors.sch" 60
+F2 "SDTA" I L 7950 3800 60 
+F3 "CAL" I L 7950 3200 60 
+F4 "RSTN" O L 7950 3300 60 
+F5 "SMD1" O L 7950 3500 60 
+F6 "SMD2" O L 7950 3400 60 
+F7 "LRCK" B L 7950 3600 60 
+F8 "ZCAL" O L 7950 3100 60 
+F9 "FSYNC" B L 7950 3900 60 
+F10 "HPFE" O L 7950 4000 60 
+F11 "DFS1" O L 7950 4100 60 
+F12 "DFS0" O L 7950 4200 60 
+F13 "OSC_Disable" O L 7950 4350 60 
+F14 "3.3v Power" B R 8950 4600 60 
+F15 "5v Power" B R 8950 4750 60 
+F16 "LIN" O L 7950 5450 60 
+F17 "RIN" O L 7950 5200 60 
+F18 "Analog Ground" B L 7950 5000 60 
+F19 "System Ground" B R 8950 5300 60 
+F20 "12.288MHz_I" I L 7950 4500 60 
+F21 "SCLK" B L 7950 3700 60 
+$EndSheet
+$Sheet
+S 1950 2950 1700 1450
+F0 "AnalogInput" 60
+F1 "AK_km_AnalogInput.sch" 60
+F2 "Analog Ground" B R 3650 3550 60 
+F3 "RIN1-" O R 3650 4100 60 
+F4 "RIN1+" O R 3650 4200 60 
+F5 "LIN1-" O R 3650 3900 60 
+F6 "LIN1+" O R 3650 4000 60 
+F7 "5v Power" B R 3650 3700 60 
+F8 "System Ground" B R 3650 3250 60 
+F9 "LIN" I L 1950 3900 60 
+F10 "RIN" I L 1950 4150 60 
+$EndSheet
+$EndSCHEMATC
