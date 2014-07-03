@@ -1,0 +1,395 @@
+EESchema Schematic File Version 1
+LIBS:power,./usb-miniab,Avr32AK,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./UCA3_km.cache
+EELAYER 23  0
+EELAYER END
+$Descr A4 11700 8267
+Sheet 4 4
+Title "SDR-Widget-Lite CPU"
+Date "24 dec 2009"
+Rev "V1.0"
+Comp "Weyr Associates"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Connection ~ 3900 4600
+Wire Wire Line
+	7600 4600 3900 4600
+Connection ~ 9800 1300
+Wire Wire Line
+	9800 1000 9800 1300
+Connection ~ 5500 4250
+Wire Wire Line
+	5500 3950 5500 4250
+Wire Wire Line
+	6300 5900 6300 5800
+Wire Wire Line
+	10100 1150 9250 1150
+Wire Wire Line
+	9250 1150 9250 800 
+Connection ~ 7000 3350
+Wire Wire Line
+	6000 3350 7700 3350
+Wire Wire Line
+	7700 3350 7700 900 
+Wire Wire Line
+	7700 900  3950 900 
+Wire Wire Line
+	4450 800  4450 1100
+Wire Wire Line
+	4450 1100 3950 1100
+Connection ~ 4400 3350
+Wire Wire Line
+	4400 3350 4400 3850
+Wire Wire Line
+	3850 3250 3900 3250
+Wire Wire Line
+	3900 3250 3900 5450
+Wire Wire Line
+	3900 5450 4300 5450
+Connection ~ 7000 4250
+Wire Wire Line
+	7200 4400 7200 4250
+Wire Wire Line
+	7200 4250 4000 4250
+Wire Wire Line
+	6500 2000 6500 1600
+Wire Wire Line
+	6450 3850 6450 3600
+Wire Wire Line
+	6450 3600 6000 3600
+Connection ~ 6450 4250
+Connection ~ 4400 4250
+Wire Wire Line
+	4000 4250 4000 2400
+Connection ~ 4450 2400
+Wire Wire Line
+	3850 3450 4000 3450
+Connection ~ 5550 2400
+Wire Wire Line
+	5550 2400 5550 2150
+Connection ~ 4650 3350
+Wire Wire Line
+	4650 3350 4650 3600
+Wire Wire Line
+	4650 3600 5050 3600
+Connection ~ 4150 3350
+Wire Wire Line
+	5050 3350 3850 3350
+Wire Wire Line
+	6800 5600 5050 5600
+Connection ~ 5350 5450
+Wire Wire Line
+	5350 5250 5350 5450
+Connection ~ 4300 5700
+Wire Wire Line
+	6150 5250 6300 5250
+Wire Wire Line
+	6300 5800 6150 5800
+Wire Wire Line
+	5050 5700 5050 5850
+Wire Wire Line
+	5350 5800 5350 5600
+Connection ~ 5350 5600
+Wire Wire Line
+	4150 1600 4150 3350
+Wire Wire Line
+	4650 1600 4650 1850
+Connection ~ 4650 1600
+Wire Wire Line
+	5400 2400 5400 2150
+Connection ~ 5400 2400
+Connection ~ 4000 3450
+Wire Wire Line
+	7000 3850 7000 3350
+Wire Wire Line
+	4000 2400 6750 2400
+Wire Wire Line
+	6750 2400 6750 2500
+Connection ~ 6500 2400
+Wire Wire Line
+	5900 1600 6750 1600
+Wire Wire Line
+	6750 1600 6750 1500
+Connection ~ 6500 1600
+Wire Wire Line
+	4450 1600 4450 2000
+Connection ~ 4450 1600
+Wire Wire Line
+	4650 1850 5050 1850
+Wire Wire Line
+	3950 1000 4400 1000
+Wire Wire Line
+	4400 1000 4400 1200
+Wire Wire Line
+	3200 1600 5050 1600
+Connection ~ 4150 1600
+Wire Wire Line
+	10100 1300 9650 1300
+Wire Wire Line
+	9650 1300 9650 1450
+Wire Wire Line
+	5050 5450 6800 5450
+Wire Wire Line
+	6300 5250 6300 5350
+Wire Wire Line
+	3450 1500 3450 1600
+Connection ~ 3450 1600
+Wire Wire Line
+	4300 5700 4300 5850
+Wire Wire Line
+	4300 5600 3600 5600
+Text GLabel 7600 4600 2    60   Output
+USB_Power
+$Comp
+L USB-MINIAB J300
+U 1 1 4B1C2B91
+P 4700 5250
+F 0 "J300" H 4650 5650 60  0000 C C
+F 1 "USB-MINIAB" V 4450 5400 60  0000 C C
+F 2 "USB-MINIAB" H 4750 5750 60  0000 C C
+	1    4700 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG053
+U 1 1 4B1BF9E0
+P 9800 1000
+F 0 "#FLG053" H 9800 1270 30  0001 C C
+F 1 "PWR_FLAG" H 9800 1230 30  0000 C C
+	1    9800 1000
+	1    0    0    -1  
+$EndComp
+Text GLabel 3600 5600 0    60   Input
+USBID
+$Comp
+L TPS73633 U400
+U 1 1 4B1BF47B
+P 5500 1700
+F 0 "U400" H 5300 2000 60  0000 C C
+F 1 "TPS73633" H 5950 2000 60  0000 C C
+F 2 "SOT223_5" H 5400 2100 60  0000 C C
+	1    5500 1700
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5900 1850
+$Comp
+L GND #PWR054
+U 1 1 4B187905
+P 6300 5350
+F 0 "#PWR054" H 6300 5350 30  0001 C C
+F 1 "GND" H 6300 5280 30  0001 C C
+	1    6300 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR055
+U 1 1 4B1878B8
+P 4300 5850
+F 0 "#PWR055" H 4300 5850 30  0001 C C
+F 1 "GND" H 4300 5780 30  0001 C C
+	1    4300 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR056
+U 1 1 4B1878B5
+P 5050 5850
+F 0 "#PWR056" H 5050 5850 30  0001 C C
+F 1 "GND" H 5050 5780 30  0001 C C
+	1    5050 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR057
+U 1 1 4B1878B0
+P 6300 5900
+F 0 "#PWR057" H 6300 5900 30  0001 C C
+F 1 "GND" H 6300 5830 30  0001 C C
+	1    6300 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG058
+U 1 1 4B1810A5
+P 3450 1500
+F 0 "#FLG058" H 3450 1770 30  0001 C C
+F 1 "PWR_FLAG" H 3450 1730 30  0000 C C
+	1    3450 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR059
+U 1 1 4B181023
+P 9650 1450
+F 0 "#PWR059" H 9650 1450 30  0001 C C
+F 1 "GND" H 9650 1380 30  0001 C C
+	1    9650 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR060
+U 1 1 4B18060B
+P 9250 800
+F 0 "#PWR060" H 9250 760 30  0001 C C
+F 1 "+3.3V" H 9250 910 30  0000 C C
+	1    9250 800 
+	1    0    0    -1  
+$EndComp
+Text GLabel 10100 1150 2    60   BiDi
+3.3V Power
+Text GLabel 10100 1300 2    60   BiDi
+System Ground
+Text GLabel 3200 1600 0    60   BiDi
+5v UNREG
+$Comp
+L GND #PWR061
+U 1 1 4B18046F
+P 4400 1200
+F 0 "#PWR061" H 4400 1200 30  0001 C C
+F 1 "GND" H 4400 1130 30  0001 C C
+	1    4400 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR062
+U 1 1 4B180469
+P 4450 800
+F 0 "#PWR062" H 4450 760 30  0001 C C
+F 1 "+3.3V" H 4450 910 30  0000 C C
+	1    4450 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_3 J311
+U 1 1 4B180458
+P 3600 1000
+F 0 "J311" V 3550 1000 50  0000 C C
+F 1 "CONN_3" V 3650 1000 40  0000 C C
+F 2 "SIL-3" V 3650 1100 60  0000 C C
+	1    3600 1000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR063
+U 1 1 4B17D41A
+P 6750 2500
+F 0 "#PWR063" H 6750 2500 30  0001 C C
+F 1 "GND" H 6750 2430 30  0001 C C
+	1    6750 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR064
+U 1 1 4B17D411
+P 7200 4400
+F 0 "#PWR064" H 7200 4400 30  0001 C C
+F 1 "GND" H 7200 4330 30  0001 C C
+	1    7200 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR065
+U 1 1 4B17D2AC
+P 6750 1500
+F 0 "#PWR065" H 6750 1460 30  0001 C C
+F 1 "+3.3V" H 6750 1610 30  0000 C C
+	1    6750 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C435
+U 1 1 4B17D29C
+P 7000 4050
+F 0 "C435" H 7050 4150 50  0000 L C
+F 1 "2.2uf" H 7050 3950 50  0000 L C
+F 2 "SM0805" H 7150 4250 60  0000 C C
+	1    7000 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C434
+U 1 1 4B17D299
+P 6450 4050
+F 0 "C434" H 6500 4150 50  0000 L C
+F 1 "10n" H 6500 3950 50  0000 L C
+F 2 "SM0805" H 6600 4250 60  0000 C C
+	1    6450 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C433
+U 1 1 4B17D297
+P 4400 4050
+F 0 "C433" H 4450 4150 50  0000 L C
+F 1 "100n" H 4450 3950 50  0000 L C
+F 2 "SM0805" H 4550 4250 60  0000 C C
+	1    4400 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C432
+U 1 1 4B17D291
+P 6500 2200
+F 0 "C432" H 6550 2300 50  0000 L C
+F 1 "2.2uf" H 6550 2100 50  0000 L C
+F 2 "SM0805" H 6650 2400 60  0000 C C
+	1    6500 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C430
+U 1 1 4B17D28A
+P 4450 2200
+F 0 "C430" H 4500 2300 50  0000 L C
+F 1 "100n" H 4500 2100 50  0000 L C
+F 2 "SM0805" H 4600 2400 60  0000 C C
+	1    4450 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_3 J310
+U 1 1 4B17D269
+P 3500 3350
+F 0 "J310" V 3450 3350 50  0000 C C
+F 1 "CONN_3" V 3550 3350 40  0000 C C
+F 2 "SIL-3" V 3550 3450 60  0000 C C
+	1    3500 3350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L TPS793475 U401
+U 1 1 4B15C32B
+P 5550 3500
+F 0 "U401" H 5350 3800 60  0000 C C
+F 1 "TPS793475" H 5900 3800 60  0000 C C
+F 2 "SOT23-5" H 5450 3900 60  0000 C C
+	1    5550 3500
+	1    0    0    -1  
+$EndComp
+Text GLabel 6800 5600 2    60   BiDi
+USBD-
+Text GLabel 6800 5450 2    60   BiDi
+USBD+
+$Comp
+L ESD ESD1
+U 1 1 4A3B5FA8
+P 5750 5800
+F 0 "ESD1" H 5750 5700 60  0000 C C
+F 1 "ESD" H 6000 5850 60  0000 C C
+F 2 "SM0603" H 5850 5800 60  0000 C C
+	1    5750 5800
+	1    0    0    1   
+$EndComp
+$Comp
+L ESD ESD2
+U 1 1 4A3B5F94
+P 5750 5250
+F 0 "ESD2" H 5750 5150 60  0000 C C
+F 1 "ESD" H 6000 5300 60  0000 C C
+F 2 "SM0603" H 5850 5250 60  0000 C C
+	1    5750 5250
+	1    0    0    1   
+$EndComp
+$EndSCHEMATC
