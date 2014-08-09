@@ -1,4 +1,4 @@
-update=Sat 12 Jul 2014 17:20:48 CEST
+update=Wed 16 Jul 2014 00:51:40 CEST
 version=1
 last_client=eeschema
 [cvpcb]
@@ -87,3 +87,5 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=regul
+LibName31=/home/kaklik/git/kicad-library_MLAB/symbols/Jumpers
+LibName32=/home/kaklik/git/kicad-library_MLAB/symbols/konektory
