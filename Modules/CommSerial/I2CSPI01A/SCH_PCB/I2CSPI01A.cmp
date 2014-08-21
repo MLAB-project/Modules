@@ -1,0 +1,129 @@
+Cmp-Mod V01 Created by Cvpcb (2014-08-19 BZR 5083)-product   date = 21.8.2014 10:04:43
+
+BeginCmp
+TimeStamp = /53F4A074;
+Reference = C1;
+ValeurCmp = 100nF;
+IdModule  = SMD_Packages:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F4A083;
+Reference = C2;
+ValeurCmp = 10uF;
+IdModule  = SMD_Packages:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F4A0C0;
+Reference = D1;
+ValeurCmp = ZENER;
+IdModule  = Diodes_SMD:Diode-MiniMELF_Handsoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F4A312;
+Reference = J1;
+ValeurCmp = JUMP_5X2;
+IdModule  = Pin_Header_Straight_1x03:Pin_Header_Straight_2x05;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F4A6F0;
+Reference = J2;
+ValeurCmp = CONN1_2;
+IdModule  = Pin_Header_Straight_1x03:Pin_Header_Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F4A857;
+Reference = J3;
+ValeurCmp = JUMP_5X2;
+IdModule  = Pin_Header_Straight_1x03:Pin_Header_Straight_2x05;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F4A0E0;
+Reference = J4;
+ValeurCmp = JUMP_3X2_CONN;
+IdModule  = Pin_Header_Straight_1x03:Pin_Header_Straight_2x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F4AC0B;
+Reference = J5;
+ValeurCmp = JUMP_7X2;
+IdModule  = Pin_Header_Straight_1x03:Pin_Header_Straight_2x07;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F431F1;
+Reference = R1;
+ValeurCmp = R;
+IdModule  = SMD_Packages:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F43200;
+Reference = R2;
+ValeurCmp = R;
+IdModule  = SMD_Packages:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F583DD;
+Reference = R3;
+ValeurCmp = R;
+IdModule  = SMD_Packages:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F45444;
+Reference = R4;
+ValeurCmp = R;
+IdModule  = SMD_Packages:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F45471;
+Reference = R5;
+ValeurCmp = R;
+IdModule  = SMD_Packages:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F45453;
+Reference = R6;
+ValeurCmp = R;
+IdModule  = SMD_Packages:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F45480;
+Reference = R7;
+ValeurCmp = R;
+IdModule  = SMD_Packages:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F45462;
+Reference = R8;
+ValeurCmp = R;
+IdModule  = SMD_Packages:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F4548F;
+Reference = R9;
+ValeurCmp = R;
+IdModule  = SMD_Packages:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F43DC6;
+Reference = U1;
+ValeurCmp = SC18IS602B;
+IdModule  = SMD_Packages:TSSOP-16;
+EndCmp
+
+EndListe
