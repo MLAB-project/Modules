@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2014-03-19 BZR 4756)-product date = Mon 07 Jul 2014 23:35:03 CEST
+Cmp-Mod V01 Created by Cvpcb (2014-jul-16 BZR unknown)-product   date = St 8. říjen 2014, 11:11:52 CEST
 
 BeginCmp
 TimeStamp = /4AC4586E;
@@ -200,14 +200,14 @@ BeginCmp
 TimeStamp = /53BB093C/5324F075;
 Reference = C29;
 ValeurCmp = 10uF;
-IdModule  = Capacitors_SMD:c_tant_B;
+IdModule  = Capacitors_Tantalum_SMD:TantalC_SizeB_EIA-3528_Reflow;
 EndCmp
 
 BeginCmp
 TimeStamp = /53BB093C/5324F061;
 Reference = C30;
 ValeurCmp = 10uF;
-IdModule  = Capacitors_SMD:c_tant_B;
+IdModule  = Capacitors_Tantalum_SMD:TantalC_SizeB_EIA-3528_Reflow;
 EndCmp
 
 BeginCmp
@@ -1023,34 +1023,6 @@ IdModule  = SMD_Packages:SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /53BB093C/53272432;
-Reference = P1;
-ValeurCmp = CONN_1;
-IdModule  = MLAB_Mechanical:MountingHole_3mm;
-EndCmp
-
-BeginCmp
-TimeStamp = /53BB093C/53272446;
-Reference = P2;
-ValeurCmp = CONN_1;
-IdModule  = MLAB_Mechanical:MountingHole_3mm;
-EndCmp
-
-BeginCmp
-TimeStamp = /53BB093C/5327245A;
-Reference = P3;
-ValeurCmp = CONN_1;
-IdModule  = MLAB_Mechanical:MountingHole_3mm;
-EndCmp
-
-BeginCmp
-TimeStamp = /53BB093C/5327246E;
-Reference = P4;
-ValeurCmp = CONN_1;
-IdModule  = MLAB_Mechanical:MountingHole_3mm;
-EndCmp
-
-BeginCmp
 TimeStamp = /4B16A672;
 Reference = R1;
 ValeurCmp = 10k;
@@ -1114,14 +1086,14 @@ IdModule  = SMD_Packages:TQFP144;
 EndCmp
 
 BeginCmp
-TimeStamp = /53BB093C/5324EDA7;
+TimeStamp = /53BB093C/54355D61;
 Reference = U2;
-ValeurCmp = NCP1117ST18T3G;
+ValeurCmp = NCP1117ST33T3G;
 IdModule  = SMD_Packages:SOT223;
 EndCmp
 
 BeginCmp
-TimeStamp = /4B1E9731;
+TimeStamp = /53BE60D1;
 Reference = X1;
 ValeurCmp = 12MHz;
 IdModule  = Crystals:Crystal_HC49-U_Vertical;
