@@ -31,7 +31,7 @@ LIBS:atmel
 LIBS:Jumpers
 LIBS:regul
 LIBS:AT32TQ14401A-cache
-EELAYER 25 0
+EELAYER 24 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -1240,7 +1240,7 @@ NoConn ~ 6100 5050
 Wire Wire Line
 	6350 5150 6700 5150
 Wire Wire Line
-	6700 5150 6700 4750
+	6700 4750 6700 5300
 Wire Wire Line
 	6700 4750 6350 4750
 Wire Wire Line
@@ -2854,4 +2854,7 @@ Wire Wire Line
 Wire Wire Line
 	3900 6400 3950 6400
 Connection ~ 4500 6400
+Wire Wire Line
+	7100 5300 6700 5300
+Connection ~ 6700 5150
 $EndSCHEMATC
