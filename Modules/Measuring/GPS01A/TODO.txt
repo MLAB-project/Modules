@@ -22,6 +22,10 @@ Tak ne, ten nepripajenej konektor tam byl, ale nebyl to ten problém. Pouzita tl
 
 Po pul roce sporadickeho pouzivani se zalohovaci baterka vybila na 1V
 Ono to mozna chtelo dat tam CR2032, když je ten modul tak velkej.
+Kazdopadne v pripojeni baterky nema co delat R5.. V datasheetu explicitne pisou, ze: 
+Avoid high resistance on the on the V_BCKP line: During the switch from main supply to backup
+supply a short current adjustment peak can cause high voltage drop on the pin and possible
+malfunctions.
 
 
 Asi zbytecne velke diry na SMA konektor.
