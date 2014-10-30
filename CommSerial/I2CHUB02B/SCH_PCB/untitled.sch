@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -1407,14 +1407,14 @@ W = angled&lt;p&gt;
 <junction x="166.37" y="-158.75"/>
 </segment>
 </net>
-<net name="N$20" class="0">
+<net name="A0" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="A0"/>
 <wire x1="168.91" y1="-148.59" x2="142.24" y2="-148.59" width="0.1524" layer="91"/>
 <pinref part="SW2" gate="-4" pin="P$1"/>
 </segment>
 </net>
-<net name="N$22" class="0">
+<net name="A1" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="A1"/>
 <wire x1="168.91" y1="-153.67" x2="149.86" y2="-153.67" width="0.1524" layer="91"/>
