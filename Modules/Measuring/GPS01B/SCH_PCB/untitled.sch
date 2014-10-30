@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -51,7 +51,7 @@
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
@@ -453,19 +453,15 @@ challenging environments.&lt;/p&gt;</description>
 <text x="-12" y="-4.7" size="2.1844" layer="94" rot="R90">USB B</text>
 </symbol>
 <symbol name="SMA">
-<wire x1="2.54" y1="2.54" x2="-5.08" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="-5.08" y1="2.54" x2="-5.08" y2="1.27" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="-2.54" x2="0" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="0" y1="-2.54" x2="-1.778" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="-1.778" y1="-2.54" x2="-2.54" y2="-1.016" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="-1.016" x2="-3.302" y2="-2.54" width="0.1524" layer="94"/>
 <text x="-5.08" y="5.08" size="1.778" layer="95">&gt;NAME</text>
 <text x="-5.08" y="-6.35" size="1.778" layer="96">SMA</text>
-<rectangle x1="-5.842" y1="-2.54" x2="-4.318" y2="1.27" layer="94"/>
 <pin name="+" x="5.08" y="2.54" visible="off" length="short" direction="pas" rot="R180"/>
 <pin name="-" x="5.08" y="-2.54" visible="off" length="short" direction="pas" rot="R180"/>
-<text x="2.54" y="2.54" size="1.778" layer="94">+</text>
-<text x="2.54" y="-2.54" size="1.778" layer="94">-</text>
+<wire x1="2.54" y1="2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
+<circle x="-1.27" y="2.54" radius="1.27" width="0.254" layer="94"/>
+<circle x="-1.27" y="2.54" radius="3.5921" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-1.27" x2="-1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1391,7 +1387,6 @@ W = angled&lt;p&gt;
 <part name="R4" library="moje_R" deviceset="R0805" device="" value="10"/>
 <part name="SV4" library="moje_hrebinky" deviceset="MA03-1" device=""/>
 <part name="GND14" library="moje" deviceset="GND" device=""/>
-<part name="R5" library="moje_R" deviceset="R0805" device="" value="100"/>
 <part name="GND15" library="moje" deviceset="GND" device=""/>
 <part name="SV5" library="moje_hrebinky" deviceset="MA02-2" device=""/>
 <part name="U$12" library="moje_schz" deviceset="+3.3V" device=""/>
@@ -1514,7 +1509,9 @@ W = angled&lt;p&gt;
 <instance part="U$4" gate="G$1" x="137.16" y="160.02"/>
 <instance part="U$3" gate="G$1" x="52.07" y="116.84" rot="R270"/>
 <instance part="U$8" gate="G$1" x="55.88" y="165.1" rot="R270"/>
-<instance part="SW2" gate="A" x="53.34" y="50.8"/>
+<instance part="SW2" gate="A" x="53.34" y="50.8" smashed="yes">
+<attribute name="NAME" x="48.26" y="50.8" size="1.778" layer="95" rot="R90"/>
+</instance>
 <instance part="GND12" gate="G$1" x="58.42" y="46.99"/>
 <instance part="GND13" gate="G$1" x="104.14" y="66.04"/>
 <instance part="R4" gate="G$1" x="67.31" y="45.72"/>
@@ -1522,7 +1519,6 @@ W = angled&lt;p&gt;
 <instance part="SV4" gate="-2" x="62.23" y="67.31" rot="R270"/>
 <instance part="SV4" gate="-3" x="69.85" y="67.31" rot="R270"/>
 <instance part="GND14" gate="G$1" x="55.88" y="63.5"/>
-<instance part="R5" gate="G$1" x="153.67" y="55.88"/>
 <instance part="GND15" gate="G$1" x="158.75" y="33.02"/>
 <instance part="SV5" gate="-1" x="137.16" y="40.64"/>
 <instance part="SV5" gate="-2" x="143.51" y="40.64" rot="R180"/>
@@ -1922,11 +1918,15 @@ W = angled&lt;p&gt;
 </net>
 <net name="N$15" class="0">
 <segment>
-<pinref part="R5" gate="G$1" pin="2"/>
 <pinref part="SW1" gate="G$1" pin="+"/>
-<wire x1="158.75" y1="55.88" x2="158.75" y2="52.07" width="0.1524" layer="91"/>
+<wire x1="158.75" y1="58.42" x2="158.75" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="SV3" gate="-1" pin="P$1"/>
-<wire x1="158.75" y1="55.88" x2="158.75" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="158.75" y1="55.88" x2="158.75" y2="52.07" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="55.88" x2="158.75" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="V_BCKP"/>
+<wire x1="132.08" y1="48.26" x2="139.7" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="48.26" x2="139.7" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="55.88" x2="139.7" y2="55.88" width="0.1524" layer="91"/>
 <junction x="158.75" y="55.88"/>
 </segment>
 </net>
@@ -1945,15 +1945,6 @@ W = angled&lt;p&gt;
 <pinref part="U2" gate="G$1" pin="CFG_COM1/NC"/>
 <pinref part="SV5" gate="-1" pin="K"/>
 <wire x1="132.08" y1="43.18" x2="132.08" y2="40.64" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$14" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="V_BCKP"/>
-<wire x1="132.08" y1="48.26" x2="139.7" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="48.26" x2="139.7" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="139.7" y1="55.88" x2="148.59" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SCL" class="0">
