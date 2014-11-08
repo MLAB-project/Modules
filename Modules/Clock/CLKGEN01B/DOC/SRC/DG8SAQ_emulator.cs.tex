@@ -44,22 +44,24 @@ Fázový jitter  & $<$ 0,3ps & Pro obvody řady Si570 z diferenciálním výstup
 \end{table}
 
 \section{Popis konstrukce}
-Zařízení vychází z velmi rozšířené metody ovládání čipu Si570 pomocí ATtiny, tak jak byla navžena v . Tento postup funguje, ale díky nekompatibilním napěťovým úrovním na USB a na ATtiny, může způsobovat nežádoucí rušení. Navíc v některých moderních implementacích USB 3.0 může být jeho použití rizikové pro host zařízení v počítači. Zde je tedy popsán technicky mnohem čistčí způsob vyhovující standardu USB při zachování všech funkcí původní konstrukce.
-Navíc je zde i korektně bezodrazově vyšešen vysokofrekvenční výstup z čipu Si570. 
+Zařízení vychází z velmi rozšířené metody ovládání čipu Si570 pomocí ATtiny, tak jak byla navržena v \cite{Si570board}. Tento postup funguje, ale díky nekompatibilním napěťovým úrovním na USB a na ATtiny, může způsobovat nežádoucí chování. Navíc v některých moderních implementacích USB 3.0 může být jeho použití rizikové pro rozhraní v počítači. Zde je proto popsán technicky mnohem čistší způsob vyhovující standardu USB při zachování všech funkcí původní konstrukce.
+Navíc je zde i korektně bezodrazově ošetřen vysokofrekvenční výstup z čipu Si570. 
+
+V nových zařízeních MLAB jako je například stanice RMDS02 je však tento způsob ovládání modulu nahrazen kombinací modulu USBI2C \cite{USBI2C} s knihovnou pymlab\cite{pymlab}. Tento způsob ovládání odstraňuje některé technické problémy vycházející z principu ovládání Si570 přes PIC. (dochází nejčastěji ke ztrátě kmitočtové kalibrace syntezátoru). Při přímém ovládání obvodu Si570 přes I2C tyto komplikace nevznikají. 
 
 \subsection{Zapojení}
 Zapojení spočívá pouze v propojení modulu PIC18F4550v01A s modulem CLKGEN01B. Toto je realizováno jedním napájecím kablíkem, který propojuje napájení modulu připojeného na USB s 5V napájením CLKGEN01B (Modul si nižší napájecí napětí stabiluzuje sám). V zapojení jsou ještě dva datové kablíky, které přímo propojují I2C sběrnici.
-Na modulu PIC18F4550v01A je jako napájení jumperem zvoleno USB. Použitý krystal je 20 MHz
+Na modulu PIC18F4550v01A je jako napájení jumperem zvoleno USB. Použitý krystal je 20 MHz, což vyžaduje v modulu osazené u oscilátoru kondenzátory s kapacitou 12pF.
 
 \subsection{Odrušení}
 
-Odrušení je třeba provádět zvláště pečlivě, pracujeme-li v prostředí, kde by mohlo vadit elektromagnetické vyzařování, jako je například radioastronomie. Nejkritičtějším místem je v tomto případě připojení počítače, který je často sám o sobě silným zdrojem rušení. USB kabel je tedy vhodné volit dostatečně stíněný a nejlépe s odrušovacími ferity na obou koncích. Počítač by sám o sobě měl do USB injektovat co nejmenší množství šumu, proto je dobré použít místo notebooku spíše stolní počítač s kvalitním zdrojem a kovovou bednou. Samozřejmost je mít moduly přišroubované na dostatečně vodivé podložce tedy nejlépe ALBASE.  
+Odrušení je třeba provádět zvláště pečlivě, pracujeme-li v prostředí, kde by mohlo vadit elektromagnetické vyzařování, jako jsou například radioastronomická pracoviště. Nejkritičtějším místem je v tomto případě připojení počítače, který je často sám o sobě silným zdrojem rušení. USB kabel je tedy vhodné volit dostatečně stíněný a nejlépe s odrušovacími ferity na obou koncích. Počítač by sám o sobě měl do USB vnášet co nejmenší množství šumu, proto je dobré použít místo notebooku spíše stolní počítač s kvalitním zdrojem a kovovou bednou. Samozřejmost je mít moduly přišroubované na dostatečně vodivé podložce tedy nejlépe ALBASE.  
 
 \section{Nastavení testování}
-Při připojení k napájení generuje CLKGEN01B frekvenci nastavenou při výrobě v Silicon Labs. Pro možnost ladění je potřeba do PIC18F4550 nahrát firmware, který naleznete na . Při úspěšném nahrání firmwaru programátorem například PICprogUSB02A, se sestava připojením k počítači ohlásí jako nové USB zařízení a bude vyžadovat driver. Ten lze ten je stejný jakopro původní konstrukci a lze jej nalézt v odkazu.
+Při připojení k napájení generuje CLKGEN01B frekvenci nastavenou při výrobě v Silicon Labs. V případě modulů MLAB je to 10~MHz z důvodu využitelnosti jako standardní laboratorní normál.  Pro možnost ladění je potřeba do PIC18F4550 nahrát firmware, který naleznete na \cite{pic_firmware}. Při úspěšném nahrání firmwaru programátorem například PICprogUSB02A, se sestava připojením k počítači ohlásí jako nové USB zařízení a bude vyžadovat driver. Ten lze ten je stejný jakopro původní konstrukci a lze jej nalézt v odkazu\cite{CFGSR}.
 
 \section{Programové vybavení}
-Vzhledem k tomu, že výsledek je plně kompatibilní s  \cite{DG8SAQSynthesizer} lze k ladění generátoru použít naprostou většinu programů pro SDR a nebo pouze pro nastavení frekvence například USBSynth \cite{USB_Synth}.
+Vzhledem k tomu, že výsledek je plně kompatibilní s  konstrukcí dg8saq lze k ladění generátoru použít naprostou většinu programů pro SDR a nebo pouze pro nastavení frekvence například USBSynth \cite{USB_Synth}, či CFGSR \cite{CFGSR}, které je z těchto nástrojů nejmodernější.
 
 \begin{thebibliography}{99}
 \bibitem{Si570board}{Původní konstrukce Si570 Board } 
@@ -68,11 +70,21 @@ Vzhledem k tomu, že výsledek je plně kompatibilní s  \cite{DG8SAQSynthesizer
 \bibitem{DG8SAQemulator}{PIC emulátor USB syntezátoru od DG8SAQ} 
 \href{http://www.qrpradio.org/pub/softrocks/manuals/Softrock Group Files 210109/21 9V1AL/02 UBW Emulator/README.txt}{http://www.qrpradio.org/pub/softrocks/manuals/Softrock Group Files 210109/21 9V1AL/02 UBW Emulator/README.txt}
 
-\bibitem{DG8SAQSynthesizer}{Wideband RF Synthesizer} 
-\href{http://www.mydarc.de/dg8saq/SI570/index.shtml}{http://www.mydarc.de/dg8saq/SI570/index.shtml}
+\bibitem{CFGSR}{CFGSR} 
+\href{http://pe0fko.nl/CFGSR/}{http://pe0fko.nl/CFGSR/}
 
 \bibitem{USB_Synth}{USB Synth}
 \href{ http://www.mydarc.de/dg8saq/hidden/USB\_Synth3.zip}{http://www.mydarc.de/dg8saq/hidden/USB\_Synth3.zip}
+
+\bibitem{USBI2C}{USBI2C01A}
+\href{http://wiki.mlab.cz/doku.php?id=cs:usbi2c}{http://wiki.mlab.cz/doku.php?id=cs:usbi2c}
+
+\bibitem{pymlab}{pymlab}
+\href{http://wiki.mlab.cz/doku.php?id=cs:pymlab}{http://wiki.mlab.cz/doku.php?id=cs:pymlab}
+
+\bibitem{pic_firmware}{PIC firmware}
+\href{http://www.mlab.cz/Modules/Clock/CLKGEN01B/SW/DG8SAQ\%20synthesiser\_Emulator/firmware.hex}{http://www.mlab.cz/Modules/Clock/CLKGEN01B/SW/DG8SAQ\%20synthesiser\_Emulator/firmware.hex}
+
 
 \end{thebibliography}
 \end{document}
