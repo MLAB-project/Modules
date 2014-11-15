@@ -344,11 +344,11 @@ Text Label 2700 6250 0    60   ~ 0
 #SS2
 Text Label 2700 6350 0    60   ~ 0
 #INT
-Text Label 2700 6450 0    60   ~ 0
+Text Label 2700 6650 0    60   ~ 0
 #RES
 Text Label 2700 6550 0    60   ~ 0
 #SS1
-Text Label 2700 6650 0    60   ~ 0
+Text Label 2700 6450 0    60   ~ 0
 #SS0
 $Comp
 L GND #PWR010
@@ -597,4 +597,14 @@ F 3 "" H 5750 2900 60  0000 C CNN
 	1    5750 2900
 	1    0    0    -1  
 $EndComp
+Text Label 6700 3800 0    60   ~ 0
+A0
+Text Label 6700 3900 0    60   ~ 0
+A1
+Text Label 6700 4000 0    60   ~ 0
+A2
+Text Label 6650 4400 0    60   ~ 0
+SDA
+Text Label 6650 4500 0    60   ~ 0
+SCL
 $EndSCHEMATC
