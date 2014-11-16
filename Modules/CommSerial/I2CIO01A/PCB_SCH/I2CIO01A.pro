@@ -1,6 +1,6 @@
-update=16.11.2014 12:03:00
+update=16.11.2014 12:05:40
 version=1
-last_client=eeschema
+last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
@@ -61,4 +61,6 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=Jumpers
+LibName31=jump
+LibName32=tca6416a
+LibName33=Jumpers
