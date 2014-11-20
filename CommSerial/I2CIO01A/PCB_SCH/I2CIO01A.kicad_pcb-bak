@@ -2,7 +2,7 @@
 
   (general
     (links 106)
-    (no_connects 98)
+    (no_connects 90)
     (area -3.868782 -3.444241 208.33322 128.9812)
     (thickness 1.6)
     (drawings 0)
@@ -58,8 +58,8 @@
     (mod_edge_width 0.15)
     (mod_text_size 1 1)
     (mod_text_width 0.15)
-    (pad_size 0.4191 1.47066)
-    (pad_drill 0)
+    (pad_size 6 6)
+    (pad_drill 3)
     (pad_to_mask_clearance 0)
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFFFF)
@@ -158,8 +158,8 @@
     (add_net VDD)
   )
 
-  (module MLAB_Mechanical:MountingHole_3mm placed (layer F.Cu) (tedit 54345FDC) (tstamp 5469E3E9)
-    (at 0 0)
+  (module MLAB_Mechanical:MountingHole_3mm placed (layer F.Cu) (tedit 54345FDC) (tstamp 5469E339)
+    (at 5.08 5.08)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (fp_text reference P1 (at 0.1778 -0.0762) (layer F.SilkS)
@@ -188,7 +188,7 @@
       (clearance 1) (zone_connect 2))
   )
 
-  (module MLAB_Mechanical:MountingHole_3mm placed (layer F.Cu) (tedit 54345FDC) (tstamp 5469E3DD)
+  (module MLAB_Mechanical:MountingHole_3mm placed (layer F.Cu) (tedit 54345FDC) (tstamp 5469E303)
     (at 19.685 17.399)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
@@ -219,7 +219,7 @@
   )
 
   (module SMD_Packages:SMD-0805 (layer B.Cu) (tedit 5469D2AF) (tstamp 5469D339)
-    (at 146.812 125.984)
+    (at 150.241 126.873)
     (path /5469D39D)
     (attr smd)
     (fp_text reference 10u1 (at 0 0.3175) (layer B.SilkS)
@@ -310,7 +310,7 @@
   )
 
   (module Hrebinky:Pin_Header_Straight_2x02 placed (layer F.Cu) (tedit 5469D2A0) (tstamp 5469D34D)
-    (at 165.354 116.459)
+    (at 119.126 93.726)
     (descr "1 pin")
     (tags "CONN DEV")
     (path /5468999D)
@@ -436,7 +436,7 @@
   )
 
   (module Hrebinky:Pin_Header_Straight_2x03 placed (layer F.Cu) (tedit 5469D2A0) (tstamp 5469D36F)
-    (at 202.565 112.903)
+    (at 146.685 107.95)
     (descr "1 pin")
     (tags "CONN DEV")
     (path /54689904)
@@ -472,14 +472,14 @@
   )
 
   (module Hrebinky:Pin_Header_Straight_1x02 (layer F.Cu) (tedit 5469CB53) (tstamp 5469D375)
-    (at 200.66 48.006)
+    (at 127.381 106.934 270)
     (descr "1 pin")
     (tags "CONN DEV")
     (path /5468852B)
-    (fp_text reference J5 (at 0 -2.286) (layer F.SilkS)
+    (fp_text reference J5 (at 0 -2.286 270) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.2032)))
     )
-    (fp_text value CONN1_2 (at 0 0) (layer F.SilkS) hide
+    (fp_text value CONN1_2 (at 0 0 270) (layer F.SilkS) hide
       (effects (font (size 1.27 1.27) (thickness 0.2032)))
     )
     (fp_line (start -3.81 -1.27) (end -1.27 -1.27) (layer F.SilkS) (width 0.254))
@@ -488,9 +488,9 @@
     (fp_line (start -1.27 -1.27) (end 1.27 -1.27) (layer F.SilkS) (width 0.254))
     (fp_line (start -3.81 -1.27) (end -3.81 1.27) (layer F.SilkS) (width 0.254))
     (fp_line (start -3.81 1.27) (end -1.27 1.27) (layer F.SilkS) (width 0.254))
-    (pad 1 thru_hole rect (at -2.54 0) (size 1.651 1.651) (drill 0.9) (layers *.Cu *.Mask F.SilkS)
+    (pad 1 thru_hole rect (at -2.54 0 270) (size 1.651 1.651) (drill 0.9) (layers *.Cu *.Mask F.SilkS)
       (net 1 VDD))
-    (pad 2 thru_hole rect (at 0 0) (size 1.651 1.651) (drill 0.9) (layers *.Cu *.Mask F.SilkS)
+    (pad 2 thru_hole rect (at 0 0 270) (size 1.651 1.651) (drill 0.9) (layers *.Cu *.Mask F.SilkS)
       (net 8 /Vccp))
     (model Pin_Headers/Pin_Header_Straight_1x03.wrl
       (at (xyz 0 0 0))
@@ -718,7 +718,7 @@
   )
 
   (module SMD_Packages:SMD-0805 (layer B.Cu) (tedit 5469D2AF) (tstamp 5469D3A9)
-    (at 169.672 117.221 90)
+    (at 123.444 94.488 90)
     (path /54689A1B)
     (attr smd)
     (fp_text reference R2 (at 0 0.3175 90) (layer B.SilkS)
@@ -774,7 +774,7 @@
   )
 
   (module SMD_Packages:SMD-0805 (layer B.Cu) (tedit 5469D2AF) (tstamp 5469D3B5)
-    (at 201.549 116.84)
+    (at 145.669 111.887)
     (path /54689A9E)
     (attr smd)
     (fp_text reference R4 (at 0 0.3175) (layer B.SilkS)
