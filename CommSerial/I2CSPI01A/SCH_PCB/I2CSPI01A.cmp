@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-08-19 BZR 5083)-product   date = 26.8.2014 10:34:06
+Cmp-Mod V01 Created by Cvpcb (2014-08-29 BZR 5106)-product   date = 24.11.2014 10:26:49
 
 BeginCmp
 TimeStamp = /53F4A074;
@@ -32,28 +32,28 @@ BeginCmp
 TimeStamp = /53F4A312;
 Reference = J2;
 ValeurCmp = JUMP_5X2;
-IdModule  = Pin_Header_Straight_1x03:Pin_Header_Straight_2x05;
+IdModule  = Hrebinky:Pin_Header_Straight_2x05;
 EndCmp
 
 BeginCmp
 TimeStamp = /53F4AC0B;
 Reference = J3;
 ValeurCmp = JUMP_7X2;
-IdModule  = Pin_Header_Straight_1x03:Pin_Header_Straight_2x07;
+IdModule  = Hrebinky:Pin_Header_Straight_2x07;
 EndCmp
 
 BeginCmp
 TimeStamp = /53F5BF15;
 Reference = J4;
 ValeurCmp = JUMP_3X2;
-IdModule  = Pin_Header_Straight_1x03:Pin_Header_Straight_2x03;
+IdModule  = Hrebinky:Pin_Header_Straight_2x03;
 EndCmp
 
 BeginCmp
 TimeStamp = /53F4A6F0;
 Reference = J5;
 ValeurCmp = CONN1_2;
-IdModule  = Pin_Header_Straight_1x03:Pin_Header_Straight_2x01;
+IdModule  = Hrebinky:Pin_Header_Straight_1x02;
 EndCmp
 
 BeginCmp
@@ -96,13 +96,6 @@ TimeStamp = /53F45462;
 Reference = R5;
 ValeurCmp = -;
 IdModule  = SMD_Packages:SMD-0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /53F720BD;
-Reference = U1;
-ValeurCmp = SC18IS602B;
-IdModule  = SMD_Packages:TSSOP-16;
 EndCmp
 
 EndListe
