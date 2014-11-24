@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-08-29 BZR 5106)-product   date = 24.11.2014 10:26:49
+Cmp-Mod V01 Created by Cvpcb (2014-08-29 BZR 5106)-product   date = 24.11.2014 13:01:16
 
 BeginCmp
 TimeStamp = /53F4A074;
@@ -50,10 +50,10 @@ IdModule  = Hrebinky:Pin_Header_Straight_2x03;
 EndCmp
 
 BeginCmp
-TimeStamp = /53F4A6F0;
+TimeStamp = /54731EC3;
 Reference = J5;
-ValeurCmp = CONN1_2;
-IdModule  = Hrebinky:Pin_Header_Straight_1x02;
+ValeurCmp = CONN1_1;
+IdModule  = Hrebinky:Pin_Header_Straight_1x01;
 EndCmp
 
 BeginCmp
@@ -61,6 +61,34 @@ TimeStamp = /53FC1E43;
 Reference = J6;
 ValeurCmp = JUMP_3X2_S;
 IdModule  = Pin_Header_Straight_1x03:Pin_Header_Straight_2x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /547306AA;
+Reference = P1;
+ValeurCmp = _;
+IdModule  = Dira:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /547307A1;
+Reference = P2;
+ValeurCmp = _;
+IdModule  = Dira:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /547307DC;
+Reference = P3;
+ValeurCmp = _;
+IdModule  = Dira:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5473081E;
+Reference = P4;
+ValeurCmp = _;
+IdModule  = Dira:MountingHole_3mm;
 EndCmp
 
 BeginCmp
@@ -96,6 +124,13 @@ TimeStamp = /53F45462;
 Reference = R5;
 ValeurCmp = -;
 IdModule  = SMD_Packages:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54731699;
+Reference = U1;
+ValeurCmp = SC18IS602B;
+IdModule  = SMD_Packages:TSSOP-16;
 EndCmp
 
 EndListe
