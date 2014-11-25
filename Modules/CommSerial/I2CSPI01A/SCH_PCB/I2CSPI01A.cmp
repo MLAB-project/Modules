@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-08-29 BZR 5106)-product   date = 24.11.2014 13:01:16
+Cmp-Mod V01 Created by Cvpcb (2014-08-29 BZR 5106)-product   date = 25.11.2014 9:46:18
 
 BeginCmp
 TimeStamp = /53F4A074;
@@ -18,7 +18,7 @@ BeginCmp
 TimeStamp = /53F4A0C0;
 Reference = D1;
 ValeurCmp = BZV55C-3,6V;
-IdModule  = Diodes_SMD:Diode-MiniMELF_Handsoldering;
+IdModule  = Diodes_SMD:Diode-MiniMELF_Standard;
 EndCmp
 
 BeginCmp
@@ -50,10 +50,10 @@ IdModule  = Hrebinky:Pin_Header_Straight_2x03;
 EndCmp
 
 BeginCmp
-TimeStamp = /54731EC3;
+TimeStamp = /547353CF;
 Reference = J5;
-ValeurCmp = CONN1_1;
-IdModule  = Hrebinky:Pin_Header_Straight_1x01;
+ValeurCmp = CONN_2;
+IdModule  = Hrebinky:Pin_Header_Straight_1x02;
 EndCmp
 
 BeginCmp
