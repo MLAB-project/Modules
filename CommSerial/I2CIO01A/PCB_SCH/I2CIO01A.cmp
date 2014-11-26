@@ -1,15 +1,15 @@
-Cmp-Mod V01 Created by Cvpcb (2014-08-29 BZR 5106)-product   date = 26.11.2014 8:23:39
+Cmp-Mod V01 Created by Cvpcb (2014-08-29 BZR 5106)-product   date = 26.11.2014 14:32:11
 
 BeginCmp
 TimeStamp = /5469D39D;
-Reference = 10u1;
+Reference = 10uF1;
 ValeurCmp = C;
 IdModule  = SMD_Packages:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5469D318;
-Reference = 100n1;
+Reference = 100nF1;
 ValeurCmp = C;
 IdModule  = SMD_Packages:SMD-0805;
 EndCmp
@@ -43,10 +43,10 @@ IdModule  = Hrebinky:Pin_Header_Straight_2x03;
 EndCmp
 
 BeginCmp
-TimeStamp = /547583A5;
+TimeStamp = /5475D9A1;
 Reference = J4;
-ValeurCmp = CONN_3;
-IdModule  = Hrebinky:Pin_Header_Straight_1x03;
+ValeurCmp = CONN_2;
+IdModule  = Hrebinky:Pin_Header_Straight_1x02;
 EndCmp
 
 BeginCmp
@@ -78,10 +78,10 @@ IdModule  = Hrebinky:Pin_Header_Straight_1x02;
 EndCmp
 
 BeginCmp
-TimeStamp = /54758384;
+TimeStamp = /5475D9CE;
 Reference = J9;
-ValeurCmp = CONN_3;
-IdModule  = Hrebinky:Pin_Header_Straight_1x03;
+ValeurCmp = CONN_2;
+IdModule  = Hrebinky:Pin_Header_Straight_1x02;
 EndCmp
 
 BeginCmp
@@ -263,6 +263,20 @@ BeginCmp
 TimeStamp = /5474692D;
 Reference = R22;
 ValeurCmp = 0R;
+IdModule  = SMD_Packages:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5475DD70;
+Reference = R23;
+ValeurCmp = 10k;
+IdModule  = SMD_Packages:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5475DDAE;
+Reference = R24;
+ValeurCmp = 10k;
 IdModule  = SMD_Packages:SMD-0805;
 EndCmp
 
