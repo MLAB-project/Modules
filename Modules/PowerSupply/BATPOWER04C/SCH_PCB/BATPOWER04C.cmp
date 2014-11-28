@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-08-29 BZR 5106)-product   date = 28.11.2014 13:37:03
+Cmp-Mod V01 Created by Cvpcb (2014-08-29 BZR 5106)-product   date = 28.11.2014 19:28:58
 
 BeginCmp
 TimeStamp = /5476F528;
@@ -11,28 +11,28 @@ BeginCmp
 TimeStamp = /5477060F;
 Reference = C2;
 ValeurCmp = 100nF;
-IdModule  = Capacitors_SMD:C_0805;
+IdModule  = SMD_Packages:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5476F755;
 Reference = C3;
 ValeurCmp = 1nF;
-IdModule  = Capacitors_SMD:C_0805;
+IdModule  = SMD_Packages:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5477033B;
 Reference = C4;
 ValeurCmp = 100pF;
-IdModule  = Capacitors_SMD:C_0805;
+IdModule  = SMD_Packages:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5477069D;
 Reference = C5;
 ValeurCmp = 470pF;
-IdModule  = Capacitors_SMD:C_0805;
+IdModule  = SMD_Packages:SMD-0805;
 EndCmp
 
 BeginCmp
@@ -172,35 +172,35 @@ BeginCmp
 TimeStamp = /5476F659;
 Reference = R1;
 ValeurCmp = 22k;
-IdModule  = Resistors_SMD:R_0805;
+IdModule  = SMD_Packages:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /54770570;
 Reference = R2;
 ValeurCmp = 20k;
-IdModule  = Resistors_SMD:R_0805;
+IdModule  = SMD_Packages:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5477050C;
 Reference = R3;
 ValeurCmp = 33k;
-IdModule  = Resistors_SMD:R_0805;
+IdModule  = SMD_Packages:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /547705D0;
 Reference = R4;
 ValeurCmp = R;
-IdModule  = Resistors_SMD:R_0805;
+IdModule  = SMD_Packages:SMD-0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /54770A4C;
-Reference = RV1;
-ValeurCmp = POT;
-IdModule  = MLAB_POT:TRIM_CA9MTV10;
+TimeStamp = /5478B6A0;
+Reference = R5;
+ValeurCmp = 20k;
+IdModule  = SMD_Packages:SMD-0805;
 EndCmp
 
 BeginCmp

@@ -258,17 +258,6 @@ F 3 "" H 7450 2900 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L POT RV1
-U 1 1 54770A4C
-P 6050 5150
-F 0 "RV1" H 6050 5050 50  0000 C CNN
-F 1 "POT" H 6050 5150 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Trimmer-Piher_PT15-V15_horizontal" H 6050 5150 60  0001 C CNN
-F 3 "" H 6050 5150 60  0000 C CNN
-	1    6050 5150
-	0    -1   -1   0   
-$EndComp
-$Comp
 L JUMP_4X2 J9
 U 1 1 54770CCE
 P 8350 2700
@@ -520,10 +509,6 @@ Wire Wire Line
 	5200 3500 5200 3400
 Wire Wire Line
 	5200 3400 5400 3400
-Wire Wire Line
-	5900 5150 5900 4900
-Wire Wire Line
-	5900 4900 6050 4900
 $Comp
 L JUMP2_2x1 J4
 U 1 1 54777542
@@ -624,9 +609,7 @@ Wire Wire Line
 	6450 5400 6450 5500
 Connection ~ 6800 3350
 Connection ~ 6800 2700
-Wire Wire Line
-	4800 2800 4800 4050
-Text Label 5750 4050 0    60   ~ 0
+Text Label 5800 4050 0    60   ~ 0
 FB
 $Comp
 L GND #PWR015
@@ -688,5 +671,20 @@ F 2 "Dira:MountingHole_3mm" H 10400 800 60  0001 C CNN
 F 3 "" H 10400 800 60  0000 C CNN
 	1    10150 950 
 	-1   0    0    1   
+$EndComp
+Connection ~ 7100 2700
+Connection ~ 7450 2700
+Wire Wire Line
+	4800 4050 4800 2800
+$Comp
+L R R5
+U 1 1 5478B6A0
+P 6050 5150
+F 0 "R5" V 6130 5150 40  0000 C CNN
+F 1 "20k" V 6057 5151 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 5980 5150 30  0001 C CNN
+F 3 "" H 6050 5150 30  0000 C CNN
+	1    6050 5150
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
