@@ -624,9 +624,7 @@ Wire Wire Line
 	6450 5400 6450 5500
 Connection ~ 6800 3350
 Connection ~ 6800 2700
-Wire Wire Line
-	4800 2800 4800 4050
-Text Label 5750 4050 0    60   ~ 0
+Text Label 5800 4050 0    60   ~ 0
 FB
 $Comp
 L GND #PWR015
@@ -689,4 +687,8 @@ F 3 "" H 10400 800 60  0000 C CNN
 	1    10150 950 
 	-1   0    0    1   
 $EndComp
+Connection ~ 7100 2700
+Connection ~ 7450 2700
+Wire Wire Line
+	4800 4050 4800 2800
 $EndSCHEMATC
