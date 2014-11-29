@@ -1,66 +1,66 @@
-Cmp-Mod V01 Created by Cvpcb (2014-08-29 BZR 5106)-product   date = 28.11.2014 19:28:58
+Cmp-Mod V01 Created by Cvpcb (2014-08-29 BZR 5106)-product   date = 29.11.2014 20:36:06
 
 BeginCmp
 TimeStamp = /5476F528;
 Reference = C1;
 ValeurCmp = 47uF;
-IdModule  = Capacitors_Tantalum_SMD:TantalC_SizeC_EIA-6032_Reflow;
+IdModule  = MLAB_C:TantalC_SizeC_Reflow;
 EndCmp
 
 BeginCmp
 TimeStamp = /5477060F;
 Reference = C2;
 ValeurCmp = 100nF;
-IdModule  = SMD_Packages:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5476F755;
 Reference = C3;
 ValeurCmp = 1nF;
-IdModule  = SMD_Packages:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5477033B;
 Reference = C4;
 ValeurCmp = 100pF;
-IdModule  = SMD_Packages:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5477069D;
 Reference = C5;
 ValeurCmp = 470pF;
-IdModule  = SMD_Packages:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /547707A4;
 Reference = C6;
 ValeurCmp = 100uF;
-IdModule  = Capacitors_Tantalum_SMD:TantalC_SizeD_EIA-7343_Reflow;
+IdModule  = MLAB_C:TantalC_SizeD_Reflow;
 EndCmp
 
 BeginCmp
 TimeStamp = /54770930;
 Reference = C7;
 ValeurCmp = 100uF;
-IdModule  = Capacitors_Tantalum_SMD:TantalC_SizeD_EIA-7343_Reflow;
+IdModule  = MLAB_C:TantalC_SizeD_Reflow;
 EndCmp
 
 BeginCmp
 TimeStamp = /5476F499;
 Reference = D1;
 ValeurCmp = M4;
-IdModule  = Diodes_SMD:Diode-SMA_Standard;
+IdModule  = MLAB_D:Diode-SMA_Standard;
 EndCmp
 
 BeginCmp
 TimeStamp = /5477039D;
 Reference = D2;
 ValeurCmp = 15MQ040N;
-IdModule  = Diodes_SMD:Diode-SMA_Handsoldering;
+IdModule  = MLAB_D:Diode-SMA_Standard;
 EndCmp
 
 BeginCmp
@@ -165,49 +165,49 @@ BeginCmp
 TimeStamp = /54770268;
 Reference = Q1;
 ValeurCmp = IRF7416;
-IdModule  = Power_Integrations:SO-8;
+IdModule  = MLAB_IO:SO-8;
 EndCmp
 
 BeginCmp
 TimeStamp = /5476F659;
 Reference = R1;
 ValeurCmp = 22k;
-IdModule  = SMD_Packages:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /54770570;
 Reference = R2;
 ValeurCmp = 20k;
-IdModule  = SMD_Packages:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5477050C;
 Reference = R3;
 ValeurCmp = 33k;
-IdModule  = SMD_Packages:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /547705D0;
 Reference = R4;
 ValeurCmp = R;
-IdModule  = SMD_Packages:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5478B6A0;
 Reference = R5;
 ValeurCmp = 20k;
-IdModule  = SMD_Packages:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5476F060;
 Reference = U1;
 ValeurCmp = LM3485;
-IdModule  = Power_Integrations:SO-8;
+IdModule  = MLAB_IO:MSOP-8_3x3mm_Pitch0.65mm;
 EndCmp
 
 EndListe
