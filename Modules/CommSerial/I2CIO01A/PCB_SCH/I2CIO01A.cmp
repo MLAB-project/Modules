@@ -1,16 +1,16 @@
-Cmp-Mod V01 Created by Cvpcb (2014-08-29 BZR 5106)-product   date = 26.11.2014 14:32:11
+Cmp-Mod V01 Created by Cvpcb (2014-08-29 BZR 5106)-product   date = 29.11.2014 21:38:26
 
 BeginCmp
 TimeStamp = /5469D39D;
-Reference = 10uF1;
-ValeurCmp = C;
+Reference = C1;
+ValeurCmp = 10uF;
 IdModule  = SMD_Packages:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5469D318;
-Reference = 100nF1;
-ValeurCmp = C;
+Reference = C2;
+ValeurCmp = 100nF;
 IdModule  = SMD_Packages:SMD-0805;
 EndCmp
 
@@ -18,7 +18,7 @@ BeginCmp
 TimeStamp = /5468F21F;
 Reference = D1;
 ValeurCmp = ZENER;
-IdModule  = Diodes_SMD:Diode-MiniMELF_Standard;
+IdModule  = MLAB_D:Diode-MiniMELF_Standard;
 EndCmp
 
 BeginCmp
