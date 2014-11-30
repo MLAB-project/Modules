@@ -1,4 +1,4 @@
-update=29.11.2014 15:29:49
+update=30.11.2014 12:18:55
 version=1
 last_client=kicad
 [cvpcb]
@@ -41,13 +41,6 @@ LabSize=60
 version=1
 [eeschema]
 version=1
-PageLayoutDescrFile=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=PcbnewAdvanced
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
+LibDir=../../../../../library/KiCAD/symbols
+[eeschema/libraries]
+LibName1=MLAB_IO
