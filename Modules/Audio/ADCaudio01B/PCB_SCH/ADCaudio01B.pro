@@ -1,4 +1,4 @@
-update=30.11.2014 12:18:55
+update=30.11.2014 17:46:27
 version=1
 last_client=kicad
 [cvpcb]
@@ -44,3 +44,4 @@ version=1
 LibDir=../../../../../library/KiCAD/symbols
 [eeschema/libraries]
 LibName1=MLAB_IO
+LibName2=Jumpers

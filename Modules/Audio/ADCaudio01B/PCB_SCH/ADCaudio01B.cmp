@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-08-29 BZR 5106)-product   date = 29.11.2014 12:25:46
+Cmp-Mod V01 Created by Cvpcb (2014-08-29 BZR 5106)-product   date = 30.11.2014 17:59:46
 
 BeginCmp
 TimeStamp = /546DB268;
@@ -274,10 +274,10 @@ IdModule  = Hrebinky:Pin_Header_Straight_2x03;
 EndCmp
 
 BeginCmp
-TimeStamp = /5479B115;
+TimeStamp = /547C2A09;
 Reference = J4;
-ValeurCmp = MCLK;
-IdModule  = Hrebinky:Pin_Header_Straight_1x01;
+ValeurCmp = CONN1_2;
+IdModule  = Hrebinky:Pin_Header_Straight_2x01;
 EndCmp
 
 BeginCmp
@@ -501,6 +501,20 @@ BeginCmp
 TimeStamp = /546DB29F;
 Reference = R25;
 ValeurCmp = 1k;
+IdModule  = MLAB_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /547BED6A;
+Reference = R26;
+ValeurCmp = 100R;
+IdModule  = MLAB_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /547BDAF0;
+Reference = R27;
+ValeurCmp = 100R;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
