@@ -1,38 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:special
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:Jumpers
-LIBS:MLAB_IO
-LIBS:clock
-LIBS:MLAB_XTAL
 LIBS:ADCaudio01B-cache
 EELAYER 24 0
 EELAYER END
@@ -1150,12 +1117,12 @@ $EndComp
 $Comp
 L +3.3V #PWR040
 U 1 1 546DB2CF
-P 8000 1050
-F 0 "#PWR040" H 8000 1010 30  0001 C CNN
-F 1 "+3.3V" H 8000 1160 30  0000 C CNN
-F 2 "" H 8000 1050 60  0000 C CNN
-F 3 "" H 8000 1050 60  0000 C CNN
-	1    8000 1050
+P 8150 1050
+F 0 "#PWR040" H 8150 1010 30  0001 C CNN
+F 1 "+3.3V" H 8150 1160 30  0000 C CNN
+F 2 "" H 8150 1050 60  0000 C CNN
+F 3 "" H 8150 1050 60  0000 C CNN
+	1    8150 1050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1420,13 +1387,10 @@ Wire Wire Line
 	7850 2000 8050 2000
 Wire Wire Line
 	7850 1900 8050 1900
-Connection ~ 8000 1250
 Wire Wire Line
 	7850 1250 8000 1250
 Wire Wire Line
-	8000 1050 8000 1350
-Wire Wire Line
-	8000 1350 7850 1350
+	7850 1350 8150 1350
 Wire Wire Line
 	6750 1550 6400 1550
 Wire Wire Line
@@ -2000,4 +1964,19 @@ Text Label 7850 2100 0    60   ~ 0
 BCLK
 Text Label 7850 2200 0    60   ~ 0
 MCLK
+$Comp
+L +5V #PWR?
+U 1 1 547B03C8
+P 8000 1050
+F 0 "#PWR?" H 8000 1140 20  0001 C CNN
+F 1 "+5V" H 8000 1140 30  0000 C CNN
+F 2 "" H 8000 1050 60  0000 C CNN
+F 3 "" H 8000 1050 60  0000 C CNN
+	1    8000 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 1250 8000 1050
+Wire Wire Line
+	8150 1350 8150 1050
 $EndSCHEMATC
