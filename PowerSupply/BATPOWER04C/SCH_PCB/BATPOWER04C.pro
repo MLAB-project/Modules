@@ -1,4 +1,4 @@
-update=27.11.2014 10:18:36
+update=Ne 30. listopad 2014, 23:42:46 CET
 version=1
 last_client=kicad
 [cvpcb]
@@ -65,3 +65,16 @@ LibName31=Jumpers
 LibName32=MLAB_D
 LibName33=MLAB_IO
 LibName34=MLAB_T
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
