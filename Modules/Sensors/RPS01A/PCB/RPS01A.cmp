@@ -1,0 +1,122 @@
+Cmp-Mod V01 Created by Cvpcb (2014-08-29 BZR 5106)-product   date = 3.12.2014 10:11:52
+
+BeginCmp
+TimeStamp = /547DF05B;
+Reference = C1;
+ValeurCmp = 10uF;
+IdModule  = MLAB_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /547DEF58;
+Reference = C2;
+ValeurCmp = 100nF;
+IdModule  = MLAB_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /547DF2B1;
+Reference = J1;
+ValeurCmp = JUMP_5X2;
+IdModule  = Hrebinky:Pin_Header_Straight_2x05;
+EndCmp
+
+BeginCmp
+TimeStamp = /547DF44F;
+Reference = J2;
+ValeurCmp = JUMP_2x1;
+IdModule  = Hrebinky:Pin_Header_Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /547ED805;
+Reference = J3;
+ValeurCmp = JUMP_5X2;
+IdModule  = Hrebinky:SMD_JUMP1X5;
+EndCmp
+
+BeginCmp
+TimeStamp = /547E0CBD;
+Reference = P1;
+ValeurCmp = _;
+IdModule  = Dira:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /547E0EDE;
+Reference = P2;
+ValeurCmp = _;
+IdModule  = Dira:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /547E0F11;
+Reference = P3;
+ValeurCmp = _;
+IdModule  = Dira:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /547E0F45;
+Reference = P4;
+ValeurCmp = _;
+IdModule  = Dira:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /547DF170;
+Reference = R1;
+ValeurCmp = 0R;
+IdModule  = MLAB_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /547DF9D0;
+Reference = R2;
+ValeurCmp = 0R;
+IdModule  = MLAB_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /547DF9FA;
+Reference = R3;
+ValeurCmp = 0R;
+IdModule  = MLAB_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /547DF710;
+Reference = R4;
+ValeurCmp = 0R;
+IdModule  = MLAB_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /547DFA35;
+Reference = R5;
+ValeurCmp = 0R;
+IdModule  = MLAB_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /547ED127;
+Reference = R6;
+ValeurCmp = 0R;
+IdModule  = MLAB_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /547ED1C7;
+Reference = R7;
+ValeurCmp = 0R;
+IdModule  = MLAB_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /547DEEB9;
+Reference = U1;
+ValeurCmp = AS5048B;
+IdModule  = Housings_SSOP:TSSOP-14_4.4x5mm_Pitch0.65mm;
+EndCmp
+
+EndListe
