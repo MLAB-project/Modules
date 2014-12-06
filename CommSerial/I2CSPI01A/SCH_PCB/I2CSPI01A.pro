@@ -1,6 +1,6 @@
-update=16.11.2014 12:03:00
+update=So 6. prosinec 2014, 23:29:48 CET
 version=1
-last_client=eeschema
+last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
@@ -25,8 +25,6 @@ SolderMaskMinWidth=0.000000000000
 DrawSegmentWidth=0.200000000000
 BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=../../../../../library/KiCAD/symbols
@@ -62,3 +60,5 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=Jumpers
+[general]
+version=1
