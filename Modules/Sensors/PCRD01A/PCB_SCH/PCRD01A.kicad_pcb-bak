@@ -2,7 +2,7 @@
 
   (general
     (links 80)
-    (no_connects 56)
+    (no_connects 48)
     (area 67.929759 54.026999 186.309001 132.883132)
     (thickness 1.6)
     (drawings 0)
@@ -61,8 +61,8 @@
     (mod_edge_width 0.15)
     (mod_text_size 1 1)
     (mod_text_width 0.15)
-    (pad_size 1.651 1.651)
-    (pad_drill 0.9)
+    (pad_size 6 6)
+    (pad_drill 3)
     (pad_to_mask_clearance 0)
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFF7F)
@@ -490,7 +490,7 @@
   )
 
   (module MLAB_R:SMD-0805 (layer B.Cu) (tedit 54799E0C) (tstamp 5482DFCF)
-    (at 61.976 -11.811)
+    (at 43.942 -18.288)
     (path /54766490)
     (attr smd)
     (fp_text reference C14 (at 0 0.3175) (layer B.SilkS)
@@ -554,7 +554,7 @@
   )
 
   (module Hrebinky:Pin_Header_Straight_2x05 placed (layer F.Cu) (tedit 53F5A718) (tstamp 5482DFE7)
-    (at 84.201 -44.831)
+    (at 41.656 -4.445)
     (descr "1 pin")
     (tags "CONN DEV")
     (path /5476EF1F)
@@ -646,7 +646,7 @@
   )
 
   (module Hrebinky:Pin_Header_Straight_2x03 placed (layer F.Cu) (tedit 5482DC61) (tstamp 5482DFFE)
-    (at 69.85 -15.875 90)
+    (at 50.419 -16.383 90)
     (descr "1 pin")
     (tags "CONN DEV")
     (path /54839C4F)
@@ -681,8 +681,8 @@
     )
   )
 
-  (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 54345FDC) (tstamp 5482E003)
-    (at 97.79 112.522)
+  (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 54345FDC) (tstamp 54841B1B)
+    (at 55.88 -5.08)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (path /5476FB64)
@@ -698,7 +698,7 @@
   )
 
   (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 54345FDC) (tstamp 5482E008)
-    (at 73.533 119.507)
+    (at 55.88 -25.4)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (path /5476FD65)
@@ -970,7 +970,7 @@
   )
 
   (module MLAB_R:SMD-0805 (layer B.Cu) (tedit 54799E0C) (tstamp 5482E05B)
-    (at 62.484 -8.763 270)
+    (at 45.339 -14.859 270)
     (path /547664D3)
     (attr smd)
     (fp_text reference R11 (at 0 0.3175 270) (layer B.SilkS)
