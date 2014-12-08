@@ -1,37 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:special
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:MLAB_IO
-LIBS:MLAB_D
-LIBS:MLAB_T
 LIBS:Jumpers
 LIBS:PCRD02A-cache
 EELAYER 24 0
@@ -893,23 +860,12 @@ F 3 "" H 10650 4250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 10650 4150
-$Comp
-L CONN_3 J1
-U 1 1 54838CBF
-P 400 4500
-F 0 "J1" H 200 4150 50  0000 C CNN
-F 1 "CONN_3" H 150 4250 40  0000 C CNN
-F 2 "Hrebinky:Pin_Header_Straight_1x03" H 400 4500 60  0001 C CNN
-F 3 "" H 400 4500 60  0000 C CNN
-	1    400  4500
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
-	750  4400 750  4300
+	750  4300 750  4450
 Wire Wire Line
-	750  4300 900  4300
+	900  4300 750  4300
 Wire Wire Line
-	750  4600 750  4700
+	750  4550 750  4700
 Wire Wire Line
 	750  4700 900  4700
 Connection ~ 900  4700
@@ -1179,5 +1135,16 @@ F 2 "" H 4000 6300 60  0000 C CNN
 F 3 "" H 4000 6300 60  0000 C CNN
 	1    4000 6300
 	1    0    0    -1  
+$EndComp
+$Comp
+L CONN1_2 J1
+U 1 1 5485EF71
+P 450 4500
+F 0 "J1" H 300 4300 50  0000 C CNN
+F 1 "CONN1_2" H 250 4750 40  0000 C CNN
+F 2 "" H 500 4450 60  0000 C CNN
+F 3 "" H 500 4450 60  0000 C CNN
+	1    450  4500
+	-1   0    0    1   
 $EndComp
 $EndSCHEMATC

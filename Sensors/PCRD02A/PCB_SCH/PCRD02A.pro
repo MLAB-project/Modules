@@ -1,4 +1,4 @@
-update=6.12.2014 22:23:34
+update=8.12.2014 18:34:24
 version=1
 last_client=eeschema
 [cvpcb]
@@ -29,13 +29,6 @@ ModuleOutlineThickness=0.150000000000
 version=1
 [eeschema]
 version=1
-PageLayoutDescrFile=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
+LibDir=../../../../../library/KiCAD/symbols
+[eeschema/libraries]
+LibName1=Jumpers
