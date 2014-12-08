@@ -526,22 +526,18 @@ F 3 "" H 8100 5250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8100 4500 8100 5250
-Wire Wire Line
 	8100 4500 8200 4500
 Wire Wire Line
 	8200 4650 8100 4650
 Connection ~ 8100 4650
 Wire Wire Line
-	8200 4800 8100 4800
+	8100 4800 8200 4800
+Connection ~ 8100 4800
 Wire Wire Line
-	8100 4800 8100 4750
-Connection ~ 8100 4750
-Wire Wire Line
-	8200 4950 8100 4950
+	8100 4950 8200 4950
 Connection ~ 8100 4950
 Wire Wire Line
-	8200 5100 8100 5100
+	8100 5100 8200 5100
 Connection ~ 8100 5100
 Wire Notes Line
 	7700 4200 9700 4200
@@ -553,4 +549,6 @@ Wire Notes Line
 	7700 5700 7700 4200
 Text Notes 8700 4950 0    60   ~ 0
 MECHANICAL HOLES \n3,2mm diameter
+Wire Wire Line
+	8100 4500 8100 5250
 $EndSCHEMATC
