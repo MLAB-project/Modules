@@ -1,9 +1,9 @@
-(kicad_pcb (version 4) (host pcbnew 0.201412061631+5312~19~ubuntu14.04.1-product)
+(kicad_pcb (version 4) (host pcbnew 0.201412081631+5316~19~ubuntu14.04.1-product)
 
   (general
     (links 115)
     (no_connects 0)
-    (area 0.205999 -30.274001 40.434001 9.954001)
+    (area -10.915171 -32.512 47.879001 11.50046)
     (thickness 1.6)
     (drawings 48)
     (tracks 233)
@@ -1607,7 +1607,7 @@
   (gr_text ADDRESS (at 26.797 -13.335) (layer F.SilkS) (tstamp 54747DD8)
     (effects (font (size 1 1) (thickness 0.2)))
   )
-  (gr_text "SET ADDR" (at 34.544 -8.636) (layer F.SilkS)
+  (gr_text "SET ADR" (at 34.544 -8.636) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.2)))
   )
   (gr_text "YX 0x23" (at 25.781 -6.985) (layer F.SilkS)
