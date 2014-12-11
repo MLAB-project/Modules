@@ -1,4 +1,6 @@
 EESchema Schematic File Version 2
+LIBS:MLAB_IO
+LIBS:Jumpers
 LIBS:ADCaudio01B-cache
 EELAYER 25 0
 EELAYER END
@@ -1995,12 +1997,6 @@ Wire Wire Line
 Wire Wire Line
 	1000 850  1100 850 
 Connection ~ 1100 850 
-Wire Wire Line
-	1950 850  2200 850 
-Wire Wire Line
-	1950 700  2200 700 
-Text Label 2050 700  0    60   ~ 0
-NC
-Text Label 2050 850  0    60   ~ 0
-NC
+NoConn ~ 1950 700 
+NoConn ~ 1950 850 
 $EndSCHEMATC
