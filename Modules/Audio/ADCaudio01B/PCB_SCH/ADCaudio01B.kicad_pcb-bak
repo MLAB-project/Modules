@@ -3,7 +3,7 @@
   (general
     (links 176)
     (no_connects 0)
-    (area 0.205999 -40.434001 70.914001 -0.205999)
+    (area -16.129 -49.5268 79.629001 7.5406)
     (thickness 1.6)
     (drawings 29)
     (tracks 611)
@@ -70,7 +70,7 @@
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFF7F)
     (pcbplotparams
-      (layerselection 0x00000_00000000)
+      (layerselection 0x010e0_80000001)
       (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.100000)
@@ -89,11 +89,11 @@
       (plotinvisibletext false)
       (padsonsilk false)
       (subtractmaskfromsilk false)
-      (outputformat 4)
+      (outputformat 1)
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory ../CAM_PROFI/))
   )
 
   (net 0 "")
