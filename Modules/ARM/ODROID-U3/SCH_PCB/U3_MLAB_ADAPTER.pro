@@ -1,4 +1,4 @@
-update=Po 8. prosinec 2014, 20:52:01 CET
+update=Pá 19. prosinec 2014, 17:18:30 CET
 version=1
 last_client=kicad
 [cvpcb]
@@ -25,8 +25,6 @@ SolderMaskMinWidth=0.000000000000
 DrawSegmentWidth=0.200000000000
 BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=
@@ -64,3 +62,5 @@ LibName30=valves
 LibName31=header
 LibName32=/home/kaklik/svn/library/KiCAD/symbols/konektory
 LibName33=/home/kaklik/svn/library/KiCAD/symbols/Jumpers
+[general]
+version=1
