@@ -1,33 +1,4 @@
-S GPS modulem je problém s napajenim. Neda se z nej brat 5V.
-   Neproleze to tlumivkou a pojistkou. Musel jsem to preklemovat
-         kablíkem tak, ze jsem místo jumperu zapojil kablik rovnou na
-         vystup 5V. Proste jsou tam 4 V. Proud jsem nemeril.
-
-Ve schema je spatne oznacena verze modulu. 
-
---------------
-Mozna uz vyresene:
-
-Otocit a zmenit popisky Passive a Active.
-Presunout popisek ON LED u timepulse 1
-
----------------------------------
-
-
-Asi zbytecne velke diry na SMA konektor.
-U antenniho svodu by se mohla doplnit med okolo pinu konektoru.
-
-Lidem pripada neprikticke zavedeni baterky, ptaji se zda by nebyl lepsi superkapacitor. Nevim jestli je take zvoleno vhodne pouzdro.
-
-Mohlo by se take vice ucesat provedeni PCB. 
-
-
-Konkurence:
-http://www.csgshop.com/product.php?id_product=35
-
-http://store.diydrones.com/3DR_GPS_LEA_6_p/br-3drlea-6.htm
-(+eagle data)
-
+V popiskách je zas znovu blbě nápis AKTIV!!
 
 
 
