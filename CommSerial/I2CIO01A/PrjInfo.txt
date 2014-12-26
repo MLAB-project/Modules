@@ -1,13 +1,16 @@
 ﻿[InfoShortDescription.en]
-I2C expander
+I2C IO expander
 
 [InfoShortDescription.cs]
-I2C expander
+I2C I/O expander
 
 [InfoLongDescription.en]
 
+This GPIO expander module is designed for 1.65 to 5.5 V operation. It provides general-purpose remote I/O expansion via the I²C interface.
+The module consists of two 8-bit Configurable, Input Port, Output Port, and Polarity Inversion registers.
 
 [InfoLongDescription.cs]
 
+Modul GPIO expanderu řízeného přes sběrnici I²C. Může být používán v rozsahu logických úrovní 1,65 až 5,5V. Vstupy a výstupy jsou konfigurovatelné přes 8bitové registry stejně jako inverze logických úrovní vstupů.
 
 [End]
