@@ -1,16 +1,15 @@
 [InfoShortDescription.en]
-HUB for I2C bus.
+I2C to SPI bridge
 
 [InfoShortDescription.cs]
-HUB pro I2C sběrnici.
+Konvertor z I²C na SPI
 
 [InfoLongDescription.en]
-Allows you to connect up to 8 I2C devices. Solution for connecting multiple I2C sensors with the same address on one bus. Possible to combine other voltage levels.
+Allows connection of SPI devices to I2C bus. The  module is capable co handle up to four SPI slaves.  Not used chip-select pins can be used as GPIO pins. 
 
 [InfoLongDescription.cs]
-Umožňuje připojit až 8 I2C zařízení. Řešení pro připojení více I2C senzorů se stejnou adresou na jednu sběrnici. Možno kombinovat i jiné napěťové úrovně.
+Modul je určený k připojení SPI zařízení na sběrnici I²C. Je možné připojit až čtyři SPI zařízení současně. Případně nevyužité piny  modou být používány jako GPIO. 
 
 [InfoBuyUST]
-http://www.ust.cz/shop/product_info.php?cPath=22_27&products_id=230&osCsid=nd8783lqmlq7t98fbhdjvv8vv2
 
 [End]
