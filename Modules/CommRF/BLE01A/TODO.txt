@@ -1,9 +1,9 @@
-Plosny spoj ma spatne vrstvy.  RF soucastky musi byt zespodu modulu, tak aby byly stinene proti kovove desce. 
+-Plosny spoj ma spatne vrstvy.  RF soucastky musi byt zespodu modulu, tak aby byly stinene proti kovove desce. 
 Podrobně je tento požadavek rozepsán v odstavci http://wiki.mlab.cz/doku.php?id=cs:rules&#layout_navrh_plosneho_spoje
 
-Krystal ma cesty vedene v nestinene vrstvě. U těchto vysokofrekvenčních spojů je nutné se vyhnout prokovům a raději vytvořit prokov v napájecí cestě, která kříží vedení od krystalu.
+-Krystal ma cesty vedene v nestinene vrstvě. U těchto vysokofrekvenčních spojů je nutné se vyhnout prokovům a raději vytvořit prokov v napájecí cestě, která kříží vedení od krystalu.
 
-Vodiče RXD a TXD opět zbytečně obsahují prokovy a vedení ve stínící vrstvě. Pro odstranění prokovů by stačilo prohodit jejich pozici na výstupním konektoru. 
+-Vodiče RXD a TXD opět zbytečně obsahují prokovy a vedení ve stínící vrstvě. Pro odstranění prokovů by stačilo prohodit jejich pozici na výstupním konektoru. 
 
 Svod od SMA konektoru pravděpodobně nerespektuje požadavky uvedené v datasheetu obvodu na impedanci cesty k anténě. Cesta by měla být určitě alespoň tlustčí.
 
