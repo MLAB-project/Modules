@@ -4,7 +4,7 @@ mount_hole = 3.5;
 clear = 0.175;
 nut_size = 6.6;
 
-MLAB_grid_xoffset = 3.5;
+MLAB_grid_xoffset = 3.4;
 MLAB_grid_yoffset = 1.5;
 
 difference () {
@@ -14,23 +14,23 @@ difference () {
 	//mount holes for ODROID
 
         translate ([4.5, 4.5,0])
-        cylinder (h = 3, r= (nut_size+clear)/2, $fn=6);
-        translate ([4.5, 4.5, 3.2])  // one solid layer for slicer (the holes will be pierced on demand )
+        cylinder (h = 6, r= (nut_size+clear)/2, $fn=6);
+        translate ([4.5, 4.5, 6.2])  // one solid layer for slicer (the holes will be pierced on demand )
         cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
 
         translate ([4.5 + 49, 4.5,0])
-        cylinder (h = 3, r= (nut_size+clear)/2, $fn=6);
-        translate ([4.5 + 49, 4.5, 3.2])  // one solid layer for slicer (the holes will be pierced on demand )
+        cylinder (h = 6, r= (nut_size+clear)/2, $fn=6);
+        translate ([4.5 + 49, 4.5, 6.2])  // one solid layer for slicer (the holes will be pierced on demand )
         cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
 
         translate ([4.5, 4.5 + 58,0])
-        cylinder (h = 3, r= (nut_size+clear)/2, $fn=6);
-        translate ([4.5, 4.5 + 58, 3.2])  // one solid layer for slicer (the holes will be pierced on demand )
+        cylinder (h = 6, r= (nut_size+clear)/2, $fn=6);
+        translate ([4.5, 4.5 + 58, 6.2])  // one solid layer for slicer (the holes will be pierced on demand )
         cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
 
         translate ([4.5 + 49, 4.5 + 58,0])
-        cylinder (h = 3, r= (nut_size+clear)/2, $fn=6);
-        translate ([4.5 + 49, 4.5 + 58, 3.2])  // one solid layer for slicer (the holes will be pierced on demand )
+        cylinder (h = 6, r= (nut_size+clear)/2, $fn=6);
+        translate ([4.5 + 49, 4.5 + 58, 6.2])  // one solid layer for slicer (the holes will be pierced on demand )
         cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
 
         ////////////////////////////////////
@@ -54,6 +54,13 @@ difference () {
 
         translate ([9,3.5, pedestal_height - 3])  // ODROID IR receiver
 	cube([7.5,2,5]);
+
+        translate ([19,10, pedestal_height - 5])  // Heatsink mount holes
+        cylinder (h = 6, r= 3, $fn=10);
+        translate ([39,61.6, pedestal_height - 5])  // Heatsink mount holes
+        cylinder (h = 6, r= 3, $fn=10);
+
+
         ////////////////////////////////////////
 
 // MLAB grid holes
