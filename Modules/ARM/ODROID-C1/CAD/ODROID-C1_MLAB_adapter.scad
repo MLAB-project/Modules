@@ -4,7 +4,7 @@ mount_hole = 3.5;
 clear = 0.175;
 nut_size = 6.6;
 
-MLAB_grid_xoffset = 3.4;
+MLAB_grid_xoffset = 3.6;
 MLAB_grid_yoffset = 1.5;
 
 difference () {
