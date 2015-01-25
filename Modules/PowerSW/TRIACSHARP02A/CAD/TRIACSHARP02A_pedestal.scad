@@ -22,6 +22,13 @@ difference () {
 
    		translate ([0, 68.612 - 8, 0])
 		cube([8,8,pedestal_height]);
+               
+                //insulating wall
+   		translate ([20, 0, 0])
+		cube([1,70,pedestal_height]);
+   		translate ([22, 0, 0])
+		cube([1,70,pedestal_height]);
+            
 	}
 
         ////////////////////////////////////////
