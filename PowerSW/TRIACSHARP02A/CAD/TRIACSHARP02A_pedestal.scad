@@ -8,19 +8,19 @@ nut_size = 6.6;
 difference () {
 	cube([50.292,70.612,pedestal_height]);
 
-	translate ([1, 1,2.5])
+	translate ([1, 2, 2.5])
 	difference(){
-		cube([48.292,68.612,pedestal_height]);
+		cube([47.292,66.612,pedestal_height]);
 
 		cube([8,8,pedestal_height]);
 
-   		translate ([48.292 - 8, 0, 0])
+   		translate ([47.292 - 8, 0, 0])
 		cube([8,8,pedestal_height]);
 
-   		translate ([48.292 - 8, 68.612 - 8, 0])
+   		translate ([47.292 - 8, 66.612 - 8, 0])
 		cube([8,8,pedestal_height]);
 
-   		translate ([0, 68.612 - 8, 0])
+   		translate ([0, 66.612 - 8, 0])
 		cube([8,8,pedestal_height]);
                
                 //insulating wall
