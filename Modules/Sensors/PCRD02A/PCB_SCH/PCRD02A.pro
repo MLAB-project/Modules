@@ -1,6 +1,6 @@
-update=8.12.2014 18:34:24
+update=28. 1. 2015 15:02:56
 version=1
-last_client=eeschema
+last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
@@ -32,3 +32,16 @@ version=1
 LibDir=../../../../../library/KiCAD/symbols
 [eeschema/libraries]
 LibName1=Jumpers
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
