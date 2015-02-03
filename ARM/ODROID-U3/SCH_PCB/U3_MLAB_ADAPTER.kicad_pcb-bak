@@ -429,7 +429,7 @@
     (descr "1 pin")
     (tags "CONN DEV")
     (path /5485F8D0)
-    (fp_text reference J6 (at -3.394 -0.038 180) (layer F.SilkS)
+    (fp_text reference J6 (at -3.14 3.645 180) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.2032)))
     )
     (fp_text value IOS_PORT_#1 (at 0 5.334 90) (layer F.SilkS) hide
