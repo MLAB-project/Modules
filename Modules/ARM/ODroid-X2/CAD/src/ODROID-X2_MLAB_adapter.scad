@@ -9,8 +9,8 @@ MLAB_grid_yoffset = 5.61;
 MLAB_grid = 10.16;
 
 ODROID_holes_offset = 5.25;
-ODROID_holes_ydistance = 82;
 ODROID_holes_xdistance = 86;
+ODROID_holes_ydistance = 82;
 
 difference () {
 	cube([96,92.5,pedestal_height]);          // base plastics brick
@@ -40,11 +40,11 @@ difference () {
 /////////////////////////////////////////
 //      holes for components at the bottom side of the PCB.
 
-	translate ([15.5, 83.1 , pedestal_height - 1.7]) // IO connector
-	cube([64, 5, 5]);
+	translate ([15.5, 84 , pedestal_height - 3]) // IO connector
+	cube([64, 6, 5]);
         
         translate ([3, 9, pedestal_height - 3.5])  // USB connector
-	cube([18,31,5]);
+	cube([18,33,5]);
 
 
         translate ([9, 1.1 , pedestal_height - 3.5]) // HOLE for ODROD's USB and Ethernet connectors
@@ -53,8 +53,8 @@ difference () {
 	translate ([66, 0 , pedestal_height - 3.5]) // HOLE for ODROD's Passive components 
 	cube([20,79,5]);
 
-	translate ([0, 52 , pedestal_height - 3.5]) // Jack connectors
-	cube([30,20,5]);
+	translate ([0, 54 , pedestal_height - 3]) // Jack connectors
+	cube([30,28.5,5]);
 
 
 	translate ([22, 43 , pedestal_height - 3.5]) // eMMc Card 
