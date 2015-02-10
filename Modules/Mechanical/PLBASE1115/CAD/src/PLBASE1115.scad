@@ -11,6 +11,13 @@ legs_height = 5;
 
 $fn=20;
 
+module leg () {
+    difference () {
+        cylinder(r=MLAB_grid/2 + 0.3,h=legs_height);
+        cylinder(r=MLAB_grid/2 - 0.3,h=legs_height);
+    }
+}
+
 difference () {
     minkowski()
     {
@@ -26,26 +33,16 @@ difference () {
 }
 
 translate ([MLAB_grid_xoffset, MLAB_grid_yoffset, 2])
-    difference () {
-        cylinder(r=MLAB_grid/2 + 0.3,h=legs_height);
-        cylinder(r=MLAB_grid/2 - 0.3,h=legs_height);
-    }
+leg(); 
 
 translate ([MLAB_grid_xoffset + 14*MLAB_grid, MLAB_grid_yoffset, 2])
-    difference () {
-        cylinder(r=MLAB_grid/2 + 0.3,h=legs_height);
-        cylinder(r=MLAB_grid/2 - 0.3,h=legs_height);
-    }
-
+leg(); 
 
 translate ([MLAB_grid_xoffset + 14*MLAB_grid, MLAB_grid_yoffset + 10*MLAB_grid, 2])
-    difference () {
-        cylinder(r=MLAB_grid/2 + 0.3,h=legs_height);
-        cylinder(r=MLAB_grid/2 - 0.3,h=legs_height);
-    }
+leg(); 
+
+translate ([MLAB_grid_xoffset + 7*MLAB_grid, MLAB_grid_yoffset + 5*MLAB_grid, 2])
+leg(); 
 
 translate ([MLAB_grid_xoffset, MLAB_grid_yoffset + 10*MLAB_grid, 2])
-    difference () {
-        cylinder(r=MLAB_grid/2 + 0.3,h=legs_height);
-        cylinder(r=MLAB_grid/2 - 0.3,h=legs_height);
-    }
+leg(); 
