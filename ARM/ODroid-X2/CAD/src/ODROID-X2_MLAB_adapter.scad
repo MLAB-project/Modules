@@ -47,30 +47,18 @@ difference () {
 	cube([18,33,5]);
 
 
-        translate ([9, 1.1 , pedestal_height - 3.5]) // HOLE for ODROD's USB and Ethernet connectors
+        translate ([9, 2.1 , pedestal_height - 3.5]) // HOLE for ODROD's USB and Ethernet connectors
 	cube([73,27,5]);
 
-	translate ([66, 0 , pedestal_height - 3.5]) // HOLE for ODROD's Passive components 
+	translate ([66, 0 , pedestal_height - 3.5]) // HOLE for ODROD's Passive components and power wires to MLAB UNIPOWER module. 
 	cube([20,79,5]);
 
 	translate ([0, 54 , pedestal_height - 3]) // Jack connectors
-	cube([30,28.5,5]);
+	cube([30,28,5]);
 
 
 	translate ([22, 43 , pedestal_height - 3.5]) // eMMc Card 
 	cube([27,18,5]);
-
-
-/*
-	translate ([37,3, pedestal_height - 3])  // ODROID serial connector 
-	cube([10,2,5]);
-
-
-        translate ([19,10, pedestal_height - 5])  // Heatsink mount holes
-        cylinder (h = 6, r= 3, $fn=10);
-        translate ([39,61.6, pedestal_height - 5])  // Heatsink mount holes
-        cylinder (h = 6, r= 3, $fn=10);
-*/
 
         ////////////////////////////////////////
 
@@ -88,10 +76,10 @@ difference () {
         
 ////  lightening central holes
         
-	translate ([12.5,10, 0])  // ODROIDs passive components hole. 
+	translate ([12.5,10, 0])  
 	cube([71,22,pedestal_height ]);        
         
-	translate ([12.5,42, 0])  // ODROIDs passive components hole. 
+	translate ([12.5,42, 0])  
 	cube([71,40,pedestal_height ]);        
 
 }
