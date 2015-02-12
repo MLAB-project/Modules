@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -165,7 +165,7 @@
 <text x="20.193" y="38.4175" size="1.27" layer="21" font="vector">POWER</text>
 <text x="2.667" y="18.923" size="1.27" layer="16" font="vector" rot="MR180">GPS01B</text>
 <text x="3.81" y="20.574" size="1.27" layer="16" font="vector" rot="MR180">MLAB</text>
-<text x="13.0175" y="31.242" size="1.27" layer="21" font="vector">AKTIV</text>
+<text x="13.0175" y="31.242" size="1.27" layer="21" font="vector">ACTIV</text>
 </plain>
 <libraries>
 <library name="3DRobotics">
@@ -1843,6 +1843,9 @@ design rules under a new name.</description>
 <autorouter>
 <pass name="Default">
 <param name="RoutingGrid" value="50mil"/>
+<param name="AutoGrid" value="1"/>
+<param name="Efforts" value="0"/>
+<param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
 <param name="PrefDir.1" value="|"/>
 <param name="PrefDir.2" value="0"/>
