@@ -17,18 +17,19 @@ difference () {
 	    cube([150+thickness/2,110+thickness/2,height+thickness/2]);          // base plastics brick
         cylinder(r=5,h=0.1);
     }
-
-    minkowski() {
-	    cube([150-thickness/2, 110-thickness/2, height]);          // hollow
-        cylinder(r=5,h=0.1);
-    }
-
-    difference () {
+    translate ([thickness, thickness, 0])
         minkowski() {
-	        cube([150+clear, 110+clear, 5]);          // hollow for BASE1115
+                cube([150-thickness, 110-thickness, height]);          // hollow
             cylinder(r=5,h=0.1);
         }
-        /// TODO Fixing cilinders teeths
-    }
+
+    translate ([thickness/2, thickness/2, 0])
+        difference () {
+            minkowski() {
+                    cube([150+clear, 110+clear, 5]);          // hollow for BASE1115
+                cylinder(r=5,h=0.1);
+            }
+            /// TODO Fixing cilinders teeths
+        }
 }
 

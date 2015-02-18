@@ -115,7 +115,7 @@ difference () {
  
 	translate ([0,74.9, pedestal_height - 8.5])	// Hole for MLAB  PCB
 	cube([50,25.1,2]);
- 	translate ([7.5,78,pedestal_height - 8.5])	// Hole For connectors above the adapter PCB
+ 	translate ([7.5,77,pedestal_height - 8.5])	// Hole For connectors above the adapter PCB
 	cube([35.5,17.1,10]);
 
         translate ([0,74.9, pedestal_height - 6.5])
