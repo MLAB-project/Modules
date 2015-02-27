@@ -1,11 +1,79 @@
 EESchema Schematic File Version 2
+LIBS:74xgxx
+LIBS:74xx
+LIBS:ac-dc
+LIBS:actel
+LIBS:adc-dac
+LIBS:analog_switches
+LIBS:atmel
+LIBS:audio
+LIBS:brooktre
+LIBS:cmos4000
+LIBS:cmos_ieee
+LIBS:conn
+LIBS:contrib
+LIBS:cypress
+LIBS:dc-dc
+LIBS:device
+LIBS:digital-audio
+LIBS:display
+LIBS:dsp
+LIBS:elec-unifil
+LIBS:ftdi
+LIBS:gennum
+LIBS:graphic
+LIBS:hc11
+LIBS:header
+LIBS:intel
+LIBS:interface
+LIBS:ir
+LIBS:linear
+LIBS:logo
+LIBS:mechanical
+LIBS:memory
+LIBS:microchip
+LIBS:microchip_pic10mcu
+LIBS:microchip_pic12mcu
+LIBS:microchip_pic16mcu
+LIBS:microchip_pic18mcu
+LIBS:microchip_pic32mcu
+LIBS:microcontrollers
+LIBS:motor_drivers
+LIBS:motorola
+LIBS:msp430
+LIBS:nordicsemi
+LIBS:nxp_armmcu
+LIBS:onsemi
+LIBS:opto
+LIBS:philips
 LIBS:power
+LIBS:powerint
+LIBS:pspice
+LIBS:references
+LIBS:regul
+LIBS:relays
+LIBS:rfcom
+LIBS:sensors
+LIBS:silabs
+LIBS:siliconi
+LIBS:special
+LIBS:stm8
+LIBS:stm32
+LIBS:supertex
+LIBS:switches
+LIBS:texas
+LIBS:transf
+LIBS:transistors
+LIBS:ttl_ieee
+LIBS:valves
+LIBS:video
+LIBS:xilinx
 LIBS:AT32TQ14401A-cache
-EELAYER 24 0
+EELAYER 25 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 1 2
+Sheet 1 1
 Title "Atmel AVR32 CPU module"
 Date "03 Jul 2014"
 Rev "V1.0"
@@ -974,7 +1042,7 @@ Wire Wire Line
 	6450 6650 6800 6650
 Connection ~ 4550 5350
 Wire Wire Line
-	3100 7250 3100 7150
+	3100 7050 3100 7250
 Wire Wire Line
 	6650 9000 6650 9100
 Wire Wire Line
@@ -989,8 +1057,7 @@ Connection ~ 4450 9000
 Wire Wire Line
 	4150 9100 4150 9000
 Wire Wire Line
-	3450 7250 3450 7150
-Connection ~ 3450 7150
+	3450 7050 3450 7250
 Wire Wire Line
 	3450 10100 3450 10000
 Wire Wire Line
@@ -1104,9 +1171,6 @@ Connection ~ 2150 6300
 Wire Wire Line
 	2250 6400 2250 6300
 Connection ~ 2250 6300
-Wire Wire Line
-	2350 6400 2350 6300
-Connection ~ 2350 6300
 Wire Wire Line
 	2450 6400 2450 6300
 Connection ~ 2450 6300
@@ -2730,12 +2794,6 @@ Wire Wire Line
 	10450 4200 10450 4150
 Wire Wire Line
 	10450 6700 10450 6650
-$Sheet
-S 6175 2025 675  875 
-U 53BB093C
-F0 "Power" 50
-F1 "power.sch" 50
-$EndSheet
 $Comp
 L 3V3 #PWR034
 U 1 1 53BB0C9A
@@ -2828,4 +2886,245 @@ Wire Wire Line
 Connection ~ 7100 5450
 Wire Wire Line
 	4150 9000 6650 9000
+$Comp
+L CP1 C30
+U 1 1 54F096F1
+P 8820 2715
+F 0 "C30" H 8870 2815 50  0000 L CNN
+F 1 "10uF" H 8870 2615 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:TantalC_SizeB_EIA-3528_Reflow" H 8820 2715 60  0001 C CNN
+F 3 "" H 8820 2715 60  0000 C CNN
+	1    8820 2715
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C29
+U 1 1 54F096F8
+P 7370 2715
+F 0 "C29" H 7420 2815 50  0000 L CNN
+F 1 "10uF" H 7420 2615 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:TantalC_SizeB_EIA-3528_Reflow" H 7370 2715 60  0001 C CNN
+F 3 "" H 7370 2715 60  0000 C CNN
+	1    7370 2715
+	1    0    0    -1  
+$EndComp
+$Comp
+L DIODE D1
+U 1 1 54F09706
+P 6895 2740
+F 0 "D1" H 6895 2840 40  0000 C CNN
+F 1 "DIODE" H 6895 2640 40  0000 C CNN
+F 2 "SMD_Packages:DO-214AC(SMA)" H 6895 2740 60  0001 C CNN
+F 3 "" H 6895 2740 60  0000 C CNN
+	1    6895 2740
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8020 2815 8020 2765
+Wire Wire Line
+	7370 2365 7370 2515
+Wire Wire Line
+	6570 2465 7620 2465
+Wire Wire Line
+	8820 2365 8820 2515
+Wire Wire Line
+	8820 2465 8420 2465
+Wire Wire Line
+	7370 2965 7370 2915
+Wire Wire Line
+	8820 2915 8820 3065
+Connection ~ 8820 2465
+Connection ~ 7370 2465
+Wire Wire Line
+	6620 2365 6620 2665
+Wire Wire Line
+	6570 2365 6620 2365
+Wire Wire Line
+	6570 2565 6620 2565
+Wire Wire Line
+	6895 2540 6895 2465
+Connection ~ 6895 2465
+$Comp
+L +5V #PWR040
+U 1 1 54F0971C
+P 7370 2365
+F 0 "#PWR040" H 7370 2455 20  0001 C CNN
+F 1 "+5V" H 7370 2495 30  0000 C CNN
+F 2 "" H 7370 2365 60  0000 C CNN
+F 3 "" H 7370 2365 60  0000 C CNN
+	1    7370 2365
+	1    0    0    -1  
+$EndComp
+$Comp
+L 3V3 #PWR041
+U 1 1 54F09722
+P 8820 2365
+F 0 "#PWR041" H 8820 2465 40  0001 C CNN
+F 1 "3V3" H 8820 2490 40  0000 C CNN
+F 2 "" H 8820 2365 60  0000 C CNN
+F 3 "" H 8820 2365 60  0000 C CNN
+	1    8820 2365
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR042
+U 1 1 54F09728
+P 6620 2665
+F 0 "#PWR042" H 6620 2665 30  0001 C CNN
+F 1 "GND" H 6620 2595 30  0001 C CNN
+F 2 "" H 6620 2665 60  0000 C CNN
+F 3 "" H 6620 2665 60  0000 C CNN
+	1    6620 2665
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR043
+U 1 1 54F0972E
+P 6895 2940
+F 0 "#PWR043" H 6895 2940 30  0001 C CNN
+F 1 "GND" H 6895 2870 30  0001 C CNN
+F 2 "" H 6895 2940 60  0000 C CNN
+F 3 "" H 6895 2940 60  0000 C CNN
+	1    6895 2940
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR044
+U 1 1 54F09734
+P 7370 2965
+F 0 "#PWR044" H 7370 2965 30  0001 C CNN
+F 1 "GND" H 7370 2895 30  0001 C CNN
+F 2 "" H 7370 2965 60  0000 C CNN
+F 3 "" H 7370 2965 60  0000 C CNN
+	1    7370 2965
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR045
+U 1 1 54F0973A
+P 8020 2815
+F 0 "#PWR045" H 8020 2815 30  0001 C CNN
+F 1 "GND" H 8020 2745 30  0001 C CNN
+F 2 "" H 8020 2815 60  0000 C CNN
+F 3 "" H 8020 2815 60  0000 C CNN
+	1    8020 2815
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR046
+U 1 1 54F09740
+P 8820 3065
+F 0 "#PWR046" H 8820 3065 30  0001 C CNN
+F 1 "GND" H 8820 2995 30  0001 C CNN
+F 2 "" H 8820 3065 60  0000 C CNN
+F 3 "" H 8820 3065 60  0000 C CNN
+	1    8820 3065
+	1    0    0    -1  
+$EndComp
+$Comp
+L NCP1117ST33T3G U2
+U 1 1 54F09746
+P 8020 2515
+F 0 "U2" H 8020 2765 40  0000 C CNN
+F 1 "NCP1117ST33T3G" H 8020 2715 40  0000 C CNN
+F 2 "SMD_Packages:SOT223" H 8020 2515 60  0001 C CNN
+F 3 "" H 8020 2515 60  0000 C CNN
+	1    8020 2515
+	1    0    0    -1  
+$EndComp
+$Comp
+L HEADER_2x03_PARALLEL J112
+U 1 1 54F09149
+P 6320 2465
+F 0 "J112" H 6320 2265 60  0000 C CNN
+F 1 "HEADER_2x03_PARALLEL" H 6320 2665 60  0000 C CNN
+F 2 "MLAB_Jumpery:Pin_Header_Straight_2x03" H 6320 2565 60  0001 C CNN
+F 3 "" H 6320 2565 60  0000 C CNN
+	1    6320 2465
+	-1   0    0    -1  
+$EndComp
+Connection ~ 6620 2565
+$Comp
+L HOLE M2
+U 1 1 54F1634E
+P 12540 7630
+F 0 "M2" H 12410 7630 60  0000 C CNN
+F 1 "HOLE 3mm" H 12330 7720 60  0000 C CNN
+F 2 "" H 12540 7630 60  0000 C CNN
+F 3 "" H 12540 7630 60  0000 C CNN
+	1    12540 7630
+	1    0    0    -1  
+$EndComp
+$Comp
+L HOLE M1
+U 1 1 54F165B9
+P 12540 7430
+F 0 "M1" H 12390 7570 60  0000 C CNN
+F 1 "HOLE 3mm" H 12330 7650 60  0000 C CNN
+F 2 "" H 12540 7430 60  0000 C CNN
+F 3 "" H 12540 7430 60  0000 C CNN
+	1    12540 7430
+	1    0    0    -1  
+$EndComp
+$Comp
+L HOLE M4
+U 1 1 54F1685F
+P 12770 7630
+F 0 "M4" H 12950 7650 60  0000 C CNN
+F 1 "HOLE 3mm" H 13130 7740 60  0000 C CNN
+F 2 "" H 12770 7630 60  0000 C CNN
+F 3 "" H 12770 7630 60  0000 C CNN
+	1    12770 7630
+	1    0    0    -1  
+$EndComp
+$Comp
+L HOLE M3
+U 1 1 54F16865
+P 12770 7430
+F 0 "M3" H 12770 7530 60  0000 C CNN
+F 1 "HOLE 3mm" H 12960 7630 60  0000 C CNN
+F 2 "" H 12770 7430 60  0000 C CNN
+F 3 "" H 12770 7430 60  0000 C CNN
+	1    12770 7430
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR047
+U 1 1 54F175C1
+P 12640 7650
+F 0 "#PWR047" H 12640 7650 30  0001 C CNN
+F 1 "GND" H 12640 7580 30  0001 C CNN
+F 2 "" H 12640 7650 60  0001 C CNN
+F 3 "" H 12640 7650 60  0001 C CNN
+	1    12640 7650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12590 7430 12640 7430
+Wire Wire Line
+	12640 7430 12640 7650
+Wire Wire Line
+	12590 7630 12640 7630
+Connection ~ 12640 7630
+$Comp
+L GND #PWR048
+U 1 1 54F1806F
+P 12850 7650
+F 0 "#PWR048" H 12850 7650 30  0001 C CNN
+F 1 "GND" H 12850 7580 30  0001 C CNN
+F 2 "" H 12850 7650 60  0001 C CNN
+F 3 "" H 12850 7650 60  0001 C CNN
+	1    12850 7650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12820 7430 12850 7430
+Wire Wire Line
+	12850 7430 12850 7650
+Wire Wire Line
+	12820 7630 12850 7630
+Connection ~ 12850 7630
+Wire Wire Line
+	2950 7050 3450 7050
+Connection ~ 3100 7050
 $EndSCHEMATC

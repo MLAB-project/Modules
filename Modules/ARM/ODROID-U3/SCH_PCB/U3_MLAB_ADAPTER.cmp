@@ -1,31 +1,31 @@
-Cmp-Mod V01 Created by Cvpcb (2014-10-14 BZR 5188)-product   date = 9.12.2014 15:54:31
+Cmp-Mod V01 Created by Cvpcb 0.201502151246+5420~21~ubuntu14.10.1-product   date = Po 16. únor 2015, 16:10:08 CET
 
 BeginCmp
 TimeStamp = /5485FFA7;
 Reference = C1;
-ValeurCmp = CP2;
+ValeurCmp = 10uF;
 IdModule  = MLAB_C:TantalC_SizeC_Reflow;
 EndCmp
 
 BeginCmp
 TimeStamp = /548601CE;
 Reference = C2;
-ValeurCmp = CP2;
+ValeurCmp = 10uF;
 IdModule  = MLAB_C:TantalC_SizeC_Reflow;
 EndCmp
 
 BeginCmp
 TimeStamp = /5485FEF7;
 Reference = D1;
-ValeurCmp = DIODESCH;
-IdModule  = MLAB_D:Diode-MiniMELF_Standard;
+ValeurCmp = BAS85;
+IdModule  = Diodes_SMD:Diode-MELF_Standard;
 EndCmp
 
 BeginCmp
 TimeStamp = /548601BC;
 Reference = D2;
-ValeurCmp = DIODESCH;
-IdModule  = MLAB_D:Diode-MiniMELF_Standard;
+ValeurCmp = BAS85;
+IdModule  = Diodes_SMD:Diode-MiniMELF_Standard;
 EndCmp
 
 BeginCmp
