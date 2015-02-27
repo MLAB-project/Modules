@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-jul-16 BZR unknown)-product   date = St 8. říjen 2014, 11:11:52 CEST
+Cmp-Mod V01 Created by Cvpcb 0.201502270946+5453~21~ubuntu14.10.1-product   date = Pá 27. únor 2015, 15:27:09 CET
 
 BeginCmp
 TimeStamp = /4AC4586E;
@@ -197,14 +197,14 @@ IdModule  = SMD_Packages:SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /53BB093C/5324F075;
+TimeStamp = /54F096F8;
 Reference = C29;
 ValeurCmp = 10uF;
 IdModule  = Capacitors_Tantalum_SMD:TantalC_SizeB_EIA-3528_Reflow;
 EndCmp
 
 BeginCmp
-TimeStamp = /53BB093C/5324F061;
+TimeStamp = /54F096F1;
 Reference = C30;
 ValeurCmp = 10uF;
 IdModule  = Capacitors_Tantalum_SMD:TantalC_SizeB_EIA-3528_Reflow;
@@ -218,7 +218,7 @@ IdModule  = Pin_Headers:Pin_Header_Straight_2x05;
 EndCmp
 
 BeginCmp
-TimeStamp = /53BB093C/53275986;
+TimeStamp = /54F09706;
 Reference = D1;
 ValeurCmp = DIODE;
 IdModule  = SMD_Packages:DO-214AC(SMA);
@@ -1009,9 +1009,9 @@ IdModule  = MLAB_Jumpery:Pin_Header_Straight_2x01;
 EndCmp
 
 BeginCmp
-TimeStamp = /53BB093C/5324F25A;
+TimeStamp = /54F09149;
 Reference = J112;
-ValeurCmp = JUMP_3X2_CONN;
+ValeurCmp = HEADER_2x03_PARALLEL;
 IdModule  = MLAB_Jumpery:Pin_Header_Straight_2x03;
 EndCmp
 
@@ -1020,6 +1020,34 @@ TimeStamp = /53B8912D;
 Reference = L1;
 ValeurCmp = INDUCTOR_SMALL;
 IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F165B9;
+Reference = M1;
+ValeurCmp = HOLE 3mm;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1634E;
+Reference = M2;
+ValeurCmp = HOLE 3mm;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F16865;
+Reference = M3;
+ValeurCmp = HOLE 3mm;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1685F;
+Reference = M4;
+ValeurCmp = HOLE 3mm;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
 EndCmp
 
 BeginCmp
@@ -1086,7 +1114,7 @@ IdModule  = SMD_Packages:TQFP144;
 EndCmp
 
 BeginCmp
-TimeStamp = /53BB093C/54355D61;
+TimeStamp = /54F09746;
 Reference = U2;
 ValeurCmp = NCP1117ST33T3G;
 IdModule  = SMD_Packages:SOT223;
