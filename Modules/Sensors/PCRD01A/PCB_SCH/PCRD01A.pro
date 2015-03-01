@@ -1,4 +1,4 @@
-update=Po 8. prosinec 2014, 19:43:08 CET
+update=28.2.2015 18:52:16
 version=1
 last_client=kicad
 [cvpcb]
@@ -39,3 +39,16 @@ RptLab=1
 LabSize=60
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
