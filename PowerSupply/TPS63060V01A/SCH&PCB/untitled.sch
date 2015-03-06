@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -693,6 +693,7 @@ W = angled&lt;p&gt;
 <pad name="P$3" x="0.4" y="0.4" drill="0.3" diameter="0.4064"/>
 <pad name="P$4" x="-0.4" y="-0.4" drill="0.3" diameter="0.4064"/>
 <pad name="P$5" x="-0.4" y="0.4" drill="0.3" diameter="0.4064"/>
+<circle x="-1.1938" y="-1.1684" radius="0.1703875" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -933,7 +934,7 @@ W = angled&lt;p&gt;
 <part name="R6" library="moje_R" deviceset="R0805" device="" value="91k"/>
 <part name="GND13" library="moje" deviceset="GND" device=""/>
 <part name="C6" library="moje_C" deviceset="C" device="" value="100u"/>
-<part name="X5" library="moje_io" deviceset="TPS63060" device=""/>
+<part name="X5" library="moje_io" deviceset="TPS63060" device="" value="TPS63060"/>
 <part name="GND4" library="moje" deviceset="GND" device=""/>
 <part name="C1" library="moje_C" deviceset="C0805" device="" value="100nF"/>
 <part name="GND5" library="moje" deviceset="GND" device=""/>
@@ -956,7 +957,10 @@ W = angled&lt;p&gt;
 <text x="77.47" y="-17.78" size="1.778" layer="97">OUTPUT</text>
 </plain>
 <instances>
-<instance part="C16" gate="G$1" x="-73.66" y="3.81" rot="R180"/>
+<instance part="C16" gate="G$1" x="-73.66" y="3.81" smashed="yes" rot="R180">
+<attribute name="NAME" x="-72.009" y="2.286" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-78.359" y="7.366" size="1.778" layer="96" rot="R270"/>
+</instance>
 <instance part="GND28" gate="G$1" x="-73.66" y="-1.27"/>
 <instance part="GND33" gate="G$1" x="-15.24" y="-16.51"/>
 <instance part="SV5" gate="-1" x="72.39" y="7.62"/>
@@ -964,7 +968,10 @@ W = angled&lt;p&gt;
 <instance part="SV5" gate="-3" x="72.39" y="0"/>
 <instance part="GND24" gate="G$1" x="64.77" y="-7.62"/>
 <instance part="GND35" gate="G$1" x="-83.82" y="-1.27"/>
-<instance part="C20" gate="G$1" x="-83.82" y="3.81" rot="R270"/>
+<instance part="C20" gate="G$1" x="-83.82" y="3.81" smashed="yes" rot="R270">
+<attribute name="NAME" x="-83.185" y="2.2225" size="1.6764" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-86.995" y="7.3025" size="1.6764" layer="96" rot="MR270"/>
+</instance>
 <instance part="X9" gate="G$1" x="-54.61" y="-1.27" smashed="yes">
 <attribute name="NAME" x="-62.23" y="5.08" size="1.27" layer="95"/>
 <attribute name="VALUE" x="-59.69" y="-8.89" size="1.27" layer="96"/>
