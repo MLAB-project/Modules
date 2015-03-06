@@ -648,7 +648,7 @@
   )
 
   (module Hrebinky:Pin_Header_Straight_2x03 placed (layer F.Cu) (tedit 5482DC61) (tstamp 5482DFFE)
-    (at 50.419 -16.383 90)
+    (at 46.4566 -16.8656 90)
     (descr "1 pin")
     (tags "CONN DEV")
     (path /54839C4F)
@@ -1185,6 +1185,7 @@
   (gr_line (start 0.256 -0.256) (end 60.704 -0.256) (angle 90) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 0.256 -0.256) (end 0.256 -30.224) (angle 90) (layer Edge.Cuts) (width 0.1))
 
+  (segment (start 48.5775 -15.8115) (end 49.149 -16.383) (width 0.5) (layer B.Cu) (net 0))
   (segment (start 14.732 -19.4945) (end 16.80718 -19.4945) (width 0.5) (layer B.Cu) (net 1))
   (segment (start 16.80718 -19.4945) (end 17.7165 -20.40382) (width 0.5) (layer B.Cu) (net 1))
   (segment (start 14.732 -19.4945) (end 14.732 -21.2725) (width 0.5) (layer B.Cu) (net 1))
@@ -1304,7 +1305,6 @@
   (segment (start 40.132 -12.5095) (end 40.386 -12.7635) (width 0.5) (layer B.Cu) (net 9))
   (segment (start 40.132 -14.9225) (end 40.386 -14.6685) (width 0.4) (layer B.Cu) (net 10))
   (segment (start 33.655 -21.59) (end 33.655 -21.2725) (width 0.4) (layer B.Cu) (net 12))
-  (segment (start 48.5775 -15.8115) (end 49.149 -16.383) (width 0.5) (layer B.Cu) (net 13))
   (segment (start 23.37501 -14.35801) (end 23.37501 -13.843) (width 0.5) (layer B.Cu) (net 14))
   (segment (start 23.41001 -14.39301) (end 23.37501 -14.35801) (width 0.5) (layer B.Cu) (net 14))
   (segment (start 23.41001 -14.959821) (end 23.41001 -14.39301) (width 0.5) (layer B.Cu) (net 14))
