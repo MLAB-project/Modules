@@ -963,9 +963,6 @@ Connection ~ 10350 4200
 Wire Wire Line
 	3450 4500 3750 4500
 Wire Wire Line
-	3350 4600 3750 4600
-Connection ~ 3350 4600
-Wire Wire Line
 	3250 6700 3250 6800
 Wire Wire Line
 	3500 6700 3500 6800
@@ -1005,4 +1002,19 @@ Text Label 2300 3750 0    60   ~ 0
 K
 Text Label 2650 3750 0    60   ~ 0
 A
+$Comp
+L V+ #PWR?
+U 1 1 54F0D885
+P 3650 4650
+F 0 "#PWR?" H 3650 4750 30  0001 C CNN
+F 1 "V+" H 3650 4760 30  0000 C CNN
+F 2 "" H 3650 4650 60  0000 C CNN
+F 3 "" H 3650 4650 60  0000 C CNN
+	1    3650 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 4650 3750 4650
+Wire Wire Line
+	3750 4650 3750 4600
 $EndSCHEMATC
