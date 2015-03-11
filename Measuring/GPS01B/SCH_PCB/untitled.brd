@@ -117,8 +117,6 @@
 <wire x1="60.706" y1="0.254" x2="60.706" y2="40.386" width="0" layer="20"/>
 <wire x1="60.706" y1="40.386" x2="0.254" y2="40.386" width="0" layer="20"/>
 <wire x1="0.254" y1="40.386" x2="0.254" y2="0.254" width="0" layer="20"/>
-<dimension x1="60.96" y1="40.64" x2="0" y2="40.64" x3="30.48" y3="46.355" textsize="3.5" layer="48"/>
-<dimension x1="0" y1="40.64" x2="0" y2="0" x3="-16.51" y3="20.32" textsize="3.5" layer="48"/>
 <text x="19.685" y="8.5725" size="1.27" layer="21" font="vector" rot="R90">TIMEPULSE2</text>
 <text x="22.225" y="8.5725" size="1.27" layer="21" font="vector" rot="R90">GND</text>
 <text x="25.7175" y="8.5725" size="1.27" layer="21" font="vector" rot="R90">TXD</text>
