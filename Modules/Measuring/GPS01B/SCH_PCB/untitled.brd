@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.2.0">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -140,7 +140,7 @@
 <text x="9.7155" y="37.465" size="1.27" layer="21" font="vector">ANT.TYPE</text>
 <wire x1="10.4775" y1="33.655" x2="14.9225" y2="33.655" width="0.3048" layer="21"/>
 <wire x1="13.0175" y1="33.02" x2="17.4625" y2="33.02" width="0.3048" layer="21"/>
-<text x="11.176" y="32.8295" size="1.27" layer="21" font="vector" rot="R270">PASSIV</text>
+<text x="10.922" y="33.4645" size="1.27" layer="21" font="vector" rot="R270">Passive</text>
 <text x="20.828" y="27.559" size="1.778" layer="21" font="vector">MLAB.CZ</text>
 <text x="21.0185" y="23.9395" size="1.778" layer="21" font="vector">GPS01B</text>
 <text x="22.352" y="21.6535" size="1.778" layer="21" font="vector">2015</text>
@@ -165,7 +165,7 @@
 <text x="20.193" y="38.4175" size="1.27" layer="21" font="vector">POWER</text>
 <text x="2.667" y="18.923" size="1.27" layer="16" font="vector" rot="MR180">GPS01B</text>
 <text x="3.81" y="20.574" size="1.27" layer="16" font="vector" rot="MR180">MLAB</text>
-<text x="13.0175" y="31.242" size="1.27" layer="21" font="vector">ACTIV</text>
+<text x="13.0175" y="31.242" size="1.27" layer="21" font="vector">Active</text>
 </plain>
 <libraries>
 <library name="3DRobotics">
@@ -1843,9 +1843,6 @@ design rules under a new name.</description>
 <autorouter>
 <pass name="Default">
 <param name="RoutingGrid" value="50mil"/>
-<param name="AutoGrid" value="1"/>
-<param name="Efforts" value="0"/>
-<param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
 <param name="PrefDir.1" value="|"/>
 <param name="PrefDir.2" value="0"/>
