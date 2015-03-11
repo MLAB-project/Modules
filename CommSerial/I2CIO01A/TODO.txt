@@ -1,4 +1,0 @@
-Jsou špatně označené adresy v potisku modulu pro obvod TCA9535. 
-XY má být 0x22
-:X má být 0x23
-Ve schéma je zbytečně rezistor R23. Stačí pouze už existující R4 a rezistor R21 buď zrušit a nebo nahradit nulovým odporem. 
