@@ -31,7 +31,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:Jumpers
 LIBS:I2CSPI01A-cache
-EELAYER 24 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -404,7 +404,7 @@ A1
 Text Label 7050 1950 0    60   ~ 0
 A0
 Text Notes 6450 1050 0    60   ~ 0
-Set addres
+Set address
 Text Label 5750 2000 0    60   ~ 0
 A2
 Wire Wire Line
