@@ -1,4 +1,4 @@
-update=Pá 27. únor 2015, 14:59:07 CET
+update=St 11. březen 2015, 11:22:43 CET
 version=1
 last_client=kicad
 [cvpcb]
@@ -43,8 +43,6 @@ LibName13=led
 LibName14=dip_sockets
 LibName15=pga_sockets
 LibName16=valves
-[general]
-version=1
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -131,3 +129,5 @@ LibName66=ttl_ieee
 LibName67=valves
 LibName68=video
 LibName69=xilinx
+[general]
+version=1
