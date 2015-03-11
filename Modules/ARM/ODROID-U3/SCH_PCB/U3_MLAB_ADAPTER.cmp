@@ -1,24 +1,24 @@
-Cmp-Mod V01 Created by Cvpcb 0.201502151246+5420~21~ubuntu14.10.1-product   date = Po 16. únor 2015, 16:10:08 CET
+Cmp-Mod V01 Created by Cvpcb 0.201503110816+5502~22~ubuntu14.10.1-product   date = St 11. březen 2015, 16:30:41 CET
 
 BeginCmp
 TimeStamp = /5485FFA7;
 Reference = C1;
 ValeurCmp = 10uF;
-IdModule  = MLAB_C:TantalC_SizeC_Reflow;
+IdModule  = Capacitors_Tantalum_SMD:TantalC_SizeB_EIA-3528_Reflow;
 EndCmp
 
 BeginCmp
 TimeStamp = /548601CE;
 Reference = C2;
 ValeurCmp = 10uF;
-IdModule  = MLAB_C:TantalC_SizeC_Reflow;
+IdModule  = Capacitors_Tantalum_SMD:TantalC_SizeB_EIA-3528_Reflow;
 EndCmp
 
 BeginCmp
 TimeStamp = /5485FEF7;
 Reference = D1;
 ValeurCmp = BAS85;
-IdModule  = Diodes_SMD:Diode-MELF_Standard;
+IdModule  = Diodes_SMD:Diode-SMA_Standard;
 EndCmp
 
 BeginCmp
@@ -32,7 +32,7 @@ BeginCmp
 TimeStamp = /5485F9FC;
 Reference = J1;
 ValeurCmp = 5V POWER;
-IdModule  = MLAB_hreb:Pin_Header_Straight_2x03;
+IdModule  = Mlab_Pin_Headers:Straight_2x03;
 EndCmp
 
 BeginCmp
@@ -60,7 +60,7 @@ BeginCmp
 TimeStamp = /548601AA;
 Reference = J5;
 ValeurCmp = 1,8V CPU Core;
-IdModule  = MLAB_hreb:Pin_Header_Straight_2x03;
+IdModule  = Mlab_Pin_Headers:Straight_2x03;
 EndCmp
 
 BeginCmp
