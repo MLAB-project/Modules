@@ -1,13 +1,17 @@
-﻿[InfoShortDescription.en]
-Simple IR reflexive sensor.
+﻿//
+// Toto je popisný soubor pro popis obsahu adresáře (příklad)
+//
 
+[InfoShortDescription.en]
+  Audio to digital converter
+  
 [InfoShortDescription.cs]
-Jednoduche reflexivni cidlo.
-
+  Modul audio A/D převodníku
+    
 [InfoLongDescription.en]
-
+  Module has audio input interface. Digitalized audio data stream (I2S) with parametrers 192kHz@24bit.
 
 [InfoLongDescription.cs]
-Čidlo obsahuje pouze reflexní optron s odporovým trimrem a slouží k rozlišování tmavého a světlého povrchu. Dá se použít jak pro detekci čáry pro čárového robota tak i pro snímání otáčení pohonných kol.
+  Modul slouží jako audio vstup. Digitální data jsou dostupná přes rozhraní I2S s rozlišením až 192kHz@24bit.
 
 [End]
