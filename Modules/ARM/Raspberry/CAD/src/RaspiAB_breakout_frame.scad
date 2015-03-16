@@ -4,7 +4,7 @@ x_size = 87;
 y_size = 58;
 mount_hole = 3.5;
 nut_size = 6.8;
-nut_size25 = 5.7;
+nut_size25 = 6;
 MLAB_grid = 10.16;
 
 x_holes = floor(x_size / MLAB_grid);
@@ -13,24 +13,22 @@ y_holes = floor(y_size / MLAB_grid);
 MLAB_grid_xoffset = (x_size - (x_holes * MLAB_grid))/2;
 MLAB_grid_yoffset = (y_size - (y_holes * MLAB_grid))/2;
 
-ODROID_holes_offset = 5.25;
-ODROID_holes_xdistance = 86;
-ODROID_holes_ydistance = 82;
-
 difference () {
 	cube([x_size, y_size ,pedestal_height]);          // base plastics brick
 
 	//mount holes for Raspberry Pi model A/B 
 
         translate ([26.5, 19, 0])
-        cylinder (h = 6, r= nut_size25/2, $fn=6);
+        rotate([0,0,90])
+            cylinder (h = 6, r= nut_size25/2, $fn=6);
         translate ([26.5, 19, 6.2])  // one solid layer for slicer (the holes will be pierced on demand )
-        cylinder (h = pedestal_height, r= 2.9/2, $fn=30);
+        cylinder (h = pedestal_height, r= 3.0/2, $fn=30);
 
         translate ([81, 44.5, 0])
-        cylinder (h = 6, r= nut_size25/2, $fn=6);
+        rotate([0,0,90])
+            cylinder (h = 6, r= nut_size25/2, $fn=6);
         translate ([81, 44.5, 6.2])  // one solid layer for slicer (the holes will be pierced on demand )
-        cylinder (h = pedestal_height, r= 2.9/2, $fn=30);
+        cylinder (h = pedestal_height, r= 3.0/2, $fn=30);
 
         ////////////////////////////////////////
 
