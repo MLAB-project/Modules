@@ -1,4 +1,4 @@
-update=1.3.2015 17:11:33
+update=17. 3. 2015 7:55:24
 version=1
 last_client=kicad
 [cvpcb]
@@ -27,11 +27,6 @@ BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
 [general]
 version=1
-[eeschema]
-version=1
-LibDir=../../../../../library/KiCAD/symbols
-[eeschema/libraries]
-LibName1=Jumpers
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -45,3 +40,9 @@ RptD_X=0
 RptD_Y=100
 RptLab=1
 LabSize=60
+[eeschema]
+version=1
+LibDir=../../../../../library/KiCAD/symbols
+[eeschema/libraries]
+LibName1=Jumpers
+LibName2=MLAB_IO

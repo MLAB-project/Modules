@@ -1,94 +1,94 @@
-Cmp-Mod V01 Created by Cvpcb (2015-01-08 BZR 5360)-product   date = 8.3.2015 9:16:23
+Cmp-Mod V01 Created by Cvpcb (2015-01-07 BZR 5359)-product   date = 17. 3. 2015 7:29:12
 
 BeginCmp
 TimeStamp = /5476354E;
 Reference = C1;
 ValeurCmp = 4M7;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5476470D;
 Reference = C2;
 ValeurCmp = 12p;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5483B92F;
 Reference = C3;
 ValeurCmp = 100nF;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /547638F8;
 Reference = C4;
 ValeurCmp = 2;
-IdModule  = MLAB_C:C2pF;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5483BA04;
 Reference = C5;
 ValeurCmp = 100nF;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5483BE15;
 Reference = C6;
 ValeurCmp = 10uF;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5483BC77;
 Reference = C7;
 ValeurCmp = 100nF;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /54763980;
 Reference = C8;
 ValeurCmp = 330k;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5483BCB5;
 Reference = C9;
 ValeurCmp = 100nF;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5483BCD5;
 Reference = C10;
 ValeurCmp = 10uF;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /54763B36;
 Reference = C11;
 ValeurCmp = 510;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /54763D3A;
 Reference = C12;
 ValeurCmp = 620;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /54763DBA;
 Reference = C13;
 ValeurCmp = 100;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
@@ -96,6 +96,13 @@ TimeStamp = /54766490;
 Reference = C14;
 ValeurCmp = 330k;
 IdModule  = MLAB_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5507D99A;
+Reference = C15;
+ValeurCmp = 4M7;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
@@ -179,77 +186,84 @@ BeginCmp
 TimeStamp = /547633B6;
 Reference = R1;
 ValeurCmp = 4k7;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /547634EB;
 Reference = R2;
 ValeurCmp = 4k7;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5476469E;
 Reference = R3;
 ValeurCmp = 2M;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /54763891;
 Reference = R4;
 ValeurCmp = 2M;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /54763A05;
 Reference = R5;
 ValeurCmp = 3k3;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /54763AA3;
 Reference = R6;
 ValeurCmp = 10k;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /54763AF2;
 Reference = R7;
 ValeurCmp = 1k5;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /54763C78;
 Reference = R8;
 ValeurCmp = 2k4;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /54763CCA;
 Reference = R9;
 ValeurCmp = 2k2;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /54763E8E;
 Reference = R10;
 ValeurCmp = 4k7;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /547664D3;
 Reference = R11;
 ValeurCmp = 10k;
-IdModule  = MLAB_R:SMD-0805;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5507D916;
+Reference = R12;
+ValeurCmp = 4k7;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
