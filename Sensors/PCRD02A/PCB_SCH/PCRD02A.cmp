@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-08-29 BZR 5106)-product   date = 8.12.2014 18:38:20
+Cmp-Mod V01 Created by Cvpcb (2015-01-07 BZR 5359)-product   date = 17. 3. 2015 8:52:10
 
 BeginCmp
 TimeStamp = /547682EE;
@@ -302,17 +302,10 @@ IdModule  = MLAB_IO:tsot-5;
 EndCmp
 
 BeginCmp
-TimeStamp = /54842855;
+TimeStamp = /5507F9CB;
 Reference = U2;
-ValeurCmp = AD8691;
-IdModule  = MLAB_IO:tsot-5;
-EndCmp
-
-BeginCmp
-TimeStamp = /548428BF;
-Reference = U3;
-ValeurCmp = AD8691;
-IdModule  = MLAB_IO:tsot-5;
+ValeurCmp = AD8692;
+IdModule  = SMD_Packages:SOIC-8-N;
 EndCmp
 
 EndListe
