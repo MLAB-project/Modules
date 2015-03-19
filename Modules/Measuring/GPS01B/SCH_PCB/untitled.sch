@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8861,7 +8861,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="SV2" library="moje_hrebinky" deviceset="MA03-2" device=""/>
 <part name="GND2" library="moje" deviceset="GND" device=""/>
 <part name="GND3" library="moje" deviceset="GND" device=""/>
-<part name="P1" library="moje" deviceset="POJISTKA_1812" device=""/>
+<part name="P1" library="moje" deviceset="POJISTKA_1812" device="" value="750mA"/>
 <part name="R1" library="moje_R" deviceset="R0805" device="" value="33"/>
 <part name="R2" library="moje_R" deviceset="R0805" device="" value="33"/>
 <part name="C1" library="moje_C" deviceset="C0805" device="" value="100nF"/>
@@ -8973,7 +8973,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <wire x1="12.7" y1="177.8" x2="12.7" y2="185.42" width="0.1524" layer="97"/>
 <wire x1="12.7" y1="185.42" x2="182.88" y2="185.42" width="0.1524" layer="97"/>
 <wire x1="182.88" y1="185.42" x2="182.88" y2="177.8" width="0.1524" layer="97"/>
-<text x="15.24" y="179.07" size="5.08" layer="97">GPS01A</text>
+<text x="15.24" y="179.07" size="5.08" layer="97">GPS01B</text>
 <text x="48.26" y="179.07" size="5.08" layer="97">MLAB</text>
 <text x="69.85" y="179.07" size="5.08" layer="97">JACHO</text>
 <text x="46.99" y="39.37" size="1.778" layer="91">USB IN. ON</text>
@@ -8992,7 +8992,10 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <instance part="SV2" gate="-3" x="27.94" y="149.86" rot="R180"/>
 <instance part="GND2" gate="G$1" x="35.56" y="134.62"/>
 <instance part="GND3" gate="G$1" x="52.07" y="96.52"/>
-<instance part="P1" gate="G$1" x="48.26" y="154.94" rot="R180"/>
+<instance part="P1" gate="G$1" x="48.26" y="154.94" smashed="yes" rot="R180">
+<attribute name="NAME" x="52.07" y="153.543" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="46.99" y="152.781" size="1.778" layer="96" rot="R180"/>
+</instance>
 <instance part="R1" gate="G$1" x="62.23" y="99.06"/>
 <instance part="R2" gate="G$1" x="62.23" y="106.68"/>
 <instance part="C1" gate="G$1" x="80.01" y="147.32"/>

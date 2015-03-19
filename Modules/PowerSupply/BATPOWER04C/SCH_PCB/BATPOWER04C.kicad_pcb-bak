@@ -1,9 +1,9 @@
-(kicad_pcb (version 4) (host pcbnew 0.201503110816+5502~22~ubuntu14.10.1-product)
+(kicad_pcb (version 4) (host pcbnew "(2015-01-07 BZR 5359)-product")
 
   (general
     (links 65)
     (no_connects 0)
-    (area -22.636257 -50.7595 54.132257 7.6176)
+    (area 97.505743 58.7145 174.274257 117.0916)
     (thickness 1.6)
     (drawings 25)
     (tracks 185)
@@ -576,13 +576,13 @@
       (net 1 GND))
   )
 
-  (module MLAB_C:TantalC_SizeC_Reflow (layer B.Cu) (tedit 54799D04) (tstamp 547A20A9)
+  (module MLAB_C:TantalC_SizeC_Reflow (layer B.Cu) (tedit 550A6CC3) (tstamp 547A20A9)
     (at 13.97 -15.875 90)
     (descr "Tantal Cap. , Size C, EIA-6032, Reflow,")
     (tags "Tantal Cap. , Size C, EIA-6032, Reflow,")
     (path /5476F528)
     (attr smd)
-    (fp_text reference C1 (at -0.20066 3.29946 90) (layer B.SilkS)
+    (fp_text reference C1 (at -0.127 0 90) (layer B.SilkS)
       (effects (font (thickness 0.3048)) (justify mirror))
     )
     (fp_text value 47uF (at -0.09906 -3.59918 90) (layer B.SilkS) hide
@@ -750,13 +750,13 @@
     )
   )
 
-  (module MLAB_C:TantalC_SizeD_Reflow (layer B.Cu) (tedit 54799D12) (tstamp 547A20C7)
+  (module MLAB_C:TantalC_SizeD_Reflow (layer B.Cu) (tedit 550A6CBC) (tstamp 547A20C7)
     (at 20.701 -27.94 90)
     (descr "Tantal Cap. , Size D, EIA-7343, Reflow,")
     (tags "Tantal Cap. , Size D, EIA-7343, Reflow,")
     (path /54770930)
     (attr smd)
-    (fp_text reference C7 (at 0.3302 0.1016 90) (layer B.SilkS)
+    (fp_text reference C7 (at 0 -0.127 90) (layer B.SilkS)
       (effects (font (thickness 0.3048)) (justify mirror))
     )
     (fp_text value 100uF (at -0.09906 -3.59918 90) (layer B.SilkS) hide
@@ -1406,16 +1406,16 @@
       (xy 3.979334 -3.005666) (xy 3.979334 -3.005666)) (layer F.SilkS) (width 0.1))
   )
 
-  (module Resistors_SMD:R_0805 (layer B.Cu) (tedit 5415CDEB) (tstamp 55008CBE)
+  (module Resistors_SMD:R_0805 (layer B.Cu) (tedit 550A6D9D) (tstamp 55008CBE)
     (at 25.7302 -8.1534 180)
     (descr "Resistor SMD 0805, reflow soldering, Vishay (see dcrcw.pdf)")
     (tags "resistor 0805")
     (path /5477050C)
     (attr smd)
-    (fp_text reference R3 (at 0 2.1 180) (layer B.SilkS)
+    (fp_text reference R3 (at -0.0508 -0.0254 180) (layer B.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value 33k (at 0 -2.1 180) (layer B.SilkS)
+    (fp_text value 33k (at 0 -2.1 180) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -1.6 1) (end 1.6 1) (layer B.CrtYd) (width 0.05))
