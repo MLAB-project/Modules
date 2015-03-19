@@ -14,7 +14,7 @@ MLAB_grid_xoffset = (x_size - (x_holes * MLAB_grid))/2;
 MLAB_grid_yoffset = (y_size - (y_holes * MLAB_grid))/2;
 
 ODROID_holes_offset = 5.25;
-ODROID_holes_xdistance = (117.6+110)/2;
+ODROID_holes_xdistance = (117.7+110.5)/2;
 ODROID_holes_ydistance = (67.4+59.7)/2;
 
 difference () {
@@ -51,8 +51,11 @@ difference () {
 	translate ([5, 10.5, pedestal_height - 4])
         cube([x_size-9, y_size-21, 5]);
 
-	translate ([x_size - 5, 32 , pedestal_height - 4])
+	translate ([x_size - 5, 32 , pedestal_height - 4])  // Hole for ICSP connector
         cube([4,11, 5]);
+
+    translate ([96.5, y_size - 2.5 - 1, pedestal_height - 4])  // hole for capacitor at bottom side of the pcb
+        cube([5, 2, 5]);
 
         ////////////////////////////////////////
 
@@ -74,7 +77,7 @@ difference () {
 	translate ([33,3, 0])  
 	cube([49,y_size -3 -3,pedestal_height ]);        
 
- 	translate ([11,10, 0])  
-	cube([x_size-22,y_size-20,pedestal_height ]);                     
+ 	translate ([12,11, 0])  
+	cube([x_size-24,y_size-22,pedestal_height ]);                     
 }
 
