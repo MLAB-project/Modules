@@ -1,4 +1,4 @@
-update=16.11.2014 12:05:40
+update=20. 3. 2015 7:30:22
 version=1
 last_client=kicad
 [cvpcb]
@@ -64,3 +64,16 @@ LibName30=valves
 LibName31=jump
 LibName32=tca6416a
 LibName33=Jumpers
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
