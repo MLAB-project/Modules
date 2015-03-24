@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-01-07 BZR 5359)-product   date = 24. 3. 2015 7:25:48
+Cmp-Mod V01 Created by Cvpcb (2015-01-08 BZR 5360)-product   date = 24.3.2015 17:36:43
 
 BeginCmp
 TimeStamp = /54FE9673;
@@ -102,7 +102,7 @@ BeginCmp
 TimeStamp = /54FDDE4A;
 Reference = D3;
 ValeurCmp = BAT46SW;
-IdModule  = Mlab_D:MiniMELF_Standard;
+IdModule  = SMD_Packages:SOT-323;
 EndCmp
 
 BeginCmp
@@ -137,14 +137,14 @@ BeginCmp
 TimeStamp = /54FE5CB5;
 Reference = J4;
 ValeurCmp = CONN1_1;
-IdModule  = Mlab_Pin_Headers:Straight_1x01;
+IdModule  = Mlab_Con:WAGO256;
 EndCmp
 
 BeginCmp
 TimeStamp = /54FE60F5;
 Reference = J5;
 ValeurCmp = CONN1_1;
-IdModule  = Mlab_Pin_Headers:Straight_1x01;
+IdModule  = Mlab_Con:WAGO256;
 EndCmp
 
 BeginCmp
