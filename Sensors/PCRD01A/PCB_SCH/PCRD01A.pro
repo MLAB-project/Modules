@@ -1,4 +1,4 @@
-update=28.2.2015 18:52:16
+update=Út 24. březen 2015, 20:20:28 CET
 version=1
 last_client=kicad
 [cvpcb]
@@ -37,8 +37,6 @@ RptD_X=0
 RptD_Y=100
 RptLab=1
 LabSize=60
-[general]
-version=1
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -52,3 +50,5 @@ RptD_X=0
 RptD_Y=100
 RptLab=1
 LabSize=60
+[general]
+version=1

@@ -3,7 +3,8 @@ pedestal_height = 13;   // designed for use the MLAB standard 12mm screws.
 x_size = 125;
 y_size = 74;
 mount_hole = 3.5;
-nut_size = 6.8;
+//nut_size = 6.8;  //size suitable for PLA material
+nut_size = 6.7;  //size suitable for ABS material
 clear = 0.175;
 MLAB_grid = 10.16;
 
