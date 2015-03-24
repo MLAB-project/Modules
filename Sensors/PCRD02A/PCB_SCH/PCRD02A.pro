@@ -1,4 +1,4 @@
-update=17. 3. 2015 7:55:24
+update=Út 24. březen 2015, 21:09:28 CET
 version=1
 last_client=kicad
 [cvpcb]
@@ -25,8 +25,6 @@ SolderMaskMinWidth=0.000000000000
 DrawSegmentWidth=0.200000000000
 BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
-[general]
-version=1
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -46,3 +44,5 @@ LibDir=../../../../../library/KiCAD/symbols
 [eeschema/libraries]
 LibName1=Jumpers
 LibName2=MLAB_IO
+[general]
+version=1
