@@ -1,4 +1,4 @@
-update=24.3.2015 18:48:23
+update=St 25. březen 2015, 12:44:09 CET
 version=1
 last_client=kicad
 [cvpcb]
@@ -6,8 +6,6 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
-[general]
-version=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -99,3 +97,5 @@ LibName51=E:/kicad-mlab/symbols/MLAB_IO
 LibName52=E:/kicad-mlab/symbols/MLAB_Jumpers
 LibName53=E:/kicad-mlab/symbols/OpAmp
 LibName54=E:/kicad-mlab/symbols/sata7-67491-1030
+[general]
+version=1
