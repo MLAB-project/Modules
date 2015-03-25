@@ -1,4 +1,4 @@
-update=23. 3. 2015 15:49:27
+update=St 25. březen 2015, 23:52:26 CET
 version=1
 last_client=kicad
 [cvpcb]
@@ -6,8 +6,6 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=../../../../../MLAB-project/kicad-mlab/symbols
@@ -65,3 +63,5 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.2
 BoardOutlineThickness=0.09999999999999999
 ModuleOutlineThickness=0.15
+[general]
+version=1

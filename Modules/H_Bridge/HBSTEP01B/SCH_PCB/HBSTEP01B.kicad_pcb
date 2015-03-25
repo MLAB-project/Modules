@@ -1,4 +1,4 @@
-(kicad_pcb (version 4) (host pcbnew 0.201503240816+5533~22~ubuntu14.04.1-product)
+(kicad_pcb (version 4) (host pcbnew 0.201503251001+5534~22~ubuntu14.04.1-product)
 
   (general
     (links 106)
@@ -6,7 +6,7 @@
     (area -7.874 -47.046 60.673429 7.620001)
     (thickness 1.6)
     (drawings 34)
-    (tracks 300)
+    (tracks 302)
     (zones 0)
     (modules 51)
     (nets 25)
@@ -67,7 +67,7 @@
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFF7F)
     (pcbplotparams
-      (layerselection 0x001e0_80000001)
+      (layerselection 0x011e0_80000001)
       (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.300000)
@@ -694,7 +694,7 @@
       (net 21 /1A))
   )
 
-  (module Mlab_Pin_Headers:Straight_1x01 (layer F.Cu) (tedit 55110EA8) (tstamp 55102E0E)
+  (module Mlab_Pin_Headers:Straight_1x01 (layer F.Cu) (tedit 55131494) (tstamp 55102E0E)
     (at 25.146 -7.874)
     (descr "pin header straight 1x01")
     (tags "pin header straight 1x01")
@@ -705,7 +705,7 @@
     (fp_text value CONN1_1 (at 0 2.54) (layer F.SilkS) hide
       (effects (font (size 1.5 1.5) (thickness 0.15)))
     )
-    (fp_text user 1 (at -1.651 0) (layer F.SilkS)
+    (fp_text user 1 (at -1.651 0) (layer F.SilkS) hide
       (effects (font (size 0.5 0.5) (thickness 0.05)))
     )
     (fp_line (start -1.27 -1.27) (end 1.27 -1.27) (layer F.SilkS) (width 0.15))
@@ -721,7 +721,7 @@
     )
   )
 
-  (module Mlab_Pin_Headers:Straight_1x01 (layer F.Cu) (tedit 55110EA1) (tstamp 55102E09)
+  (module Mlab_Pin_Headers:Straight_1x01 (layer F.Cu) (tedit 55131498) (tstamp 55102E09)
     (at 25.146 -5.334)
     (descr "pin header straight 1x01")
     (tags "pin header straight 1x01")
@@ -732,7 +732,7 @@
     (fp_text value CONN1_1 (at 0 2.54) (layer F.SilkS) hide
       (effects (font (size 1.5 1.5) (thickness 0.15)))
     )
-    (fp_text user 1 (at -1.651 0) (layer F.SilkS)
+    (fp_text user 1 (at -1.651 0) (layer F.SilkS) hide
       (effects (font (size 0.5 0.5) (thickness 0.05)))
     )
     (fp_line (start -1.27 -1.27) (end 1.27 -1.27) (layer F.SilkS) (width 0.15))
@@ -1976,7 +1976,7 @@
   (gr_text ADCIN (at 27.686 -9.652 90) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify left))
   )
-  (gr_text VREG (at 23.749 -8.001) (layer F.SilkS) (tstamp 5511BCD5)
+  (gr_text VREG (at 23.749 -7.62) (layer F.SilkS) (tstamp 5511BCD5)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify right))
   )
   (gr_text VDD (at 23.749 -5.334) (layer F.SilkS)
@@ -2009,7 +2009,7 @@
   (gr_text "POWER\nIO\n" (at 8.636 -27.432 90) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
-  (gr_text + (at 18.796 -27.94) (layer F.SilkS)
+  (gr_text + (at 21.9964 -24.8412) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
   (gr_text OUT1B (at 7.112 -9.144) (layer F.SilkS)
@@ -2262,8 +2262,10 @@
   (segment (start 27.184332 -23.56741) (end 27.184332 -22.856834) (width 0.254) (layer B.Cu) (net 10))
   (segment (start 26.79954 -23.952202) (end 27.184332 -23.56741) (width 0.254) (layer B.Cu) (net 10))
   (segment (start 26.79954 -24.98598) (end 26.79954 -23.952202) (width 0.254) (layer B.Cu) (net 10))
-  (segment (start 25.146 -7.874) (end 25.146 -8.647039) (width 0.3) (layer B.Cu) (net 11))
-  (segment (start 25.146 -8.647039) (end 24.19858 -9.594459) (width 0.3) (layer B.Cu) (net 11))
+  (segment (start 24.5364 -9.256639) (end 24.5364 -8.4836) (width 0.3) (layer B.Cu) (net 11))
+  (segment (start 24.5364 -8.4836) (end 25.146 -7.874) (width 0.3) (layer B.Cu) (net 11))
+  (segment (start 24.19858 -11.59002) (end 24.19858 -9.594459) (width 0.3) (layer B.Cu) (net 11))
+  (segment (start 24.19858 -9.594459) (end 24.5364 -9.256639) (width 0.3) (layer B.Cu) (net 11))
   (segment (start 24.19858 -9.594459) (end 24.19858 -10.59025) (width 0.3) (layer B.Cu) (net 11))
   (segment (start 24.19858 -10.59025) (end 24.19858 -11.59002) (width 0.3) (layer B.Cu) (net 11))
   (segment (start 27.686 -7.874) (end 27.686 -8.89) (width 0.254) (layer B.Cu) (net 12))
