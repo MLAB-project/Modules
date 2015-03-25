@@ -1,4 +1,4 @@
-update=2.12.2014 17:55:41
+update=St 25. březen 2015, 23:41:10 CET
 version=1
 last_client=kicad
 [cvpcb]
@@ -25,8 +25,6 @@ SolderMaskMinWidth=0.000000000000
 DrawSegmentWidth=0.200000000000
 BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=D:/Honza/library/KiCAD/symbols
@@ -63,3 +61,5 @@ LibName29=contrib
 LibName30=valves
 LibName31=MLAB_IO
 LibName32=Jumpers
+[general]
+version=1
