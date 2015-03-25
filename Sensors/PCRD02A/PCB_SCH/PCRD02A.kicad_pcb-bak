@@ -1,9 +1,9 @@
-(kicad_pcb (version 4) (host pcbnew 0.201503230816+5530~22~ubuntu14.04.1-product)
+(kicad_pcb (version 4) (host pcbnew 0.201503251001+5534~22~ubuntu14.04.1-product)
 
   (general
     (links 83)
     (no_connects 0)
-    (area 0.203999 -30.276001 50.596001 -0.203999)
+    (area -9.144 -36.124 60.706001 4.064001)
     (thickness 1.6)
     (drawings 18)
     (tracks 168)
@@ -37,7 +37,7 @@
   )
 
   (setup
-    (last_trace_width 0.6)
+    (last_trace_width 0.4)
     (user_trace_width 0.256)
     (user_trace_width 0.4)
     (user_trace_width 0.6)
@@ -61,13 +61,13 @@
     (mod_edge_width 0.15)
     (mod_text_size 1 1)
     (mod_text_width 0.15)
-    (pad_size 6 6)
-    (pad_drill 3)
+    (pad_size 0.889 1.397)
+    (pad_drill 0)
     (pad_to_mask_clearance 0)
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFFFF)
     (pcbplotparams
-      (layerselection 0x00030_80000001)
+      (layerselection 0x010e0_80000001)
       (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.100000)
@@ -88,9 +88,9 @@
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory ../CAM_PROFI/))
   )
 
   (net 0 "")
@@ -198,7 +198,7 @@
     )
   )
 
-  (module MLAB_R:SMD-0805 (layer B.Cu) (tedit 5511BD29) (tstamp 54837345)
+  (module MLAB_R:SMD-0805 (layer B.Cu) (tedit 55128C3B) (tstamp 55128C2C)
     (at 12.90828 -15.66672 180)
     (path /54768486)
     (attr smd)
@@ -215,7 +215,7 @@
     (fp_line (start 0.508 0.762) (end 1.524 0.762) (layer B.SilkS) (width 0.15))
     (fp_line (start 1.524 0.762) (end 1.524 -0.762) (layer B.SilkS) (width 0.15))
     (fp_line (start 1.524 -0.762) (end 0.508 -0.762) (layer B.SilkS) (width 0.15))
-    (pad 1 smd rect (at -14.478 15.748 180) (size 0.889 1.397) (layers B.Cu B.Paste B.Mask)
+    (pad 1 smd rect (at -0.96472 0 180) (size 0.889 1.397) (layers B.Cu B.Paste B.Mask)
       (net 3 "Net-(C2-Pad1)"))
     (pad 2 smd rect (at 0.9525 0 180) (size 0.889 1.397) (layers B.Cu B.Paste B.Mask)
       (net 4 "Net-(C2-Pad2)"))

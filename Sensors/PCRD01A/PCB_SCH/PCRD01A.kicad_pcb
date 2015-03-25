@@ -1,9 +1,9 @@
-(kicad_pcb (version 4) (host pcbnew 0.201503230816+5530~22~ubuntu14.04.1-product)
+(kicad_pcb (version 4) (host pcbnew 0.201503251001+5534~22~ubuntu14.04.1-product)
 
   (general
     (links 83)
     (no_connects 0)
-    (area 0.205999 -30.274001 50.594001 -0.205999)
+    (area -5.207 -40.64 67.310001 4.953001)
     (thickness 1.6)
     (drawings 19)
     (tracks 266)
@@ -37,7 +37,7 @@
   )
 
   (setup
-    (last_trace_width 0.5)
+    (last_trace_width 0.4)
     (user_trace_width 0.13)
     (user_trace_width 0.2)
     (user_trace_width 0.3)
@@ -698,12 +698,12 @@
     )
   )
 
-  (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 54345FDC) (tstamp 54F2E97A)
+  (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 55134324) (tstamp 54F2E97A)
     (at 45.72 -5.08)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (path /5476FB64)
-    (fp_text reference P1 (at 0.1778 -0.0762) (layer F.SilkS)
+    (fp_text reference P1 (at 0.1778 -0.0762) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
     )
     (fp_text value _ (at 1.00076 5.00126) (layer F.SilkS) hide
@@ -714,12 +714,12 @@
       (net 3 GND) (clearance 1) (zone_connect 2))
   )
 
-  (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 54345FDC) (tstamp 54F2E981)
+  (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 5513432A) (tstamp 54F2E981)
     (at 45.72 -25.4)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (path /5476FD65)
-    (fp_text reference P2 (at 0.1778 -0.0762) (layer F.SilkS)
+    (fp_text reference P2 (at 0.1778 -0.0762) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
     )
     (fp_text value _ (at 1.00076 5.00126) (layer F.SilkS) hide
@@ -730,12 +730,12 @@
       (net 3 GND) (clearance 1) (zone_connect 2))
   )
 
-  (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 54345FDC) (tstamp 54841833)
+  (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 5513431C) (tstamp 54841833)
     (at 5.08 -25.4)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (path /5476FD9A)
-    (fp_text reference P3 (at 0.1778 -0.0762) (layer F.SilkS)
+    (fp_text reference P3 (at 0.1778 -0.0762) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
     )
     (fp_text value _ (at 1.00076 5.00126) (layer F.SilkS) hide
@@ -746,12 +746,12 @@
       (net 3 GND) (clearance 1) (zone_connect 2))
   )
 
-  (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 54345FDC) (tstamp 5482E012)
+  (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 55134321) (tstamp 5482E012)
     (at 5.08 -5.08)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (path /5476FDEC)
-    (fp_text reference P4 (at 0.1778 -0.0762) (layer F.SilkS)
+    (fp_text reference P4 (at 0.1778 -0.0762) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
     )
     (fp_text value _ (at 1.00076 5.00126) (layer F.SilkS) hide
@@ -1190,7 +1190,7 @@
   (module Mlab_C:2pF_PCB (layer F.Cu) (tedit 5511B4FF) (tstamp 54834FAD)
     (at 14.2494 -7.5311)
     (path /547638F8)
-    (fp_text reference C4 (at 0 -5.715) (layer F.SilkS)
+    (fp_text reference C4 (at -0.0254 0.1143) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 2pF (at 0 5.715) (layer F.SilkS) hide
@@ -1591,7 +1591,7 @@
     )
     (polygon
       (pts        (xy 26.797 -8.382) (xy 26.797 -16.002) (xy 25.019 -16.002) (xy 22.7076 -20.193) (xy 12.32916 -20.15236)
-        (xy 12.34948 -16.85036) (xy 4.318 -16.891) (xy 4.318 -13.716) (xy 9.271 -13.716) (xy 9.271 -11.43)
+        (xy 12.34948 -16.85036) (xy 4.318 -16.891) (xy 4.318 -15.3416) (xy 9.271 -15.3416) (xy 9.271 -11.43)
         (xy 8.382 -10.541) (xy 8.382 -1.778) (xy 21.2344 -1.778) (xy 21.2344 -8.382) (xy 26.797 -8.382)
       )
     )
@@ -1690,16 +1690,18 @@
         (xy 8.818546 -17.817012) (xy 8.684526 -17.907476) (xy 8.4455 -17.955411) (xy 6.7945 -17.955411) (xy 6.562672 -17.910431)
         (xy 6.358916 -17.776586) (xy 6.350835 -17.764615) (xy 6.346586 -17.771084) (xy 6.144526 -17.907476) (xy 5.9055 -17.955411)
         (xy 4.2545 -17.955411) (xy 4.022672 -17.910431) (xy 3.818916 -17.776586) (xy 3.682524 -17.574526) (xy 3.634589 -17.3355)
-        (xy 3.634589 -15.6845) (xy 3.679569 -15.452672) (xy 3.813414 -15.248916) (xy 4.015474 -15.112524) (xy 4.218 -15.071909)
-        (xy 4.218 -13.616) (xy 9.171 -13.616) (xy 9.171 -11.471421) (xy 8.282 -10.582421) (xy 8.282 -1.678)
-        (xy 21.3344 -1.678) (xy 21.3344 -8.181614) (xy 21.5265 -8.143089) (xy 22.9235 -8.143089) (xy 23.155328 -8.188069)
-        (xy 23.176372 -8.201893) (xy 23.192474 -8.191024) (xy 23.4315 -8.143089) (xy 24.8285 -8.143089) (xy 25.060328 -8.188069)
-        (xy 25.203321 -8.282) (xy 25.897689 -8.282) (xy 25.897689 -6.9723) (xy 25.942669 -6.740472) (xy 26.076514 -6.536716)
-        (xy 26.278574 -6.400324) (xy 26.49228 -6.357467) (xy 26.475716 -6.346586) (xy 26.339324 -6.144526) (xy 26.291389 -5.9055)
-        (xy 26.291389 -4.2545) (xy 26.336369 -4.022672) (xy 26.470214 -3.818916) (xy 26.482185 -3.810836) (xy 26.475716 -3.806586)
-        (xy 26.339324 -3.604526) (xy 26.291389 -3.3655) (xy 26.291389 -1.7145) (xy 26.336369 -1.482672) (xy 26.470214 -1.278916)
-        (xy 26.672274 -1.142524) (xy 26.9113 -1.094589) (xy 26.922542 -1.094589) (xy 26.944111 -0.986157) (xy 26.992324 -0.914)
-        (xy 0.914 -0.914) (xy 0.914 -29.566) (xy 49.886 -29.566) (xy 49.886 -0.914)
+        (xy 3.634589 -15.6845) (xy 3.679569 -15.452672) (xy 3.813414 -15.248916) (xy 4.015474 -15.112524) (xy 4.2545 -15.064589)
+        (xy 5.9055 -15.064589) (xy 6.137328 -15.109569) (xy 6.338322 -15.2416) (xy 6.364252 -15.2416) (xy 6.555474 -15.112524)
+        (xy 6.7945 -15.064589) (xy 8.4455 -15.064589) (xy 8.677328 -15.109569) (xy 8.819756 -15.203129) (xy 8.8773 -15.191589)
+        (xy 9.171 -15.191589) (xy 9.171 -11.471421) (xy 8.282 -10.582421) (xy 8.282 -1.678) (xy 21.3344 -1.678)
+        (xy 21.3344 -8.181614) (xy 21.5265 -8.143089) (xy 22.9235 -8.143089) (xy 23.155328 -8.188069) (xy 23.176372 -8.201893)
+        (xy 23.192474 -8.191024) (xy 23.4315 -8.143089) (xy 24.8285 -8.143089) (xy 25.060328 -8.188069) (xy 25.203321 -8.282)
+        (xy 25.897689 -8.282) (xy 25.897689 -6.9723) (xy 25.942669 -6.740472) (xy 26.076514 -6.536716) (xy 26.278574 -6.400324)
+        (xy 26.49228 -6.357467) (xy 26.475716 -6.346586) (xy 26.339324 -6.144526) (xy 26.291389 -5.9055) (xy 26.291389 -4.2545)
+        (xy 26.336369 -4.022672) (xy 26.470214 -3.818916) (xy 26.482185 -3.810836) (xy 26.475716 -3.806586) (xy 26.339324 -3.604526)
+        (xy 26.291389 -3.3655) (xy 26.291389 -1.7145) (xy 26.336369 -1.482672) (xy 26.470214 -1.278916) (xy 26.672274 -1.142524)
+        (xy 26.9113 -1.094589) (xy 26.922542 -1.094589) (xy 26.944111 -0.986157) (xy 26.992324 -0.914) (xy 0.914 -0.914)
+        (xy 0.914 -29.566) (xy 49.886 -29.566) (xy 49.886 -0.914)
       )
     )
   )
