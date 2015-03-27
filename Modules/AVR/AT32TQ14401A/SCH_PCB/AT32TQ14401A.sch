@@ -23,13 +23,11 @@ LIBS:ftdi
 LIBS:gennum
 LIBS:graphic
 LIBS:hc11
-LIBS:header
 LIBS:intel
 LIBS:interface
 LIBS:ir
 LIBS:linear
 LIBS:logo
-LIBS:mechanical
 LIBS:memory
 LIBS:microchip
 LIBS:microchip_pic10mcu
@@ -38,12 +36,10 @@ LIBS:microchip_pic16mcu
 LIBS:microchip_pic18mcu
 LIBS:microchip_pic32mcu
 LIBS:microcontrollers
-LIBS:motor_drivers
 LIBS:motorola
 LIBS:msp430
 LIBS:nordicsemi
 LIBS:nxp_armmcu
-LIBS:onsemi
 LIBS:opto
 LIBS:philips
 LIBS:power
@@ -60,7 +56,6 @@ LIBS:special
 LIBS:stm8
 LIBS:stm32
 LIBS:supertex
-LIBS:switches
 LIBS:texas
 LIBS:transf
 LIBS:transistors
@@ -283,7 +278,7 @@ L C C27
 U 1 1 4AC4535F
 P 9650 10250
 F 0 "C27" H 9700 10350 50  0000 L CNN
-F 1 "8pF" H 9700 10150 50  0000 L CNN
+F 1 "8p2" H 9700 10150 50  0000 L CNN
 F 2 "SMD_Packages:SM0805" H 9600 10250 60  0001 C CNN
 F 3 "" H 9650 10250 60  0001 C CNN
 F 4 "500R15N220JV4T" H 9800 10450 60  0001 C CNN "Part #"
@@ -296,7 +291,7 @@ L C C28
 U 1 1 4AC45356
 P 10450 10250
 F 0 "C28" H 10500 10350 50  0000 L CNN
-F 1 "8pF" H 10500 10150 50  0000 L CNN
+F 1 "8p2F" H 10500 10150 50  0000 L CNN
 F 2 "SMD_Packages:SM0805" H 10400 10250 60  0001 C CNN
 F 3 "" H 10450 10250 60  0001 C CNN
 F 4 "500R15N220JV4T" H 10600 10450 60  0001 C CNN "Part #"
@@ -939,7 +934,7 @@ L INDUCTOR_SMALL L1
 U 1 1 53B8912D
 P 4500 6800
 F 0 "L1" H 4500 6900 50  0000 C CNN
-F 1 "MI0805K400R-10" H 4500 6750 50  0000 C CNN
+F 1 "BLM21PG300SN1" H 4500 6750 50  0000 C CNN
 F 2 "SMD_Packages:SM0805" H 4500 6800 60  0001 C CNN
 F 3 "" H 4500 6800 60  0000 C CNN
 	1    4500 6800

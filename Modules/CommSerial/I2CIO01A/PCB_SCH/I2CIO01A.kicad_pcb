@@ -1383,7 +1383,7 @@
     (fp_text reference D1 (at 0.254 2.286) (layer B.SilkS)
       (effects (font (thickness 0.3048)) (justify mirror))
     )
-    (fp_text value ZENER (at 0 -3.81) (layer B.SilkS) hide
+    (fp_text value BZV55C-3,6V (at 0 -3.81) (layer B.SilkS) hide
       (effects (font (thickness 0.3048)) (justify mirror))
     )
     (fp_line (start 0.65024 -0.0508) (end -0.35052 1.00076) (layer B.SilkS) (width 0.15))

@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:/Chroust/Zaloha/stare/MLAB/Modules/CommSerial/I2CIO01A/PCB_SCH/I2CIO01A.sch)
-    (date "20. 3. 2015 7:30:37")
+    (date "27. 3. 2015 7:54:37")
     (tool "Eeschema (2015-01-07 BZR 5359)-product"))
   (components
     (comp (ref R3)
@@ -167,7 +167,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5468EC1F))
     (comp (ref D1)
-      (value ZENER)
+      (value BZV55C-3,6V)
       (footprint MLAB_D:Diode-MiniMELF_Standard)
       (libsource (lib device) (part ZENER))
       (sheetpath (names /) (tstamps /))
@@ -233,32 +233,6 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5475DDAE)))
   (libparts
-    (libpart (lib device) (part C)
-      (description "Condensateur non polarise")
-      (footprints
-        (fp SM*)
-        (fp C?)
-        (fp C1-1))
-      (fields
-        (field (name Reference) C)
-        (field (name Value) C))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part R)
-      (description Resistance)
-      (footprints
-        (fp R?)
-        (fp SM0603)
-        (fp SM0805)
-        (fp R?-*)
-        (fp SM1206))
-      (fields
-        (field (name Reference) R)
-        (field (name Value) R))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
     (libpart (lib tca6416a) (part TCA6416A)
       (fields
         (field (name Reference) U)
@@ -288,21 +262,13 @@
         (pin (num 22) (name SCL) (type BiDi))
         (pin (num 23) (name SDA) (type BiDi))
         (pin (num 24) (name Vccp) (type BiDi))))
-    (libpart (lib I2CIO01A-cache) (part JUMP_5X2)
+    (libpart (lib I2CIO01A-cache) (part CONN1_2)
       (fields
         (field (name Reference) J)
-        (field (name Value) JUMP_5X2))
+        (field (name Value) CONN1_2))
       (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))
-        (pin (num 3) (name ~) (type passive))
-        (pin (num 4) (name ~) (type passive))
-        (pin (num 5) (name ~) (type passive))
-        (pin (num 6) (name ~) (type passive))
-        (pin (num 7) (name ~) (type passive))
-        (pin (num 8) (name ~) (type passive))
-        (pin (num 9) (name ~) (type passive))
-        (pin (num 10) (name ~) (type passive))))
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name PM) (type passive))))
     (libpart (lib I2CIO01A-cache) (part JUMP_8X2)
       (fields
         (field (name Reference) J)
@@ -324,10 +290,10 @@
         (pin (num 14) (name ~) (type passive))
         (pin (num 15) (name ~) (type passive))
         (pin (num 16) (name ~) (type passive))))
-    (libpart (lib I2CIO01A-cache) (part CONN1_2)
+    (libpart (lib I2CIO01A-cache) (part CONN_2)
       (fields
         (field (name Reference) J)
-        (field (name Value) CONN1_2))
+        (field (name Value) CONN_2))
       (pins
         (pin (num 1) (name P1) (type passive))
         (pin (num 2) (name PM) (type passive))))
@@ -342,19 +308,6 @@
         (pin (num 4) (name ~) (type passive))
         (pin (num 5) (name ~) (type passive))
         (pin (num 6) (name ~) (type passive))))
-    (libpart (lib I2CIO01A-cache) (part CONN_2)
-      (fields
-        (field (name Reference) J)
-        (field (name Value) CONN_2))
-      (pins
-        (pin (num 1) (name P1) (type passive))
-        (pin (num 2) (name PM) (type passive))))
-    (libpart (lib I2CIO01A-cache) (part _)
-      (fields
-        (field (name Reference) P)
-        (field (name Value) _))
-      (pins
-        (pin (num 1) (name P1) (type passive))))
     (libpart (lib I2CIO01A-cache) (part JUMP_2X2)
       (fields
         (field (name Reference) J)
@@ -364,6 +317,53 @@
         (pin (num 2) (name 1) (type passive))
         (pin (num 3) (name 3) (type passive))
         (pin (num 4) (name ~) (type passive))))
+    (libpart (lib I2CIO01A-cache) (part JUMP_5X2)
+      (fields
+        (field (name Reference) J)
+        (field (name Value) JUMP_5X2))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))
+        (pin (num 3) (name ~) (type passive))
+        (pin (num 4) (name ~) (type passive))
+        (pin (num 5) (name ~) (type passive))
+        (pin (num 6) (name ~) (type passive))
+        (pin (num 7) (name ~) (type passive))
+        (pin (num 8) (name ~) (type passive))
+        (pin (num 9) (name ~) (type passive))
+        (pin (num 10) (name ~) (type passive))))
+    (libpart (lib I2CIO01A-cache) (part _)
+      (fields
+        (field (name Reference) P)
+        (field (name Value) _))
+      (pins
+        (pin (num 1) (name P1) (type passive))))
+    (libpart (lib device) (part C)
+      (description "Condensateur non polarise")
+      (footprints
+        (fp SM*)
+        (fp C?)
+        (fp C1-1))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) C))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part R)
+      (description Resistance)
+      (footprints
+        (fp R?)
+        (fp SM0603)
+        (fp SM0805)
+        (fp R?-*)
+        (fp SM1206))
+      (fields
+        (field (name Reference) R)
+        (field (name Value) R))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
     (libpart (lib device) (part ZENER)
       (description "Diode zener")
       (footprints
@@ -377,12 +377,12 @@
         (pin (num 1) (name A) (type passive))
         (pin (num 2) (name K) (type passive)))))
   (libraries
-    (library (logical device)
-      (uri C:\kicad\kicad\share\library\device.lib))
+    (library (logical tca6416a)
+      (uri C:\Chroust\Zaloha\stare\MLAB\Modules\CommSerial\I2CIO01A\PCB_SCH\tca6416a.lib))
     (library (logical I2CIO01A-cache)
       (uri C:\Chroust\Zaloha\stare\MLAB\Modules\CommSerial\I2CIO01A\PCB_SCH\I2CIO01A-cache.lib))
-    (library (logical tca6416a)
-      (uri C:\Chroust\Zaloha\stare\MLAB\Modules\CommSerial\I2CIO01A\PCB_SCH\tca6416a.lib)))
+    (library (logical device)
+      (uri C:\kicad\kicad\share\library\device.lib)))
   (nets
     (net (code 1) (name GND)
       (node (ref J9) (pin 1))

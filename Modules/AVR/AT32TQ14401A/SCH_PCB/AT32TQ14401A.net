@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:/Chroust/Zaloha/stare/MLAB/Modules/AVR/AT32TQ14401A/SCH_PCB/AT32TQ14401A.sch)
-    (date "19. 3. 2015 9:58:15")
+    (date "27. 3. 2015 6:53:11")
     (tool "Eeschema (2015-01-07 BZR 5359)-product"))
   (components
     (comp (ref R1)
@@ -131,7 +131,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 4AC4586E))
     (comp (ref C27)
-      (value 8pF)
+      (value 8p2)
       (footprint SMD_Packages:SM0805)
       (fields
         (field (name "Part #") 500R15N220JV4T)
@@ -140,7 +140,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 4AC4535F))
     (comp (ref C28)
-      (value 8pF)
+      (value 8p2F)
       (footprint SMD_Packages:SM0805)
       (fields
         (field (name "Part #") 500R15N220JV4T)
@@ -317,7 +317,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 4AC44EF1))
     (comp (ref L1)
-      (value MI0805K400R-10)
+      (value BLM21PG300SN1)
       (footprint SMD_Packages:SM0805)
       (libsource (lib device) (part INDUCTOR_SMALL))
       (sheetpath (names /) (tstamps /))
@@ -1088,6 +1088,47 @@
         (pin (num 8) (name ~) (type passive))
         (pin (num 9) (name ~) (type passive))
         (pin (num 10) (name ~) (type passive))))
+    (libpart (lib conn) (part USB)
+      (fields
+        (field (name Reference) J)
+        (field (name Value) USB))
+      (pins
+        (pin (num 1) (name Vbus) (type power_out))
+        (pin (num 2) (name D-) (type BiDi))
+        (pin (num 3) (name D+) (type BiDi))
+        (pin (num 4) (name GND) (type power_in))
+        (pin (num 5) (name Shield_1) (type passive))
+        (pin (num 6) (name Shield_2) (type passive))))
+    (libpart (lib device) (part CRYSTAL)
+      (fields
+        (field (name Reference) X)
+        (field (name Value) CRYSTAL))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive))))
+    (libpart (lib device) (part C)
+      (description "Condensateur non polarise")
+      (footprints
+        (fp SM*)
+        (fp C?)
+        (fp C1-1))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) C))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part CP1)
+      (description "Condensateur polarise")
+      (footprints
+        (fp CP*)
+        (fp SM*))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) CP1))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
     (libpart (lib device) (part DIODE)
       (description "Diode simple")
       (footprints
@@ -1113,6 +1154,14 @@
       (pins
         (pin (num 1) (name 1) (type input))
         (pin (num 2) (name 2) (type input))))
+    (libpart (lib device) (part SW_PUSH)
+      (description "Push Button")
+      (fields
+        (field (name Reference) SW)
+        (field (name Value) SW_PUSH))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive))))
     (libpart (lib device) (part R)
       (description Resistance)
       (footprints
@@ -1127,55 +1176,6 @@
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part SW_PUSH)
-      (description "Push Button")
-      (fields
-        (field (name Reference) SW)
-        (field (name Value) SW_PUSH))
-      (pins
-        (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 2) (type passive))))
-    (libpart (lib conn) (part USB)
-      (fields
-        (field (name Reference) J)
-        (field (name Value) USB))
-      (pins
-        (pin (num 1) (name Vbus) (type power_out))
-        (pin (num 2) (name D-) (type BiDi))
-        (pin (num 3) (name D+) (type BiDi))
-        (pin (num 4) (name GND) (type power_in))
-        (pin (num 5) (name Shield_1) (type passive))
-        (pin (num 6) (name Shield_2) (type passive))))
-    (libpart (lib device) (part C)
-      (description "Condensateur non polarise")
-      (footprints
-        (fp SM*)
-        (fp C?)
-        (fp C1-1))
-      (fields
-        (field (name Reference) C)
-        (field (name Value) C))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part CP1)
-      (description "Condensateur polarise")
-      (footprints
-        (fp CP*)
-        (fp SM*))
-      (fields
-        (field (name Reference) C)
-        (field (name Value) CP1))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part CRYSTAL)
-      (fields
-        (field (name Reference) X)
-        (field (name Value) CRYSTAL))
-      (pins
-        (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 2) (type passive))))
     (libpart (lib regul) (part NCP1117ST50T3G)
       (aliases
         (alias NCP1117ST12T3G)
@@ -1207,6 +1207,19 @@
         (pin (num 4) (name ~) (type input))
         (pin (num 5) (name ~) (type input))
         (pin (num 6) (name ~) (type input))))
+    (libpart (lib AT32TQ14401A-cache) (part HOLE)
+      (fields
+        (field (name Reference) M)
+        (field (name Value) HOLE))
+      (pins
+        (pin (num 1) (name ~) (type input))))
+    (libpart (lib AT32TQ14401A-cache) (part JUMP_2_CONN)
+      (fields
+        (field (name Reference) J)
+        (field (name Value) JUMP_2_CONN))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 1) (type passive))))
     (libpart (lib AT32TQ14401A-cache) (part AT32UC3A3)
       (fields
         (field (name Reference) U)
@@ -1355,20 +1368,7 @@
         (pin (num 141) (name VDDCORE) (type input))
         (pin (num 142) (name VDDIN) (type input))
         (pin (num 143) (name ON_REG) (type power_in))
-        (pin (num 144) (name GNDPLL) (type input))))
-    (libpart (lib AT32TQ14401A-cache) (part HOLE)
-      (fields
-        (field (name Reference) M)
-        (field (name Value) HOLE))
-      (pins
-        (pin (num 1) (name ~) (type input))))
-    (libpart (lib AT32TQ14401A-cache) (part JUMP_2_CONN)
-      (fields
-        (field (name Reference) J)
-        (field (name Value) JUMP_2_CONN))
-      (pins
-        (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 1) (type passive)))))
+        (pin (num 144) (name GNDPLL) (type input)))))
   (libraries
     (library (logical atmel)
       (uri C:\kicad\kicad\share\library\atmel.lib))
