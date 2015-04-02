@@ -698,12 +698,12 @@
     )
   )
 
-  (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 54345FDC) (tstamp 54F2E97A)
+  (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 55134324) (tstamp 54F2E97A)
     (at 45.72 -5.08)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (path /5476FB64)
-    (fp_text reference P1 (at 0.1778 -0.0762) (layer F.SilkS)
+    (fp_text reference P1 (at 0.1778 -0.0762) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
     )
     (fp_text value _ (at 1.00076 5.00126) (layer F.SilkS) hide
@@ -714,12 +714,12 @@
       (net 3 GND) (clearance 1) (zone_connect 2))
   )
 
-  (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 54345FDC) (tstamp 54F2E981)
+  (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 5513432A) (tstamp 54F2E981)
     (at 45.72 -25.4)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (path /5476FD65)
-    (fp_text reference P2 (at 0.1778 -0.0762) (layer F.SilkS)
+    (fp_text reference P2 (at 0.1778 -0.0762) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
     )
     (fp_text value _ (at 1.00076 5.00126) (layer F.SilkS) hide
@@ -730,12 +730,12 @@
       (net 3 GND) (clearance 1) (zone_connect 2))
   )
 
-  (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 54345FDC) (tstamp 54841833)
+  (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 5513431C) (tstamp 54841833)
     (at 5.08 -25.4)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (path /5476FD9A)
-    (fp_text reference P3 (at 0.1778 -0.0762) (layer F.SilkS)
+    (fp_text reference P3 (at 0.1778 -0.0762) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
     )
     (fp_text value _ (at 1.00076 5.00126) (layer F.SilkS) hide
@@ -746,12 +746,12 @@
       (net 3 GND) (clearance 1) (zone_connect 2))
   )
 
-  (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 54345FDC) (tstamp 5482E012)
+  (module Dira:MountingHole_3mm placed (layer F.Cu) (tedit 55134321) (tstamp 5482E012)
     (at 5.08 -5.08)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (path /5476FDEC)
-    (fp_text reference P4 (at 0.1778 -0.0762) (layer F.SilkS)
+    (fp_text reference P4 (at 0.1778 -0.0762) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
     )
     (fp_text value _ (at 1.00076 5.00126) (layer F.SilkS) hide
