@@ -1,4 +1,4 @@
-update=Čt 26. březen 2015, 00:06:03 CET
+update=3. 4. 2015 7:46:28
 version=1
 last_client=kicad
 [cvpcb]
@@ -26,19 +26,6 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.2
 BoardOutlineThickness=0.09999999999999999
 ModuleOutlineThickness=0.15
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
 [eeschema]
 version=1
 LibDir=../../../../../../git/kicad-mlab/symbols
@@ -99,3 +86,16 @@ LibName53=E:/kicad-mlab/symbols/OpAmp
 LibName54=E:/kicad-mlab/symbols/sata7-67491-1030
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60

@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:/Chroust/Zaloha/stare/MLAB/Modules/CommSerial/I2C232V01A/SCH_PCB/I2C232V01A.sch)
-    (date "23. 3. 2015 15:44:18")
+    (date "3. 4. 2015 7:31:25")
     (tool "Eeschema (2015-01-07 BZR 5359)-product"))
   (components
     (comp (ref U2)
@@ -191,44 +191,6 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 550FDBDB)))
   (libparts
-    (libpart (lib device) (part ZENER)
-      (description "Diode zener")
-      (footprints
-        (fp D?)
-        (fp SO*)
-        (fp SM*))
-      (fields
-        (field (name Reference) D)
-        (field (name Value) ZENER))
-      (pins
-        (pin (num 1) (name A) (type passive))
-        (pin (num 2) (name K) (type passive))))
-    (libpart (lib device) (part R)
-      (description Resistance)
-      (footprints
-        (fp R?)
-        (fp SM0603)
-        (fp SM0805)
-        (fp R?-*)
-        (fp SM1206))
-      (fields
-        (field (name Reference) R)
-        (field (name Value) R))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part C)
-      (description "Condensateur non polarise")
-      (footprints
-        (fp SM*)
-        (fp C?)
-        (fp C1-1))
-      (fields
-        (field (name Reference) C)
-        (field (name Value) C))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
     (libpart (lib device) (part CP2)
       (footprints
         (fp SM*)
@@ -251,13 +213,18 @@
       (pins
         (pin (num 1) (name A) (type passive))
         (pin (num 2) (name K) (type passive))))
-    (libpart (lib I2C232V01A-cache) (part JUMP_2x1)
+    (libpart (lib device) (part C)
+      (description "Condensateur non polarise")
+      (footprints
+        (fp SM*)
+        (fp C?)
+        (fp C1-1))
       (fields
-        (field (name Reference) J)
-        (field (name Value) JUMP_2x1))
+        (field (name Reference) C)
+        (field (name Value) C))
       (pins
-        (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 1) (type passive))))
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
     (libpart (lib I2C232V01A-cache) (part CONN_3)
       (fields
         (field (name Reference) J)
@@ -266,12 +233,21 @@
         (pin (num 1) (name P1) (type passive))
         (pin (num 2) (name PM) (type passive))
         (pin (num 3) (name P3) (type passive))))
-    (libpart (lib I2C232V01A-cache) (part sroub)
+    (libpart (lib I2C232V01A-cache) (part JUMP_5X2)
       (fields
-        (field (name Reference) P)
-        (field (name Value) sroub))
+        (field (name Reference) J)
+        (field (name Value) JUMP_5X2))
       (pins
-        (pin (num 1) (name P1) (type passive))))
+        (pin (num 1) (name 2) (type passive))
+        (pin (num 2) (name 2) (type passive))
+        (pin (num 3) (name 4) (type passive))
+        (pin (num 4) (name 4) (type passive))
+        (pin (num 5) (name 6) (type passive))
+        (pin (num 6) (name 6) (type passive))
+        (pin (num 7) (name 7) (type passive))
+        (pin (num 8) (name 7) (type passive))
+        (pin (num 9) (name 10) (type passive))
+        (pin (num 10) (name 10) (type passive))))
     (libpart (lib I2C232V01A-cache) (part LE33CD)
       (fields
         (field (name Reference) U)
@@ -285,6 +261,19 @@
         (pin (num 6) (name GND) (type BiDi))
         (pin (num 7) (name GND) (type BiDi))
         (pin (num 8) (name Vin) (type BiDi))))
+    (libpart (lib I2C232V01A-cache) (part sroub)
+      (fields
+        (field (name Reference) P)
+        (field (name Value) sroub))
+      (pins
+        (pin (num 1) (name P1) (type passive))))
+    (libpart (lib I2C232V01A-cache) (part JUMP_2x1)
+      (fields
+        (field (name Reference) J)
+        (field (name Value) JUMP_2x1))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 1) (type passive))))
     (libpart (lib I2C232V01A-cache) (part SC18IM700)
       (fields
         (field (name Reference) U)
@@ -317,21 +306,32 @@
         (pin (num 4) (name 4) (type passive))
         (pin (num 5) (name 6) (type passive))
         (pin (num 6) (name 6) (type passive))))
-    (libpart (lib I2C232V01A-cache) (part JUMP_5X2)
+    (libpart (lib device) (part R)
+      (description Resistance)
+      (footprints
+        (fp R?)
+        (fp SM0603)
+        (fp SM0805)
+        (fp R?-*)
+        (fp SM1206))
       (fields
-        (field (name Reference) J)
-        (field (name Value) JUMP_5X2))
+        (field (name Reference) R)
+        (field (name Value) R))
       (pins
-        (pin (num 1) (name 2) (type passive))
-        (pin (num 2) (name 2) (type passive))
-        (pin (num 3) (name 4) (type passive))
-        (pin (num 4) (name 4) (type passive))
-        (pin (num 5) (name 6) (type passive))
-        (pin (num 6) (name 6) (type passive))
-        (pin (num 7) (name 7) (type passive))
-        (pin (num 8) (name 7) (type passive))
-        (pin (num 9) (name 10) (type passive))
-        (pin (num 10) (name 10) (type passive)))))
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part ZENER)
+      (description "Diode zener")
+      (footprints
+        (fp D?)
+        (fp SO*)
+        (fp SM*))
+      (fields
+        (field (name Reference) D)
+        (field (name Value) ZENER))
+      (pins
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive)))))
   (libraries
     (library (logical device)
       (uri C:\kicad\kicad\share\library\device.lib))
