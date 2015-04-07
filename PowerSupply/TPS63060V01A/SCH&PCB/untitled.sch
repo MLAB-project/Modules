@@ -785,80 +785,6 @@ W = angled&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
-<library name="moje_konektory">
-<packages>
-<package name="WAGO256">
-<wire x1="1.54" y1="-2.5001" x2="7.54" y2="-2.5001" width="0.127" layer="21"/>
-<wire x1="1.54" y1="2.5001" x2="7.54" y2="2.5001" width="0.127" layer="21"/>
-<wire x1="10.0401" y1="2" x2="10.0401" y2="-2" width="0.127" layer="21"/>
-<wire x1="10.0401" y1="-2" x2="7.54" y2="-2" width="0.127" layer="21"/>
-<wire x1="7.54" y1="-2" x2="6.54" y2="-2" width="0.127" layer="21"/>
-<wire x1="6.54" y1="-2" x2="6.54" y2="-1.5001" width="0.127" layer="21"/>
-<wire x1="6.54" y1="-1.5001" x2="6.54" y2="1.5001" width="0.127" layer="21"/>
-<wire x1="6.54" y1="1.5001" x2="6.54" y2="2" width="0.127" layer="21"/>
-<wire x1="6.54" y1="2" x2="7.54" y2="2" width="0.127" layer="21"/>
-<wire x1="7.54" y1="2" x2="10.0401" y2="2" width="0.127" layer="21"/>
-<wire x1="9.54" y1="-1.5001" x2="7.0401" y2="-1.5001" width="0.127" layer="21"/>
-<wire x1="7.0401" y1="-1.5001" x2="7.0401" y2="1.5001" width="0.127" layer="21"/>
-<wire x1="7.0401" y1="1.5001" x2="9.54" y2="1.5001" width="0.127" layer="21"/>
-<wire x1="9.54" y1="1.5001" x2="9.54" y2="-1.5001" width="0.127" layer="21"/>
-<wire x1="7.54" y1="-2.5001" x2="7.54" y2="-2" width="0.127" layer="21"/>
-<wire x1="7.54" y1="2" x2="7.54" y2="2.5001" width="0.127" layer="21"/>
-<wire x1="6.54" y1="-1.5001" x2="3.54" y2="-1.5001" width="0.127" layer="21"/>
-<wire x1="3.54" y1="-1.5001" x2="3.54" y2="1.5001" width="0.127" layer="21"/>
-<wire x1="3.54" y1="1.5001" x2="6.54" y2="1.5001" width="0.127" layer="21"/>
-<wire x1="1.54" y1="-2.5001" x2="1.54" y2="-1" width="0.127" layer="21"/>
-<wire x1="1.54" y1="-1" x2="1.54" y2="1" width="0.127" layer="21"/>
-<wire x1="1.54" y1="1" x2="1.54" y2="2.5001" width="0.127" layer="21"/>
-<wire x1="1.0399" y1="-2" x2="-6.9601" y2="-2" width="0.127" layer="21"/>
-<wire x1="-6.9601" y1="-2" x2="-6.9601" y2="2" width="0.127" layer="21"/>
-<wire x1="-6.9601" y1="2" x2="1.0399" y2="2" width="0.127" layer="21"/>
-<wire x1="1.0399" y1="2" x2="1.0399" y2="1" width="0.127" layer="21"/>
-<wire x1="1.0399" y1="1" x2="1.0399" y2="-1" width="0.127" layer="21"/>
-<wire x1="1.0399" y1="-1" x2="1.0399" y2="-2" width="0.127" layer="21"/>
-<wire x1="1.54" y1="-2.5001" x2="-7.46" y2="-2.5001" width="0.127" layer="21"/>
-<wire x1="-7.46" y1="-2.5001" x2="-7.46" y2="2.5001" width="0.127" layer="21"/>
-<wire x1="-7.46" y1="2.5001" x2="1.54" y2="2.5001" width="0.127" layer="21"/>
-<wire x1="1.0399" y1="-1" x2="1.54" y2="-1" width="0.127" layer="21"/>
-<wire x1="1.0399" y1="1" x2="1.54" y2="1" width="0.127" layer="21"/>
-<circle x="-2.46" y="0" radius="0.5723" width="0.127" layer="102"/>
-<circle x="2.54" y="0" radius="0.5724" width="0.127" layer="102"/>
-<pad name="1" x="2.54" y="0" drill="1.3" diameter="3.81" shape="square"/>
-<pad name="A1" x="-2.46" y="0" drill="1.3" diameter="3.81" shape="square"/>
-<text x="10.4775" y="0.3175" size="1.6764" layer="25">&gt;Name</text>
-<text x="10.4775" y="-1.905" size="1.6764" layer="27">&gt;Value</text>
-</package>
-</packages>
-<symbols>
-<symbol name="WAGO">
-<wire x1="-2.54" y1="2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="7.62" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-2.54" x2="7.62" y2="2.54" width="0.254" layer="94"/>
-<wire x1="7.62" y1="2.54" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
-<pin name="P$1" x="7.62" y="0" visible="off" length="point" direction="pas"/>
-<text x="-2.54" y="0" size="1.27" layer="95">&gt;NAME</text>
-<text x="-2.54" y="-2.54" size="1.27" layer="95">&gt;VALUE</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="WAGO256" prefix="SV" uservalue="yes">
-<description>WAGO256</description>
-<gates>
-<gate name="G$1" symbol="WAGO" x="-2.54" y="0"/>
-</gates>
-<devices>
-<device name="" package="WAGO256">
-<connects>
-<connect gate="G$1" pin="P$1" pad="1 A1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -907,12 +833,9 @@ W = angled&lt;p&gt;
 <part name="L1" library="moje_L" deviceset="DE1205-10" device="" value="DE1207-1"/>
 <part name="SV2" library="moje_hrebinky" deviceset="MA03-2" device=""/>
 <part name="GND7" library="moje" deviceset="GND" device=""/>
-<part name="SV3" library="moje_konektory" deviceset="WAGO256" device=""/>
-<part name="SV7" library="moje_konektory" deviceset="WAGO256" device=""/>
 <part name="SV4" library="moje_hrebinky" deviceset="MA02-3" device=""/>
-<part name="SV8" library="moje_konektory" deviceset="WAGO256" device=""/>
-<part name="SV9" library="moje_konektory" deviceset="WAGO256" device=""/>
-<part name="GND11" library="moje" deviceset="GND" device=""/>
+<part name="SV3" library="moje_hrebinky" deviceset="MA03-2" device=""/>
+<part name="SV7" library="moje_hrebinky" deviceset="MA02-1" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -920,6 +843,8 @@ W = angled&lt;p&gt;
 <text x="77.47" y="5.08" size="1.778" layer="97">OUTPUT</text>
 <text x="-39.37" y="-3.81" size="1.778" layer="91">MODE</text>
 <text x="77.47" y="-17.78" size="1.778" layer="97">OUTPUT</text>
+<text x="30.48" y="7.62" size="1.778" layer="97" rot="R90">For 5V</text>
+<text x="22.86" y="7.62" size="1.778" layer="97" rot="R90">For 3.3V</text>
 </plain>
 <instances>
 <instance part="C16" gate="G$1" x="-73.66" y="3.81" smashed="yes" rot="R180">
@@ -982,15 +907,15 @@ W = angled&lt;p&gt;
 <instance part="SV2" gate="-2" x="72.39" y="-19.05"/>
 <instance part="SV2" gate="-3" x="72.39" y="-22.86"/>
 <instance part="GND7" gate="G$1" x="64.77" y="-30.48"/>
-<instance part="SV3" gate="G$1" x="-114.3" y="8.89"/>
-<instance part="SV7" gate="G$1" x="-114.3" y="2.54"/>
 <instance part="SV4" gate="-1" x="21.59" y="-19.05" rot="R90"/>
 <instance part="SV4" gate="-2" x="29.21" y="-19.05" rot="R90"/>
 <instance part="SV4" gate="-3" x="21.59" y="-29.21" rot="R270"/>
 <instance part="SV4" gate="-4" x="29.21" y="-29.21" rot="R270"/>
-<instance part="SV8" gate="G$1" x="72.39" y="22.86" rot="R180"/>
-<instance part="SV9" gate="G$1" x="72.39" y="16.51" rot="R180"/>
-<instance part="GND11" gate="G$1" x="62.23" y="13.97"/>
+<instance part="SV3" gate="-1" x="-114.3" y="13.97" rot="R180"/>
+<instance part="SV3" gate="-2" x="-114.3" y="8.89" rot="R180"/>
+<instance part="SV3" gate="-3" x="-114.3" y="3.81" rot="R180"/>
+<instance part="SV7" gate="-1" x="40.64" y="-11.43" rot="R180"/>
+<instance part="SV7" gate="-2" x="40.64" y="-15.24" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -1022,10 +947,14 @@ W = angled&lt;p&gt;
 <wire x1="-67.31" y1="-7.62" x2="-67.31" y2="-3.81" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="-104.14" y1="2.54" x2="-104.14" y2="-2.54" width="0.1524" layer="91"/>
-<wire x1="-106.68" y1="2.54" x2="-104.14" y2="2.54" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="G$1" pin="GND"/>
-<pinref part="SV7" gate="G$1" pin="P$1"/>
+<pinref part="SV3" gate="-1" pin="K"/>
+<wire x1="-109.22" y1="13.97" x2="-104.14" y2="13.97" width="0.1524" layer="91"/>
+<wire x1="-104.14" y1="13.97" x2="-104.14" y2="3.81" width="0.1524" layer="91"/>
+<pinref part="SV3" gate="-3" pin="K"/>
+<wire x1="-104.14" y1="3.81" x2="-104.14" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-109.22" y1="3.81" x2="-104.14" y2="3.81" width="0.1524" layer="91"/>
+<junction x="-104.14" y="3.81"/>
 </segment>
 <segment>
 <pinref part="D1" gate="G$1" pin="A"/>
@@ -1095,12 +1024,6 @@ W = angled&lt;p&gt;
 <junction x="64.77" y="-22.86"/>
 <pinref part="GND7" gate="G$1" pin="GND"/>
 </segment>
-<segment>
-<pinref part="SV9" gate="G$1" pin="P$1"/>
-<pinref part="GND11" gate="G$1" pin="GND"/>
-<wire x1="64.77" y1="16.51" x2="62.23" y2="16.51" width="0.1524" layer="91"/>
-<wire x1="62.23" y1="16.51" x2="62.23" y2="13.97" width="0.1524" layer="91"/>
-</segment>
 </net>
 <net name="+BAT2" class="0">
 <segment>
@@ -1142,8 +1065,8 @@ W = angled&lt;p&gt;
 <net name="N$4" class="0">
 <segment>
 <pinref part="P1" gate="G$1" pin="1"/>
-<wire x1="-106.68" y1="8.89" x2="-102.87" y2="8.89" width="0.1524" layer="91"/>
-<pinref part="SV3" gate="G$1" pin="P$1"/>
+<wire x1="-109.22" y1="8.89" x2="-102.87" y2="8.89" width="0.1524" layer="91"/>
+<pinref part="SV3" gate="-2" pin="K"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -1176,17 +1099,12 @@ W = angled&lt;p&gt;
 <pinref part="SV5" gate="-2" pin="K"/>
 <wire x1="67.31" y1="3.81" x2="60.96" y2="3.81" width="0.1524" layer="91"/>
 <pinref part="SV2" gate="-2" pin="K"/>
-<wire x1="60.96" y1="3.81" x2="58.42" y2="3.81" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="3.81" x2="54.61" y2="3.81" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="3.81" x2="54.61" y2="3.81" width="0.1524" layer="91"/>
 <wire x1="67.31" y1="-19.05" x2="60.96" y2="-19.05" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="-19.05" x2="60.96" y2="3.81" width="0.1524" layer="91"/>
 <junction x="54.61" y="3.81"/>
 <junction x="60.96" y="3.81"/>
 <pinref part="X5" gate="G$1" pin="VOUT"/>
-<pinref part="SV8" gate="G$1" pin="P$1"/>
-<wire x1="64.77" y1="22.86" x2="58.42" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="22.86" x2="58.42" y2="3.81" width="0.1524" layer="91"/>
-<junction x="58.42" y="3.81"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -1222,10 +1140,18 @@ W = angled&lt;p&gt;
 </net>
 <net name="N$6" class="0">
 <segment>
-<wire x1="12.7" y1="-8.89" x2="40.64" y2="-8.89" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="-8.89" x2="33.02" y2="-8.89" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="-8.89" x2="40.64" y2="-8.89" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="-8.89" x2="40.64" y2="-6.35" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <pinref part="X5" gate="G$1" pin="PG"/>
+<pinref part="SV7" gate="-2" pin="P$1"/>
+<wire x1="40.64" y1="-15.24" x2="33.02" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="-15.24" x2="33.02" y2="-11.43" width="0.1524" layer="91"/>
+<pinref part="SV7" gate="-1" pin="P$1"/>
+<wire x1="33.02" y1="-11.43" x2="33.02" y2="-8.89" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="-11.43" x2="33.02" y2="-11.43" width="0.1524" layer="91"/>
+<junction x="33.02" y="-8.89"/>
 </segment>
 </net>
 <net name="N$15" class="0">
