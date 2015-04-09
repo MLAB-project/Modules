@@ -17,6 +17,8 @@ module ramp(width, depth, height) {
     }
 }
 
+
+
 difference () {
 //        translate ([-1,-16,0])
 	cube([50,100,pedestal_height]);
@@ -24,25 +26,32 @@ difference () {
 	//mount holes for ODROID U3
 	translate ([4.5,4.5 + 76, 0])
         rotate([0,0,90])
-	cylinder (h = 6 ,r= nut_size/2 + clear, $fn=6);
-        translate ([4.5,4.5 + 76, 6.2])
-    	cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
+            cylinder (h = 6 ,r= nut_size/2 + clear, $fn=6);
+    translate ([4.5,4.5 + 76, 2])
+        difference () {
+            cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
+            translate ([-mount_hole/2,-mount_hole/2, 1.2])
+                rotate([27,0,0]) cube([5,50,5]);
+        };
     
 	translate ([4.5 + 41, 4.5 + 76,0])
         rotate([0,0,90])
-	cylinder (h = 6,r= nut_size/2 + clear, $fn=6);
-        translate ([4.5 + 41, 4.5 + 76, 6.2])
-    	cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
-
-
+            cylinder (h = 6,r= nut_size/2 + clear, $fn=6);
+    translate ([4.5 + 41, 4.5 + 76, 2])
+        difference () {
+            cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
+            translate ([-mount_hole/2,-mount_hole/2, 1.2])
+                rotate([27,0,0]) cube([5,50,5]);
+        };
+        
 /// Two holes for other side of ODROID-U3 PCB. 
-        translate ([4.5,4.5,0])
+    translate ([4.5,4.5,0])
         cylinder (h = 6, r= (nut_size+clear)/2, $fn=6);
-        translate ([4.5,4.5,6.2])
-    	cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
+    translate ([4.5,4.5,6.2])
+        cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
     
 	translate ([4.5+41,4.5,0])
-	cylinder (h = 6, r= (nut_size+clear)/2, $fn=6);
+        cylinder (h = 6, r= (nut_size+clear)/2, $fn=6);
 	translate ([4.5+41,4.5,6.2])
         cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
 
@@ -138,7 +147,6 @@ difference () {
         cylinder (h = pedestal_height + clear,r= mount_hole/2, $fn=10);
 
 }
-
 
 /// Support material
 /*
