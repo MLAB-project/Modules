@@ -1,4 +1,4 @@
-update=17. 4. 2015 15:44:40
+update=18.4.2015 20:08:45
 version=1
 last_client=kicad
 [cvpcb]
@@ -73,3 +73,5 @@ LibName39=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/MLAB_IO
 LibName40=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/MLAB_Jumpers
 LibName41=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/OpAmp
 LibName42=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/sata7-67491-1030
+LibName43=MLAB_BATERY
+LibName44=MLAB_T
