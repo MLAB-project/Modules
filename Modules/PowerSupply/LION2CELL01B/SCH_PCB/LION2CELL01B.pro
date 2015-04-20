@@ -1,4 +1,4 @@
-update=18.4.2015 20:08:45
+update=20. 4. 2015 15:11:57
 version=1
 last_client=kicad
 [cvpcb]
@@ -75,3 +75,16 @@ LibName41=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/OpAmp
 LibName42=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/sata7-67491-1030
 LibName43=MLAB_BATERY
 LibName44=MLAB_T
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
