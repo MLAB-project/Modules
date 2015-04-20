@@ -4,7 +4,7 @@ x_size = 87;
 y_size = 58;
 mount_hole = 3.5;
 nut_size = 6.8;
-nut_size25 = 6;
+nut_size25 = 6.1;
 MLAB_grid = 10.16;
 
 x_holes = floor(x_size / MLAB_grid);
