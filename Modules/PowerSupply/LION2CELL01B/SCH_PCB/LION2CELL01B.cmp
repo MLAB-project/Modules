@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-01-07 BZR 5359)-product   date = 20. 4. 2015 13:36:20
+Cmp-Mod V01 Created by Cvpcb (2015-01-07 BZR 5359)-product   date = 21. 4. 2015 9:55:17
 
 BeginCmp
 TimeStamp = /5532C7C3;
@@ -73,8 +73,8 @@ EndCmp
 BeginCmp
 TimeStamp = /553295C4;
 Reference = C10;
-ValeurCmp = 47uF;
-IdModule  = Mlab_C:TantalC_SizeC_Reflow;
+ValeurCmp = 100uF;
+IdModule  = Mlab_C:TantalC_SizeD_Reflow;
 EndCmp
 
 BeginCmp
@@ -320,6 +320,13 @@ TimeStamp = /5532B4D9;
 Reference = J13;
 ValeurCmp = JUMP_4X2;
 IdModule  = Mlab_Pin_Headers:Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /55365343;
+Reference = J14;
+ValeurCmp = JUMP_2x1;
+IdModule  = Mlab_Pin_Headers:Straight_1x02;
 EndCmp
 
 BeginCmp
