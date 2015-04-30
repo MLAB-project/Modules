@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-01-07 BZR 5359)-product   date = 28. 4. 2015 15:16:38
+Cmp-Mod V01 Created by Cvpcb (2015-01-07 BZR 5359)-product   date = 30. 4. 2015 7:21:00
 
 BeginCmp
 TimeStamp = /553CAB5C;
@@ -15,10 +15,10 @@ IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /553D4744;
+TimeStamp = /5541D097;
 Reference = C3;
-ValeurCmp = 47uF;
-IdModule  = Mlab_C:TantalC_SizeC_Reflow;
+ValeurCmp = 10uF;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
@@ -176,6 +176,34 @@ IdModule  = Mlab_Pin_Headers:Straight_2x01;
 EndCmp
 
 BeginCmp
+TimeStamp = /5541BFAB;
+Reference = P1;
+ValeurCmp = _;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5541C120;
+Reference = P2;
+ValeurCmp = _;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5541C15F;
+Reference = P3;
+ValeurCmp = _;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5541C19F;
+Reference = P4;
+ValeurCmp = _;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
 TimeStamp = /553CC231;
 Reference = R1;
 ValeurCmp = 10k;
@@ -284,7 +312,7 @@ BeginCmp
 TimeStamp = /553CAA1E;
 Reference = U1;
 ValeurCmp = PCA9531;
-IdModule  = ;
+IdModule  = Housings_SSOP:TSSOP-16_4.4x5mm_Pitch0.65mm;
 EndCmp
 
 EndListe
