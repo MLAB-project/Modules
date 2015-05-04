@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:I2CADC01A-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -10,7 +11,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -29,19 +29,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:asp-134604-01_(fmc)
-LIBS:clock
 LIBS:header
-LIBS:Jumpers
-LIBS:konektory
 LIBS:mechanical
-LIBS:MLAB_BATERY
-LIBS:MLAB_D
-LIBS:MLAB_IO
-LIBS:MLAB_Jumpers
-LIBS:MLAB_T
-LIBS:OpAmp
-LIBS:sata7-67491-1030
 LIBS:I2CADC01A-cache
 EELAYER 25 0
 EELAYER END
@@ -91,7 +80,7 @@ F 3 "" H 2500 2650 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R R?
+L R-RESCUE-I2CADC01A R?
 U 1 1 55460320
 P 2900 2550
 F 0 "R?" V 2980 2550 40  0000 C CNN
@@ -102,7 +91,7 @@ F 3 "" H 2900 2550 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R?
+L R-RESCUE-I2CADC01A R?
 U 1 1 55460379
 P 2900 2850
 F 0 "R?" V 2980 2850 40  0000 C CNN
@@ -113,7 +102,7 @@ F 3 "" H 2900 2850 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C?
+L C-RESCUE-I2CADC01A C?
 U 1 1 55460399
 P 3550 3100
 F 0 "C?" H 3550 3200 40  0000 L CNN
@@ -124,7 +113,7 @@ F 3 "" H 3550 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C?
+L C-RESCUE-I2CADC01A C?
 U 1 1 554603CA
 P 3250 3100
 F 0 "C?" H 3250 3200 40  0000 L CNN
@@ -333,7 +322,7 @@ F 3 "" H 3700 5100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C?
+L C-RESCUE-I2CADC01A C?
 U 1 1 55461125
 P 3700 4850
 F 0 "C?" H 3700 4950 40  0000 L CNN
@@ -355,7 +344,7 @@ F 3 "" H 3950 5100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C?
+L C-RESCUE-I2CADC01A C?
 U 1 1 554611EB
 P 3950 4850
 F 0 "C?" H 3950 4950 40  0000 L CNN
@@ -396,7 +385,7 @@ F 3 "" H 4400 2050 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R?
+L R-RESCUE-I2CADC01A R?
 U 1 1 55461894
 P 4400 1500
 F 0 "R?" V 4480 1500 40  0000 C CNN
@@ -500,7 +489,7 @@ F 3 "" H 6700 2600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R?
+L R-RESCUE-I2CADC01A R?
 U 1 1 55462BF7
 P 5800 2050
 F 0 "R?" V 5880 2050 40  0000 C CNN
@@ -511,7 +500,7 @@ F 3 "" H 5800 2050 30  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R R?
+L R-RESCUE-I2CADC01A R?
 U 1 1 55462CAD
 P 6050 2050
 F 0 "R?" V 6130 2050 40  0000 C CNN
