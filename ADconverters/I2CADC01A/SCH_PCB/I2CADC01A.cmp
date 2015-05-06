@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-01-07 BZR 5359)-product   date = 4. 5. 2015 8:01:21
+Cmp-Mod V01 Created by Cvpcb (2015-01-07 BZR 5359)-product   date = 6. 5. 2015 7:35:18
 
 BeginCmp
 TimeStamp = /554603CA;
@@ -52,7 +52,7 @@ EndCmp
 BeginCmp
 TimeStamp = /55461701;
 Reference = D4;
-ValeurCmp = REFERENCE;
+ValeurCmp = LM4041-adj;
 IdModule  = Mlab_IO:SOT-23;
 EndCmp
 
@@ -103,6 +103,20 @@ TimeStamp = /55462947;
 Reference = J7;
 ValeurCmp = JUMP_5X2;
 IdModule  = Mlab_Pin_Headers:Straight_2x05;
+EndCmp
+
+BeginCmp
+TimeStamp = /5549AD37;
+Reference = J8;
+ValeurCmp = CONN_2;
+IdModule  = Mlab_Pin_Headers:Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /5549B026;
+Reference = L1;
+ValeurCmp = BLM21PG300SN1D;
+IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
