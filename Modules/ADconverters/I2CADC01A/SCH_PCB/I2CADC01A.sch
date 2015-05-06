@@ -10,7 +10,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -29,19 +28,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:asp-134604-01_(fmc)
-LIBS:clock
 LIBS:header
-LIBS:Jumpers
-LIBS:konektory
 LIBS:mechanical
-LIBS:MLAB_BATERY
-LIBS:MLAB_D
-LIBS:MLAB_IO
-LIBS:MLAB_Jumpers
-LIBS:MLAB_T
-LIBS:OpAmp
-LIBS:sata7-67491-1030
 LIBS:I2CADC01A-cache
 EELAYER 25 0
 EELAYER END
