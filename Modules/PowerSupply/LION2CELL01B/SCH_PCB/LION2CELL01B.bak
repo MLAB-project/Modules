@@ -597,7 +597,7 @@ F 1 "2x18650_LION" V 450 7250 50  0001 C CNN
 F 2 "Mlab_Batery:2LION" H 2300 7600 60  0001 C CNN
 F 3 "" H 2300 7600 60  0000 C CNN
 	1    700  7250
-	1    0    0    1   
+	0    -1   1    0   
 $EndComp
 $Comp
 L FUSE F1
@@ -1932,8 +1932,6 @@ Wire Wire Line
 	6800 5900 6800 6250
 Text Notes 1200 600  0    60   ~ 0
 12V
-Text Notes 400  250  0    60   ~ 0
-MOŽNÁ DÁT KONEKTOR NA NAPÁJECÍ ZDROJ
 $Comp
 L R R10
 U 1 1 5533B935
