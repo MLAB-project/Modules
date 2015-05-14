@@ -47,7 +47,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -57,4 +57,25 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Connection ~ 15150 5500
+Connection ~ 15150 5500
+Connection ~ 15150 5500
+$Sheet
+S 700  6500 750  400 
+U 55551F88
+F0 "POWER" 60
+F1 "power.sch" 60
+$EndSheet
+$Sheet
+S 1650 6500 850  450 
+U 5555526D
+F0 "DOWNSTREAM PORT POWER SWITCHES" 60
+F1 "downstream.sch" 60
+$EndSheet
+$Sheet
+S 4600 6750 750  450 
+U 5555B01B
+F0 "USBPORT" 60
+F1 "usbport.sch" 60
+$EndSheet
 $EndSCHEMATC
