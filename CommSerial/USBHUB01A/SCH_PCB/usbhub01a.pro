@@ -1,4 +1,4 @@
-update=13.5.2015 19:24:00
+update=20. 5. 2015 16:37:06
 version=1
 last_client=kicad
 [cvpcb]
@@ -29,7 +29,7 @@ ModuleOutlineThickness=0.150000000000
 version=1
 [eeschema]
 version=1
-LibDir=E:/kicad-mlab/symbols
+LibDir=../../../../../kicad-mlab/symbols
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -74,3 +74,14 @@ LibName40=MLAB_Jumpers
 LibName41=MLAB_T
 LibName42=OpAmp
 LibName43=sata7-67491-1030
+LibName44=MLAB_CONNECTORS
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
