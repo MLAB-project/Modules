@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 27. 5. 2015 12:38:09
+Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 28. 5. 2015 8:50:13
 
 BeginCmp
 TimeStamp = /555FB6EB;
@@ -704,35 +704,35 @@ BeginCmp
 TimeStamp = /5555B01B/555C77EF;
 Reference = J13;
 ValeurCmp = USB3_A;
-IdModule  = ;
+IdModule  = Connect:USB_A;
 EndCmp
 
 BeginCmp
 TimeStamp = /5555B01B/555C768C;
 Reference = J14;
 ValeurCmp = USB3_B;
-IdModule  = ;
+IdModule  = Connect:USB_B;
 EndCmp
 
 BeginCmp
 TimeStamp = /5555B01B/555C8ADD;
 Reference = J15;
 ValeurCmp = USB3_A;
-IdModule  = ;
+IdModule  = Connect:USB_A;
 EndCmp
 
 BeginCmp
 TimeStamp = /5555B01B/555C845B;
 Reference = J16;
 ValeurCmp = USB3_A;
-IdModule  = ;
+IdModule  = Connect:USB_A;
 EndCmp
 
 BeginCmp
 TimeStamp = /5555B01B/555C8320;
 Reference = J17;
 ValeurCmp = USB3_A;
-IdModule  = ;
+IdModule  = Connect:USB_A;
 EndCmp
 
 BeginCmp
@@ -1152,7 +1152,7 @@ BeginCmp
 TimeStamp = /555F014A;
 Reference = Y1;
 ValeurCmp = 24MHz;
-IdModule  = ;
+IdModule  = Crystals:Crystal_HC49-U_Vertical;
 EndCmp
 
 EndListe
