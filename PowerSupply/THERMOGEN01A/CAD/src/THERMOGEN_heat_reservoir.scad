@@ -30,13 +30,13 @@ difference () {
     union () {
         difference () {
             minkowski() {
-                cube([heatsink_xsize-sealing_ring_width/2, heatsink_xsize-sealing_ring_width/2, 5]);          // Rib for o-ring. 
+                cube([heatsink_xsize, heatsink_xsize, sealing_ring_width]);          // Rib for o-ring. 
                 cylinder(r=wall_thickness/2,h=0.1);
             }
 
-            translate ([sealing_ring_width, sealing_ring_width, 0])
+            translate ([sealing_ring_width/2, sealing_ring_width/2, 0])
             minkowski() {
-                cube([heatsink_xsize+sealing_ring_width/2, heatsink_xsize+sealing_ring_width/2, 5]);          // Rib for o-ring. 
+                cube([heatsink_xsize-sealing_ring_width, heatsink_ysize-sealing_ring_width, sealing_ring_width]);          // Rib for o-ring. 
                 cylinder(r=wall_thickness/2,h=0.1);
             }
         }
