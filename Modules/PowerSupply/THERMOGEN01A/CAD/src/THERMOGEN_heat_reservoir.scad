@@ -2,9 +2,9 @@ heatsink_xsize = 50;
 heatsink_ysize = 50;
 heatsink_zsize = 50;
 
-TEG_xsize = 50;
-TEG_ysize = 50;
-TEG_zsize = 50;
+TEG_xsize = 30;
+TEG_ysize = 30;
+TEG_zsize = 5;
 
 mount_hole = 3.5;
 clearance = 0.175;
@@ -23,21 +23,24 @@ difference () {
     translate ([wall_thickness-clearance, wall_thickness-clearance, wall_thickness-clearance])
         cube([heatsink_xsize+2*clearance, heatsink_ysize+2*clearance, heatsink_xsize+2*clearance]);          // hollow for heat sink and heat storage liquid.
 
-    translate ([(heatsink_xsize-TEG_xsize)/2 - clearance, (heatsink_ysize-TEG_ysize)/2 - clearance, 0])
+    translate ([((heatsink_xsize+2*wall_thickness)-TEG_xsize)/2 - clearance, ((heatsink_ysize+2*wall_thickness)-TEG_ysize)/2 - clearance, 0])
         cube([TEG_xsize+2*clearance, TEG_ysize+2*clearance, wall_thickness]);          // hollow for the thermoelectric generator
 
-    translate ([0, 0, height-sealing_ring_width/2])
+    translate ([wall_thickness, wall_thickness, height-sealing_ring_width])
+    union () {
         difference () {
             minkowski() {
                 cube([heatsink_xsize-sealing_ring_width/2, heatsink_xsize-sealing_ring_width/2, 5]);          // Rib for o-ring. 
                 cylinder(r=wall_thickness/2,h=0.1);
             }
 
+            translate ([sealing_ring_width, sealing_ring_width, 0])
             minkowski() {
                 cube([heatsink_xsize+sealing_ring_width/2, heatsink_xsize+sealing_ring_width/2, 5]);          // Rib for o-ring. 
                 cylinder(r=wall_thickness/2,h=0.1);
             }
         }
+    }
 /*
     rotate([0,0,-45])       // hole for top part mounting nut
         translate ([ 0, -y_size/3, thickness/3])    
