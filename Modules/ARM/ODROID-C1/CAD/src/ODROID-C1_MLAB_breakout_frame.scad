@@ -1,3 +1,4 @@
+use <./../../../../../Library/Graphics/MLAB_logo.scad>
 
 pedestal_height = 13;   // designed for use the MLAB standard 12mm screws.
 mount_hole = 3.5;
@@ -93,7 +94,11 @@ difference () {
         
 	translate ([10,67, 0])  // ODROIDs passive components hole. 
 	cube([38,11,pedestal_height ]);        
- 
+
+    union (){
+        translate ([29,0.5, 6.5])  // ODROIDs passive components hole.
+            rotate ([90,0,0])
+                scale(v = [0.35, 0.35, 0.35])
+                    MLAB_logo_long();
+    } 
 }
-
-
