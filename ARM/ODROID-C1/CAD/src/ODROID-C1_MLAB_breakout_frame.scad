@@ -98,7 +98,7 @@ difference () {
     union (){
         translate ([29,0.5, 6.5])  // ODROIDs passive components hole.
             rotate ([90,0,0])
-                scale(v = [0.35, 0.35, 0.35])
+                scale(v = [0.4, 0.4, 0.4])
                     MLAB_logo_long();
     } 
 }
