@@ -26,7 +26,7 @@ difference () {
     translate ([thickness/2, thickness/2, 0])
         difference () {
             minkowski() {
-                    cube([150+clear, 110+clear, 5]);          // hollow for BASE1115
+                    cube([150-thickness/2+clear, 110-thickness/2+clear, 5]);          // hollow for BASE1115
                 cylinder(r=5,h=0.1);
             }
             /// TODO Fixing cilinders teeths
