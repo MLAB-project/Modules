@@ -1,59 +1,111 @@
-heatsink_xsize = 50;
-heatsink_ysize = 50;
-heatsink_zsize = 50;
+heatsink_xsize = 50.1;
+heatsink_ysize = 50.1;
+heatsink_zsize = 45;
+heatsink_thickness = 2;
 
-TEG_xsize = 30;
-TEG_ysize = 30;
-TEG_zsize = 5;
+TEG_xsize = 40.1;
+TEG_ysize = 40.1;
+TEG_zsize = 8;
 
-mount_hole = 3.5;
-clearance = 0.175;
-sealing_ring_width = 3; 
-wall_thickness = 10;
+mount_hole = 3.5;       // mounting screw hole diameter
+clearance = 0.175;      // spare clearance for printing tolerances. 
+sealing_ring_width = 3;     // width of sealing gab under the cover
+wall_thickness = 12;    // thickness of the box wall 
+volume_encore = 10;     // space added to the size of internar heatsink
 
-height = heatsink_zsize + wall_thickness;
+height = heatsink_zsize + TEG_zsize+volume_encore;
 
 
 difference () {
     union (){
-        cube([heatsink_xsize+2*wall_thickness,heatsink_ysize+2*wall_thickness,heatsink_zsize+wall_thickness]);          // overal plastic brick
+        cube([heatsink_xsize+2*wall_thickness+volume_encore,heatsink_ysize+2*wall_thickness+volume_encore,height]);          // overal plastic brick
 //            cube([heatsink_xsize+2*wall_thickness,heatsink_ysize+2*wall_thickness,heatsink_zsize+wall_thickness]);          // overal plastic brick
     }
 
-    translate ([wall_thickness-clearance, wall_thickness-clearance, wall_thickness-clearance])
-        cube([heatsink_xsize+2*clearance, heatsink_ysize+2*clearance, heatsink_xsize+2*clearance]);          // hollow for heat sink and heat storage liquid.
+    translate ([wall_thickness-clearance+volume_encore/2, wall_thickness-clearance+volume_encore/2, TEG_zsize-clearance])
+        cube([heatsink_xsize+2*clearance, heatsink_ysize+2*clearance, heatsink_xsize+2*clearance]);          // hollow for heat sink
+    
+    translate ([wall_thickness, wall_thickness, TEG_zsize+heatsink_thickness])
+        cube([heatsink_xsize+2*clearance+volume_encore, heatsink_ysize+2*clearance+volume_encore, heatsink_xsize+2*clearance+volume_encore]);          // hollow for heat storage liquid.
 
-    translate ([((heatsink_xsize+2*wall_thickness)-TEG_xsize)/2 - clearance, ((heatsink_ysize+2*wall_thickness)-TEG_ysize)/2 - clearance, 0])
+    translate ([((heatsink_xsize+2*wall_thickness+volume_encore)-TEG_xsize)/2 - clearance, ((heatsink_ysize+2*wall_thickness+volume_encore)-TEG_ysize)/2 - clearance, 0])
         cube([TEG_xsize+2*clearance, TEG_ysize+2*clearance, wall_thickness]);          // hollow for the thermoelectric generator
 
+    translate ([((heatsink_xsize+2*wall_thickness+volume_encore)-TEG_xsize)/2, 0, 0])
+        cube([4, wall_thickness+volume_encore, TEG_zsize-1]);          // hollow for the thermoelectric generator
+    translate ([((heatsink_xsize+2*wall_thickness+volume_encore)-TEG_xsize)/2 +TEG_xsize-4, 0, 0])
+        cube([4, wall_thickness+volume_encore, TEG_zsize-1]);          // hollow for the thermoelectric generator
+    
+    
     translate ([wall_thickness, wall_thickness, height-sealing_ring_width])
     union () {
         difference () {
             minkowski() {
-                cube([heatsink_xsize, heatsink_xsize, sealing_ring_width]);          // Rib for o-ring. 
+                cube([heatsink_xsize+volume_encore, heatsink_xsize+volume_encore, sealing_ring_width]);          // Rib for o-ring. 
                 cylinder(r=wall_thickness/2,h=0.1);
             }
 
             translate ([sealing_ring_width/2, sealing_ring_width/2, 0])
             minkowski() {
-                cube([heatsink_xsize-sealing_ring_width, heatsink_ysize-sealing_ring_width, sealing_ring_width]);          // Rib for o-ring. 
+                cube([heatsink_xsize-sealing_ring_width+volume_encore, heatsink_ysize-sealing_ring_width+volume_encore, sealing_ring_width]);          // Rib for o-ring. 
                 cylinder(r=wall_thickness/2,h=0.1);
             }
         }
     }
-/*
-    rotate([0,0,-45])       // hole for top part mounting nut
-        translate ([ 0, -y_size/3, thickness/3])    
-            cube([6, 3, thickness], center = true);
+    translate ([ heatsink_xsize+2*wall_thickness-wall_thickness/3+volume_encore, heatsink_xsize+2*wall_thickness+volume_encore-wall_thickness/3, height-wall_thickness/2])
+    {
+            translate([-6, -3, -1.5])
+            cube([wall_thickness, 6, 3], center = false); // hole for top part mounting nut
+            cylinder (h = wall_thickness, r= mount_hole/2, $fn=20); // hole for top part mounting screw.
+    }
 
-    rotate([90,0,-45])      // hole for top part mounting screw.
-        translate ([ 0, 1.8, 0])    
-            cylinder (h = thickness + rim_height, r= mount_hole/2, $fn=20);
-*/
+    translate ([wall_thickness/3, wall_thickness/3, height-wall_thickness/2])
+    {
+            translate([-6, 0, -1.5])
+            cube([wall_thickness-3, 6, 3], center = true); // hole for top part mounting nut
+            cylinder (h = wall_thickness, r= mount_hole/2, $fn=20); // hole for top part mounting screw.
+    }
+    
+    translate ([wall_thickness/3, heatsink_xsize+2*wall_thickness+volume_encore-wall_thickness/3, height-wall_thickness/2])
+    {
+            translate([-6, 0, -1.5])
+            cube([wall_thickness-3, 6, 3], center = true); // hole for top part mounting nut
+            cylinder (h = wall_thickness, r= mount_hole/2, $fn=20); // hole for top part mounting screw.
+    }
+
+    translate ([ heatsink_xsize+2*wall_thickness-wall_thickness/3+volume_encore, wall_thickness/3,height-wall_thickness/2])
+    {
+            translate([6, 0, -1.5])
+            cube([wall_thickness-3, 6, 3], center = true); // hole for top part mounting nut
+            cylinder (h = wall_thickness, r= mount_hole/2, $fn=20); // hole for top part mounting screw.
+    }
+
 }
 
+
+
 // Heat reservoir cover
+translate ([0, 0, 3*height])
+{
+        difference () {
 
-translate ([0, 0, 2*height])
-    cube([heatsink_xsize+2*wall_thickness,heatsink_ysize+2*wall_thickness,wall_thickness]);
-
+            cube([heatsink_xsize+2*wall_thickness+volume_encore,heatsink_ysize+2*wall_thickness+volume_encore,wall_thickness]);
+            
+            translate ([ heatsink_xsize+2*wall_thickness-wall_thickness/3+volume_encore, wall_thickness/3,0])
+            {
+                    cylinder (h = wall_thickness, r= mount_hole/2, $fn=20); // hole for top part mounting screw.
+            }
+            translate ([wall_thickness/3, wall_thickness/3,0])
+            {
+                    cylinder (h = wall_thickness, r= mount_hole/2, $fn=20); // hole for top part mounting screw.
+            }
+            translate ([ heatsink_xsize+2*wall_thickness-wall_thickness/3+volume_encore, heatsink_ysize+2*wall_thickness-wall_thickness/3+volume_encore,0])
+            {
+                    cylinder (h = wall_thickness, r= mount_hole/2, $fn=20); // hole for top part mounting screw.
+            }
+            translate ([wall_thickness/3, heatsink_ysize+2*wall_thickness-wall_thickness/3+volume_encore,0])
+            {
+                    cylinder (h = wall_thickness, r= mount_hole/2, $fn=20); // hole for top part mounting screw.
+            }
+        }
+}
