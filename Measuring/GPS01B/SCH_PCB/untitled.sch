@@ -8887,7 +8887,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="D2" library="moje_diody" deviceset="LED1206" device="" value="ZELENA"/>
 <part name="R7" library="moje_R" deviceset="R0805" device="" value="150R"/>
 <part name="T1" library="moje_T" deviceset="BC817" device="" value="BC817"/>
-<part name="R6" library="moje_R" deviceset="R0805" device="" value="100"/>
+<part name="R6" library="moje_R" deviceset="R0805" device="" value="4k7"/>
 <part name="GND16" library="moje" deviceset="GND" device=""/>
 <part name="SV7" library="moje_hrebinky" deviceset="MA02-1" device=""/>
 <part name="U$13" library="moje_schz" deviceset="PIN" device="" value="TIMEPULSE"/>
