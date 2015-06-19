@@ -13,8 +13,6 @@
 */
 
 #include <SD.h>
-//#include <SPI.h>
-
 
 const String filename = "log.csv ";  // filename for logfile
 
@@ -230,8 +228,6 @@ void setup()
   Serial.print("#Initializing SD card...");  // inserting a SD Card always reset the processor and call setup
   // make sure that the default chip select pin is set to
   // output, even if you don't use it:
-  //pinMode(10, OUTPUT); // PB2
-  //pinMode(LED, OUTPUT);     
 
   // see if the card is present and can be initialized:
   if (!SD.begin(chipSelect)) 
@@ -268,7 +264,6 @@ void loop()
     while (!digitalRead(detector))  // waiting for pulse
     {
       if (rise) break;
-      //digitalWrite(CONV, LOW);
       digitalWrite(CONV, HIGH);  // start AD conversion
     }
     while (digitalRead(detector)) 
@@ -277,6 +272,7 @@ void loop()
       if (duration < (CHANNELS-1)) duration++;
     }
 
+    digitalWrite(ADSCK, HIGH);  
     digitalWrite(CONV, LOW);   // start SPI
     val=0;
     for (int p=0;p<8;p++)
@@ -285,12 +281,7 @@ void loop()
       digitalWrite(ADSCK, HIGH);  
       val= (val<<1)|digitalRead(SDO);
     }
-    //val = 140 - val;
-    //msb = SPI.transfer(0x00);  // read ADC
-    //lsb = SPI.transfer(0x00);
-    //digitalWrite(CONV, HIGH);  // stop SPI
-    //val = (msb<<8) + lsb;
-    //Serial.println(val);
+    digitalWrite(ADSCK, LOW);  // 1 CLK
 
     if (rise)  // recording time is now
     {
