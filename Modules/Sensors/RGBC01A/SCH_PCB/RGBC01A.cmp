@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 1. 7. 2015 14:52:02
+Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 2. 7. 2015 7:55:04
 
 BeginCmp
 TimeStamp = /5593B828;
@@ -32,7 +32,7 @@ BeginCmp
 TimeStamp = /5593D884;
 Reference = D2;
 ValeurCmp = LED;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = Mlab_D:LED_0805;
 EndCmp
 
 BeginCmp
@@ -54,6 +54,34 @@ TimeStamp = /5593C30F;
 Reference = J3;
 ValeurCmp = CONN1_2;
 IdModule  = Mlab_Pin_Headers:Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /5594D249;
+Reference = J4;
+ValeurCmp = CONN1_1;
+IdModule  = Mlab_Pin_Headers:SMD_1x1;
+EndCmp
+
+BeginCmp
+TimeStamp = /5594D305;
+Reference = J5;
+ValeurCmp = CONN1_1;
+IdModule  = Mlab_Pin_Headers:SMD_1x1;
+EndCmp
+
+BeginCmp
+TimeStamp = /5594D33D;
+Reference = J6;
+ValeurCmp = CONN1_1;
+IdModule  = Mlab_Pin_Headers:SMD_1x1;
+EndCmp
+
+BeginCmp
+TimeStamp = /5594D2C7;
+Reference = J7;
+ValeurCmp = CONN1_1;
+IdModule  = Mlab_Pin_Headers:SMD_1x1;
 EndCmp
 
 BeginCmp
