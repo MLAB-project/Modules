@@ -19,17 +19,24 @@ import numpy as np
 
 t = [1 + i for i in range(0, 70)]
 s = [-30 + i for i in range(0, 70)]
+s2 = [-30 + i for i in range(0, 70)]
 
 plot(t, s, linewidth=3.0)
 xlabel('time (s)')
 ylabel('temperature (C)')
-title('Temperature')
+title('Temperature external')
 f = gcf()
 ax = f.gca()
 
-show(block=False)
- # show the figure manager but don't block script execution so animation works..
+f2 = figure()
+ax2 = f2.gca()
+ax2.set_xlabel('time (s)')
+ax2.set_ylabel('temperature (C)')
+ax2.set_title('Temperature internal')
+ax2.plot(t, s, linewidth=3.0)
 
+show(block=False, layout=2, open_plot=True)
+# show the figure manager but don't block script execution so animation works..
 
 while True:
     #### Sensor Configuration ###########################################
@@ -69,18 +76,28 @@ while True:
 
             # refresh graph
             s = s[1:] + [temp]
+            s2 = s2[1:] + [temperature]
             t = t[1:] + [n]
             n += 1
             if (n % 10) == 0:
                 ax.text(n, temp-5, "{0:.1f}".format(temp),
+                verticalalignment='bottom', horizontalalignment='right',
+                color='red', fontsize=16)
+                ax2.text(n, temperature-5, "{0:.1f}".format(temperature),
                 verticalalignment='bottom', horizontalalignment='right',
                 color='green', fontsize=16)
 
             ax.lines[0].set_xdata(t)
             ax.lines[0].set_ydata(s)
             ax.set_xlim(t[0],t[-1])
+            ax2.lines[0].set_xdata(t)
+            ax2.lines[0].set_ydata(s2)
+            ax2.set_xlim(t[0],t[-1])
             f.canvas.draw()
+            f2.canvas.draw()
             time.sleep(0.5)
+
+
 
 
     except IOError:
