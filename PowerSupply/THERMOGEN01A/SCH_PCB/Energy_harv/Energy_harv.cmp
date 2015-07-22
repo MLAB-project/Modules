@@ -1,0 +1,108 @@
+Cmp-Mod V01 Created by Cvpcb (2015-06-04 BZR 5708)-product   date = 16.7.2015 16:18:00
+
+BeginCmp
+TimeStamp = /55A75F10;
+Reference = 10M1;
+ValeurCmp = R;
+IdModule  = Mlab_R:SMD-0402;
+EndCmp
+
+BeginCmp
+TimeStamp = /55A65C0C;
+Reference = C1;
+ValeurCmp = 47uF;
+IdModule  = Mlab_C:TantalC_SizeA_Reflow;
+EndCmp
+
+BeginCmp
+TimeStamp = /55A639B3;
+Reference = C2;
+ValeurCmp = 1nF;
+IdModule  = Mlab_C:SMD-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /55A63C47;
+Reference = C3;
+ValeurCmp = 470pF;
+IdModule  = Mlab_C:SMD-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /55A6512C;
+Reference = C4;
+ValeurCmp = 1nF;
+IdModule  = Mlab_C:SMD-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /55A65213;
+Reference = C5;
+ValeurCmp = 470pF;
+IdModule  = Mlab_C:SMD-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /55A66F73;
+Reference = C6;
+ValeurCmp = 1uF;
+IdModule  = Mlab_C:SMD-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /55A6727D;
+Reference = C7;
+ValeurCmp = 2,2uF;
+IdModule  = Mlab_C:SMD-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /55A6722B;
+Reference = C8;
+ValeurCmp = 470uF;
+IdModule  = Mlab_C:TantalC_SizeD_Reflow;
+EndCmp
+
+BeginCmp
+TimeStamp = /55A671D6;
+Reference = C9;
+ValeurCmp = 1-10F;
+IdModule  = Mlab_Pin_Headers:Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /55A7BDD9;
+Reference = J1;
+ValeurCmp = HEADER_1x02;
+IdModule  = Mlab_Pin_Headers:Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /55A64E73;
+Reference = T1;
+ValeurCmp = Step-Up_TRANSFO;
+IdModule  = Energy_harv:Step-Up_TRANSF;
+EndCmp
+
+BeginCmp
+TimeStamp = /55A650B1;
+Reference = T2;
+ValeurCmp = Step-Up_TRANSFO;
+IdModule  = Energy_harv:Step-Up_TRANSF;
+EndCmp
+
+BeginCmp
+TimeStamp = /55A669FE;
+Reference = U1;
+ValeurCmp = THERM_GEN;
+IdModule  = Mlab_Pin_Headers:Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /55A67D56;
+Reference = U2;
+ValeurCmp = LTC3109GN;
+IdModule  = SMD_Packages:SSOP-20;
+EndCmp
+
+EndListe
