@@ -89,16 +89,17 @@ difference () {
         
 ////  lightening central holes
         
-	translate ([18,16, 0])  // ODROIDs passive components hole. 
-	cube([30,43,pedestal_height ]);        
+	translate ([9,16, 0])  // ODROIDs passive components hole. 
+	cube([40,43,pedestal_height ]);        
         
 	translate ([10,67, 0])  // ODROIDs passive components hole. 
 	cube([38,11,pedestal_height ]);        
-
-    union (){
+        
+// MLAB logo on the side
+/*    union (){
         translate ([29,0.5, 6.5])  // ODROIDs passive components hole.
             rotate ([90,0,0])
                 scale(v = [0.4, 0.4, 0.4])
                     MLAB_logo_long();
-    } 
+    } */
 }
