@@ -24,7 +24,7 @@ difference () {
 	cube([50,100,pedestal_height]);
 
 	//mount holes for ODROID U3
-	translate ([4.5,4.5 + 76, 0])
+	translate ([4.5,4.5 + 76, 1])
         rotate([0,0,90])
             cylinder (h = 6 ,r= nut_size/2 + clear, $fn=6);
     translate ([4.5,4.5 + 76, 2])
@@ -34,7 +34,7 @@ difference () {
                 rotate([27,0,0]) cube([5,50,5]);
         };
     
-	translate ([4.5 + 41, 4.5 + 76,0])
+	translate ([4.5 + 41, 4.5 + 76,1])
         rotate([0,0,90])
             cylinder (h = 6,r= nut_size/2 + clear, $fn=6);
     translate ([4.5 + 41, 4.5 + 76, 2])
