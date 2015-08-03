@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-08-29 BZR 5106)-product   date = 30.11.2014 17:59:46
+Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 3. 8. 2015 6:58:47
 
 BeginCmp
 TimeStamp = /546DB268;
@@ -31,42 +31,42 @@ EndCmp
 BeginCmp
 TimeStamp = /546DB26C;
 Reference = C5;
-ValeurCmp = 4n7;
+ValeurCmp = 470p;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /546DB287;
 Reference = C6;
-ValeurCmp = 4n7;
+ValeurCmp = 470p;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /546DB272;
 Reference = C7;
-ValeurCmp = 100p;
+ValeurCmp = 180p;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /546DB273;
 Reference = C8;
-ValeurCmp = 100p;
+ValeurCmp = 180p;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /546DB28D;
 Reference = C9;
-ValeurCmp = 100p;
+ValeurCmp = 180p;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /546DB28E;
 Reference = C10;
-ValeurCmp = 100p;
+ValeurCmp = 180p;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
@@ -101,14 +101,14 @@ EndCmp
 BeginCmp
 TimeStamp = /546DB276;
 Reference = C15;
-ValeurCmp = 4n7;
+ValeurCmp = 2n2;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /546DB291;
 Reference = C16;
-ValeurCmp = 4n7;
+ValeurCmp = 2n2;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
@@ -122,7 +122,7 @@ EndCmp
 BeginCmp
 TimeStamp = /5479B8D7;
 Reference = C18;
-ValeurCmp = 100n;
+ValeurCmp = 10n;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
@@ -297,7 +297,7 @@ EndCmp
 BeginCmp
 TimeStamp = /546DB2B9;
 Reference = L1;
-ValeurCmp = INDUCTOR_SMALL;
+ValeurCmp = BLM21PG300SN1D;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
@@ -360,28 +360,28 @@ EndCmp
 BeginCmp
 TimeStamp = /546DB26D;
 Reference = R5;
-ValeurCmp = 1k;
+ValeurCmp = 47k;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /546DB26E;
 Reference = R6;
-ValeurCmp = 1k;
+ValeurCmp = 47k;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /546DB288;
 Reference = R7;
-ValeurCmp = 1k;
+ValeurCmp = 47k;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /546DB289;
 Reference = R8;
-ValeurCmp = 1k;
+ValeurCmp = 47k;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
@@ -402,28 +402,28 @@ EndCmp
 BeginCmp
 TimeStamp = /546DB270;
 Reference = R11;
-ValeurCmp = 1k;
+ValeurCmp = 47k;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /546DB271;
 Reference = R12;
-ValeurCmp = 1k;
+ValeurCmp = 47k;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /546DB28B;
 Reference = R13;
-ValeurCmp = 1k;
+ValeurCmp = 47k;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /546DB28C;
 Reference = R14;
-ValeurCmp = 1k;
+ValeurCmp = 47k;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
@@ -458,35 +458,35 @@ EndCmp
 BeginCmp
 TimeStamp = /546DB2C7;
 Reference = R19;
-ValeurCmp = R;
+ValeurCmp = 10k;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /546DB2C3;
 Reference = R20;
-ValeurCmp = R;
+ValeurCmp = 10k;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /546DB2C4;
 Reference = R21;
-ValeurCmp = R;
+ValeurCmp = 10k;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /546DB2C5;
 Reference = R22;
-ValeurCmp = R;
+ValeurCmp = 10k;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /546DB2C6;
 Reference = R23;
-ValeurCmp = R;
+ValeurCmp = 10k;
 IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
@@ -550,7 +550,7 @@ BeginCmp
 TimeStamp = /547988D5;
 Reference = X1;
 ValeurCmp = ASFL1-24.576MHZ-EK;
-IdModule  = MLAB_XTAL:ASFL1;
+IdModule  = Mlab_Xtal:ASFL1;
 EndCmp
 
 EndListe
