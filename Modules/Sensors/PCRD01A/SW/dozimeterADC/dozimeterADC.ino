@@ -38,6 +38,28 @@ String dataString = "";       // concantenated string with NMEA messages and mea
 int coll = 0;                 // collons counter in NMEA messages
 unsigned int i = 0;           // measurements counter
 
+// 1x 100 us per 10 s UTC synchronised; 40 configuration bytes
+const char cmd[40]={0xB5, 0x62, 0x06, 0x31, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x32, 0x00, 0x00, 0x00, 0x80, 0x96, 0x98, 0x00, 0xE0, 0xC8, 0x10, 0x00, 0x64, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x73, 0x00, 0x00, 0x00, 0xC6, 0x51};
+
+// GPS setup for frequency measurement (acounter)
+//const char cmd[40]={0xB5, 0x62, 0x06, 0x31, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x32, 0x00, 0x00, 0x00, 0x80, 0x84, 0x1E, 0x00, 0xE0, 0xC8, 0x10, 0x00, 0x40, 0x42, 0x0F, 0x00, 0xA0, 0x86, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0xF7, 0x00, 0x00, 0x00, 0x12, 0x03};
+
+// configure GPS
+void setupGPS()
+{ 
+   for (int n=0;n<40;n++) Serial.write(cmd[n]); 
+}
+
+void errorLED()
+{
+  while(true) 
+  {
+    digitalWrite(LED4, HIGH);   // turn the LED on (HIGH is the voltage level)
+    delay(100);               // wait for a second
+    digitalWrite(LED4, LOW);    // turn the LED off by making the voltage LOW
+    delay(100);               // wait for a second   
+  }
+}
 
 // function for reading $GPRMC NMEA message
 void ReadGPRMC()
@@ -108,10 +130,10 @@ void ReadGPGGA()
 
 void isr()        // interrupt service routine driven from 1PPS from GPS
 {
-  if (++interval == 10) // 10 seconds
+  //if (++interval == 10) // 10 seconds
   {
     rise=true;
-    interval = 0;
+    //interval = 0;
   }
 
 }
@@ -186,11 +208,12 @@ void record()
     dataFile.println(dataString);
     dataFile.close();
     // print to the serial port too:
-    Serial.println(dataString);
+    //!!!Serial.println(dataString);
   }  
   // if the file isn't open, pop up an error:
   else {
-    Serial.println("error opening datalog.CSV");
+    //Serial.println("error opening datalog.CSV");
+    errorLED();
   } 
   digitalWrite(chipSelect, LOW);   
 
@@ -213,7 +236,7 @@ void setup()
  // Open serial communications and wait for port to open:
   Serial.begin(9600);
   while (!Serial) {;}
-  Serial.println("#cvak");
+  //Serial.println("#cvak");
 
   pinMode(detector, INPUT);
   pinMode(eint, INPUT);
@@ -225,18 +248,21 @@ void setup()
   pinMode(CONV, OUTPUT);
   //pinMode(SCK, OUTPUT);
 
-  Serial.print("#Initializing SD card...");  // inserting a SD Card always reset the processor and call setup
+  setupGPS();
+
+  //Serial.print("#Initializing SD card...");  // inserting a SD Card always reset the processor and call setup
   // make sure that the default chip select pin is set to
   // output, even if you don't use it:
 
   // see if the card is present and can be initialized:
   if (!SD.begin(chipSelect)) 
   {
-    Serial.println("Card failed, or not present");
+    //Serial.println("Card failed, or not present");
     // don't do anything more:
+    errorLED();
     return;
   }
-  Serial.println("card initialized.");
+  //Serial.println("card initialized.");
 
   noInterrupts();          // disable all interrupts
   attachInterrupt(0, isr, RISING);  // initialise interrupt from rising edge of 1PPS
@@ -249,7 +275,7 @@ void setup()
 
   interrupts();             // enable all interrupts
   
-  Serial.println("#Hmmm");
+  //Serial.println("#Hmmm");
 }
 
 void loop() 
