@@ -48,12 +48,12 @@ difference () {
     translate ([4.5,4.5,0])
         cylinder (h = 6, r= (nut_size+clear)/2, $fn=6);
     translate ([4.5,4.5,6.2])
-        cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
+        cylinder (h = pedestal_height, r= 3.6/2, $fn=10);
     
 	translate ([4.5+41,4.5,0])
         cylinder (h = 6, r= (nut_size+clear)/2, $fn=6);
 	translate ([4.5+41,4.5,6.2])
-        cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
+        cylinder (h = pedestal_height, r= 3.6/2, $fn=10);
 
 // MLAB grid holes
 
@@ -88,7 +88,7 @@ difference () {
        	translate ([0, 41 , pedestal_height - 3.5]) // HOLE for ODROD's , SD card and eMMC.
 	cube([48,32,5]);
        	translate ([0, 38.5 , pedestal_height - 4.5]) // HOLE for ODROD's jack connector
-	cube([14,8,5]);
+	cube([15,9,5]);
        	translate ([0, 65 , pedestal_height - 3.5]) // HOLE for ODROD's , SD card and eMMC.
 	cube([17,13,5]);
 

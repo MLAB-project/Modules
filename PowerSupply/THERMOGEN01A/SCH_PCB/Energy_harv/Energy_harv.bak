@@ -1,49 +1,83 @@
 EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
+LIBS:74xgxx
 LIBS:74xx
-LIBS:cmos4000
+LIBS:ac-dc
+LIBS:actel
 LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
+LIBS:Altera
+LIBS:analog_devices
 LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
 LIBS:atmel
+LIBS:audio
+LIBS:brooktre
+LIBS:cmos4000
+LIBS:cmos_ieee
+LIBS:conn
 LIBS:contrib
-LIBS:valves
-LIBS:ADC-DAC
-LIBS:asp-134604-01_(fmc)
-LIBS:clock
+LIBS:cypress
+LIBS:dc-dc
+LIBS:device
+LIBS:digital-audio
+LIBS:diode
+LIBS:display
+LIBS:dsp
+LIBS:elec-unifil
+LIBS:ESD_Protection
+LIBS:ftdi
+LIBS:gennum
+LIBS:graphic
+LIBS:hc11
 LIBS:header
-LIBS:Jumpers
-LIBS:konektory
+LIBS:intel
+LIBS:interface
+LIBS:ir
+LIBS:Lattice
+LIBS:linear
+LIBS:logo
+LIBS:maxim
 LIBS:mechanical
-LIBS:MLAB_BATERY
-LIBS:MLAB_CONNECTORS
-LIBS:MLAB_D
-LIBS:MLAB_IO
-LIBS:MLAB_Jumpers
-LIBS:MLAB_T
-LIBS:OpAmp
-LIBS:sata7-67491-1030
-LIBS:MY-LIB
+LIBS:memory
+LIBS:microcontrollers
+LIBS:microchip
+LIBS:microchip_dspic33dsc
+LIBS:microchip_pic10mcu
+LIBS:microchip_pic12mcu
+LIBS:microchip_pic16mcu
+LIBS:microchip_pic18mcu
+LIBS:microchip_pic32mcu
+LIBS:motor_drivers
+LIBS:motorola
+LIBS:msp430
+LIBS:nordicsemi
+LIBS:nxp_armmcu
+LIBS:onsemi
+LIBS:opto
+LIBS:Oscillators
+LIBS:philips
+LIBS:power
+LIBS:powerint
+LIBS:Power_Management
+LIBS:pspice
+LIBS:references
+LIBS:regul
+LIBS:relays
+LIBS:rfcom
+LIBS:sensors
+LIBS:silabs
+LIBS:siliconi
+LIBS:stm8
+LIBS:stm32
+LIBS:supertex
+LIBS:switches
+LIBS:texas
+LIBS:transf
+LIBS:transistors
+LIBS:ttl_ieee
+LIBS:valves
+LIBS:video
+LIBS:Xicor
+LIBS:xilinx
+LIBS:Zilog
 LIBS:Energy_harv-cache
 EELAYER 25 0
 EELAYER END
@@ -252,60 +286,45 @@ Wire Wire Line
 $Comp
 L GND #PWR04
 U 1 1 55A66F52
-P 6570 4370
-F 0 "#PWR04" H 6570 4120 50  0001 C CNN
-F 1 "GND" H 6570 4220 50  0000 C CNN
-F 2 "" H 6570 4370 60  0000 C CNN
-F 3 "" H 6570 4370 60  0000 C CNN
-	1    6570 4370
+P 6400 4350
+F 0 "#PWR04" H 6400 4100 50  0001 C CNN
+F 1 "GND" H 6400 4200 50  0000 C CNN
+F 2 "" H 6400 4350 60  0000 C CNN
+F 3 "" H 6400 4350 60  0000 C CNN
+	1    6400 4350
 	1    0    0    -1  
 $EndComp
 $Comp
 L C C6
 U 1 1 55A66F73
-P 6570 4180
-F 0 "C6" H 6595 4280 50  0000 L CNN
-F 1 "1uF" H 6595 4080 50  0000 L CNN
-F 2 "Mlab_C:SMD-0603" H 6608 4030 30  0001 C CNN
-F 3 "" H 6570 4180 60  0000 C CNN
-	1    6570 4180
+P 6400 4150
+F 0 "C6" H 6425 4250 50  0000 L CNN
+F 1 "1uF" H 6425 4050 50  0000 L CNN
+F 2 "Mlab_C:SMD-0603" H 6438 4000 30  0001 C CNN
+F 3 "" H 6400 4150 60  0000 C CNN
+	1    6400 4150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6200 4000 6570 4000
-Wire Wire Line
-	6570 4000 6570 4030
 $Comp
 L CP C9
 U 1 1 55A671D6
-P 6960 4180
-F 0 "C9" H 6985 4280 50  0000 L CNN
-F 1 "1-10F" H 6985 4080 50  0000 L CNN
-F 2 "Mlab_Pin_Headers:Straight_1x02" H 6998 4030 30  0001 C CNN
-F 3 "" H 6960 4180 60  0000 C CNN
-	1    6960 4180
+P 6800 3980
+F 0 "C9" H 6825 4080 50  0000 L CNN
+F 1 "1-10F" H 6825 3880 50  0000 L CNN
+F 2 "Mlab_Pin_Headers:Straight_1x02" H 6838 3830 30  0001 C CNN
+F 3 "" H 6800 3980 60  0000 C CNN
+	1    6800 3980
 	1    0    0    -1  
 $EndComp
 $Comp
 L CP C8
 U 1 1 55A6722B
-P 6960 2960
-F 0 "C8" H 6985 3060 50  0000 L CNN
-F 1 "470uF" H 6985 2860 50  0000 L CNN
-F 2 "Mlab_C:TantalC_SizeD_Reflow" H 6998 2810 30  0001 C CNN
-F 3 "" H 6960 2960 60  0000 C CNN
-	1    6960 2960
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR05
-U 1 1 55A672D5
-P 6590 3100
-F 0 "#PWR05" H 6590 2850 50  0001 C CNN
-F 1 "GND" H 6590 2950 50  0000 C CNN
-F 2 "" H 6590 3100 60  0000 C CNN
-F 3 "" H 6590 3100 60  0000 C CNN
-	1    6590 3100
+P 6950 2960
+F 0 "C8" H 6975 3060 50  0000 L CNN
+F 1 "470uF" H 6975 2860 50  0000 L CNN
+F 2 "Mlab_C:TantalC_SizeD_Reflow" H 6988 2810 30  0001 C CNN
+F 3 "" H 6950 2960 60  0000 C CNN
+	1    6950 2960
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -313,20 +332,20 @@ Wire Wire Line
 Wire Wire Line
 	6660 2800 6660 2810
 Wire Wire Line
-	6960 3900 6960 4030
+	6800 3600 6800 3830
 $Comp
 L GND #PWR06
 U 1 1 55A677B9
-P 6960 4370
-F 0 "#PWR06" H 6960 4120 50  0001 C CNN
-F 1 "GND" H 6960 4220 50  0000 C CNN
-F 2 "" H 6960 4370 60  0000 C CNN
-F 3 "" H 6960 4370 60  0000 C CNN
-	1    6960 4370
+P 6800 4170
+F 0 "#PWR06" H 6800 3920 50  0001 C CNN
+F 1 "GND" H 6800 4020 50  0000 C CNN
+F 2 "" H 6800 4170 60  0000 C CNN
+F 3 "" H 6800 4170 60  0000 C CNN
+	1    6800 4170
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6960 4330 6960 4370
+	6800 4130 6800 4170
 $Comp
 L LTC3109GN U2
 U 1 1 55A67D56
@@ -338,64 +357,8 @@ F 3 "" H 5600 3850 60  0000 C CNN
 	1    5600 3100
 	1    0    0    -1  
 $EndComp
-Connection ~ 6370 4000
-Wire Wire Line
-	6370 4000 6370 4340
-Wire Wire Line
-	6370 4340 4880 4340
-Wire Wire Line
-	4880 4340 4880 3900
-Wire Wire Line
-	4880 4000 5000 4000
-Connection ~ 4880 4000
-Wire Wire Line
-	4880 3900 5000 3900
-$Comp
-L GND #PWR07
-U 1 1 55A68504
-P 6960 3170
-F 0 "#PWR07" H 6960 2920 50  0001 C CNN
-F 1 "GND" H 6960 3020 50  0000 C CNN
-F 2 "" H 6960 3170 60  0000 C CNN
-F 3 "" H 6960 3170 60  0000 C CNN
-	1    6960 3170
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6200 2550 7350 2550
-Wire Wire Line
-	6960 2300 6960 2810
-$Comp
-L GND #PWR08
-U 1 1 55A68D87
-P 6250 3700
-F 0 "#PWR08" H 6250 3450 50  0001 C CNN
-F 1 "GND" H 6250 3550 50  0000 C CNN
-F 2 "" H 6250 3700 60  0000 C CNN
-F 3 "" H 6250 3700 60  0000 C CNN
-	1    6250 3700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6200 2300 6960 2300
-Connection ~ 6960 2550
-Wire Wire Line
-	6200 2900 6350 2900
-Wire Wire Line
-	6200 3100 6590 3100
-$Comp
-L R 10M1
-U 1 1 55A75F10
-P 6380 3350
-F 0 "10M1" V 6460 3350 50  0000 C CNN
-F 1 "R" V 6380 3350 50  0000 C CNN
-F 2 "Mlab_R:SMD-0402" V 6310 3350 30  0001 C CNN
-F 3 "" H 6380 3350 30  0000 C CNN
-	1    6380 3350
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	6200 3350 6230 3350
 $Comp
 L C C7
 U 1 1 55A6727D
@@ -408,55 +371,37 @@ F 3 "" H 6660 2960 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6960 3110 6960 3170
-Wire Wire Line
 	6660 3110 6660 3140
 Wire Wire Line
 	6660 3140 7350 3140
-Connection ~ 6960 3140
-$Comp
-L CONN1_2 J1
-U 1 1 55A79A09
-P 7650 2800
-F 0 "J1" H 7700 2900 50  0000 C CNN
-F 1 "CONN1_2" H 7750 2750 40  0001 C CNN
-F 2 "Pin_Header_Rect_Pads:Straight_2x03" H 7700 2750 60  0001 C CNN
-F 3 "" H 7700 2750 60  0000 C CNN
-	1    7650 2800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7350 2550 7350 2750
 Wire Wire Line
 	7350 3140 7350 2850
+Wire Wire Line
+	6400 4300 6400 4350
 $Comp
-L GND #PWR09
-U 1 1 55A7A367
-P 6350 2900
-F 0 "#PWR09" H 6350 2650 50  0001 C CNN
-F 1 "GND" H 6350 2750 50  0000 C CNN
-F 2 "" H 6350 2900 60  0000 C CNN
-F 3 "" H 6350 2900 60  0000 C CNN
-	1    6350 2900
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR010
-U 1 1 55A7A48D
-P 6620 3350
-F 0 "#PWR010" H 6620 3100 50  0001 C CNN
-F 1 "GND" H 6620 3200 50  0000 C CNN
-F 2 "" H 6620 3350 60  0000 C CNN
-F 3 "" H 6620 3350 60  0000 C CNN
-	1    6620 3350
+L HEADER_1x02 J1
+U 1 1 55A7BDD9
+P 7550 2800
+F 0 "J1" H 7550 2650 60  0000 C CNN
+F 1 "HEADER_1x02" H 7920 2820 60  0000 C CNN
+F 2 "Mlab_Pin_Headers:Straight_1x02" H 7550 2850 60  0001 C CNN
+F 3 "" H 7550 2850 60  0000 C CNN
+	1    7550 2800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6200 3700 6250 3700
+	5500 4300 5500 4350
 Wire Wire Line
-	6530 3350 6620 3350
+	5500 4350 5700 4350
+Connection ~ 5600 4350
 Wire Wire Line
-	6200 3900 6960 3900
+	5700 4350 5700 4300
 Wire Wire Line
-	6570 4330 6570 4370
+	6400 3800 6200 3800
+Wire Wire Line
+	6400 4000 6400 3800
+Wire Wire Line
+	6800 3600 6200 3600
 $EndSCHEMATC
