@@ -1,4 +1,4 @@
-update=4. 5. 2015 7:53:47
+update=7. 8. 2015 7:30:32
 version=1
 last_client=kicad
 [cvpcb]
@@ -75,3 +75,13 @@ LibName41=MLAB_Jumpers
 LibName42=MLAB_T
 LibName43=OpAmp
 LibName44=sata7-67491-1030
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
