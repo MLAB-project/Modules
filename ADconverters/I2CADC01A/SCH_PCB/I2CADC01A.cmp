@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-01-07 BZR 5359)-product   date = 6. 5. 2015 7:35:18
+Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 7. 8. 2015 7:08:36
 
 BeginCmp
 TimeStamp = /554603CA;
@@ -25,6 +25,34 @@ BeginCmp
 TimeStamp = /554611EB;
 Reference = C4;
 ValeurCmp = 100nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5549E770;
+Reference = C5;
+ValeurCmp = 10uF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5549E77C;
+Reference = C6;
+ValeurCmp = 100nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /55C44713;
+Reference = C7;
+ValeurCmp = 100nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /55B503B6;
+Reference = C8;
+ValeurCmp = 22nF;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
@@ -164,35 +192,35 @@ EndCmp
 BeginCmp
 TimeStamp = /55460320;
 Reference = R1;
-ValeurCmp = R;
+ValeurCmp = 10k;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /55460379;
 Reference = R2;
-ValeurCmp = R;
+ValeurCmp = 10k;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /55461894;
 Reference = R3;
-ValeurCmp = R;
+ValeurCmp = 3K3;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /55462BF7;
 Reference = R4;
-ValeurCmp = R;
+ValeurCmp = 10k;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /55462CAD;
 Reference = R5;
-ValeurCmp = R;
+ValeurCmp = 10k;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
