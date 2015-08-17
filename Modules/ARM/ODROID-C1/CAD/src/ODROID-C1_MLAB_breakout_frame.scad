@@ -52,6 +52,10 @@ difference () {
 
 	translate ([37,3, pedestal_height - 3])  // ODROID serial connector 
 	cube([10,2,5]);
+    
+    rotate([20,0,0])
+        translate ([15,4, 0.3])  // ODROID eMMC adapter pocket 
+            cube([25,2,15]);
 
         translate ([9,3.5, pedestal_height - 3])  // ODROID IR receiver
 	cube([7.5,2,5]);
@@ -101,5 +105,5 @@ difference () {
             rotate ([90,0,0])
                 scale(v = [0.4, 0.4, 0.4])
                     MLAB_logo_long();
-    } */
+    }*/
 }
