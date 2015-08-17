@@ -53,8 +53,8 @@ difference () {
 	translate ([37,3, pedestal_height - 3])  // ODROID serial connector 
 	cube([10,2,5]);
     
-    rotate([20,0,0])
-        translate ([15,4, 0.3])  // ODROID eMMC adapter pocket 
+    rotate([30,0,0])
+        translate ([15,5.8, -3.0])  // ODROID eMMC adapter pocket 
             cube([25,2,15]);
 
         translate ([9,3.5, pedestal_height - 3])  // ODROID IR receiver
