@@ -100,10 +100,10 @@ difference () {
 	cube([38,11,pedestal_height ]);        
         
 // MLAB logo on the side
-/*    union (){
+    union (){
         translate ([29,0.5, 6.5])  // ODROIDs passive components hole.
             rotate ([90,0,0])
                 scale(v = [0.4, 0.4, 0.4])
                     MLAB_logo_long();
-    }*/
+    }
 }
