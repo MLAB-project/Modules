@@ -55,18 +55,12 @@ difference () {
 	translate ([4.5+41,4.5,6.2])
         cylinder (h = pedestal_height, r= 3.6/2, $fn=10);
 
+    rotate([30,0,0])
+        translate ([12,5.8, -3.0])  // ODROID eMMC adapter pocket 
+            cube([25,2,15]);
+                
+        
 // MLAB grid holes
-
-        for (j = [1 : 3], i = [0 : 0]) {
-                translate ([4.5 + j*10.16, 4.5 + i*10.16,0])
-                cylinder (h = 3, r= (nut_size+clear)/2, $fn=6);
-                translate ([4.5 + j*10.16, 4.5 + i*10.16, 3.2])  // one solid layer for slicer (the holes will be pierced on demand )
-                cylinder (h = pedestal_height /3, r= mount_hole/2, $fn=10);
-                translate ([4.5 + j*10.16, 4.5 + i*10.16, 6.3])
-                cylinder (h = 10, r= nut_size/2, $fn=6);
-        }
-
-
         for (j = [0 : 7], i = [1 : 6]) {
                 translate ([4.5 + j*10.16, 4.5 + i*10.16,0])
                 cylinder (h = 3, r= (nut_size+clear)/2, $fn=6);
@@ -79,7 +73,7 @@ difference () {
         ////////////////////////////////////
 	translate ([4,6, pedestal_height - 4])  // ODROIDs passive components hole. 
 	cube([42,27,5]);
-	translate ([13, 2 , pedestal_height - 4])  // two small resistors on botom side.
+	translate ([13, 2 , pedestal_height - 1])  // two small resistors on botom side.
 	cube([3,3,5]);
 	translate ([22, 30 , pedestal_height - 4])  // USB over voltage protection.
 	cube([21,5,5]);
