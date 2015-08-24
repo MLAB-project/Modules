@@ -1,11 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-06-04 BZR 5708)-product   date = 16.7.2015 16:18:00
-
-BeginCmp
-TimeStamp = /55A75F10;
-Reference = 10M1;
-ValeurCmp = R;
-IdModule  = Mlab_R:SMD-0402;
-EndCmp
+Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 24. 8. 2015 11:17:33
 
 BeginCmp
 TimeStamp = /55A65C0C;
@@ -71,10 +64,101 @@ IdModule  = Mlab_Pin_Headers:Straight_1x02;
 EndCmp
 
 BeginCmp
-TimeStamp = /55A7BDD9;
+TimeStamp = /55BA9255;
 Reference = J1;
-ValeurCmp = HEADER_1x02;
+ValeurCmp = VS1;
 IdModule  = Mlab_Pin_Headers:Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /55BA9377;
+Reference = J2;
+ValeurCmp = VS2;
+IdModule  = Mlab_Pin_Headers:Straight_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /55BAAB6B;
+Reference = J3;
+ValeurCmp = VOUT2_EN;
+IdModule  = Mlab_Pin_Headers:Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /55BA9CD4;
+Reference = J4;
+ValeurCmp = Power Good;
+IdModule  = Mlab_Pin_Headers:Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /55BA9E0C;
+Reference = J5;
+ValeurCmp = Vout2;
+IdModule  = Mlab_Pin_Headers:Straight_2x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /55BA9EE7;
+Reference = J6;
+ValeurCmp = Vout;
+IdModule  = Mlab_Pin_Headers:Straight_2x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /55CA76BA;
+Reference = M1;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /55CA779F;
+Reference = M2;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /55CA77E6;
+Reference = M3;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /55CA77EC;
+Reference = M4;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /55DAEB67;
+Reference = P1;
+ValeurCmp = _;
+IdModule  = Mlab_Con:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /55DB0223;
+Reference = P2;
+ValeurCmp = _;
+IdModule  = Mlab_Con:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /55DB1560;
+Reference = P3;
+ValeurCmp = _;
+IdModule  = Mlab_Con:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /55DB1192;
+Reference = P4;
+ValeurCmp = _;
+IdModule  = Mlab_Con:WAGO256;
 EndCmp
 
 BeginCmp
