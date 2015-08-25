@@ -1,4 +1,4 @@
-update=24. 8. 2015 11:05:23
+update=Út 25. srpen 2015, 10:56:55 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,8 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=/home/kaklik/git/kicad-library/library;/home/kaklik/git/kicad-mlab/symbols
@@ -124,3 +122,5 @@ LibName92=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/MLAB_Jumpers
 LibName93=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/MLAB_T
 LibName94=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/OpAmp
 LibName95=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/sata7-67491-1030
+[general]
+version=1
