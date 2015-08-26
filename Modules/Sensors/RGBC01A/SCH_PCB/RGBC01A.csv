@@ -1,0 +1,13 @@
+"ID";"Určovatel";"Pouzdro";"Množství";"Určení";"Tisk rohového razítka";
+1;"J3";"Straight_2x01";1;"CONN1_2";;;
+2;"M1,M2";"MountingHole_3mm";2;"HOLE";;;
+3;"X1";"FN";1;"TCS37717";;;
+4;"J1";"Straight_2x05";1;"JUMP_5X2";;;
+5;"C1";"SMD-0805";1;"10uf";;;
+6;"C2,C3";"SMD-0805";2;"1uF";;;
+7;"R1,R3,R2";"SMD-0805";3;"10K";;;
+8;"R4";"SMD-0805";1;"22R";;;
+9;"D1";"Diode-MiniMELF_Standard";1;"BZV55C-3,6V";;;
+10;"J2";"Straight_1x01";1;"CONN1_1";;;
+11;"J4,J5,J6,J7";"SMD_1x1";4;"CONN1_1";;;
+12;"D2";"LED_0805";1;"LL-S170IRC-2A";;;

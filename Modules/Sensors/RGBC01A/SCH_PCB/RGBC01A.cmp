@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 2. 7. 2015 7:55:04
+Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 26. 8. 2015 10:06:45
 
 BeginCmp
 TimeStamp = /5593B828;
@@ -24,14 +24,14 @@ EndCmp
 BeginCmp
 TimeStamp = /5593B6D9;
 Reference = D1;
-ValeurCmp = ZENERsmall;
+ValeurCmp = BZV55C-3,6V;
 IdModule  = Mlab_D:Diode-MiniMELF_Standard;
 EndCmp
 
 BeginCmp
 TimeStamp = /5593D884;
 Reference = D2;
-ValeurCmp = LED;
+ValeurCmp = LL-S170IRC-2A;
 IdModule  = Mlab_D:LED_0805;
 EndCmp
 
