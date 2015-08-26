@@ -11,27 +11,26 @@ difference () {
 	cube([50.292,70.612,pedestal_height]);
 
 	difference(){
-                translate ([-190*mil + 1.5, -190*mil + 2, 2.5])
-		cube([46.792,66.612,pedestal_height]);
+        translate ([-190*mil + 1, -190*mil + 2, 2.5])
+            cube([47.292,66.612,pedestal_height]);
 
-                translate ([-190*mil, -190*mil, 0])
-		cube([MLAB_grid -10*mil,MLAB_grid -10*mil,pedestal_height]);
+        translate ([-190*mil, -190*mil, 0])
+            cube([MLAB_grid -10*mil,MLAB_grid -10*mil,pedestal_height]);
 
-                translate ([4*MLAB_grid - 190*mil, -190*mil, 0])
-		cube([MLAB_grid -10*mil ,MLAB_grid -10*mil,pedestal_height]);
+        translate ([4*MLAB_grid - 190*mil, -190*mil, 0])
+            cube([MLAB_grid -10*mil ,MLAB_grid -10*mil,pedestal_height]);
 
-                translate ([4*MLAB_grid - 190*mil, 6*MLAB_grid -190*mil, 0])
-		cube([MLAB_grid -10*mil ,MLAB_grid -10*mil,pedestal_height]);
+        translate ([4*MLAB_grid - 190*mil, 6*MLAB_grid -190*mil, 0])
+            cube([MLAB_grid -10*mil ,MLAB_grid -10*mil,pedestal_height]);
 
-                translate ([-190*mil, 6*MLAB_grid -190*mil, 0])
-		cube([MLAB_grid-10*mil,MLAB_grid-10*mil ,pedestal_height]);
+        translate ([-190*mil, 6*MLAB_grid -190*mil, 0])
+            cube([MLAB_grid-10*mil,MLAB_grid-10*mil ,pedestal_height]);
                
                 //insulating wall
    		translate ([20-190*mil, -190*mil, 0])
-		cube([1,70,pedestal_height]);
+            cube([1,70,pedestal_height]);
    		translate ([22-190*mil, -190*mil, 0])
-		cube([1,70,pedestal_height]);
-            
+            cube([1,70,pedestal_height]);        
 	}
 
         ////////////////////////////////////////
