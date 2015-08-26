@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 28. 5. 2015 8:50:13
+Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 26. 8. 2015 15:46:17
 
 BeginCmp
 TimeStamp = /555FB6EB;
@@ -704,35 +704,35 @@ BeginCmp
 TimeStamp = /5555B01B/555C77EF;
 Reference = J13;
 ValeurCmp = USB3_A;
-IdModule  = Connect:USB_A;
+IdModule  = Mlab_Con:USB3_0_A;
 EndCmp
 
 BeginCmp
 TimeStamp = /5555B01B/555C768C;
 Reference = J14;
 ValeurCmp = USB3_B;
-IdModule  = Connect:USB_B;
+IdModule  = Mlab_Con:USB3_0_B;
 EndCmp
 
 BeginCmp
 TimeStamp = /5555B01B/555C8ADD;
 Reference = J15;
 ValeurCmp = USB3_A;
-IdModule  = Connect:USB_A;
+IdModule  = Mlab_Con:USB3_0_A;
 EndCmp
 
 BeginCmp
 TimeStamp = /5555B01B/555C845B;
 Reference = J16;
 ValeurCmp = USB3_A;
-IdModule  = Connect:USB_A;
+IdModule  = Mlab_Con:USB3_0_A;
 EndCmp
 
 BeginCmp
 TimeStamp = /5555B01B/555C8320;
 Reference = J17;
 ValeurCmp = USB3_A;
-IdModule  = Connect:USB_A;
+IdModule  = Mlab_Con:USB3_0_A;
 EndCmp
 
 BeginCmp
