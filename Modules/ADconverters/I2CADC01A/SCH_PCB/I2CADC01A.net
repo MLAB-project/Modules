@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source C:\Chroust\Zaloha\stare\MLAB\Modules\ADconverters\I2CADC01A\SCH_PCB\I2CADC01A.sch)
-    (date "7. 8. 2015 7:19:56")
+    (source C:/Chroust/Zaloha/stare/MLAB/Modules/ADconverters/I2CADC01A/SCH_PCB/I2CADC01A.sch)
+    (date "26. 8. 2015 11:16:35")
     (tool "Eeschema (2015-05-13 BZR 5653)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -214,22 +214,29 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 55C450C3)))
   (libparts
-    (libpart (lib device) (part INDUCTOR)
+    (libpart (lib MLAB_D) (part DIODE)
+      (footprints
+        (fp D?)
+        (fp S*))
       (fields
-        (field (name Reference) L)
-        (field (name Value) INDUCTOR))
+        (field (name Reference) D)
+        (field (name Value) DIODE))
       (pins
-        (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 2) (type passive))))
-    (libpart (lib MLAB_Jumpers) (part CONN_3)
-      (description "Symbole general de connecteur")
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive))))
+    (libpart (lib MLAB_D) (part REFERENCE)
+      (description "Diode zener")
+      (footprints
+        (fp D?)
+        (fp SO*)
+        (fp SM*))
       (fields
-        (field (name Reference) J)
-        (field (name Value) CONN_3))
+        (field (name Reference) D)
+        (field (name Value) REFERENCE))
       (pins
-        (pin (num 1) (name P1) (type passive))
-        (pin (num 2) (name PM) (type passive))
-        (pin (num 3) (name P3) (type passive))))
+        (pin (num 1) (name K) (type passive))
+        (pin (num 2) (name ~) (type unspc))
+        (pin (num 3) (name A) (type passive))))
     (libpart (lib MLAB_IO) (part LTC2485)
       (description "24bit ADC")
       (fields
@@ -247,6 +254,63 @@
         (pin (num 9) (name CA1) (type input))
         (pin (num 10) (name CA0/f0) (type input))
         (pin (num 11) (name GND) (type unspc))))
+    (libpart (lib mechanical) (part HOLE)
+      (fields
+        (field (name Reference) M)
+        (field (name Value) HOLE))
+      (pins
+        (pin (num 1) (name ~) (type input))))
+    (libpart (lib MLAB_Jumpers) (part _)
+      (description "Symbole general de connecteur")
+      (fields
+        (field (name Reference) P)
+        (field (name Value) _))
+      (pins
+        (pin (num 1) (name P1) (type passive))))
+    (libpart (lib MLAB_Jumpers) (part CONN_3)
+      (description "Symbole general de connecteur")
+      (fields
+        (field (name Reference) J)
+        (field (name Value) CONN_3))
+      (pins
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name PM) (type passive))
+        (pin (num 3) (name P3) (type passive))))
+    (libpart (lib MLAB_Jumpers) (part JUMP_5X2)
+      (description "MLAB modified doubled pinheader connector")
+      (fields
+        (field (name Reference) J)
+        (field (name Value) JUMP_5X2))
+      (pins
+        (pin (num 1) (name 2) (type passive))
+        (pin (num 2) (name 2) (type passive))
+        (pin (num 3) (name 4) (type passive))
+        (pin (num 4) (name 4) (type passive))
+        (pin (num 5) (name 6) (type passive))
+        (pin (num 6) (name 6) (type passive))
+        (pin (num 7) (name 7) (type passive))
+        (pin (num 8) (name 7) (type passive))
+        (pin (num 9) (name 10) (type passive))
+        (pin (num 10) (name 10) (type passive))))
+    (libpart (lib MLAB_Jumpers) (part CONN_2)
+      (description "Symbole general de connecteur")
+      (fields
+        (field (name Reference) J)
+        (field (name Value) CONN_2))
+      (pins
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name PM) (type passive))))
+    (libpart (lib I2CADC01A-cache) (part C-RESCUE-I2CADC01A)
+      (footprints
+        (fp SM*)
+        (fp C?)
+        (fp C1-1))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) C-RESCUE-I2CADC01A))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
     (libpart (lib MLAB_Jumpers) (part JUMP2_2x1)
       (description "MLAB modified doubled pinheader connector")
       (fields
@@ -267,37 +331,6 @@
         (pin (num 4) (name 4) (type passive))
         (pin (num 5) (name 6) (type passive))
         (pin (num 6) (name 6) (type passive))))
-    (libpart (lib MLAB_Jumpers) (part JUMP_5X2)
-      (description "MLAB modified doubled pinheader connector")
-      (fields
-        (field (name Reference) J)
-        (field (name Value) JUMP_5X2))
-      (pins
-        (pin (num 1) (name 2) (type passive))
-        (pin (num 2) (name 2) (type passive))
-        (pin (num 3) (name 4) (type passive))
-        (pin (num 4) (name 4) (type passive))
-        (pin (num 5) (name 6) (type passive))
-        (pin (num 6) (name 6) (type passive))
-        (pin (num 7) (name 7) (type passive))
-        (pin (num 8) (name 7) (type passive))
-        (pin (num 9) (name 10) (type passive))
-        (pin (num 10) (name 10) (type passive))))
-    (libpart (lib MLAB_Jumpers) (part _)
-      (description "Symbole general de connecteur")
-      (fields
-        (field (name Reference) P)
-        (field (name Value) _))
-      (pins
-        (pin (num 1) (name P1) (type passive))))
-    (libpart (lib MLAB_Jumpers) (part CONN_2)
-      (description "Symbole general de connecteur")
-      (fields
-        (field (name Reference) J)
-        (field (name Value) CONN_2))
-      (pins
-        (pin (num 1) (name P1) (type passive))
-        (pin (num 2) (name PM) (type passive))))
     (libpart (lib I2CADC01A-cache) (part R-RESCUE-I2CADC01A)
       (footprints
         (fp R?)
@@ -311,55 +344,22 @@
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
-    (libpart (lib I2CADC01A-cache) (part C-RESCUE-I2CADC01A)
-      (footprints
-        (fp SM*)
-        (fp C?)
-        (fp C1-1))
+    (libpart (lib device) (part INDUCTOR)
       (fields
-        (field (name Reference) C)
-        (field (name Value) C-RESCUE-I2CADC01A))
+        (field (name Reference) L)
+        (field (name Value) INDUCTOR))
       (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib MLAB_D) (part REFERENCE)
-      (description "Diode zener")
-      (footprints
-        (fp D?)
-        (fp SO*)
-        (fp SM*))
-      (fields
-        (field (name Reference) D)
-        (field (name Value) REFERENCE))
-      (pins
-        (pin (num 1) (name K) (type passive))
-        (pin (num 2) (name ~) (type unspc))
-        (pin (num 3) (name A) (type passive))))
-    (libpart (lib MLAB_D) (part DIODE)
-      (footprints
-        (fp D?)
-        (fp S*))
-      (fields
-        (field (name Reference) D)
-        (field (name Value) DIODE))
-      (pins
-        (pin (num 1) (name A) (type passive))
-        (pin (num 2) (name K) (type passive))))
-    (libpart (lib mechanical) (part HOLE)
-      (fields
-        (field (name Reference) M)
-        (field (name Value) HOLE))
-      (pins
-        (pin (num 1) (name ~) (type input)))))
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive)))))
   (libraries
     (library (logical device)
       (uri C:\kicad2\kicad\share\library\device.lib))
     (library (logical MLAB_Jumpers)
       (uri C:\Chroust\Zaloha\stare\kicad-mlab\symbols\MLAB_Jumpers.lib))
-    (library (logical I2CADC01A-cache)
-      (uri C:\Chroust\Zaloha\stare\MLAB\Modules\ADconverters\I2CADC01A\SCH_PCB\I2CADC01A-cache.lib))
     (library (logical MLAB_D)
       (uri C:\Chroust\Zaloha\stare\kicad-mlab\symbols\MLAB_D.lib))
+    (library (logical I2CADC01A-cache)
+      (uri C:\Chroust\Zaloha\stare\MLAB\Modules\ADconverters\I2CADC01A\SCH_PCB\I2CADC01A-cache.lib))
     (library (logical mechanical)
       (uri C:\Chroust\Zaloha\stare\kicad-mlab\symbols\mechanical.lib))
     (library (logical MLAB_IO)
