@@ -1,4 +1,4 @@
-update=Út 25. srpen 2015, 10:56:55 CEST
+update=26. 8. 2015 8:11:44
 version=1
 last_client=kicad
 [pcbnew]
@@ -124,3 +124,13 @@ LibName94=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/OpAmp
 LibName95=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/sata7-67491-1030
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

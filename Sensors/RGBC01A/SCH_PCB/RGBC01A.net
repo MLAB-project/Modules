@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:/Chroust/Zaloha/stare/MLAB/Modules/Sensors/RGBC01A/SCH_PCB/RGBC01A.sch)
-    (date "2. 7. 2015 7:55:24")
+    (date "26. 8. 2015 10:04:07")
     (tool "Eeschema (2015-05-13 BZR 5653)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -16,7 +16,7 @@
         (comment (number 4) (value "")))))
   (components
     (comp (ref D1)
-      (value ZENERsmall)
+      (value BZV55C-3,6V)
       (footprint Mlab_D:Diode-MiniMELF_Standard)
       (libsource (lib device) (part ZENERsmall))
       (sheetpath (names /) (tstamps /))
@@ -88,7 +88,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5593C801))
     (comp (ref D2)
-      (value LED)
+      (value LL-S170IRC-2A)
       (footprint Mlab_D:LED_0805)
       (libsource (lib device) (part LED))
       (sheetpath (names /) (tstamps /))
@@ -130,6 +130,50 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5594D33D)))
   (libparts
+    (libpart (lib device) (part C)
+      (description "Unpolarized capacitor")
+      (footprints
+        (fp C?)
+        (fp C_????_*)
+        (fp C_????)
+        (fp SMD*_c)
+        (fp Capacitor*))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) C))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part CP)
+      (description "Polarised capacitor")
+      (footprints
+        (fp CP*)
+        (fp Elko*)
+        (fp TantalC*)
+        (fp C*elec)
+        (fp c_elec*)
+        (fp SMD*_Pol))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) CP))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part LED)
+      (footprints
+        (fp LED-3MM)
+        (fp LED-5MM)
+        (fp LED-10MM)
+        (fp LED-0603)
+        (fp LED-0805)
+        (fp LED-1206)
+        (fp LEDV))
+      (fields
+        (field (name Reference) D)
+        (field (name Value) LED))
+      (pins
+        (pin (num 1) (name K) (type passive))
+        (pin (num 2) (name A) (type passive))))
     (libpart (lib device) (part R)
       (description Resistor)
       (footprints
@@ -158,21 +202,6 @@
         (field (name Value) HOLE))
       (pins
         (pin (num 1) (name ~) (type input))))
-    (libpart (lib device) (part LED)
-      (footprints
-        (fp LED-3MM)
-        (fp LED-5MM)
-        (fp LED-10MM)
-        (fp LED-0603)
-        (fp LED-0805)
-        (fp LED-1206)
-        (fp LEDV))
-      (fields
-        (field (name Reference) D)
-        (field (name Value) LED))
-      (pins
-        (pin (num 1) (name K) (type passive))
-        (pin (num 2) (name A) (type passive))))
     (libpart (lib MLAB_IO) (part TCS37717)
       (description "RGBC senzor")
       (fields
@@ -215,45 +244,16 @@
         (pin (num 7) (name 7) (type passive))
         (pin (num 8) (name 7) (type passive))
         (pin (num 9) (name 10) (type passive))
-        (pin (num 10) (name 10) (type passive))))
-    (libpart (lib device) (part CP)
-      (description "Polarised capacitor")
-      (footprints
-        (fp CP*)
-        (fp Elko*)
-        (fp TantalC*)
-        (fp C*elec)
-        (fp c_elec*)
-        (fp SMD*_Pol))
-      (fields
-        (field (name Reference) C)
-        (field (name Value) CP))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part C)
-      (description "Unpolarized capacitor")
-      (footprints
-        (fp C?)
-        (fp C_????_*)
-        (fp C_????)
-        (fp SMD*_c)
-        (fp Capacitor*))
-      (fields
-        (field (name Reference) C)
-        (field (name Value) C))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive)))))
+        (pin (num 10) (name 10) (type passive)))))
   (libraries
-    (library (logical mechanical)
-      (uri C:\Chroust\Zaloha\stare\kicad-mlab\symbols\mechanical.lib))
+    (library (logical device)
+      (uri C:\kicad2\kicad\share\library\device.lib))
     (library (logical MLAB_Jumpers)
       (uri C:\Chroust\Zaloha\stare\kicad-mlab\symbols\MLAB_Jumpers.lib))
+    (library (logical mechanical)
+      (uri C:\Chroust\Zaloha\stare\kicad-mlab\symbols\mechanical.lib))
     (library (logical MLAB_IO)
-      (uri C:\Chroust\Zaloha\stare\kicad-mlab\symbols\MLAB_IO.lib))
-    (library (logical device)
-      (uri C:\kicad2\kicad\share\library\device.lib)))
+      (uri C:\Chroust\Zaloha\stare\kicad-mlab\symbols\MLAB_IO.lib)))
   (nets
     (net (code 1) (name "Net-(D2-Pad2)")
       (node (ref J3) (pin 2))
