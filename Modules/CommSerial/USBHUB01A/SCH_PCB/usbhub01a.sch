@@ -483,12 +483,12 @@ $EndComp
 $Comp
 L +3V3 #PWR014
 U 1 1 555F2985
-P 9630 4300
-F 0 "#PWR014" H 9630 4150 50  0001 C CNN
-F 1 "+3V3" H 9630 4440 50  0000 C CNN
-F 2 "" H 9630 4300 60  0000 C CNN
-F 3 "" H 9630 4300 60  0000 C CNN
-	1    9630 4300
+P 9630 4270
+F 0 "#PWR014" H 9630 4120 50  0001 C CNN
+F 1 "+3V3" H 9630 4410 50  0000 C CNN
+F 2 "" H 9630 4270 60  0000 C CNN
+F 3 "" H 9630 4270 60  0000 C CNN
+	1    9630 4270
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1149,7 +1149,7 @@ F 3 "" H 5000 7150 60  0000 C CNN
 $EndComp
 Text Label 7930 850  1    60   ~ 0
 IO1V1
-Text Label 8130 850  1    60   ~ 0
+Text Label 8080 860  1    60   ~ 0
 IO3V3
 Text Label 800  6900 1    60   ~ 0
 IO1V1
@@ -1707,8 +1707,6 @@ Wire Wire Line
 Wire Wire Line
 	7930 1050 7930 850 
 Wire Wire Line
-	8130 1050 8130 850 
-Wire Wire Line
 	3910 5970 3910 6070
 Wire Wire Line
 	760  5920 760  6070
@@ -2076,4 +2074,9 @@ Wire Wire Line
 	4090 2800 4090 2750
 Wire Wire Line
 	5300 2110 5190 2110
+Wire Wire Line
+	8080 1050 8080 860 
+Wire Wire Line
+	9630 4270 9630 4300
+Connection ~ 9630 4300
 $EndSCHEMATC
