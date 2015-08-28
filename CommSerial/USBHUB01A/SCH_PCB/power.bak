@@ -60,7 +60,7 @@ $EndDescr
 Wire Wire Line
 	2200 2900 2300 2900
 Wire Wire Line
-	2300 2900 2300 3250
+	2300 2010 2300 3250
 Wire Wire Line
 	2200 3000 2300 3000
 Connection ~ 2300 3000
@@ -548,4 +548,26 @@ F 3 "" H 8400 2640 60  0000 C CNN
 	1    8400 2640
 	1    0    0    -1  
 $EndComp
+$Comp
+L JUMP_3X2 J?
+U 1 1 55E0F281
+P 1540 2060
+F 0 "J?" H 1190 2260 50  0000 C CNN
+F 1 "JUMP_3X2" V 1540 2110 40  0001 C CNN
+F 2 "" H 1540 2060 60  0000 C CNN
+F 3 "" H 1540 2060 60  0000 C CNN
+	1    1540 2060
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1940 2110 2240 2110
+Wire Wire Line
+	2240 2110 2240 2800
+Connection ~ 2240 2800
+Wire Wire Line
+	1940 2210 2300 2210
+Connection ~ 2300 2900
+Wire Wire Line
+	1940 2010 2300 2010
+Connection ~ 2300 2210
 $EndSCHEMATC
