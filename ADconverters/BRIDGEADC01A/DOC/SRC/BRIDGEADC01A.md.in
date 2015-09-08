@@ -1,0 +1,37 @@
+$HumanName
+==========
+
+Brought to you by: $Author
+
+$Descr
+
+Specifications
+--------------
+
+Specification     | Value         | Unit | Note
+----------------- | ------------- | ---- | --------------
+Operating Voltage |               | V    |
+Power Consumption |               | mA   |
+Dimensions        | $Dimensions   | mm   | width x length
+
+Description
+-----------
+
+!9.9;9.9;287.1;200.1;!(../SCH_PCB/${Module}_SCH.svg)
+
+Mechanical construction
+-----------------------
+
+Component placement
+-------------------
+
+![PCB top](../../CAM_AMA/${Module}_TOP.svg "Top side of a PCB") ![PCB bottom](../../CAM_AMA/${Module}_BOT.svg "Bottom side of a PCB")
+
+$bom
+
+First power up
+--------------
+
+Programming
+----------
+

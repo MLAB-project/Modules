@@ -1,9 +1,9 @@
-(kicad_pcb (version 4) (host pcbnew "(2015-05-13 BZR 5653)-product")
+(kicad_pcb (version 4) (host pcbnew 0.201509061501+6161~29~ubuntu15.04.1-product)
 
   (general
     (links 74)
     (no_connects 0)
-    (area 0.203999 -40.436001 30.276001 -0.203999)
+    (area -8.636 -44.958 40.132001 6.032501)
     (thickness 1.6)
     (drawings 26)
     (tracks 147)
@@ -67,7 +67,7 @@
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFF7F)
     (pcbplotparams
-      (layerselection 0x010f0_80000001)
+      (layerselection 0x010e0_80000001)
       (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.300000)
@@ -85,7 +85,7 @@
       (plotvalue true)
       (plotinvisibletext false)
       (padsonsilk false)
-      (subtractmaskfromsilk false)
+      (subtractmaskfromsilk true)
       (outputformat 1)
       (mirror false)
       (drillshape 0)
