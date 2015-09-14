@@ -8,7 +8,7 @@ TEG_ysize = 40.1;
 TEG_zsize = 8;
 
 mount_hole = 3.5;       // mounting screw hole diameter
-clearance = 0.175;      // spare clearance for printing tolerances. 
+clearance = 1.0;      // spare clearance for printing tolerances. 
 sealing_ring_width = 3;     // width of sealing gab under the cover
 wall_thickness = 12;    // thickness of the box wall 
 volume_encore = 10;     // space added to the size of internar heatsink
@@ -119,4 +119,5 @@ module cover (){
     }
 }
 
-cover ();
+//cover ();
+box();
