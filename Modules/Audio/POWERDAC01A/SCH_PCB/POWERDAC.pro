@@ -1,4 +1,4 @@
-update=St 16. září 2015, 16:56:03 CEST
+update=Čt 17. září 2015, 10:35:39 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=/home/kaklik/repos/kicad-library/library
+LibDir=/home/kaklik/repos/kicad-library/library;/home/kaklik/repos/kicad-mlab
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -58,3 +58,5 @@ LibName26=atmel
 LibName27=contrib
 LibName28=valves
 LibName29=audio
+LibName30=symbols/mlab_header
+LibName31=symbols/mlab_mechanical
