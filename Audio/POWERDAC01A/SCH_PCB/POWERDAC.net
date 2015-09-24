@@ -1,8 +1,8 @@
 (export (version D)
   (design
     (source /home/kaklik/svn/svnMLAB/Modules/Audio/POWERDAC01A/SCH_PCB/POWERDAC.sch)
-    (date St 23. září 2015, 15:52:34 CEST)
-    (tool "Eeschema 0.201509201831+6203~30~ubuntu15.04.1-product")
+    (date Čt 24. září 2015, 16:09:46 CEST)
+    (tool "Eeschema 0.201509231831+6209~30~ubuntu15.04.1-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title)
@@ -180,7 +180,7 @@
       (tstamp 55FAD10B))
     (comp (ref D2)
       (value M4)
-      (footprint Diodes_SMD:SMA_Standard)
+      (footprint Diodes_SMD:SMB_Handsoldering)
       (libsource (lib device) (part D))
       (sheetpath (names /) (tstamps /))
       (tstamp 55FAD8E6))
@@ -435,18 +435,14 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 55FD82E5)))
   (libparts
-    (libpart (lib device) (part CP)
-      (description "Polarised capacitor")
+    (libpart (lib device) (part R)
+      (description Resistor)
       (footprints
-        (fp CP*)
-        (fp Elko*)
-        (fp TantalC*)
-        (fp C*elec)
-        (fp c_elec*)
-        (fp SMD*_Pol))
+        (fp R_*)
+        (fp Resistor_*))
       (fields
-        (field (name Reference) C)
-        (field (name Value) CP))
+        (field (name Reference) R)
+        (field (name Value) R))
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
@@ -464,46 +460,21 @@
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
-    (libpart (lib mlab_header) (part HEADER_1x02)
-      (description "1x02 2.54 mm pitch header")
-      (fields
-        (field (name Reference) J)
-        (field (name Value) HEADER_1x02))
-      (pins
-        (pin (num 1) (name ~) (type input))
-        (pin (num 2) (name ~) (type input))))
-    (libpart (lib mlab_header) (part HEADER_1x03)
-      (description "1x03 2.54 mm pitch header")
-      (fields
-        (field (name Reference) J)
-        (field (name Value) HEADER_1x03))
-      (pins
-        (pin (num 1) (name ~) (type input))
-        (pin (num 2) (name ~) (type input))
-        (pin (num 3) (name ~) (type input))))
-    (libpart (lib device) (part R)
-      (description Resistor)
+    (libpart (lib device) (part CP)
+      (description "Polarised capacitor")
       (footprints
-        (fp R_*)
-        (fp Resistor_*))
+        (fp CP*)
+        (fp Elko*)
+        (fp TantalC*)
+        (fp C*elec)
+        (fp c_elec*)
+        (fp SMD*_Pol))
       (fields
-        (field (name Reference) R)
-        (field (name Value) R))
+        (field (name Reference) C)
+        (field (name Value) CP))
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
-    (libpart (lib mlab_header) (part HEADER_2x03_PARALLEL)
-      (description "2x03 2.54 mm pitch header, 2 pins next to each other are connected")
-      (fields
-        (field (name Reference) J)
-        (field (name Value) HEADER_2x03_PARALLEL))
-      (pins
-        (pin (num 1) (name ~) (type input))
-        (pin (num 2) (name ~) (type input))
-        (pin (num 3) (name ~) (type input))
-        (pin (num 4) (name ~) (type input))
-        (pin (num 5) (name ~) (type input))
-        (pin (num 6) (name ~) (type input))))
     (libpart (lib device) (part D)
       (description Diode)
       (footprints
@@ -525,6 +496,12 @@
       (pins
         (pin (num 1) (name 1) (type input))
         (pin (num 2) (name 2) (type input))))
+    (libpart (lib mlab_mechanical) (part HOLE)
+      (fields
+        (field (name Reference) M)
+        (field (name Value) HOLE))
+      (pins
+        (pin (num 1) (name ~) (type input))))
     (libpart (lib audio) (part STA350BW)
       (fields
         (field (name Reference) U)
@@ -567,6 +544,23 @@
         (pin (num 35) (name GND_DIG) (type power_in))
         (pin (num 36) (name VDD_DIG) (type power_in))
         (pin (num 37) (name EP) (type power_in))))
+    (libpart (lib mlab_header) (part HEADER_1x02)
+      (description "1x02 2.54 mm pitch header")
+      (fields
+        (field (name Reference) J)
+        (field (name Value) HEADER_1x02))
+      (pins
+        (pin (num 1) (name ~) (type input))
+        (pin (num 2) (name ~) (type input))))
+    (libpart (lib mlab_header) (part HEADER_1x03)
+      (description "1x03 2.54 mm pitch header")
+      (fields
+        (field (name Reference) J)
+        (field (name Value) HEADER_1x03))
+      (pins
+        (pin (num 1) (name ~) (type input))
+        (pin (num 2) (name ~) (type input))
+        (pin (num 3) (name ~) (type input))))
     (libpart (lib mlab_header) (part HEADER_2x01_PARALLEL)
       (description "2x01 2.54 mm pitch header, 2 pins next to each other are connected")
       (fields
@@ -585,21 +579,27 @@
         (pin (num 2) (name ~) (type input))
         (pin (num 3) (name ~) (type input))
         (pin (num 4) (name ~) (type input))))
-    (libpart (lib mlab_mechanical) (part HOLE)
+    (libpart (lib mlab_header) (part HEADER_2x03_PARALLEL)
+      (description "2x03 2.54 mm pitch header, 2 pins next to each other are connected")
       (fields
-        (field (name Reference) M)
-        (field (name Value) HOLE))
+        (field (name Reference) J)
+        (field (name Value) HEADER_2x03_PARALLEL))
       (pins
-        (pin (num 1) (name ~) (type input)))))
+        (pin (num 1) (name ~) (type input))
+        (pin (num 2) (name ~) (type input))
+        (pin (num 3) (name ~) (type input))
+        (pin (num 4) (name ~) (type input))
+        (pin (num 5) (name ~) (type input))
+        (pin (num 6) (name ~) (type input)))))
   (libraries
-    (library (logical mlab_mechanical)
-      (uri /home/kaklik/repos/kicad-mlab/symbols/mlab_mechanical.lib))
-    (library (logical mlab_header)
-      (uri /home/kaklik/repos/kicad-mlab/symbols/mlab_header.lib))
+    (library (logical device)
+      (uri /home/kaklik/repos/kicad-library/library/device.lib))
     (library (logical audio)
       (uri /home/kaklik/repos/kicad-library/library/audio.lib))
-    (library (logical device)
-      (uri /home/kaklik/repos/kicad-library/library/device.lib)))
+    (library (logical mlab_header)
+      (uri /home/kaklik/repos/kicad-mlab/symbols/mlab_header.lib))
+    (library (logical mlab_mechanical)
+      (uri /home/kaklik/repos/kicad-mlab/symbols/mlab_mechanical.lib)))
   (nets
     (net (code 1) (name "Net-(C18-Pad1)")
       (node (ref R9) (pin 2))
