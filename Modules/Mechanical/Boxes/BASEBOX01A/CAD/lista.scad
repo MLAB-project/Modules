@@ -1,0 +1,46 @@
+vzdalenost_der = 12; //rozteč děr mezi sebou
+pocet_der = 10; //pocet ter pres ktere je lista
+
+//rozměry výrezu
+//rozmer v ose y
+vzdalenost_od_okraje = 10; //vzdalenost stredu upevnovaci diry od kraje desky
+vzdalenost_od_diry = 5; //vzdalenost od stredu upevnovaci diry na druhou stranu
+
+//rozmery vyrezu v ose x
+vzdalenost_1 = 5; //od díry ke kraji
+vzdalenost_2 = 5;
+
+//definicce celkové výšky lišty
+zapust=6; //závislé na sloupku
+vyska_listy=10;
+
+//parametry pro úžlabinu
+tlouska_celicka = 3; //definuje uzlabinu
+sirka_materialu = 3; //sirka materialu od kraje desky k uzlabine
+
+difference () {
+color("cyan")
+    translate([0, 0, 0])
+        linear_extrude(height = zapust+vyska_listy)
+            square([((pocet_der*vzdalenost_der)+2*vzdalenost_1), vzdalenost_od_okraje+vzdalenost_od_diry], center = true); 
+    
+    translate([-((((pocet_der*vzdalenost_der)+2*vzdalenost_1)/2)-(vzdalenost_1+vzdalenost_2/2)), 0, (zapust)])
+        linear_extrude(height = vyska_listy)
+            square([vzdalenost_2, vzdalenost_od_okraje+vzdalenost_od_diry], center = true); 
+    
+    translate([((((pocet_der*vzdalenost_der)+2*vzdalenost_1)/2)-(vzdalenost_1+vzdalenost_2/2)), 0, (zapust)])
+        linear_extrude(height = vyska_listy)
+            square([vzdalenost_2, vzdalenost_od_okraje+vzdalenost_od_diry], center = true); 
+    
+    translate([-((((pocet_der*vzdalenost_der)+2*vzdalenost_1)/2)-(vzdalenost_1/2)), 0, (zapust)])
+        linear_extrude(height = vyska_listy)
+            square([vzdalenost_1, vzdalenost_od_okraje+vzdalenost_od_diry], center = true); 
+    
+    translate([((((pocet_der*vzdalenost_der)+2*vzdalenost_1)/2)-(vzdalenost_1/2)), 0, (zapust)])
+        linear_extrude(height = vyska_listy)
+            square([vzdalenost_1, vzdalenost_od_okraje+vzdalenost_od_diry], center = true); 
+    
+     translate([0,-((((vzdalenost_od_okraje+vzdalenost_od_diry)/2)-sirka_materialu)-(tlouska_celicka/2)), zapust])
+        linear_extrude(height = vyska_listy)
+            square([((pocet_der*vzdalenost_der)+2*vzdalenost_1), tlouska_celicka], center = true); 
+    }
