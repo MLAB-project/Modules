@@ -1,5 +1,5 @@
 vzdalenost_der = 10; //rozteč děr mezi sebou
-pocet_der = 21; //pocet ter pres ktere je lista ponížené o 1
+pocet_der = 14; //pocet ter pres ktere je lista ponížené o 1
 
 //rozměry výrezu
 //rozmer v ose y
