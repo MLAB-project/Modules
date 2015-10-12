@@ -1,21 +1,21 @@
 vyska = 60;  //celeho sloupku
-prumer_diry = 0; //
-zapust = 6; //vyska zapusteni listy 
+zapust = 6.5; //vyska zapusteni listy 
 vzdalenost_der = 10; //roztec upevňovacich der
 vzdalenost_od_okraje = 10; //vzdalenost stredu upevnovaci diry od kraje desky
 vzdalenost_od_diry = 5; //vzdalenost od stredu upevnovaci diry na druhou stranu
 radidus_hrany = 5; //radius zaobleni
 
+//parametry šroubu
+prumer_sroubu=3.3;
 
-DISPLAY_height = 100; 
-DISPLAY_width = 120; 
-DISPLAY_depth = 5; 
 
-FP_width = 234;
-FP_height = 125;
-thickness = 2;
-clearance = 0.75;
+//parametry matice
+prumer_matice=6; //hrany k hraně
+vyska_matice=3;  //vyska matice
+posuv_dorazu=0;  //pro moznost posuvu dorazu pro vsunutí matice
+matice_sila_materialu=2; //sila materialu pod/nad maticí na ose z
 
+difference () {
 union () {
 color("green")
     translate([-(vzdalenost_od_okraje-radidus_hrany),-(vzdalenost_od_okraje-radidus_hrany),0])  // center top screw
@@ -66,4 +66,46 @@ color("red")
         linear_extrude(height = (vyska-(2*zapust)))
             square([vzdalenost_der, vzdalenost_od_diry ], center = true);  
   
+}
+
+//diry na sroub
+    translate([0,0,0])  // center top screw
+        cylinder(2*vyska, d=(prumer_sroubu), center=true);
+
+    translate([vzdalenost_der,0,0])  // center top screw
+        cylinder(2*vyska, d=(prumer_sroubu), center=true);
+
+    translate([0,vzdalenost_der,0])  // center top screw
+        cylinder(2*vyska, d=(prumer_sroubu), center=true);
+
+//diry na matice
+//1. krajni matice
+translate([vzdalenost_der,(((((prumer_matice)/2)+posuv_dorazu+vzdalenost_od_diry)/2)-(posuv_dorazu+prumer_matice/2)),((vyska-2*zapust)/2-vyska_matice/2)-matice_sila_materialu])  // center top screw
+      
+cube([prumer_matice, prumer_matice+posuv_dorazu+vzdalenost_od_diry,vyska_matice], center = true);
+
+translate([vzdalenost_der,(((((prumer_matice)/2)+posuv_dorazu+vzdalenost_od_diry)/2)-(posuv_dorazu+prumer_matice/2)),-(((vyska-2*zapust)/2-vyska_matice/2)-matice_sila_materialu)])  // center top screw
+      
+cube([prumer_matice, prumer_matice+posuv_dorazu+vzdalenost_od_diry,vyska_matice], center = true);
+
+
+//2. krajni matice
+translate([(((((prumer_matice)/2)+posuv_dorazu+vzdalenost_od_diry)/2)-(posuv_dorazu+prumer_matice/2)), vzdalenost_der,((vyska-2*zapust)/2-vyska_matice/2)-matice_sila_materialu])  // center top screw
+      
+cube([ prumer_matice+posuv_dorazu+vzdalenost_od_diry,prumer_matice,vyska_matice], center = true);
+
+translate([(((((prumer_matice)/2)+posuv_dorazu+vzdalenost_od_diry)/2)-(posuv_dorazu+prumer_matice/2)), vzdalenost_der,-(((vyska-2*zapust)/2-vyska_matice/2)-matice_sila_materialu)])  // center top screw
+      
+cube([ prumer_matice+posuv_dorazu+vzdalenost_od_diry,prumer_matice,vyska_matice], center = true);
+
+//prostredni dira
+translate([0,(((((prumer_matice)/2)+posuv_dorazu+vzdalenost_od_diry)/2)-(posuv_dorazu+prumer_matice/2)),((vyska)/2-vyska_matice/2)-matice_sila_materialu])  // center top screw
+      
+cube([prumer_matice, prumer_matice+posuv_dorazu+vzdalenost_od_diry,vyska_matice], center = true);
+
+translate([0,(((((prumer_matice)/2)+posuv_dorazu+vzdalenost_od_diry)/2)-(posuv_dorazu+prumer_matice/2)),-(((vyska)/2-vyska_matice/2)-matice_sila_materialu)])  // center top screw
+      
+cube([prumer_matice, prumer_matice+posuv_dorazu+vzdalenost_od_diry,vyska_matice], center = true);
+
+
 }
