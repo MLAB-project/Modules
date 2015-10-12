@@ -1,5 +1,27 @@
-include <configuration.scad>
+//include <configuration.scad>
+/*
+//sloupek
+vyska = 60;  //celeho sloupku
+zapust = 6.5; //vyska zapusteni listy 
+vzdalenost_der = 10; //roztec upevňovacich der
+vzdalenost_od_okraje = 10; //vzdalenost stredu upevnovaci diry od kraje desky
+vzdalenost_od_diry = 5; //vzdalenost od stredu upevnovaci diry na druhou stranu
+radidus_hrany = 5; //radius zaobleni
 
+//parametry šroubu
+prumer_sroubu=3.3;
+
+
+//parametry matice
+prumer_matice=6; //hrany k hraně
+vyska_matice=3;  //vyska matice
+posuv_dorazu=0;  //pro moznost posuvu dorazu pro vsunutí matice
+matice_sila_materialu=2; //sila materialu pod/nad maticí na ose z
+*/
+
+
+
+module sloupek (vyska,zapust,vzdalenost_der,vzdalenost_od_okrajem,vzdalenost_od_diry,radidus_hrany,prumer_sroubu,prumer_matice,vyska_matice,posuv_dorazu,matice_sila_materialu) {
 difference () {
 union () {
 color("green")
@@ -92,5 +114,5 @@ translate([0,(((((prumer_matice)/2)+posuv_dorazu+vzdalenost_od_diry)/2)-(posuv_d
       
 cube([prumer_matice, prumer_matice+posuv_dorazu+vzdalenost_od_diry,vyska_matice], center = true);
 
-
+}
 }
