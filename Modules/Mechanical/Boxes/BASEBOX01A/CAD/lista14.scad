@@ -7,7 +7,7 @@ vzdalenost_od_okraje = 10; //vzdalenost stredu upevnovaci diry od kraje desky
 vzdalenost_od_diry = 5; //vzdalenost od stredu upevnovaci diry na druhou stranu
 
 //rozmery vyrezu v ose x
-vzdalenost_1 = 5; //od díry ke kraji
+vzdalenost_1 = 4.6; //od díry ke kraji
 vzdalenost_2 = 5;
 
 //definicce celkové výšky lišty
