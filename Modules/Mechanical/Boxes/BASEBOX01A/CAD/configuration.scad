@@ -1,7 +1,5 @@
 $fn=20; // model faces resolution.
 
-
-
 vzdalenost_der = 10; //rozteč děr mezi sebou
 
 //sloupek
@@ -56,15 +54,3 @@ delka_celicka=30;
 tloustka_celicka = 3;
 vule_tlousky = 0.25;
 
-
-
-include <celicko.scad>
-translate([50,0,0])
-celicko (vyska,zapust1,vule_vysky_celicka,delka_celicka,tloustka_celicka,vule_tlousky);
-
-
-include <sloupek.scad>
-sloupek (vyska,zapust1,vzdalenost_der,vzdalenost_od_okraje,vzdalenost_od_diry,radidus_hrany,prumer_sroubu,prumer_matice,vyska_matice,posuv_dorazu,matice_sila_materialu);
-
-include <lista.scad>
-lista (vzdalenost_der,pocet_der1,vzdalenost_od_okraje,vzdalenost_od_diry,vzdalenost_1,vzdalenost_2, zapust,vyska_listy,tloustka_celicka,sirka_materialu,vyska_hlavy,prumer_hlavy,prumer_sroubu,prumer_matice,vyska_matice,posuv_dorazu,matice_sila_materialu);
