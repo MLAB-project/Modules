@@ -1,13 +1,13 @@
 $fn=20; // model faces resolution.
 
-vzdalenost_der = 10; //rozteč děr mezi sebou
+
 
 //sloupek
-vyska = 60;  //celeho sloupku
+
 zapust=6; //zápust ve sloupku pro listu
 tolerance=0.5; //tolerance mezi zapusti v sloupku  a v listě
 zapust1=zapust+tolerance;
-radidus_hrany = 5; //radius zaobleni sloupku
+
 
 //parametry šroubu
 vyska_hlavy = 3.5;
@@ -25,16 +25,10 @@ matice_sila_materialu=2; //sila materialu pod maticí na ose z
 
 //---------------------------------------------------
 //parametry lišty
-//malá list
-pocet_der1 = 14; //pocet der pres ktere je lista, ponížené o 1
-
-//velká list
-pocet_der2 = 21; //pocet ter pres ktere je lista ponížené o 1
-
 
 //rozměry výrezu
 //rozmer v ose y
-vzdalenost_od_okraje = 10; //vzdalenost stredu upevnovaci diry od kraje desky
+
 vzdalenost_od_diry = 5; //vzdalenost od stredu upevnovaci diry na druhou stranu
 
 //rozmery vyrezu v ose x

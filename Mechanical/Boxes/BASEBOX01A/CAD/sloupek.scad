@@ -1,4 +1,4 @@
-include <configuration.scad>
+//include <configuration.scad>
 /*
 //sloupek
 vyska = 60;  //celeho sloupku
@@ -25,14 +25,14 @@ module sloupek(
     vyska,
     zapust,
     vzdalenost_der,
-    vzdalenost_od_okrajem,
+    vzdalenost_od_okraje,
     vzdalenost_od_diry,
     radidus_hrany,
     prumer_sroubu,
     prumer_matice,
     vyska_matice,
     posuv_dorazu,
-    matice_sila_materialu) {
+   matice_sila_materialu) {
 
     difference () {
         union () {
