@@ -1,5 +1,3 @@
-include <configuration.scad>
-
 module lista (vzdalenost_der,pocet_der,vzdalenost_od_okraje,vzdalenost_od_diry,vzdalenost_1,vzdalenost_2, zapust,vyska_listy,tlouska_celicka,sirka_materialu,vyska_hlavy,prumer_hlavy,prumer_sroubu,prumer_matice,vyska_matice,posuv_dorazu,matice_sila_materialu) {
 difference () {
 color("cyan")
