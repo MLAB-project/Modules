@@ -4,46 +4,36 @@ use <lista.scad>
 
 include <configuration.scad>
 
-
+/*
 vzdalenost_der=10;
 vyska=10;
 radidus_hrany=10;
 vzdalenost_od_okraje=10;
 pocet_der1=10;
 pocet_der2=10;
-
+*/
 
 board = "ALBASE1521";        /// rozhodnutí pro který typ se budou generovat podklady.
 
-
-if (board == "ALBASE1521") //Konfigurace pro velkou aldesku.
-{
     cube(size = [100, 1000, 1], center = false);
     
-vzdalenost_der = 10; //rozteč děr mezi sebou
+   
+    vzdalenost_der =  board == "ALBASE1521" ? 10 : 10.16; //rozteč děr mezi sebou
+    vyska = board == "ALBASE1521" ? 60 : 60 ;  //vyska celeho sloupku
+    radidus_hrany = board == "ALBASE1521" ? 5 : 5; //radius zaobleni sloupku
 
+    //---------------------------------------------------
+    //parametry lišty
 
-vyska = 60;  //vyska celeho sloupku
-radidus_hrany = 5; //radius zaobleni sloupku
+    vzdalenost_od_okraje = 10; //vzdalenost stredu upevnovaci diry od kraje desky
 
+    //malá list
+    pocet_der1 = 10; //pocet der pres ktere je lista, ponížené o 1
 
-//---------------------------------------------------
-//parametry lišty
+    //velká list
+    pocet_der2 = 14; //pocet ter pres ktere je lista ponížené o 1 */
 
-vzdalenost_od_okraje = 10; //vzdalenost stredu upevnovaci diry od kraje desky
-
-//malá list
-pocet_der1 = 10; //pocet der pres ktere je lista, ponížené o 1
-
-//velká list
-pocet_der2 = 14; //pocet ter pres ktere je lista ponížené o 1 
-}
-else
-    {
-    }
-
-
-
+/*
 if (board == "ALBASE1115") //Konfigurace pro malou aldesku.
 {
     
@@ -66,11 +56,7 @@ pocet_der1 = 10; //pocet der pres ktere je lista, ponížené o 1
 //velká list
 pocet_der2 = 14; //pocet ter pres ktere je lista ponížené o 1
 } 
-else
-    {
-      
-     }   
-     
+*/     
     
 
 translate([50,0,0])
