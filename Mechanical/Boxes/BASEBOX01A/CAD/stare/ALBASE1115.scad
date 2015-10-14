@@ -2,7 +2,7 @@ use <celicko.scad>
 use <sloupek.scad>
 use <lista.scad>
 
-include <configuration.scad>
+include <manufactury_conf.scad>
 
 vzdalenost_der = 10.16; //rozteč děr mezi sebou
 
@@ -22,8 +22,7 @@ pocet_der1 = 8; //pocet der desky, ponížené o 3
 //velká list
 pocet_der2 = 12; //pocet der desky, ponížené o 3
 
-translate([50,0,0])
-celicko (vyska,zapust1,vule_vysky_celicka,delka_celicka,tloustka_celicka,vule_tlousky);
+
 
 
 translate([0,0,0])
