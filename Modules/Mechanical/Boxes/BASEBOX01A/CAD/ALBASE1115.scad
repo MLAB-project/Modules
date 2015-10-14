@@ -17,10 +17,10 @@ radidus_hrany = 5; //radius zaobleni sloupku
 vzdalenost_od_okraje = 8.88; //vzdalenost stredu upevnovaci diry od kraje desky
 
 //malá list
-pocet_der1 = 10; //pocet der pres ktere je lista, ponížené o 1
+pocet_der1 = 8; //pocet der desky, ponížené o 3
 
 //velká list
-pocet_der2 = 14; //pocet ter pres ktere je lista ponížené o 1
+pocet_der2 = 12; //pocet der desky, ponížené o 3
 
 translate([50,0,0])
 celicko (vyska,zapust1,vule_vysky_celicka,delka_celicka,tloustka_celicka,vule_tlousky);
