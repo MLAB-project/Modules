@@ -1,9 +1,9 @@
-(kicad_pcb (version 4) (host pcbnew 0.201509231831+6209~30~ubuntu15.04.1-product)
+(kicad_pcb (version 4) (host pcbnew 0.201510140731+6267~30~ubuntu15.04.1-product)
 
   (general
     (links 174)
     (no_connects 0)
-    (area -0.075001 -61.035001 91.515001 0.075001)
+    (area -0.635 -68.89 123.875715 1.016001)
     (thickness 1.6)
     (drawings 6)
     (tracks 746)
@@ -73,7 +73,7 @@
     (aux_axis_origin 0 0)
     (visible_elements FFFFFFFF)
     (pcbplotparams
-      (layerselection 0x00030_80000001)
+      (layerselection 0x00000_80000000)
       (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.100000)
@@ -92,11 +92,11 @@
       (plotinvisibletext false)
       (padsonsilk false)
       (subtractmaskfromsilk false)
-      (outputformat 1)
-      (mirror false)
-      (drillshape 1)
+      (outputformat 4)
+      (mirror true)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory ../CAM_DOC/))
   )
 
   (net 0 "")
