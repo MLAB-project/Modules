@@ -51,7 +51,7 @@ translate([20,0,0])
 cube(size = [10,10,30], center = true); 
 }
 }
-
+/*
 translate([0,-50,0]) 
 celicko_predni();
 
@@ -62,8 +62,9 @@ celicko_zadni();
 translate([60,0,0])
 rotate(a=[0,0,90])
 celicko_leve();
+*/
 
 translate([-60,0,0])
-rotate(a=[0,0,270])
+rotate(a=[90,0,270])
 celicko_prave();
 
