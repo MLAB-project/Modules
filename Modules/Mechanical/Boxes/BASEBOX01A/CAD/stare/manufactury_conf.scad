@@ -44,7 +44,7 @@ sirka_materialu = 3; //sirka materialu od kraje desky k uzlabine
 //--------------------------------------------------
 //čelicko
 vule_vysky_celicka =1; //definuje vůli celicka v liste
-delka_celicka=30;
+vule_delky_celicka =1;
 tloustka_celicka = 3;
 vule_tlousky = 0.25;
 

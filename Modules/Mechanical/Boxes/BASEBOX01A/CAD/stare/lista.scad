@@ -28,10 +28,10 @@ color("cyan")
     
     //otvory pro hlavy sroubu
     
-    translate([vzdalenost_der*pocet_der/2,-(((vzdalenost_od_okraje+vzdalenost_od_diry)/2)-vzdalenost_od_okraje),(zapust-vyska_hlavy)+vyska_hlavy/2])  // center top screw
+    translate([vzdalenost_der*pocet_der/2,-(((vzdalenost_od_okraje+vzdalenost_od_diry)/2)-vzdalenost_od_okraje),vyska_hlavy/2])  // center top screw
         cylinder(vyska_hlavy, d=prumer_hlavy, center=true);
         
-     translate([-vzdalenost_der*pocet_der/2,-(((vzdalenost_od_okraje+vzdalenost_od_diry)/2)-vzdalenost_od_okraje),(zapust-vyska_hlavy)+vyska_hlavy/2])  // center top screw
+     translate([-vzdalenost_der*pocet_der/2,-(((vzdalenost_od_okraje+vzdalenost_od_diry)/2)-vzdalenost_od_okraje),vyska_hlavy/2])  // center top screw
         cylinder(vyska_hlavy, d=prumer_hlavy, center=true);
  
 //otvory pro srouby
