@@ -1,26 +1,4 @@
-//include <configuration.scad>
-/*
-//sloupek
-vyska = 60;  //celeho sloupku
-zapust = 6.5; //vyska zapusteni listy 
-vzdalenost_der = 10; //roztec upevňovacich der
-vzdalenost_od_okraje = 10; //vzdalenost stredu upevnovaci diry od kraje desky
-vzdalenost_od_diry = 5; //vzdalenost od stredu upevnovaci diry na druhou stranu
-radidus_hrany = 5; //radius zaobleni
-
-//parametry šroubu
-prumer_sroubu=3.3;
-
-
-//parametry matice
-prumer_matice=6; //hrany k hraně
-vyska_matice=3;  //vyska matice
-posuv_dorazu=0;  //pro moznost posuvu dorazu pro vsunutí matice
-matice_sila_materialu=2; //sila materialu pod/nad maticí na ose z
-*/
-
-
-
+//Funkce pro generovani sloupku
 module sloupek(
     vyska,
     zapust,

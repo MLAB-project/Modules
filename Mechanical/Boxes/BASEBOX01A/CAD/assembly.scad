@@ -13,6 +13,7 @@ include <configuration.scad>
 barva_sloupku = "cyan";
 barva_listy = "red";
 barva_celicka = "green";
+barva_plbase = "yellow";
 
 //SLOUPKY
 //------------------------------------------------------------
@@ -108,13 +109,13 @@ color(barva_celicka)
 translate([0,((pocet_der1+2)*vzdalenost_der)+(((vzdalenost_od_diry+vzdalenost_od_okraje)/2)-vzdalenost_od_diry)+((((vzdalenost_od_okraje+vzdalenost_od_diry)/2)-sirka_materialu)-(tloustka_celicka/2)),-(vyska-2*zapust-vule_vysky_celicka+2*vyska_listy)/2])
 rotate(a=[0,0,180])
 celicko_zadni (vyska,zapust,vule_vysky_celicka,pocet_der2,vzdalenost_der,vule_delky_celicka,tloustka_celicka,vule_tlousky);
-
+///*
 //celicko prave
 color(barva_celicka)
 translate([((pocet_der2+2)*vzdalenost_der)/2+(((vzdalenost_od_diry+vzdalenost_od_okraje)/2)-vzdalenost_od_diry)+((((vzdalenost_od_okraje+vzdalenost_od_diry)/2)-sirka_materialu)-(tloustka_celicka/2)),(pocet_der1+2)*vzdalenost_der/2,-(vyska-2*zapust-vule_vysky_celicka+2*vyska_listy)/2])
 rotate(a=[0,0,90])
 celicko_prave (vyska,zapust,vule_vysky_celicka,pocet_der1,vzdalenost_der,vule_delky_celicka,tloustka_celicka,vule_tlousky);
-
+//*/
 //celicko leve
 color(barva_celicka)
 translate([-((pocet_der2+2)*vzdalenost_der)/2-(((vzdalenost_od_diry+vzdalenost_od_okraje)/2)-vzdalenost_od_diry)-((((vzdalenost_od_okraje+vzdalenost_od_diry)/2)-sirka_materialu)-(tloustka_celicka/2)),(pocet_der1+2)*vzdalenost_der/2,-(vyska-2*zapust-vule_vysky_celicka+2*vyska_listy)/2])
@@ -123,7 +124,7 @@ celicko_leve (vyska,zapust,vule_vysky_celicka,pocet_der1,vzdalenost_der,vule_del
 
 //PLBASE SPODNI
 //-------------------------------------------------------------
-
+color(barva_plbase)
 //základní plbase bez nožiček
 /*
 translate([-((pocet_der2+2)*vzdalenost_der+2*vzdalenost_od_okraje)/2,-vzdalenost_od_okraje,-(vyska/2)])
@@ -151,18 +152,19 @@ plbase_zapustene_srouby(pocet_der1+3,pocet_der2+3,radidus_hrany,vzdalenost_der,v
 //PLBASE HORNI
 //-------------------------------------------------------------
 //základní plbase bez nožiček
-/*
+///*
 translate([-((pocet_der2+2)*vzdalenost_der+2*vzdalenost_od_okraje)/2,-vzdalenost_od_okraje,(vyska/2)])
 rotate(a=[0,0,0])
 
 plbase(pocet_der2+3,pocet_der1+3,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der);
-*/
+//*/
 //plbase se zapuštěním šroubů
+/*
 translate([-((pocet_der2+2)*vzdalenost_der+2*vzdalenost_od_okraje)/2,-vzdalenost_od_okraje,(vyska/2)])
 rotate(a=[0,0,0])
 
 plbase_zapustene_srouby(pocet_der2+3,pocet_der1+3,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_hlavy,prekryti_der,prumer_hlavy);
-
+*/
 
 
 
