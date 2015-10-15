@@ -1,11 +1,11 @@
-use <ver_1_0/configuration/celicko.scad>
-use <ver_1_0/configuration/sloupek.scad>
-use <ver_1_0/configuration/lista.scad>
-use <ver_1_0/uravena_celicka.scad>
+use <BASEBOX01A/configuration/celicko.scad>
+use <BASEBOX01A/configuration/sloupek.scad>
+use <BASEBOX01A/configuration/lista.scad>
+use <BASEBOX01A/uravena_celicka.scad>
 
 
-include <ver_1_0/configuration/manufactury_conf.scad>
-include <ver_1_0/configuration.scad>
+include <BASEBOX01A/configuration/manufactury_conf.scad>
+include <BASEBOX01A/configuration.scad>
 
 
 

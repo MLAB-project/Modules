@@ -21,3 +21,9 @@ pocet_der2 = 12; //pocet der desky, ponížené o 3
 
 
 
+//PLbase
+tloustka_plbase = 2;
+prekryti_der=0.3;
+
+//Pripadna vyska nozicky na PLbase
+vyska_nozicky=5;
