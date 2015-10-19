@@ -3,11 +3,11 @@ use <configuration/sloupek.scad>
 use <configuration/lista.scad>
 use <configuration/plbase.scad>
 use <uravena_celicka.scad>
-
+use <configuration/otvory.scad>
 
 include <configuration/manufactury_conf.scad>
 include <configuration.scad>
-
+include <configuration/otvory_conf.scad>
 
 
 barva_sloupku = "cyan";

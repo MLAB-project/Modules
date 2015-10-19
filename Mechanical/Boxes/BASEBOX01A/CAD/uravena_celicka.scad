@@ -1,25 +1,31 @@
 use <configuration/celicko.scad>
 use <configuration/sloupek.scad>
 use <configuration/lista.scad>
+use <configuration/plbase.scad>
+use <uravena_celicka.scad>
+use <configuration/otvory.scad>
 
-include <configuration.scad>
 include <configuration/manufactury_conf.scad>
+include <configuration.scad>
+include <configuration/otvory_conf.scad>
 
 //Slouzi pro vytvoreni vlastnich celicek dle potreby
 
 //Vytvoreni predniho celicka krabicky
 //--------------------------------------------------------
 module celicko_predni()
-{
-translate([0,0,0])
 difference() {
-celicko (vyska,zapust,vule_vysky_celicka,pocet_der2,vzdalenost_der,vule_delky_celicka,tloustka_celicka,vule_tlousky,vyska_listy);
+            union() {
+
+                celicko (vyska,zapust,vule_vysky_celicka,pocet_der2,vzdalenost_der,vule_delky_celicka,tloustka_celicka,vule_tlousky,vyska_listy,vzdalenost_der_x,vzdalenost_der_y,prumer_otvoru,prumer_sloupku,ramecek_x,ramecek_y,ramecek_vyska);
     
-translate([20,0,0])
-cube(size = [10,10,30], center = true);    
+                otvor_LCD2_16_sloupky(vyska,zapust,vule_vysky_celicka,pocet_der2,vzdalenost_der,vule_delky_celicka,tloustka_celicka,vule_tlousky,vyska_listy,vzdalenost_der_x,vzdalenost_der_y,prumer_otvoru,prumer_sloupku,ramecek_x,ramecek_y,ramecek_vyska);
+                }
+                
+            otvor_LCD2_16_diry(vyska,zapust,vule_vysky_celicka,pocet_der2,vzdalenost_der,vule_delky_celicka,tloustka_celicka,vule_tlousky,vyska_listy,vzdalenost_der_x,vzdalenost_der_y,prumer_otvoru,prumer_sloupku,ramecek_x,ramecek_y,ramecek_vyska);    
     
               }
-}
+
 
 
 
