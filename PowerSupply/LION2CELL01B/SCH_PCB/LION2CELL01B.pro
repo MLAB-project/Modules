@@ -1,4 +1,4 @@
-update=14. 5. 2015 7:35:49
+update=Po 3. srpen 2015, 01:48:18 CEST
 version=1
 last_client=kicad
 [cvpcb]
@@ -27,6 +27,19 @@ BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
 [eeschema]
 version=1
 LibDir=../../../../../kicad-mlab/symbols
@@ -76,16 +89,3 @@ LibName42=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/OpAmp
 LibName43=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/sata7-67491-1030
 LibName44=MLAB_BATERY
 LibName45=MLAB_T
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=Pcbnew
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60

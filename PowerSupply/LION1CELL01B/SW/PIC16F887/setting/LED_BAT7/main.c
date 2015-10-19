@@ -27,10 +27,6 @@ unsigned int8 LSB=0,ZK,k=0;
   
  while(TRUE)
  { 
-   
-   
-
-
    i2c_start(); //blockdatacontrol
    I2C_Write(0xAA);
    I2C_write(0x61);
@@ -52,7 +48,7 @@ unsigned int8 LSB=0,ZK,k=0;
    delay_ms (1);
  
  
-  i2c_start();//dataflashblock
+   i2c_start();//dataflashblock
    I2C_Write(0xAA);
    I2C_write(0x3f);
    
@@ -60,10 +56,10 @@ unsigned int8 LSB=0,ZK,k=0;
    I2C_Write(0xAA);
    I2C_write(0x00);
    i2c_stop(); 
+    
+delay_ms (1);
  
- delay_ms (1);
- 
- i2c_start();//blockdata
+   i2c_start();//blockdata
    I2C_Write(0xAA);
    I2C_write(0x44);
   
@@ -76,78 +72,75 @@ delay_ms (1);
  
   printf("LED %lX \r\n", ZK); 
 
-if(ZK==0x73)
-{
-LSB=LSB-1;
-printf("Vysledne LSB %lX \r\n", LSB); 
-while(TRUE)
-{
-}
-}
-
-else
-{
- i2c_start();//blockdata
-   I2C_Write(0xAA);
-   I2C_write(0x44);
-  
-   i2c_start();
-   I2C_Write(0xAA);
-    I2C_write(0x73); //pro 5LED 0x53 pro 7led 0x73
-   i2c_stop();
-   
-
-int i=64;
-SOUCET=0;
-SOUCET1=0;
-
-/*
- for (i=64;i<96;++i)
-{
-   printf("%u\r\n",i);
-      i2c_stop(); 
+    if(ZK==0x73)
+    {
+        LSB=LSB-1;
+        printf("Vysledne LSB %lX \r\n", LSB); 
+        while(TRUE){}
+    }
+    else
+    {
+     i2c_start();//blockdata
+       I2C_Write(0xAA);
+       I2C_write(0x44);
       
-   i2c_start();//blockdata
-   I2C_Write(0xAA);
-   I2C_write(i);
-  
-   i2c_start();
-   I2C_Write(0xAB);
-   STAV1=I2C_read(0);
-   i2c_stop();   
-           
-   printf("STAV %lX \r\n", STAV1);   
-   SOUCET=SOUCET+STAV1;
-  
-   
-   
-   
-   
-} 
-printf("SOUCET: %lX (procenta)\r\n", SOUCET);
-SOUCET1=SOUCET;
-SOUCET1=SOUCET1>>8;
-printf("Deleno 256: %lX (procenta)\r\n", SOUCET1);
-SOUCET1=SOUCET-SOUCET1;
-printf("Soucet - soucet/256: %lX \r\n", SOUCET1);
-LSB=(unsigned int8)SOUCET1; 
-printf("LSB: %lX\r\n", LSB);
-//printf("Stav: %X (procenta)\r\n", STAV2);
-*/
+       i2c_start();
+       I2C_Write(0xAA);
+        I2C_write(0x73); //pro 5LED 0x53 pro 7led 0x73
+       i2c_stop();
+       
 
-i2c_start();//blockdata
-   I2C_Write(0xAA);
-   I2C_write(0x60);
-  
-   i2c_start();
-   I2C_Write(0xAA);
-   I2C_write(LSB);
-   i2c_stop();
+        int i=64;
+        SOUCET=0;
+        SOUCET1=0;
 
-}
+    /*
+     for (i=64;i<96;++i)
+    {
+       printf("%u\r\n",i);
+          i2c_stop(); 
+          
+       i2c_start();//blockdata
+       I2C_Write(0xAA);
+       I2C_write(i);
+      
+       i2c_start();
+       I2C_Write(0xAB);
+       STAV1=I2C_read(0);
+       i2c_stop();   
+               
+       printf("STAV %lX \r\n", STAV1);   
+       SOUCET=SOUCET+STAV1;
+      
+       
+       
+       
+       
+    } 
+    printf("SOUCET: %lX (procenta)\r\n", SOUCET);
+    SOUCET1=SOUCET;
+    SOUCET1=SOUCET1>>8;
+    printf("Deleno 256: %lX (procenta)\r\n", SOUCET1);
+    SOUCET1=SOUCET-SOUCET1;
+    printf("Soucet - soucet/256: %lX \r\n", SOUCET1);
+    LSB=(unsigned int8)SOUCET1; 
+    printf("LSB: %lX\r\n", LSB);
+    //printf("Stav: %X (procenta)\r\n", STAV2);
+    */
 
-LSB=LSB+1;
+       i2c_start();//blockdata
+       I2C_Write(0xAA);
+       I2C_write(0x60);
+      
+       i2c_start();
+       I2C_Write(0xAA);
+       I2C_write(LSB);
+       i2c_stop();
 
-delay_ms (100);
+    }
+
+    LSB=LSB+1;
+
+    delay_ms (100);
  } 
- }
+}
