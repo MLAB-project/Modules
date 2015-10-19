@@ -1,4 +1,4 @@
-/* PCRD */
+/* PCRD China */
 
 /*
  * SD card attached to SPI bus as follows:
