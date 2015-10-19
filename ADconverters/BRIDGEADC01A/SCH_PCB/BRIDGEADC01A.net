@@ -1,8 +1,8 @@
 (export (version D)
   (design
     (source /home/kaklik/svn/svnMLAB/Modules/ADconverters/BRIDGEADC01A/SCH_PCB/BRIDGEADC01A.sch)
-    (date Čt 10. září 2015, 16:22:11 CEST)
-    (tool "Eeschema 0.201509081510+6169~29~ubuntu15.04.1-product")
+    (date Po 19. říjen 2015, 11:32:31 CEST)
+    (tool "Eeschema 0.201510170916+6271~30~ubuntu15.04.1-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title NAME)
@@ -220,7 +220,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 55F044E3))
     (comp (ref J18)
-      (value ~SYNC)
+      (value ~STANDBY)
       (footprint Mlab_Pin_Headers:Straight_1x02)
       (libsource (lib mlab_header) (part HEADER_2x01_PARALLEL))
       (sheetpath (names /) (tstamps /))
@@ -362,6 +362,12 @@
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
+    (libpart (lib mlab_mechanical) (part HOLE)
+      (fields
+        (field (name Reference) M)
+        (field (name Value) HOLE))
+      (pins
+        (pin (num 1) (name ~) (type input))))
     (libpart (lib mlab_header) (part HEADER_1x03)
       (description "1x03 2.54 mm pitch header")
       (fields
@@ -391,12 +397,6 @@
         (pin (num 4) (name ~) (type input))
         (pin (num 5) (name ~) (type input))
         (pin (num 6) (name ~) (type input))))
-    (libpart (lib mlab_mechanical) (part HOLE)
-      (fields
-        (field (name Reference) M)
-        (field (name Value) HOLE))
-      (pins
-        (pin (num 1) (name ~) (type input))))
     (libpart (lib adc-dac) (part AD7730)
       (aliases
         (alias AD7730L))
