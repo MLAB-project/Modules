@@ -1,4 +1,4 @@
-(kicad_pcb (version 4) (host pcbnew 0.201509231831+6209~30~ubuntu15.04.1-product)
+(kicad_pcb (version 4) (host pcbnew 0.201510170916+6271~30~ubuntu15.04.1-product)
 
   (general
     (links 86)
@@ -9,7 +9,7 @@
     (tracks 287)
     (zones 0)
     (modules 41)
-    (nets 28)
+    (nets 27)
   )
 
   (page A4)
@@ -131,8 +131,7 @@
   (net 23 "Net-(J21-Pad1)")
   (net 24 "Net-(U1-Pad2)")
   (net 25 "Net-(U1-Pad4)")
-  (net 26 "Net-(U2-Pad7)")
-  (net 27 "Net-(D2-Pad1)")
+  (net 26 "Net-(D2-Pad1)")
 
   (net_class Default "This is the default net class."
     (clearance 0.2)
@@ -163,7 +162,6 @@
     (add_net "Net-(J9-Pad1)")
     (add_net "Net-(U1-Pad2)")
     (add_net "Net-(U1-Pad4)")
-    (add_net "Net-(U2-Pad7)")
   )
 
   (net_class Power ""
@@ -398,7 +396,7 @@
     (fp_line (start -2.25044 -1.75006) (end 2.25044 -1.75006) (layer B.SilkS) (width 0.15))
     (fp_line (start -2.25044 1.75006) (end 2.25044 1.75006) (layer B.SilkS) (width 0.15))
     (pad 1 smd rect (at -1.99898 0 270) (size 2.49936 1.80086) (layers B.Cu B.Paste B.Mask)
-      (net 27 "Net-(D2-Pad1)"))
+      (net 26 "Net-(D2-Pad1)"))
     (pad 2 smd rect (at 1.99898 0 270) (size 2.49936 1.80086) (layers B.Cu B.Paste B.Mask)
       (net 1 GND))
     (model Diodes_SMD.3dshapes/SMA_Standard.wrl
@@ -890,7 +888,7 @@
     (fp_text reference J18 (at 0 -3.81 90) (layer F.SilkS) hide
       (effects (font (size 1.5 1.5) (thickness 0.15)))
     )
-    (fp_text value ~SYNC (at -0.127 -5.842 180) (layer F.SilkS)
+    (fp_text value ~STANDBY (at -0.127 -7.859 180) (layer F.SilkS)
       (effects (font (size 1.5 1.5) (thickness 0.15)))
     )
     (fp_text user 1 (at -1.651 -1.27 90) (layer F.SilkS) hide
@@ -934,9 +932,9 @@
     (pad 2 thru_hole rect (at 1.27 -2.54) (size 1.524 1.524) (drill 0.889) (layers *.Cu *.Mask F.SilkS)
       (net 1 GND))
     (pad 3 thru_hole rect (at -1.27 0) (size 1.524 1.524) (drill 0.889) (layers *.Cu *.Mask F.SilkS)
-      (net 27 "Net-(D2-Pad1)"))
+      (net 26 "Net-(D2-Pad1)"))
     (pad 4 thru_hole rect (at 1.27 0) (size 1.524 1.524) (drill 0.889) (layers *.Cu *.Mask F.SilkS)
-      (net 27 "Net-(D2-Pad1)"))
+      (net 26 "Net-(D2-Pad1)"))
     (pad 5 thru_hole rect (at -1.27 2.54) (size 1.524 1.524) (drill 0.889) (layers *.Cu *.Mask F.SilkS)
       (net 1 GND))
     (pad 6 thru_hole rect (at 1.27 2.54) (size 1.524 1.524) (drill 0.889) (layers *.Cu *.Mask F.SilkS)
@@ -1056,7 +1054,7 @@
     (pad 1 smd rect (at -1 0 270) (size 1 1.25) (layers B.Cu B.Paste B.Mask)
       (net 3 VAA))
     (pad 2 smd rect (at 1 0 270) (size 1 1.25) (layers B.Cu B.Paste B.Mask)
-      (net 27 "Net-(D2-Pad1)"))
+      (net 26 "Net-(D2-Pad1)"))
     (model Capacitors_SMD.3dshapes/C_0805.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
@@ -1294,8 +1292,7 @@
       (net 15 "Net-(J12-Pad1)"))
     (pad 6 smd rect (at -2.85 0.325) (size 1.1 0.4) (layers B.Cu B.Paste B.Mask)
       (net 14 "Net-(J11-Pad1)"))
-    (pad 7 smd rect (at -2.85 -0.325) (size 1.1 0.4) (layers B.Cu B.Paste B.Mask)
-      (net 26 "Net-(U2-Pad7)"))
+    (pad 7 smd rect (at -2.85 -0.325) (size 1.1 0.4) (layers B.Cu B.Paste B.Mask))
     (pad 8 smd rect (at -2.85 -0.975) (size 1.1 0.4) (layers B.Cu B.Paste B.Mask)
       (net 4 GNDA))
     (pad 9 smd rect (at -2.85 -1.625) (size 1.1 0.4) (layers B.Cu B.Paste B.Mask)
@@ -1791,12 +1788,12 @@
   (segment (start 146.604 86.425) (end 146.129 86.425) (width 0.25) (layer B.Cu) (net 25))
   (segment (start 141.585001 90.331534) (end 142.385001 90.331534) (width 0.25) (layer B.Cu) (net 25))
   (segment (start 142.385001 90.331534) (end 142.913468 90.860001) (width 0.25) (layer B.Cu) (net 25))
-  (segment (start 132.7 106.39702) (end 132.7 104.062) (width 0.4) (layer B.Cu) (net 27))
-  (segment (start 132.7 104.062) (end 132.954 103.808) (width 0.4) (layer B.Cu) (net 27))
-  (segment (start 136.256 108.142) (end 134.09573 108.142) (width 0.4) (layer B.Cu) (net 27))
-  (segment (start 134.09573 108.142) (end 132.7 106.74627) (width 0.4) (layer B.Cu) (net 27))
-  (segment (start 132.7 106.74627) (end 132.7 106.39702) (width 0.4) (layer B.Cu) (net 27))
-  (segment (start 138.796 108.142) (end 136.256 108.142) (width 0.4) (layer B.Cu) (net 27))
+  (segment (start 132.7 106.39702) (end 132.7 104.062) (width 0.4) (layer B.Cu) (net 26))
+  (segment (start 132.7 104.062) (end 132.954 103.808) (width 0.4) (layer B.Cu) (net 26))
+  (segment (start 136.256 108.142) (end 134.09573 108.142) (width 0.4) (layer B.Cu) (net 26))
+  (segment (start 134.09573 108.142) (end 132.7 106.74627) (width 0.4) (layer B.Cu) (net 26))
+  (segment (start 132.7 106.74627) (end 132.7 106.39702) (width 0.4) (layer B.Cu) (net 26))
+  (segment (start 138.796 108.142) (end 136.256 108.142) (width 0.4) (layer B.Cu) (net 26))
 
   (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 0) (hatch edge 0.508)
     (connect_pads (clearance 0.508))

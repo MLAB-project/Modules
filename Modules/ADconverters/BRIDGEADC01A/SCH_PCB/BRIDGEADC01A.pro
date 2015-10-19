@@ -1,4 +1,4 @@
-update=St 9. září 2015, 11:23:26 CEST
+update=Po 19. říjen 2015, 11:33:15 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -21,19 +21,6 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.2
 BoardOutlineThickness=0.15
 ModuleOutlineThickness=0.15
-[schematic_editor]
-version=1
-PageLayoutDescrFile=pagelayout_mlab.kicad_wks
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
 [general]
 version=1
 [eeschema]
@@ -123,3 +110,13 @@ LibName80=xilinx
 LibName81=Zilog
 LibName82=/home/kaklik/repos/kicad-library/library/adc-dac
 LibName83=/home/kaklik/repos/kicad-library/library/motor_drivers
+[schematic_editor]
+version=1
+PageLayoutDescrFile=pagelayout_mlab.kicad_wks
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
