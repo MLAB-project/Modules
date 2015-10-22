@@ -153,7 +153,7 @@ plbase_zapustene_srouby(pocet_der1+3,pocet_der2+3,radidus_hrany,vzdalenost_der,v
 //-------------------------------------------------------------
 //základní plbase bez nožiček
 ///*
-translate([-((pocet_der2+2)*vzdalenost_der+2*vzdalenost_od_okraje)/2,-vzdalenost_od_okraje,(vyska/2)])
+translate([-((pocet_der2+2)*vzdalenost_der+2*vzdalenost_od_okraje)/2,-vzdalenost_od_okraje,2* vyska])
 rotate(a=[0,0,0])
 
 plbase(pocet_der2+3,pocet_der1+3,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der);
