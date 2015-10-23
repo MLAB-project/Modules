@@ -26,7 +26,7 @@
     (BOM_Scope "0")
     (BOM_Mode "0")
     (BOM_Report_File
-       "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\AVR\ATMEGATQ3201A\SCH\ATMEGATQ3201A.BOM")
+       "C:\Users\kaklik\Documents\MLAB\Modules\AVR\ATmegaTQ3201A\SCH\ATMEGATQ3201A.BOM")
     (BOM_Merge_Include "FALSE")
     (BOM_Property_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
     (BOM_Header "Item\tQuantity\tReference\tPart")
@@ -77,13 +77,13 @@
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 279"))
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 279"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 25 1125 25 516")
-        (Scroll "-62 62")
+        (Placement "44 0 1 -1 -1 -8 -30 25 1125 25 516")
+        (Scroll "0 119")
         (Zoom "100")
         (Occurrence "/"))
       (Path
