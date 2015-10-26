@@ -9,7 +9,7 @@ prumer_sloupku = 5;
 
 //ramecek LCD
 ramecek_x = 72;
-ramecek_y = 23;
+ramecek_y = 26;
 
 //vyska ramecku LCD
 ramecek_vyska = 5;

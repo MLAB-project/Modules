@@ -101,24 +101,24 @@ lista (vzdalenost_der,pocet_der1,vzdalenost_od_okraje,vzdalenost_od_diry,vzdalen
 //celicko predni
 
 color(barva_celicka)
-translate([0,-(((vzdalenost_od_diry+vzdalenost_od_okraje)/2)-vzdalenost_od_diry)-((((vzdalenost_od_okraje+vzdalenost_od_diry)/2)-sirka_materialu)-(tloustka_celicka/2)),-(vyska-2*zapust-vule_vysky_celicka+2*vyska_listy)/2])
+translate([0,-(((vzdalenost_od_diry+vzdalenost_od_okraje)/2)-vzdalenost_od_diry)-((((vzdalenost_od_okraje+vzdalenost_od_diry)/2)-sirka_materialu)-(tloustka_celicka/2)),-(vyska-2*zapust-vule_vysky_celicka)/2])
 celicko_predni (vyska,zapust,vule_vysky_celicka,pocet_der2,vzdalenost_der,vule_delky_celicka,tloustka_celicka,vule_tlousky);
 
 //celicko zadni
 color(barva_celicka)
-translate([0,((pocet_der1+2)*vzdalenost_der)+(((vzdalenost_od_diry+vzdalenost_od_okraje)/2)-vzdalenost_od_diry)+((((vzdalenost_od_okraje+vzdalenost_od_diry)/2)-sirka_materialu)-(tloustka_celicka/2)),-(vyska-2*zapust-vule_vysky_celicka+2*vyska_listy)/2])
+translate([0,((pocet_der1+2)*vzdalenost_der)+(((vzdalenost_od_diry+vzdalenost_od_okraje)/2)-vzdalenost_od_diry)+((((vzdalenost_od_okraje+vzdalenost_od_diry)/2)-sirka_materialu)-(tloustka_celicka/2)),-(vyska-2*zapust-vule_vysky_celicka)/2])
 rotate(a=[0,0,180])
 celicko_zadni (vyska,zapust,vule_vysky_celicka,pocet_der2,vzdalenost_der,vule_delky_celicka,tloustka_celicka,vule_tlousky);
 ///*
 //celicko prave
 color(barva_celicka)
-translate([((pocet_der2+2)*vzdalenost_der)/2+(((vzdalenost_od_diry+vzdalenost_od_okraje)/2)-vzdalenost_od_diry)+((((vzdalenost_od_okraje+vzdalenost_od_diry)/2)-sirka_materialu)-(tloustka_celicka/2)),(pocet_der1+2)*vzdalenost_der/2,-(vyska-2*zapust-vule_vysky_celicka+2*vyska_listy)/2])
+translate([((pocet_der2+2)*vzdalenost_der)/2+(((vzdalenost_od_diry+vzdalenost_od_okraje)/2)-vzdalenost_od_diry)+((((vzdalenost_od_okraje+vzdalenost_od_diry)/2)-sirka_materialu)-(tloustka_celicka/2)),(pocet_der1+2)*vzdalenost_der/2,-(vyska-2*zapust-vule_vysky_celicka)/2])
 rotate(a=[0,0,90])
 celicko_prave (vyska,zapust,vule_vysky_celicka,pocet_der1,vzdalenost_der,vule_delky_celicka,tloustka_celicka,vule_tlousky);
 //*/
 //celicko leve
 color(barva_celicka)
-translate([-((pocet_der2+2)*vzdalenost_der)/2-(((vzdalenost_od_diry+vzdalenost_od_okraje)/2)-vzdalenost_od_diry)-((((vzdalenost_od_okraje+vzdalenost_od_diry)/2)-sirka_materialu)-(tloustka_celicka/2)),(pocet_der1+2)*vzdalenost_der/2,-(vyska-2*zapust-vule_vysky_celicka+2*vyska_listy)/2])
+translate([-((pocet_der2+2)*vzdalenost_der)/2-(((vzdalenost_od_diry+vzdalenost_od_okraje)/2)-vzdalenost_od_diry)-((((vzdalenost_od_okraje+vzdalenost_od_diry)/2)-sirka_materialu)-(tloustka_celicka/2)),(pocet_der1+2)*vzdalenost_der/2,-(vyska-2*zapust-vule_vysky_celicka)/2])
 rotate(a=[0,0,270])
 celicko_leve (vyska,zapust,vule_vysky_celicka,pocet_der1,vzdalenost_der,vule_delky_celicka,tloustka_celicka,vule_tlousky);
 
