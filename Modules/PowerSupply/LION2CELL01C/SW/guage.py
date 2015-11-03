@@ -82,26 +82,11 @@ cfg = config.Config(
 cfg.initialize()
 guage = cfg.get_device("guage")
 
-#flash = guage.ReadFlashBlock(48, 2)
-#print " ".join([hex(i) for i in flash])
-
-#print hex(guage.PackConfiguration())
-
-#guage.WriteFlashByte(48, 0, 21, 0x0D)    # Design Capacity 3350 mAh 
-#guage.WriteFlashByte(48, 0, 22, 0x16)    #
-#guage.WriteFlashByte(48, 0, 23, 0x5E)    # Design Energy 24120 mWh 
-#guage.WriteFlashByte(48, 0, 24, 0x38)    #  
-#guage.WriteFlashByte(64, 0, 0, 0x9)      # External Voltage Measurement
-#guage.WriteFlashByte(64, 0, 7, 0x2)      # Two Cells
-#guage.WriteFlashByte(64, 0, 4, 0x74)     # 8 LED (1+7), Shift Register
-#guage.WriteFlashByte(104, 0, 14, 0x28)   # Voltage Measurement Range 10240 mV
-#guage.WriteFlashByte(104, 0, 15, 0x00)   # 
-#guage.reset()                            # Reset Guage
+print "Pack Configuration", hex(guage.PackConfiguration())
 
 #flash = guage.ReadFlashBlock(112, 0)
 #print "112 - ",
 #print " ".join([hex(i) for i in flash])
-
 
 #ReadFlash(2, 0, 'OT Chg', 'I2', '0.1 degC')
 #ReadFlash(112, 8, 'Authen Key3', 'H4', '-')
@@ -110,7 +95,7 @@ for i in range(len(df)):
     ReadFlash(df['SubclassID'][i], df['Offset'][i], df['Name'][i], df['DataType'][i], df['Units'][i], df['DefaultValue'][i])
 
 
-for i in range(4):
+while True:
     # Battery status readout
     print "NominalAvailableCapacity =", guage.NominalAvailableCapacity(), "mAh, FullAvailabeCapacity =", guage.FullAvailabeCapacity(), "mAh, AvailableEnergy =", guage.AvailableEnergy(), "* 10 mWh"
     print "Temp =", guage.getTemp(), "degC, RemainCapacity =", guage.getRemainingCapacity(), "mAh, cap =", guage.FullChargeCapacity(), "mAh, U =", guage.Voltage(), "mV, I =", guage.AverageCurrent(), "mA, charge =", guage.StateOfCharge(), "%"
