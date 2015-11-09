@@ -1,4 +1,18 @@
-Cmp-Mod V01 Created by Cvpcb (2015-01-07 BZR 5359)-product   date = 21. 4. 2015 9:55:17
+Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 9. 11. 2015 7:34:14
+
+BeginCmp
+TimeStamp = /563F69AE;
+Reference = 1,1;
+ValeurCmp = FUSE;
+IdModule  = Mlab_F:1812;
+EndCmp
+
+BeginCmp
+TimeStamp = /563F594A;
+Reference = 2A1;
+ValeurCmp = FUSE;
+IdModule  = Mlab_F:2410;
+EndCmp
 
 BeginCmp
 TimeStamp = /5532C7C3;
@@ -38,7 +52,7 @@ EndCmp
 BeginCmp
 TimeStamp = /55332E36;
 Reference = C5;
-ValeurCmp = 100nF;
+ValeurCmp = 330nF;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
@@ -225,6 +239,13 @@ IdModule  = Mlab_D:LED_1206;
 EndCmp
 
 BeginCmp
+TimeStamp = /5547B9F6;
+Reference = D14;
+ValeurCmp = ORAGE;
+IdModule  = Mlab_D:LED_1206;
+EndCmp
+
+BeginCmp
 TimeStamp = /5532CA08;
 Reference = F1;
 ValeurCmp = FUSE;
@@ -395,21 +416,21 @@ EndCmp
 BeginCmp
 TimeStamp = /5532745E;
 Reference = R1;
-ValeurCmp = 1K;
+ValeurCmp = 160R;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5533362D;
 Reference = R2;
-ValeurCmp = 1K;
+ValeurCmp = 260R;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5533367D;
 Reference = R3;
-ValeurCmp = 240R;
+ValeurCmp = 100R;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
@@ -430,21 +451,21 @@ EndCmp
 BeginCmp
 TimeStamp = /553273D1;
 Reference = R6;
-ValeurCmp = 1K8;
+ValeurCmp = 2K2;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /55327407;
 Reference = R7;
-ValeurCmp = 1K8;
+ValeurCmp = 2K2;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /55327431;
 Reference = R8;
-ValeurCmp = 1K8;
+ValeurCmp = 2K2;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
@@ -556,7 +577,7 @@ EndCmp
 BeginCmp
 TimeStamp = /55351177;
 Reference = R24;
-ValeurCmp = divider.1% 25ppm;
+ValeurCmp = 140k .1% 25ppm;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
@@ -619,6 +640,13 @@ EndCmp
 BeginCmp
 TimeStamp = /5533B433;
 Reference = R33;
+ValeurCmp = 1K;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5547B85D;
+Reference = R34;
 ValeurCmp = 1K;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
