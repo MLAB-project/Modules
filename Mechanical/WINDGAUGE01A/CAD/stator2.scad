@@ -5,6 +5,7 @@ vyska_rotoru1=5;
 vyska_rotoru2=5;
 prumer_sroubu=3.2;
 prumer_hlavy_sroubu=6;
+vyska_hlavy_sroubu=4;
 vyska_matky=3;
 sirka_matky=6;
 prumer_orechu=10;
@@ -26,7 +27,7 @@ sila_pod_loziskem=1;
 
 //stator3
 stator3_sila_steny=2;
-stator3_vzdalenost_od_steny=2; //definuje vzdalenost hlavy sroubu od steny statrou 4
+stator3_vzdalenost_od_steny=1; //definuje vzdalenost hlavy sroubu od steny statrou 4
 
 vule1=2; //vůle mezi statorem a rotorem ze strany
 
@@ -83,16 +84,29 @@ cylinder (h = lozisko_vyska+sila_pod_loziskem+0.1, r=prumer_sroubu/2, center = t
  
 //otvory pro uchyceni senzoru 
    //otvor pro sroub 1
-   rotate(a=[0,0,0]) 
+ 
       translate([(vzdalenost_der_x/2),-vzdalenost_der_y/2,0])
 
 cylinder (h = lozisko_vyska+sila_pod_loziskem+0.1, r=prumer_sroubu/2, center = true, $fn=100);
 
-     //otvor pro sroub 1
+     translate([(vzdalenost_der_x/2),-vzdalenost_der_y/2,(lozisko_vyska+sila_pod_loziskem-vyska_hlavy_sroubu)/2])
+
+cylinder (h = vyska_hlavy_sroubu+0.1, r=prumer_hlavy_sroubu/2, center = true, $fn=100);
+
+
+
+     //otvor pro sroub 2
    rotate(a=[0,0,0]) 
       translate([(-vzdalenost_der_x/2),-vzdalenost_der_y/2,0])
 
 cylinder (h = lozisko_vyska+sila_pod_loziskem+0.1, r=prumer_sroubu/2, center = true, $fn=100);
+
+ translate([(-vzdalenost_der_x/2),-vzdalenost_der_y/2,(lozisko_vyska+sila_pod_loziskem-vyska_hlavy_sroubu)/2])
+
+cylinder (h = vyska_hlavy_sroubu+0.1, r=prumer_hlavy_sroubu/2, center = true, $fn=100);
+
+
+
 
     //otvor pro sroub 1
    rotate(a=[0,0,0]) 
@@ -100,13 +114,20 @@ cylinder (h = lozisko_vyska+sila_pod_loziskem+0.1, r=prumer_sroubu/2, center = t
 
 cylinder (h = lozisko_vyska+sila_pod_loziskem+0.1, r=prumer_sroubu/2, center = true, $fn=100); 
 
+ translate([(vzdalenost_der_x/2),vzdalenost_der_y/2,(lozisko_vyska+sila_pod_loziskem-vyska_hlavy_sroubu)/2])
+
+cylinder (h = vyska_hlavy_sroubu+0.1, r=prumer_hlavy_sroubu/2, center = true, $fn=100);
+
+
    //otvor pro sroub 1
    rotate(a=[0,0,0]) 
       translate([(-vzdalenost_der_x/2),vzdalenost_der_y/2,0])
 
 cylinder (h = lozisko_vyska+sila_pod_loziskem+0.1, r=prumer_sroubu/2, center = true, $fn=100);
 
+ translate([(-vzdalenost_der_x/2),vzdalenost_der_y/2,(lozisko_vyska+sila_pod_loziskem-vyska_hlavy_sroubu)/2])
 
+cylinder (h = vyska_hlavy_sroubu+0.1, r=prumer_hlavy_sroubu/2, center = true, $fn=100);
 
 
 
@@ -116,7 +137,17 @@ cylinder (h = lozisko_vyska+sila_pod_loziskem+0.1, r=prumer_sroubu/2, center = t
 //otvory pro uchyceni stator 3
 //otvor pro sroub 1
       translate([0,(prumer_rotoru1-2*sila_materialu-2*vule1-2*stator3_sila_steny-prumer_hlavy_sroubu-2*stator3_vzdalenost_od_steny)/2,0])
-cylinder (h = lozisko_vyska+sila_pod_loziskem+0.1, r=3, center = true, $fn=100);
+cylinder (h = lozisko_vyska+sila_pod_loziskem+0.1, r=prumer_sroubu/2, center = true, $fn=100);
+
+      translate([0,(prumer_rotoru1-2*sila_materialu-2*vule1-2*stator3_sila_steny-prumer_hlavy_sroubu-2*stator3_vzdalenost_od_steny)/2,2])
+cylinder (h = lozisko_vyska+sila_pod_loziskem+0.1, r=prumer_hlavy_sroubu/2, center = true, $fn=100);
+
+//otvor pro sroub 2
+      translate([0,-(prumer_rotoru1-2*sila_materialu-2*vule1-2*stator3_sila_steny-prumer_hlavy_sroubu-2*stator3_vzdalenost_od_steny)/2,0])
+cylinder (h = lozisko_vyska+sila_pod_loziskem+0.1, r=prumer_sroubu/2, center = true, $fn=100);
+
+      translate([0,-(prumer_rotoru1-2*sila_materialu-2*vule1-2*stator3_sila_steny-prumer_hlavy_sroubu-2*stator3_vzdalenost_od_steny)/2,2])
+cylinder (h = lozisko_vyska+sila_pod_loziskem+0.1, r=prumer_hlavy_sroubu/2, center = true, $fn=100);
 
 
 }
