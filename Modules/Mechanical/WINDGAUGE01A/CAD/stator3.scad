@@ -31,6 +31,13 @@ stator3_vzdalenost_od_steny=1; //definuje vzdalenost hlavy sroubu od steny statr
 stator3_vyska=60;
 stator3_vyska_prekryti=5;
 
+//uchyt pro anemometr
+uchyt_prumer_sroubu=3.2;
+roztec_sroubu=10.16;
+
+
+
+
 vule1=1; //vůle mezi statorem a rotorem ze strany
 
 //nastevní rotoru2
@@ -108,7 +115,37 @@ cylinder (h = lozisko_vyska+sila_pod_loziskem+0.1, r=prumer_hlavy_sroubu/2, cent
 }
 
 
+//dno stator3
 
+translate([0,0,-(stator3_vyska-stator3_sila_steny)/2])
 
+difference()
+{
+cylinder (h = stator3_sila_steny, r=(prumer_rotoru1)/2, center = true, $fn=100);
+    
+//otvory pro uchyceni stator 3
+//otvor pro sroub 1
+         translate([0,(prumer_rotoru1-2*sila_materialu-2*vule1-2*stator3_sila_steny-prumer_hlavy_sroubu-2*stator3_vzdalenost_od_steny)/2,0])
+  cylinder (h = stator3_sila_steny+0.1, r=prumer_sroubu/2, center = true, $fn=100);
 
+      
+
+//otvor pro sroub 2
+      translate([0,-(prumer_rotoru1-2*sila_materialu-2*vule1-2*stator3_sila_steny-prumer_hlavy_sroubu-2*stator3_vzdalenost_od_steny)/2,0])
+ cylinder (h = stator3_sila_steny+0.1, r=prumer_sroubu/2, center = true, $fn=100);
+    
+//srouby pro uchycení anemometru
+     translate([roztec_sroubu/2,roztec_sroubu/2,0])
+ cylinder (h = stator3_sila_steny+0.1, r=uchyt_prumer_sroubu/2, center = true, $fn=100);
+    
+      translate([-roztec_sroubu/2,roztec_sroubu/2,0])
+ cylinder (h = stator3_sila_steny+0.1, r=uchyt_prumer_sroubu/2, center = true, $fn=100);  
+
+    translate([roztec_sroubu/2,-roztec_sroubu/2,0])
+ cylinder (h = stator3_sila_steny+0.1, r=uchyt_prumer_sroubu/2, center = true, $fn=100);
+ 
+     translate([-roztec_sroubu/2,-roztec_sroubu/2,0])
+ cylinder (h = stator3_sila_steny+0.1, r=uchyt_prumer_sroubu/2, center = true, $fn=100);
+    
+}
 
