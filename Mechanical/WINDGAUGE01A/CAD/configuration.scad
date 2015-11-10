@@ -12,7 +12,7 @@ sirka_matky_tol=0.175;
 prumer_orechu=10;
 sila_materialu=2;
 sila_materialu_vule=0.2;
-hloubka_prekryti=2;
+hloubka_prekryti=0;
 
 //lozisko
 lozisko_prumer_vnitrni=5;
