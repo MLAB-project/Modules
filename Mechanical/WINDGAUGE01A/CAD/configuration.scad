@@ -53,6 +53,10 @@ hloubka_uchytu=20;
 sila_uchytu=12;
 vyska_uchytu=10;
 tolerance_uchytu=0.1;
+delka_uchytu_lopatky=20;
+hrana_uchytu_lopatky=4; 
+prumer_lopatky=40;
+sila_materialu_lopatky=2;
 
 //parametry uchytu senzoru
 roztec_der=10.16;
@@ -90,4 +94,12 @@ stator3_vyska_prekryti=5;
 
 //uchyt pro anemometr
 uchyt_prumer_sroubu=3.2;
-roztec_sroubu=10.16;
+roztec_sroubu=20;
+
+//stator 4
+vyska_stator4=5;
+uchyt_vyska_matky=3;
+uchyt_prumer_orechu=10;
+
+//parametr kabelu
+kabel_prumer=10;
