@@ -1,5 +1,5 @@
 $fn=40; // model faces resolution.
-//include <configuration.scad>
+//include <../configuration.scad>
 
 
 

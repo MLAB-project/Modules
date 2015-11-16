@@ -1,6 +1,5 @@
 $fn=40; // model faces resolution.
-//include <configuration.scad>
-
+//include <../configuration.scad>
 
 module stator2(lozisko_vyska,sila_pod_loziskem,prumer_rotoru1,sila_materialu,vule1,stator3_sila_steny,lozisko_prumer_vnejsi,lozisko_prumer_vnitrni,lozisko_prekryv,
 prumer_sroubu,
@@ -10,7 +9,7 @@ lozisko_vyska,vzdalenost_der_x,vzdalenost_der_y,vyska_hlavy_sroubu,prumer_hlavy_
 {
 difference()
 {
-cylinder (h = lozisko_vyska+sila_pod_loziskem, r=(prumer_rotoru1-2*sila_materialu-2*vule1-stator3_sila_steny)/2, center = true, $fn=100);
+cylinder (h = lozisko_vyska+sila_pod_loziskem, r=(prumer_rotoru1-2*sila_materialu-2*vule1-stator3_sila_steny-0.5)/2, center = true, $fn=100);
     
 
 //otvor pro lozisko

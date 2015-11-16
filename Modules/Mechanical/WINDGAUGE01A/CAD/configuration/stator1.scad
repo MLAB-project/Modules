@@ -1,5 +1,6 @@
 $fn=40; // model faces resolution.
-//include <configuration.scad>
+//include <../configuration.scad>
+
 
 
 module stator1(stator1_sila,lozisko_prumer_vnejsi,sirka_matky,lozisko_prumer_vnitrni,lozisko_prekryv,prumer_sroubu)
