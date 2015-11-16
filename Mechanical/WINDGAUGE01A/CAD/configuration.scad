@@ -1,6 +1,6 @@
 $fn=40; // model faces resolution.
 
-prumer_rotoru1=60;
+prumer_rotoru1=70;
 vyska_rotoru1=5;
 vyska_rotoru2=5;
 prumer_sroubu=3.2;
@@ -30,7 +30,7 @@ sila_pod_loziskem=1;
 stator3_sila_steny=2;
 stator3_vzdalenost_od_steny=1; //definuje vzdalenost hlavy sroubu od steny statrou 4
 stator3_vyska=60;
-stator3_vyska_prekryti=5;
+stator3_vyska_prekryti=10;
 
 //uchyt pro anemometr
 uchyt_prumer_sroubu=3.2;
@@ -45,14 +45,12 @@ vzdalenost_rot_stat2=1.5;//vzdálenost mezi statorem a rotorem (osa Z)
 
 
 
-//nastevní rotoru2
-vyska_kryti=5;
 
 //lopatka
 hloubka_uchytu=20;
 sila_uchytu=12;
 vyska_uchytu=10;
-tolerance_uchytu=0.1;
+tolerance_uchytu=0.2;
 delka_uchytu_lopatky=20;
 hrana_uchytu_lopatky=4; 
 prumer_lopatky=40;
@@ -64,8 +62,8 @@ vzdalenost_der_x=2*roztec_der;
 vzdalenost_der_y=1*roztec_der;
 
 //magnet
-magnet_prumer=8;
-magnet_vyska=6;
+magnet_prumer=6;
+magnet_vyska=5;
 magnet_zapusteni=2;
 vyska_pod_magnetem=5;
 
@@ -86,11 +84,7 @@ vzdalenost_der_x=2*roztec_der;
 vzdalenost_der_y=1*roztec_der;
 
 
-//stator3
-stator3_sila_steny=2;
-stator3_vzdalenost_od_steny=1; //definuje vzdalenost hlavy sroubu od steny statrou 4
-stator3_vyska=60;
-stator3_vyska_prekryti=5;
+
 
 //uchyt pro anemometr
 uchyt_prumer_sroubu=3.2;

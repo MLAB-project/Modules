@@ -1,5 +1,7 @@
 $fn=40; // model faces resolution.
-//include <configuration.scad>
+//include <../configuration.scad>
+
+
 
 module rotor1(prumer_rotoru1,vyska_rotoru1,prumer_sroubu,vyska_matky,prumer_orechu,sila_materialu,sila_materialu_vule,hloubka_prekryti,hloubka_uchytu,sila_uchytu,vyska_uchytu,tolerance_uchytu)
     {

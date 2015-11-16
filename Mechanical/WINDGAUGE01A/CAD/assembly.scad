@@ -71,8 +71,8 @@ lozisko_vyska,vzdalenost_der_x,vzdalenost_der_y,vyska_hlavy_sroubu,prumer_hlavy_
 
 color(barva_rotor3)
 translate([0,0,-posunuti_dilu*6-(vyska_rotoru2/2+vyska_matky+vzdalenost_rot_stat+stator1_sila+stator3_vyska/2)])
-stator3(stator3_vyska,prumer_rotoru1,lozisko_vyska,sila_pod_loziskem,sila_materialu,vule1,stator3_sila_steny,stator3_vyska_prekryti,prumer_hlavy_sroubu,stator3_vzdalenost_od_steny,lozisko_vyska,prumer_sroubu,roztec_sroubu,uchyt_prumer_sroubu);
-
+stator3(stator3_vyska,prumer_rotoru1,lozisko_vyska,sila_pod_loziskem,sila_materialu,vule1,stator3_sila_steny,
+stator3_vyska_prekryti,prumer_hlavy_sroubu,stator3_vzdalenost_od_steny,lozisko_vyska,prumer_sroubu,roztec_sroubu,uchyt_prumer_sroubu,vyska_stator4,kabel_prumer);
 
 //stator4
 
