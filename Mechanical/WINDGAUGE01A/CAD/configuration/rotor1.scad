@@ -48,12 +48,7 @@ module rotor1(prumer_rotoru1,vyska_rotoru1,prumer_sroubu,vyska_matky,prumer_orec
     
                 }
 
-//otvory pro uchyceni krytky rotoru
-      translate([0,0,hloubka_prekryti/2])
-        cylinder (h = vyska_rotoru1+0.1, r=prumer_sroubu/2, center = true, $fn=100);
-
-      translate([0,0,-(vyska_rotoru1-hloubka_prekryti)/2+vyska_matky/2])
-        cylinder (h = vyska_matky+0.1, r=prumer_orechu/2, center = true, $fn=100);   
+  
    
    
 //otvor pro uchyceni prvni lopatky

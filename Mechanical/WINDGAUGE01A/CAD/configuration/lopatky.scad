@@ -45,7 +45,7 @@ module lopatka(hloubka_uchytu,sila_uchytu,vyska_uchytu,tolerance_uchytu,prumer_l
            
              //otvor pro sroub
            translate([0,0,0])   
-           cylinder(h=vyska_uchytu+1, r=prumer_sroubu, center=true, $fn=100);  
+           cylinder(h=vyska_uchytu+1, r=prumer_sroubu/2, center=true, $fn=100);  
          
          //zaobleni    
         translate([0,+prumer_rotoru1/2-hloubka_uchytu/2,0]) 
