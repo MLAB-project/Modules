@@ -1,18 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 9. 11. 2015 7:34:14
-
-BeginCmp
-TimeStamp = /563F69AE;
-Reference = 1,1;
-ValeurCmp = FUSE;
-IdModule  = Mlab_F:1812;
-EndCmp
-
-BeginCmp
-TimeStamp = /563F594A;
-Reference = 2A1;
-ValeurCmp = FUSE;
-IdModule  = Mlab_F:2410;
-EndCmp
+Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 18. 11. 2015 7:25:40
 
 BeginCmp
 TimeStamp = /5532C7C3;
@@ -248,8 +234,15 @@ EndCmp
 BeginCmp
 TimeStamp = /5532CA08;
 Reference = F1;
-ValeurCmp = FUSE;
-IdModule  = Mlab_F:2410;
+ValeurCmp = 5A;
+IdModule  = Mlab_F:Drzak_2410;
+EndCmp
+
+BeginCmp
+TimeStamp = /563F594A;
+Reference = F3;
+ValeurCmp = 2A;
+IdModule  = Mlab_F:Drzak_2410;
 EndCmp
 
 BeginCmp
