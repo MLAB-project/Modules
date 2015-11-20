@@ -1,6 +1,23 @@
 $fn=40; // model faces resolution.
 //include <../configuration.scad>
 
+/*
+prumer_rotoru1 - vnejsi prumer
+vyska_rotoru1 - vyska rotoru1 bez vysky uchytu lopatky
+prumer_sroubu-
+vyska_matky - 
+prumer_orechu - vnejsi prumer nástroje pro dotahovani matky
+sila_materialu - pro pripad vyvoreni zapusti pro kryt rotoru
+sila_materialu_vule
+hloubka_prekryti - hloubka zapusteni krytu rotoru
+hloubka_uchytu - definovano lopatkou
+sila_uchytu - definovano lopatkou
+vyska_uchytu - definovano lopatkou
+tolerance_uchytu - definovano lopatkou
+
+*/
+
+//rotor1(prumer_rotoru1,vyska_rotoru1,prumer_sroubu,vyska_matky,prumer_orechu,sila_materialu,sila_materialu_vule,hloubka_prekryti,hloubka_uchytu,sila_uchytu,vyska_uchytu,tolerance_uchytu);
 
 
 module rotor1(prumer_rotoru1,vyska_rotoru1,prumer_sroubu,vyska_matky,prumer_orechu,sila_materialu,sila_materialu_vule,hloubka_prekryti,hloubka_uchytu,sila_uchytu,vyska_uchytu,tolerance_uchytu)
@@ -16,10 +33,10 @@ module rotor1(prumer_rotoru1,vyska_rotoru1,prumer_sroubu,vyska_matky,prumer_orec
                 translate([0,0,vyska_rotoru1/2])
                     cylinder (h = hloubka_prekryti, r=(prumer_rotoru1/2) -sila_materialu-sila_materialu_vule, center = true, $fn=100);
 
-//otvory pro lopatky   
+                //otvory pro lopatky   
                 translate([0,0,-(vyska_rotoru1-hloubka_prekryti)/2-(vyska_uchytu+tolerance_uchytu)/2])
   
-//otvory pro lopatky                    
+    //otvory pro lopatky                    
     difference ()
         {
          cylinder (h = vyska_uchytu+tolerance_uchytu, r=(prumer_rotoru1/2), center = true, $fn=100);
@@ -70,7 +87,7 @@ module rotor1(prumer_rotoru1,vyska_rotoru1,prumer_sroubu,vyska_matky,prumer_orec
 //otvor pro uchyceni treti lopatky
       rotate(a=[0,0,240]) 
         translate([hloubka_uchytu/2+(prumer_rotoru1/2-hloubka_uchytu),0,hloubka_prekryti/2])
-        cylinder (h = vyska_rotoru1+0.1, r=prumer_sroubu/2, center = true, $fn=100);
+            cylinder (h = vyska_rotoru1+0.1, r=prumer_sroubu/2, center = true, $fn=100);
 
       rotate(a=[0,0,240]) 
         translate([hloubka_uchytu/2+(prumer_rotoru1/2-hloubka_uchytu),0,-(vyska_rotoru1-hloubka_prekryti)/2+vyska_matky/2])
