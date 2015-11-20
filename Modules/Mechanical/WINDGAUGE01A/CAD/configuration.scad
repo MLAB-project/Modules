@@ -1,5 +1,8 @@
 $fn=40; // model faces resolution.
 
+//OBECNE PARAMETRY 
+//----------------------------------------------------------------
+//----------------------------------------------------------------
 prumer_rotoru1=70;
 vyska_rotoru1=5;
 vyska_rotoru2=5;
@@ -75,13 +78,6 @@ vyska_kryti=stator1_sila+vyska_matky+vzdalenost_rot_stat+stator3_vyska_prekryti-
 
 
 vule1=1.5; //vůle mezi statorem a rotorem ze vnitř (z boku)
-
-
-
-//parametry uchytu senzoru
-roztec_der=10.16;
-vzdalenost_der_x=2*roztec_der;
-vzdalenost_der_y=1*roztec_der;
 
 
 
