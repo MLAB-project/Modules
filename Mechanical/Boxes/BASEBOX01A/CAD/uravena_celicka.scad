@@ -37,8 +37,9 @@ translate([0,0,0])
 difference() {
 celicko (vyska,zapust,vule_vysky_celicka,pocet_der2,vzdalenost_der,vule_delky_celicka,tloustka_celicka,vule_tlousky,vyska_listy);
     
-translate([20,0,0])    
-cube(size = [10,10,30], center = true); 
+pocet_der_dane_strany=15;
+posun_od_kraje=1;    
+USBI2C01A(tloustka_celicka,pocet_der_dane_strany,posun_od_kraje,vzdalenost_der,vyska_listy); 
 }
 }
 
@@ -51,8 +52,10 @@ translate([0,0,0])
 difference() {
 celicko (vyska,zapust,vule_vysky_celicka,pocet_der1,vzdalenost_der,vule_delky_celicka,tloustka_celicka,vule_tlousky,vyska_listy);
        
-translate([20,0,0])    
-cube(size = [10,10,30], center = true); 
+pocet_der_dane_strany=11;
+posun_od_kraje=1;
+    
+RS232SINGLE01A(tloustka_celicka,pocet_der_dane_strany,posun_od_kraje,vzdalenost_der,vyska_listy);
 }
 }
 
@@ -66,8 +69,11 @@ translate([0,0,0])
 difference() {
 celicko (vyska,zapust,vule_vysky_celicka,pocet_der1,vzdalenost_der,vule_delky_celicka,tloustka_celicka,vule_tlousky,vyska_listy);
        
-translate([20,0,0])    
-cube(size = [10,10,30], center = true); 
+MIC338(tloustka_celicka,vyska,zapust,vule_vysky_celicka);
+  
+pocet_der_dane_strany=11;
+posun_od_kraje=1;    
+UNIPOWER02A(tloustka_celicka,pocet_der_dane_strany,posun_od_kraje,vzdalenost_der,vyska_listy);
 }
 }
 barva_predni = "cyan";
