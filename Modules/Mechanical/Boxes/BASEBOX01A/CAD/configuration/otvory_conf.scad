@@ -1,6 +1,6 @@
 //Konfigurace pro otvory
 
-//1B) - LCD 2x16
+//1A) - LCD 2x16
 //vzdalenost der
 vzdalenost_der_x = 75;
 vzdalenost_der_y = 31;
