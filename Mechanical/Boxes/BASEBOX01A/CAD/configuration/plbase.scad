@@ -118,8 +118,58 @@ translate([vzdalenost_od_okraje,vzdalenost_od_okraje+(pocet_der2-1)*vzdalenost_d
 
 }
 }
+
+
+//PLBASE S NOZICKAMA polovicni pro tisk
+//-----------------------------------------------------------
+module plbase_s_nozickama_polovicni(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der,vyska_nozicky,vyska_hlavy,prumer_hlavy){
+
+difference()  
+  {  
+ plbase(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der); 
+   
+     
+translate([-1,-1, -1])
+       
+ cube([(pocet_der1+1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany,1+((pocet_der2)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany)/2,tloustka_plbase+15]); 
+  }  
+  
+
+
+translate([vzdalenost_od_okraje+(pocet_der1-1)*vzdalenost_der,vzdalenost_od_okraje+(pocet_der2-1)*vzdalenost_der, (tloustka_plbase)])  // center top screw
+    rotate(a=[180,0,0])
+   nozicka (vzdalenost_der,vyska_nozicky,prumer_sroubu,vyska_hlavy,prumer_hlavy);  
+      
+translate([vzdalenost_od_okraje,vzdalenost_od_okraje+(pocet_der2-1)*vzdalenost_der, (tloustka_plbase)])  // center top screw
+    rotate(a=[180,0,0])
+    nozicka (vzdalenost_der,vyska_nozicky,prumer_sroubu,vyska_hlavy,prumer_hlavy);     
+
+         
+ 
+    
+    }
+
+//PLBASE polovicni pro tisk
+//-----------------------------------------------------------
+module plbase_polovicni(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der,vyska_nozicky,vyska_hlavy,prumer_hlavy){
+
+difference()  
+  {  
+ plbase(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der); 
+   
+     
+translate([-1,-1, -1])
+       
+ cube([(pocet_der1+1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany,1+((pocet_der2)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany)/2,tloustka_plbase+15]); 
+  }  
+  
+   
+    }
+
+
 /*
 plbase_zapustene_srouby(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_hlavy,prekryti_der,prumer_hlavy);
 
 nozicka (vzdalenost_der,vyska_nozicky,prumer_sroubu,vyska_hlavy,prumer_hlavy);
+    
 
