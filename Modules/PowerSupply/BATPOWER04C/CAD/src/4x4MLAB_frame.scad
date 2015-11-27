@@ -18,7 +18,7 @@ MLAB_grid_xoffset = MLAB_grid/2;
 MLAB_grid_yoffset = MLAB_grid/2;
 
 grid_list = [for (j = [MLAB_grid_xoffset : MLAB_grid: x_size], i = [MLAB_grid_yoffset :MLAB_grid: y_size]) 
-if ((j>(x_size-10) && i>(y_size-10)) || (j<10 && i<10) || (j<10 && i>(y_size-10)) || (j>(y_size-10) && i<10) ) [j, i] ];
+if ((j>(x_size-10) && i>(y_size-10)) || (j<10 && i<10) || (j<10 && i>(y_size-10)) || (j>(x_size-10) && i<10) ) [j, i] ];
 
 
 difference () {
