@@ -4,6 +4,8 @@ use <configuration/lista.scad>
 use <configuration/plbase.scad>
 use <uravena_celicka.scad>
 use <configuration/otvory.scad>
+use <configuration/text/Write.scad>
+
 
 include <configuration/manufactury_conf.scad>
 include <configuration.scad>
@@ -159,8 +161,15 @@ plbase_zapustene_srouby(pocet_der1+3,pocet_der2+3,radidus_hrany,vzdalenost_der,v
 
 translate([-((pocet_der2+2)*vzdalenost_der+2*vzdalenost_od_okraje)/2,-vzdalenost_od_okraje,2* vyska])
 rotate(a=[0,0,0])
+    {
+        
+        plbase(pocet_der2+3,pocet_der1+3,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der);
+translate([ 0, 0, 0]) 
+                    rotate([0,0,0])
+                        write(box_jmeno,h=5,t=2, space= 1.1, font = "Letters.dxf",center=true);
 
-plbase(pocet_der2+3,pocet_der1+3,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der);
+        
+     }
 //*/
 //plbase se zapuštěním šroubů
 /*
