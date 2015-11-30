@@ -114,8 +114,8 @@ module sloupek(
 //----------------------------------------------------
 //LOGO MLAB 
         union (){
-            translate ([-vzdalenost_od_okraje+1,5, 0])  // ODROIDs passive components hole.
-                rotate([0, 90, 180])
+            translate ([5, -vzdalenost_od_okraje+1,0])  // ODROIDs passive components hole.
+                rotate([0, 90, 270])
                     scale(v = [logo_sirka, logo_vyska, 0.3])
                         MLAB_logo_short();
                 }  
@@ -123,7 +123,7 @@ module sloupek(
        }
 }
 
-/*sloupek(
+sloupek(
     vyska,
     zapust,
     vzdalenost_der,
@@ -134,4 +134,4 @@ module sloupek(
     prumer_matice,
     vyska_matice,
     posuv_dorazu,
-   matice_sila_materialu);
+   matice_sila_materialu,logo_vyska,logo_sirka);
