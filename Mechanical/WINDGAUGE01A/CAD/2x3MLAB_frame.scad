@@ -1,6 +1,6 @@
 
-x_holes = 2;
-y_holes = 3;
+x_holes = 3;
+y_holes = 4;
 MLAB_grid = 10.16;
 pile_radius = 4;
 pedestal_height = 15;   // designed for use the MLAB standard 20mm screws.
