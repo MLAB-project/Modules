@@ -1,3 +1,4 @@
+use <text/Write.scad>
 /*
 pocet_der1=5;
 pocet_der2=3;
@@ -165,7 +166,40 @@ translate([-1,-1, -1])
   
    
     }
+//PLBASE ZAKLADNI - bez der s napisem produktu
+//------------------------------------------------------------
+module plbase_bez_der_napis(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der,box_jmeno){
 
+
+
+difference () {
+//union () {
+translate([radidus_hrany,radidus_hrany,0])
+minkowski()
+    {
+	cube([(pocet_der1-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany,(pocet_der2-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany,tloustka_plbase]);          // base plastics brick
+        cylinder(r=radidus_hrany,h=0.1);
+    }
+ translate([radidus_hrany,radidus_hrany,0])   
+translate([ ((pocet_der1-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany)/2, ((pocet_der2-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany)/2, tloustka_plbase/2+1]) 
+    rotate([0,0,0])
+      write(box_jmeno,h=10,t=tloustka_plbase-1, space= 1.1, font = "Letters.dxf",center=true);
+
+ 
+translate([vzdalenost_od_okraje,vzdalenost_od_okraje, (tloustka_plbase/2)])  // center top screw
+        cylinder(((tloustka_plbase+0.3)), d=prumer_sroubu, center=true);  
+      
+translate([vzdalenost_od_okraje+(pocet_der1-1)*vzdalenost_der,vzdalenost_od_okraje, (tloustka_plbase/2)])  // center top screw
+        cylinder(((tloustka_plbase+0.3)), d=prumer_sroubu, center=true);  
+
+translate([vzdalenost_od_okraje+(pocet_der1-1)*vzdalenost_der,vzdalenost_od_okraje+(pocet_der2-1)*vzdalenost_der, (tloustka_plbase/2)])  // center top screw
+        cylinder(((tloustka_plbase+0.3)), d=prumer_sroubu, center=true); 
+      
+translate([vzdalenost_od_okraje,vzdalenost_od_okraje+(pocet_der2-1)*vzdalenost_der, (tloustka_plbase/2)])  // center top screw
+        cylinder(((tloustka_plbase+0.3)), d=prumer_sroubu, center=true);       
+      
+}
+}
 
 /*
 plbase_zapustene_srouby(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_hlavy,prekryti_der,prumer_hlavy);
