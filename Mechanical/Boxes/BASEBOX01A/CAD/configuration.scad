@@ -27,3 +27,8 @@ prekryti_der=0.3; //sila materiálu, který překrývá díry
 //PRIPADNA VYSKA NOZICEK
 //------------------------------------------------------------
 vyska_nozicky=5;
+
+//Rozmery loga MLAB
+//------------------------------------------------------------
+logo_vyska=0.2;
+logo_sirka=0.2;

@@ -20,29 +20,33 @@ barva_plbase = "yellow";
 //sloupek 1
 color(barva_sloupku)
 translate([(-(pocet_der2+2)*vzdalenost_der)/2,0,0])
-sloupek (vyska,zapust1,vzdalenost_der,vzdalenost_od_okraje,vzdalenost_od_diry,radidus_hrany,prumer_sroubu,prumer_matice,vyska_matice,posuv_dorazu,matice_sila_materialu);
+sloupek (vyska,zapust1,vzdalenost_der,vzdalenost_od_okraje,vzdalenost_od_diry,radidus_hrany,prumer_sroubu,prumer_matice,vyska_matice,posuv_dorazu,matice_sila_materialu,
+   logo_vyska,logo_sirka);
 
 //sloupek 2
 color(barva_sloupku)
 translate([((pocet_der2+2)*vzdalenost_der)/2,0,0])
 rotate(a=[0,0,90])
-sloupek (vyska,zapust1,vzdalenost_der,vzdalenost_od_okraje,vzdalenost_od_diry,radidus_hrany,prumer_sroubu,prumer_matice,vyska_matice,posuv_dorazu,matice_sila_materialu);
+sloupek (vyska,zapust1,vzdalenost_der,vzdalenost_od_okraje,vzdalenost_od_diry,radidus_hrany,prumer_sroubu,prumer_matice,vyska_matice,posuv_dorazu,matice_sila_materialu,
+   logo_vyska,logo_sirka);
 
 //sloupek 3
 color(barva_sloupku)
 translate([((pocet_der2+2)*vzdalenost_der)/2, (pocet_der1+2)*vzdalenost_der,0])
 rotate(a=[0,0,180])
-sloupek (vyska,zapust1,vzdalenost_der,vzdalenost_od_okraje,vzdalenost_od_diry,radidus_hrany,prumer_sroubu,prumer_matice,vyska_matice,posuv_dorazu,matice_sila_materialu);
+sloupek (vyska,zapust1,vzdalenost_der,vzdalenost_od_okraje,vzdalenost_od_diry,radidus_hrany,prumer_sroubu,prumer_matice,vyska_matice,posuv_dorazu,matice_sila_materialu,
+   logo_vyska,logo_sirka);
 
 //sloupek 4
 color(barva_sloupku)
 translate([-((pocet_der2+2)*vzdalenost_der)/2, (pocet_der1+2)*vzdalenost_der,0])
 rotate(a=[0,0,270])
-sloupek (vyska,zapust1,vzdalenost_der,vzdalenost_od_okraje,vzdalenost_od_diry,radidus_hrany,prumer_sroubu,prumer_matice,vyska_matice,posuv_dorazu,matice_sila_materialu);
+sloupek (vyska,zapust1,vzdalenost_der,vzdalenost_od_okraje,vzdalenost_od_diry,radidus_hrany,prumer_sroubu,prumer_matice,vyska_matice,posuv_dorazu,matice_sila_materialu,
+   logo_vyska,logo_sirka);
     
 
 
-//VELKE LISTY
+//VELKE LISTY 
 //--------------------------------------------------------
 //lista velka 1
 color(barva_listy)
@@ -152,8 +156,8 @@ plbase_zapustene_srouby(pocet_der1+3,pocet_der2+3,radidus_hrany,vzdalenost_der,v
 //PLBASE HORNI
 //-------------------------------------------------------------
 //základní plbase bez nožiček
-///*
-/*translate([-((pocet_der2+2)*vzdalenost_der+2*vzdalenost_od_okraje)/2,-vzdalenost_od_okraje,2* vyska])
+
+translate([-((pocet_der2+2)*vzdalenost_der+2*vzdalenost_od_okraje)/2,-vzdalenost_od_okraje,2* vyska])
 rotate(a=[0,0,0])
 
 plbase(pocet_der2+3,pocet_der1+3,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der);

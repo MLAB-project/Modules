@@ -1,3 +1,7 @@
+include <manufactury_conf.scad>
+include <../configuration.scad>
+use <MLAB_logo.scad>
+
 //Funkce pro generovani sloupku
 module sloupek(
     vyska,
@@ -10,7 +14,7 @@ module sloupek(
     prumer_matice,
     vyska_matice,
     posuv_dorazu,
-   matice_sila_materialu) {
+   matice_sila_materialu,logo_vyska,logo_sirka) {
 
     difference () {
         union () {
@@ -62,6 +66,10 @@ module sloupek(
                 translate([vzdalenost_der, vzdalenost_od_diry/2, -(vyska-(2*zapust))/2])
                     linear_extrude(height = (vyska-(2*zapust)))
                         square([vzdalenost_der, vzdalenost_od_diry ], center = true);                
+       
+
+        
+        
         }
 
         //diry na sroub
@@ -103,5 +111,27 @@ module sloupek(
               
         cube([prumer_matice, prumer_matice+posuv_dorazu+vzdalenost_od_diry,vyska_matice], center = true);
 
-        }
+//----------------------------------------------------
+//LOGO MLAB 
+        union (){
+            translate ([-vzdalenost_od_okraje+1,5, 0])  // ODROIDs passive components hole.
+                rotate([0, 90, 180])
+                    scale(v = [logo_sirka, logo_vyska, 0.3])
+                        MLAB_logo_short();
+                }  
+
+       }
 }
+
+/*sloupek(
+    vyska,
+    zapust,
+    vzdalenost_der,
+    vzdalenost_od_okraje,
+    vzdalenost_od_diry,
+    radidus_hrany,
+    prumer_sroubu,
+    prumer_matice,
+    vyska_matice,
+    posuv_dorazu,
+   matice_sila_materialu);
