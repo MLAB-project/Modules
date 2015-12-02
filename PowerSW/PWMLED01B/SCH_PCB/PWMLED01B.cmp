@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 18. 11. 2015 10:09:29
+Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 2. 12. 2015 7:35:01
 
 BeginCmp
 TimeStamp = /564C23E1;
@@ -25,6 +25,13 @@ BeginCmp
 TimeStamp = /564CE757;
 Reference = D1;
 ValeurCmp = TMMBAT48;
+IdModule  = Mlab_D:Diode-MiniMELF_Standard;
+EndCmp
+
+BeginCmp
+TimeStamp = /565F3CDF;
+Reference = D2;
+ValeurCmp = D_Schottky;
 IdModule  = Mlab_D:Diode-MiniMELF_Standard;
 EndCmp
 
