@@ -1,9 +1,9 @@
-Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 18. 11. 2015 7:25:40
+Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 3. 12. 2015 7:17:52
 
 BeginCmp
-TimeStamp = /5532C7C3;
+TimeStamp = /564C3067;
 Reference = BT1;
-ValeurCmp = 2x18650_LION;
+ValeurCmp = 2x18650_LION-RESCUE-LION2CELL01C;
 IdModule  = Mlab_Batery:2LION;
 EndCmp
 
@@ -344,6 +344,13 @@ IdModule  = Mlab_Pin_Headers:Straight_1x02;
 EndCmp
 
 BeginCmp
+TimeStamp = /566001CC;
+Reference = J15;
+ValeurCmp = CONN_2;
+IdModule  = Mlab_Pin_Headers:SMD_1_2x2;
+EndCmp
+
+BeginCmp
 TimeStamp = /55329331;
 Reference = L1;
 ValeurCmp = DE1205-10;
@@ -591,56 +598,56 @@ EndCmp
 BeginCmp
 TimeStamp = /5533AE30;
 Reference = R27;
-ValeurCmp = 1K;
+ValeurCmp = 2K2;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5533B2B7;
 Reference = R28;
-ValeurCmp = 1K;
+ValeurCmp = 2K2;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5533B2FF;
 Reference = R29;
-ValeurCmp = 1K;
+ValeurCmp = 2K2;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5533B34C;
 Reference = R30;
-ValeurCmp = 1K;
+ValeurCmp = 2K2;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5533B398;
 Reference = R31;
-ValeurCmp = 1K;
+ValeurCmp = 2K2;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5533B3E7;
 Reference = R32;
-ValeurCmp = 1K;
+ValeurCmp = 2K2;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5533B433;
 Reference = R33;
-ValeurCmp = 1K;
+ValeurCmp = 2K2;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5547B85D;
 Reference = R34;
-ValeurCmp = 1K;
+ValeurCmp = 2K2;
 IdModule  = Mlab_R:SMD-0805;
 EndCmp
 

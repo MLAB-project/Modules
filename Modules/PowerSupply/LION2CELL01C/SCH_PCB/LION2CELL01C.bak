@@ -1728,8 +1728,6 @@ Wire Wire Line
 Wire Wire Line
 	2550 5950 2550 5750
 Wire Wire Line
-	2800 5950 2800 5750
-Wire Wire Line
 	3250 4500 3300 4500
 Wire Wire Line
 	4150 5100 4150 3900
@@ -2088,4 +2086,23 @@ Wire Wire Line
 Wire Wire Line
 	1080 7290 1080 7090
 Connection ~ 1080 7090
+$Comp
+L CONN_2 J?
+U 1 1 566001CC
+P 3140 5840
+F 0 "J?" H 3190 5940 50  0000 C CNN
+F 1 "CONN_2" H 3240 5790 40  0000 C CNN
+F 2 "" H 3190 5790 60  0000 C CNN
+F 3 "" H 3190 5790 60  0000 C CNN
+	1    3140 5840
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 5950 2800 5890
+Wire Wire Line
+	2800 5890 2840 5890
+Wire Wire Line
+	2840 5790 2800 5790
+Wire Wire Line
+	2800 5790 2800 5750
 $EndSCHEMATC
