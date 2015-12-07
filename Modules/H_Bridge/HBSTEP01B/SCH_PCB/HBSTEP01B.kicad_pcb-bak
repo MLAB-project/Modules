@@ -1,4 +1,4 @@
-(kicad_pcb (version 4) (host pcbnew "(2015-01-08 BZR 5360)-product")
+(kicad_pcb (version 4) (host pcbnew "(2015-05-13 BZR 5653)-product")
 
   (general
     (links 108)
@@ -1687,14 +1687,14 @@
       (net 2 GND))
   )
 
-  (module Mlab_IO:SOT-23 (layer B.Cu) (tedit 54836E42) (tstamp 5534878E)
+  (module Mlab_IO:SOT-23 (layer B.Cu) (tedit 5665593B) (tstamp 5534878E)
     (at 19.431 -6.604)
     (tags SOT23)
     (path /54FDDE4A)
-    (fp_text reference D3 (at 1.99898 0.09906 270) (layer B.SilkS)
+    (fp_text reference D3 (at 0.127 -1.016) (layer B.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.11938)) (justify mirror))
     )
-    (fp_text value "BAS70-04\n\n" (at 0.0635 0) (layer B.SilkS)
+    (fp_text value "BAS70-04\n\n" (at 0.0635 0) (layer B.SilkS) hide
       (effects (font (size 0.50038 0.50038) (thickness 0.09906)) (justify mirror))
     )
     (fp_circle (center -1.17602 -0.35052) (end -1.30048 -0.44958) (layer B.SilkS) (width 0.15))
