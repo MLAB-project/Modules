@@ -1,4 +1,4 @@
-update=Ne 22. listopad 2015, 12:37:41 CET
+update=7. 12. 2015 9:44:51
 version=1
 last_client=kicad
 [cvpcb]
@@ -28,19 +28,6 @@ BoardOutlineThickness=0.09999999999999999
 ModuleOutlineThickness=0.15
 [general]
 version=1
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
 [eeschema]
 version=1
 LibDir=../../../../../kicad-mlab/symbols
@@ -89,3 +76,13 @@ LibName41=MLAB_Jumpers
 LibName42=MLAB_T
 LibName43=OpAmp
 LibName44=sata7-67491-1030
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
