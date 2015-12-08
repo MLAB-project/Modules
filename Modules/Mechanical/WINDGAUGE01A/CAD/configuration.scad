@@ -23,6 +23,10 @@ lozisko_prumer_vnejsi=16;
 lozisko_vyska=5;
 lozisko_prekryv=1.5;
 
+//kryt rotoru
+sila_materialu_krytu=1;
+
+
 //stator1
 stator1_sila=2;
 
@@ -54,10 +58,10 @@ hloubka_uchytu=20;
 sila_uchytu=12;
 vyska_uchytu=10;
 tolerance_uchytu=0.2;
-delka_uchytu_lopatky=20;
+delka_uchytu_lopatky=40;
 hrana_uchytu_lopatky=4; 
-prumer_lopatky=40;
-sila_materialu_lopatky=2;
+prumer_lopatky=50;
+sila_materialu_lopatky=0.8;
 
 //parametry uchytu senzoru
 roztec_der=10.16;
