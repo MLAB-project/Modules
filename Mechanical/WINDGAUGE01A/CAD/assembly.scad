@@ -29,7 +29,7 @@ posunuti_dilu=10; //posunuti dilu od sebe
 //-------------------------------------------------------------
 color(barva_krytu)
     translate([0,0,posunuti_dilu*4+(vyska_rotoru1-hloubka_prekryti)/2+vyska_uchytu+tolerance_uchytu+vyska_rotoru2])
-        kryt_rotoru(prumer_rotoru1,sila_materialu,vyska_rotoru1);
+        kryt_rotoru(prumer_rotoru1,sila_materialu_krytu,vyska_rotoru1);
 
 //ROTOR1
 //-------------------------------------------------------------
