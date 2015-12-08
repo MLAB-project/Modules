@@ -177,16 +177,16 @@ translate([ ((pocet_der1-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hran
       write(box_jmeno,h=10,t=tloustka_plbase-1, space= 1.1, font = "Letters.dxf",center=true);
 
  
-translate([vzdalenost_od_okraje,vzdalenost_od_okraje, (tloustka_plbase/2)])  // center top screw
+translate([vzdalenost_od_okraje+tloustka_bocnice,vzdalenost_od_okraje+tloustka_bocnice, (tloustka_plbase/2)])  // center top screw
         cylinder(((tloustka_plbase+0.3)), d=prumer_sroubu, center=true);  
       
-translate([vzdalenost_od_okraje+(pocet_der1-1)*vzdalenost_der,vzdalenost_od_okraje, (tloustka_plbase/2)])  // center top screw
+translate([vzdalenost_od_okraje+tloustka_bocnice+(pocet_der1-1)*vzdalenost_der,vzdalenost_od_okraje+tloustka_bocnice, (tloustka_plbase/2)])  // center top screw
         cylinder(((tloustka_plbase+0.3)), d=prumer_sroubu, center=true);  
 
-translate([vzdalenost_od_okraje+(pocet_der1-1)*vzdalenost_der,vzdalenost_od_okraje+(pocet_der2-1)*vzdalenost_der, (tloustka_plbase/2)])  // center top screw
+translate([vzdalenost_od_okraje+tloustka_bocnice+(pocet_der1-1)*vzdalenost_der,vzdalenost_od_okraje+tloustka_bocnice+(pocet_der2-1)*vzdalenost_der, (tloustka_plbase/2)])  // center top screw
         cylinder(((tloustka_plbase+0.3)), d=prumer_sroubu, center=true); 
       
-translate([vzdalenost_od_okraje,vzdalenost_od_okraje+(pocet_der2-1)*vzdalenost_der, (tloustka_plbase/2)])  // center top screw
+translate([vzdalenost_od_okraje+tloustka_bocnice,vzdalenost_od_okraje+tloustka_bocnice+(pocet_der2-1)*vzdalenost_der, (tloustka_plbase/2)])  // center top screw
         cylinder(((tloustka_plbase+0.3)), d=prumer_sroubu, center=true);       
       
 }
