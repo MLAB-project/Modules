@@ -27,7 +27,7 @@ module rotor4 (vyska_pod_magnetem,magnet_zapusteni,magnet_prumer,vyska_hlavy_sro
         {
         //segment pro sroub a magnet
             translate([0,0,0])
-                cylinder (h = vyska_pod_magnetem+magnet_zapusteni, r=(magnet_prumer+2)/2, center = true, $fn=100);    
+                cylinder (h = vyska_pod_magnetem+magnet_zapusteni, r=(magnet_prumer+5)/2, center = true, $fn=100);    
   
         //otvor pro magnet    
             translate([0,0,vyska_pod_magnetem/2+0.1])    
