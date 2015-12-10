@@ -1,5 +1,7 @@
 Pridat dva stinene konektory na ethernet. (Differencni I²C povedem po standardnich UTP kabelech.) Dva konektory budou zapojené paralelně, aby bylo možné zapojení zařízení smyčkovat stejně, jako je to v případě hřebínků.
 Zapojení konektoru by mělo co nejvíce respektovat zvyklosti v zapojení ethernetu. 
+Příklad konektoru: http://www.tme.eu/cz/details/rjhse-5384/konektory-rj/amphenol/
+(Má ledky, na které se dají připojit signály READY a PIDET.  A zámek konektoru je nahoře, takže je snadno dostupný i v případě, že bude modul přišroubovaný na zakladní desku.)
 
 Přidat hřebínkový konektor který bude mít standaradní zapojení ve stavebnici MLAB.
 
