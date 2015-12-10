@@ -1,0 +1,6 @@
+Pridat dva stinene konektory na ethernet. (Differencni I²C povedem po standardnich UTP kabelech.) Dva konektory budou zapojené paralelně, aby bylo možné zapojení zařízení smyčkovat stejně, jako je to v případě hřebínků.
+Zapojení konektoru by mělo co nejvíce respektovat zvyklosti v zapojení ethernetu. 
+
+Přidat hřebínkový konektor který bude mít standaradní zapojení ve stavebnici MLAB.
+
+Pokud na modulu bude místo, tak signály vedené do ethernet konektorů by mohly být také vyvedeny na hřebínek, podobně jako je to u modulu RS232Single.
