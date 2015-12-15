@@ -1616,4 +1616,6 @@ F 3 "" H 4640 6740 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 4640 6910
+Connection ~ 9080 1710
+Connection ~ 9090 3490
 $EndSCHEMATC
