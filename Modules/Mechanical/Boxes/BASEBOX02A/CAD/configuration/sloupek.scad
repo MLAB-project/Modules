@@ -100,13 +100,13 @@ translate([radidus_hrany,radidus_hrany,0])
         translate([-tloustka_bocnice,-tloustka_bocnice,0])
 difference () {
 
-translate([-2*vzdalenost_od_okraje,-2*vzdalenost_od_okraje,0])
+translate([-2*vzdalenost_od_okraje,-2*vzdalenost_od_okraje,-vyska_bocnice/2])
 minkowski()
     {
 	cube([(pocet_der1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*tloustka_bocnice+4*vzdalenost_od_okraje,(pocet_der2)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*tloustka_bocnice+4*vzdalenost_od_okraje,vyska_bocnice]);          // base plastics brick
         cylinder(r=radidus_hrany,h=0.1);
     }
-translate([tloustka_bocnice,tloustka_bocnice,-0.025])    
+translate([tloustka_bocnice,tloustka_bocnice,-vyska_bocnice/2-0.025])    
 minkowski()
     {
 	cube([(pocet_der1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany,(pocet_der2)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany,vyska_bocnice+0.05]);          // base plastics brick

@@ -1,7 +1,6 @@
 use <configuration/sloupek.scad>
 use <configuration/plbase.scad>
 use <configuration/bocnice.scad>
-use <uravena_celicka.scad>
 use <configuration/otvory.scad>
 use <configuration/text/Write.scad>
 
@@ -40,11 +39,11 @@ plbase(pocet_der1+3,pocet_der2+3,radidus_hrany,vzdalenost_der,vzdalenost_od_okra
 
 //základní plbase bez nožiček s nadpisem
 
-translate([-((pocet_der2+2)*vzdalenost_der+2*vzdalenost_od_okraje)/2-tloustka_bocnice,-vzdalenost_od_okraje-tloustka_bocnice,vyska_bocnice/2])
+translate([-((pocet_der2+2)*vzdalenost_der+2*vzdalenost_od_okraje)/2-tloustka_bocnice,-vzdalenost_od_okraje-tloustka_bocnice,10*vyska_bocnice/2])
 rotate(a=[0,0,0])
     {
         
-        plbase_bez_der_napis(pocet_der2+3,pocet_der1+3,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der,box_jmeno);
+        plbase_bez_der_napis(pocet_der2+3,pocet_der1+3,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der,box_jmeno,tloustka_bocnice);
         
      }
 
