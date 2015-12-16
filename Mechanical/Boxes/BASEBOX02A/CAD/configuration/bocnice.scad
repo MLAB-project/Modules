@@ -81,7 +81,7 @@ sloupek (vyska_bocnice,vzdalenost_der,vzdalenost_od_okraje,vzdalenost_od_diry,ra
 }
 }
 
-bocnice(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice);
+
 
 
     

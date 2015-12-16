@@ -1,7 +1,7 @@
 $fn=20; // model faces resolution.
 
  //Sroub - podpěra pro tisk sloupku
-        vyska_podpery=8;
+        vyska_podpery=12;
         vyska_mat_pod_matici=3;
 
 //Sroub - parametry

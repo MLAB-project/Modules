@@ -11,17 +11,17 @@ radidus_hrany = 5; //radius zaobleni sloupku
 vzdalenost_od_okraje = 8.88; //vzdalenost stredu upevnovaci diry od kraje desky
 
 //mala hrana
-pocet_der1 = 2; //pocet der desky, ponížené o 3
+pocet_der1 = 0; //pocet der desky, ponížené o 3
 
 //velka hrana
-pocet_der2 = 20; //pocet der desky, ponížené o 3
+pocet_der2 = 4; //pocet der desky, ponížené o 3
 //*/
 
 
 //OBECNE PARAMETRY KRABICKY
 //------------------------------------------------------------
 //BOCNICE
-vyska_bocnice=40;
+vyska_bocnice=30;
 tloustka_bocnice=2;
 
 //PLBASE PARAMETRY

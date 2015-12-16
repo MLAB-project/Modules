@@ -159,7 +159,7 @@ translate([-1,-1, -1])
     }
 //PLBASE ZAKLADNI - bez der s napisem produktu
 //------------------------------------------------------------
-module plbase_bez_der_napis(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der,box_jmeno){
+module plbase_bez_der_napis(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der,box_jmeno,tloustka_bocnice){
 
 
 
@@ -172,7 +172,7 @@ minkowski()
         cylinder(r=radidus_hrany,h=0.1);
     }
  translate([radidus_hrany,radidus_hrany,0])   
-translate([ ((pocet_der1-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany)/2, ((pocet_der2-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany)/2, tloustka_plbase/2+1]) 
+translate([ ((pocet_der1-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany)/2+tloustka_bocnice, ((pocet_der2-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany)/2+tloustka_bocnice, tloustka_plbase/2+1]) 
     rotate([0,0,0])
       write(box_jmeno,h=10,t=tloustka_plbase-1, space= 1.1, font = "Letters.dxf",center=true);
 
