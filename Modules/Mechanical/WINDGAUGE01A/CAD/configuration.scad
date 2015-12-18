@@ -69,7 +69,7 @@ vzdalenost_der_x=2*roztec_der;
 vzdalenost_der_y=1*roztec_der;
 
 //magnet
-magnet_prumer=6;
+magnet_prumer=6.3;
 magnet_vyska=5;
 magnet_zapusteni=2;
 vyska_pod_magnetem=5;
