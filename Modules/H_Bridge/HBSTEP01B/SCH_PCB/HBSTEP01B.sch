@@ -28,19 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:MLAB_IO
-LIBS:MLAB_D
-LIBS:asp-134604-01_(fmc)
-LIBS:clock
-LIBS:header
-LIBS:Jumpers
-LIBS:konektory
-LIBS:mechanical
-LIBS:MLAB_BATERY
-LIBS:MLAB_Jumpers
-LIBS:MLAB_T
-LIBS:OpAmp
-LIBS:sata7-67491-1030
 LIBS:HBSTEP01B-cache
 EELAYER 25 0
 EELAYER END
@@ -1309,5 +1296,27 @@ F 2 "Mlab_Pin_Headers:Straight_1x01" H 3800 4830 60  0001 C CNN
 F 3 "" H 3800 4830 60  0000 C CNN
 	1    3750 4880
 	-1   0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 56843E20
+P 4080 4470
+F 0 "R?" V 4160 4470 40  0000 C CNN
+F 1 "10k" V 4087 4471 40  0000 C CNN
+F 2 "Mlab_R:SMD-0805" V 4010 4470 30  0001 C CNN
+F 3 "" H 4080 4470 30  0000 C CNN
+	1    4080 4470
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP2 C?
+U 1 1 568444A1
+P 5100 2500
+F 0 "C?" H 5100 2600 40  0000 L CNN
+F 1 "47uF" H 5106 2415 40  0000 L CNN
+F 2 "Mlab_C:TantalC_SizeB_Reflow" H 5138 2350 30  0001 C CNN
+F 3 "" H 5100 2500 60  0000 C CNN
+	1    5100 2500
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
