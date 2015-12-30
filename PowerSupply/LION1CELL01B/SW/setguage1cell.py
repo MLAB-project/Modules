@@ -10,7 +10,7 @@ while True:
     #### Sensor Configuration ###########################################
     cfg = config.Config(
         i2c = {
-            "port": 0, # I2C bus number
+            "port": 6, # I2C bus number
         },
 
 	    bus = [
