@@ -1,8 +1,17 @@
 Pridat dva stinene konektory na ethernet. (Differencni I²C povedem po standardnich UTP kabelech.) Dva konektory budou zapojené paralelně, aby bylo možné zapojení zařízení smyčkovat stejně, jako je to v případě hřebínků.
-Zapojení konektoru by mělo co nejvíce respektovat zvyklosti v zapojení ethernetu. 
-Příklad konektoru: http://www.tme.eu/cz/details/rjhse-5384/konektory-rj/amphenol/
+Zapojení konektoru by mělo co nejvíce respektovat zvyklosti v zapojení ethernetu. Podle informací na těchto stránkách:
+https://en.wikipedia.org/wiki/Power_over_Ethernet
+http://wiki.mikrotik.com/wiki/Manual:PoE-In
+http://www.freetronics.com.au/pages/power-over-ethernet-for-arduino#.VoT2JV7U5hE
+
+Bych navrhoval použít páry oranžový, zelený a hnědý pro differenční signály. A modrý pro napájení. 
+Modrý je ve standardu jako druhá telefonní linka. A v drtivé většině reálných případů je proto nezapojený. 
+Polarita napájení by měla být na konektoru stejná, jako je polarita signálů telefonní linky (ta má signály ring a tip)
+
+Příklad vhodného konektoru: http://www.tme.eu/cz/details/rjhse-5384/konektory-rj/amphenol/
 (Má ledky, na které se dají připojit signály READY a PIDET.  A zámek konektoru je nahoře, takže je snadno dostupný i v případě, že bude modul přišroubovaný na zakladní desku.)
 
-Přidat hřebínkový konektor který bude mít standaradní zapojení ve stavebnici MLAB.
+Přesto však na differenčním rozhraní bude muset být přepěťová ochrana z nějakých vícenásobných transilů (podobně jako bylo u GSM01A na simkartě), protože diferenční budič nevydrží větší napětí, jak 6V. 
+A na obyčejném ethernetu se signály přenáší 12V úrovněmi. 
 
-Pokud na modulu bude místo, tak signály vedené do ethernet konektorů by mohly být také vyvedeny na hřebínek, podobně jako je to u modulu RS232Single.
+Na differenční rozhraní přidat i hřebínkový konektor který bude mít standaradní zapojení ve stavebnici MLAB. Pokud na modulu bude místo, tak signály vedené do ethernet konektorů budou vyvedeny na hřebínek, podobně jako je to u modulu RS232Single a půjde to použít k připojení dalších modulů přímo na desce. 
