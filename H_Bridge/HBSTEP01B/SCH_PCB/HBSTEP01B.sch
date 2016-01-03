@@ -1289,7 +1289,6 @@ Wire Wire Line
 Wire Wire Line
 	4610 2410 4610 2490
 Connection ~ 4900 2410
-Connection ~ -1680 690 
 Connection ~ 5570 2160
 $Comp
 L L6470 U1
