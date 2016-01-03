@@ -1,4 +1,4 @@
-update=Ne 3. leden 2016, 11:57:01 CET
+update=Ne 3. leden 2016, 12:40:01 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=../../../../../../kicad-mlab/footprints
+LibDir=../../../../../MLAB-project/kicad-mlab/symbols
 [eeschema/libraries]
 LibName1=PWMLED01B-rescue
 LibName2=power
@@ -75,3 +75,28 @@ LibName43=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/MLAB_Jumpers
 LibName44=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/MLAB_T
 LibName45=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/OpAmp
 LibName46=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/sata7-67491-1030
+LibName47=/home/honza/MLAB-project/kicad-mlab/symbols/ADC-DAC
+LibName48=/home/honza/MLAB-project/kicad-mlab/symbols/asp-134604-01_(fmc)
+LibName49=/home/honza/MLAB-project/kicad-mlab/symbols/clock
+LibName50=/home/honza/MLAB-project/kicad-mlab/symbols/header
+LibName51=/home/honza/MLAB-project/kicad-mlab/symbols/Jumpers
+LibName52=/home/honza/MLAB-project/kicad-mlab/symbols/konektory
+LibName53=/home/honza/MLAB-project/kicad-mlab/symbols/mechanical
+LibName54=/home/honza/MLAB-project/kicad-mlab/symbols/MLAB_BATERY
+LibName55=/home/honza/MLAB-project/kicad-mlab/symbols/MLAB_CONNECTORS
+LibName56=/home/honza/MLAB-project/kicad-mlab/symbols/MLAB_D
+LibName57=/home/honza/MLAB-project/kicad-mlab/symbols/MLAB_IO
+LibName58=/home/honza/MLAB-project/kicad-mlab/symbols/MLAB_Jumpers
+LibName59=/home/honza/MLAB-project/kicad-mlab/symbols/MLAB_T
+LibName60=/home/honza/MLAB-project/kicad-mlab/symbols/OpAmp
+LibName61=/home/honza/MLAB-project/kicad-mlab/symbols/sata7-67491-1030
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
