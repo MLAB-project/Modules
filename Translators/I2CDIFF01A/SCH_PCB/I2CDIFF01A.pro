@@ -1,4 +1,4 @@
-update=Čt 10. prosinec 2015, 19:17:45 CET
+update=5. 1. 2016 7:31:41
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,9 +23,11 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
-LibDir=/home/kaklik/git/kicad-mlab/symbols
+LibDir=../../../../../kicad-mlab/symbols
 [eeschema/libraries]
 LibName1=74xgxx
 LibName2=74xx
@@ -106,5 +108,19 @@ LibName76=xilinx
 LibName77=Zilog
 LibName78=mlab_header
 LibName79=mlab_mechanical
-[general]
-version=1
+LibName80=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/ADC-DAC
+LibName81=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/asp-134604-01_(fmc)
+LibName82=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/clock
+LibName83=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/header
+LibName84=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/Jumpers
+LibName85=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/konektory
+LibName86=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/mechanical
+LibName87=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/MLAB_BATERY
+LibName88=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/MLAB_CONNECTORS
+LibName89=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/MLAB_D
+LibName90=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/MLAB_IO
+LibName91=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/MLAB_Jumpers
+LibName92=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/MLAB_T
+LibName93=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/OpAmp
+LibName94=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/sata7-67491-1030
+LibName95=MLAB_U
