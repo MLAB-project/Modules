@@ -1,66 +1,73 @@
-Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 5. 1. 2016 14:16:50
+Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 6. 1. 2016 10:25:50
 
 BeginCmp
 TimeStamp = /568BD989;
 Reference = C1;
 ValeurCmp = 10uF;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /568BDEAC;
 Reference = C2;
 ValeurCmp = 10uF;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /568BF9C5;
 Reference = C3;
 ValeurCmp = 10uF;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /568BFA37;
 Reference = C4;
 ValeurCmp = 10uF;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /55C33655;
 Reference = C5;
 ValeurCmp = 100nF;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /55C33656;
 Reference = C6;
 ValeurCmp = 100nF;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /568E10B3;
 Reference = C7;
 ValeurCmp = 47uF;
-IdModule  = Mlab_C:TantalC_SizeC_Reflow;
+IdModule  = MLAB_C:TantalC_SizeC_Reflow;
 EndCmp
 
 BeginCmp
 TimeStamp = /568C1495;
 Reference = D1;
 ValeurCmp = SM15T18A;
-IdModule  = Mlab_D:Diode-SMA_Standard;
+IdModule  = MLAB_D:Diode-SMA_Standard;
 EndCmp
 
 BeginCmp
-TimeStamp = /568BC17A;
+TimeStamp = /568CF656;
 Reference = D2;
-ValeurCmp = M4;
-IdModule  = Mlab_D:Diode-SMA_Standard;
+ValeurCmp = SP1001-04XTG;
+IdModule  = MLAB_IO:SOT-553;
+EndCmp
+
+BeginCmp
+TimeStamp = /568CFCCB;
+Reference = D3;
+ValeurCmp = SP1001-04XTG;
+IdModule  = MLAB_IO:SOT-553;
 EndCmp
 
 BeginCmp
@@ -74,7 +81,7 @@ BeginCmp
 TimeStamp = /568B891C;
 Reference = J2;
 ValeurCmp = RJ45_RJHSE-5384;
-IdModule  = ;
+IdModule  = MLAB_CON:RJHSE-5384(RJ45);
 EndCmp
 
 BeginCmp
@@ -176,20 +183,6 @@ IdModule  = Mlab_Pin_Headers:Straight_1x02;
 EndCmp
 
 BeginCmp
-TimeStamp = /5669C524;
-Reference = J17;
-ValeurCmp = ~READY;
-IdModule  = Mlab_Pin_Headers:Straight_1x02;
-EndCmp
-
-BeginCmp
-TimeStamp = /5669C898;
-Reference = J18;
-ValeurCmp = ~PIDET;
-IdModule  = Mlab_Pin_Headers:Straight_1x02;
-EndCmp
-
-BeginCmp
 TimeStamp = /568B97B4;
 Reference = J19;
 ValeurCmp = JUMP_2x1;
@@ -256,112 +249,112 @@ BeginCmp
 TimeStamp = /55C3364D;
 Reference = R1;
 ValeurCmp = 1k;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /55C3364C;
 Reference = R2;
 ValeurCmp = 1k;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /56128A83;
 Reference = R3;
 ValeurCmp = 600;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5612887A;
 Reference = R4;
 ValeurCmp = 120;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /56128D20;
 Reference = R5;
 ValeurCmp = 600;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /56128B6E;
 Reference = R6;
 ValeurCmp = 600;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /561289EA;
 Reference = R7;
 ValeurCmp = 120;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /56128D26;
 Reference = R8;
 ValeurCmp = 600;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /56128BAD;
 Reference = R9;
 ValeurCmp = 600;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /56128A2E;
 Reference = R10;
 ValeurCmp = 120;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /56128D2C;
 Reference = R11;
 ValeurCmp = 600;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /568C5D2D;
 Reference = R12;
 ValeurCmp = 1k;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /55C48899;
 Reference = R13;
 ValeurCmp = 4k7;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /55C4889F;
 Reference = R14;
 ValeurCmp = 4k7;
-IdModule  = Mlab_R:SMD-0805;
+IdModule  = MLAB_R:SMD-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /568BD657;
 Reference = U1;
 ValeurCmp = LM1117;
-IdModule  = Mlab_IO:SOT-223;
+IdModule  = MLAB_IO:SOT-223;
 EndCmp
 
 BeginCmp
 TimeStamp = /568BF5D6;
 Reference = U2;
 ValeurCmp = LM1117;
-IdModule  = Mlab_IO:SOT-223;
+IdModule  = MLAB_IO:SOT-223;
 EndCmp
 
 BeginCmp
