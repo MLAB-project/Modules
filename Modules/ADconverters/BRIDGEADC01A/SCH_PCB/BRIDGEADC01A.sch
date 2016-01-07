@@ -17,7 +17,6 @@ LIBS:cypress
 LIBS:dc-dc
 LIBS:device
 LIBS:digital-audio
-LIBS:diode
 LIBS:display
 LIBS:dsp
 LIBS:elec-unifil
@@ -42,8 +41,6 @@ LIBS:microchip_pic16mcu
 LIBS:microchip_pic18mcu
 LIBS:microchip_pic32mcu
 LIBS:microcontrollers
-LIBS:mlab_header
-LIBS:mlab_mechanical
 LIBS:motorola
 LIBS:msp430
 LIBS:nordicsemi
@@ -76,8 +73,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:adc-dac
-LIBS:motor_drivers
 LIBS:BRIDGEADC01A-cache
 EELAYER 25 0
 EELAYER END
