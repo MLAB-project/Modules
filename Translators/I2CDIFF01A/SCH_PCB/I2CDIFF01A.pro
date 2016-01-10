@@ -1,4 +1,4 @@
-update=5. 1. 2016 7:31:41
+update=So 9. leden 2016, 12:50:04 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=../../../../../kicad-mlab/symbols
+LibDir=../../../../../MLAB-project/kicad-mlab/symbols
 [eeschema/libraries]
 LibName1=74xgxx
 LibName2=74xx
@@ -124,3 +124,19 @@ LibName92=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/MLAB_T
 LibName93=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/OpAmp
 LibName94=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/sata7-67491-1030
 LibName95=MLAB_U
+LibName96=/home/honza/MLAB-project/kicad-mlab/symbols/ADC-DAC
+LibName97=/home/honza/MLAB-project/kicad-mlab/symbols/asp-134604-01_(fmc)
+LibName98=/home/honza/MLAB-project/kicad-mlab/symbols/clock
+LibName99=/home/honza/MLAB-project/kicad-mlab/symbols/header
+LibName100=/home/honza/MLAB-project/kicad-mlab/symbols/Jumpers
+LibName101=/home/honza/MLAB-project/kicad-mlab/symbols/konektory
+LibName102=/home/honza/MLAB-project/kicad-mlab/symbols/mechanical
+LibName103=/home/honza/MLAB-project/kicad-mlab/symbols/MLAB_BATERY
+LibName104=/home/honza/MLAB-project/kicad-mlab/symbols/MLAB_CONNECTORS
+LibName105=/home/honza/MLAB-project/kicad-mlab/symbols/MLAB_D
+LibName106=/home/honza/MLAB-project/kicad-mlab/symbols/MLAB_IO
+LibName107=/home/honza/MLAB-project/kicad-mlab/symbols/MLAB_Jumpers
+LibName108=/home/honza/MLAB-project/kicad-mlab/symbols/MLAB_T
+LibName109=/home/honza/MLAB-project/kicad-mlab/symbols/MLAB_U
+LibName110=/home/honza/MLAB-project/kicad-mlab/symbols/OpAmp
+LibName111=/home/honza/MLAB-project/kicad-mlab/symbols/sata7-67491-1030
