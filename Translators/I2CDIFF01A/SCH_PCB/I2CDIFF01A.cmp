@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 6. 1. 2016 10:25:50
+Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 11. 1. 2016 6:59:37
 
 BeginCmp
 TimeStamp = /568BD989;
@@ -71,10 +71,10 @@ IdModule  = MLAB_IO:SOT-553;
 EndCmp
 
 BeginCmp
-TimeStamp = /568BBEB5;
+TimeStamp = /56911A4A;
 Reference = J1;
-ValeurCmp = JUMP_3X2;
-IdModule  = Mlab_Pin_Headers:Straight_2x03;
+ValeurCmp = JUMP_4X2;
+IdModule  = Mlab_Pin_Headers:Straight_2x04;
 EndCmp
 
 BeginCmp
@@ -180,6 +180,13 @@ TimeStamp = /5669E183;
 Reference = J16;
 ValeurCmp = EN;
 IdModule  = Mlab_Pin_Headers:Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /56934AC7;
+Reference = J17;
+ValeurCmp = JUMP2_2x1;
+IdModule  = Mlab_Pin_Headers:Straight_2x01;
 EndCmp
 
 BeginCmp
