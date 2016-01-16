@@ -4,6 +4,7 @@
 \usepackage[czech]{babel}
 \usepackage{graphicx}
 \usepackage{pdfpages}
+\usepackage{listings}
 \textwidth 16cm \textheight 25cm
 \topmargin -1.3cm 
 \oddsidemargin 0cm
@@ -53,12 +54,29 @@ V nových zařízeních MLAB jako je například stanice RMDS02 je však tento z
 Zapojení spočívá pouze v propojení modulu PIC18F4550v01A s modulem CLKGEN01B. Toto je realizováno jedním napájecím kablíkem, který propojuje napájení modulu připojeného na USB s 5V napájením CLKGEN01B (Modul si nižší napájecí napětí stabiluzuje sám). V zapojení jsou ještě dva datové kablíky, které přímo propojují I2C sběrnici.
 Na modulu PIC18F4550v01A je jako napájení jumperem zvoleno USB. Použitý krystal je 20 MHz, což vyžaduje v modulu osazené u oscilátoru kondenzátory s kapacitou 12pF.
 
+
+
 \subsection{Odrušení}
 
 Odrušení je třeba provádět zvláště pečlivě, pracujeme-li v prostředí, kde by mohlo vadit elektromagnetické vyzařování, jako jsou například radioastronomická pracoviště. Nejkritičtějším místem je v tomto případě připojení počítače, který je často sám o sobě silným zdrojem rušení. USB kabel je tedy vhodné volit dostatečně stíněný a nejlépe s odrušovacími ferity na obou koncích. Počítač by sám o sobě měl do USB vnášet co nejmenší množství šumu, proto je dobré použít místo notebooku spíše stolní počítač s kvalitním zdrojem a kovovou bednou. Samozřejmost je mít moduly přišroubované na dostatečně vodivé podložce tedy nejlépe ALBASE.  
 
 \section{Nastavení testování}
-Při připojení k napájení generuje CLKGEN01B frekvenci nastavenou při výrobě v Silicon Labs. V případě modulů MLAB je to 10~MHz z důvodu využitelnosti jako standardní laboratorní normál.  Pro možnost ladění je potřeba do PIC18F4550 nahrát firmware, který naleznete na \cite{pic_firmware}. Při úspěšném nahrání firmwaru programátorem například PICprogUSB02A, se sestava připojením k počítači ohlásí jako nové USB zařízení a bude vyžadovat driver. Ten lze ten je stejný jakopro původní konstrukci a lze jej nalézt v odkazu\cite{CFGSR}.
+Při připojení k napájení generuje CLKGEN01B frekvenci nastavenou při výrobě v Silicon Labs. V případě modulů MLAB je to 10~MHz z důvodu využitelnosti jako standardní laboratorní normál.  Pro možnost ladění je potřeba do PIC18F4550 nahrát firmware, který naleznete na \cite{pic_firmware}. Při úspěšném nahrání firmwaru programátorem například PICprogUSB02A, se sestava připojením k počítači ohlásí jako nové USB zařízení a bude vyžadovat driver. Ten lze ten je stejný jako pro původní konstrukci a lze jej nalézt v odkazu\cite{CFGSR}.
+
+\noindent Firmware do modulu nahrajeme skriptem, který se nachází ve složce SW. Skript spustíme přes příkazový řádek:
+
+\begin{lstlisting}[language=bash]
+svnMLAB/Modules/Clock/CLKGEN01B/SW$ ./flash.sh
+Program Succeeded.
+PICkit 2 Verify Report
+16-1-2016, 18:16:56
+Device Type: PIC18F4550
+
+Verify Succeeded.
+
+Operation Succeeded
+\end{lstlisting}
+
 
 \section{Programové vybavení}
 Vzhledem k tomu, že výsledek je plně kompatibilní s  konstrukcí dg8saq lze k ladění generátoru použít naprostou většinu programů pro SDR a nebo pouze pro nastavení frekvence například USBSynth \cite{USB_Synth}, či CFGSR \cite{CFGSR}, které je z těchto nástrojů nejmodernější.
