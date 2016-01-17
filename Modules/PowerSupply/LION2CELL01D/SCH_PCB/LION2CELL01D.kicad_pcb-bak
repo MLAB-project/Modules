@@ -3147,10 +3147,10 @@
     )
   )
 
-  (module Mlab_Batery:2LION (layer F.Cu) (tedit 56950F64) (tstamp 569507BD)
+  (module Mlab_Batery:2LION (layer F.Cu) (tedit 56950FA6) (tstamp 569507BD)
     (at 40.5765 -30.861)
     (path /564C3067)
-    (fp_text reference BT1 (at 0 -2.54) (layer F.SilkS)
+    (fp_text reference BT1 (at -12.6365 -2.8575) (layer F.SilkS)
       (effects (font (size 1.5 1.5) (thickness 0.15)))
     )
     (fp_text value 2x18650_LION-RESCUE-LION2CELL01C (at 0 0) (layer F.SilkS) hide
