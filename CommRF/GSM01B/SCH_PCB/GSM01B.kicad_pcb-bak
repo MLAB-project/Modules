@@ -1,4 +1,4 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.0-rc1-stable)
+(kicad_pcb (version 4) (host pcbnew "(2015-12-20 BZR 6390, Git 4e99c98)-product")
 
   (general
     (links 159)
@@ -37,7 +37,7 @@
   )
 
   (setup
-    (last_trace_width 0.7)
+    (last_trace_width 0.25)
     (user_trace_width 0.2)
     (user_trace_width 0.3)
     (user_trace_width 0.4)
@@ -221,7 +221,7 @@
     (fp_text reference C2 (at -0.20066 3.29946) (layer B.SilkS)
       (effects (font (thickness 0.3048)) (justify mirror))
     )
-    (fp_text value 330uF (at -0.09906 -3.59918) (layer B.SilkS) hide
+    (fp_text value 470uF/6.3V (at -0.09906 -3.59918) (layer B.SilkS) hide
       (effects (font (thickness 0.3048)) (justify mirror))
     )
     (fp_line (start -5.00126 2.19964) (end -5.00126 -2.19964) (layer B.SilkS) (width 0.15))
