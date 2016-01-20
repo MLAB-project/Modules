@@ -1,4 +1,4 @@
-update=25. 11. 2015 13:57:42
+update=20. 1. 2016 10:35:45
 version=1
 last_client=kicad
 [pcbnew]
@@ -74,3 +74,14 @@ LibName42=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/MLAB_Jumpers
 LibName43=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/MLAB_T
 LibName44=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/OpAmp
 LibName45=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/sata7-67491-1030
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
+ERC_TestSimilarLabels=1
