@@ -1,9 +1,9 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.1-3.201512221401+6198~38~ubuntu15.10.1-stable)
+(kicad_pcb (version 4) (host pcbnew "(2015-12-20 BZR 6390, Git 4e99c98)-product")
 
   (general
     (links 159)
     (no_connects 0)
-    (area -1.016 -61.795 61.341001 1.195)
+    (area 0.203999 -60.756001 60.756001 -0.203999)
     (thickness 1.6)
     (drawings 65)
     (tracks 1036)
@@ -37,7 +37,7 @@
   )
 
   (setup
-    (last_trace_width 0.5)
+    (last_trace_width 0.25)
     (user_trace_width 0.2)
     (user_trace_width 0.3)
     (user_trace_width 0.4)
@@ -1878,14 +1878,14 @@
       (net 1 GND) (clearance 1) (zone_connect 2))
   )
 
-  (module Mlab_T:SOT-23 placed (layer B.Cu) (tedit 5534BA1F) (tstamp 566ECFC7)
+  (module Mlab_T:SOT-23 placed (layer B.Cu) (tedit 56A0FB2F) (tstamp 566ECFC7)
     (at 33.274 -44.196 90)
     (tags SOT23)
     (path /56696357)
-    (fp_text reference Q1 (at 1.99898 0.09906 360) (layer B.SilkS)
+    (fp_text reference Q1 (at 0.1905 -1.2065 90) (layer B.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.11938)) (justify mirror))
     )
-    (fp_text value MMBF170LT1G (at 0.0635 0 90) (layer B.SilkS)
+    (fp_text value MMBF170LT1G (at 0.0635 0 90) (layer B.SilkS) hide
       (effects (font (size 0.50038 0.50038) (thickness 0.09906)) (justify mirror))
     )
     (fp_circle (center -1.17602 -0.35052) (end -1.30048 -0.44958) (layer B.SilkS) (width 0.15))
@@ -1906,14 +1906,14 @@
     )
   )
 
-  (module Mlab_T:SOT-23 placed (layer B.Cu) (tedit 5534BA1F) (tstamp 566ECFCE)
+  (module Mlab_T:SOT-23 placed (layer B.Cu) (tedit 56A0FB35) (tstamp 566ECFCE)
     (at 33.274 -48.006 90)
     (tags SOT23)
     (path /5669EA67)
-    (fp_text reference Q2 (at 1.99898 0.09906 360) (layer B.SilkS)
+    (fp_text reference Q2 (at 0 -1.2065 90) (layer B.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.11938)) (justify mirror))
     )
-    (fp_text value MMBF170LT1G (at 0.0635 0 90) (layer B.SilkS)
+    (fp_text value MMBF170LT1G (at 0.0635 0 90) (layer B.SilkS) hide
       (effects (font (size 0.50038 0.50038) (thickness 0.09906)) (justify mirror))
     )
     (fp_circle (center -1.17602 -0.35052) (end -1.30048 -0.44958) (layer B.SilkS) (width 0.15))
