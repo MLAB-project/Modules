@@ -1295,17 +1295,17 @@ Wire Wire Line
 	2600 4700 2600 4650
 Wire Wire Line
 	1800 4700 1800 4650
-Text Label 2800 4150 1    60   ~ 0
-INT+
-Text Label 2650 4150 1    60   ~ 0
-INT-
 Text Label 2350 4150 1    60   ~ 0
-SCL-
+INT+
 Text Label 2500 4150 1    60   ~ 0
+INT-
+Text Label 2800 4150 1    60   ~ 0
+SCL-
+Text Label 2650 4150 1    60   ~ 0
 SCL+
-Text Label 1850 4150 1    60   ~ 0
-SDA+
 Text Label 2000 4150 1    60   ~ 0
+SDA+
+Text Label 1850 4150 1    60   ~ 0
 SDA-
 Wire Wire Line
 	2250 3500 3200 3500
