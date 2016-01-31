@@ -48,8 +48,12 @@ difference () {
 	translate ([3, 7 , pedestal_height - 3.5]) // HOLE for ODROD's Passive components 
 	cube([53,73,5]);
 
-	translate ([0, 25 , pedestal_height - 3.5]) // eMMc Card 
-	cube([14,20,5]);
+	translate ([0, 24 , pedestal_height - 3.5]) // eMMc Card 
+	cube([14,17,5]);
+
+	translate ([2, 40 , pedestal_height - 3.5]) // eMMc Card 
+	cube([14,10.5,5]);
+
 
 	translate ([39.5,81, pedestal_height - 3])  // ODROID serial connector 
 	cube([10,2,5]);
@@ -85,7 +89,7 @@ difference () {
 ////  lightening central holes
         
 	translate ([9,9, 0])  // ODROIDs passive components hole. 
-	cube([40,67,pedestal_height ]);          
+	cube([43,67,pedestal_height ]);          
         
 // MLAB logo on the side
     union (){
