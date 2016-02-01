@@ -42,8 +42,8 @@ while True:
     print "Two Cells"
     guage.WriteFlashByte(64, 0, 4, 0x74)     # 8 LED (1+7), Shift Register
     print "LED"
-    guage.WriteFlashByte(104, 0, 14, 0x28)   # Voltage Measurement Range 10240 mV
-    guage.WriteFlashByte(104, 0, 15, 0x00)   # 
+    guage.WriteFlashByte(104, 0, 14, 0x25)   # Voltage Measurement Range 9484 mV
+    guage.WriteFlashByte(104, 0, 15, 0x0C)   # 
     print "Voltage Measurement Range"
     guage.WriteFlashByte(82, 0, 0, 0x0D)     # Set initial cell capacity 3350 mAh
     guage.WriteFlashByte(82, 0, 1, 0x16)     # 
