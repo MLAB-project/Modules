@@ -9,6 +9,7 @@
 import time
 import datetime
 import sys
+import numpy as np
 from pymlab import config
 
 #### Script Arguments ###############################################
@@ -64,24 +65,33 @@ print sensor.get_zero_position()
 #### Data Logging ###################################################
 
 try:
+    angles = np.zeros(5)
+    angles[4] = sensor.get_angle(verify = False)
+    time.sleep(0.1)
+    angles[3] = sensor.get_angle(verify = False)
+    time.sleep(0.1)
+    angles[2] = sensor.get_angle(verify = False)
+    time.sleep(0.1)
+    angles[1] = sensor.get_angle(verify = False)
+    n = 0
+
     while True:
-#        for i in range(10):
-        angle1 = sensor.get_angle(verify = False)
         time.sleep(0.1)
-        angle2 = sensor.get_angle(verify = False)
-        time.sleep(0.1)
-        angle3 = sensor.get_angle(verify = False)
+        angles[0] = sensor.get_angle(verify = False)
         
-        if (angle1 < angle2):
-            speed = (angle2 - angle1)/0.01
+        if (angles[0] + n*360 - angles[1]) > 300:
+            n -= 1
+            angles[0] = angles[0] + n*360
+        elif -(angles[0] - n*360 - angles[1]) > 300:  # compute angular speed in backward direction.
+            n += 1
+            angles[0] = angles[0] - n*360
         else:
-            speed = (360 - angle1 + angle2)/0.01
-            
-    
+            angles[0] = angles[0] + n*360
         
-        sys.stdout.write("Speed: " + str(speed) +"\t"+ str(angle1) +"\t"+ str(angle2) + "\t\tMagnitude: " + str(sensor.get_magnitude()) 
-            + "\tAGC Value: " + str(sensor.get_agc_value()) + "\tDiagnostics: " + str(sensor.get_diagnostics()) + "\r\n")
+        speed = (-angles[4] + 8*angles[3] - 8*angles[1] + angles[0])/12
+        angles = np.roll(angles, 1)
+    
+        sys.stdout.write("Speed: " + str(speed) +"\t"+ str(angles[0]) + "\r\n")
         sys.stdout.flush()
-        time.sleep(0.01)
 except KeyboardInterrupt:
     sys.exit(0)
