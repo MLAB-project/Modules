@@ -55,7 +55,9 @@ celicko (vyska,zapust,vule_vysky_celicka,pocet_der1,vzdalenost_der,vule_delky_ce
 pocet_der_dane_strany=11;
 posun_od_kraje=1;
     
-RS232SINGLE01A(tloustka_celicka,pocet_der_dane_strany,posun_od_kraje,vzdalenost_der,vyska_listy);
+//RS232SINGLE01A(tloustka_celicka,pocet_der_dane_strany,posun_od_kraje,vzdalenost_der,vyska_listy);
+    
+I2CDIFF01A(tloustka_celicka,pocet_der_dane_strany,posun_od_kraje,vzdalenost_der,vyska_listy);
 }
 }
 
@@ -68,8 +70,10 @@ module celicko_prave()
 translate([0,0,0])
 difference() {
 celicko (vyska,zapust,vule_vysky_celicka,pocet_der1,vzdalenost_der,vule_delky_celicka,tloustka_celicka,vule_tlousky,vyska_listy);
-       
-MIC338(tloustka_celicka,vyska,zapust,vule_vysky_celicka);
+
+posun_od_kraje3=0; 
+    
+MIC338(tloustka_celicka,vyska,zapust,vule_vysky_celicka,posun_od_kraje3,vzdalenost_der);
   
 pocet_der_dane_strany=11;
 posun_od_kraje=1;    
