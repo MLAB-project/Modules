@@ -3,7 +3,7 @@
   (general
     (links 50)
     (no_connects 0)
-    (area 0.203999 -50.596001 40.436001 -0.203999)
+    (area 0.203999 -30.274001 40.436001 -0.203999)
     (thickness 1.6)
     (drawings 21)
     (tracks 117)
@@ -856,9 +856,9 @@
   (gr_text D1K (at 7.62 -20.0025) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify left))
   )
-  (gr_line (start 0.254 -50.546) (end 0.254 -0.254) (angle 90) (layer Edge.Cuts) (width 0.1))
+  (gr_line (start 0.254 -30.224) (end 0.254 -0.254) (angle 90) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 40.386 -30.224) (end 0.254 -30.224) (angle 90) (layer Edge.Cuts) (width 0.1))
-  (gr_line (start 40.386 -0.254) (end 40.386 -50.546) (angle 90) (layer Edge.Cuts) (width 0.1))
+  (gr_line (start 40.386 -0.254) (end 40.386 -30.224) (angle 90) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 0.254 -0.254) (end 40.386 -0.254) (angle 90) (layer Edge.Cuts) (width 0.1))
 
   (segment (start 31.75 -15.7635) (end 31.75 -18.87474) (width 0.9) (layer B.Cu) (net 1))
