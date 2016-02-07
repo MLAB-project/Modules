@@ -4,14 +4,49 @@ $fn=40; // model faces resolution.
 //----------------------------------------------------------------
 //----------------------------------------------------------------
 
+//Obecné parametry
+prumer_osicky=3;
+prumer_pomocne_trubicky=8;
+zapusteni_pomocne_trubicky=3;
+vule_mezi_statorem_rotorem=2; //vůle mezi statorem a rotorem + sila materialu statoru
+
 //WINDGAUGE02A_S01
-S01_vyska
+S01_vyska=5;
 
 
 
+//WINDGAUGE02A_L01 //pro lopatku
+L01_hloubka_zapusteni=3;
+L01_hloubka_zapusteni_drzaku=5;
+L01_sila_zapusteni_drzaku=5; //sila drzaku který je v rotoru
+L01_hrana_drzaku_a=10;
+L01_hrana_drzaku_b=3;
+L01_tolerance_drzaku=0.1;
+L01_delka_uchytu=20;
+L01_prumer_lopatky=40;
+L01_sila_materialu_lopatky=3;
+
+//WINDGAUGE02A_R01 //rotor s prekritim statoru
+R01_vyska_preryti_statoru=10;
+R01_sila_materialu_pro_prekriti=2;
+
+//WINDGAUGE02A_R02 //rotor spodni dil
+
+R02_sila_mateiralu_pod_lopatkami=5;
+R02_vzdalenost_mezi_uchyty_lopatek=10;
+
+//WINDGAUGE02A_R03 //kryt rotoru
+R03_sila_materialu=1.5;
 
 
 
+//WINDGAUGE02A_S01 //stator
+S01_sila_materialu=2;
+S01_vyska_zuzene_casti=20;
+S01_vyska_komponentu_na_lozisko=15;
+S01_vyska_zavitu_na_nasroubovani_drzaku=15;
+S01_vyska_na_elektroniku=50;
+S01_prumer_zavitu=70;
 
 
 
