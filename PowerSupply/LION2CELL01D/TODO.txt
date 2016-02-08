@@ -2,3 +2,6 @@
 -dát císla clánkù do dírek v pouzdru -provedeno
 -zkusit udìlat díry na fasety
 zkontrolovat přebíjení (změřením napětí na článcích při nabití a zapnutem menici) Toto je stav pri nabijeni a zaroven zapnutem pripojenem zarizeni (napr. odroid.).
+-Vstup cells se muze zrusit. U dvouclankoveho modulu je minimalni pravdepodobnost, ze bude nekdy vyuzity. Vzniklo by tim vice mista pro napajeci vystup ktery je vedle. 
+Nebo by misto tohoto pinu bylo vyhodnejsi vyvest stat2, ktery poskytuje informaci o stavu nabijeni.
+
