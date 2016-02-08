@@ -10,6 +10,28 @@ prumer_pomocne_trubicky=8;
 zapusteni_pomocne_trubicky=3;
 vule_mezi_statorem_rotorem=2; //vůle mezi statorem a rotorem + sila materialu statoru
 
+//rozmery modulu se senzorem
+senzor_delka=20.32;
+senzor_sirka=10.16;
+
+
+//lozisko
+lozisko_prumer_vnitrni=5;
+lozisko_prumer_vnejsi=16;
+lozisko_vyska=5;
+lozisko_prekryv=1.5;
+
+
+//parametry sroubu
+prumer_sroubu=3.2;
+prumer_hlavy_sroubu=6;
+vyska_hlavy_sroubu=4;
+vyska_matky=3;
+sirka_matky=6.6;
+sirka_matky_tol=0.175;
+prumer_orechu=10;
+
+
 //WINDGAUGE02A_S01
 S01_vyska=5;
 
@@ -47,6 +69,7 @@ S01_vyska_komponentu_na_lozisko=15;
 S01_vyska_zavitu_na_nasroubovani_drzaku=15;
 S01_vyska_na_elektroniku=50;
 S01_prumer_zavitu=70;
+S01_vyska_prechodu=20;
 
 
 
@@ -56,25 +79,7 @@ S01_prumer_zavitu=70;
 
 
 
-prumer_rotoru1=70;
-vyska_rotoru1=5;
-vyska_rotoru2=5;
-prumer_sroubu=3.2;
-prumer_hlavy_sroubu=6;
-vyska_hlavy_sroubu=4;
-vyska_matky=3;
-sirka_matky=6.6;
-sirka_matky_tol=0.175;
-prumer_orechu=10;
-sila_materialu=2;
-sila_materialu_vule=0.2;
-hloubka_prekryti=0;
 
-//lozisko
-lozisko_prumer_vnitrni=5;
-lozisko_prumer_vnejsi=16;
-lozisko_vyska=5;
-lozisko_prekryv=1.5;
 
 //kryt rotoru
 sila_materialu_krytu=1;
