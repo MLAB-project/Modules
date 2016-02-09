@@ -2,6 +2,9 @@ $fn=40; // model faces resolution.
 include <../configuration.scad>
 
 use <zavity.scad>
+include <polyScrewThread_r1.scad>
+
+PI=3.141592;
 
 module WINDGAUGE02A_S03(S01_sila_materialu,S01_vyska_komponentu_na_lozisko,S01_prumer_zavitu,lozisko_vyska,lozisko_prumer_vnejsi,lozisko_prumer_vnitrni,lozisko_prekryv,vyska_matky,prumer_orechu,prumer_sroubu,vyska_hlavy_sroubu,prumer_hlavy_sroubu)
     {
@@ -10,7 +13,9 @@ difference()
         {
 //translate([0,0,-(S01_vyska_na_elektroniku+S01_vyska_zavitu_na_nasroubovani_drzaku+2*S01_vyska_komponentu_na_lozisko)/2-10])
     
-metric_thread (diameter=S01_prumer_zavitu-0.3, pitch=1, length=S01_vyska_komponentu_na_lozisko, internal=false, n_starts=6);
+//metric_thread (diameter=S01_prumer_zavitu-0.3, pitch=1, length=S01_vyska_komponentu_na_lozisko, internal=false, n_starts=6);
+            
+ screw_thread(S01_prumer_zavitu-0.5,4,55,S01_vyska_komponentu_na_lozisko,PI/2,2);            
 
 //otvory na ložisko
 translate([0,0,lozisko_vyska/2])
