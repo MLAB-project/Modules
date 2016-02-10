@@ -46,7 +46,7 @@ L01_hrana_drzaku_b=3;
 L01_tolerance_drzaku=0.1;
 L01_delka_uchytu=20;
 L01_prumer_lopatky=40;
-L01_sila_materialu_lopatky=3;
+L01_sila_materialu_lopatky=0.9;
 
 //WINDGAUGE02A_D01 //uchyt velky
 D01_material_pod_zavitem=10;
