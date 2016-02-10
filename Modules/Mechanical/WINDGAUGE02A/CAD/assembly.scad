@@ -1,120 +1,133 @@
-use <configuration/rotor1.scad>
-use <configuration/rotor2.scad>
-use <configuration/rotor3.scad>
-use <configuration/stator1.scad>
-use <configuration/stator2.scad>
-use <configuration/stator3.scad>
-use <configuration/stator4.scad>
-use <configuration/lopatky.scad>
-use <configuration/kryt_rotoru.scad>
+use <SRC/WINDGAUGE02A_D01.scad>
+use <SRC/WINDGAUGE02A_D02.scad>
+use <SRC/WINDGAUGE02A_L01.scad>
+use <SRC/WINDGAUGE02A_R01.scad>
+use <SRC/WINDGAUGE02A_R02.scad>
+use <SRC/WINDGAUGE02A_R03.scad>
+use <SRC/WINDGAUGE02A_S01.scad>
+use <SRC/WINDGAUGE02A_S02.scad>
+use <SRC/WINDGAUGE02A_S03.scad>
 
 include <configuration.scad>
 
-barva_krytu = "yellow";
-barva_rotor1 = "cyan";
-barva_rotor2 = "green";
-barva_rotor3 = "green";
-barva_rotor4 = "yellow";
-barva_stator1 = "cyan";
-barva_stator2 = "red";
-barva_stator3 = "green";
-barva_stator4 = "yellow";
-barva_lopatky = "yellow";
+barva_D01 = "yellow";
+barva_D02 = "cyan";
+barva_L01 = "green";
+barva_R01 = "green";
+barva_R02 = "yellow";
+barva_R03 = "cyan";
+barva_S01 = "red";
+barva_S02 = "green";
+barva_S03 = "yellow";
+
 
 
 posunuti_dilu=10; //posunuti dilu od sebe
 
-//KRYT ROTORU
+//WINDGAUGE02A_D01  DRŽÁK
 //-------------------------------------------------------------
 //-------------------------------------------------------------
-color(barva_krytu)
-    translate([0,0,posunuti_dilu*4+(vyska_rotoru1-hloubka_prekryti)/2+vyska_uchytu+tolerance_uchytu+vyska_rotoru2])
-        kryt_rotoru(prumer_rotoru1,sila_materialu_krytu,vyska_rotoru1);
-
-//ROTOR1
-//-------------------------------------------------------------
-//-------------------------------------------------------------
-color(barva_rotor1)
-    translate([0,0,posunuti_dilu*3+(vyska_rotoru1-hloubka_prekryti)/2+vyska_uchytu+tolerance_uchytu+vyska_rotoru2/2])
-        rotor1(prumer_rotoru1,vyska_rotoru1,prumer_sroubu,vyska_matky,prumer_orechu,sila_materialu,sila_materialu_vule,hloubka_prekryti,hloubka_uchytu,sila_uchytu,vyska_uchytu,tolerance_uchytu);
-
-//ROTOR2
-//-------------------------------------------------------------
-//-------------------------------------------------------------
-color(barva_rotor2)
+color(barva_D01)
     translate([0,0,0])
-        rotor2 (vyska_rotoru2,prumer_rotoru1,vyska_kryti,sila_materialu,stator1_sila,vyska_matky,vzdalenost_rot_stat,lozisko_prumer_vnitrni,lozisko_prekryv,sila_pod_loziskem,delka_hridele,lozisko_vyska,sirka_matky_tol,sirka_matky,hloubka_uchytu,vyska_rotoru1,prumer_sroubu,vyska_matky,prumer_orechu,vzdalenost_rot_stat2,sirka_matky_tol);
-
-//ROTOR3
+        
+        WINDGAUGE02A_D01(S01_vyska_komponentu_na_lozisko,S01_prumer_zavitu,D01_material_pod_zavitem,D01_material_za_zavitem,D01_material_pred_zavitem,D01_delka_tyce,D01_sirka_tyce,D02_sila_materialu,D02_vyska_uchytky,D02_prumer_obruby,D02_delka_celeho_uchytu,D02_dotahova_vzdalenost,D02_prumer_uchytneho_sroubu);
+        
+        
+//WINDGAUGE02A_D02  DRŽÁK druhy dil
 //-------------------------------------------------------------
 //-------------------------------------------------------------
-color(barva_rotor3)
-    translate([0,0,-posunuti_dilu*3-(vyska_rotoru2/2+vyska_matky+vzdalenost_rot_stat+stator1_sila+(lozisko_vyska+sila_pod_loziskem)+((sila_pod_loziskem+delka_hridele+2)/2)-sila_pod_loziskem)])
-        rotor3 (sila_pod_loziskem,delka_hridele,lozisko_prumer_vnitrni,lozisko_prekryv);
-
-//ROTOR4
+color(barva_D02)
+    translate([0,S01_prumer_zavitu/2+D01_material_pred_zavitem+D01_delka_tyce+D02_prumer_obruby/2+D02_sila_materialu+10,D02_vyska_uchytky/2])
+            rotate(a=[0,0,90])
+            
+        WINDGAUGE02A_D02(D02_sila_materialu,D02_vyska_uchytky,D02_prumer_obruby,D02_delka_celeho_uchytu,D02_dotahova_vzdalenost,D02_prumer_uchytneho_sroubu);
+        
+//WINDGAUGE02A_S01  stator velky dil
 //-------------------------------------------------------------
 //-------------------------------------------------------------
-color(barva_rotor4)
-    translate([0,0,-posunuti_dilu*4-(vyska_rotoru2/2+vyska_matky+vzdalenost_rot_stat+stator1_sila+(lozisko_vyska+sila_pod_loziskem)+((sila_pod_loziskem+delka_hridele+2))-sila_pod_loziskem+(vyska_pod_magnetem+magnet_zapusteni)/2)])
-        rotate(a = [0, 180, 0]) 
-            rotor4 (vyska_pod_magnetem,magnet_zapusteni,magnet_prumer,vyska_hlavy_sroubu,prumer_hlavy_sroubu,prumer_sroubu);
-
-//STATOR1
+/*
+color(barva_S01)
+    translate([0,0,(S01_vyska_na_elektroniku+S01_vyska_zavitu_na_nasroubovani_drzaku+2*S01_vyska_komponentu_na_lozisko)/2+D01_material_pod_zavitem])
+             
+ 
+WINDGAUGE02A_S01(R02_vzdalenost_mezi_uchyty_lopatek,L01_sila_zapusteni_drzaku,L01_hloubka_zapusteni,S01_vyska_zuzene_casti,S01_vyska_na_elektroniku,S01_vyska_zavitu_na_nasroubovani_drzaku,S01_vyska_prechodu,vule_mezi_statorem_rotorem,S01_vyska_zavitu_na_nasroubovani_drzaku);        
+*/        
+        
+//WINDGAUGE02A_S02 
 //-------------------------------------------------------------
 //-------------------------------------------------------------
-color(barva_stator1)
-translate([0,0,-posunuti_dilu-(vyska_rotoru2/2+vyska_matky+vzdalenost_rot_stat+stator1_sila/2)])
+color(barva_S02)
+    translate([0,0,(S01_vyska_na_elektroniku+S01_vyska_zavitu_na_nasroubovani_drzaku+2*S01_vyska_komponentu_na_lozisko)+D01_material_pod_zavitem-2*S01_vyska_komponentu_na_lozisko])
+            rotate(a=[0,0,0])
+            
+          WINDGAUGE02A_S02(S01_sila_materialu,S01_vyska_komponentu_na_lozisko,S01_prumer_zavitu,lozisko_vyska,lozisko_prumer_vnejsi,lozisko_prumer_vnitrni,lozisko_prekryv,vyska_matky,prumer_orechu,prumer_sroubu,senzor_delka,senzor_sirka);  
 
-stator1(stator1_sila,lozisko_prumer_vnejsi,sirka_matky,lozisko_prumer_vnitrni,lozisko_prekryv,prumer_sroubu);
-
-//STATOR2
+//WINDGAUGE02A_S03 
 //-------------------------------------------------------------
 //-------------------------------------------------------------
-color(barva_stator2)
-    translate([0,0,-posunuti_dilu*2-(vyska_rotoru2/2+vyska_matky+vzdalenost_rot_stat+stator1_sila+(lozisko_vyska+sila_pod_loziskem)/2)])
-        stator2(lozisko_vyska,sila_pod_loziskem,prumer_rotoru1,sila_materialu,vule1,stator3_sila_steny,lozisko_prumer_vnejsi,lozisko_prumer_vnitrni,lozisko_prekryv,
-prumer_sroubu,
-lozisko_vyska,vzdalenost_der_x,vzdalenost_der_y,vyska_hlavy_sroubu,prumer_hlavy_sroubu,prumer_rotoru1,stator3_vzdalenost_od_steny);
-
-//STATOR3
+color(barva_S03)
+    translate([0,0,(S01_vyska_na_elektroniku+S01_vyska_zavitu_na_nasroubovani_drzaku+2*S01_vyska_komponentu_na_lozisko)+D01_material_pod_zavitem-2*S01_vyska_komponentu_na_lozisko])
+            rotate(a=[180,0,0])
+            
+          WINDGAUGE02A_S03(S01_sila_materialu,S01_vyska_komponentu_na_lozisko,S01_prumer_zavitu,lozisko_vyska,lozisko_prumer_vnejsi,lozisko_prumer_vnitrni,lozisko_prekryv,vyska_matky,prumer_orechu,prumer_sroubu,vyska_hlavy_sroubu,prumer_hlavy_sroubu);                         
+        
+//WINDGAUGE02A_R01  rotor 1 vrchní díl
 //-------------------------------------------------------------
 //-------------------------------------------------------------
-color(barva_stator3)
-    translate([0,0,-posunuti_dilu*6-(vyska_rotoru2/2+vyska_matky+vzdalenost_rot_stat+stator1_sila+stator3_vyska/2)])
-stator3(stator3_vyska,prumer_rotoru1,lozisko_vyska,sila_pod_loziskem,sila_materialu,vule1,stator3_sila_steny,
-        stator3_vyska_prekryti,prumer_hlavy_sroubu,stator3_vzdalenost_od_steny,lozisko_vyska,prumer_sroubu,roztec_sroubu,uchyt_prumer_sroubu,vyska_stator4,kabel_prumer);
+color(barva_R01)
+    translate([0,0,(S01_vyska_na_elektroniku+S01_vyska_zavitu_na_nasroubovani_drzaku+2*S01_vyska_komponentu_na_lozisko)+D01_material_pod_zavitem+S01_vyska_zuzene_casti+S01_vyska_prechodu+(R02_sila_mateiralu_pod_lopatkami+L01_hloubka_zapusteni_drzaku)])
+            rotate(a=[180,0,0])
+            
+        WINDGAUGE02A_R01(R02_sila_mateiralu_pod_lopatkami,L01_hloubka_zapusteni_drzaku,R02_vzdalenost_mezi_uchyty_lopatek,L01_sila_zapusteni_drzaku,L01_hloubka_zapusteni,prumer_pomocne_trubicky,zapusteni_pomocne_trubicky,vule_mezi_statorem_rotorem,R01_vyska_preryti_statoru,R01_sila_materialu_pro_prekriti,S01_sila_materialu);  
+ 
 
-
-//STATOR4
+//WINDGAUGE02A_R02  rotor 2 spodní díl
 //-------------------------------------------------------------
 //-------------------------------------------------------------
-color(barva_stator4)
-    translate([0,0,-posunuti_dilu*7-(vyska_rotoru2/2+vyska_matky+vzdalenost_rot_stat+stator1_sila+stator3_vyska+vyska_stator4/2)])
-        rotate(a = [180, 0, 0])
-            stator4 (roztec_sroubu,uchyt_prumer_sroubu,vyska_stator4,sila_materialu,uchyt_vyska_matky,uchyt_prumer_orechu,kabel_prumer);
-
-
-//LOPATKY
+color(barva_R02)
+    translate([0,0,(S01_vyska_na_elektroniku+S01_vyska_zavitu_na_nasroubovani_drzaku+2*S01_vyska_komponentu_na_lozisko)+D01_material_pod_zavitem+S01_vyska_zuzene_casti+S01_vyska_prechodu-(R02_sila_mateiralu_pod_lopatkami+L01_hloubka_zapusteni_drzaku)/2])
+            rotate(a=[0,0,0])
+            
+       WINDGAUGE02A_R02(R02_sila_mateiralu_pod_lopatkami,L01_hloubka_zapusteni_drzaku,R02_vzdalenost_mezi_uchyty_lopatek,L01_sila_zapusteni_drzaku,L01_hloubka_zapusteni,prumer_pomocne_trubicky,zapusteni_pomocne_trubicky);
+       
+       
+//WINDGAUGE02A_L01  lopatka 1
 //-------------------------------------------------------------
 //-------------------------------------------------------------
-
-//LOPATKA1
-color(barva_lopatky)
-    rotate(a = [0, 0, 90])
-        translate([sila_uchytu/2,-prumer_lopatky/2-delka_uchytu_lopatky-hloubka_uchytu-prumer_rotoru1/2+hloubka_uchytu,posunuti_dilu+vyska_rotoru2/2+vyska_uchytu/2])
-        lopatka(hloubka_uchytu,sila_uchytu,vyska_uchytu,tolerance_uchytu,prumer_lopatky,sila_materialu_lopatky,delka_uchytu_lopatky,hrana_uchytu_lopatky,prumer_rotoru1,prumer_sroubu);
-
-//LOPATKA2
-color(barva_lopatky)
-    rotate(a = [0, 0, 210])
-        translate([sila_uchytu/2,-prumer_lopatky/2-delka_uchytu_lopatky-hloubka_uchytu-prumer_rotoru1/2+hloubka_uchytu,posunuti_dilu+vyska_rotoru2/2+vyska_uchytu/2])
-            lopatka(hloubka_uchytu,sila_uchytu,vyska_uchytu,tolerance_uchytu,prumer_lopatky,sila_materialu_lopatky,delka_uchytu_lopatky,hrana_uchytu_lopatky,prumer_rotoru1,prumer_sroubu);
-
-//LOPATKA2
-    color(barva_lopatky)
-        rotate(a = [0, 0, 330])
-            translate([sila_uchytu/2,-prumer_lopatky/2-delka_uchytu_lopatky-hloubka_uchytu-prumer_rotoru1/2+hloubka_uchytu,posunuti_dilu+vyska_rotoru2/2+vyska_uchytu/2])
-                lopatka(hloubka_uchytu,sila_uchytu,vyska_uchytu,tolerance_uchytu,prumer_lopatky,sila_materialu_lopatky,delka_uchytu_lopatky,hrana_uchytu_lopatky,prumer_rotoru1,prumer_sroubu);
-
-
+color(barva_L01)
+    translate([L01_prumer_lopatky/2+L01_delka_uchytu+L01_hloubka_zapusteni/2+(R02_vzdalenost_mezi_uchyty_lopatek+2*L01_sila_zapusteni_drzaku)/2,L01_hrana_drzaku_a/2,(S01_vyska_na_elektroniku+S01_vyska_zavitu_na_nasroubovani_drzaku+2*S01_vyska_komponentu_na_lozisko)+D01_material_pod_zavitem+S01_vyska_zuzene_casti+S01_vyska_prechodu+L01_hrana_drzaku_b/2])
+            rotate(a=[0,0,90])
+            
+      WINDGAUGE02A_L01(L01_hloubka_zapusteni,L01_hloubka_zapusteni_drzaku,L01_sila_zapusteni_drzaku,L01_hrana_drzaku_a,L01_hrana_drzaku_b,L01_tolerance_drzaku,L01_delka_uchytu,L01_prumer_lopatky,L01_sila_materialu_lopatky);
+      
+      
+//WINDGAUGE02A_L01  lopatka 2
+//-------------------------------------------------------------
+//-------------------------------------------------------------
+color(barva_L01)
+rotate(a=[0,0,120])
+    translate([L01_prumer_lopatky/2+L01_delka_uchytu+L01_hloubka_zapusteni/2+(R02_vzdalenost_mezi_uchyty_lopatek+2*L01_sila_zapusteni_drzaku)/2,L01_hrana_drzaku_a/2,(S01_vyska_na_elektroniku+S01_vyska_zavitu_na_nasroubovani_drzaku+2*S01_vyska_komponentu_na_lozisko)+D01_material_pod_zavitem+S01_vyska_zuzene_casti+S01_vyska_prechodu+L01_hrana_drzaku_b/2])
+            rotate(a=[0,0,90])
+            
+      WINDGAUGE02A_L01(L01_hloubka_zapusteni,L01_hloubka_zapusteni_drzaku,L01_sila_zapusteni_drzaku,L01_hrana_drzaku_a,L01_hrana_drzaku_b,L01_tolerance_drzaku,L01_delka_uchytu,L01_prumer_lopatky,L01_sila_materialu_lopatky);  
+  
+//WINDGAUGE02A_L01  lopatka 3
+//-------------------------------------------------------------
+//-------------------------------------------------------------
+color(barva_L01)
+rotate(a=[0,0,240])
+    translate([L01_prumer_lopatky/2+L01_delka_uchytu+L01_hloubka_zapusteni/2+(R02_vzdalenost_mezi_uchyty_lopatek+2*L01_sila_zapusteni_drzaku)/2,L01_hrana_drzaku_a/2,(S01_vyska_na_elektroniku+S01_vyska_zavitu_na_nasroubovani_drzaku+2*S01_vyska_komponentu_na_lozisko)+D01_material_pod_zavitem+S01_vyska_zuzene_casti+S01_vyska_prechodu+L01_hrana_drzaku_b/2])
+            rotate(a=[0,0,90])
+            
+      WINDGAUGE02A_L01(L01_hloubka_zapusteni,L01_hloubka_zapusteni_drzaku,L01_sila_zapusteni_drzaku,L01_hrana_drzaku_a,L01_hrana_drzaku_b,L01_tolerance_drzaku,L01_delka_uchytu,L01_prumer_lopatky,L01_sila_materialu_lopatky);    
+      
+      
+//WINDGAUGE02A_R03  kryt
+//-------------------------------------------------------------
+//-------------------------------------------------------------
+color(barva_R03)
+    translate([0,0,(S01_vyska_na_elektroniku+S01_vyska_zavitu_na_nasroubovani_drzaku+2*S01_vyska_komponentu_na_lozisko)+D01_material_pod_zavitem+S01_vyska_zuzene_casti+S01_vyska_prechodu+(R02_sila_mateiralu_pod_lopatkami+L01_hloubka_zapusteni_drzaku)])
+            rotate(a=[0,0,0])
+            
+        WINDGAUGE02A_R03(R03_sila_materialu,R02_vzdalenost_mezi_uchyty_lopatek,L01_sila_zapusteni_drzaku,L01_hloubka_zapusteni,vule_mezi_statorem_rotorem,R01_sila_materialu_pro_prekriti,
+R02_sila_mateiralu_pod_lopatkami,S01_sila_materialu);       
