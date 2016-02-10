@@ -48,6 +48,27 @@ L01_delka_uchytu=20;
 L01_prumer_lopatky=40;
 L01_sila_materialu_lopatky=3;
 
+//WINDGAUGE02A_D01 //uchyt velky
+D01_material_pod_zavitem=10;
+D01_material_za_zavitem=5;
+D01_material_pred_zavitem=5;
+D01_delka_tyce=40;
+D01_sirka_tyce=20;
+
+
+
+//WINDGAUGE02A_D02 //uchyt na sloup
+D02_sila_materialu=4;
+D02_vyska_uchytky=40;
+D02_prumer_obruby=28;
+D02_delka_celeho_uchytu=70;
+D02_dotahova_vzdalenost=1.5;
+D02_prumer_uchytneho_sroubu=6.2;
+
+
+
+
+
 //WINDGAUGE02A_R01 //rotor s prekritim statoru
 R01_vyska_preryti_statoru=10;
 R01_sila_materialu_pro_prekriti=2;

@@ -1,8 +1,10 @@
-$fn=40; // model faces resolution.
+$fn=100; // model faces resolution.
 include <../configuration.scad>
 
-include <WINDGAUGE02A_D02.scad>
-include <polyScrewThread_r1.scad>
+
+use <../SRC/polyScrewThread_r1.scad>
+use <../SRC/WINDGAUGE02A_D02.scad>
+
 
 PI=3.141592;
 
