@@ -15,7 +15,7 @@ difference()
     
 //metric_thread (diameter=S01_prumer_zavitu-0.3, pitch=1, length=S01_vyska_komponentu_na_lozisko, internal=false, n_starts=6);
             
- screw_thread(S01_prumer_zavitu-0.5,4,55,S01_vyska_komponentu_na_lozisko,PI/2,2);
+ screw_thread(S01_prumer_zavitu-2.5,4,55,S01_vyska_komponentu_na_lozisko,PI/2,2);
 
 //otvory na ložisko
 translate([0,0,lozisko_vyska/2])
@@ -62,4 +62,4 @@ translate([-senzor_delka/2,senzor_sirka/2,vyska_matky/2])
     
 
     
- //WINDGAUGE02A_S02(S01_sila_materialu,S01_vyska_komponentu_na_lozisko,S01_prumer_zavitu,lozisko_vyska,lozisko_prumer_vnejsi,lozisko_prumer_vnitrni,lozisko_prekryv,vyska_matky,prumer_orechu,prumer_sroubu,senzor_delka,senzor_sirka);   
+WINDGAUGE02A_S02(S01_sila_materialu,S01_vyska_komponentu_na_lozisko,S01_prumer_zavitu,lozisko_vyska,lozisko_prumer_vnejsi,lozisko_prumer_vnitrni,lozisko_prekryv,vyska_matky,prumer_orechu,prumer_sroubu,senzor_delka,senzor_sirka);   
