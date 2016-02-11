@@ -86,7 +86,7 @@ R03_sila_materialu=1.5;
 //WINDGAUGE02A_S01 //stator
 S01_sila_materialu=2;
 S01_vyska_zuzene_casti=20;
-S01_vyska_komponentu_na_lozisko=15;
+S01_vyska_komponentu_na_lozisko=7;
 S01_vyska_zavitu_na_nasroubovani_drzaku=15;
 S01_vyska_na_elektroniku=50;
 S01_prumer_zavitu=70;
