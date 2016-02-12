@@ -28,6 +28,20 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:ADC-DAC
+LIBS:asp-134604-01_(fmc)
+LIBS:clock
+LIBS:header
+LIBS:Jumpers
+LIBS:konektory
+LIBS:mechanical
+LIBS:MLAB_D
+LIBS:MLAB_IO
+LIBS:MLAB_Jumpers
+LIBS:OpAmp
+LIBS:sata7-67491-1030
+LIBS:MLAB_BATERY
+LIBS:MLAB_T
 LIBS:LION2CELL01D-cache
 EELAYER 25 0
 EELAYER END
@@ -275,17 +289,6 @@ F 3 "" H 850 1850 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L JUMP_2x1 J4
-U 1 1 55328437
-P 850 1950
-F 0 "J4" H 500 2150 50  0000 C CNN
-F 1 "JUMP_2x1" V 850 2100 40  0001 C CNN
-F 2 "Mlab_Pin_Headers:Straight_1x02" H 850 1950 60  0001 C CNN
-F 3 "" H 850 1950 60  0000 C CNN
-	1    850  1950
-	-1   0    0    1   
-$EndComp
-$Comp
 L GND #PWR05
 U 1 1 55328532
 P 2250 2900
@@ -332,12 +335,12 @@ $EndComp
 $Comp
 L JUMP_2x1 J6
 U 1 1 55328809
-P 850 2150
-F 0 "J6" H 500 2350 50  0000 C CNN
-F 1 "JUMP_2x1" V 850 2300 40  0001 C CNN
-F 2 "Mlab_Pin_Headers:Straight_1x02" H 850 2150 60  0001 C CNN
-F 3 "" H 850 2150 60  0000 C CNN
-	1    850  2150
+P 850 1750
+F 0 "J6" H 500 1950 50  0000 C CNN
+F 1 "JUMP_2x1" V 850 1900 40  0001 C CNN
+F 2 "Mlab_Pin_Headers:Straight_1x02" H 850 1750 60  0001 C CNN
+F 3 "" H 850 1750 60  0000 C CNN
+	1    850  1750
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -585,7 +588,7 @@ Text Notes 5550 650  0    60   ~ 0
 SW POWER
 Text Notes 650  950  1    60   ~ 0
 POWER IN
-Text Notes 900  2350 1    60   ~ 0
+Text Notes 1190 1720 2    60   ~ 0
 TO HOST MCU
 Text Label 1300 1800 0    60   ~ 0
 STAT1
@@ -595,8 +598,8 @@ Text Label 1300 2100 0    60   ~ 0
 CMODE
 Text Label 1300 2200 0    60   ~ 0
 CE
-Text Label 1300 2300 0    60   ~ 0
-CELLS
+Text Label 1300 1900 0    60   ~ 0
+STAT2
 $Comp
 L BQ29209 U1
 U 1 1 55330527
@@ -614,7 +617,7 @@ U 1 1 553309C6
 P 7600 3950
 F 0 "R22" V 7680 3950 40  0000 C CNN
 F 1 "0R01 75PPM" V 7500 3950 40  0000 C CNN
-F 2 "Mlab_R:SMD-1206" V 7530 3950 30  0001 C CNN
+F 2 "Mlab_R:SMD-2512" V 7530 3950 30  0001 C CNN
 F 3 "" H 7600 3950 30  0000 C CNN
 	1    7600 3950
 	1    0    0    -1  
@@ -1709,16 +1712,13 @@ Wire Wire Line
 Connection ~ 2250 2000
 Connection ~ 2250 2100
 Connection ~ 2000 2200
-Connection ~ 2050 2300
 Connection ~ 2650 700 
-Wire Wire Line
-	1250 2300 2900 2300
 Wire Wire Line
 	1250 2200 2900 2200
 Wire Wire Line
 	1250 2000 2900 2000
 Wire Wire Line
-	2900 1900 2450 1900
+	1250 1900 2900 1900
 Wire Wire Line
 	1250 1800 2900 1800
 Wire Wire Line
@@ -2217,4 +2217,33 @@ F 3 "" H 8390 6020 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	8390 5940 8390 6020
+Connection ~ 2450 1900
+Wire Wire Line
+	2050 2300 2900 2300
+$Comp
+L JUMP2_2x1 J4
+U 1 1 56BE22DB
+P 950 2100
+F 0 "J4" H 790 2020 50  0000 C CNN
+F 1 "JUMP2_2x1" H 1150 2000 40  0001 C CNN
+F 2 "" H 950 2100 60  0001 C CNN
+F 3 "" H 950 2100 60  0000 C CNN
+	1    950  2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR046
+U 1 1 56BE3948
+P 570 2160
+F 0 "#PWR046" H 570 1910 60  0001 C CNN
+F 1 "GND" H 570 2010 60  0000 C CNN
+F 2 "" H 570 2160 60  0000 C CNN
+F 3 "" H 570 2160 60  0000 C CNN
+	1    570  2160
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	600  2100 570  2100
+Wire Wire Line
+	570  2100 570  2160
 $EndSCHEMATC
