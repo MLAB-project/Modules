@@ -28,18 +28,18 @@ elif len(sys.argv) == 2:
     SPEED = 5
     DISTANCE = 50
 
-elif len(sys.argv) > 2:
+elif len(sys.argv) == 3:
     SPEED = eval(sys.argv[2])
     DISTANCE = 100
 
-elif len(sys.argv) > 3:
+elif len(sys.argv) == 4:
     SPEED = eval(sys.argv[2])
     DISTANCE = eval(sys.argv[3])
 
 else: 
     PORT = 0
     SPEED = 10
-    DISTANCE = 100
+    DISTANCE = 50
 
 
 class axis:
@@ -168,6 +168,8 @@ cfg = config.Config(
 cfg.initialize()
 
 print "Stepper motor control test started. \r\n"
+print "Max motor speed: %d " % SPEED
+print "Distance to run: %d " % DISTANCE
 
 spi = cfg.get_device("spi")
 
@@ -185,8 +187,11 @@ try:
     print "Axis is running"
 
     for i in range(5):
+        print i
         X.MoveWait(DISTANCE)      # move forward and wait for motor stop
+        print "Changing direction of rotation.."
         X.MoveWait(-DISTANCE)     # move backward and wait for motor stop
+        print "Changing direction of rotation.."
 
     X.Float()   # release power
 
