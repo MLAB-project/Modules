@@ -67,31 +67,37 @@ print sensor.get_zero_position()
 try:
     angles = np.zeros(5)
     angles[4] = sensor.get_angle(verify = False)
-    time.sleep(0.1)
+    time.sleep(0.01)
     angles[3] = sensor.get_angle(verify = False)
-    time.sleep(0.1)
+    time.sleep(0.01)
     angles[2] = sensor.get_angle(verify = False)
-    time.sleep(0.1)
+    time.sleep(0.01)
     angles[1] = sensor.get_angle(verify = False)
     n = 0
+    speed = 0
+    AVERAGING = 50
 
     while True:
-        time.sleep(0.1)
-        angles[0] = sensor.get_angle(verify = False)
-        
-        if (angles[0] + n*360 - angles[1]) > 300:
-            n -= 1
-            angles[0] = angles[0] + n*360
-        elif -(angles[0] - n*360 - angles[1]) > 300:  # compute angular speed in backward direction.
-            n += 1
-            angles[0] = angles[0] - n*360
-        else:
-            angles[0] = angles[0] + n*360
-        
-        speed = (-angles[4] + 8*angles[3] - 8*angles[1] + angles[0])/12
-        angles = np.roll(angles, 1)
-    
-        sys.stdout.write("Speed: " + str(speed) +"\t"+ str(angles[0]) + "\r\n")
-        sys.stdout.flush()
+        for i in range(AVERAGING):
+            time.sleep(0.01)
+            angles[0] = sensor.get_angle(verify = False)
+            
+            if (angles[0] + n*360 - angles[1]) > 300:
+                n -= 1
+                angles[0] = angles[0] + n*360
+
+            elif (angles[0] + n*360 - angles[1]) < -300:  # compute angular speed in backward direction.
+                n += 1
+                angles[0] = angles[0] + n*360
+
+            else:
+                angles[0] = angles[0] + n*360
+            
+            speed += (-angles[4] + 8*angles[3] - 8*angles[1] + angles[0])/12
+            angles = np.roll(angles, 1)
+
+        speed = speed/AVERAGING             # apply averaging on acummulated value.
+        print "Speed: %0.2f \t Total Angle: %0.2f \r\n" % (speed, angles[0])
+
 except KeyboardInterrupt:
     sys.exit(0)
