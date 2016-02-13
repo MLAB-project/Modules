@@ -1,6 +1,10 @@
 #!/usr/bin/python
 
-# Python library for RPS01A MLAB module with AS5048B I2C Magnetic position sensor.
+# MLAB meteostation wind speed gauge with magnetic rotation sensor. 
+# This simple algorithm calculate difference between five time equidistant points during the rotation. The result is angular speed per time step.
+# Size of time-step could be varied depending on expected wind speed range to measure. 
+# Algorithm should be expanded by Kalman filtering to minimize dependence on fast reading.
+# The measuring principle could introduce time-stamped reading to increase precision of measurement. It could be possible because the readings are not exactly time equidistant in real Linux word. 
 
 #uncomment for debbug purposes
 #import logging
