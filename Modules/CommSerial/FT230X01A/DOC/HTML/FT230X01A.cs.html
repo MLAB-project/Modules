@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> FT230X01A </title>
+    <meta name="keywords" content="stavebnice MLAB univerzální moduly">
+    <meta name="description" content="Projekt MLAB, Prázdná stránka">
+    <!-- AUTOINCLUDE START "Page/Head.cs.ihtml" DO NOT REMOVE -->
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB.css" type="text/css" title="MLAB základní styl">
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB_Print.css" type="text/css" media="print">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../Web/PIC/MLAB.ico">
+    <script type="text/javascript" src="../../../../../Web/JS/MLAB_Menu.js"></script>
+    <!-- AUTOINCLUDE END -->
+  </head>
+
+  <body lang="cs">
+
+    <!-- AUTOINCLUDE START "Page/Header.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== HLAVICKA ============== -->
+    <div class="Header">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawHeader();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- AUTOINCLUDE START "Page/Menu.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== MENU ============== -->
+    <div class="Menu">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawMenu();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) menu je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- ============== TEXT ============== -->
+    <div class="Text">
+      <p class="Title">
+        Převodník USB na RS232
+      </p>
+      <p class=Autor>
+        Milan Horkel
+      </p>
+      <p class="Subtitle">
+        Modul slouží jako univerzální převodník z&nbsp;USB na RS232
+        s&nbsp;výstupy na straně RS232 v&nbsp;úrovních TTL. Převodník používá
+        obvod FT230X od firmy FTDI. Tyto obvody jsou podporované ve všech
+        rozšířených operačních systémech.
+      </p>
+      <p class="Subtitle">
+        <img width="480" height="246" src="FT230X01A.cs_soubory/image001.jpg" alt="Image">
+      </p>
+      
+      <h1> Technické parametry </h1>
+      <table>
+        <tr>
+          <th> Parametr </th>
+          <th> Hodnota </th>
+          <th> Poznámka </th>
+        </tr>
+        <tr>
+          <td> Rozhraní<br>
+               Konektor </td>
+          <td> USB 2.0<br>
+               USB B </td>
+          <td> High Speed.<br>
+               Standardní velký USB konektor. </td>
+        </tr>
+        <tr>
+          <td> Spotřeba </td>
+          <td> 8mA&nbsp;/&nbsp;5V </td>
+          <td> Bez připojeného dalšího zařízení. </td>
+        </tr>
+        <tr>
+          <td> Signály sériové </td>
+          <td> RXD TXD<br>
+               RTS# CTS# </td>
+          <td> Základní signály sériového rozhraní s řízením toku. Volitelná
+               polarita. </td>
+        </tr>
+        <tr>
+          <td> Signály pomocné </td>
+          <td> CBUS0 až CBUS3 </td>
+          <td> Konfigurovatelné funkce, v továrním nastavení indikace RX a TX a
+               spínání napájení pro externí využití. </td>
+        </tr>
+        <tr>
+          <td> Signálové úrovně </td>
+          <td> TTL/CMOS </td>
+          <td> VCCIO 1.62V až 3.63V, 5V tolerantní vstupy. </td>
+        </tr>
+        <tr>
+          <td> Řízení toku </td>
+          <td> Nastavitelné </td>
+          <td> Možno nastavit HW i SW řízení toku dat. </td>
+        </tr>
+        <tr>
+          <td> Režim spánku </td>
+          <td> Ano </td>
+          <td> Spínač napájení pro externí použití. </td>
+        </tr>
+        <tr>
+          <td> Rozměry </td>
+          <td> 61x31x18mm </td>
+          <td> Výška nad základnou </td>
+        </tr>
+      </table>
+
+      <h1> Popis konstrukce </h1>
+      
+      <h2> Úvodem </h2>
+
+      <p>
+        Standardní sériový port RS232 se stal vzácnou relikvií minulých časů. V
+        současné době většina zařízení (mikroprocesorů, obvodů SoC, vestavěných
+        počítačů a podobně) používá sériovou komunikaci stejně jako v
+        minulosti, ale vyvedené signály obvykle pracují s TTL či CMOS úrovněmi
+        napětí.
+      </p>
+
+      <p>
+        Použitý převodník USB pro sériovou komunikaci podporuje signály s
+        napěťovými úrovněmi pro CMOS/TTL logiku s úrovněmi 1.8V až 3.3V s tím,
+        že vstupy jsou 5V tolerantní. Obvod generuje pomocné napětí 3.3V, které
+        lze přímo použít pro napájení IO.
+      </p>
+
+      <p>
+        <i><b> Důležité upozornění - podivné chování obvodu</b></i>
+      </p>
+
+      <p>
+        <i>Když se obvod FT230X připojí k USB, ale <b>nemá</b> přivedeno
+        napájení IO vývodů (VCCIO), nedojde ke správné inicializaci IO vývodů a 
+        obvod pak nekomunikuje i když ze strany USB funguje normálně. Dodatečné
+        připojení VCCIO nepomůže.</i>
+      </p>
+
+      <p>
+        <i>Když inicializace proběhne správně (byly obě napájení přítomné, lze
+        obvod odpojit od USB nebo od VCCIO a po opětovném připojení chybějícího
+        napětí funguje normálně.</i>
+      </p>
+
+      <p>
+        <i>Toto chování není podchyceno v Errata dokumentaci obvodu, ani v 
+        katalogovém listu. VCCIO není dostatečně nezávislé na hlavním napájení
+        obvodu. Dle chování obvodu se lze domnívat, že se neprovede inicializace
+        IO buněk obvodu.</i>
+      </p>
+
+      <p>
+        <i>Dalším překvapením je to, že výstup TXLED# se aktivuje při příjmu
+        sériových dat a RXLED# při odesílání sériových dat (je to opačně, než je
+        logické a než to mají starší obvody FTDI). Náprava je snadná,
+        přeprogramováním konfigurace v EEPROM obvodu.</i>
+      </p>
+
+      <h2> Obvod FT230X </h2>
+
+      <p>
+        Jedná se o novější obvod, nástupce populárního obvodu FT232R. Je menší
+        a podstatně levnější. Existuje několik členů v řadě X s různými
+        rozhraními (sériové RS232 s RTS#/CTS#, sériové RS232 s plným počtem
+        řádících signálů, s rozhraním SPI, s rozhraním I2C slave).
+      </p>
+
+      <p>
+        Hlavní vlastnosti obvodu lze shrnout v&nbsp;těchto bodech:
+      </p>
+
+      <ul>
+        <li>USB 2.0 s&nbsp;přenosem 300Bd až 3MBd s&nbsp;obvyklými nastaveními (7 nebo 8 bitů, parita, …)</li>
+        <li>FIFO pro příjem i vysílání, 2x512 bajtů</li>
+        <li>Podpora řízení přenosu SW i HW (jen RTS#/CTS# u tohoto obvodu)</li>
+        <li>Podpora ve všech běžných OS drivery od výrobce</li>
+        <li>Programovatelné polarity signálů, pomocné signály</li>
+        <li>Podpora úsporných režimů</li>
+        <li>Nízká cena</li>
+        <li>Minium externích součástek, nepotřebuje krystal</li>
+        <li>Konfigurační paměť EEPROM je integrovaná uvnitř obvodu</li>
+      </ul>
+
+      <h2> Zapojení modulu </h2>
+
+      <p>
+        Zapojení vychází z&nbsp;katalogu součástky a příslušných aplikačních
+        poznámek.
+      </p>
+
+      <p>
+        Obvod FT230X má vestavěný vnitřní stabilizátor 3.3V pro buzení USB
+        signálů (jádro má další vnitřní sabilizátor, který ale není vyveden).
+        Napětí 3.3V je vyvedeno na konektor J3 a lze jej využít pro napájení IO
+        vývodů (VCCIO). Dále jej lze využít pro napájení dalších obvodů,
+        zatížitelnost je až 50mA.
+      </p>
+
+      <p>
+        Propojkou na konektoru J3 lze zvolit VCCIO (napájení vstupně-výstupních
+        budičů) z vnitřního stabilizátoru 3.3V, nebo z vnějšího zdroje z
+        konektoru J5. Rozsah podporovaných napětí je 1.62V až 3.63V, vstupy
+        jsou 5V tolerantní. Při napětí VCCIO cca 1V obvod odpojí budiče.
+      </p>
+
+      <p>
+        Chování obvodu vzhledem k VCCIO je zmíněno v poznámce na začátku
+        dokumentu, protože je to věc důležitá (zejména pro návrh nového
+        hardwaru). Nespoléhejte na nezávislost VCCIO a vnitřního napájení
+        obvodu.
+      </p>
+
+      <p>
+        Tranzistor Q1 spíná napětí USB 5V na konektor J4. Toto napětí se
+        automaticky vypne, když počítač přejde do režimu spánku. Pro tuto
+        funkci se musí nakonfigurovat v paměti EEPROM obvodu na vývod C3
+        (CBUS3) funkce PWREN#.
+      </p>
+
+      <p>
+        LED diody indikují RX a TX aktivitu. Funkci vývodů je možno změnit
+        modifikací obsahu EEPROM. Na vývod C1 (CBUS1) je defaultně nastavena
+        funkce RXLED# a na vývod C2 (CBUS2) je defaultně nastavena funkce
+        TXLED#.
+      </p>
+
+      <p>
+        Kupodivu funkce RXLED# bliká při vysílání dat na sériovou linku a
+        funkce TXLED# bliká při příjmu dat ze sériové linky. Je to nelogické a
+        opačné než u obvodu FT232R, ale dá se to snadno napravit
+        naprogramováním EEPROM součástky. Viz konfigurace obvodu v sekci
+        konfigurace.
+      </p>
+
+      <p>
+        <img width="1107" height="408" src="FT230X01A.cs_soubory/Schema.png" alt="Elektrické zapojení">
+      </p>
+
+      <table class="Soupiska">
+        <tr>
+          <th> Reference </th>
+          <th> Název </th>
+          <th> Pouzdro </th>
+        </tr>
+        <tr>
+          <th colspan="3"> Odpory </th>
+        </tr>
+        <tr>
+          <td> R1, R2 </td>
+          <td> 27 </td>
+          <td> R0805 </td>
+        </tr>
+        <tr>
+          <td> R6, R7, R8, R9, R10, R11, R12, R13 </td>
+          <td> 100 </td>
+          <td> R0805 </td>
+        </tr>
+        <tr>
+          <td> R14, R15, R16 </td>
+          <td> 330 </td>
+          <td> R0805 </td>
+        </tr>
+        <tr>
+          <td> R3, R5 </td>
+          <td> 1k </td>
+          <td> R0805 </td>
+        </tr>
+        <tr>
+          <td> R4 </td>
+          <td> 100k </td>
+          <td> R0805 </td>
+        </tr>
+        <tr>
+          <th colspan="3"> Keramické kondenzátory </th>
+        </tr>
+        <tr>
+          <td> C1, C2 </td>
+          <td> 47pF </td>
+          <td> C0805 </td>
+        </tr>
+        <tr>
+          <td> C3 </td>
+          <td> 10nF </td>
+          <td> C0805 </td>
+        </tr>
+        <tr>
+          <td> C4, C6, C7, C8, C9 </td>
+          <td> 100nF </td>
+          <td> C0805 </td>
+        </tr>
+        <tr>
+          <td> C5 </td>
+          <td> 10uF </td>
+          <td> C0805 </td>
+        </tr>
+        <tr>
+          <th colspan="3"> Indukčnosti </th>
+        </tr>
+        <tr>
+          <td> L1 </td>
+          <td> MI0805K400R-10 </td>
+          <td> R0805 </td>
+        </tr>
+        <tr>
+          <th colspan="3"> Diody </th>
+        </tr>
+        <tr>
+          <td> D1, D2 </td>
+          <td>HCL-1503-4(GREEN) </td>
+          <td> LED1206REV </td>
+        </tr>
+        <tr>
+          <td> D3 </td>
+          <td> HCL-1505-4(RED) </td>
+          <td> LED1206REV </td>
+        </tr>
+        <tr>
+          <td> D4 </td>
+          <td> BZV55-B3V6 </td>
+          <td> MINIMELF </td>
+        </tr>
+        <tr>
+          <th colspan="3"> Tranzistory </th>
+        </tr>
+        <tr>
+          <td> Q1 </td>
+          <td> IRF7416SMD </td>
+          <td> SO8_FET </td>
+        </tr>
+        <tr>
+          <th colspan="3"> Integrované obvody </th>
+        </tr>
+        <tr>
+          <td> U1 </td>
+          <td> FT230XS </td>
+          <td> SSO16_154 </td>
+        </tr>
+        <tr>
+          <th colspan="3"> Pojistka </th>
+        </tr>
+        <tr>
+          <td> F1 </td>
+          <td> SR075-06 </td>
+          <td> R0805 </td>
+        </tr>
+        <tr>
+          <th colspan="3"> Mechanické součástky </th>
+        </tr>
+        <tr>
+          <td> J1 </td>
+          <td> USB_B_01 </td>
+          <td> USB_B_01 </td>
+        </tr>
+        <tr>
+          <td> J3 </td>
+          <td> JUMP3 </td>
+          <td> JUMP3 </td>
+        </tr>
+        <tr>
+          <td> J2, J4, J5 </td>
+          <td> JUMP2X3 </td>
+          <td> JUMP2X3 </td>
+        </tr>
+        <tr>
+          <td> J6 </td>
+          <td> JUMP2X8 </td>
+          <td> JUMP2X8 </td>
+        </tr>
+        <tr>
+          <th colspan="3"> Konstrukční součásti </th>
+        </tr>
+        <tr>
+          <td> 1ks </td>
+          <td> JUMPER </td>
+          <td> Propojka </td>
+        </tr>
+        <tr>
+          <td> 4ks </td>
+          <td> Šroub M3x12 </td>
+          <td> Šroub pozinkovaný </td>
+        </tr>
+        <tr>
+          <td> 4ks </td>
+          <td> Podložka M3 </td>
+          <td> Podložka pozinkovaná </td>
+        </tr>
+        <tr>
+          <td> 4ks </td>
+          <td> Sloupek M3x5 </td>
+          <td> Sloupek </td>
+        </tr>
+        <tr>
+          <td> 1ks </td>
+          <td> PCB </td>
+          <td> Plošný spoj </td>
+        </tr>
+      </table>
+
+      <h2> Mechanická konstrukce </h2>
+
+      <p>
+        Převodník je navržen v&nbsp;podobě standardního modulu stavebnice MLAB.
+        V&nbsp;rozích je opatřen upevňovacími šrouby se sloupky.
+      </p>
+
+      <p>
+        <img width="475" height="244" src="FT230X01A.cs_soubory/image004.jpg" alt="Pohled na modul">
+      </p>
+
+      <h1> Osazení a oživení </h1>
+
+      <h2> Osazení </h2>
+
+      <p>
+        Nejprve osazujeme SMD součástky. Začneme obvodem U1 aby nám nepřekážely
+        ostatní součástky. Je třeba použít pastového tavidla a minimum pájky.
+        Mikropáječka je nezbytností.
+      </p>
+
+      <p>
+        Na straně součástí nezapomeňte osadit 2 drátové propojky. Polarita LED
+        diod je označena (A jako anoda v motivu plošného spoje).
+      </p>
+
+      <p>
+        Diody LED jsou osazovány reverzně (koukají do díry v plošném spoji)!
+      </p>
+
+      <p>
+        <img width="1149" height="571" src="FT230X01A.cs_soubory/image005.png" alt="Výkres osazení, horní strana">
+      </p>
+      <p>
+        <img width="1132" height="568" src="FT230X01A.cs_soubory/image006.png"  alt="Výkres osazení, spodní strana">
+      </p>
+      <p>
+        <img width="566" height="281" src="FT230X01A.cs_soubory/image007.jpg" alt="Obrázek osazení ze spodní strany">
+      </p>
+
+      <h2> Oživení </h2>
+
+      <p>
+        Pečlivě zkontrolujeme připájení součástek (přerušení a zkraty).
+        Připojíme zdroj +5V na konektor J2 (spotřeba bude cca 5mA) a
+        zkontrolujeme napětí +3.3V na konektoru J3 na vývodu 1. Indikační dioda
+        D3 by měla svítit. Spojíme J3.2 a J3.1 (interní napájení VCCIO
+        připojíme na interní napětí +3.3V).
+      </p>
+
+      <p>
+        Připojíme na USB a počkáme, až se spustí ovladače (nové systémy je už
+        mají připravené automaticky, starší budou chtít instalační soubory).
+        Spustíme terminálový program (například PuTTY) a vyzkoušíme funkčnost.
+        Když propojíme RX a TX propojkou budou blikat obě indikační LED a
+        odesílané znaky se budou na terminálu opakovat.
+      </p>
+
+      <h2> Konfigurace </h2>
+
+      <h3> Provoz bez konfigurace </h3>
+
+      <p>
+        Obvod funguje i bez jakékoli konfigurace. Díky chybě v obvodu budou
+        prohozené ledky indikující RX a TX aktivitu. Dále nebude správně
+        fungovat spínání napájení tranzistorem Q1 při uspání počítače.
+      </p>
+
+      <h3> Konfigurace </h3>
+
+      <p>
+        Konfigurace obvodu se zapisuje do interní paměti EEPROM. K nastavování
+        konfigurace je k dispozici program FT Prog, který je určen pro Windows.
+        Nalezneme jej na webu FTDI tady:<br>
+        <a href="http://www.ftdichip.com/Support/Utilities.htm#FT_PROG">http://www.ftdichip.com/Support/Utilities.htm#FT_PROG</a>
+      </p>
+
+      <p>
+        Pro správnou funkci spínacího tranzistoru Q1 je třeba vývodu C3 (CBUS3)
+        přiřadit funkci PWREN#. Uvedené nastavení funguje tak, že v případě
+        uspání počítače (s aktivním USB portem) vypne tranzistor Q1 výstupní
+        napětí 5V (z USB) na konektoru J4 a tím vypne spotřebu cílové aplikace.
+      </p>
+
+      <p>
+        Dále je třeba prohodit funkce TXLED# a RXLED# na vývodech C1 a C2 aby
+        funkce odpovídala potisku. Modul má popisky správně, jen obvod FTDI
+        funguje nelogicky opačně.
+      </p>
+
+      <p>
+        <img width="785" height="475" src="FT230X01A.cs_soubory/image008.jpg" alt="Program FT_Prog, nastavení">
+      </p>
+
+      <p>
+        Dále lze nastavit jméno a identifikaci zařízení, případně jeho sériové
+        číslo. Při změně položek VendorID/DeviceID je nezbytné změnit tyto
+        parametry i v INF souborech driverů (aby se správně přiřadily) a
+        případně drivery nechat znovu podepsat (novější systémy Windows).
+      </p>
+
+      <p>
+        Dále se konfigurují provozní parametry součástky (režim napájení a
+        spotřeba, polarita signálů, síla a rychlost budičů).
+      </p>
+
+      <p>
+        Konfiguraci je možné uložit do souboru a ten pak opakovaně použít. Vzor
+        je uložen v adresáři EEPROM.
+      </p>
+
+      <h1> Programové vybavení – drivery </h1>
+
+      <p>
+        Drivery, programy a originální dokumentace na stránkách výrobce čipu
+        <a href="http://www.ftdichip.com/">http://www.ftdichip.com</a>.
+        Aplikační poznámky si zaslouží alespoň zběžné prostudování.
+      </p>
+
+      <h2> Instalace driverů </h2>
+
+      <p>
+        Při prvním připojení převodníku k&nbsp;USB portu si systém vyžádá
+        adresář s&nbsp;drivery, u novějších systémů si je najde sám. Základní
+        chování je takové, že se pro převodník spustí drivery pro obsluhu
+        zařízení se dvěma aplikačními rozhraními.
+      </p>
+
+      <p>
+        Zařízení je podporováno všemi novými operačními systémy (Windows,
+        Linux, Android, tablety, mobily, RaspberryPI a podobně). Pro
+        programátory jsou připravené knihovny pro vlastní použití (jak pro
+        Windows, tak i pro Linux, statické i dynamické) s přehlednou
+        dokumentací.
+      </p>
+
+      <h3> Rozhraní <samp>Virtual COM Port</samp> </h3>
+
+      <p>
+        Jedná se o režim emulovaného sériového portu. Zpřístupnění tohoto
+        rozhraní je možné zakázat v&nbsp;konfiguraci součástky (v paměti
+        EEPROM) nebo v&nbsp;konfiguraci driveru (v příslušném INI souboru).
+      </p>
+
+      <p>
+        Ke komunikaci je možné použít vhodný terminálový program, oblíbená
+        volba je program PuTTY. Spojení se při odpojení USB kabelu bohužel
+        přeruší.
+      </p>
+
+      <p>
+        V systému Windows se po připojení k počítači zařízení najde a spustí se
+        pro něj příslušné drivery a v systému se zjeví nový COM port (jeho
+        číslo se dozvíme ve správci zařízení v sekci porty). Aplikace mohou se
+        zařízením komunikovat prostřednictvím rozhraní <samp>Win32 COM
+        API</samp> jako se standardním sériovým portem.
+      </p>
+
+      <p>
+        V sytému Linux se po připojení v systému zjeví nové zařízení
+        <samp>/dev/ttyUSB0</samp> (nebo tak nějak dle konkrétní distribuce) a
+        funguje jako nový sériový port. Jméno zařízení lze snadno zjistit
+        příkazem <samp>dmesg</samp>.
+      </p>
+
+      <h3> Rozhraní <samp>D2XX API</samp> </h3>
+
+      <p>
+        Toto rozhraní je proprietární rozhraní firmy FTDI a slouží pro
+        komunikaci s&nbsp;obvody FTDI včetně ovládání jejich speciálních funkcí
+        (programování paměti EEPROM, přímé ovládání vstupů a výstupů). K
+        přístupu k tomuto rozhraní je k dispozici knihovna (jako dynamická, tak
+        i statická) opět pro všechny systémy.
+      </p>
+
+      <h2> Základy USB (pro verzi USB 2.0) </h2>
+
+      <p>
+        Podrobnosti na <a href="http://www.usb.org/">http://www.usb.org</a>.
+        Zde je k&nbsp;dispozici specifikace USB.
+      </p>
+
+      <h3> Úplné základy </h3>
+
+      <p>
+        Rychlost na USB se často plete:
+      </p>
+
+      <ul>
+        <li>Full Speed – 480Mbit/s – pouze USB 2.0, používají
+            například USB disky, nutné lepší kabely</li>
+        <li>High Speed – 12MBit/s – běžná zařízení (<i>i náš
+            převodník</i>)</li>
+        <li>Low Speed – 1.5Mbit/s – zařízení typu HID
+            (klávesnice, myši)</li>
+      </ul>
+
+      <p>
+        Napájení:
+      </p>
+
+      <ul>
+        <li>Napájecí napětí 5V, k&nbsp;dispozici zaručeně minimálně 100mA, maximálně 500mA pokud to zdroj v&nbsp;počítači nebo HUBu umožňuje </li>
+        <li>Zařízení po zastrčení do USB nesmí mít spotřebu větší než 100mA </li>
+        <li>Signály jsou 3.3V, diferenciální pár </li>
+        <li>Teoreticky má být napájení jištěno <i><span class='c14'>ale u některých zařízení není</span></i> </li>
+      </ul>
+
+      <p>
+        Přenos dat:
+      </p>
+
+      <ul>
+        <li>Isochronní – zabraná šířka pásma – například pro přenos zvuku </li>
+        <li>Interrupt přenosy – pro interaktivní přenosy – například klávesnice, signalizace a podobně </li>
+        <li>Bulk přenosy – přenosy velkého množství dat – disky a podobně (<i>i náš převodník</i>) </li>
+        <li>Řídící přenosy – pro řízení USB zařízení </li>
+      </ul>
+
+      <p>
+        Komunikace po USB probíhá v&nbsp;rámcích, které se přenášejí vždy po 1
+        milisekundě (u zařízení Low Speed nebo High Speed). Do každého rámce se
+        snaží obslužné programy (drivery USB) nacpat co nejvíce přenosů.
+        Přednost mají isochronní přenosy (například pro reproduktory), pak data
+        související s&nbsp;interaktivním přenosem (očuchávání klávesnice,
+        přenos přerušení) a teprve zbytek kapacity je vyplněn hromadnými
+        přenosy. Převodník využívá hromadné (Bulk) přenosy.
+      </p>
+
+      <p>
+        V&nbsp;žádném případě nelze spoléhat na časování přenosů. Data se
+        přenášejí po paketech a na&nbsp;straně driverů i v&nbsp;obvodu FTDI
+        jsou vyrovnávací paměti pro odesílaná a pro přijímaná data. Jediná
+        správná cesta bezchybného přenosu spočívá ve využití řízení přenosu buď
+        HW signály (RTS#/CTS#), nebo znaky XON/XOFF (SW řízení přenosu).
+      </p>
+
+      <h3> Přenos dat u obvodů FTDI </h3>
+
+      <p>
+        Data se přenášejí po paketech o délce až 64B. 2 bajty se použijí pro
+        přenos stavu řídících signálů a zbytek jsou sériová data. Přenos dat
+        probíhá pouze pokud se zaplní vyrovnávací paměť o délce 64B nebo pokud
+        od&nbsp;posledního přenosu uběhla dostatečně dlouhá doba (vyprší
+        Latency Timer s přednastavenou dobou 16ms).
+      </p>
+
+      <p>
+        Pokud se změní stav některého z&nbsp;řídících signálů dojde
+        k&nbsp;přenosu v&nbsp;nejbližším milisekundovém rámci. Totéž platí i
+        pro případ přenosu některého znaku pro řízení přenosu (obvykle znaky
+        XON a XOFF).
+      </p>      
+      
+    </div>
+
+    <!-- AUTOINCLUDE START "Page/Footer.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== PATIČKA ============== -->
+    <div class="Footer">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawFooter();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+  </body>
+</html>
