@@ -3,7 +3,7 @@
   (general
     (links 32)
     (no_connects 0)
-    (area -2.667 -12.524 43.863143 2.159001)
+    (area 0.178999 -9.981001 40.461001 -0.178999)
     (thickness 1.6)
     (drawings 16)
     (tracks 82)
@@ -655,7 +655,7 @@
   (gr_text SCL (at 17.78 -4.699 270) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify left))
   )
-  (gr_text 3V3 (at 14.859 -4.699 270) (layer F.SilkS)
+  (gr_text VDD (at 14.859 -4.572 270) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify left))
   )
   (gr_text SDA (at 12.319 -4.699 270) (layer F.SilkS)
