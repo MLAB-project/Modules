@@ -8,7 +8,7 @@ $fn=40; // model faces resolution.
 prumer_osicky=3;
 prumer_pomocne_trubicky=8;
 zapusteni_pomocne_trubicky=3;
-vule_mezi_statorem_rotorem=2; //vůle mezi statorem a rotorem + sila materialu statoru
+vule_mezi_statorem_rotorem=3; //vůle mezi statorem a rotorem + sila materialu statoru
 
 //rozmery modulu se senzorem
 senzor_delka=20.32;
@@ -20,6 +20,13 @@ lozisko_prumer_vnitrni=5;
 lozisko_prumer_vnejsi=16;
 lozisko_vyska=5;
 lozisko_prekryv=1.5;
+
+//magnet
+magnet_prumer=6.3;
+magnet_vyska=5;
+magnet_zapusteni=2;
+vyska_pod_magnetem=5;
+magnet_tolerance_prumeru=0.2;
 
 
 //parametry sroubu
@@ -84,12 +91,14 @@ R03_sila_materialu=1.5;
 
 
 //WINDGAUGE02A_S01 //stator
-S01_sila_materialu=2;
+S01_sila_materialu=1.3;
 S01_vyska_zuzene_casti=20;
 S01_vyska_komponentu_na_lozisko=7;
 S01_vyska_zavitu_na_nasroubovani_drzaku=15;
-S01_vyska_na_elektroniku=50;
-S01_prumer_zavitu=70;
+S01_vyska_na_elektroniku=35;
+S01_prumer_zavitu=64;
+S01_tolerance_zavit=1.5;
+S01_hloubka_zavitu=4;
 S01_vyska_prechodu=20;
 
 
