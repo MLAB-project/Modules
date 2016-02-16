@@ -16,8 +16,12 @@ module WINDGAUGE02A_S01(R02_vzdalenost_mezi_uchyty_lopatek,L01_sila_zapusteni_dr
         {
         cylinder (h = S01_vyska_zuzene_casti, r=(R02_vzdalenost_mezi_uchyty_lopatek+2*L01_sila_zapusteni_drzaku+2*L01_hloubka_zapusteni+2*vule_mezi_statorem_rotorem+2*S01_sila_materialu)/2, center = true, $fn=100); 
  
-      
-    cylinder (h = S01_vyska_zuzene_casti+0.01, r=(R02_vzdalenost_mezi_uchyty_lopatek+2*L01_sila_zapusteni_drzaku+2*L01_hloubka_zapusteni+2*vule_mezi_statorem_rotorem)/2, center = true, $fn=100); 
+            translate([0,0,S01_vyska_zuzene_casti-R02_sila_mateiralu_pod_lopatkami-S01_vyska_komponentu_na_lozisko])
+            
+      screw_thread((R02_vzdalenost_mezi_uchyty_lopatek+2*L01_sila_zapusteni_drzaku+2*L01_hloubka_zapusteni+2*vule_mezi_statorem_rotorem+2*S01_sila_materialu),S01_hloubka_zavitu,55,S01_vyska_zuzene_casti+0.01,PI/2,2); 
+            
+           translate([0,0,-(S01_vyska_zuzene_casti-R02_sila_mateiralu_pod_lopatkami-S01_vyska_komponentu_na_lozisko)/2])  
+    cylinder (h = S01_vyska_zuzene_casti-R02_sila_mateiralu_pod_lopatkami-S01_vyska_komponentu_na_lozisko+0.01, r=(R02_vzdalenost_mezi_uchyty_lopatek+2*L01_sila_zapusteni_drzaku+2*L01_hloubka_zapusteni+2*vule_mezi_statorem_rotorem)/2, center = true, $fn=100); 
    
 
        //translate([0,0,(stator3_vyska-stator3_vyska_prekryti)/2])    
