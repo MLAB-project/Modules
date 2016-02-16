@@ -1,4 +1,4 @@
-update=11. 1. 2016 7:34:11
+update=Út 16. únor 2016, 13:17:30 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,8 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=../../../../../kicad-mlab/symbols
@@ -122,3 +120,5 @@ LibName90=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/MLAB_T
 LibName91=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/MLAB_U
 LibName92=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/OpAmp
 LibName93=C:/Chroust/Zaloha/stare/kicad-mlab/symbols/sata7-67491-1030
+[general]
+version=1
