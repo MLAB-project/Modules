@@ -33,11 +33,11 @@ module WINDGAUGE02A_R02(R02_sila_mateiralu_pod_lopatkami,L01_hloubka_zapusteni_d
       //otvor na hřídelku          
    
   cylinder (h = R02_sila_mateiralu_pod_lopatkami+L01_hloubka_zapusteni_drzaku+0.1, r=prumer_osicky/2, center = true, $fn=100);
-  
+ /* 
   //otvor pro pomocnou trubicku        
     translate([0,0,-(((R02_sila_mateiralu_pod_lopatkami+L01_hloubka_zapusteni_drzaku)/2)-zapusteni_pomocne_trubicky/2)])  
   cylinder (h = zapusteni_pomocne_trubicky, r=prumer_pomocne_trubicky/2, center = true, $fn=100);
-  
+*/  
 }  
 }
 
