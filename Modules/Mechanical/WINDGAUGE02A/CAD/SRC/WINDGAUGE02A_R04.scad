@@ -1,47 +1,28 @@
 $fn=40; // model faces resolution.
 include <../configuration.scad>
 
-//kryt_rotoru
-
-//dutinka pro upevneni rotoru
-module WINDGAUGE02A_R04 (sila_pod_loziskem,delka_hridele,lozisko_prumer_vnitrni,lozisko_prekryv)
+//dilec do loziska
+module WINDGAUGE02A_R04 (lozisko_prumer_vnitrni,lozisko_prekryv,S01_sila_materialu,prumer_sroubu)
     {
     difference()
         {
 
-    //dotahovací kroužek
+    union()
+            {
     translate([0,0,0])
-        cylinder (h = sila_pod_loziskem+delka_hridele+2, r=(lozisko_prumer_vnitrni+2*lozisko_prekryv)/2, center = true, $fn=100); 
-  
-    cylinder (h = sila_pod_loziskem+delka_hridele+2+0.1, r=((lozisko_prumer_vnitrni+0.2)/2), center = true, $fn=100);     
-       
-        }       
+        cylinder (h = S01_sila_materialu, r=(lozisko_prumer_vnitrni+2*lozisko_prekryv)/2, center = true, $fn=100); 
+            
+            translate([0,0,S01_sila_materialu])
+        cylinder (h = S01_sila_materialu, r=(lozisko_prumer_vnitrni+2*lozisko_prekryv+2*S01_sila_materialu)/2, center = true, $fn=100);
+          
+           translate([0,0,-2*S01_sila_materialu]) 
+    cylinder (h = lozisko_vyska, r=(lozisko_prumer_vnitrni/2), center = true, $fn=100);   
+        }    
+   translate([0,0,1/2*S01_sila_materialu-(lozisko_vyska)/2])             
+  cylinder (h = 2*S01_sila_materialu+lozisko_vyska+0.1, r=((prumer_sroubu)/2), center = true, $fn=100);   
+          
+        
     }
-
-
-module WINDGAUGE02A_R05(vyska_pod_magnetem,magnet_zapusteni,magnet_prumer,vyska_hlavy_sroubu,prumer_hlavy_sroubu,prumer_sroubu)
-    {
-        difference()
-        {
-        //segment pro sroub a magnet
-            translate([0,0,0])
-                cylinder (h = vyska_pod_magnetem+magnet_zapusteni, r=(magnet_prumer+5)/2, center = true, $fn=100);    
-  
-        //otvor pro magnet    
-            translate([0,0,vyska_pod_magnetem/2+0.1])    
-                cylinder (h = magnet_zapusteni, r=((magnet_prumer+0.2)/2), center = true, $fn=100);     
-   
-        //zapusteni uchytného sroubu   
-            translate([0,0,(vyska_pod_magnetem-vyska_hlavy_sroubu-1)/2+0.1])    
-                cylinder (h = vyska_hlavy_sroubu+1, r=((prumer_hlavy_sroubu+0.2)/2), center = true, $fn=100); 
-
-        //otvor pro sroub
-            cylinder (h = vyska_pod_magnetem+magnet_zapusteni+0.1, r=(prumer_sroubu)/2, center = true, $fn=100);     
-        }
-    }
-
-
-
-
-
-//WINDGAUGE02A_R03(R03_sila_materialu,R02_vzdalenost_mezi_uchyty_lopatek,L01_sila_zapusteni_drzaku,L01_hloubka_zapusteni,vule_mezi_statorem_rotorem,R01_sila_materialu_pro_prekriti,R02_sila_mateiralu_pod_lopatkami,S01_sila_materialu);
+ }
+ 
+ WINDGAUGE02A_R04 (lozisko_prumer_vnitrni,lozisko_prekryv,S01_sila_materialu,prumer_sroubu);

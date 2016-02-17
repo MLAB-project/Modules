@@ -8,7 +8,7 @@ PI=3.141592;
 
 
 
-module WINDGAUGE02A_D01(S01_vyska_komponentu_na_lozisko,S01_prumer_zavitu,D01_material_pod_zavitem,D01_material_za_zavitem,D01_material_pred_zavitem,D01_delka_tyce,D01_sirka_tyce,D02_sila_materialu,D02_vyska_uchytky,D02_prumer_obruby,D02_delka_celeho_uchytu,D02_dotahova_vzdalenost,D02_prumer_uchytneho_sroubu)
+module WINDGAUGE02A_D01(S01_vyska_komponentu_na_lozisko,S01_prumer_zavitu,D01_material_pod_zavitem,D01_material_za_zavitem,D01_material_pred_zavitem,D01_delka_tyce,D01_sirka_tyce,D02_sila_materialu,D02_vyska_uchytky,D02_prumer_obruby,D02_delka_celeho_uchytu,D02_dotahova_vzdalenost,D02_prumer_uchytneho_sroubu,S01_tolerance_zavit)
     {
 
 difference()
@@ -18,7 +18,7 @@ difference()
    { 
        //zavit
 translate([0,0,D01_material_pod_zavitem])       
- screw_thread(S01_prumer_zavitu-0.5,4,55,S01_vyska_komponentu_na_lozisko,PI/2,2);            
+ screw_thread(S01_prumer_zavitu-S01_tolerance_zavit,4,55,S01_vyska_komponentu_na_lozisko,PI/2,2);            
 
 //spodní valec
 translate([0,0,D01_material_pod_zavitem/2])
@@ -59,7 +59,7 @@ cylinder (h = D01_material_pod_zavitem+S01_vyska_komponentu_na_lozisko+0.02, r=(
  }
     }
  
-WINDGAUGE02A_D01(S01_vyska_komponentu_na_lozisko,S01_prumer_zavitu,D01_material_pod_zavitem,D01_material_za_zavitem,D01_material_pred_zavitem,D01_delka_tyce,D01_sirka_tyce,D02_sila_materialu,D02_vyska_uchytky,D02_prumer_obruby,D02_delka_celeho_uchytu,D02_dotahova_vzdalenost,D02_prumer_uchytneho_sroubu);
+WINDGAUGE02A_D01(S01_vyska_komponentu_na_lozisko,S01_prumer_zavitu,D01_material_pod_zavitem,D01_material_za_zavitem,D01_material_pred_zavitem,D01_delka_tyce,D01_sirka_tyce,D02_sila_materialu,D02_vyska_uchytky,D02_prumer_obruby,D02_delka_celeho_uchytu,D02_dotahova_vzdalenost,D02_prumer_uchytneho_sroubu,S01_tolerance_zavit);
 
 
     

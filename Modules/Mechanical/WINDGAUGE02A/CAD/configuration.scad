@@ -13,10 +13,11 @@ vule_mezi_statorem_rotorem=3; //vůle mezi statorem a rotorem + sila materialu s
 //rozmery modulu se senzorem
 senzor_delka=20.32;
 senzor_sirka=10.16;
-
+senzor_vyska_IO=2;
+senzor_odstup_od_magnetu=1;
 
 //lozisko
-lozisko_prumer_vnitrni=5;
+lozisko_prumer_vnitrni=4.9;
 lozisko_prumer_vnejsi=16;
 lozisko_vyska=5;
 lozisko_prekryv=1.5;
@@ -25,7 +26,6 @@ lozisko_prekryv=1.5;
 magnet_prumer=6.3;
 magnet_vyska=5;
 magnet_zapusteni=2;
-vyska_pod_magnetem=5;
 magnet_tolerance_prumeru=0.2;
 
 
@@ -34,7 +34,8 @@ prumer_sroubu=3.2;
 prumer_hlavy_sroubu=6;
 vyska_hlavy_sroubu=4;
 vyska_matky=3;
-sirka_matky=6.6;
+sirka_matky=6.7;
+
 sirka_matky_tol=0.175;
 prumer_orechu=10;
 
@@ -44,10 +45,11 @@ S01_vyska=5;
 
 
 
+
 //WINDGAUGE02A_L01 //pro lopatku
 L01_hloubka_zapusteni=3;
-L01_hloubka_zapusteni_drzaku=5;
-L01_sila_zapusteni_drzaku=5; //sila drzaku který je v rotoru
+L01_hloubka_zapusteni_drzaku=3;
+L01_sila_zapusteni_drzaku=3; //sila drzaku který je v rotoru
 L01_hrana_drzaku_a=10;
 L01_hrana_drzaku_b=3;
 L01_tolerance_drzaku=0.1;
@@ -78,17 +80,18 @@ D02_prumer_uchytneho_sroubu=6.2;
 
 //WINDGAUGE02A_R01 //rotor s prekritim statoru
 R01_vyska_preryti_statoru=10;
-R01_sila_materialu_pro_prekriti=2;
+R01_sila_materialu_pro_prekriti=1.3;
 
 //WINDGAUGE02A_R02 //rotor spodni dil
 
-R02_sila_mateiralu_pod_lopatkami=5;
+R02_sila_mateiralu_pod_lopatkami=1.3;
 R02_vzdalenost_mezi_uchyty_lopatek=10;
 
 //WINDGAUGE02A_R03 //kryt rotoru
-R03_sila_materialu=1.5;
+R03_sila_materialu=1.3;
 
-
+//WINDGAUGE02A_R05 //drzak magnetu
+R05_sirka_matky=10;
 
 //WINDGAUGE02A_S01 //stator
 S01_sila_materialu=1.3;
