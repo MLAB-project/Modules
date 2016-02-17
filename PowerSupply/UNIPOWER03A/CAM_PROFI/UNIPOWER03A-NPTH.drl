@@ -1,6 +1,6 @@
 M48
-;DRILL file {KiCad 4.0.2-4+6225~38~ubuntu15.10.1-stable} date Út 16. únor 2016, 19:32:21 CET
-;FORMAT={-:-/ absolute / metric / decimal}
+;DRILL file {KiCad 4.0.1-stable} date 17. 2. 2016 14:25:44
+;FORMAT={3:3/ absolute / metric / suppress leading zeros}
 FMAT,2
 METRIC,TZ
 T1C2.700
@@ -9,9 +9,9 @@ G90
 G05
 M71
 T1
-X33.972Y37.5
-X33.972Y32.5
-X33.972Y27.495
-X33.972Y22.5
+X33972Y37500
+X33972Y32500
+X33972Y27495
+X33972Y22500
 T0
 M30

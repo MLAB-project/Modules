@@ -1,14 +1,13 @@
 $fn=100; // model faces resolution.
 include <../configuration.scad>
 
-use <../SRC/WINDGAUGE02A_S02.scad>
-use <../SRC/polyScrewThread_r1.scad>
+use <../SRC/WINDGAUGE02A_R04.scad>
 
 
-PI=3.141592;
 
-translate([0,0,0])
 
-rotate([0,0, 0])
+translate([0,0,3/2*S01_sila_materialu])
 
-WINDGAUGE02A_S02(S01_sila_materialu,S01_vyska_komponentu_na_lozisko,S01_prumer_zavitu,lozisko_vyska,lozisko_prumer_vnejsi,lozisko_prumer_vnitrni,lozisko_prekryv,vyska_matky,prumer_orechu,prumer_sroubu,senzor_delka,senzor_sirka,S01_tolerance_zavit,sirka_matky,magnet_vyska);   
+rotate([0,180, 0])
+
+WINDGAUGE02A_R04 (lozisko_prumer_vnitrni,lozisko_prekryv,S01_sila_materialu,prumer_sroubu);   
