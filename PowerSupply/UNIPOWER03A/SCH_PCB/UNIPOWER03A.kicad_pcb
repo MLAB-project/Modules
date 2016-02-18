@@ -37,7 +37,7 @@
   )
 
   (setup
-    (last_trace_width 0.8)
+    (last_trace_width 0.3)
     (user_trace_width 0.6)
     (user_trace_width 0.7)
     (user_trace_width 0.8)
@@ -64,7 +64,7 @@
     (mod_text_width 0.15)
     (pad_size 1.524 1.524)
     (pad_drill 0.762)
-    (pad_to_mask_clearance 0.2)
+    (pad_to_mask_clearance 0.12)
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFF7F)
     (pcbplotparams

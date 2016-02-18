@@ -9,16 +9,16 @@ $fn=40; // model faces resolution.
 D03_vyska_zavitu=5;
 D03_tolerance_zavitu=0.2; //tolerance s poloměru
 D03_material_za_zavitem=2;
-D03_polomer_zavitu=20;
-D03_polomer_stitu=40;
+D03_polomer_zavitu=10;
+D03_polomer_stitu=30;
 D03_tloustka_materialu=2;
-D03_vyska_stitu=20;
+D03_vyska_stitu=15;
 D03_pocet_vyztuh=3;
 screen_bevel = 20;
 PI=3.141592;
 
 //AWSCREEN01A_D04
-D04_vyska_na_elektroniku=10;
+D04_vyska_na_elektroniku=2;
 D04_vyska_zavitu=15;
 D04_vyska_zavitu_pro_drzak_elektorniky=5;
 
