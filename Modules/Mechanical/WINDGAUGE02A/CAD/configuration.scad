@@ -52,7 +52,7 @@ L01_hloubka_zapusteni_drzaku=3;
 L01_sila_zapusteni_drzaku=3; //sila drzaku který je v rotoru
 L01_hrana_drzaku_a=10;
 L01_hrana_drzaku_b=3;
-L01_tolerance_drzaku=0.1;
+L01_tolerance_drzaku=0.4;
 L01_delka_uchytu=20;
 L01_prumer_lopatky=40;
 L01_sila_materialu_lopatky=0.9;
@@ -96,7 +96,7 @@ R05_sirka_matky=10;
 //WINDGAUGE02A_S01 //stator
 S01_sila_materialu=1.3;
 S01_vyska_zuzene_casti=20;
-S01_vyska_komponentu_na_lozisko=7;
+S01_vyska_komponentu_na_lozisko=15;
 S01_vyska_zavitu_na_nasroubovani_drzaku=15;
 S01_vyska_na_elektroniku=35;
 S01_prumer_zavitu=64;
