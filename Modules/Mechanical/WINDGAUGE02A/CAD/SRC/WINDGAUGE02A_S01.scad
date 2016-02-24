@@ -5,6 +5,59 @@ include <polyScrewThread_r1.scad>
 
 PI=3.141592;
 
+S01_vyska=80;
+S01_prumer_vnitrni=30;
+S01_sila_materialu=2;
+S01_vyska_horni_zavit=10;
+S01_vyska_spodniho_zavitu=10;
+S01_sila_drzaku_RJ11=2;
+
+
+module WINDGAUGE02A_S01(S01_vyska,S01_prumer_vnitrni,S01_sila_materialu)
+    {
+        
+         difference()
+        {
+            
+union() 
+ {           
+//základní válec
+cylinder (h = S01_vyska-S01_vyska_horni_zavit, r=(S01_prumer_vnitrni)/2+S01_sila_materialu, $fn=100);
+
+//horní závit
+     translate([0,0,S01_vyska-S01_vyska_horni_zavit])
+screw_thread((S01_prumer_vnitrni+2*S01_sila_materialu),S01_hloubka_zavitu,55,S01_vyska_horni_zavit,PI/2,2);     
+
+}
+
+//vystouplá část
+translate([0,0,S01_vyska_spodniho_zavitu+S01_sila_drzaku_RJ11-0.3])
+cylinder (h = S01_sila_drzaku_RJ11, r=(S01_prumer_vnitrni)/2-1-S01_hloubka_zavitu/2, $fn=100);
+//otvor na drzak rj11            
+translate([0,0,S01_vyska_spodniho_zavitu])
+cylinder (h = S01_sila_drzaku_RJ11-0.3, r=(S01_prumer_vnitrni)/2-S01_hloubka_zavitu/2, $fn=100);            
+
+//spodní závit
+screw_thread((S01_prumer_vnitrni),S01_hloubka_zavitu,55,S01_vyska_spodniho_zavitu+0.01,PI/2,2); 
+
+//otvor skrz
+            translate([0,0,S01_vyska_spodniho_zavitu+2*S01_sila_drzaku_RJ11-0.3])
+cylinder (h = S01_vyska, r=(S01_prumer_vnitrni)/2-1, $fn=100);
+} 
+} 
+
+
+WINDGAUGE02A_S01(S01_vyska,S01_prumer_vnitrni,S01_sila_materialu);
+
+
+
+
+
+
+
+
+
+/*
 module WINDGAUGE02A_S01(R02_vzdalenost_mezi_uchyty_lopatek,L01_sila_zapusteni_drzaku,L01_hloubka_zapusteni,S01_vyska_zuzene_casti,S01_vyska_na_elektroniku,S01_vyska_zavitu_na_nasroubovani_drzaku,S01_vyska_prechodu,vule_mezi_statorem_rotorem,S01_vyska_zavitu_na_nasroubovani_drzaku,S01_sila_materialu)
     {
         
@@ -60,11 +113,11 @@ translate([0,0,(S01_vyska_na_elektroniku+S01_vyska_zavitu_na_nasroubovani_drzaku
             }
 
 } 
- 
+*/ 
 
 
 
     
-WINDGAUGE02A_S01(R02_vzdalenost_mezi_uchyty_lopatek,L01_sila_zapusteni_drzaku,L01_hloubka_zapusteni,S01_vyska_zuzene_casti,S01_vyska_na_elektroniku,S01_vyska_zavitu_na_nasroubovani_drzaku,S01_vyska_prechodu,vule_mezi_statorem_rotorem,S01_vyska_zavitu_na_nasroubovani_drzaku,S01_sila_materialu);
+
     
     

@@ -3,9 +3,18 @@ $fn=40; // model faces resolution.
 //OBECNE PARAMETRY 
 //----------------------------------------------------------------
 //----------------------------------------------------------------
+//S01
+S01_vyska=80;
+S01_prumer_vnitrni=40;
+S01_sila_materialu=2;
+S01_vyska_horni_zavit=10;
+S01_vyska_spodniho_zavitu=10;
+S01_sila_drzaku_RJ11=2;
+S01_tolerance_zavit=1.5;
+
 
 //Obecné parametry
-prumer_osicky=3;
+prumer_osicky=5.1;
 prumer_pomocne_trubicky=8;
 zapusteni_pomocne_trubicky=3;
 vule_mezi_statorem_rotorem=3; //vůle mezi statorem a rotorem + sila materialu statoru
@@ -86,6 +95,7 @@ R01_sila_materialu_pro_prekriti=1.3;
 
 R02_sila_mateiralu_pod_lopatkami=1.3;
 R02_vzdalenost_mezi_uchyty_lopatek=10;
+R02_vyska_matky=5;
 
 //WINDGAUGE02A_R03 //kryt rotoru
 R03_sila_materialu=1.3;
