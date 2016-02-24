@@ -14,36 +14,35 @@ S01_sila_drzaku_RJ11=2;
 
 
 module WINDGAUGE02A_S01(S01_vyska,S01_prumer_vnitrni,S01_sila_materialu)
-    {
-        
-         difference()
-        {
-            
-union() 
- {           
-//základní válec
-cylinder (h = S01_vyska-S01_vyska_horni_zavit, r=(S01_prumer_vnitrni)/2+S01_sila_materialu, $fn=100);
+{
+    difference()
+    {            
+        union() 
+        {           
+            //základní válec
+            cylinder (h = S01_vyska-S01_vyska_horni_zavit, r=(S01_prumer_vnitrni)/2+S01_sila_materialu, $fn=100);
 
-//horní závit
-     translate([0,0,S01_vyska-S01_vyska_horni_zavit])
-screw_thread((S01_prumer_vnitrni+2*S01_sila_materialu),S01_hloubka_zavitu,55,S01_vyska_horni_zavit,PI/2,2);     
+            //horní závit
+                 translate([0,0,S01_vyska-S01_vyska_horni_zavit])
+            screw_thread((S01_prumer_vnitrni+2*S01_sila_materialu),S01_hloubka_zavitu,55,S01_vyska_horni_zavit,PI/2,2);     
 
-}
+        }
 
-//vystouplá část
-translate([0,0,S01_vyska_spodniho_zavitu+S01_sila_drzaku_RJ11-0.3])
-cylinder (h = S01_sila_drzaku_RJ11, r=(S01_prumer_vnitrni)/2-1-S01_hloubka_zavitu/2, $fn=100);
-//otvor na drzak rj11            
-translate([0,0,S01_vyska_spodniho_zavitu])
-cylinder (h = S01_sila_drzaku_RJ11-0.3, r=(S01_prumer_vnitrni)/2-S01_hloubka_zavitu/2, $fn=100);            
+        //vystouplá část
+        translate([0,0,S01_vyska_spodniho_zavitu+S01_sila_drzaku_RJ11-0.3])
+        cylinder (h = S01_sila_drzaku_RJ11, r=(S01_prumer_vnitrni)/2-1-S01_hloubka_zavitu/2, $fn=100);
+        //otvor na drzak rj11            
+        translate([0,0,S01_vyska_spodniho_zavitu])
+        cylinder (h = S01_sila_drzaku_RJ11-0.3, r=(S01_prumer_vnitrni)/2-S01_hloubka_zavitu/2, $fn=100);            
 
-//spodní závit
-screw_thread((S01_prumer_vnitrni),S01_hloubka_zavitu,55,S01_vyska_spodniho_zavitu+0.01,PI/2,2); 
+        //spodní závit
+        screw_thread((S01_prumer_vnitrni),S01_hloubka_zavitu,55,S01_vyska_spodniho_zavitu+0.01,PI/2,2); 
 
-//otvor skrz
-            translate([0,0,S01_vyska_spodniho_zavitu+2*S01_sila_drzaku_RJ11-0.3])
-cylinder (h = S01_vyska, r=(S01_prumer_vnitrni)/2-1, $fn=100);
-} 
+        //otvor skrz
+                    translate([0,0,S01_vyska_spodniho_zavitu+2*S01_sila_drzaku_RJ11-0.3])
+        cylinder (h = S01_vyska, r=(S01_prumer_vnitrni)/2-1, $fn=100);       
+        cube(100); // cut to show internal relief
+    } 
 } 
 
 
