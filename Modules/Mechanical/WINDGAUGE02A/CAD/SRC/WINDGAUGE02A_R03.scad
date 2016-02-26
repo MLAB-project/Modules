@@ -3,20 +3,19 @@ include <../configuration.scad>
 
 //kryt_rotoru
 
-module WINDGAUGE02A_R03(R03_sila_materialu,R02_vzdalenost_mezi_uchyty_lopatek,L01_sila_zapusteni_drzaku,L01_hloubka_zapusteni,vule_mezi_statorem_rotorem,R01_sila_materialu_pro_prekriti,
-R02_sila_mateiralu_pod_lopatkami,S01_sila_materialu)
+module WINDGAUGE02A_R03()
 {
  
     //kopule
     difference()
         {
-            sphere(r = (R02_vzdalenost_mezi_uchyty_lopatek+2*L01_sila_zapusteni_drzaku+2*L01_hloubka_zapusteni+2*vule_mezi_statorem_rotorem+2*R01_sila_materialu_pro_prekriti+2*R03_sila_materialu+2*S01_sila_materialu)/2, $fn=100);
+            sphere(r = (S01_prumer_vnitrni+4*S01_sila_materialu)/2+S01_mezera_mezi_statorem_rotorem+S01_sila_materialu, $fn=100);
             
-            sphere(r = (R02_vzdalenost_mezi_uchyty_lopatek+2*L01_sila_zapusteni_drzaku+2*L01_hloubka_zapusteni+2*vule_mezi_statorem_rotorem+2*R01_sila_materialu_pro_prekriti+2*S01_sila_materialu)/2+0.1, $fn=100); 
+            sphere(r = (S01_prumer_vnitrni+4*S01_sila_materialu)/2+S01_mezera_mezi_statorem_rotorem-0.2, $fn=100); 
             
-            translate([0,0,-(R02_vzdalenost_mezi_uchyty_lopatek+2*L01_sila_zapusteni_drzaku+2*L01_hloubka_zapusteni+2*vule_mezi_statorem_rotorem+2*R01_sila_materialu_pro_prekriti+2*R03_sila_materialu+2*S01_sila_materialu)/2])     
+            translate([-((S01_prumer_vnitrni+4*S01_sila_materialu)/2+S01_mezera_mezi_statorem_rotorem+S01_sila_materialu),-((S01_prumer_vnitrni+4*S01_sila_materialu)/2+S01_mezera_mezi_statorem_rotorem+S01_sila_materialu),-2*((S01_prumer_vnitrni+4*S01_sila_materialu)/2+S01_mezera_mezi_statorem_rotorem+S01_sila_materialu)])     
             
-                cube(size = [(R02_vzdalenost_mezi_uchyty_lopatek+2*L01_sila_zapusteni_drzaku+2*L01_hloubka_zapusteni+2*vule_mezi_statorem_rotorem+2*R01_sila_materialu_pro_prekriti+2*R03_sila_materialu+2*S01_sila_materialu), (R02_vzdalenost_mezi_uchyty_lopatek+2*L01_sila_zapusteni_drzaku+2*L01_hloubka_zapusteni+2*vule_mezi_statorem_rotorem+2*R01_sila_materialu_pro_prekriti+2*R03_sila_materialu+2*S01_sila_materialu), (R02_vzdalenost_mezi_uchyty_lopatek+2*L01_sila_zapusteni_drzaku+2*L01_hloubka_zapusteni+2*vule_mezi_statorem_rotorem+2*R01_sila_materialu_pro_prekriti+2*R03_sila_materialu+2*S01_sila_materialu)], center = true);          
+                cube(size = [2*((S01_prumer_vnitrni+4*S01_sila_materialu)/2+S01_mezera_mezi_statorem_rotorem+S01_sila_materialu), 2*((S01_prumer_vnitrni+4*S01_sila_materialu)/2+S01_mezera_mezi_statorem_rotorem+S01_sila_materialu), 2*((S01_prumer_vnitrni+4*S01_sila_materialu)/2+S01_mezera_mezi_statorem_rotorem+S01_sila_materialu)]);          
             
         }
              
@@ -29,14 +28,14 @@ R02_sila_mateiralu_pod_lopatkami,S01_sila_materialu)
             translate([0,0,-
 R02_sila_mateiralu_pod_lopatkami/2])
                 cylinder (h = 
-R02_sila_mateiralu_pod_lopatkami, r=(R02_vzdalenost_mezi_uchyty_lopatek+2*L01_sila_zapusteni_drzaku+2*L01_hloubka_zapusteni+2*vule_mezi_statorem_rotorem+2*R01_sila_materialu_pro_prekriti+2*R03_sila_materialu+2*S01_sila_materialu)/2, center = true, $fn=100);           
+R02_sila_mateiralu_pod_lopatkami, r=(S01_prumer_vnitrni+4*S01_sila_materialu)/2+S01_mezera_mezi_statorem_rotorem+S01_sila_materialu, center = true, $fn=100);           
  
             //válec pro vykrojení
             translate([0,0,-R02_sila_mateiralu_pod_lopatkami/2])
-                cylinder (h = R02_sila_mateiralu_pod_lopatkami+0.01, r=(R02_vzdalenost_mezi_uchyty_lopatek+2*L01_sila_zapusteni_drzaku+2*L01_hloubka_zapusteni+2*vule_mezi_statorem_rotorem+2*R01_sila_materialu_pro_prekriti+2*S01_sila_materialu)/2+0.01, center = true, $fn=100); 
+                cylinder (h = R02_sila_mateiralu_pod_lopatkami+0.01, r=(S01_prumer_vnitrni+4*S01_sila_materialu)/2+S01_mezera_mezi_statorem_rotorem-0.2, center = true, $fn=100); 
               
             }
 }
 
 
-WINDGAUGE02A_R03(R03_sila_materialu,R02_vzdalenost_mezi_uchyty_lopatek,L01_sila_zapusteni_drzaku,L01_hloubka_zapusteni,vule_mezi_statorem_rotorem,R01_sila_materialu_pro_prekriti,R02_sila_mateiralu_pod_lopatkami,S01_sila_materialu);
+WINDGAUGE02A_R03();

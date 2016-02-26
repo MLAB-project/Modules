@@ -19,10 +19,19 @@ module WINDGAUGE02A_S02()
 difference()
         {
      
-      
-  cylinder (h = S01_vyska_horni_zavit+S01_sila_materialu, r=(S01_prumer_vnitrni+4*S01_sila_materialu)/2+S01_tolerance_zavit/2, $fn=100);  
+     
+union()  {
 translate([0,0,S01_sila_materialu])
-screw_thread((S01_prumer_vnitrni+2*S01_sila_materialu+S01_tolerance_zavit),S01_hloubka_zavitu,55,S01_vyska_horni_zavit,PI/2,2);  
+screw_thread((S01_prumer_vnitrni-S01_tolerance_zavit),S01_hloubka_zavitu,55,S01_vyska_horni_zavit,PI/2,2);  
+            
+//spodní doraz
+  
+cylinder (h = S01_sila_materialu, r=S01_prumer_vnitrni/2+S01_sila_materialu, $fn=100);             
+}            
+
+//odstranění vnitřní výplně
+  translate([0,0,S01_sila_materialu])
+cylinder (h = S01_vyska_horni_zavit+0.01, r=S01_prumer_vnitrni/2-S01_hloubka_zavitu/2-S01_sila_materialu, $fn=100); 
             
             //otvor na pruchod hridelky          
   translate([0,0,S01_sila_materialu/2])           
@@ -78,6 +87,9 @@ SLOUPEK();
   cylinder (h = lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky+0.01, r=(lozisko_prumer_vnejsi+0.2)/2, $fn=100);  
     
 }
+
+
+
 
 
 }
