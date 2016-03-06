@@ -31,7 +31,6 @@ const int CHANNELS=256;  // Number of channels
 
 //unsigned int channelT[CHANNELS];    // recordig buffer
 unsigned int channelA[CHANNELS];    // recordig buffer
-int interval=0;               // seconds counter
 boolean rise=false;           // flag fo recording time
 char inChar;                  // input character from GPS
 String dataString = "";       // concantenated string with NMEA messages and measured values
@@ -132,17 +131,15 @@ void ReadGPGGA()
 
 void isr()        // interrupt service routine driven from 1PPS from GPS
 {
-  //if (++interval == 10) // 10 seconds
   {
     rise=true;
-    //interval = 0;
   }
 
 }
 
 void record()
 {
-  for (int c=129; c<CHANNELS; c++)
+  for (int c=67; c<CHANNELS; c++)
   {
     if (channelA[c]>0)
     {
@@ -151,7 +148,7 @@ void record()
     }
   }
 
-  for (int c=65; c<128; c++)
+  for (int c=33; c<64; c++)
   {
     if (channelA[c]>0)
     {
@@ -160,7 +157,7 @@ void record()
     }
   }
 
-  for (int c=33; c<64; c++)
+  for (int c=17; c<32; c++)
   {
     if (channelA[c]>0)
     {
@@ -169,7 +166,7 @@ void record()
     }
   }
 
-  for (int c=10; c<32; c++)
+  for (int c=0; c<16; c++)
   {
     if (channelA[c]>0)
     {
@@ -179,8 +176,8 @@ void record()
   }
      
   dataString = "";        // make a string for assembling the data to log
-  ReadGPRMC();            // read NMEA sentences from GPS
-  ReadGPGGA();
+  //!!!ReadGPRMC();            // read NMEA sentences from GPS
+  //!!!ReadGPGGA();
   // make a string for assembling the data to log:
   dataString += String(num++);
   //dataString += ","; 
@@ -224,32 +221,36 @@ void record()
     {
       errorLED();
     } 
-
-    dataFile = SD.open(fileNameCharArray, FILE_WRITE);
-    if (dataFile) 
-    {
-      dataFile.println();
-      dataFile.close();
-    }  
-    else 
-    {
-      errorLED();
-    } 
-
   }
+
+  dataString = ","; 
+  dataString += String(count);
+  dataFile = SD.open(fileNameCharArray, FILE_WRITE);
+  if (dataFile) 
+  {
+    dataFile.println(dataString);
+    dataFile.close();
+  }  
+  else 
+  {
+    errorLED();
+  } 
+
   
   digitalWrite(chipSelect, LOW);   
 
-  for (int n=0; n<CHANNELS; n++) // clear recording buffer
-  {
-    //channelT[n]=0;
-    channelA[n]=0;
-  }  
-
-  //!!!
+  //!!! control print
+  //TODO print to I2C display
   Serial.print(count);       
+  Serial.print("*");       
   for(int j=0;j<256;j++) {Serial.print(channelA[j]); Serial.print(' ');}
   Serial.println();
+
+
+  for (int n=0; n<CHANNELS; n++) // clear recording buffer
+  {
+    channelA[n]=0;
+  }  
 
   digitalWrite(LED1, LOW);   // LED OFF
   digitalWrite(LED2, LOW);   // LED OFF
@@ -307,18 +308,20 @@ void setup()
 void loop() 
 {
   //byte msb=0,lsb=0;
-  unsigned char val;
-
+  unsigned int val;
+  unsigned int treshold = 1;
+  
+  count = 0;
   while (true)
   {
-    count++;
+    //count++;
     digitalWrite(ADSCK, HIGH);  
     digitalWrite(CONV, HIGH);  // start AD conversion
     digitalWrite(ADreset, HIGH);  // reset Peack Detector
     digitalWrite(CONV, LOW);   // start SPI
     digitalWrite(ADreset, LOW);  // start Peack Detector
     val=0;
-    for (int p=0;p<8;p++)
+    for (int p=0;p<16;p++)
     {
       digitalWrite(ADSCK, LOW);  // 1 CLK
       digitalWrite(ADSCK, HIGH);  
@@ -326,11 +329,15 @@ void loop()
     }
     digitalWrite(ADSCK, LOW);  // 1 CLK
 
-    channelA[val]++;
+    if ((val > treshold) && (count < (CHANNELS-1))) channelA[count++] = val;
 
     if (rise)  // recording time is now
     {
         record();  // make record
+        if ((count == 255) && (treshold < 0x8000)) treshold <<= 1;
+        if ((count == 0) && (treshold > 1)) treshold >>= 1;
+        Serial.println(count);
+        Serial.println(treshold);
         digitalWrite(ADreset, HIGH);  // reset Peack Detector
         rise = false;
         count = 0;
