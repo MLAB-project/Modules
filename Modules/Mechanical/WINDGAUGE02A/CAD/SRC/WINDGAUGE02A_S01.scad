@@ -39,16 +39,17 @@ module WINDGAUGE02A_S01()
         //otvor skrz
                     translate([0,0,S01_vyska_spodniho_zavitu+3*S01_sila_drzaku_RJ11-0.3])
         cylinder (h = S01_vyska-S01_vyska_horni_zavit-(S01_vyska_spodniho_zavitu+3*S01_sila_drzaku_RJ11-0.3), r=(S01_prumer_vnitrni)/2, $fn=100);       
-        cube(300); // cut to show internal relief
+        
     } 
 } 
 
-
+difference()
+    {
 WINDGAUGE02A_S01();
 
+cube(300); // cut to show internal relief
 
-
-
+} 
 
 
 
