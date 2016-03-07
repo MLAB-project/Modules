@@ -10,7 +10,9 @@ S01_prumer_vnitrni=40;
 S01_sila_materialu=1.3;
 S01_vyska_horni_zavit=10;
 S01_vyska_spodniho_zavitu=10;
-S01_sila_drzaku_RJ11=2;
+S01_sila_drzaku_RJ11=2; //vyška drážky
+S01_hrana_A_RJ11=15;
+S01_hrana_B_RJ11=25;
 S01_tolerance_zavit=1.5;
 S01_mezera_mezi_statorem_rotorem=1.5;
 
@@ -67,16 +69,16 @@ L01_prumer_lopatky=40;
 L01_sila_materialu_lopatky=0.9;
 
 //WINDGAUGE02A_D01 //uchyt velky
-D01_material_pod_zavitem=10;
-D01_material_za_zavitem=5;
-D01_material_pred_zavitem=5;
+D01_material_pod_zavitem=3;
+D01_material_za_zavitem=3;
+D01_material_pred_zavitem=2;
 D01_delka_tyce=40;
-D01_sirka_tyce=20;
+D01_sirka_tyce=10;
 
 
 
 //WINDGAUGE02A_D02 //uchyt na sloup
-D02_sila_materialu=4;
+D02_sila_materialu=2;
 D02_vyska_uchytky=40;
 D02_prumer_obruby=28;
 D02_delka_celeho_uchytu=70;

@@ -38,20 +38,20 @@ cylinder (h = S01_vyska_horni_zavit+0.01, r=S01_prumer_vnitrni/2-S01_hloubka_zav
   cylinder (h = S01_sila_materialu+0.01, r=(lozisko_prumer_vnitrni+0.2)/2+lozisko_prekryv, center = true, $fn=100);          
   
   //otvor na šroub 1
- translate([-senzor_delka/2,-senzor_sirka/2,S01_vyska_komponentu_na_lozisko/2])           
-  cylinder (h = S01_vyska_komponentu_na_lozisko+0.01, r=(prumer_sroubu)/2, center = true, $fn=100);
+ translate([-senzor_delka/2,-senzor_sirka/2,(lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky)/2])           
+  cylinder (h = lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky+0.01, r=(prumer_sroubu)/2, center = true, $fn=100);
             
 //otvor na šroub 2 
- translate([senzor_delka/2,-senzor_sirka/2,S01_vyska_komponentu_na_lozisko/2])           
-  cylinder (h = S01_vyska_komponentu_na_lozisko+0.01, r=(prumer_sroubu)/2, center = true, $fn=100);            
+ translate([senzor_delka/2,-senzor_sirka/2,(lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky)/2])           
+  cylinder (h = lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky+0.01, r=(prumer_sroubu)/2, center = true, $fn=100);            
             
 //otvor na šroub 3
- translate([senzor_delka/2,senzor_sirka/2,S01_vyska_komponentu_na_lozisko/2])           
-  cylinder (h = S01_vyska_komponentu_na_lozisko+0.01, r=(prumer_sroubu)/2, center = true, $fn=100); 
+ translate([senzor_delka/2,senzor_sirka/2,(lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky)/2])           
+  cylinder (h = lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky+0.01, r=(prumer_sroubu)/2, center = true, $fn=100); 
 
 //otvor na šroub 4
- translate([-senzor_delka/2,senzor_sirka/2,S01_vyska_komponentu_na_lozisko/2])           
-  cylinder (h = S01_vyska_komponentu_na_lozisko+0.01, r=(prumer_sroubu)/2, center = true, $fn=100);           
+ translate([-senzor_delka/2,senzor_sirka/2,(lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky)/2])           
+  cylinder (h = lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky+0.01, r=(prumer_sroubu)/2, center = true, $fn=100);           
      
 }
 translate([0,0,lozisko_vyska/2+S01_sila_materialu])

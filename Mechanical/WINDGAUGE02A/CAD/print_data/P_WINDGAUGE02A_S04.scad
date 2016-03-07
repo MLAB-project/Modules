@@ -1,19 +1,11 @@
 $fn=100; // model faces resolution.
 include <../configuration.scad>
 
-
+use <../SRC/WINDGAUGE02A_S04.scad>
 use <../SRC/polyScrewThread_r1.scad>
-use <../SRC/WINDGAUGE02A_D01.scad>
 
+translate([0,0,0])
 
-PI=3.141592;
+rotate([0, 0, 0])
 
-
-
-
- 
-WINDGAUGE02A_D01();
-
-
-    
-  
+WINDGAUGE02A_S04();   

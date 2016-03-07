@@ -1,35 +1,52 @@
 $fn=40; // model faces resolution.
 include <../configuration.scad>
 
-module WINDGAUGE02A_R05(vyska_pod_magnetem,magnet_zapusteni,magnet_prumer,vyska_hlavy_sroubu,prumer_hlavy_sroubu,prumer_sroubu,vyska_matky,sirka_matky,R05_sirka_matky,S01_sila_materialu)
+module WINDGAUGE02A_R05()
     {
         //setihrana matice
           difference()
         {
-        //zakladni material
-            cylinder (h = 2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_zapusteni+vyska_matky, r= R05_sirka_matky/2, $fn=6);
             
-         //dira na matku   
-    cylinder (h = vyska_matky+0.2, r= (sirka_matky+0.2)/2, $fn=6);
+            union()
+            {
+        //zakladni material
+            cylinder (h = 2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky-senzor_vyska_IO-senzor_odstup_od_magnetu, r= R05_sirka_matky/2, $fn=6);
+            
+            translate([0,0,-S01_sila_materialu/2])    
+    cylinder (h = S01_sila_materialu, r=(lozisko_prumer_vnitrni+2*lozisko_prekryv)/2, center = true, $fn=100);     
+                }
+        
             
        
   
         //otvor pro magnet    
-            translate([0,0,(2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_zapusteni+vyska_matky)-magnet_zapusteni/2+0.01])    
+            translate([0,0,(2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky-senzor_vyska_IO-senzor_odstup_od_magnetu)-magnet_zapusteni/2+0.01])    
                 cylinder (h = magnet_zapusteni+0.01, r=((magnet_prumer+0.2)/2), center = true, $fn=100);     
-   
-        //zapusteni uchytného sroubu   
-            translate([0,0,(2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_zapusteni+vyska_matky)-vyska_hlavy_sroubu/2+0.1])    
-                cylinder (h = vyska_hlavy_sroubu+1, r=((prumer_hlavy_sroubu+0.2)/2), center = true, $fn=100); 
-
-        //otvor pro sroub
-        translate([0,0,(2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_zapusteni+vyska_matky)/2+0.1])     
-            cylinder (h = (2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_zapusteni+vyska_matky)+0.1, r=(prumer_sroubu)/2, center = true, $fn=100);     
-        }
+ //otvor  
+translate([0,0,-S01_sila_materialu])        
+cylinder (h = 3*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky-senzor_vyska_IO-senzor_odstup_od_magnetu+0.1, r=prumer_osicky/2, $fn=100);
+              
+                translate([0,0,S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky-senzor_vyska_IO-senzor_odstup_od_magnetu+0.1])
+         difference()
+        {     
+            cylinder(  S01_sila_materialu,d1=3*R05_sirka_matky, d2=3*lozisko_prumer_vnitrni+2*lozisko_prekryv  );    
+            
+                cylinder(  S01_sila_materialu, d1=R05_sirka_matky,d2=lozisko_prumer_vnitrni+2*lozisko_prekryv  );
+        
+    }     
+              
+     //spodní zakulacení           
+           difference()
+        {     
+            cylinder(  S01_sila_materialu, d1=3*lozisko_prumer_vnitrni+2*lozisko_prekryv,d2=3*R05_sirka_matky  );    
+            
+                cylinder(  S01_sila_materialu, d1=lozisko_prumer_vnitrni+2*lozisko_prekryv,d2=R05_sirka_matky  );
+        
     }
+    }
+ }
 
 
-
-WINDGAUGE02A_R05(vyska_pod_magnetem,magnet_zapusteni,magnet_prumer,vyska_hlavy_sroubu,prumer_hlavy_sroubu,prumer_sroubu,vyska_matky,sirka_matky,R05_sirka_matky,S01_sila_materialu);
+WINDGAUGE02A_R05();
 
  
