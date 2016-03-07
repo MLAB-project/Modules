@@ -26,7 +26,15 @@ cylinder (h = D01_material_pod_zavitem, r=(S01_prumer_vnitrni-S01_tolerance_zavi
 
 //uchyt na tyc
        translate([0,D01_delka_tyce/2+(S01_prumer_vnitrni-S01_tolerance_zavit)/2+D01_material_pred_zavitem,D01_material_pod_zavitem/2])
- cube([D01_sirka_tyce,D01_delka_tyce,D01_material_pod_zavitem],center=true);      
+ cube([D01_sirka_tyce,D01_delka_tyce,D01_material_pod_zavitem],center=true); 
+  
+
+      
+
+ 
+             
+     
+     
 //uchyt na tyc ovalna cast
 translate([0,(S01_prumer_vnitrni-S01_tolerance_zavit)/2+D01_material_pred_zavitem,D01_material_pod_zavitem/2])
  cube([D01_sirka_tyce,D01_material_za_zavitem+D01_material_pred_zavitem,D01_material_pod_zavitem],center=true);
