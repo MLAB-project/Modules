@@ -38,6 +38,16 @@ difference () {
         translate ([7i90HD_holes_offset, 7i90HD_holes_offset + 7i90HD_holes_ydistance, 6.2])  // one solid layer for slicer (the holes will be pierced on demand )
         cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
 
+        translate ([2.35 * inch, 7i90HD_holes_offset + 7i90HD_holes_ydistance,0])               // middle holes
+        cylinder (h = 6, r= (nut_size+clear)/2, $fn=6);
+        translate ([2.35 * inch, 7i90HD_holes_offset + 7i90HD_holes_ydistance, 6.2])  // one solid layer for slicer (the holes will be pierced on demand )
+        cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
+
+        translate ([2.35 * inch, 7i90HD_holes_offset, 0])               // middle holes
+        cylinder (h = 6, r= (nut_size+clear)/2, $fn=6);
+        translate ([2.35 * inch, 7i90HD_holes_offset, 6.2])  // one solid layer for slicer (the holes will be pierced on demand )
+        cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
+
         translate ([7i90HD_holes_offset + 7i90HD_holes_xdistance, 7i90HD_holes_offset + 7i90HD_holes_ydistance,0])
         cylinder (h = 6, r= (nut_size+clear)/2, $fn=6);
         translate ([7i90HD_holes_offset + 7i90HD_holes_xdistance, 7i90HD_holes_offset + 7i90HD_holes_ydistance, 6.2])  // one solid layer for slicer (the holes will be pierced on demand )
@@ -67,6 +77,11 @@ difference () {
         translate ([93.5, 18 , pedestal_height - 3]) // P3 jumper
         cube([6, 65, 5]);
 
+        translate ([4, 9 , pedestal_height - 3]) // P7 Power connector
+        cube([4, 7, 5]);
+
+        translate ([5, 56 , pedestal_height - 3]) // P4 interface connector
+        cube([6, 34, 5]);
         ////////////////////////////////////////
 
 // MLAB grid holes
