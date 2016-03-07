@@ -11,4 +11,4 @@ translate([0,0,0])
 
 rotate([0,0, 0])
 
-WINDGAUGE02A_S02(S01_sila_materialu,S01_vyska_komponentu_na_lozisko,S01_prumer_zavitu,lozisko_vyska,lozisko_prumer_vnejsi,lozisko_prumer_vnitrni,lozisko_prekryv,vyska_matky,prumer_orechu,prumer_sroubu,senzor_delka,senzor_sirka,S01_tolerance_zavit,sirka_matky,magnet_vyska);   
+WINDGAUGE02A_S02();   
