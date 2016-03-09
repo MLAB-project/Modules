@@ -7,12 +7,12 @@ $fn=40; // model faces resolution.
 
 //AWSCREEN01A_D03 -stredni díl
 D03_vyska_zavitu=5;
-D03_tolerance_zavitu=0.2; //tolerance s poloměru
+D03_tolerance_zavitu=0.75; //tolerance s poloměru
 D03_material_za_zavitem=2;
-D03_polomer_zavitu=10;
+D03_polomer_zavitu=15;
 D03_polomer_stitu=30;
-D03_tloustka_materialu=2;
-D03_vyska_stitu=15;
+D03_tloustka_materialu=1.4;
+D03_vyska_stitu=20;
 D03_pocet_vyztuh=3;
 screen_bevel = 20;
 PI=3.141592;
