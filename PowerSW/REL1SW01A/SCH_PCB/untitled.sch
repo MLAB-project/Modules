@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -748,7 +748,7 @@ W = angled&lt;p&gt;
 </classes>
 <parts>
 <part name="R1" library="moje_R" deviceset="R0805" device="" value="100"/>
-<part name="R2" library="moje_R" deviceset="R0805" device="" value="100"/>
+<part name="R2" library="moje_R" deviceset="R0805" device="" value="100k"/>
 <part name="D1" library="moje_diody" deviceset="D-SHOTKY-SMA" device="" value="SS14"/>
 <part name="D2" library="moje_diody" deviceset="D-SHOTKY-SMA" device="" value="SS14"/>
 <part name="T1" library="moje_T" deviceset="IRLML6244TRPBF" device="" value="IRLML6244"/>
@@ -757,7 +757,7 @@ W = angled&lt;p&gt;
 <part name="U$3" library="moje_schz" deviceset="GND" device=""/>
 <part name="U$4" library="moje_schz" deviceset="+VCC" device=""/>
 <part name="R3" library="moje_R" deviceset="R0805" device="" value="100"/>
-<part name="R4" library="moje_R" deviceset="R0805" device="" value="100"/>
+<part name="R4" library="moje_R" deviceset="R0805" device="" value="100k"/>
 <part name="D3" library="moje_diody" deviceset="D-SHOTKY-SMA" device="" value="SS14"/>
 <part name="D4" library="moje_diody" deviceset="D-SHOTKY-SMA" device="" value="SS14"/>
 <part name="T2" library="moje_T" deviceset="IRLML6244TRPBF" device="" value="IRLML6244"/>
