@@ -16,23 +16,25 @@ module AWSCREEN01A_D03(D03_vyska_zavitu,D03_tolerance_zavitu,D03_material_za_zav
     {
     angle_sep = 360/D03_pocet_vyztuh;
 
+
+//horni zavit
     translate ([0,0,D03_vyska_stitu])
     // screen upper rim
         difference () {
             screw_thread((D03_polomer_zavitu-D03_tolerance_zavitu)*2,4,55,D03_vyska_zavitu,PI/2,2);
     
     translate ([0,0,-0.01])
-        cylinder (h=D03_vyska_zavitu+0.02 ,r= D03_polomer_zavitu -D03_tolerance_zavitu- 2*D03_material_za_zavitem ,$fn=100);
+        cylinder (h=D03_vyska_zavitu+0.02 ,r= D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem ,$fn=100);
     }
 
 
 
-//screen 
+//screen
 
     difference () {
-        cylinder (h=D03_vyska_stitu,r1=D03_polomer_stitu-D03_tolerance_zavitu ,r2=D03_polomer_zavitu,$fn=100);
+        cylinder (h=D03_vyska_stitu,r1=D03_polomer_stitu ,r2=D03_polomer_zavitu,$fn=100);
         translate ([0,0,-0.01/2])
-            cylinder (h=D03_vyska_stitu+0.01,r1=D03_polomer_stitu-D03_tloustka_materialu ,r2=D03_polomer_zavitu -D03_tolerance_zavitu- 2*D03_material_za_zavitem,$fn=100);
+            cylinder (h=D03_vyska_stitu+0.01,r1=D03_polomer_stitu-D03_tloustka_materialu ,r2=D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem,$fn=100);
     
        
                     }
@@ -42,7 +44,7 @@ module AWSCREEN01A_D03(D03_vyska_zavitu,D03_tolerance_zavitu,D03_material_za_zav
 
 
     difference () {
-        cylinder (h=D03_vyska_zavitu,r = D03_polomer_zavitu + D03_material_za_zavitem,$fn=100);
+        cylinder (h=D03_vyska_zavitu,r = D03_polomer_zavitu + D03_material_za_zavitem/2,$fn=100);
         translate([0,0,-1])
                 screw_thread(D03_polomer_zavitu*2,4,55,D03_vyska_zavitu+2,PI/2,2);  
                     }
