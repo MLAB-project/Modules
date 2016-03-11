@@ -1,4 +1,4 @@
-update=Pá 11. březen 2016, 14:04:16 CET
+update=Pá 11. březen 2016, 16:54:29 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -34,8 +34,6 @@ RptD_X=0
 RptD_Y=100
 RptLab=1
 LabSize=60
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=lib;/home/kaklik/repos/kicad-mlab/symbols
@@ -125,3 +123,5 @@ LibName82=xilinx
 LibName83=Zilog
 LibName84=MLAB_CONNECTORS
 LibName85=MLAB_Jumpers
+[general]
+version=1
