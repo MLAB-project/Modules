@@ -59,8 +59,7 @@ F2 "" 38 -150 50 H V C CNN
 F3 "" 0 0 50 H V C CNN
 $FPLIST
  CP*
- C_Axial*
- C_Radial*
+ Elko*
  TantalC*
  C*elec
  c_elec*
@@ -88,8 +87,7 @@ F2 "" 0 0 50 H V C CNN
 F3 "" 0 0 50 H V C CNN
 $FPLIST
  CP*
- C_Axial*
- C_Radial*
+ Elko*
  TantalC*
  C*elec
  c_elec*
@@ -201,7 +199,7 @@ P 3 0 1 8  0 -50  -10 -80  -10 -80 N
 P 3 0 1 8  20 -50  10 -80  10 -80 N
 P 3 0 1 8  40 -50  -40 -50  -40 -50 N
 P 4 0 1 8  40 -50  30 -80  30 -80  30 -80 N
-X GNDPWR 1 0 0 0 U 50 50 1 1 W N
+X GNDPWR 1 0 0 0 U 40 40 1 1 W N
 ENDDRAW
 ENDDEF
 #
@@ -313,8 +311,8 @@ F1 "L_Small" 30 -40 50 H V L CNN
 F2 "" 0 0 50 H V C CNN
 F3 "" 0 0 50 H V C CNN
 $FPLIST
- Choke_*
- *Coil*
+ CP*
+ SM*
 $ENDFPLIST
 DRAW
 A 0 -60 20 -899 899 0 1 0 N 0 -80 0 -40
