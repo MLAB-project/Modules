@@ -59,7 +59,8 @@ F2 "" 38 -150 50 H V C CNN
 F3 "" 0 0 50 H V C CNN
 $FPLIST
  CP*
- Elko*
+ C_Axial*
+ C_Radial*
  TantalC*
  C*elec
  c_elec*
@@ -87,7 +88,8 @@ F2 "" 0 0 50 H V C CNN
 F3 "" 0 0 50 H V C CNN
 $FPLIST
  CP*
- Elko*
+ C_Axial*
+ C_Radial*
  TantalC*
  C*elec
  c_elec*
@@ -122,6 +124,28 @@ P 2 0 1 13  -60 -20  60 -20 N
 P 2 0 1 12  -60 20  60 20 N
 X ~ 1 0 100 75 D 40 40 1 1 P
 X ~ 2 0 -100 80 U 40 40 1 1 P
+ENDDRAW
+ENDDEF
+#
+# D
+#
+DEF D D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "D" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
+$FPLIST
+ Diode_*
+ D-Pak_TO252AA
+ *SingleDiode
+ *_Diode_*
+ *SingleDiode*
+$ENDFPLIST
+DRAW
+P 2 0 1 6  -50 50  -50 -50 N
+P 3 0 1 0  50 50  -50 0  50 -50 F
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -199,7 +223,7 @@ P 3 0 1 8  0 -50  -10 -80  -10 -80 N
 P 3 0 1 8  20 -50  10 -80  10 -80 N
 P 3 0 1 8  40 -50  -40 -50  -40 -50 N
 P 4 0 1 8  40 -50  30 -80  30 -80  30 -80 N
-X GNDPWR 1 0 0 0 U 40 40 1 1 W N
+X GNDPWR 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
@@ -311,8 +335,8 @@ F1 "L_Small" 30 -40 50 H V L CNN
 F2 "" 0 0 50 H V C CNN
 F3 "" 0 0 50 H V C CNN
 $FPLIST
- CP*
- SM*
+ Choke_*
+ *Coil*
 $ENDFPLIST
 DRAW
 A 0 -60 20 -899 899 0 1 0 N 0 -80 0 -40
@@ -387,6 +411,7 @@ X GNDP 48 450 -1300 200 U 50 50 1 1 I
 X OB2 19 1350 550 200 L 50 50 1 1 O
 X DRV_ENN_CFG6 29 -1250 -100 200 R 50 50 1 1 I
 X VSA 39 -150 1800 200 D 50 50 1 1 I
+X EP 49 550 -1300 200 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
