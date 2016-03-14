@@ -22,7 +22,7 @@ module WINDGAUGE02A_S01()
         
         //horní závit
            translate([0,0,S01_vyska-S01_vyska_horni_zavit])
-            screw_thread(S01_prumer_vnitrni,S01_hloubka_zavitu,55,S01_vyska_horni_zavit,PI/2,2);     
+            screw_thread(S01_prumer_vnitrni,S01_hloubka_zavitu,55,S01_vyska_horni_zavit+5,PI/2,2);     
 
         
         //otvor na drzak rj11            
@@ -34,7 +34,8 @@ module WINDGAUGE02A_S01()
           
 
         //spodní závit
-        screw_thread((S01_prumer_vnitrni),S01_hloubka_zavitu,55,S01_vyska_spodniho_zavitu+0.01,PI/2,2); 
+        translate([0,0,-5])
+        screw_thread((S01_prumer_vnitrni),S01_hloubka_zavitu,55,S01_vyska_spodniho_zavitu+5+0.01,PI/2,2); 
 
         //otvor skrz
                     translate([0,0,S01_vyska_spodniho_zavitu+3*S01_sila_drzaku_RJ11-0.3])

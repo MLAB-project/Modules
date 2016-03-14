@@ -1,7 +1,7 @@
 $fn=40; // model faces resolution.
 include <../configuration.scad>
 
-
+WINDGAUGE02A_L01();
 
 //Model lopatky
 
