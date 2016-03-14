@@ -29,7 +29,7 @@ senzor_odstup_od_magnetu=1;
 
 //lozisko
 lozisko_prumer_vnitrni=4.9;
-lozisko_prumer_vnejsi=16;
+lozisko_prumer_vnejsi=16.2;
 lozisko_vyska=5;
 lozisko_prekryv=1.5;
 
@@ -41,7 +41,7 @@ magnet_tolerance_prumeru=0.2;
 
 
 //parametry sroubu
-prumer_sroubu=3.2;
+prumer_sroubu=3.4;
 prumer_hlavy_sroubu=6;
 vyska_hlavy_sroubu=4;
 vyska_matky=3;
