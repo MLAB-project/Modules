@@ -9,8 +9,8 @@ $fn=40; // model faces resolution.
 D03_vyska_zavitu=5;
 D03_tolerance_zavitu=0.75; //tolerance s poloměru
 D03_material_za_zavitem=2;
-D03_polomer_zavitu=15;
-D03_polomer_stitu=30;
+D03_polomer_zavitu=22.5;
+D03_polomer_stitu=37.5;
 D03_tloustka_materialu=1.4;
 D03_vyska_stitu=15;
 D03_pocet_vyztuh=3;
@@ -18,17 +18,17 @@ screen_bevel = 20;
 PI=3.141592;
 
 //AWSCREEN01A_D04
-D04_vyska_na_elektroniku=2;
-D04_vyska_zavitu=15;
-D04_vyska_zavitu_pro_drzak_elektorniky=5;
+D04_sila_materialu_na_konektor=3;
+D04_konenektor_x=12.3;
+D04_konenektor_y=19;
 
 //AWSCREEN01A_D05 //uchyt velky
-D01_material_pod_zavitem=10;
+D01_material_pod_zavitem=5;
 D01_material_za_zavitem=5;
-D01_material_pred_zavitem=3;
+D01_material_pred_zavitem=2;
 D01_delka_tyce=40;
-D01_sirka_tyce=20;
-S01_vyska_komponentu_na_lozisko=D04_vyska_zavitu-D04_vyska_zavitu_pro_drzak_elektorniky;
+D01_sirka_tyce=10;
+S01_vyska_komponentu_na_lozisko=D03_vyska_zavitu;
 S01_prumer_zavitu=2*D03_polomer_zavitu;
 
 
