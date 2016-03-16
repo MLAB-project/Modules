@@ -26,15 +26,15 @@ screw_thread((S01_prumer_vnitrni-S01_tolerance_zavit),S01_hloubka_zavitu,55,S01_
             
 //spodní doraz
   
-cylinder (h = S01_sila_materialu, r=S01_prumer_vnitrni/2+S01_sila_materialu, $fn=100);  
+cylinder (h = S01_sila_materialu, r=S01_prumer_vnitrni/2+5/2*S01_sila_materialu, $fn=100);  
 
 
 //krycí ovál - usnadnění povolení
 difference()
         {
-cylinder (h = R01_vyska_preryti_statoru+5, r=S01_prumer_vnitrni/2+3/2*S01_sila_materialu, $fn=100); 
+cylinder (h = R01_vyska_preryti_statoru+5, r=S01_prumer_vnitrni/2+5/2*S01_sila_materialu, $fn=100); 
 
-cylinder (h = R01_vyska_preryti_statoru+5+0.01, r=S01_prumer_vnitrni/2+S01_sila_materialu, $fn=100);            
+cylinder (h = R01_vyska_preryti_statoru+5+0.01, r=S01_prumer_vnitrni/2+3/2*S01_sila_materialu, $fn=100);            
             
  }    
 }            

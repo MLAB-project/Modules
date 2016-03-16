@@ -13,11 +13,11 @@ module WINDGAUGE02A_L01()
         {
 //koule vrchní
             translate([0,0,R01_vyska_preryti_statoru])
-sphere(d = (S01_prumer_vnitrni/2+3*S01_sila_materialu)*2, $fn=100);       
+sphere(d = (S01_prumer_vnitrni/2+4*S01_sila_materialu)*2, $fn=100);       
             
             
 //spodní válec        
-cylinder (h = R01_vyska_preryti_statoru, r=S01_prumer_vnitrni/2+3*S01_sila_materialu, $fn=100); 
+cylinder (h = R01_vyska_preryti_statoru, r=S01_prumer_vnitrni/2+4*S01_sila_materialu, $fn=100); 
             
             
 //lopatka 1   
@@ -40,10 +40,10 @@ lopatka();
 
  //Odečet spodního válce
  translate([0,0,-(S01_prumer_vnitrni/2+2*S01_sila_materialu)])
-cylinder (h = R01_vyska_preryti_statoru+(S01_prumer_vnitrni/2+2*S01_sila_materialu), r=S01_prumer_vnitrni/2+2*S01_sila_materialu, $fn=100);
+cylinder (h = R01_vyska_preryti_statoru+(S01_prumer_vnitrni/2+2*S01_sila_materialu), r=S01_prumer_vnitrni/2+3*S01_sila_materialu, $fn=100);
  //odecet koule
  translate([0,0,R01_vyska_preryti_statoru])
-sphere(d = (S01_prumer_vnitrni/2+2*S01_sila_materialu)*2, $fn=100);      
+sphere(d = (S01_prumer_vnitrni/2+3*S01_sila_materialu)*2, $fn=100);      
             
  }            
  difference()
@@ -61,36 +61,47 @@ sphere(d = (S01_prumer_vnitrni/2+2*S01_sila_materialu)*2, $fn=100);
  
    
 translate([0,0,-5])
-screw_thread((11-S01_tolerance_zavit),3,55,R01_vyska_preryti_statoru+10,PI/2,2);    
+screw_thread((11),3,55,R01_vyska_preryti_statoru+10,PI/2,2); 
+ 
+    //za závitem            
+ translate([0,0,R01_vyska_preryti_statoru+5]) 
+cylinder(h=(5), r1=(11)/2, r2=0, center=false, $fn=100);             
+                
    }
    }
+   
+   
+   
+   
+   
+   
 module vyztuhy()
 {
     difference()
         {   
 
  translate([0,0,R01_vyska_preryti_statoru]) 
-cylinder(h=(S01_prumer_vnitrni/2+3*S01_sila_materialu), r1=(lozisko_prumer_vnejsi/2-1), r2=(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+3*S01_sila_materialu)-R01_vyska_preryti_statoru, center=false, $fn=100);  
+cylinder(h=(S01_prumer_vnitrni/2+4*S01_sila_materialu), r1=(lozisko_prumer_vnejsi/2-1), r2=(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu)-R01_vyska_preryti_statoru, center=false, $fn=100);  
  
             
  //vykousnutí 1           
             translate([S01_sila_materialu/2,S01_sila_materialu/2,R01_vyska_preryti_statoru-0.005])
-cube([(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+3*S01_sila_materialu),(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+3*S01_sila_materialu),(S01_prumer_vnitrni/2+3*S01_sila_materialu)+0.01],center=false);  
+cube([(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu),(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu),(S01_prumer_vnitrni/2+4*S01_sila_materialu)+0.01],center=false);  
   
 //vykousnutí 2
  rotate([0, 0, 90])           
             translate([S01_sila_materialu/2,S01_sila_materialu/2,R01_vyska_preryti_statoru-0.005])
-cube([(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+3*S01_sila_materialu),(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+3*S01_sila_materialu),(S01_prumer_vnitrni/2+3*S01_sila_materialu)+0.01],center=false);  
+cube([(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu),(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu),(S01_prumer_vnitrni/2+4*S01_sila_materialu)+0.01],center=false); 
             
  //vykousnutí 3
  rotate([0, 0, 180])           
             translate([S01_sila_materialu/2,S01_sila_materialu/2,R01_vyska_preryti_statoru-0.005])
-cube([(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+3*S01_sila_materialu),(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+3*S01_sila_materialu),(S01_prumer_vnitrni/2+3*S01_sila_materialu)+0.01],center=false);  
+cube([(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu),(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu),(S01_prumer_vnitrni/2+4*S01_sila_materialu)+0.01],center=false);
             
  //vykousnutí 4
  rotate([0, 0, 270])           
         translate([S01_sila_materialu/2,S01_sila_materialu/2,R01_vyska_preryti_statoru-0.005])
-cube([(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+3*S01_sila_materialu),(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+3*S01_sila_materialu),(S01_prumer_vnitrni/2+3*S01_sila_materialu)+0.01],center=false);               
+cube([(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu),(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu),(S01_prumer_vnitrni/2+4*S01_sila_materialu)+0.01],center=false);              
  difference()
         {    
  translate([0,0,R01_vyska_preryti_statoru])
@@ -117,11 +128,13 @@ module lopatka()
             
          translate([0,0,0])
             cube([L01_hrana_drzaku_a,L01_delka_uchytu+L01_prumer_lopatky/2+10,L01_hrana_drzaku_b],center=false);
-         
+    //podpěra     
        translate([0,0,0]) 
-cylinder(h=(L01_prumer_lopatky/2), r1=L01_prumer_lopatky/3, r2=L01_prumer_lopatky/2, center=false, $fn=100);       
+cylinder(h=(L01_prumer_lopatky/2), r1=L01_prumer_lopatky/3.5, r2=L01_prumer_lopatky/2, center=false, $fn=100);       
        
       } 
+      
+      
  translate([0,0,L01_prumer_lopatky/2])
          sphere(d = L01_prumer_lopatky-L01_sila_materialu_lopatky*2, $fn=100); 
   
