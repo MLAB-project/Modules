@@ -24,7 +24,7 @@ grid_list = [for (j = [MLAB_grid_xoffset : MLAB_grid: x_size], i = [MLAB_grid_yo
 if ((j>(x_size-10) && i>(y_size-10)) || (j<10 && i<10) || (j<10 && i>(y_size-10)) || (j>(x_size-10) && i<10) ) [j, i] ];
 
 
-//------------parameters---------------------------
+//------------ Safety grid parameters---------------------------
 
 nY = 8;
 nX = 6;
@@ -35,15 +35,6 @@ meshY=y_size-4*pile_radius;
 
 // width of solid part of grid
 meshSolid=1.2;
-// width of blank part of grid 
-//meshSpaceX=(y_size-4*pile_radius)/8;  
-//meshSpaceY=(y_size-4*pile_radius)/8;  
-// thickness in Z direction
-
-
-//-------------------------------------------------
-//nX=meshX/(meshSolid+meshSpaceX);
-//nY=meshY/(meshSolid+meshSpaceY);
 
 meshSpaceX = (meshX - meshSolid*nX)/nX;
 meshSpaceY = (meshY - meshSolid*nY)/nY;

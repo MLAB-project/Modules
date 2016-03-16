@@ -13,6 +13,20 @@ mount_hole = 3.5;
 nut_size = 6.7;  //size suitable for ABS material
 clear = 0.175;
 
+//------------ Safety grid parameters---------------------------
+
+nY = 8;
+nX = 5;
+
+
+meshX=x_size-4*pile_radius;
+meshY=y_size-4*pile_radius;
+
+// width of solid part of grid
+meshSolid=1.2;
+
+meshSpaceX = (meshX - meshSolid*nX)/nX;
+meshSpaceY = (meshY - meshSolid*nY)/nY;
 
 
 
@@ -48,4 +62,17 @@ difference () {
             cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
     }    
 }
+
+translate ([2*pile_radius, 2*pile_radius, 0]) // central hole in module support
+    union()
+    {
+        for (i=[1:nX-1]) {
+                 translate([i*(meshSolid+meshSpaceX) - meshSolid/2,0,0]) cube(size=[meshSolid, meshY, thickness],center=false);
+        }
+
+        for (i=[1:nY-1]) {
+                translate([0,i*(meshSolid+meshSpaceY) - meshSolid/2,0]) cube(size=[meshX, meshSolid, thickness],center=false);
+
+        }
+    }
 
