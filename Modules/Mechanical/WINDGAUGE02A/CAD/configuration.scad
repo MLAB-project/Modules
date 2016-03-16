@@ -29,7 +29,7 @@ senzor_odstup_od_magnetu=1;
 
 //lozisko
 lozisko_prumer_vnitrni=4.9;
-lozisko_prumer_vnejsi=16.2;
+lozisko_prumer_vnejsi=16.1;
 lozisko_vyska=5;
 lozisko_prekryv=1.5;
 
@@ -64,7 +64,7 @@ L01_sila_zapusteni_drzaku=3; //sila drzaku který je v rotoru
 L01_hrana_drzaku_a=10;
 L01_hrana_drzaku_b=3;
 L01_tolerance_drzaku=0.4;
-L01_delka_uchytu=20;
+L01_delka_uchytu=5;
 L01_prumer_lopatky=40;
 L01_sila_materialu_lopatky=0.9;
 
@@ -90,8 +90,10 @@ D02_prumer_uchytneho_sroubu=6.2;
 
 
 //WINDGAUGE02A_R01 //rotor s prekritim statoru
-R01_vyska_preryti_statoru=20;
+R01_vyska_preryti_statoru=10;
 R01_sila_materialu_pro_prekriti=1.3;
+R01_mezera_mezi_statorem_rotorem=3;
+
 
 //WINDGAUGE02A_R02 //rotor spodni dil
 
