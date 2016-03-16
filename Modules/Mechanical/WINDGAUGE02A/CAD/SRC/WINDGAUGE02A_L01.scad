@@ -118,7 +118,8 @@ module lopatka()
          translate([0,0,0])
             cube([L01_hrana_drzaku_a,L01_delka_uchytu+L01_prumer_lopatky/2+10,L01_hrana_drzaku_b],center=false);
          
-            
+       translate([0,0,0]) 
+cylinder(h=(L01_prumer_lopatky/2), r1=L01_prumer_lopatky/3, r2=L01_prumer_lopatky/2, center=false, $fn=100);       
        
       } 
  translate([0,0,L01_prumer_lopatky/2])
