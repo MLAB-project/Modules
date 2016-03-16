@@ -59,11 +59,11 @@ sphere(d = (S01_prumer_vnitrni/2+3*S01_sila_materialu)*2, $fn=100);
                 }
 
  
-   
+ //vnitrni zavit  
 translate([0,0,-5])
 screw_thread((11),3,55,R01_vyska_preryti_statoru+10,PI/2,2); 
  
-    //za závitem            
+    //za závitem aby to slo tisknout          
  translate([0,0,R01_vyska_preryti_statoru+5]) 
 cylinder(h=(5), r1=(11)/2, r2=0, center=false, $fn=100);             
                 

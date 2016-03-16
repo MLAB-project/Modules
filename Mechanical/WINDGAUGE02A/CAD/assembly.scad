@@ -54,7 +54,7 @@ color(barva_S01)
     translate([0,0,0])
              
  
-//WINDGAUGE02A_S01();        
+WINDGAUGE02A_S01();        
        
  WINDGAUGE02A_S02();   
        
