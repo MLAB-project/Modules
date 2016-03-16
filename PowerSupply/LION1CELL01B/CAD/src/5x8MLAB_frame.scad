@@ -1,7 +1,7 @@
 
 x_holes = 5;
 y_holes = 8;
-pedestal_height = 12;   // designed for use the MLAB standard 20mm screws.
+pedestal_height = 9;   // designed for use the MLAB standard 20mm screws.
 
 MLAB_grid = 10.16;
 thickness = 1;          // thickness of bottom belt
