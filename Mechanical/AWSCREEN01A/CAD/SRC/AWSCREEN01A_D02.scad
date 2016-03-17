@@ -44,13 +44,9 @@ difference () {
                     //horni kuzel
     
      translate ([0,0,D03_vyska_stitu])
-    difference () {
+   
         cylinder (h=5,r1=D03_polomer_zavitu ,r2=1,$fn=100);
-        translate ([0,0,-0.01/2])
-            cylinder (h=5-D03_tloustka_materialu,r1=D03_polomer_zavitu-D03_tloustka_materialu ,r2=0,$fn=100);
-    
-       
-                    }
+        
 
 
 //inner ring
