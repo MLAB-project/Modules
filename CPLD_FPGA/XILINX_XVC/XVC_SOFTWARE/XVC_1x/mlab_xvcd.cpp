@@ -256,7 +256,7 @@ int handleData(SOCKET ClientSocket)
 		// Read Length (in bits, 32bit integer)
 		int len;
 
-		iResult = recv(ClientSocket, (char *)&len, 4, 0);		// pøepsat pøenositelnì
+		iResult = recv(ClientSocket, (char *)&len, 4, 0);		// TODO: rewrite for multiplatform use 
 		if (iResult==0)
 		{
 			printf("\n  Connection Closed\n\n");

@@ -11,7 +11,7 @@
 # (c)miho 2013 http://www.mlab.cz
 
 # Hints:
-#   lsusb -v
+#   sudo lsusb -d 0403:6015 -v
 #   udevadm info -a -p /devices/pci0000:00/0000:00:06.0/usb1/1-2/1-2:1.0
 #   udevadm control --reload-rules
 
