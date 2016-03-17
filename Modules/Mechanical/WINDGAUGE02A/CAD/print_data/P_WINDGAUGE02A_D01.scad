@@ -7,10 +7,6 @@ use <../SRC/WINDGAUGE02A_D01.scad>
 
 
 PI=3.141592;
-
-
-
-
  
 WINDGAUGE02A_D01();
 
