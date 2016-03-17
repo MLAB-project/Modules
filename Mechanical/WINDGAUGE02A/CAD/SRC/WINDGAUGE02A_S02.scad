@@ -1,333 +1,47 @@
 $fn=40; // model faces resolution.
 include <../configuration.scad>
-
-
 include <polyScrewThread_r1.scad>
 
 PI=3.141592;
 
+//Hlavní válec
 
-
+WINDGAUGE02A_S02();
 
 module WINDGAUGE02A_S02()
-    {
- 
-//valec se zavitem
-        union()  {
+{
+    difference()
+    {            
+        union() 
+        {           
+            //základní válec
+            cylinder (h = S01_vyska, r=(S01_prumer_vnitrni)/2+S01_sila_materialu, $fn=100);
 
-
-difference()
-        {
-     
-     
-union()  {
-translate([0,0,S01_sila_materialu])
-screw_thread((S01_prumer_vnitrni-S01_tolerance_zavit),S01_hloubka_zavitu,55,S01_vyska_horni_zavit,PI/2,2);  
             
-//spodní doraz
-  
-cylinder (h = S01_sila_materialu, r=S01_prumer_vnitrni/2+5/2*S01_sila_materialu, $fn=100);  
 
-
-//krycí ovál - usnadnění povolení
-difference()
-        {
-cylinder (h = R01_vyska_preryti_statoru+5, r=S01_prumer_vnitrni/2+5/2*S01_sila_materialu, $fn=100); 
-
-cylinder (h = R01_vyska_preryti_statoru+5+0.01, r=S01_prumer_vnitrni/2+3/2*S01_sila_materialu, $fn=100);            
-            
- }    
-}            
-
-//odstranění vnitřní výplně
-  translate([0,0,S01_sila_materialu])
-cylinder (h = S01_vyska_horni_zavit+0.01, r=S01_prumer_vnitrni/2-S01_hloubka_zavitu/2-S01_sila_materialu, $fn=100); 
-            
-            //otvor na ložisko         
-  translate([0,0,S01_sila_materialu/2])           
-  cylinder (h = S01_sila_materialu+0.01, r=(lozisko_prumer_vnejsi+0.2)/2, center = true, $fn=100);          
- //otvory na hlavu šroubu ve dně 
-  //otvor na hlavu šroubu 1
- translate([-senzor_delka/2,-senzor_sirka/2,(lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky)/2])           
-  cylinder (h = lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky+0.01, r=(prumer_hlavy_sroubu)/2, center = true, $fn=100);
-            
-//otvor na šroub 2 
- translate([senzor_delka/2,-senzor_sirka/2,(lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky)/2])           
- cylinder (h = lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky+0.01, r=(prumer_hlavy_sroubu)/2, center = true, $fn=100);           
-            
-//otvor na šroub 3
- translate([senzor_delka/2,senzor_sirka/2,(lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky)/2])           
- cylinder (h = lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky+0.01, r=(prumer_hlavy_sroubu)/2, center = true, $fn=100);
-
-//otvor na šroub 4
- translate([-senzor_delka/2,senzor_sirka/2,(lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky)/2])           
-   cylinder (h = lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky+0.01, r=(prumer_hlavy_sroubu)/2, center = true, $fn=100);          
-     
-}
-
-//otvor na ložisko
-
-   difference()
-  {  
-translate([0,0,(R01_vyska_preryti_statoru+2*lozisko_vyska)/2+S01_sila_materialu])   
- cylinder (h = R01_vyska_preryti_statoru+2*lozisko_vyska, r=(lozisko_prumer_vnejsi+2*S01_sila_materialu)/2, center = true, $fn=100);     
- translate([0,0,(R01_vyska_preryti_statoru+2*lozisko_vyska)/2+S01_sila_materialu])
-      cylinder (h = R01_vyska_preryti_statoru+2*lozisko_vyska+0.01, r=(lozisko_prumer_vnejsi+0.2)/2, center = true, $fn=100);
-      
-//otvory na hlavy sroubu v uchytu loziska     
- translate([-senzor_delka/2,-senzor_sirka/2,0])
-     { 
- cylinder (h = vyska_hlavy_sroubu, r= (prumer_hlavy_sroubu)/2, $fn=40);
- translate([0,0,vyska_hlavy_sroubu])     
- cylinder(h=2+0.02, r1=(prumer_hlavy_sroubu)/2, r2=(prumer_sroubu+0.2)/2);     
-     } 
-  translate([-senzor_delka/2,senzor_sirka/2,0])
-{ 
- cylinder (h = vyska_hlavy_sroubu, r= (prumer_hlavy_sroubu)/2, $fn=40);
- translate([0,0,vyska_hlavy_sroubu])     
- cylinder(h=2+0.02, r1=(prumer_hlavy_sroubu)/2, r2=(prumer_sroubu+0.2)/2);     
-     }   
-      
-  translate([senzor_delka/2,-senzor_sirka/2,0])
-{ 
- cylinder (h = vyska_hlavy_sroubu, r= (prumer_hlavy_sroubu)/2, $fn=40);
- translate([0,0,vyska_hlavy_sroubu])     
- cylinder(h=2+0.02, r1=(prumer_hlavy_sroubu)/2, r2=(prumer_sroubu+0.2)/2);     
-     }    
-  
-   translate([senzor_delka/2,senzor_sirka/2,0])
-{ 
- cylinder (h = vyska_hlavy_sroubu, r= (prumer_hlavy_sroubu)/2, $fn=40);
- translate([0,0,vyska_hlavy_sroubu])     
- cylinder(h=2+0.02, r1=(prumer_hlavy_sroubu)/2, r2=(prumer_sroubu+0.2)/2);     
-     }    
-}
-
-difference()
-  { 
-      union()
-      { 
-//uchyty na modul
-//sloupek 1
-translate([-senzor_delka/2,-senzor_sirka/2,0]) 
-SLOUPEK();
-
-
-translate([senzor_delka/2,-senzor_sirka/2,0])  
-SLOUPEK();
-
-translate([senzor_delka/2,senzor_sirka/2,0])  
-SLOUPEK();
-
-translate([-senzor_delka/2,senzor_sirka/2,0])  
-SLOUPEK();
-    }
- translate([0,0,0])    
-  cylinder (h = R01_vyska_preryti_statoru+2*lozisko_vyska+S01_sila_materialu, r=(lozisko_prumer_vnejsi+0.2)/2, $fn=100);  
-   
- //doraz loziska
-translate([0,0,(R01_vyska_preryti_statoru+2*lozisko_vyska)+S01_sila_materialu+8/2])      
-cylinder(h=8, r1=(lozisko_prumer_vnejsi+0.2)/2, r2=0, center=true);   
-    
-}
-
-
-
-
-}
-}
-
-
-//sloupek na senzor
-module SLOUPEK()
-{    
-translate([0,0,S01_sila_materialu]) 
-difference () {
-             
-    cylinder (h = R01_vyska_preryti_statoru+2*lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky, r= sirka_matky/2+S01_sila_materialu, $fn=20);
-       
-
-                   
-
-       translate([0,0,R01_vyska_preryti_statoru+2*lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky-vyska_matky]) 
-            cylinder (h = vyska_matky+0.01, r= (sirka_matky+0.2)/2, $fn=6);
-    
-    
-    translate([0,0,-0.01]) 
-            cylinder (h = R01_vyska_preryti_statoru+2*lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky+0.01, r= (prumer_sroubu+0.2)/2, $fn=40);
-       
+        }
         
-    translate([0,0,-0.01]) 
-            cylinder (h = vyska_hlavy_sroubu-S01_sila_materialu, r= (prumer_hlavy_sroubu)/2, $fn=40);
-    
-    translate([0,0,vyska_hlavy_sroubu-S01_sila_materialu-0.02]) 
-    cylinder(h=2+0.02, r1=(prumer_hlavy_sroubu)/2, r2=(prumer_sroubu+0.2)/2);  
-    
-        }       
-  }
-   
-
-  
-WINDGAUGE02A_S02(); 
-
-/* 
- difference()
-        {
- translate([0,0,S01_sila_materialu+S01_vyska_komponentu_na_lozisko/2])
-    cylinder (h = S01_vyska_komponentu_na_lozisko+0.01, r=((S01_prumer_zavitu-S01_sila_materialu)-S01_tolerance_zavit)/2-S01_hloubka_zavitu/2, center = true, $fn=100); 
-            
-  translate([0,0,S01_sila_materialu+S01_vyska_komponentu_na_lozisko/2])
-    cylinder (h = S01_vyska_komponentu_na_lozisko+0.01, r=lozisko_prumer_vnejsi/2+S01_sila_materialu, center = true, $fn=100);
-            
- translate([-((S01_prumer_zavitu-S01_sila_materialu)-S01_tolerance_zavit)-S01_hloubka_zavitu,-S01_sila_materialu/2,0])
-    cube([2*((S01_prumer_zavitu-S01_sila_materialu)-S01_tolerance_zavit)-S01_hloubka_zavitu,S01_sila_materialu,S01_vyska_komponentu_na_lozisko]);
- 
- rotate ([0,0,90])           
- translate([-((S01_prumer_zavitu-S01_sila_materialu)-S01_tolerance_zavit)-S01_hloubka_zavitu,-S01_sila_materialu/2,0])
-    cube([2*((S01_prumer_zavitu-S01_sila_materialu)-S01_tolerance_zavit)-S01_hloubka_zavitu,S01_sila_materialu,S01_vyska_komponentu_na_lozisko]);            
-            
-            
-             }
-            
-  //otvor na pruchod hridelky          
-  translate([0,0,S01_sila_materialu/2])           
-  cylinder (h = S01_sila_materialu+0.01, r=(lozisko_prumer_vnejsi+0.2)/2, center = true, $fn=100);          
-  
-  //otvor na šroub 1
- translate([-senzor_delka/2,-senzor_sirka/2,S01_vyska_komponentu_na_lozisko/2])           
-  cylinder (h = S01_vyska_komponentu_na_lozisko+0.01, r=(prumer_sroubu)/2, center = true, $fn=100);
-            
-//otvor na šroub 2 
- translate([senzor_delka/2,-senzor_sirka/2,S01_vyska_komponentu_na_lozisko/2])           
-  cylinder (h = S01_vyska_komponentu_na_lozisko+0.01, r=(prumer_sroubu)/2, center = true, $fn=100);            
-            
-//otvor na šroub 3
- translate([senzor_delka/2,senzor_sirka/2,S01_vyska_komponentu_na_lozisko/2])           
-  cylinder (h = S01_vyska_komponentu_na_lozisko+0.01, r=(prumer_sroubu)/2, center = true, $fn=100); 
-
-//otvor na šroub 4
- translate([-senzor_delka/2,senzor_sirka/2,S01_vyska_komponentu_na_lozisko/2])           
-  cylinder (h = S01_vyska_komponentu_na_lozisko+0.01, r=(prumer_sroubu)/2, center = true, $fn=100);           
-            
-                      
-
-//otvory na ložisko
-translate([0,0,(S01_vyska_komponentu_na_lozisko+S01_vyska_zuzene_casti+S01_vyska_prechodu)/2])
-  
-   
- 
- cylinder (h = S01_vyska_komponentu_na_lozisko+S01_vyska_zuzene_casti+S01_vyska_prechodu+0.01, r=(lozisko_prumer_vnejsi+0.2)/2, center = true, $fn=100);
- 
- 
-
-
- 
-
-
-
-
-
-
-
- 
-  }  
- 
-
-//sloupek na senzor
-module SLOUPEK()
-{    
-translate([0,0,S01_sila_materialu]) 
-difference () {
-             
-    cylinder (h = lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky, r= sirka_matky/2+S01_sila_materialu, $fn=20);
+        //horní závit
+        translate([0,0,S01_vyska-S01_vyska_horni_zavit])
+            screw_thread(S01_prumer_vnitrni,S01_hloubka_zavitu,55,S01_vyska_horni_zavit+5,PI/2,2);     
        
+        //otvor na drzak rj11            
+        translate([0,0,S01_vyska_spodniho_zavitu+S01_sila_drzaku_RJ11-0.3])
+            cylinder(  2*S01_sila_drzaku_RJ11, d1=(S01_prumer_vnitrni)-1-1.5*S01_hloubka_zavitu,d2=(S01_prumer_vnitrni)  );
+        
+        translate([0,0,S01_vyska_spodniho_zavitu])
+            cylinder (h = S01_sila_drzaku_RJ11-0.3, r=(S01_prumer_vnitrni)/2-S01_hloubka_zavitu/2+0.5, $fn=100); 
+         
+        //spodní závit
+        translate([0,0,-5])
+            screw_thread((S01_prumer_vnitrni),S01_hloubka_zavitu,55,S01_vyska_spodniho_zavitu+5+0.01,PI/2,2); 
 
-                   
-
-       translate([0,0,lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky-vyska_matky]) 
-            cylinder (h = vyska_matky+0.01, r= (sirka_matky+0.2)/2, $fn=6);
-    
-    
-    translate([0,0,-0.01]) 
-            cylinder (h = lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky+0.01, r= (prumer_sroubu+0.2)/2, $fn=10);
-        } 
-  }
-  } 
-
-WINDGAUGE02A_S02(S01_sila_materialu,S01_vyska_komponentu_na_lozisko,S01_prumer_zavitu,lozisko_vyska,lozisko_prumer_vnejsi,lozisko_prumer_vnitrni,lozisko_prekryv,vyska_matky,prumer_orechu,prumer_sroubu,senzor_delka,senzor_sirka,S01_tolerance_zavit,sirka_matky,magnet_vyska,S01_vyska_zuzene_casti,S01_vyska_prechodu);  
-
-
-//původní díl
-/*
-module WINDGAUGE02A_S02(S01_sila_materialu,S01_vyska_komponentu_na_lozisko,S01_prumer_zavitu,lozisko_vyska,lozisko_prumer_vnejsi,lozisko_prumer_vnitrni,lozisko_prekryv,vyska_matky,prumer_orechu,prumer_sroubu,senzor_delka,senzor_sirka,S01_tolerance_zavit,sirka_matky,magnet_vyska)
-    {
-union()
-  {  
-//valec se zavitem
-difference()
-        {
-           
- screw_thread(S01_prumer_zavitu-S01_tolerance_zavit,S01_hloubka_zavitu,55,S01_vyska_komponentu_na_lozisko,PI/2,2); 
- 
- translate([0,0,S01_sila_materialu+S01_vyska_komponentu_na_lozisko/2])
-    cylinder (h = S01_vyska_komponentu_na_lozisko+0.01, r=((S01_prumer_zavitu-S01_sila_materialu)-S01_tolerance_zavit)/2-S01_hloubka_zavitu/2, center = true, $fn=100); 
-            
-  //otvor na pruchod hridelky          
-  translate([0,0,S01_sila_materialu/2])           
-  cylinder (h = S01_sila_materialu+0.01, r=(lozisko_prumer_vnitrni+2*lozisko_prekryv+0.2)/2, center = true, $fn=100);          
-  
-  //otvor na šroub 1
- translate([-senzor_delka/2,-senzor_sirka/2,S01_vyska_komponentu_na_lozisko/2])           
-  cylinder (h = S01_vyska_komponentu_na_lozisko+0.01, r=(prumer_sroubu)/2, center = true, $fn=100);
-            
-//otvor na šroub 2 
- translate([senzor_delka/2,-senzor_sirka/2,S01_vyska_komponentu_na_lozisko/2])           
-  cylinder (h = S01_vyska_komponentu_na_lozisko+0.01, r=(prumer_sroubu)/2, center = true, $fn=100);            
-            
-//otvor na šroub 3
- translate([senzor_delka/2,senzor_sirka/2,S01_vyska_komponentu_na_lozisko/2])           
-  cylinder (h = S01_vyska_komponentu_na_lozisko+0.01, r=(prumer_sroubu)/2, center = true, $fn=100); 
-
-//otvor na šroub 4
- translate([-senzor_delka/2,senzor_sirka/2,S01_vyska_komponentu_na_lozisko/2])           
-  cylinder (h = S01_vyska_komponentu_na_lozisko+0.01, r=(prumer_sroubu)/2, center = true, $fn=100);           
-            
-            }           
-
-//otvory na ložisko
-translate([0,0,lozisko_vyska/2+S01_sila_materialu])
-   difference()
-  {  
-   
- cylinder (h = lozisko_vyska, r=(lozisko_prumer_vnejsi+2*S01_sila_materialu)/2, center = true, $fn=100);     
- cylinder (h = lozisko_vyska+0.01, r=(lozisko_prumer_vnejsi+0.2)/2, center = true, $fn=100);
- 
- 
-}
-
- difference()
-  { 
-      union()
-      { 
-//uchyty na modul
-//sloupek 1
-translate([-senzor_delka/2,-senzor_sirka/2,0]) 
-SLOUPEK();
-
-
-translate([senzor_delka/2,-senzor_sirka/2,0])  
-SLOUPEK();
-
-translate([senzor_delka/2,senzor_sirka/2,0])  
-SLOUPEK();
-
-translate([-senzor_delka/2,senzor_sirka/2,0])  
-SLOUPEK();
-    }
- translate([0,0,S01_sila_materialu])    
-  cylinder (h = lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky+0.01, r=(lozisko_prumer_vnejsi+0.2)/2, $fn=100);  
-    
-}
+        //otvor skrz
+        translate([0,0,S01_vyska_spodniho_zavitu+3*S01_sila_drzaku_RJ11-0.3])
+            cylinder (h = S01_vyska-S01_vyska_horni_zavit-(S01_vyska_spodniho_zavitu+3*S01_sila_drzaku_RJ11-0.3), r=(S01_prumer_vnitrni)/2, $fn=100);       
+        
+    } 
+} 
 
 
 
@@ -335,32 +49,20 @@ SLOUPEK();
 
 
 
- }
-  }  
- 
-
-//sloupek na senzor
-module SLOUPEK()
-{    
-translate([0,0,S01_sila_materialu]) 
-difference () {
-             
-    cylinder (h = lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky, r= sirka_matky/2+S01_sila_materialu, $fn=20);
-       
-
-                   
-
-       translate([0,0,lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky-vyska_matky]) 
-            cylinder (h = vyska_matky+0.01, r= (sirka_matky+0.2)/2, $fn=6);
-    
-    
-    translate([0,0,-0.01]) 
-            cylinder (h = lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky+0.01, r= (prumer_sroubu+0.2)/2, $fn=10);
-        } 
-  } 
-*/
 
 
-/*
-  
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

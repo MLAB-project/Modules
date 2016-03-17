@@ -1,65 +1,130 @@
 $fn=40; // model faces resolution.
 include <../configuration.scad>
-
-
-module WINDGAUGE02A_R01()
-    {
-        difference()
-        {
-            
-     
-                cylinder (h = R02_sila_mateiralu_pod_lopatkami+2*L01_hloubka_zapusteni_drzaku+L01_hrana_drzaku_b+2+R01_vyska_preryti_statoru,r=(S01_prumer_vnitrni+4*S01_sila_materialu)/2+S01_mezera_mezi_statorem_rotorem, $fn=100);
-             
-            //otvor na osičku    
-        cylinder (h = R02_sila_mateiralu_pod_lopatkami+L01_hloubka_zapusteni_drzaku, r=(prumer_osicky+3*S01_sila_materialu)/2+0.3, $fn=100);       
-         
-    //odstranění výpnlně     
-           translate([0,0,R02_sila_mateiralu_pod_lopatkami+L01_hloubka_zapusteni_drzaku])  
-            
-          cylinder (h = L01_hloubka_zapusteni_drzaku+L01_hrana_drzaku_b+2+R01_vyska_preryti_statoru+0.01, r=(S01_prumer_vnitrni+2*S01_sila_materialu)/2+S01_mezera_mezi_statorem_rotorem, $fn=100);  
-            
-                       
-            
-            
-             
-          
-
-//otvor pro lopatku 1
-            rotate(a=[0,0,0]) 
-            
-           translate([(R02_vzdalenost_mezi_uchyty_lopatek+2*L01_sila_zapusteni_drzaku+2*L01_hloubka_zapusteni)/2-L01_hloubka_zapusteni-L01_sila_zapusteni_drzaku/2,0,(R02_sila_mateiralu_pod_lopatkami+L01_hloubka_zapusteni_drzaku/2)])  
-                cube([L01_sila_zapusteni_drzaku+L01_tolerance_drzaku,L01_hrana_drzaku_a+L01_tolerance_drzaku,L01_hloubka_zapusteni_drzaku],true);
-         
-          rotate(a=[0,0,0]) 
-               translate([(S01_prumer_vnitrni+4*S01_sila_materialu)/2+S01_mezera_mezi_statorem_rotorem,0,R02_sila_mateiralu_pod_lopatkami+L01_hloubka_zapusteni_drzaku+(L01_hloubka_zapusteni_drzaku+L01_hrana_drzaku_b+2+R01_vyska_preryti_statoru+0.01)/2])  
-                cube([3*R01_sila_materialu_pro_prekriti+L01_tolerance_drzaku,L01_hrana_drzaku_a+L01_tolerance_drzaku,L01_hloubka_zapusteni_drzaku+L01_hrana_drzaku_b+2+R01_vyska_preryti_statoru+0.01],true);
-    
-  
-  //otvor pro lopatku 2
-            rotate(a=[0,0,120]) 
-            
-           translate([(R02_vzdalenost_mezi_uchyty_lopatek+2*L01_sila_zapusteni_drzaku+2*L01_hloubka_zapusteni)/2-L01_hloubka_zapusteni-L01_sila_zapusteni_drzaku/2,0,(R02_sila_mateiralu_pod_lopatkami+L01_hloubka_zapusteni_drzaku/2)])  
-                cube([L01_sila_zapusteni_drzaku+L01_tolerance_drzaku,L01_hrana_drzaku_a+L01_tolerance_drzaku,L01_hloubka_zapusteni_drzaku],true);          
-         rotate(a=[0,0,120]) 
-              translate([(S01_prumer_vnitrni+4*S01_sila_materialu)/2+S01_mezera_mezi_statorem_rotorem,0,R02_sila_mateiralu_pod_lopatkami+L01_hloubka_zapusteni_drzaku+(L01_hloubka_zapusteni_drzaku+L01_hrana_drzaku_b+2+R01_vyska_preryti_statoru+0.01)/2])  
-                cube([3*R01_sila_materialu_pro_prekriti+L01_tolerance_drzaku,L01_hrana_drzaku_a+L01_tolerance_drzaku,L01_hloubka_zapusteni_drzaku+L01_hrana_drzaku_b+2+R01_vyska_preryti_statoru+0.01],true);     
-
-  
-    //otvor pro lopatku 3
-            rotate(a=[0,0,240]) 
-            
-           translate([(R02_vzdalenost_mezi_uchyty_lopatek+2*L01_sila_zapusteni_drzaku+2*L01_hloubka_zapusteni)/2-L01_hloubka_zapusteni-L01_sila_zapusteni_drzaku/2,0,(R02_sila_mateiralu_pod_lopatkami+L01_hloubka_zapusteni_drzaku/2)])  
-                cube([L01_sila_zapusteni_drzaku+L01_tolerance_drzaku,L01_hrana_drzaku_a+L01_tolerance_drzaku,L01_hloubka_zapusteni_drzaku],true);          
-                
-                 rotate(a=[0,0,240]) 
-                      translate([(S01_prumer_vnitrni+4*S01_sila_materialu)/2+S01_mezera_mezi_statorem_rotorem,0,R02_sila_mateiralu_pod_lopatkami+L01_hloubka_zapusteni_drzaku+(L01_hloubka_zapusteni_drzaku+L01_hrana_drzaku_b+2+R01_vyska_preryti_statoru+0.01)/2])  
-                cube([3*R01_sila_materialu_pro_prekriti+L01_tolerance_drzaku,L01_hrana_drzaku_a+L01_tolerance_drzaku,L01_hloubka_zapusteni_drzaku+L01_hrana_drzaku_b+2+R01_vyska_preryti_statoru+0.01],true);
-  
-  
-  
-}  
-}
-
+include <polyScrewThread_r1.scad>
+PI=3.141592;
 WINDGAUGE02A_R01();
 
+//Model lopatky
+module WINDGAUGE02A_R01()
+{
+difference()
+    {       
+    union()
+        {
+        //koule vrchní - kryt
+        translate([0,0,R01_vyska_preryti_statoru])
+            sphere(d = (S01_prumer_vnitrni/2+4*S01_sila_materialu)*2, $fn=100);       
+               
+        //spodní válec        
+        cylinder (h = R01_vyska_preryti_statoru, r=S01_prumer_vnitrni/2+4*S01_sila_materialu, $fn=100); 
+                    
+        //lopatka 1   
+        translate([-L01_hrana_drzaku_a/2,-(S01_prumer_vnitrni/2+2*S01_sila_materialu+L01_delka_uchytu+L01_prumer_lopatky/2),0])
+            lopatka();
             
+        //lopatka 2 
+        rotate([0, 0, 120])   
+            translate([-L01_hrana_drzaku_a/2,-(S01_prumer_vnitrni/2+2*S01_sila_materialu+L01_delka_uchytu+L01_prumer_lopatky/2),0])
+                lopatka();
+
+        //lopatka 3
+        rotate([0, 0, 240])    
+            translate([-L01_hrana_drzaku_a/2,-(S01_prumer_vnitrni/2+2*S01_sila_materialu+L01_delka_uchytu+L01_prumer_lopatky/2),0])
+                lopatka();            
+        }    
+
+    //Odečet spodního válce
+    translate([0,0,-(S01_prumer_vnitrni/2+2*S01_sila_materialu)])
+        cylinder (h = R01_vyska_preryti_statoru+(S01_prumer_vnitrni/2+2*S01_sila_materialu), r=S01_prumer_vnitrni/2+3*S01_sila_materialu, $fn=100);
+    
+    //odecet koule
+    translate([0,0,R01_vyska_preryti_statoru])
+        sphere(d = (S01_prumer_vnitrni/2+3*S01_sila_materialu)*2, $fn=100);      
+    }  
+    
+difference()
+    {       
+    union()
+        {
+        //závit na ukotvení rotoru
+        //zakladni material
+        cylinder (h = (S01_prumer_vnitrni/2+2*S01_sila_materialu)+R01_vyska_preryti_statoru, r=(lozisko_prumer_vnejsi/2-1), $fn=100);     
+            
+        vyztuhy();             
+        }
+
+    //vnitrni zavit  
+    translate([0,0,-5])
+        screw_thread((11),3,55,R01_vyska_preryti_statoru+10,PI/2,2); 
+ 
+    //za závitem aby to slo tisknout          
+    translate([0,0,R01_vyska_preryti_statoru+5]) 
+        cylinder(h=(5), r1=(11)/2, r2=0, center=false, $fn=100);             
+                
+    }
+}
+    
+module vyztuhy()
+{
+difference()
+    {   
+    translate([0,0,R01_vyska_preryti_statoru]) 
+        cylinder(h=(S01_prumer_vnitrni/2+4*S01_sila_materialu), r1=(lozisko_prumer_vnejsi/2-1), r2=(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu)-R01_vyska_preryti_statoru, center=false, $fn=100);  
+           
+    //vykousnutí 1           
+    translate([S01_sila_materialu/2,S01_sila_materialu/2,R01_vyska_preryti_statoru-0.005])
+        cube([(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu),(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu),(S01_prumer_vnitrni/2+4*S01_sila_materialu)+0.01],center=false);  
+  
+    //vykousnutí 2
+    rotate([0, 0, 90])           
+        translate([S01_sila_materialu/2,S01_sila_materialu/2,R01_vyska_preryti_statoru-0.005])
+            cube([(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu),(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu),(S01_prumer_vnitrni/2+4*S01_sila_materialu)+0.01],center=false); 
+            
+    //vykousnutí 3
+    rotate([0, 0, 180])           
+        translate([S01_sila_materialu/2,S01_sila_materialu/2,R01_vyska_preryti_statoru-0.005])
+            cube([(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu),(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu),(S01_prumer_vnitrni/2+4*S01_sila_materialu)+0.01],center=false);
+            
+    //vykousnutí 4
+    rotate([0, 0, 270])           
+        translate([S01_sila_materialu/2,S01_sila_materialu/2,R01_vyska_preryti_statoru-0.005])
+            cube([(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu),(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu),(S01_prumer_vnitrni/2+4*S01_sila_materialu)+0.01],center=false);              
+    difference()
+        {    
+        translate([0,0,R01_vyska_preryti_statoru])
+            sphere(d = (S01_prumer_vnitrni/2+12*S01_sila_materialu)*2, $fn=100); 
+            
+        translate([0,0,R01_vyska_preryti_statoru])
+            sphere(d = (S01_prumer_vnitrni/2+3*S01_sila_materialu)*2, $fn=100); 
+
+        }
+    }    
+}  
+ 
+module lopatka()
+{ 
+difference()
+    { 
+    union()
+        {
+        translate([0,0,L01_prumer_lopatky/2])
+            sphere(d = L01_prumer_lopatky, $fn=100);   
+            
+        translate([0,0,0])
+            cube([L01_hrana_drzaku_a,L01_delka_uchytu+L01_prumer_lopatky/2+10,L01_hrana_drzaku_b],center=false);
+    
+        //podpěra     
+        translate([0,0,0]) 
+            cylinder(h=(L01_prumer_lopatky/2), r1=L01_prumer_lopatky/3.5, r2=L01_prumer_lopatky/2, center=false, $fn=100);       
+       
+        } 
+      
+      
+    translate([0,0,L01_prumer_lopatky/2])
+         sphere(d = L01_prumer_lopatky-L01_sila_materialu_lopatky*2, $fn=100); 
+  
+    translate([-L01_prumer_lopatky+0.01,-L01_prumer_lopatky,0])
+        cube([L01_prumer_lopatky+0.01,2*(L01_delka_uchytu+L01_prumer_lopatky/2+10),L01_prumer_lopatky],center=false);    
+       
+    } 
+}
