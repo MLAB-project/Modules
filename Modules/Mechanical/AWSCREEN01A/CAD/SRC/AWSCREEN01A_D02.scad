@@ -36,7 +36,7 @@ difference () {
     difference () {
         cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu,r1=D03_polomer_stitu ,r2=D03_polomer_zavitu,$fn=100);
         translate ([0,0,-0.01/2])
-            cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu+0.01,r1=D03_polomer_stitu-D03_tloustka_materialu ,r2=D03_polomer_zavitu -D03_tloustka_materialu,$fn=100);
+            cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu-1,r1=D03_polomer_stitu-D03_tloustka_materialu ,r2=D03_polomer_zavitu -D03_tloustka_materialu,$fn=100);
     
        
                     }
