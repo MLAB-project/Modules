@@ -2,7 +2,13 @@ $fn=40; // model faces resolution.
 include <../configuration.scad>
 include <polyScrewThread_r1.scad>
 PI=3.141592;
+
+
+
+
 WINDGAUGE02A_R01();
+ 
+
 
 //Model lopatky
 module WINDGAUGE02A_R01()
@@ -48,7 +54,7 @@ difference()
         {
         //závit na ukotvení rotoru
         //zakladni material
-        cylinder (h = (S01_prumer_vnitrni/2+2*S01_sila_materialu)+R01_vyska_preryti_statoru, r=(lozisko_prumer_vnejsi/2-1), $fn=100);     
+        cylinder (h = (S01_prumer_vnitrni/2+4*S01_sila_materialu)+R01_vyska_preryti_statoru, r=(lozisko_prumer_vnejsi/2-1), $fn=100);     
             
         vyztuhy();             
         }
@@ -69,7 +75,7 @@ module vyztuhy()
 difference()
     {   
     translate([0,0,R01_vyska_preryti_statoru]) 
-        cylinder(h=(S01_prumer_vnitrni/2+4*S01_sila_materialu), r1=(lozisko_prumer_vnejsi/2-1), r2=(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+4*S01_sila_materialu)-R01_vyska_preryti_statoru, center=false, $fn=100);  
+        cylinder(h=(S01_prumer_vnitrni/2+5*S01_sila_materialu), r1=(lozisko_prumer_vnejsi/2-1), r2=(lozisko_prumer_vnejsi/2-1)+(S01_prumer_vnitrni/2+5*S01_sila_materialu)-R01_vyska_preryti_statoru, center=false, $fn=100);  
            
     //vykousnutí 1           
     translate([S01_sila_materialu/2,S01_sila_materialu/2,R01_vyska_preryti_statoru-0.005])
@@ -92,10 +98,10 @@ difference()
     difference()
         {    
         translate([0,0,R01_vyska_preryti_statoru])
-            sphere(d = (S01_prumer_vnitrni/2+12*S01_sila_materialu)*2, $fn=100); 
+            sphere(d = (S01_prumer_vnitrni/2+21*S01_sila_materialu)*2, $fn=100); 
             
         translate([0,0,R01_vyska_preryti_statoru])
-            sphere(d = (S01_prumer_vnitrni/2+3*S01_sila_materialu)*2, $fn=100); 
+            sphere(d = (S01_prumer_vnitrni/2+4*S01_sila_materialu)*2, $fn=100); 
 
         }
     }    

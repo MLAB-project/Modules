@@ -3,97 +3,111 @@ $fn=40; // model faces resolution.
 //OBECNE PARAMETRY 
 //----------------------------------------------------------------
 //----------------------------------------------------------------
-prumer_rotoru1=70;
-vyska_rotoru1=5;
-vyska_rotoru2=5;
-prumer_sroubu=3.2;
-prumer_hlavy_sroubu=6;
-vyska_hlavy_sroubu=4;
-vyska_matky=3;
-sirka_matky=6.6;
-sirka_matky_tol=0.175;
-prumer_orechu=10;
-sila_materialu=2;
-sila_materialu_vule=0.2;
-hloubka_prekryti=0;
+//WINDGAUGE02A_S02 - Parametry pro hlavni valec anemometru
+S01_hloubka_zavitu=4;
+S01_vyska=80; //80
+S01_prumer_vnitrni=60;
+S01_sila_materialu=1.3;
+S01_vyska_horni_zavit=10;
+S01_vyska_spodniho_zavitu=10;
+S01_sila_drzaku_RJ11=3; //vyška drážky
+S01_hrana_A_RJ11=12.3;
+S01_hrana_B_RJ11=19;
+S01_tolerance_zavit=1.5;
 
-//lozisko
-lozisko_prumer_vnitrni=5;
-lozisko_prumer_vnejsi=16;
+//Rozměry ložiska se závity
+LO_spodni_prumer=50;
+LO_doraz_prumer=55;
+LO_horni_prumer=10;
+LO_vyska_spodni_doraz=5;
+LO_vyska_horni_doraz=10;
+LO_vyska_dorazu=3;
+
+
+
+//Obecné parametry
+prumer_osicky=5.1;
+
+//Rozmery modulu se senzorem
+senzor_delka=22;
+senzor_sirka=20.4;
+senzor_sila=2;
+
+
+//Parametry loziska
+lozisko_prumer_vnitrni=4.9;
+lozisko_prumer_vnejsi=16.1;
 lozisko_vyska=5;
 lozisko_prekryv=1.5;
 
-//kryt rotoru
-sila_materialu_krytu=1;
-
-
-//stator1
-stator1_sila=2;
-
-//stator2
-sila_pod_loziskem=1;
-
-//stator3
-stator3_sila_steny=2;
-stator3_vzdalenost_od_steny=1; //definuje vzdalenost hlavy sroubu od steny statrou 4
-stator3_vyska=60;
-stator3_vyska_prekryti=10;
-
-//uchyt pro anemometr
-uchyt_prumer_sroubu=3.2;
-roztec_sroubu=10.16;
-
-
-//nastevní rotoru2
-
-vzdalenost_rot_stat=2; //vzdálenost mezi statorem a rotorem uvnitř(osa Z)
-vzdalenost_rot_stat2=1.5;//vzdálenost mezi statorem a rotorem (osa Z)
-
-
-
-
-
-//lopatka
-hloubka_uchytu=20;
-sila_uchytu=12;
-vyska_uchytu=10;
-tolerance_uchytu=0.2;
-delka_uchytu_lopatky=20;
-hrana_uchytu_lopatky=4; 
-prumer_lopatky=50;
-sila_materialu_lopatky=0.8;
-
-//parametry uchytu senzoru
-roztec_der=10.16;
-vzdalenost_der_x=2*roztec_der;
-vzdalenost_der_y=1*roztec_der;
-
-//magnet
+//Parametry magnetu
 magnet_prumer=6.3;
 magnet_vyska=5;
 magnet_zapusteni=2;
-vyska_pod_magnetem=5;
+magnet_tolerance_prumeru=0.2;
 
-//rotor2
-delka_hridele=5; //delka hridele koukající ve statoru
+//Parametry sroubu
+prumer_sroubu=3.4;
+prumer_hlavy_sroubu=6;
+vyska_hlavy_sroubu=4;
+vyska_matky=3;
+sirka_matky=6.7;
 
-//rotor2
-vyska_kryti=stator1_sila+vyska_matky+vzdalenost_rot_stat+stator3_vyska_prekryti-vzdalenost_rot_stat2; //udává výšku krycího prstence
+sirka_matky_tol=0.175;
+prumer_orechu=10;
+
+//WINDGAUGE02A_R01 //pro lopatku
+L01_hrana_drzaku_a=10;
+L01_hrana_drzaku_b=3;
+L01_delka_uchytu=19;
+L01_prumer_lopatky=40;
+L01_sila_materialu_lopatky=0.9;
+
+//WINDGAUGE02A_D01 //uchyt velky
+D01_material_pod_zavitem=3;
+D01_material_za_zavitem=3;
+D01_material_pred_zavitem=2;
+D01_delka_tyce=40;
+D01_sirka_tyce=10;
+
+//WINDGAUGE02A_D02 //uchyt na sloup
+D02_sila_materialu=2;
+D02_vyska_uchytky=40;
+D02_prumer_obruby=28;
+D02_delka_celeho_uchytu=70;
+D02_dotahova_vzdalenost=1.5;
+D02_prumer_uchytneho_sroubu=6.2;
+
+//WINDGAUGE02A_R01 //rotor s prekritim statoru
+R01_vyska_preryti_statoru=10;
+R01_sila_materialu_pro_prekriti=1.3;
+R01_mezera_mezi_statorem_rotorem=3;
+
+//WINDGAUGE02A_R03 //drzak magnetu
+R05_sirka_matky=10;
 
 
-vule1=1.5; //vůle mezi statorem a rotorem ze vnitř (z boku)
+
+R03_prumer_zavitu=40;
+R04_zavit_vyska=5;
+R02_zavit_vyska=10;
+R01_zavit_vyska=5;
+R03_mezera_mezi_statorem_rotorem=3;
 
 
 
 
-//uchyt pro anemometr
-uchyt_prumer_sroubu=3.2;
-roztec_sroubu=20;
 
-//stator 4
-vyska_stator4=5;
-uchyt_vyska_matky=3;
-uchyt_prumer_orechu=10;
 
-//parametr kabelu
-kabel_prumer=10;
+
+
+
+
+
+
+
+
+
+
+
+
