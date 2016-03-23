@@ -6,8 +6,8 @@ $fn=40; // model faces resolution.
 //WINDGAUGE02A_S02 - Parametry pro hlavni valec anemometru
 S01_hloubka_zavitu=4;
 S01_vyska=80; //80
-S01_prumer_vnitrni=60;
-S01_sila_materialu=1.3;
+S01_prumer_vnitrni=46;
+S01_sila_materialu=1.2;
 S01_vyska_horni_zavit=10;
 S01_vyska_spodniho_zavitu=10;
 S01_sila_drzaku_RJ11=3; //vyška drážky
@@ -16,12 +16,12 @@ S01_hrana_B_RJ11=19;
 S01_tolerance_zavit=1.5;
 
 //Rozměry ložiska se závity
-LO_spodni_prumer=50;
-LO_doraz_prumer=55;
-LO_horni_prumer=10;
+LO_spodni_prumer=22;
+LO_doraz_prumer=44.3;
+LO_horni_prumer=7.7;
 LO_vyska_spodni_doraz=5;
-LO_vyska_horni_doraz=10;
-LO_vyska_dorazu=3;
+LO_vyska_horni_doraz=9;
+LO_vyska_dorazu=0;
 
 
 
@@ -76,7 +76,7 @@ D02_vyska_uchytky=40;
 D02_prumer_obruby=28;
 D02_delka_celeho_uchytu=70;
 D02_dotahova_vzdalenost=1.5;
-D02_prumer_uchytneho_sroubu=6.2;
+D02_prumer_uchytneho_sroubu=4.2;
 
 //WINDGAUGE02A_R01 //rotor s prekritim statoru
 R01_vyska_preryti_statoru=10;
@@ -94,7 +94,11 @@ R02_zavit_vyska=10;
 R01_zavit_vyska=5;
 R03_mezera_mezi_statorem_rotorem=3;
 
-
+R02_delka_kridla=45;
+R02_vyska_kridla=70;
+R02_delka_vyrovnnavaci_tyce=35;
+R02_hrana_drzaku=10;
+R02_sila_materialu_pod_tyci=5;
 
 
 

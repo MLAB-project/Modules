@@ -1,14 +1,14 @@
 $fn=40; // model faces resolution.
 include <../configuration.scad>
 
-include <WINDGAUGE02A_D02.scad>
+include <WINDGAUGE01A_D02.scad>
 include <polyScrewThread_r1.scad>
 
 PI=3.141592;
 
 //Držák anemometru
 
-module WINDGAUGE02A_D01()
+module WINDGAUGE01A_D01()
 {
 difference()
     {
@@ -49,7 +49,7 @@ difference()
         //uchyt na sloupek
         translate([0,D01_delka_tyce+(S01_prumer_vnitrni-S01_tolerance_zavit)/2+D01_material_pred_zavitem+D02_sila_materialu+(D02_prumer_obruby)/2,D02_vyska_uchytky/2])
             rotate(a=[0,0,270])
-                WINDGAUGE02A_D02();      
+                WINDGAUGE01A_D02();      
 
         }
 
@@ -60,7 +60,7 @@ difference()
     }
 }
  
-WINDGAUGE02A_D01();
+WINDGAUGE01A_D01();
 
 
     
