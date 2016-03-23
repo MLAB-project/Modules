@@ -6,7 +6,7 @@ include <polyScrewThread_r1.scad>
 //Držák na konektor RJ11
 
 PI=3.141592;
-module WINDGAUGE02A_S03()
+module WINDGAUGE01A_S03()
     {
     difference()
         {
@@ -25,5 +25,5 @@ module WINDGAUGE02A_S03()
    
 
   
-WINDGAUGE02A_S03(); 
+WINDGAUGE01A_S03(); 
 

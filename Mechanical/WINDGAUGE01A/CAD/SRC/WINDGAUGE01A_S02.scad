@@ -6,9 +6,9 @@ PI=3.141592;
 
 //Hlavní válec
 
-WINDGAUGE02A_S02();
+WINDGAUGE01A_S02();
 
-module WINDGAUGE02A_S02()
+module WINDGAUGE01A_S02()
 {
     difference()
     {            

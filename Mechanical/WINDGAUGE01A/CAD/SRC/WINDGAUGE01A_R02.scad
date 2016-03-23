@@ -5,27 +5,103 @@ PI=3.141592;
 
 //Drzak rotoru se závitem
 
-WINDGAUGE02A_R02();
 
-module WINDGAUGE02A_R02()
+
+WINDGAUGE01A_R02();
+
+module WINDGAUGE01A_R02()
+{
+    
+     difference()
+    {  
+    union()
     {
-    //setihrana matice
+     
+        //kužel na závit
+    cylinder(h=R02_zavit_vyska, r1=S01_prumer_vnitrni/2+5*S01_sila_materialu, r2=R03_prumer_zavitu/2+S01_sila_materialu, center=false,$fn=100); 
+        
+   //křídlo
+    translate([0,R02_vyska_kridla+R03_prumer_zavitu/2+S01_sila_materialu,0])
+    rotate([0, 90, 0])
     difference()
-        {
-        union()
-            {
-            //závit
-            screw_thread((11-S01_tolerance_zavit),3,55,R01_vyska_preryti_statoru,PI/2,2);  
-                           
-            //spodní podložka        
-            translate([0,0,-R01_mezera_mezi_statorem_rotorem/2])    
-                cylinder (h = R01_mezera_mezi_statorem_rotorem, r=(lozisko_prumer_vnitrni+2*lozisko_prekryv+2)/2, center = true, $fn=100);     
-            }
-                  
-        //otvor  
-        translate([0,0,-R01_mezera_mezi_statorem_rotorem-0.05])        
-            cylinder (h = R01_vyska_preryti_statoru+R01_mezera_mezi_statorem_rotorem+0.1, r=prumer_osicky/2, $fn=100);
-
-        }
-
+    {  
+    //zakladní materiál
+        translate([0,0,0])
+    cylinder (h = S01_sila_materialu, r=R02_vyska_kridla, $fn=100);  
+   
+        translate([-R02_vyska_kridla,0,-0.01])
+     cube([R02_vyska_kridla,R02_vyska_kridla,S01_sila_materialu+0.02],center=false); 
+        
+        translate([0,-R02_vyska_kridla,-0.01])
+     cube([R02_vyska_kridla,R02_vyska_kridla,S01_sila_materialu+0.02],center=false);  
+        
+     translate([0,0,-0.01])
+     cube([R02_vyska_kridla,R02_vyska_kridla,S01_sila_materialu+0.02],center=false);   
+    
+      translate([-R02_vyska_kridla,-R03_prumer_zavitu/2-S01_sila_materialu+3,-0.01])
+     cube([R02_vyska_kridla,R02_vyska_kridla,S01_sila_materialu+0.02],center=false);  
+      
     }
+
+  //kvádr pod tyčí
+translate([-R02_hrana_drzaku/2,-(R02_delka_vyrovnnavaci_tyce+R03_prumer_zavitu/2+S01_sila_materialu),0])
+            cube([R02_hrana_drzaku,R02_delka_vyrovnnavaci_tyce+R03_prumer_zavitu/2+S01_sila_materialu,R02_sila_materialu_pod_tyci],center=false);  
+    
+    //prední tyč
+translate([0,0,5])
+rotate([-90, 0, 180])
+difference()
+    {      
+translate([0,0,0])
+    cylinder (h = R02_delka_vyrovnnavaci_tyce+R03_prumer_zavitu/2+S01_sila_materialu, r=R02_hrana_drzaku/2, $fn=100); 
+   
+translate([-R02_hrana_drzaku/2,0,-0.01])
+            cube([R02_hrana_drzaku,R02_hrana_drzaku,R02_delka_vyrovnnavaci_tyce+R03_prumer_zavitu/2+S01_sila_materialu+0.02],center=false); 
+    }  
+        
+
+//spodní tyč pod křídlem
+translate([-R02_hrana_drzaku/2,0,0])
+            cube([R02_hrana_drzaku,R02_delka_kridla+(S01_prumer_vnitrni/2+5*S01_sila_materialu)-R02_hrana_drzaku/2,S01_sila_materialu],center=false);
+  
+    //zakulacení spodní tyče
+    translate([0,R02_delka_kridla+(S01_prumer_vnitrni/2+5*S01_sila_materialu)-R02_hrana_drzaku/2,0])
+    cylinder (h = S01_sila_materialu, r=R02_hrana_drzaku/2, $fn=100);  
+
+
+    
+    }     
+        
+        
+     
+ 
+    //odečet závitu
+   translate([0,0,-10])
+                screw_thread((R03_prumer_zavitu),S01_hloubka_zavitu,55,R04_zavit_vyska+R02_zavit_vyska+R01_zavit_vyska,PI/2,2);        
+        
+   //otvor na hlavu šroubu
+   
+    
+     
+   translate([-(prumer_hlavy_sroubu+1)/2,-(R02_delka_vyrovnnavaci_tyce+R03_prumer_zavitu/2)+S01_sila_materialu,-0.01])
+            cube([prumer_hlavy_sroubu+1,vyska_hlavy_sroubu+1,R02_sila_materialu_pod_tyci+prumer_hlavy_sroubu/2+0.5],center=false); 
+ 
+    //otvor na sroub - valec
+    translate([0,-(R02_delka_vyrovnnavaci_tyce+R03_prumer_zavitu/2)-(S01_sila_materialu)-0.01,R02_sila_materialu_pod_tyci])
+    rotate([-90, 0, 0])
+    
+cylinder (h = S01_sila_materialu+0.01, r=prumer_sroubu/2+0.2, $fn=100); 
+    
+    //otvor na sroub - valec pro zasunutí hlavy šroubu
+    translate([0,-(R02_delka_vyrovnnavaci_tyce+R03_prumer_zavitu/2)-0.01,R02_sila_materialu_pod_tyci])
+    rotate([-90, 0, 0])
+    
+cylinder (h = S01_sila_materialu+0.5, r=prumer_hlavy_sroubu/2+0.3, $fn=100); 
+    
+    //otvor pro vsunutí sroubu
+    
+translate([-(prumer_sroubu+0.2)/2,-(R02_delka_vyrovnnavaci_tyce+R03_prumer_zavitu/2)-S01_sila_materialu-0.01,-0.01])
+            cube([prumer_sroubu+0.2,2*S01_sila_materialu+0.2,R02_sila_materialu_pod_tyci],center=false); 
+
+}
+}

@@ -4,7 +4,7 @@ include <../configuration.scad>
 
 
 //Drzak na sloup - cast bez drzaku anemometru
-module WINDGAUGE02A_D02(){
+module WINDGAUGE01A_D02(){
 	
 difference()
     {
