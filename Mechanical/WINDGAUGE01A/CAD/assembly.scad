@@ -25,85 +25,82 @@ barva_S03 = "yellow";
 
 posunuti_dilu=0; //posunuti dilu od sebe
 difference()
-        {     
-union()
- {  
-//WINDGAUGE02A_D01  DRŽÁK
-//-------------------------------------------------------------
-//-------------------------------------------------------------
+{     
+    union()
+    {  
+    //WINDGAUGE02A_D01  DRŽÁK
+    //-------------------------------------------------------------
+    //-------------------------------------------------------------
 
 
-color(barva_D01)
-    translate([0,0,-2*posunuti_dilu])
-        
-        WINDGAUGE01A_D01();
-       
-        
-//WINDGAUGE02A_D02  DRŽÁK druhy dil
-//-------------------------------------------------------------
-//-------------------------------------------------------------
-
-
- 
-
- 
-//WINDGAUGE02A_S01  stator velky dil
-//-------------------------------------------------------------
-//-------------------------------------------------------------
-
-color(barva_S01)
-translate([0,0,S01_vyska+S01_sila_materialu+3*posunuti_dilu])
-rotate(a=[0,180,0])
-    
-             
- 
-WINDGAUGE01A_S01();        
- color(barva_S02)      
-WINDGAUGE01A_S02(); 
-
-color(barva_S03)  
-translate([0,0,S01_vyska_spodniho_zavitu+S01_sila_drzaku_RJ11-0.3-4*posunuti_dilu])
-
-WINDGAUGE01A_S03(); 
-
-color(barva_R01)  
-translate([0,0,S01_vyska+2*S01_sila_materialu+3*posunuti_dilu+8*posunuti_dilu+R04_zavit_vyska+R02_zavit_vyska])
-rotate(a=[0,0,0])
-WINDGAUGE01A_R01(); 
-
-
-color(barva_R02)  
-translate([0,0,S01_vyska+2*S01_sila_materialu+3*posunuti_dilu+6*posunuti_dilu+R04_zavit_vyska])
-rotate(a=[0,0,0])
-WINDGAUGE01A_R02(); 
-
-color(barva_R03)  
-translate([0,0,S01_vyska+2*S01_sila_materialu+3*posunuti_dilu+3*posunuti_dilu])
-
-WINDGAUGE01A_R03(); 
-
-
-color(barva_R04)  
-translate([0,0,S01_vyska+2*S01_sila_materialu+3*posunuti_dilu+1*posunuti_dilu+R04_zavit_vyska])
-rotate(a=[0,180,0])
-WINDGAUGE01A_R04(); 
-
-
-       
-//WINDGAUGE02A_L01  lopatka 1
-//-------------------------------------------------------------
-//-------------------------------------------------------------
-/*
-color(barva_L01)
-    translate([0,0,10])
-            rotate(a=[0,0,0])
+    color(barva_D01)
+        translate([0,0,-2*posunuti_dilu])        
+            WINDGAUGE01A_D01();
+           
             
-      WINDGAUGE02A_L01();      
+    //WINDGAUGE02A_D02  DRŽÁK druhy dil
+    //-------------------------------------------------------------
+    //-------------------------------------------------------------
+
+
+     
+
+     
+    //WINDGAUGE02A_S01  stator velky dil
+    //-------------------------------------------------------------
+    //-------------------------------------------------------------
+
+    color(barva_S01)
+        translate([0,0,S01_vyska+S01_sila_materialu+3*posunuti_dilu])
+            rotate(a=[0,180,0])
+                WINDGAUGE01A_S01();        
+
+    color(barva_S02)      
+        WINDGAUGE01A_S02(); 
+
+    color(barva_S03)  
+        translate([0,0,S01_vyska_spodniho_zavitu+S01_sila_drzaku_RJ11-0.3-4*posunuti_dilu])
+
+    WINDGAUGE01A_S03(); 
+
+    color(barva_R01)  
+        translate([0,0,S01_vyska+2*S01_sila_materialu+3*posunuti_dilu+8*posunuti_dilu+R04_zavit_vyska+R02_zavit_vyska])
+            rotate(a=[0,0,0])
+                WINDGAUGE01A_R01(); 
+
+
+    color(barva_R02)  
+        translate([0,0,S01_vyska+2*S01_sila_materialu+3*posunuti_dilu+6*posunuti_dilu+R04_zavit_vyska])
+            rotate(a=[0,0,0])
+                WINDGAUGE01A_R02(); 
+
+    color(barva_R03)  
+        translate([0,0,S01_vyska+2*S01_sila_materialu+3*posunuti_dilu+3*posunuti_dilu])
+
+    WINDGAUGE01A_R03(); 
+
+
+    color(barva_R04)  
+        translate([0,0,S01_vyska+2*S01_sila_materialu+3*posunuti_dilu+1*posunuti_dilu+R04_zavit_vyska])
+            rotate(a=[0,180,0])
+                WINDGAUGE01A_R04(); 
+
+
+           
+    //WINDGAUGE02A_L01  lopatka 1
+    //-------------------------------------------------------------
+    //-------------------------------------------------------------
+    /*
+    color(barva_L01)
+        translate([0,0,10])
+                rotate(a=[0,0,0])
+                    WINDGAUGE02A_L01();      
+          
+    */
       
-*/
-  
- }     
-cube(300); // cut to show internal relief
-  }
+    }     
+    translate([3,0,0])
+    cube(300); // cut to show internal relief
+}
   
   
