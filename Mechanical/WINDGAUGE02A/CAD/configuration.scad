@@ -22,7 +22,7 @@ prumer_osicky=5.1;
 senzor_delka=20.32;
 senzor_sirka=10.16;
 senzor_vyska_IO=2;
-senzor_odstup_od_magnetu=1;
+senzor_odstup_od_magnetu=2;
 
 //Parametry loziska
 lozisko_prumer_vnitrni=4.9;
@@ -33,7 +33,7 @@ lozisko_prekryv=1.5;
 //Parametry magnetu
 magnet_prumer=6.3;
 magnet_vyska=5;
-magnet_zapusteni=2;
+magnet_zapusteni=4;
 magnet_tolerance_prumeru=0.2;
 
 //Parametry sroubu
@@ -57,16 +57,18 @@ L01_sila_materialu_lopatky=0.9;
 D01_material_pod_zavitem=3;
 D01_material_za_zavitem=3;
 D01_material_pred_zavitem=2;
-D01_delka_tyce=40;
+D01_delka_tyce=60;
 D01_sirka_tyce=10;
 
 //WINDGAUGE02A_D02 //uchyt na sloup
-D02_sila_materialu=2;
+D02_sila_materialu=5;
 D02_vyska_uchytky=40;
-D02_prumer_obruby=28;
-D02_delka_celeho_uchytu=70;
+D02_prumer_obruby=27; //3/4 trubka
+D02_delka_celeho_uchytu=60;
 D02_dotahova_vzdalenost=1.5;
-D02_prumer_uchytneho_sroubu=6.2;
+D02_prumer_uchytneho_sroubu=4.2;
+D02_sirka_matky=9.2; //pro M4
+D02_vyska_matky=3;
 
 //WINDGAUGE02A_R01 //rotor s prekritim statoru
 R01_vyska_preryti_statoru=10;
