@@ -73,29 +73,29 @@ module WINDGAUGE02A_S01()
     //otvory na hlavy sroubu v uchytu loziska     
     translate([-senzor_delka/2,-senzor_sirka/2,0])
         { 
-        cylinder (h = vyska_hlavy_sroubu, r= (prumer_hlavy_sroubu)/2, $fn=40);
-        translate([0,0,vyska_hlavy_sroubu])     
+        cylinder (h = vyska_hlavy_sroubu+10, r= (prumer_hlavy_sroubu)/2, $fn=40);
+        translate([0,0,vyska_hlavy_sroubu+10])     
             cylinder(h=2+0.02, r1=(prumer_hlavy_sroubu)/2, r2=(prumer_sroubu+0.2)/2);     
         } 
         
     translate([-senzor_delka/2,senzor_sirka/2,0])
         { 
-        cylinder (h = vyska_hlavy_sroubu, r= (prumer_hlavy_sroubu)/2, $fn=40);
-        translate([0,0,vyska_hlavy_sroubu])     
+        cylinder (h = vyska_hlavy_sroubu+10, r= (prumer_hlavy_sroubu)/2, $fn=40);
+        translate([0,0,vyska_hlavy_sroubu+10])     
             cylinder(h=2+0.02, r1=(prumer_hlavy_sroubu)/2, r2=(prumer_sroubu+0.2)/2);     
         }   
       
     translate([senzor_delka/2,-senzor_sirka/2,0])
         { 
-        cylinder (h = vyska_hlavy_sroubu, r= (prumer_hlavy_sroubu)/2, $fn=40);
-        translate([0,0,vyska_hlavy_sroubu])     
+        cylinder (h = vyska_hlavy_sroubu+10, r= (prumer_hlavy_sroubu)/2, $fn=40);
+        translate([0,0,vyska_hlavy_sroubu+10])     
             cylinder(h=2+0.02, r1=(prumer_hlavy_sroubu)/2, r2=(prumer_sroubu+0.2)/2);     
         }    
   
     translate([senzor_delka/2,senzor_sirka/2,0])
         { 
-        cylinder (h = vyska_hlavy_sroubu, r= (prumer_hlavy_sroubu)/2, $fn=40);
-        translate([0,0,vyska_hlavy_sroubu])     
+        cylinder (h = vyska_hlavy_sroubu+10, r= (prumer_hlavy_sroubu)/2, $fn=40);
+        translate([0,0,vyska_hlavy_sroubu+10])     
             cylinder(h=2+0.02, r1=(prumer_hlavy_sroubu)/2, r2=(prumer_sroubu+0.2)/2);     
         }    
     }
@@ -147,9 +147,9 @@ translate([0,0,S01_sila_materialu])
             cylinder (h = R01_vyska_preryti_statoru+2*lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky+0.01, r= (prumer_sroubu+0.2)/2, $fn=40);
                
         translate([0,0,-0.01]) 
-            cylinder (h = vyska_hlavy_sroubu-S01_sila_materialu, r= (prumer_hlavy_sroubu)/2, $fn=40);
+            cylinder (h = vyska_hlavy_sroubu+10-S01_sila_materialu, r= (prumer_hlavy_sroubu)/2, $fn=40);
     
-        translate([0,0,vyska_hlavy_sroubu-S01_sila_materialu-0.02]) 
+        translate([0,0,vyska_hlavy_sroubu+10-S01_sila_materialu-0.02]) 
             cylinder(h=2+0.02, r1=(prumer_hlavy_sroubu)/2, r2=(prumer_sroubu+0.2)/2);  
     
     }       
