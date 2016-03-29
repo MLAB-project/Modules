@@ -54,7 +54,7 @@ L01_prumer_lopatky=40;
 L01_sila_materialu_lopatky=0.9;
 
 //WINDGAUGE02A_D01 //uchyt velky
-D01_material_pod_zavitem=3;
+D01_material_pod_zavitem=5;
 D01_material_za_zavitem=3;
 D01_material_pred_zavitem=2;
 D01_delka_tyce=60;

@@ -5,7 +5,8 @@ PI=3.141592;
 
 //Drzak rotoru se závitem
 
-
+  
+         
 
 WINDGAUGE01A_R02();
 
@@ -19,32 +20,11 @@ module WINDGAUGE01A_R02()
      
         //kužel na závit
     cylinder(h=R02_zavit_vyska, r1=S01_prumer_vnitrni/2+5*S01_sila_materialu, r2=R03_prumer_zavitu/2+S01_sila_materialu, center=false,$fn=100); 
-        
-   //křídlo
-    translate([0,R02_vyska_kridla+R03_prumer_zavitu/2+S01_sila_materialu,0])
-    rotate([0, 90, 0])
-    difference()
-    {  
-    //zakladní materiál
-        translate([0,0,0])
-    cylinder (h = S01_sila_materialu, r=R02_vyska_kridla, $fn=100);  
-   
-        translate([-R02_vyska_kridla,0,-0.01])
-     cube([R02_vyska_kridla,R02_vyska_kridla,S01_sila_materialu+0.02],center=false); 
-        
-        translate([0,-R02_vyska_kridla,-0.01])
-     cube([R02_vyska_kridla,R02_vyska_kridla,S01_sila_materialu+0.02],center=false);  
-        
-     translate([0,0,-0.01])
-     cube([R02_vyska_kridla,R02_vyska_kridla,S01_sila_materialu+0.02],center=false);   
-    
-      translate([-R02_vyska_kridla,-R03_prumer_zavitu/2-S01_sila_materialu+3,-0.01])
-     cube([R02_vyska_kridla,R02_vyska_kridla,S01_sila_materialu+0.02],center=false);  
       
-    }
+  
 
   //kvádr pod tyčí
-translate([-R02_hrana_drzaku/2,-(R02_delka_vyrovnnavaci_tyce+R03_prumer_zavitu/2+S01_sila_materialu),0])
+    translate([-R02_hrana_drzaku/2,-(R02_delka_vyrovnnavaci_tyce+R03_prumer_zavitu/2+S01_sila_materialu),0])
             cube([R02_hrana_drzaku,R02_delka_vyrovnnavaci_tyce+R03_prumer_zavitu/2+S01_sila_materialu,R02_sila_materialu_pod_tyci],center=false);  
     
     //prední tyč
@@ -68,16 +48,25 @@ translate([-R02_hrana_drzaku/2,0,0])
     translate([0,R02_delka_kridla+(S01_prumer_vnitrni/2+5*S01_sila_materialu)-R02_hrana_drzaku/2,0])
     cylinder (h = S01_sila_materialu, r=R02_hrana_drzaku/2, $fn=100);  
 
+//ližiny pro křídlo
 
-    
-    }     
+  
+   translate([-(R02_sila_materialu_kridla+R02_sila_materialu_kridla_tolerance)/2,0,0])
+             rotate ([0,-90,0])
+            linear_extrude (height = S01_sila_materialu, convexity = 10)
+                polygon(points=[[0,R03_prumer_zavitu/2],[R02_zavit_vyska, R03_prumer_zavitu/2],[R02_zavit_vyska,R02_delka_kridla+(S01_prumer_vnitrni/2+5*S01_sila_materialu)-R02_hrana_drzaku/2],[0,R02_delka_kridla+(S01_prumer_vnitrni/2+5*S01_sila_materialu)-R02_hrana_drzaku/2]]);   
+         
         
         
-     
+     translate([S01_sila_materialu+(R02_sila_materialu_kridla+R02_sila_materialu_kridla_tolerance)/2,0,0])
+             rotate ([0,-90,0])
+            linear_extrude (height = S01_sila_materialu, convexity = 10)
+                polygon(points=[[0,R03_prumer_zavitu/2],[R02_zavit_vyska, R03_prumer_zavitu/2],[R02_zavit_vyska,R02_delka_kridla+(S01_prumer_vnitrni/2+5*S01_sila_materialu)-R02_hrana_drzaku/2],[0,R02_delka_kridla+(S01_prumer_vnitrni/2+5*S01_sila_materialu)-R02_hrana_drzaku/2]]);   
+    }    
  
     //odečet závitu
    translate([0,0,-10])
-                screw_thread((R03_prumer_zavitu),S01_hloubka_zavitu,55,R04_zavit_vyska+R02_zavit_vyska+R01_zavit_vyska,PI/2,2);        
+                screw_thread((R03_prumer_zavitu),S01_hloubka_zavitu,55,R04_zavit_vyska+R02_zavit_vyska+R01_zavit_vyska+10,PI/2,2);        
         
    //otvor na hlavu šroubu
    
