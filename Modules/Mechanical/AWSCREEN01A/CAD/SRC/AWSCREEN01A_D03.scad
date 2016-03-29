@@ -29,10 +29,15 @@ difference () {
     translate ([0,0,D03_vyska_stitu])
     // screen upper rim
         difference () {
-            screw_thread((D03_polomer_zavitu-D03_tolerance_zavitu)*2,4,55,D03_vyska_zavitu,PI/2,2);
+            screw_thread((D03_polomer_zavitu-D03_tolerance_zavitu)*2,4,55,D03_vyska_zavitu+5,PI/2,2);
     
     translate ([0,0,-0.01])
         cylinder (h=D03_vyska_zavitu+0.02 ,r= D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem ,$fn=100);
+            
+            
+     translate ([0,0,D03_vyska_zavitu-0.01])
+        cylinder (h=D03_vyska_zavitu+0.02 ,r= D03_polomer_zavitu ,$fn=100);        
+            
     }
 
 

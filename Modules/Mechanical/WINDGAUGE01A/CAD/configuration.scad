@@ -99,8 +99,8 @@ R02_vyska_kridla=70;
 R02_delka_vyrovnnavaci_tyce=35;
 R02_hrana_drzaku=10;
 R02_sila_materialu_pod_tyci=5;
-
-
+R02_sila_materialu_kridla=1.2;
+R02_sila_materialu_kridla_tolerance=0.2;
 
 
 

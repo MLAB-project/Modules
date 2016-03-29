@@ -21,10 +21,12 @@ PI=3.141592;
 D04_sila_materialu_na_konektor=3;
 D04_konenektor_x=12.3;
 D04_konenektor_y=19;
+D04_konenektor_z=7;
+
 
 //AWSCREEN01A_D05 //uchyt velky
 D01_material_pod_zavitem=5;
-D01_material_za_zavitem=5;
+D01_material_za_zavitem=3;
 D01_material_pred_zavitem=2;
 D01_delka_tyce=40;
 D01_sirka_tyce=10;
