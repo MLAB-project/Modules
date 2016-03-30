@@ -24,8 +24,8 @@ difference()
       
        
        //zavit
-translate([0,0,D01_material_pod_zavitem])       
- screw_thread(S01_prumer_zavitu-2*D03_tolerance_zavitu,4,55,S01_vyska_komponentu_na_lozisko,PI/2,2);
+translate([0,0,D01_material_pod_zavitem-2])       
+ screw_thread(S01_prumer_zavitu-2*D03_tolerance_zavitu,4,55,S01_vyska_komponentu_na_lozisko+5,PI/2,2);
 
       
 difference()
@@ -64,16 +64,18 @@ difference()
        
        translate([0,D01_delka_tyce+S01_prumer_zavitu/2+D01_material_pred_zavitem+D02_sila_materialu+(D02_prumer_obruby)/2,D02_vyska_uchytky/2])
         rotate(a=[0,0,270])
- AWSCREEN01A_D06(D02_sila_materialu,D02_vyska_uchytky,D02_prumer_obruby,D02_delka_celeho_uchytu,D02_dotahova_vzdalenost,D02_prumer_uchytneho_sroubu);      
+            AWSCREEN01A_D06_2();      
 
 }
 
 //otvor
-translate([0,0,D01_material_pod_zavitem+S01_vyska_komponentu_na_lozisko/2])
-cylinder (h = S01_vyska_komponentu_na_lozisko+0.02, r=(S01_prumer_zavitu-2*D03_tolerance_zavitu-D01_material_za_zavitem)/2, center = true, $fn=100);
+translate([0,0,D01_material_pod_zavitem-1+S01_vyska_komponentu_na_lozisko/2])
+cylinder (h = S01_vyska_komponentu_na_lozisko+2+0.02, r=(S01_prumer_zavitu-2*D03_tolerance_zavitu-D01_material_za_zavitem)/2, center = true, $fn=100);
 
+//odecet vrchního závitu aby byl rovný
+translate([0,0,D01_material_pod_zavitem+S01_vyska_komponentu_na_lozisko])       
 
-
+cylinder (h = S01_vyska_komponentu_na_lozisko+0.02, r=(S01_prumer_zavitu-2*D03_tolerance_zavitu)/2, $fn=100);
  }
     }
  

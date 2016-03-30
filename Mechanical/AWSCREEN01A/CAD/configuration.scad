@@ -21,7 +21,8 @@ PI=3.141592;
 D04_sila_materialu_na_konektor=3;
 D04_konenektor_x=12.3;
 D04_konenektor_y=19;
-D04_konenektor_z=7;
+D04_konenektor_z=5; //vyska krytu
+D04_vyska_drzaku_senzoru=28;
 
 
 //AWSCREEN01A_D05 //uchyt velky
@@ -37,11 +38,12 @@ S01_prumer_zavitu=2*D03_polomer_zavitu;
 //AWSCREEN01A_D06 //uchyt na sloup
 D02_sila_materialu=4;
 D02_vyska_uchytky=40;
-D02_prumer_obruby=28;
+D02_prumer_obruby=27; //3/4 trubka
 D02_delka_celeho_uchytu=70;
 D02_dotahova_vzdalenost=1.5;
 D02_prumer_uchytneho_sroubu=6.2;
-
+D02_sirka_matky=9.2; //pro M4
+D02_vyska_matky=3;
 
 
 
