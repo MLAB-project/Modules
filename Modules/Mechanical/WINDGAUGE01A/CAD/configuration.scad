@@ -73,10 +73,13 @@ D01_sirka_tyce=10;
 //WINDGAUGE02A_D02 //uchyt na sloup
 D02_sila_materialu=2;
 D02_vyska_uchytky=40;
-D02_prumer_obruby=28;
+D02_prumer_obruby=27; // 3/4 trubka
 D02_delka_celeho_uchytu=70;
 D02_dotahova_vzdalenost=1.5;
 D02_prumer_uchytneho_sroubu=4.2;
+D02_sirka_matky=9.2; //pro M4
+D02_vyska_matky=3;
+
 
 //WINDGAUGE02A_R01 //rotor s prekritim statoru
 R01_vyska_preryti_statoru=10;
