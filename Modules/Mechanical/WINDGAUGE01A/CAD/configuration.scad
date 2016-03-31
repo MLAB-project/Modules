@@ -16,12 +16,16 @@ S01_hrana_B_RJ11=19;
 S01_tolerance_zavit=1.5;
 
 //Rozměry ložiska se závity
-LO_spodni_prumer=22;
+//LO_spodni_prumer=22;
+LO_spodni_prumer=17.2; //bez krytu
+LO_vyska_bez_krytu=13;
 LO_doraz_prumer=44.3;
 LO_horni_prumer=7.7;
 LO_vyska_spodni_doraz=5;
 LO_vyska_horni_doraz=9;
 LO_vyska_dorazu=0;
+
+
 
 
 
@@ -64,14 +68,14 @@ L01_prumer_lopatky=40;
 L01_sila_materialu_lopatky=0.9;
 
 //WINDGAUGE02A_D01 //uchyt velky
-D01_material_pod_zavitem=3;
+D01_material_pod_zavitem=5;
 D01_material_za_zavitem=3;
 D01_material_pred_zavitem=2;
 D01_delka_tyce=40;
 D01_sirka_tyce=10;
 
 //WINDGAUGE02A_D02 //uchyt na sloup
-D02_sila_materialu=2;
+D02_sila_materialu=4;
 D02_vyska_uchytky=40;
 D02_prumer_obruby=27; // 3/4 trubka
 D02_delka_celeho_uchytu=70;
@@ -98,15 +102,16 @@ R01_zavit_vyska=5;
 R03_mezera_mezi_statorem_rotorem=3;
 
 R02_delka_kridla=45;
-R02_vyska_kridla=70;
+R02_vzdalenost_der=25;
+
 R02_delka_vyrovnnavaci_tyce=35;
-R02_hrana_drzaku=10;
+R02_hrana_drzaku=13;
 R02_sila_materialu_pod_tyci=5;
 R02_sila_materialu_kridla=1.2;
-R02_sila_materialu_kridla_tolerance=0.2;
+R02_sila_materialu_kridla_tolerance=0.3;
 
-
-
+R05_vyska_kridla=100;
+R05_delka_kridla=100;
 
 
 

@@ -1,7 +1,7 @@
 $fn=40; // model faces resolution.
 include <../configuration.scad>
 
-WINDGAUGE01A_D01();
+
 //Drzak na sloup - cast bez drzaku anemometru
 module WINDGAUGE01A_D01(){
 	

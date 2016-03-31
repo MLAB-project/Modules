@@ -76,7 +76,7 @@ cube([senzor_sirka,senzor_delka,senzor_sila+0.01],false);
           
           //odstraneni vyplně
             translate([2*S01_sila_materialu,2*S01_sila_materialu,-0.005])          
-cube([senzor_sirka-S01_sila_materialu,senzor_delka-S01_sila_materialu,R04_zavit_vyska+R02_zavit_vyska+R01_zavit_vyska+S01_sila_materialu-R01_zavit_vyska-senzor_sila+0.01],false);
+cube([senzor_sirka-2*S01_sila_materialu,senzor_delka-2*S01_sila_materialu,R04_zavit_vyska+R02_zavit_vyska+R01_zavit_vyska+S01_sila_materialu-R01_zavit_vyska-senzor_sila+0.01],false);
  
  
   translate([(senzor_sirka+2*S01_sila_materialu)/2,0,-0.005])                
