@@ -32,7 +32,14 @@ module WINDGAUGE01A_S01()
 
             cylinder (h = R01_vyska_preryti_statoru+5+0.01, r=S01_prumer_vnitrni/2+3/2*S01_sila_materialu, $fn=100);            
             
-            }    
+            } 
+         
+          
+       
+         
+         
+         
+            
             }            
 
         //odstranění vnitřní výplně
@@ -46,9 +53,29 @@ module WINDGAUGE01A_S01()
      
         }
 
+//držák ložiska
+ difference()
+            {
+ cylinder (h = LO_vyska_bez_krytu, r=(LO_spodni_prumer+2*S01_sila_materialu)/2, $fn=100); 
+  
+              translate([0,0,LO_vyska_bez_krytu])   
+   cylinder(h=R02_zavit_vyska+100, r1=(LO_spodni_prumer+S01_sila_materialu)/2, r2=(LO_spodni_prumer+2*S01_sila_materialu)/2, center=false,$fn=100); 
+               
+                
+                cylinder (h = LO_vyska_bez_krytu, r=(LO_spodni_prumer)/2, $fn=100);
+                }
+//držák ložiska doraz                
+ difference()
+            {
 
-
-    
+  
+              translate([0,0,LO_vyska_bez_krytu])   
+   cylinder(h=2*S01_sila_materialu, r1=(LO_spodni_prumer+2*S01_sila_materialu)/2, r2=(LO_spodni_prumer)/2, center=false,$fn=100); 
+               
+             translate([0,0,LO_vyska_bez_krytu])   
+   cylinder(h=2*S01_sila_materialu, r1=(LO_spodni_prumer)/2, r2=(LO_spodni_prumer-2*S01_sila_materialu)/2, center=false,$fn=100);    
+                }                
+                
         }
     }
 

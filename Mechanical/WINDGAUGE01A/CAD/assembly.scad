@@ -4,6 +4,7 @@ use <SRC/WINDGAUGE01A_R01.scad>
 use <SRC/WINDGAUGE01A_R02.scad>
 use <SRC/WINDGAUGE01A_R03.scad>
 use <SRC/WINDGAUGE01A_R04.scad>
+use <SRC/WINDGAUGE01A_R05.scad>
 use <SRC/WINDGAUGE01A_S01.scad>
 use <SRC/WINDGAUGE01A_S02.scad>
 use <SRC/WINDGAUGE01A_S03.scad>
@@ -55,8 +56,8 @@ difference()
             rotate(a=[0,180,0])
                 WINDGAUGE01A_S01();        
 
-    color(barva_S02)      
-        WINDGAUGE01A_S02(); 
+    //color(barva_S02)      
+        //WINDGAUGE01A_S02(); 
 
     color(barva_S03)  
         translate([0,0,S01_vyska_spodniho_zavitu+S01_sila_drzaku_RJ11-0.3-4*posunuti_dilu])
@@ -73,6 +74,9 @@ difference()
         translate([0,0,S01_vyska+2*S01_sila_materialu+3*posunuti_dilu+6*posunuti_dilu+R04_zavit_vyska])
             rotate(a=[0,0,0])
                 WINDGAUGE01A_R02(); 
+                
+       translate([-R02_sila_materialu_kridla/2,0,S01_vyska+2*S01_sila_materialu+3*posunuti_dilu+6*posunuti_dilu+R04_zavit_vyska+10])        rotate(a=[0,90,0])
+                WINDGAUGE01A_R05(); 
 
     color(barva_R03)  
         translate([0,0,S01_vyska+2*S01_sila_materialu+3*posunuti_dilu+3*posunuti_dilu])

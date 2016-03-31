@@ -92,5 +92,22 @@ cylinder (h = S01_sila_materialu+0.5, r=prumer_hlavy_sroubu/2+0.3, $fn=100);
 translate([-(prumer_sroubu+0.2)/2,-(R02_delka_vyrovnnavaci_tyce+R03_prumer_zavitu/2)-S01_sila_materialu-0.01,-0.01])
             cube([prumer_sroubu+0.2,2*S01_sila_materialu+0.2,R02_sila_materialu_pod_tyci],center=false); 
 
+//otvor na šroub držící směrovku
+
+
+translate([(2*S01_sila_materialu+2*R02_sila_materialu_kridla)/2,S01_prumer_vnitrni/2+5*S01_sila_materialu+10,(R02_zavit_vyska-S01_sila_materialu)/2+S01_sila_materialu])
+rotate ([0,-90,0])
+            cylinder (h = 2*S01_sila_materialu+2*R02_sila_materialu_kridla+0.01, r=prumer_sroubu/2+0.2, $fn=100);  
+            
+            
+translate([(2*S01_sila_materialu+2*R02_sila_materialu_kridla)/2,S01_prumer_vnitrni/2+5*S01_sila_materialu+10+R02_vzdalenost_der,(R02_zavit_vyska-S01_sila_materialu)/2+S01_sila_materialu])
+rotate ([0,-90,0])
+            cylinder (h = 2*S01_sila_materialu+2*R02_sila_materialu_kridla+0.01, r=prumer_sroubu/2+0.2, $fn=100);             
+
+//ořez vyvažovací části v prosotru závitu
+translate([0,0,R02_zavit_vyska])
+cylinder (h = R02_hrana_drzaku, r=R03_prumer_zavitu/2+S01_sila_materialu+0.5, $fn=100); 
+
 }
 }
+ 
