@@ -46,9 +46,9 @@ difference () {
     
      translate ([0,0,3*D03_tloustka_materialu])
     difference () {
-        cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu,r1=D03_polomer_stitu ,r2=D03_polomer_zavitu,$fn=100);
+        cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu,r1=D03_polomer_stitu ,r2=D03_polomer_zavitu-D03_tolerance_zavitu,$fn=100);
         translate ([0,0,-0.01/2])
-            cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu+0.01,r1=D03_polomer_stitu-D03_tloustka_materialu ,r2=D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem,$fn=100);
+            cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu+0.01,r1=D03_polomer_stitu-D03_tloustka_materialu ,r2=D03_polomer_zavitu- D03_material_za_zavitem-D03_tolerance_zavitu,$fn=100);
     
        
                     }
