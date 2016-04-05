@@ -69,7 +69,7 @@ for (i = [0 : (D03_pocet_vyztuh-1)]) {
 	rotate ([90,0,angle_sep* i])
 	translate ([0,0,-D03_tloustka_materialu/2])
 	linear_extrude (height = D03_tloustka_materialu, convexity = 10)
-	polygon(points=[[D03_polomer_zavitu,D03_vyska_stitu],[D03_polomer_zavitu, 0],[D03_polomer_stitu - D03_tloustka_materialu,0],[D03_polomer_stitu- D03_tloustka_materialu,3*D03_tloustka_materialu]]);
+	polygon(points=[[D03_polomer_zavitu- D03_material_za_zavitem-D03_tolerance_zavitu,D03_vyska_stitu],[D03_polomer_zavitu, 0],[D03_polomer_stitu - D03_tloustka_materialu,0],[D03_polomer_stitu- D03_tloustka_materialu,3*D03_tloustka_materialu]]);
 
 }
 }
