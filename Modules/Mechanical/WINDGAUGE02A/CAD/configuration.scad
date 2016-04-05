@@ -67,7 +67,7 @@ D02_prumer_obruby=27; //3/4 trubka
 D02_delka_celeho_uchytu=60;
 D02_dotahova_vzdalenost=1.5;
 D02_prumer_uchytneho_sroubu=4.2;
-D02_sirka_matky=9.2; //pro M4
+D02_sirka_matky=9.1; //pro M4
 D02_vyska_matky=3;
 
 //WINDGAUGE02A_R01 //rotor s prekritim statoru
