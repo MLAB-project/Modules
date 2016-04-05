@@ -1,50 +1,16 @@
 $fn=40; // model faces resolution.
-include <WINDGAUGE02A_D02.scad>
-
-//WINDGAUGE02A_D01 //uchyt velky
-D01_material_pod_zavitem=5;
-D01_material_za_zavitem=3;
-D01_material_pred_zavitem=2;
-D01_delka_tyce=60;
-D01_sirka_tyce=10;
-
-//WINDGAUGE02A_D02 //uchyt na sloup
-D02_sila_materialu=5;
-D02_vyska_uchytky=40;
-D02_prumer_obruby=27; //3/4 trubka
-D02_delka_celeho_uchytu=60;
-D02_dotahova_vzdalenost=1.5;
-D02_prumer_uchytneho_sroubu=4.2;
-D02_sirka_matky=9.2; //pro M4
-D02_vyska_matky=3;
-
-
-pocet_der1=10;
-pocet_der2=3;
-radidus_hrany=5;
-vzdalenost_der=10.16;
-vzdalenost_od_okraje=vzdalenost_der/2;
-prumer_sroubu=3.4;
-tloustka_plbase=2;
-prekryti_der=-2;
-
-D02_vyska_boxu_pod_plbase=6;
-D02_vyska_boxu_nad_plbase=60;
-D02_zapusteni_spodniho_krytu=10;
-D02_sila_materialu=1.2;
-D02_dolerance_na_zasunuti=0.4; //tolerance je pro obě strany
-
-drzak_sroubu_hloubka=15;
-drzak_sroubu_vyska=10;
-matka_vyska=3;
+include <AWSBOX01A_D02_2.scad>
+include <../configuration.scad>
 
 
 
 
 
-plbase(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der);
 
-module plbase(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der){
+
+AWSBOX01A_D02();
+
+module AWSBOX01A_D02(){
 
 difference () {
     union () {
