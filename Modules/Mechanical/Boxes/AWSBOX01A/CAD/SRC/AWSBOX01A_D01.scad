@@ -1,17 +1,10 @@
 $fn=40; // model faces resolution.
 
-pocet_der1=5;
-pocet_der2=6;
-radidus_hrany=5;
-vzdalenost_der=10.16;
-vzdalenost_od_okraje=vzdalenost_der/2;
-prumer_sroubu=3.4;
-tloustka_plbase=2;
-prekryti_der=-2;
+include <../configuration.scad>
 
-plbase(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der);
+AWSBOX01A_D01(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der);
 
-module plbase(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der){
+module AWSBOX01A_D01(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der){
 
 difference () {
 //union () {
