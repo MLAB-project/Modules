@@ -152,7 +152,7 @@ print "Distance to run: %d " % DISTANCE
 try:
     print "SPI configuration.."
     spi = spidev.SpiDev() # create a spi object
-    spi.open(1, 0) # open spi port 0, device (CS) 1
+    spi.open(0, 0) # open spi port 0, device (CS) 0 
     #spi.mode = 2
     #spi.bits_per_word = 8
     #spi.cshigh = False
