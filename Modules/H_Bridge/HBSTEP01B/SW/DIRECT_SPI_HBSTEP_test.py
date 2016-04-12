@@ -153,10 +153,11 @@ try:
     print "SPI configuration.."
     spi = spidev.SpiDev() # create a spi object
     spi.open(0, 0) # open spi port 0, device (CS) 0 
-    #spi.mode = 2
-    #spi.bits_per_word = 8
-    #spi.cshigh = False
-    spi.SPI_config(spi.I2CSPI_MSB_FIRST| spi.I2CSPI_MODE_CLK_IDLE_HIGH_DATA_EDGE_TRAILING| spi.I2CSPI_CLK_461kHz)
+    spi.mode = 1
+    spi.lsbfirst = False
+    spi.bits_per_word = 8
+    spi.cshigh = False
+    #spi.SPI_config(spi.I2CSPI_MSB_FIRST| spi.I2CSPI_MODE_CLK_IDLE_HIGH_DATA_EDGE_TRAILING| spi.I2CSPI_CLK_461kHz)
     time.sleep(1)
 
     print "Axis inicialization"
