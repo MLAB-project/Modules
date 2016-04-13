@@ -119,14 +119,14 @@ class axis:
 
     def Float(self):
         ' switch H-bridge to High impedance state '
-        self.spi.xfer( 0xA0)
+        self.spi.xfer([0xA0])
 
     def ReadStatusBit(self, bit):
         ' Report given status bit '
-        self.spi.xfer( 0x39)   # Read from address 0x19 (STATUS)
-        self.spi.xfer( 0x00)
+        self.spi.xfer([0x39])   # Read from address 0x19 (STATUS)
+        self.spi.xfer([0x00])
         data0 = spi.SPI_read_byte()           # 1st byte
-        self.spi.xfer( 0x00)
+        self.spi.xfer([0x00])
         data1 = spi.SPI_read_byte()           # 2nd byte
         #print hex(data0), hex(data1)
         if bit > 7:                                   # extract requested bit
