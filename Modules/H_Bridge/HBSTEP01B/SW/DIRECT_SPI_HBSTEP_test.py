@@ -49,40 +49,40 @@ class axis:
 
     def Reset(self):
         ' Reset Axis and set default parameters for H-bridge '
-        self.spi.xfer( 0xC0)      # reset
+        self.spi.xfer([0xC0])      # reset
 #        self.spi.xfer( 0x14)      # Stall Treshold setup
 #        self.spi.xfer( 0xFF)  
 #        self.spi.xfer( 0x13)      # Over Current Treshold setup 
 #        self.spi.xfer( 0xFF)  
-        self.spi.xfer( 0x15)      # Full Step speed 
-        self.spi.xfer( 0xFF)
-        self.spi.xfer( 0xFF) 
-        self.spi.xfer( 0x05)      # ACC 
-        self.spi.xfer( 0x00)
-        self.spi.xfer( 0x10) 
-        self.spi.xfer( 0x06)      # DEC 
-        self.spi.xfer( 0x00)
-        self.spi.xfer( 0x10) 
-        self.spi.xfer( 0x0A)      # KVAL_RUN
-        self.spi.xfer( 0xFF)
-        self.spi.xfer( 0x0B)      # KVAL_ACC
-        self.spi.xfer( 0xFF)
-        self.spi.xfer( 0x0C)      # KVAL_DEC
-        self.spi.xfer( 0xFF)
-        self.spi.xfer( 0x18)      # CONFIG
-        self.spi.xfer( 0b00111000)
-        self.spi.xfer( 0b00000000)
+        self.spi.xfer([0x15])      # Full Step speed 
+        self.spi.xfer([0xFF])
+        self.spi.xfer([0xFF]) 
+        self.spi.xfer([0x05])      # ACC 
+        self.spi.xfer([0x00])
+        self.spi.xfer([0x10]) 
+        self.spi.xfer([0x06])      # DEC 
+        self.spi.xfer([0x00])
+        self.spi.xfer([0x10]) 
+        self.spi.xfer([0x0A])      # KVAL_RUN
+        self.spi.xfer([0xFF])
+        self.spi.xfer([0x0B])      # KVAL_ACC
+        self.spi.xfer([0xFF])
+        self.spi.xfer([0x0C])      # KVAL_DEC
+        self.spi.xfer([0xFF])
+        self.spi.xfer([0x18])      # CONFIG
+        self.spi.xfer([0b00111000])
+        self.spi.xfer([0b00000000])
       
     def MaxSpeed(self, speed):
         ' Setup of maximum speed '
-        self.spi.xfer( 0x07)       # Max Speed setup 
-        self.spi.xfer( 0x00)
-        self.spi.xfer( speed)  
+        self.spi.xfer([0x07])       # Max Speed setup 
+        self.spi.xfer([0x00])
+        self.spi.xfer([speed])  
 
     def ReleaseSW(self):
         ' Go away from Limit Switch '
         while self.ReadStatusBit(2) == 1:           # is Limit Switch ON ?
-            self.spi.xfer( 0x92 | (~self.Dir & 1))     # release SW 
+            self.spi.xfer([0x92 | (~self.Dir & 1)])     # release SW 
             while self.IsBusy():
                 pass
             self.MoveWait(10)           # move 10 units away
@@ -91,9 +91,9 @@ class axis:
         ' Go to Zero position '
         self.ReleaseSW()
 
-        self.spi.xfer( 0x82 | (self.Dir & 1))       # Go to Zero
-        self.spi.xfer( 0x00)
-        self.spi.xfer( speed)  
+        self.spi.xfer([0x82 | (self.Dir & 1)])       # Go to Zero
+        self.spi.xfer([0x00])
+        self.spi.xfer([speed])  
         while self.IsBusy():
             pass
         time.sleep(0.3)
@@ -103,13 +103,13 @@ class axis:
         ' Move some distance units from current position '
         steps = units * self.SPU  # translate units to steps 
         if steps > 0:                                          # look for direction
-            self.spi.xfer( 0x40 | (~self.Dir & 1))       
+            self.spi.xfer([0x40 | (~self.Dir & 1)])       
         else:
-            self.spi.xfer( 0x40 | (self.Dir & 1)) 
+            self.spi.xfer([0x40 | (self.Dir & 1)]) 
         steps = int(abs(steps))     
-        self.spi.xfer( (steps >> 16) & 0xFF)
-        self.spi.xfer( (steps >> 8) & 0xFF)
-        self.spi.xfer( steps & 0xFF)
+        self.spi.xfer([(steps >> 16) & 0xFF])
+        self.spi.xfer([(steps >> 8) & 0xFF])
+        self.spi.xfer([steps & 0xFF])
 
     def MoveWait(self, units):
         ' Move some distance units from current position and wait for execution '
