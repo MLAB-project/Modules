@@ -5,16 +5,16 @@ box_jmeno="BASEBOX02A";
 //------------------------------------------------------------
 ///*
 vzdalenost_der = 10.16; //rozteč děr mezi sebou
-radidus_hrany = 5; //radius zaobleni sloupku
+radidus_hrany = 3; //radius zaobleni sloupku
 
 //parametry lišty
-vzdalenost_od_okraje = 8.88; //vzdalenost stredu upevnovaci diry od kraje desky
+vzdalenost_od_okraje = 5.08; //vzdalenost stredu upevnovaci diry od kraje desky
 
 //mala hrana
 pocet_der1 = 0; //pocet der desky, ponížené o 3
 
 //velka hrana
-pocet_der2 = 4; //pocet der desky, ponížené o 3
+pocet_der2 = 0; //pocet der desky, ponížené o 3
 //*/
 
 
@@ -28,6 +28,8 @@ tloustka_bocnice=2;
 //------------------------------------------------------------
 tloustka_plbase = 2; //tloustka plbase
 prekryti_der=0.3; //sila materiálu, který překrývá díry
+
+plbase_tolerance_horni=0.3;
 
 //PRIPADNA VYSKA NOZICEK
 //------------------------------------------------------------
