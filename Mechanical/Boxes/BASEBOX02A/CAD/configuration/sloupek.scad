@@ -2,6 +2,10 @@ include <manufactury_conf.scad>
 include <../configuration.scad>
 use <MLAB_logo.scad>
 
+sloupek (vyska_bocnice,vzdalenost_der,vzdalenost_od_okraje,vzdalenost_od_diry,radidus_hrany,prumer_sroubu,prumer_matice,vyska_matice,posuv_dorazu,matice_sila_materialu,
+   logo_vyska,logo_sirka);
+
+
 //Funkce pro generovani sloupku
 module sloupek(
     vyska,

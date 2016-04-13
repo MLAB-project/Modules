@@ -11,9 +11,21 @@ include <../configuration.scad>
 
 //BOCNICE
 //-------------------------------------------------------------
+
+difference () {
 translate([0,0,(vyska_bocnice/2)+tloustka_plbase])
 bocnice(pocet_der1+2,pocet_der2+2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice);
 
+translate([0,0,(vyska_bocnice/2)+tloustka_plbase])
+rotate(a=[90,0,0])
+      cylinder(r=8,h=15);
+    
+  translate([0,50,(vyska_bocnice/2)])
+rotate(a=[0,0,0])
+      cube([15,80,12], true); 
+    
+    
+    }
 
 //PLBASE SPODNI
 //-------------------------------------------------------------
