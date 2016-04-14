@@ -39,14 +39,14 @@ plbase(pocet_der1+3,pocet_der2+3,radidus_hrany,vzdalenost_der,vzdalenost_od_okra
 
 
 
-translate([plbase_tolerance_horni/2,+plbase_tolerance_horni/2,vyska_bocnice/2-tloustka_plbase/2])
+translate([plbase_tolerance_horni-0.2,+plbase_tolerance_horni-0.2,vyska_bocnice/2-tloustka_plbase/2])
 rotate(a=[0,0,0])
     {
         
      
-  plbase_vrchni_kryt(pocet_der1+2,pocet_der2+2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice,plbase_tolerance_horni);
+  //plbase_vrchni_kryt(pocet_der1+2,pocet_der2+2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice,plbase_tolerance_horni);
   
-        
+     plbase_vrchni_kryt_pro_odecet(pocet_der1+2,pocet_der2+2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice,-0.2,tloustka_plbase);    
      }
 
 

@@ -1,6 +1,7 @@
 use <text/Write.scad>
 use <MLAB_logo.scad>
 use <sloupek.scad>
+use <plbase.scad>
 include <manufactury_conf.scad>
 include <../configuration.scad>
 
@@ -102,30 +103,26 @@ cube([(pocet_der1)*vzdalenost_der+2*vzdalenost_od_okraje+4*tloustka_bocnice+0.5,
 //------------------------------------------------------------
 //sloupek 1
 
-translate([(-(pocet_der2)*vzdalenost_der)/2-tloustka_bocnice,-tloustka_bocnice,-tloustka_plbase])
-sloupek (vyska_bocnice,vzdalenost_der,vzdalenost_od_okraje,vzdalenost_od_diry,radidus_hrany,prumer_sroubu,prumer_matice,vyska_matice,posuv_dorazu,matice_sila_materialu,
-   logo_vyska,logo_sirka);
+translate([(-(pocet_der2)*vzdalenost_der)/2-tloustka_bocnice,-tloustka_bocnice,vyska_bocnice/2-(vyska_matice+2*tloustka_bocnice+0.1)-tloustka_plbase])
+sloupek ();
 
 //sloupek 2
 
-translate([((pocet_der2)*vzdalenost_der)/2+tloustka_bocnice,-tloustka_bocnice,-tloustka_plbase])
+translate([((pocet_der2)*vzdalenost_der)/2+tloustka_bocnice,-tloustka_bocnice,vyska_bocnice/2-(vyska_matice+2*tloustka_bocnice+0.1)-tloustka_plbase])
 rotate(a=[0,0,90])
-sloupek (vyska_bocnice,vzdalenost_der,vzdalenost_od_okraje,vzdalenost_od_diry,radidus_hrany,prumer_sroubu,prumer_matice,vyska_matice,posuv_dorazu,matice_sila_materialu,
-   logo_vyska,logo_sirka);
+sloupek ();
 
 //sloupek 3
 
-translate([((pocet_der2)*vzdalenost_der)/2+tloustka_bocnice, (pocet_der1)*vzdalenost_der+tloustka_bocnice,-tloustka_plbase])
+translate([((pocet_der2)*vzdalenost_der)/2+tloustka_bocnice, (pocet_der1)*vzdalenost_der+tloustka_bocnice,vyska_bocnice/2-(vyska_matice+2*tloustka_bocnice+0.1)-tloustka_plbase])
 rotate(a=[0,0,180])
-sloupek (vyska_bocnice,vzdalenost_der,vzdalenost_od_okraje,vzdalenost_od_diry,radidus_hrany,prumer_sroubu,prumer_matice,vyska_matice,posuv_dorazu,matice_sila_materialu,
-   logo_vyska,logo_sirka);
+sloupek ();
 
 //sloupek 4
 
-translate([-((pocet_der2)*vzdalenost_der)/2-tloustka_bocnice, (pocet_der1)*vzdalenost_der+tloustka_bocnice,-tloustka_plbase])
+translate([-((pocet_der2)*vzdalenost_der)/2-tloustka_bocnice, (pocet_der1)*vzdalenost_der+tloustka_bocnice,vyska_bocnice/2-(vyska_matice+2*tloustka_bocnice+0.1)-tloustka_plbase])
 rotate(a=[0,0,270])
-sloupek (vyska_bocnice,vzdalenost_der,vzdalenost_od_okraje,vzdalenost_od_diry,radidus_hrany,prumer_sroubu,prumer_matice,vyska_matice,posuv_dorazu,matice_sila_materialu,
-   logo_vyska,logo_sirka);
+sloupek ();
         
     
 
@@ -142,13 +139,22 @@ translate([(5-(pocet_der2)*vzdalenost_der)/2,0,0])
                     scale(v = [logo_sirka, logo_vyska, 0.3])
                         MLAB_logo_short();
 */
+
+
+  translate([-0.5,-0.5,vyska_bocnice/2-tloustka_plbase/2+0.05])
+rotate(a=[0,0,0])
+    {
+        
+     
+ plbase_vrchni_kryt_pro_odecet(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice,-0.5,tloustka_plbase+0.1);
+
+}
+
+
 }
 }
 
 
       
-  
 
-
-
-       
+    

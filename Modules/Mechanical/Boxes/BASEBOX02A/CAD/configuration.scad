@@ -11,10 +11,10 @@ radidus_hrany = 3; //radius zaobleni sloupku
 vzdalenost_od_okraje = 5.08; //vzdalenost stredu upevnovaci diry od kraje desky
 
 //mala hrana
-pocet_der1 = 0; //pocet der desky, ponížené o 3
+pocet_der1 = 2; //pocet der desky, ponížené o 3
 
 //velka hrana
-pocet_der2 = 0; //pocet der desky, ponížené o 3
+pocet_der2 = 2; //pocet der desky, ponížené o 3
 //*/
 
 
@@ -29,7 +29,7 @@ tloustka_bocnice=2;
 tloustka_plbase = 2; //tloustka plbase
 prekryti_der=0.3; //sila materiálu, který překrývá díry
 
-plbase_tolerance_horni=0.3;
+plbase_tolerance_horni=0.0; //pro zvětšení tolerance aby tam šlo dát  horní čelíčko
 
 //PRIPADNA VYSKA NOZICEK
 //------------------------------------------------------------
