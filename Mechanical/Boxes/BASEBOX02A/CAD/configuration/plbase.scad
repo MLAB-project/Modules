@@ -197,11 +197,11 @@ translate([vzdalenost_od_okraje+tloustka_bocnice,vzdalenost_od_okraje+tloustka_b
 //PLbase vrchní
 //------------------------------------------------------------
 
-plbase_vrchni_kryt(2,3,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice,plbase_tolerance_horni);
+
 module plbase_vrchni_kryt(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice,plbase_tolerance_horni){
 
 difference () {
-    translate([0,((pocet_der1)*vzdalenost_der+2*vzdalenost_od_okraje+2*tloustka_bocnice)/2,0])
+  //  translate([0,((pocet_der1)*vzdalenost_der+2*vzdalenost_od_okraje+2*tloustka_bocnice)/2,0])
       cube([(pocet_der2+2)*vzdalenost_der+2*vzdalenost_od_okraje+2*tloustka_bocnice,(pocet_der1+2)*vzdalenost_der+2*vzdalenost_od_okraje+2*tloustka_bocnice,tloustka_plbase],true);  
 
     
@@ -221,7 +221,7 @@ minkowski()
 	cube([(pocet_der1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*tloustka_bocnice,(pocet_der2)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*tloustka_bocnice,vyska_bocnice+tloustka_plbase]);          // base plastics brick
         cylinder(r=radidus_hrany,h=0.1);
     }
-translate([tloustka_bocnice,tloustka_bocnice,-0.1])    
+translate([tloustka_bocnice,tloustka_bocnice,-0.1])     
 minkowski()
     {
 	cube([(pocet_der1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany-2*plbase_tolerance_horni,(pocet_der2)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany-2*plbase_tolerance_horni,vyska_bocnice+tloustka_plbase+0.2]);          // base plastics brick
@@ -231,20 +231,20 @@ minkowski()
   
   
     
-translate([-radidus_hrany-tloustka_bocnice,-radidus_hrany-tloustka_bocnice,-0.2])   
- cube([vzdalenost_der/2+tloustka_bocnice-plbase_tolerance_horni,vzdalenost_der/2+tloustka_bocnice-plbase_tolerance_horni,vyska_bocnice+tloustka_plbase+0.4]);
+translate([-radidus_hrany-tloustka_bocnice-3*plbase_tolerance_horni,-radidus_hrany-tloustka_bocnice-3*plbase_tolerance_horni,-0.2])   
+ cube([vzdalenost_der/2+tloustka_bocnice+plbase_tolerance_horni,vzdalenost_der/2+tloustka_bocnice+plbase_tolerance_horni,vyska_bocnice+tloustka_plbase+0.4]);
  
  
- translate([(pocet_der1)*vzdalenost_der+2*vzdalenost_od_okraje-radidus_hrany+2*tloustka_bocnice-vzdalenost_der/2+plbase_tolerance_horni,-radidus_hrany-tloustka_bocnice,-0.2]) 
- cube([vzdalenost_der/2+tloustka_bocnice-plbase_tolerance_horni,vzdalenost_der/2+tloustka_bocnice-plbase_tolerance_horni,vyska_bocnice+tloustka_plbase+0.4]);
+ translate([(pocet_der1)*vzdalenost_der+2*vzdalenost_od_okraje-radidus_hrany+2*tloustka_bocnice-vzdalenost_der/2,-radidus_hrany-tloustka_bocnice-3*plbase_tolerance_horni,-0.2]) 
+ cube([vzdalenost_der/2+tloustka_bocnice+plbase_tolerance_horni,vzdalenost_der/2+tloustka_bocnice+plbase_tolerance_horni,vyska_bocnice+tloustka_plbase+0.4]);
  
  
- translate([(pocet_der1)*vzdalenost_der+2*vzdalenost_od_okraje-radidus_hrany+2*tloustka_bocnice-vzdalenost_der/2+plbase_tolerance_horni,(pocet_der2)*vzdalenost_der+2*vzdalenost_od_okraje-radidus_hrany+2*tloustka_bocnice-vzdalenost_der/2+plbase_tolerance_horni,-0.2]) 
- cube([vzdalenost_der/2+tloustka_bocnice-plbase_tolerance_horni,vzdalenost_der/2+tloustka_bocnice-plbase_tolerance_horni,vyska_bocnice+tloustka_plbase+0.4]);
+ translate([(pocet_der1)*vzdalenost_der+2*vzdalenost_od_okraje-radidus_hrany+2*tloustka_bocnice-vzdalenost_der/2,(pocet_der2)*vzdalenost_der+2*vzdalenost_od_okraje-radidus_hrany+2*tloustka_bocnice-vzdalenost_der/2,-0.2]) 
+ cube([vzdalenost_der/2+tloustka_bocnice+plbase_tolerance_horni,vzdalenost_der/2+tloustka_bocnice+plbase_tolerance_horni,vyska_bocnice+tloustka_plbase+0.4]);
  
     
-       translate([-radidus_hrany-tloustka_bocnice,(pocet_der2)*vzdalenost_der+2*vzdalenost_od_okraje-radidus_hrany+2*tloustka_bocnice-vzdalenost_der/2+plbase_tolerance_horni,-0.2]) 
- cube([vzdalenost_der/2+tloustka_bocnice-plbase_tolerance_horni,vzdalenost_der/2+tloustka_bocnice+plbase_tolerance_horni,vyska_bocnice+tloustka_plbase+0.4]);  
+       translate([-radidus_hrany-tloustka_bocnice-3*plbase_tolerance_horni,(pocet_der2)*vzdalenost_der+2*vzdalenost_od_okraje-radidus_hrany+2*tloustka_bocnice-vzdalenost_der/2,-0.2]) 
+ cube([vzdalenost_der/2+tloustka_bocnice+plbase_tolerance_horni,vzdalenost_der/2+tloustka_bocnice+plbase_tolerance_horni,vyska_bocnice+tloustka_plbase+0.4]);  
   
 
    
@@ -286,25 +286,152 @@ minkowski()
 //------------------------------------------------------------
 //sloupek 1
 
-translate([(-(pocet_der2)*vzdalenost_der)/2-tloustka_bocnice,-tloustka_bocnice,-tloustka_plbase])
+translate([(-(pocet_der2)*vzdalenost_der)/2-tloustka_bocnice-plbase_tolerance_horni,-tloustka_bocnice-plbase_tolerance_horni,-tloustka_plbase])
 
  cylinder(r=prumer_sroubu/2,h=6*tloustka_plbase);
 
 //sloupek 2
 
-translate([((pocet_der2)*vzdalenost_der)/2+tloustka_bocnice,-tloustka_bocnice,-tloustka_plbase])
+translate([((pocet_der2)*vzdalenost_der)/2+tloustka_bocnice-plbase_tolerance_horni,-tloustka_bocnice-plbase_tolerance_horni,-tloustka_plbase])
 rotate(a=[0,0,90])
  cylinder(r=prumer_sroubu/2,h=6*tloustka_plbase);
 
 //sloupek 3
 
-translate([((pocet_der2)*vzdalenost_der)/2+tloustka_bocnice, (pocet_der1)*vzdalenost_der+tloustka_bocnice,-tloustka_plbase])
+translate([((pocet_der2)*vzdalenost_der)/2+tloustka_bocnice-plbase_tolerance_horni, (pocet_der1)*vzdalenost_der+tloustka_bocnice-plbase_tolerance_horni,-tloustka_plbase])
 rotate(a=[0,0,180])
  cylinder(r=prumer_sroubu/2,h=6*tloustka_plbase);
 
 //sloupek 4
 
-translate([-((pocet_der2)*vzdalenost_der)/2-tloustka_bocnice, (pocet_der1)*vzdalenost_der+tloustka_bocnice,-tloustka_plbase])
+translate([-((pocet_der2)*vzdalenost_der)/2-tloustka_bocnice-plbase_tolerance_horni, (pocet_der1)*vzdalenost_der+tloustka_bocnice-plbase_tolerance_horni,-tloustka_plbase])
+rotate(a=[0,0,270])
+ cylinder(r=prumer_sroubu/2,h=6*tloustka_plbase);
+        
+    
+
+                
+
+
+
+
+
+}
+}
+
+plbase_vrchni_kryt_pro_odecet(pocet_der1+2,pocet_der2+2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice,-0.6);
+
+//PLbase vrchní - pro odecet
+//------------------------------------------------------------
+
+
+module plbase_vrchni_kryt_pro_odecet(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice,plbase_tolerance_horni,tloustka_plbase){
+
+difference () {
+   translate([0,((pocet_der1)*vzdalenost_der+2*vzdalenost_od_okraje+2*tloustka_bocnice)/2,0])
+      cube([(pocet_der2+3)*vzdalenost_der+2*vzdalenost_od_okraje+2*tloustka_bocnice,(pocet_der1+3)*vzdalenost_der+2*vzdalenost_od_okraje+2*tloustka_bocnice,tloustka_plbase],true);  
+
+    
+union()
+    {
+translate([-((pocet_der2)*vzdalenost_der+2*vzdalenost_od_okraje)/2,-vzdalenost_od_okraje,vyska_bocnice/2])
+rotate(a=[180,0,90])        
+translate([radidus_hrany,radidus_hrany,0])
+        translate([-tloustka_bocnice,-tloustka_bocnice,0])
+        
+ //obvod
+ difference () {
+
+
+minkowski()
+    {
+	cube([(pocet_der1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*tloustka_bocnice-2*plbase_tolerance_horni,(pocet_der2)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*tloustka_bocnice-2*plbase_tolerance_horni,vyska_bocnice+tloustka_plbase]);          // base plastics brick
+        cylinder(r=radidus_hrany,h=0.1);
+    }
+translate([tloustka_bocnice,tloustka_bocnice,-0.1])     
+minkowski()
+    {
+	cube([(pocet_der1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany-2*plbase_tolerance_horni,(pocet_der2)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany-2*plbase_tolerance_horni,vyska_bocnice+tloustka_plbase+0.2]);          // base plastics brick
+        cylinder(r=radidus_hrany,h=0.1);
+    }
+ 
+  
+  
+    
+translate([-radidus_hrany-tloustka_bocnice-3*plbase_tolerance_horni,-radidus_hrany-tloustka_bocnice-3*plbase_tolerance_horni,-0.2])   
+ cube([vzdalenost_der/2+tloustka_bocnice+plbase_tolerance_horni,vzdalenost_der/2+tloustka_bocnice+plbase_tolerance_horni,vyska_bocnice+tloustka_plbase+0.4]);
+ 
+ 
+ translate([(pocet_der1)*vzdalenost_der+2*vzdalenost_od_okraje-radidus_hrany+2*tloustka_bocnice-vzdalenost_der/2,-radidus_hrany-tloustka_bocnice-3*plbase_tolerance_horni,-0.2]) 
+ cube([vzdalenost_der/2+tloustka_bocnice+plbase_tolerance_horni,vzdalenost_der/2+tloustka_bocnice+plbase_tolerance_horni,vyska_bocnice+tloustka_plbase+0.4]);
+ 
+ 
+ translate([(pocet_der1)*vzdalenost_der+2*vzdalenost_od_okraje-radidus_hrany+2*tloustka_bocnice-vzdalenost_der/2,(pocet_der2)*vzdalenost_der+2*vzdalenost_od_okraje-radidus_hrany+2*tloustka_bocnice-vzdalenost_der/2,-0.2]) 
+ cube([vzdalenost_der/2+tloustka_bocnice+plbase_tolerance_horni,vzdalenost_der/2+tloustka_bocnice+plbase_tolerance_horni,vyska_bocnice+tloustka_plbase+0.4]);
+ 
+    
+       translate([-radidus_hrany-tloustka_bocnice-3*plbase_tolerance_horni,(pocet_der2)*vzdalenost_der+2*vzdalenost_od_okraje-radidus_hrany+2*tloustka_bocnice-vzdalenost_der/2,-0.2]) 
+ cube([vzdalenost_der/2+tloustka_bocnice+plbase_tolerance_horni,vzdalenost_der/2+tloustka_bocnice+plbase_tolerance_horni,vyska_bocnice+tloustka_plbase+0.4]);  
+  
+
+   
+   }
+   
+   
+   
+      
+        //pro vyboceni sloupku
+      
+      translate([-((pocet_der2)*vzdalenost_der+2*vzdalenost_od_okraje)/2,-vzdalenost_od_okraje,vyska_bocnice/2])
+rotate(a=[180,0,90])        
+translate([radidus_hrany,radidus_hrany,0])
+        translate([-2*tloustka_bocnice,-2*tloustka_bocnice,0])
+difference () {
+
+translate([-(5)*vzdalenost_der/2,-(5)*vzdalenost_der/2,0])
+minkowski()
+    {
+	cube([(pocet_der1+5)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+4*tloustka_bocnice,(pocet_der2+5)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+4*tloustka_bocnice,vyska_bocnice+tloustka_plbase]);          // base plastics brick
+        cylinder(r=radidus_hrany,h=0.1);
+    }
+translate([tloustka_bocnice,tloustka_bocnice,-0.2])    
+minkowski()
+    {
+          
+        
+	cube([(pocet_der1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*tloustka_bocnice-2*plbase_tolerance_horni,(pocet_der2)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*tloustka_bocnice-2*plbase_tolerance_horni,vyska_bocnice+tloustka_plbase+0.4]);          // base plastics brick
+        cylinder(r=radidus_hrany,h=0.1);
+    }
+    
+   
+    
+        
+    
+ } 
+  }   
+//SLOUPKY
+//------------------------------------------------------------
+//sloupek 1
+
+translate([(-(pocet_der2)*vzdalenost_der)/2-tloustka_bocnice-plbase_tolerance_horni,-tloustka_bocnice-plbase_tolerance_horni,-tloustka_plbase])
+
+ cylinder(r=prumer_sroubu/2,h=6*tloustka_plbase);
+
+//sloupek 2
+
+translate([((pocet_der2)*vzdalenost_der)/2+tloustka_bocnice-plbase_tolerance_horni,-tloustka_bocnice-plbase_tolerance_horni,-tloustka_plbase])
+rotate(a=[0,0,90])
+ cylinder(r=prumer_sroubu/2,h=6*tloustka_plbase);
+
+//sloupek 3
+
+translate([((pocet_der2)*vzdalenost_der)/2+tloustka_bocnice-plbase_tolerance_horni, (pocet_der1)*vzdalenost_der+tloustka_bocnice-plbase_tolerance_horni,-tloustka_plbase])
+rotate(a=[0,0,180])
+ cylinder(r=prumer_sroubu/2,h=6*tloustka_plbase);
+
+//sloupek 4
+
+translate([-((pocet_der2)*vzdalenost_der)/2-tloustka_bocnice-plbase_tolerance_horni, (pocet_der1)*vzdalenost_der+tloustka_bocnice-plbase_tolerance_horni,-tloustka_plbase])
 rotate(a=[0,0,270])
  cylinder(r=prumer_sroubu/2,h=6*tloustka_plbase);
         
@@ -321,5 +448,4 @@ rotate(a=[0,0,270])
 
 
 
-  
  
