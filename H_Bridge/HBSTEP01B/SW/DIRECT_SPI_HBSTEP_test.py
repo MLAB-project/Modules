@@ -7,8 +7,8 @@
 
 
 #uncomment for debbug purposes
-#import logging
-#logging.basicConfig(level=logging.DEBUG) 
+import logging
+logging.basicConfig(level=logging.DEBUG) 
 
 import sys
 import time
@@ -116,6 +116,7 @@ class axis:
         self.Move(units)
         while self.IsBusy():
             pass
+            time.sleep(0.8)
 
     def Float(self):
         ' switch H-bridge to High impedance state '
@@ -123,17 +124,16 @@ class axis:
 
     def ReadStatusBit(self, bit):
         ' Report given status bit '
-        self.spi.xfer([0x39])   # Read from address 0x19 (STATUS)
-        self.spi.xfer([0x00])
-        data = self.spi.readbytes(2)           # 1st byte
-        #self.spi.xfer([0x00])
-        #data1 = self.spi.readbytes(1)           # 2nd byte
-        #print hex(data0), hex(data1)
+        self.spi.xfer([0x39])   # Get status command
+        data = self.spi.readbytes(1)           # 1st byte
+        data = data + (self.spi.readbytes(1))           # 1st byte
+        print data
         if bit > 7:                                   # extract requested bit
             OutputBit = (data[0] >> (bit - 8)) & 1
         else:
             OutputBit = (data[1] >> bit) & 1        
         return OutputBit
+
 
     
     def IsBusy(self):
@@ -153,7 +153,7 @@ try:
     print "SPI configuration.."
     spi = spidev.SpiDev() # create a spi object
     spi.open(0, 0) # open spi port 0, device (CS) 0 
-    spi.mode = 1
+    spi.mode = 0b01
     spi.lsbfirst = False
     spi.bits_per_word = 8
     spi.cshigh = False
@@ -170,9 +170,10 @@ try:
         print i
         X.MoveWait(DISTANCE)      # move forward and wait for motor stop
         print "Changing direction of rotation.."
+        time.sleep(1.1)
         X.MoveWait(-DISTANCE)     # move backward and wait for motor stop
         print "Changing direction of rotation.."
-
+        time.sleep(1.1)
     X.Float()   # release power
 
 
