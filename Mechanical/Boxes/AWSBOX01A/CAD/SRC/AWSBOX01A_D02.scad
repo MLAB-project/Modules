@@ -88,12 +88,11 @@ translate([radidus_hrany,radidus_hrany,(pocet_der2-1)*vzdalenost_der+2*vzdalenos
 
   }    
 
-//odečet spodního kvádru
-  
-translate([D02_sila_materialu+D02_dolerance_na_zasunuti+radidus_hrany,D02_sila_materialu+radidus_hrany,-0.005])
+
+translate([D02_sila_materialu+radidus_hrany,D02_sila_materialu+radidus_hrany,-0.005])
 minkowski()
     {
-	cube([(pocet_der1-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany,D02_vyska_boxu_pod_plbase+D02_vyska_boxu_nad_plbase,(pocet_der2-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*radidus_hrany+D02_zapusteni_spodniho_krytu+0.01]);          // base plastics brick
+	cube([(pocet_der1-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+D02_dolerance_na_zasunuti,D02_vyska_boxu_pod_plbase+D02_vyska_boxu_nad_plbase,(pocet_der2-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*radidus_hrany+D02_zapusteni_spodniho_krytu+0.01]);          // base plastics brick
         cylinder(r=radidus_hrany,h=0.1);
     }
     
@@ -224,7 +223,7 @@ difference () {
     
     //otvor na šroub
     translate([drzak_sroubu_hloubka-prumer_sroubu/2-1.5*D02_sila_materialu,(prumer_sroubu+3*D02_sila_materialu)/2,-0.001])
-     cylinder(h=3*drzak_sroubu_vyska, r=prumer_sroubu/2, center=false);
+     cylinder(h=drzak_sroubu_vyska+1.1, r=prumer_sroubu/2, center=false);
     
     //odstranění kužele
     difference () {

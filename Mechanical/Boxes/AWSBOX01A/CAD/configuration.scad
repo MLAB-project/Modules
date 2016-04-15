@@ -5,8 +5,8 @@ $fn=40; // model faces resolution.
 //----------------------------------------------------------------
 
 //pro PLBASE
-pocet_der1=11; //x
-pocet_der2=6; //ovlivňuje výšku krabičky
+pocet_der1=11; //x 11
+pocet_der2=6; //ovlivňuje výšku krabičky 6
 radidus_hrany=5;
 vzdalenost_der=10.16;
 vzdalenost_od_okraje=vzdalenost_der/2;
