@@ -73,7 +73,7 @@ class axis:
         self.spi.xfer([0x0B])      # KVAL_ACC
         self.spi.xfer([0x50])
         self.spi.xfer([0x0C])      # KVAL_DEC
-        self.spi.xfer([0x05])
+        self.spi.xfer([0x50])
  #       self.spi.xfer([0x18])      # CONFIG
  #       self.spi.xfer([0b00111000])
  #       self.spi.xfer([0b00000000])
@@ -195,9 +195,9 @@ try:
 
     print X.MaxSpeed(SPEED)                      # set maximal motor speed 
 
-    print X.Run(1, 200.456431)
-    time.sleep(10)
-    '''
+    #print X.Run(1, 200.456431)
+    #time.sleep(10)
+    
     print "Axis is running"
     for i in range(5):
         print i
@@ -207,7 +207,7 @@ try:
         X.MoveWait(-DISTANCE)     # move backward and wait for motor stop
         print "Changing direction of rotation.."
         time.sleep(1.1)
-    '''
+    
     X.Float(hard=False)   # release power
 
 finally:
