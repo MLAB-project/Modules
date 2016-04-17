@@ -5,7 +5,7 @@ use <plbase.scad>
 include <manufactury_conf.scad>
 include <../configuration.scad>
 
-
+bocnice(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice);
 
 //Bočnice
 //------------------------------------------------------------

@@ -6,6 +6,7 @@
     1C) - Pro modul USBI2C01A
     1D) - Pro konektor MIC338
     1E) - Pro modul UNIPOWER02A
+    1F) - Pro modul I2CDIFF01A
 */
 
 
@@ -87,19 +88,20 @@ module RS232SINGLE01A(tloustka_celicka,pocet_der_dane_strany,posun_od_kraje,vzda
 --------------------------------------------------------
 pocet_der_dane_strany - protoze nelze definovat na jake strane bude dira umistena, proto se musí rucne zadat pocet der zvolene strany krabicky
 posun_od_okraje - zadava se o kolik der se ma posunot modul od kraje celicka
-vzdalenost_der - definuje rozec der
+vzdalenost_der - definuje roztec der
 
 modul na dvou matkách má vysku 6.5 mm, pokud nebudo zasahne do nastaveni list krabicky, bude nutno zvednout vysku modulu.
 
 */
 
-module USBI2C01A(tloustka_celicka,pocet_der_dane_strany,posun_od_kraje,vzdalenost_der,vyska_listy)
+module USBI2C01A(tloustka_bocnice,vzdalenost_der) //uz upraveno
 {
- USBI2C01A_sirka_kon=13; //sirka konektoru
- USBI2C01A_vyska_kon=12; //vyska konektoru
+ USBI2C01A_sirka_kon=12; //sirka konektoru
+ USBI2C01A_vyska_kon=11; //vyska konektoru
  USBI2C01A_sirka_mod_otvory=3; //kolik modul zabira der
-   translate([-(pocet_der_dane_strany-1)*vzdalenost_der/2+1*vzdalenost_der+vzdalenost_der*(USBI2C01A_sirka_mod_otvory-1)/2+posun_od_kraje*vzdalenost_der,0,USBI2C01A_vyska_kon/2+vyska_listy])
-   cube(size = [USBI2C01A_sirka_kon,tloustka_celicka,USBI2C01A_vyska_kon], center = true);  
+ USBI2C01A_svyska_nad_plbase=6; //kolik modul zabira der   
+   translate([vzdalenost_der*(USBI2C01A_sirka_mod_otvory-1)/2,0,USBI2C01A_vyska_kon/2+USBI2C01A_svyska_nad_plbase])
+   cube(size = [USBI2C01A_sirka_kon,tloustka_bocnice+0.2,USBI2C01A_vyska_kon], center = true);  
     
 }
 
@@ -107,17 +109,18 @@ module USBI2C01A(tloustka_celicka,pocet_der_dane_strany,posun_od_kraje,vzdalenos
 --------------------------------------------------------
 --------------------------------------------------------
 */
+//posun_od_okraje - zadava se o kolik der se ma posunot otvor od středu celicka v nasobcich roztece der
 
-module MIC338(tloustka_celicka,vyska,zapust,vule_vysky_celicka)
+module MIC338(tloustka_bocnice,vzdalenost_der,vyska_bocnice)
 {
  MIC338_polomer_kon=8; //polomer montazniho otvoru
-   translate([0,0,(vyska-2*zapust-vule_vysky_celicka)/2])
+   translate([0,0,vyska_bocnice/2])
         rotate(a=[90,0,0])
-            cylinder(h=tloustka_celicka+0.1, r=MIC338_polomer_kon+0.1, center=true);  
+            cylinder(h=tloustka_bocnice+0.1, r=MIC338_polomer_kon+0.1, center=true);  
     
 }
 
-/*1D) - Pro modul UNIPOWER02A
+/*1E) - Pro modul UNIPOWER02A
 --------------------------------------------------------
 --------------------------------------------------------
 pocet_der_dane_strany - protoze nelze definovat na jake strane bude dira umistena, proto se musí rucne zadat pocet der zvolene strany krabicky
@@ -128,14 +131,39 @@ modul na dvou matkách má vysku 6.5 mm, pokud nebudo zasahne do nastaveni list 
 
 */
 
-module UNIPOWER02A(tloustka_celicka,pocet_der_dane_strany,posun_od_kraje,vzdalenost_der,vyska_listy)
+
+
+module UNIPOWER02A(tloustka_bocnice,vzdalenost_der)
 {
- UNIPOWER02A_sirka_kon=9; //sirka konektoru
+ UNIPOWER02A_sirka_kon=10; //sirka konektoru
  UNIPOWER02A_vyska_kon=11; //vyska konektoru
  UNIPOWER02A_sirka_mod_otvory=4; //kolik modul zabira der
  UNIPOWER02A_vzdalenost_konektoru=6; //vzdalenost kraje konektoru od středu šroubu
-   translate([-(pocet_der_dane_strany-1)*vzdalenost_der/2+1*vzdalenost_der+posun_od_kraje*vzdalenost_der+UNIPOWER02A_vzdalenost_konektoru+UNIPOWER02A_sirka_kon/2,0,UNIPOWER02A_vyska_kon/2+vyska_listy])
-   cube(size = [UNIPOWER02A_sirka_kon,tloustka_celicka,UNIPOWER02A_vyska_kon], center = true);
+    UNIPOWER02A_vyska_nad_plbase=6; //vyska mezi albase a konektorem
+   translate([UNIPOWER02A_vzdalenost_konektoru,-tloustka_bocnice/2-0.05,UNIPOWER02A_vyska_nad_plbase])
+   cube(size = [UNIPOWER02A_sirka_kon,tloustka_bocnice+0.1,UNIPOWER02A_vyska_kon], center = false);
  }   
+ 
+/*1F) - Pro modul I2CDIFF01A
+--------------------------------------------------------
+--------------------------------------------------------
+pocet_der_dane_strany - protoze nelze definovat na jake strane bude dira umistena, proto se musí rucne zadat pocet der zvolene strany krabicky
+posun_od_okraje - zadava se o kolik der se ma posunot modul od kraje celicka
+vzdalenost_der - definuje roztec der
+
+modul na dvou matkách má vysku 6.5 mm, pokud nebudo zasahne do nastaveni list krabicky, bude nutno zvednout vysku modulu.
+
+*/
+
+
+module I2CDIFF01A(tloustka_bocnice,vzdalenost_der) //uz upraveno
+{
+ I2CDIFF01A_sirka_kon=16.5; //sirka konektoru
+ I2CDIFF01A_vyska_kon=13.5; //vyska konektoru
+ I2CDIFF01A_sirka_mod_otvory=4; //kolik modul zabira der
+ I2CDIFF01A_vyska_nad_plbase=6; //vyska mezi albase a konektorem
+   translate([vzdalenost_der*(I2CDIFF01A_sirka_mod_otvory-1)/2,0,I2CDIFF01A_vyska_kon/2+I2CDIFF01A_vyska_nad_plbase])
+   cube(size = [I2CDIFF01A_sirka_kon,tloustka_bocnice+0.2,I2CDIFF01A_vyska_kon], center = true);  
     
+}
     
