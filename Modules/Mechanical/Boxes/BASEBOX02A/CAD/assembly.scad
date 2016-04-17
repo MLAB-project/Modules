@@ -3,7 +3,7 @@ use <configuration/plbase.scad>
 use <configuration/bocnice.scad>
 use <configuration/otvory.scad>
 use <configuration/text/Write.scad>
-
+use <upravena_bocnice.scad>
 
 include <configuration/manufactury_conf.scad>
 include <configuration.scad>
@@ -19,19 +19,12 @@ barva_plbase = "yellow";
 //    cube([10.16,10.16,10.16]);  
 
 
-//BOCNICE
+//BOCNICE SE DNEM
 //-------------------------------------------------------------
-bocnice(pocet_der1+2,pocet_der2+2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice);
+upravena_bocnice();
 
 
-//PLBASE SPODNI
-//-------------------------------------------------------------
-color(barva_plbase)
-translate([-((pocet_der2+2)*vzdalenost_der+2*vzdalenost_od_okraje)/2-tloustka_bocnice,-vzdalenost_od_okraje-tloustka_bocnice,-(vyska_bocnice/2)])
-rotate(a=[180,0,90])
 
-
-plbase(pocet_der1+3,pocet_der2+3,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der,tloustka_bocnice);
 
 
 //PLBASE HORNI
@@ -46,7 +39,7 @@ rotate(a=[0,0,0])
      
   //plbase_vrchni_kryt(pocet_der1+2,pocet_der2+2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice,plbase_tolerance_horni);
   
-     plbase_vrchni_kryt_pro_odecet(pocet_der1+2,pocet_der2+2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice,-0.2,tloustka_plbase);    
+     plbase_vrchni_kryt_pro_odecet(pocet_der1-1,pocet_der2-1,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice,-0.2,tloustka_plbase);    
      }
 
 
