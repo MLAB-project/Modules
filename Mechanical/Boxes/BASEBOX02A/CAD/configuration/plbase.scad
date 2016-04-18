@@ -188,6 +188,11 @@ translate([vzdalenost_od_okraje+tloustka_bocnice+(pocet_der1-1)*vzdalenost_der,v
       
 translate([vzdalenost_od_okraje+tloustka_bocnice,vzdalenost_od_okraje+tloustka_bocnice+(pocet_der2-1)*vzdalenost_der, (tloustka_plbase/2)])  // center top screw
         cylinder(((tloustka_plbase+0.3)), d=prumer_sroubu, center=true);       
+
+
+
+
+
       
 }
 }
@@ -319,7 +324,7 @@ rotate(a=[0,0,270])
 }
 }
 
-plbase_vrchni_kryt_pro_odecet(pocet_der1+2,pocet_der2+2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice,-0.6);
+plbase_vrchni_kryt_pro_odecet(pocet_der1-1,pocet_der2-1,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice,-0.2,tloustka_plbase); 
 
 //PLbase vrchní - pro odecet
 //------------------------------------------------------------
@@ -435,9 +440,12 @@ translate([-((pocet_der2)*vzdalenost_der)/2-tloustka_bocnice-plbase_tolerance_ho
 rotate(a=[0,0,270])
  cylinder(r=prumer_sroubu/2,h=6*tloustka_plbase);
         
-    
-
-                
+ //nápis   
+ 
+ translate([radidus_hrany,radidus_hrany,0])   
+translate([ 0, ((pocet_der1-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany)/2+tloustka_bocnice, tloustka_plbase/2-(tloustka_plbase-1)/2+0.01]) 
+    rotate([0,0,0])
+      write(box_jmeno,h=10,t=tloustka_plbase-1, space= 1.1, font = "Letters.dxf",center=true);
 
 
 
@@ -445,7 +453,6 @@ rotate(a=[0,0,270])
 
 }
 }
-
 
 
  
