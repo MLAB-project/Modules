@@ -166,4 +166,28 @@ module I2CDIFF01A(tloustka_bocnice,vzdalenost_der) //uz upraveno
    cube(size = [I2CDIFF01A_sirka_kon,tloustka_bocnice+0.2,I2CDIFF01A_vyska_kon], center = true);  
     
 }
-    
+ 
+
+/*1G) - Pro modul UNIPOWER02A
+--------------------------------------------------------
+--------------------------------------------------------
+pocet_der_dane_strany - protoze nelze definovat na jake strane bude dira umistena, proto se musí rucne zadat pocet der zvolene strany krabicky
+posun_od_okraje - zadava se o kolik der se ma posunot modul od kraje celicka
+vzdalenost_der - definuje rozec der
+
+modul na dvou matkách má vysku 6.5 mm, pokud nebudo zasahne do nastaveni list krabicky, bude nutno zvednout vysku modulu.
+
+*/
+
+
+
+module UNIPOWER03A(tloustka_bocnice,vzdalenost_der)
+{
+ UNIPOWER03A_sirka_kon=10; //sirka konektoru
+ UNIPOWER03A_vyska_kon=11; //vyska konektoru
+ UNIPOWER03A_sirka_mod_otvory=4; //kolik modul zabira der
+ UNIPOWER03A_vzdalenost_konektoru=5; //vzdalenost kraje konektoru od středu šroubu
+    UNIPOWER03A_vyska_nad_plbase=6; //vyska mezi albase a konektorem
+   translate([UNIPOWER03A_vzdalenost_konektoru,-tloustka_bocnice/2-0.05,UNIPOWER03A_vyska_nad_plbase])
+   cube(size = [UNIPOWER03A_sirka_kon,tloustka_bocnice+0.1,UNIPOWER03A_vyska_kon], center = false);
+ }  
