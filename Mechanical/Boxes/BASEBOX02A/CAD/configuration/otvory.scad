@@ -188,6 +188,6 @@ module UNIPOWER03A(tloustka_bocnice,vzdalenost_der)
  UNIPOWER03A_sirka_mod_otvory=4; //kolik modul zabira der
  UNIPOWER03A_vzdalenost_konektoru=5; //vzdalenost kraje konektoru od středu šroubu
     UNIPOWER03A_vyska_nad_plbase=6; //vyska mezi albase a konektorem
-   translate([UNIPOWER03A_vzdalenost_konektoru,-tloustka_bocnice/2-0.05,UNIPOWER03A_vyska_nad_plbase])
+   translate([(UNIPOWER03A_sirka_mod_otvory-1)*vzdalenost_der-UNIPOWER03A_sirka_kon-UNIPOWER03A_vzdalenost_konektoru,-tloustka_bocnice/2-0.05,UNIPOWER03A_vyska_nad_plbase])
    cube(size = [UNIPOWER03A_sirka_kon,tloustka_bocnice+0.1,UNIPOWER03A_vyska_kon], center = false);
  }  
