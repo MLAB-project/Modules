@@ -188,6 +188,36 @@ module UNIPOWER03A(tloustka_bocnice,vzdalenost_der)
  UNIPOWER03A_sirka_mod_otvory=4; //kolik modul zabira der
  UNIPOWER03A_vzdalenost_konektoru=5; //vzdalenost kraje konektoru od středu šroubu
     UNIPOWER03A_vyska_nad_plbase=6; //vyska mezi albase a konektorem
+    
+    
    translate([(UNIPOWER03A_sirka_mod_otvory-1)*vzdalenost_der-UNIPOWER03A_sirka_kon-UNIPOWER03A_vzdalenost_konektoru,-tloustka_bocnice/2-0.05,UNIPOWER03A_vyska_nad_plbase])
    cube(size = [UNIPOWER03A_sirka_kon,tloustka_bocnice+0.1,UNIPOWER03A_vyska_kon], center = false);
+   
+      
  }  
+ 
+ module CHLADICI_OTVORY(tloustka_bocnice,vzdalenost_der,delka,vyska_bocnice)
+{
+CHLADICI_OTVORY_mezera=0.8; 
+CHLADICI_OTVORY_snizeni_vysky=10; 
+CHLADICI_OTVORY_prekryti=1.2;     
+    
+   for (a =[1:delka]) 
+     translate([vzdalenost_der*(a-1),0,0])  
+   {   
+  union() {
+   translate([CHLADICI_OTVORY_prekryti/2,-CHLADICI_OTVORY_mezera/2+0.005,CHLADICI_OTVORY_snizeni_vysky/2])
+   cube(size = [(vzdalenost_der-2*CHLADICI_OTVORY_prekryti)/2,(tloustka_bocnice+CHLADICI_OTVORY_mezera)/2,vyska_bocnice-CHLADICI_OTVORY_snizeni_vysky], center = false);
+    
+     translate([(vzdalenost_der+CHLADICI_OTVORY_prekryti)/2,-tloustka_bocnice/2-0.005,CHLADICI_OTVORY_snizeni_vysky/2])
+   cube(size = [(vzdalenost_der-2*CHLADICI_OTVORY_prekryti)/2,(tloustka_bocnice+CHLADICI_OTVORY_mezera)/2,vyska_bocnice-CHLADICI_OTVORY_snizeni_vysky], center = false);
+    
+    
+    translate([(vzdalenost_der-CHLADICI_OTVORY_prekryti)/2,-CHLADICI_OTVORY_mezera/2,CHLADICI_OTVORY_snizeni_vysky/2])
+    cube(size = [CHLADICI_OTVORY_prekryti,CHLADICI_OTVORY_mezera,vyska_bocnice-CHLADICI_OTVORY_snizeni_vysky], center = false);
+      
+    translate([(vzdalenost_der-CHLADICI_OTVORY_prekryti)/2+vzdalenost_der/2,-CHLADICI_OTVORY_mezera/2,CHLADICI_OTVORY_snizeni_vysky/2])
+    cube(size = [CHLADICI_OTVORY_prekryti+1,CHLADICI_OTVORY_mezera,vyska_bocnice-CHLADICI_OTVORY_snizeni_vysky], center = false);  
+ }
+ };
+ }
