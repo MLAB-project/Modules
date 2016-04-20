@@ -1,0 +1,17 @@
+﻿//
+// Toto je popisný soubor pro popis obsahu adresáře (příklad)
+//
+
+[InfoShortDescription.en]
+  I2C (TWI) bus HUB
+  
+[InfoShortDescription.cs]
+  Hub pro sběrnici I2C (TWI)
+    
+[InfoLongDescription.en]
+  The module allow conecting multiple I2C devices together. It does not consist any configurable IO. It is a simple bus multiplyer.
+
+[InfoLongDescription.cs]
+  Umožňuje propojení většího počtu I2C zařízení. Neobsahuje žádnou konfigurovatelnou logiku.
+
+[End]
