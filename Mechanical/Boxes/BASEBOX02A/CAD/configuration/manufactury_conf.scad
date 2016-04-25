@@ -22,6 +22,10 @@ matice_sila_materialu=2; //sila materialu pod maticí na ose z
 vzdalenost_od_diry = 5; //vzdalenost od stredu upevnovaci diry na druhou stranu
 
 
-
-
+//Spodní Kryt
+vyska_prekryti_spodni=3;
+vyska_prekryti_vrchni=4;
+prekryti_tolerance=0.6;
+tolerance_na_nasunuti=0.3;
+sila_spodniho_krytu=1;
 

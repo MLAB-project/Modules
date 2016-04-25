@@ -1,6 +1,7 @@
 use <configuration/sloupek.scad>
 use <configuration/plbase.scad>
 use <configuration/bocnice.scad>
+use <configuration/spodni_kryt.scad>
 use <configuration/otvory.scad>
 use <configuration/text/Write.scad>
 use <upravena_bocnice.scad>
@@ -42,8 +43,8 @@ rotate(a=[0,0,0])
      plbase_vrchni_kryt_pro_odecet(pocet_der1-1,pocet_der2-1,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice,-0.2,tloustka_plbase);    
      }
 
-
-
+translate([0,0,-vyska_bocnice/2-2*tloustka_plbase])
+spodni_kryt(pocet_der1-1,pocet_der2-1,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice);
 
 
 
