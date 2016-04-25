@@ -32,15 +32,15 @@ plbase(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,p
                 translate([-((pocet_der2-1)*vzdalenost_der)/2,-vzdalenost_od_okraje-tloustka_bocnice/2,-(vyska_bocnice/2)])
                 {
                 //složí k posunu otvoru v násobku děr
-                    posun_p1=10;    
+                    posun_p1=1;    
                     translate([posun_p1*vzdalenost_der,0,0])   
                         USBI2C01A(tloustka_bocnice,vzdalenost_der);         
     
-                    posun_p2=10;    
+                    posun_p2=4;    
                     translate([posun_p2*vzdalenost_der,0,0])   
                         I2CDIFF01A(tloustka_bocnice,vzdalenost_der);
                     
-                    posun_p3=0;    
+                    posun_p3=20;    
                     translate([posun_p3*vzdalenost_der,0,0])   
                      // UNIPOWER02A(tloustka_bocnice,vzdalenost_der);
                     CHLADICI_OTVORY(tloustka_bocnice,vzdalenost_der,4,vyska_bocnice);

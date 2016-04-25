@@ -197,6 +197,31 @@ translate([vzdalenost_od_okraje+tloustka_bocnice,vzdalenost_od_okraje+tloustka_b
 }
 }
 
+//PLBASE ZAKLADNI - bez der
+//------------------------------------------------------------
+module plbase_bez_der(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der,tloustka_bocnice){
+
+
+
+difference () {
+//union () {
+translate([radidus_hrany,radidus_hrany,0])
+minkowski()
+    {
+	cube([(pocet_der1-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*tloustka_bocnice,(pocet_der2-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*tloustka_bocnice,tloustka_plbase]);          // base plastics brick
+        cylinder(r=radidus_hrany,h=0.1);
+    }
+ 
+
+  
+
+
+
+
+
+      
+}
+}
 
 
 //PLbase vrchní
@@ -442,7 +467,7 @@ rotate(a=[0,0,270])
         
  //nápis   
  
- translate([radidus_hrany,radidus_hrany,0])   
+ translate([0,radidus_hrany,0])   
 translate([ 0, ((pocet_der1-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany)/2+tloustka_bocnice, tloustka_plbase/2-(tloustka_plbase-1)/2+0.01]) 
     rotate([0,0,0])
       write(box_jmeno,h=10,t=tloustka_plbase-1, space= 1.1, font = "Letters.dxf",center=true);
