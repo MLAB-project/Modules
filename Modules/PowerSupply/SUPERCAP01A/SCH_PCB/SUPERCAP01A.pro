@@ -1,4 +1,4 @@
-update=15. 3. 2016 15:45:57
+update=29. 4. 2016 7:26:30
 version=1
 last_client=kicad
 [pcbnew]
@@ -68,3 +68,13 @@ LibName36=MLAB_MECHANICAL
 LibName37=MLAB_SW
 LibName38=MLAB_T
 LibName39=MLAB_U
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
