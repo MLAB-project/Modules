@@ -29,3 +29,6 @@ prekryti_tolerance=0.6;
 tolerance_na_nasunuti=0.3;
 sila_spodniho_krytu=1;
 
+//Pro vrchni PLBASE
+hrana_bocnice=1.2; //udává jaká síla bocnice zůstane v části zapustěni vrchního čelička
+

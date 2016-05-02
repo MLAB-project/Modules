@@ -3,9 +3,9 @@ box_jmeno="BASEBOX02A";
 
 vzdalenost_der = 10.16; //rozteč děr mezi sebou
 radidus_hrany = 3; //radius zaobleni sloupku
-vzdalenost_od_okraje = 5.08; //vzdalenost stredu upevnovaci diry od kraje desky
-pocet_der1 = 5; //pocet děr v ose y
-pocet_der2 = 8; //pocet der v ose x
+vzdalenost_od_okraje = 5.2; //vzdalenost stredu upevnovaci diry od kraje desky
+pocet_der1 = 3; //pocet děr v ose y
+pocet_der2 = 4; //pocet der v ose x
 
 
 
@@ -14,6 +14,7 @@ pocet_der2 = 8; //pocet der v ose x
 //BOCNICE
 vyska_bocnice=30;
 tloustka_bocnice=2;
+
 
 //PLBASE PARAMETRY
 //------------------------------------------------------------
