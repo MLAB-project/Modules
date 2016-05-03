@@ -49,19 +49,19 @@ difference () {
 
 //sloupek 2
 
-    translate([((pocet_der2)*vzdalenost_der)/2+tloustka_bocnice,-tloustka_bocnice,vyska_bocnice/2-(vyska_matice+2*tloustka_bocnice+0.1)-tloustka_plbase])
+    translate([((pocet_der2)*vzdalenost_der)/2+vzdalenost_od_okraje-prumer_matice/2,-vzdalenost_od_okraje+prumer_matice/2,vyska_bocnice/2-(vyska_matice+2*tloustka_bocnice+0.1)-tloustka_plbase])
         rotate(a=[0,0,90])
             sloupek ();
 
 //sloupek 3
 
-    translate([((pocet_der2)*vzdalenost_der)/2+tloustka_bocnice, (pocet_der1)*vzdalenost_der+tloustka_bocnice,vyska_bocnice/2-(vyska_matice+2*tloustka_bocnice+0.1)-tloustka_plbase])
+    translate([((pocet_der2)*vzdalenost_der)/2+vzdalenost_od_okraje-prumer_matice/2, (pocet_der1)*vzdalenost_der+vzdalenost_od_okraje-prumer_matice/2,vyska_bocnice/2-(vyska_matice+2*tloustka_bocnice+0.1)-tloustka_plbase])
         rotate(a=[0,0,180])
             sloupek ();
 
 //sloupek 4
 
-    translate([-((pocet_der2)*vzdalenost_der)/2-tloustka_bocnice, (pocet_der1)*vzdalenost_der+tloustka_bocnice,vyska_bocnice/2-(vyska_matice+2*tloustka_bocnice+0.1)-tloustka_plbase])
+    translate([-((pocet_der2)*vzdalenost_der)/2-vzdalenost_od_okraje+prumer_matice/2, (pocet_der1)*vzdalenost_der+vzdalenost_od_okraje-prumer_matice/2,vyska_bocnice/2-(vyska_matice+2*tloustka_bocnice+0.1)-tloustka_plbase])
         rotate(a=[0,0,270])
             sloupek ();
  }

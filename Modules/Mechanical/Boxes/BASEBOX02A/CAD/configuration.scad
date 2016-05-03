@@ -12,8 +12,8 @@ pocet_der2 = 4; //pocet der v ose x
 //OBECNE PARAMETRY KRABICKY
 //------------------------------------------------------------
 //BOCNICE
-vyska_bocnice=30;
-tloustka_bocnice=2;
+vyska_bocnice=40;
+tloustka_bocnice=3;
 
 
 //PLBASE PARAMETRY
@@ -21,7 +21,7 @@ tloustka_bocnice=2;
 tloustka_plbase = 2; //tloustka plbase - dna
 prekryti_der=0.3; //sila materiálu, který překrývá díry, aby nebyli vidět
 
-plbase_tolerance_horni=0.0; //pro zvětšení tolerance aby tam šlo dát  horní čelíčko
+plbase_tolerance_horni=0.5; //pro zvětšení tolerance aby tam šlo dát  horní čelíčko
 
 
 //Rozmery loga MLAB

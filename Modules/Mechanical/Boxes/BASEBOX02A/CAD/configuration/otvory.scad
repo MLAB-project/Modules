@@ -118,7 +118,7 @@ module UNIPOWER03A(tloustka_bocnice,vzdalenost_der)
  //OTVOR PRO VETRANI
  module CHLADICI_OTVORY(tloustka_bocnice,vzdalenost_der,delka,vyska_bocnice)
 {
-CHLADICI_OTVORY_mezera=0.8; 
+CHLADICI_OTVORY_mezera=0.6; 
 CHLADICI_OTVORY_snizeni_vysky=10; 
 CHLADICI_OTVORY_prekryti=1.2;     
     
