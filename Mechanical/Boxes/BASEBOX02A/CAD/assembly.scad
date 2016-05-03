@@ -15,7 +15,7 @@ barva_dno_bocnice = "cyan";
 barva_spodni_kryt = "green";
 barva_plbase_horni = "yellow";
 
-posuv_dilu=10; //pro složeni krabičky zadat 0 pro rozebrání zdat 10
+posuv_dilu=0; //pro složeni krabičky zadat 0 pro rozebrání zdat 10
 
 //BOCNICE SE DNEM
 //-------------------------------------------------------------
@@ -28,11 +28,11 @@ color(barva_dno_bocnice)
 //-------------------------------------------------------------
 translate([0,0,5*posuv_dilu])
 color(barva_plbase_horni)
-translate([plbase_tolerance_horni-0.2,+plbase_tolerance_horni-0.2,vyska_bocnice/2-tloustka_plbase/2])
+translate([0,0,vyska_bocnice/2-tloustka_plbase/2])
     rotate(a=[0,0,0])
         {
   
-     plbase_vrchni_kryt_pro_odecet(pocet_der1-1,pocet_der2-1,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice,-0.2,tloustka_plbase);    
+     plbase_vrchni_kryt_pro_odecet(pocet_der1-1,pocet_der2-1,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,vyska_bocnice,prekryti_der,tloustka_bocnice,plbase_tolerance_horni,tloustka_plbase);    
      }
 
 //SPODNÍ KRYT
