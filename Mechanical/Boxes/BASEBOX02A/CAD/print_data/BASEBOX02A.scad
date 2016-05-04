@@ -1,10 +1,10 @@
-use <../configuration/plbase.scad>
-use <../configuration/sloupek.scad>
+use <../src/plbase.scad>
+use <../src/sloupek.scad>
 use <../upravena_bocnice.scad>
 
 
 
-include <../configuration/manufactury_conf.scad>
+include <../src/manufactury_conf.scad>
 include <../configuration.scad>
 
 

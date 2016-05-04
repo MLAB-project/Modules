@@ -1,14 +1,14 @@
-use <configuration/sloupek.scad>
-use <configuration/plbase.scad>
-use <configuration/bocnice.scad>
-use <configuration/spodni_kryt.scad>
-use <configuration/otvory.scad>
-use <configuration/text/Write.scad>
+use <src/sloupek.scad>
+use <src/plbase.scad>
+use <src/bocnice.scad>
+use <src/spodni_kryt.scad>
+use <src/otvory.scad>
+use <src/text/Write.scad>
 use <upravena_bocnice.scad>
 
-include <configuration/manufactury_conf.scad>
+include <src/manufactury_conf.scad>
 include <configuration.scad>
-include <configuration/otvory_conf.scad>
+include <src/otvory_conf.scad>
 
 
 barva_dno_bocnice = "cyan";

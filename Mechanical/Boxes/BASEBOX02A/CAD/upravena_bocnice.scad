@@ -1,10 +1,10 @@
-use <configuration/bocnice.scad>
+use <src/bocnice.scad>
 
-use <configuration/otvory.scad>
-use <configuration/plbase.scad>
-include <configuration/manufactury_conf.scad>
+use <src/otvory.scad>
+use <src/plbase.scad>
+include <src/manufactury_conf.scad>
 include <configuration.scad>
-include <configuration/otvory_conf.scad>
+include <src/otvory_conf.scad>
 
 upravena_bocnice();
 
@@ -41,7 +41,12 @@ difference() {
         posun_p3=20;    
             translate([posun_p3*vzdalenost_der,0,0])   
                 CHLADICI_OTVORY(tloustka_bocnice,vzdalenost_der,4,vyska_bocnice);
-        }
+        
+             posun_p4=0;    
+            translate([posun_p4*vzdalenost_der,0,0])  
+            IR(tloustka_bocnice,vyska_bocnice);
+            
+            }
             }
 
 
