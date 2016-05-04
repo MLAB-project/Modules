@@ -7,6 +7,10 @@
     1D) - Pro konektor MIC338
     1E) - Pro modul UNIPOWER02A
     1F) - Pro modul I2CDIFF01A
+    1G) - Pro modul UNIPOWER03A
+    1H) - Větrací otvor
+    
+    2A) - Otvor na IR
 */
 
 
@@ -114,8 +118,12 @@ module UNIPOWER03A(tloustka_bocnice,vzdalenost_der)
    cube(size = [UNIPOWER03A_sirka_kon,tloustka_bocnice+0.1,UNIPOWER03A_vyska_kon], center = false);
  }  
  
- 
- //OTVOR PRO VETRANI
+
+ /*1G) - OTVOR PRO VETRANI
+--------------------------------------------------------
+--------------------------------------------------------
+
+*/
  module CHLADICI_OTVORY(tloustka_bocnice,vzdalenost_der,delka,vyska_bocnice)
 {
 CHLADICI_OTVORY_mezera=0.6; 
@@ -141,3 +149,25 @@ CHLADICI_OTVORY_prekryti=1.2;
  }
  }
  }
+ 
+ 
+ /*2A) - OTVOR PRO IR
+--------------------------------------------------------
+--------------------------------------------------------
+
+*/
+ 
+ module IR(tloustka_bocnice,vyska_bocnice)
+{
+    IR_sirka_kon=7; //sirka senzoru
+    IR_vyska_kon=7.5; //vyska senzoru
+    IR_hloubka_venkovni=1.2; //sila senzoru od vodičů ven
+    IR_vyska_pro_vodice=5; 
+    
+    
+   translate([0,-tloustka_bocnice/2-0.01,vyska_bocnice/2-IR_vyska_kon/2])
+   cube(size = [IR_sirka_kon,IR_hloubka_venkovni+0.1,IR_vyska_kon], center = false);
+    
+    translate([0,-(tloustka_bocnice/2-IR_hloubka_venkovni),vyska_bocnice/2-IR_vyska_kon/2-IR_vyska_pro_vodice])
+   cube(size = [IR_sirka_kon,tloustka_bocnice,IR_vyska_kon+IR_vyska_pro_vodice], center = false);
+ } 

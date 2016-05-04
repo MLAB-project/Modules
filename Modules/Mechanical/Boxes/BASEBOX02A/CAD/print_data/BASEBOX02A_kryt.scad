@@ -1,8 +1,8 @@
-use <../configuration/spodni_kryt.scad>
+use <../src/spodni_kryt.scad>
 
 
 
-include <../configuration/manufactury_conf.scad>
+include <../src/manufactury_conf.scad>
 include <../configuration.scad>
 
 

@@ -1,8 +1,8 @@
-use <../configuration/plbase.scad>
+use <../src/plbase.scad>
 
 
 
-include <../configuration/manufactury_conf.scad>
+include <../src/manufactury_conf.scad>
 include <../configuration.scad>
 
 
