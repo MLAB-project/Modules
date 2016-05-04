@@ -29,14 +29,16 @@ difference()
             lopatka();
             
         //lopatka 2 
-        rotate([0, 0, 120])   
+        rotate([0, 0,120])   
             translate([L01_hrana_drzaku_a/2,-(S01_prumer_vnitrni/2+2*S01_sila_materialu+L01_delka_uchytu+L01_prumer_lopatky/2),0])
                 lopatka();
 
         //lopatka 3
         rotate([0, 0, 240])    
             translate([L01_hrana_drzaku_a/2,-(S01_prumer_vnitrni/2+2*S01_sila_materialu+L01_delka_uchytu+L01_prumer_lopatky/2),0])
-                lopatka();            
+                lopatka();    
+    
+  
         }    
 
     //Odečet spodního válce
