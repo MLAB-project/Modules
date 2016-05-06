@@ -12,7 +12,7 @@ prumer_sroubu=3.3;
 //Matice - parametry
 prumer_matice=6; //hrany k hraně
 vyska_matice=3;  //vyska matice
-posuv_dorazu=0.5;  //pro moznost posuvu dorazu pro vsunutí matice
+posuv_dorazu=1;  //pro moznost posuvu dorazu pro vsunutí matice
 matice_sila_materialu=2; //sila materialu pod maticí na ose z
 
 
