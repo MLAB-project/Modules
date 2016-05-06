@@ -19,7 +19,7 @@ tloustka_bocnice=3;
 //PLBASE PARAMETRY
 //------------------------------------------------------------
 tloustka_plbase = 2; //tloustka plbase - dna
-prekryti_der=0.3; //sila materiálu, který překrývá díry, aby nebyli vidět
+prekryti_der=2; //sila materiálu, který překrývá díry, aby nebyli vidět
 
 plbase_tolerance_horni=0.5; //pro zvětšení tolerance aby tam šlo dát  horní čelíčko
 
