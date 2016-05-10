@@ -56,19 +56,27 @@ difference()
         {
         //závit na ukotvení rotoru
         //zakladni material
-        cylinder (h = (S01_prumer_vnitrni/2+4*S01_sila_materialu)+R01_vyska_preryti_statoru, r=(lozisko_prumer_vnejsi/2-1), $fn=100);     
+        cylinder (h = (S01_prumer_vnitrni/2+4*S01_sila_materialu)+R01_vyska_preryti_statoru, r=(lozisko_prumer_vnejsi/2-1)+2, $fn=100);     
             
         vyztuhy();             
         }
 
     //vnitrni zavit  
     translate([0,0,-5])
-        screw_thread((11),3,55,R01_vyska_preryti_statoru+10,PI/2,2); 
+        screw_thread((15),3,55,R01_vyska_preryti_statoru+10,PI/2,2); 
  
     //za závitem aby to slo tisknout          
     translate([0,0,R01_vyska_preryti_statoru+5]) 
-        cylinder(h=(5), r1=(11)/2, r2=0, center=false, $fn=100);             
-                
+        cylinder(h=(5), r1=(15)/2, r2=0, center=false, $fn=100); 
+        
+        difference()
+        { 
+        translate([0,0,R01_vyska_preryti_statoru])
+            sphere(d = (S01_prumer_vnitrni/2+5*S01_sila_materialu)*2+10, $fn=100);
+        translate([0,0,R01_vyska_preryti_statoru])
+            sphere(d = (S01_prumer_vnitrni/2+5*S01_sila_materialu)*2, $fn=100);
+        
+        }            
     }
 }
     

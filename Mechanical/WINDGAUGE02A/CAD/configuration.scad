@@ -16,7 +16,7 @@ S01_hrana_B_RJ11=19;
 S01_tolerance_zavit=1.5;
 
 //Obecné parametry
-prumer_osicky=5.1;
+prumer_osicky=5.3;
 
 //Rozmery modulu se senzorem
 senzor_delka=20.32;
