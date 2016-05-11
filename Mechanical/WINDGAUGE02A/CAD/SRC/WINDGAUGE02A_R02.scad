@@ -15,7 +15,7 @@ module WINDGAUGE02A_R02()
         union()
             {
             //závit
-            screw_thread((11-S01_tolerance_zavit),3,55,R01_vyska_preryti_statoru,PI/2,2);  
+            screw_thread((12-S01_tolerance_zavit),3,55,R01_vyska_preryti_statoru,PI/2,2);  
                            
             //spodní podložka        
             translate([0,0,-R01_mezera_mezi_statorem_rotorem/2])    
