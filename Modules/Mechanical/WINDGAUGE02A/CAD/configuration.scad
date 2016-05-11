@@ -36,6 +36,8 @@ magnet_vyska=5;
 magnet_zapusteni=4;
 magnet_tolerance_prumeru=0.2;
 
+R03_vyska_narezeni_hridelky=5;
+
 //Parametry sroubu
 prumer_sroubu=3.4;
 prumer_hlavy_sroubu=6;

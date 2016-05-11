@@ -64,11 +64,11 @@ module WINDGAUGE02A_S01()
     //otvor na ložisko
     difference()
     {  
-    translate([0,0,(R01_vyska_preryti_statoru+2*lozisko_vyska)/2+S01_sila_materialu])   
-        cylinder (h = R01_vyska_preryti_statoru+2*lozisko_vyska, r=(lozisko_prumer_vnejsi+2*S01_sila_materialu)/2, center = true, $fn=100);     
+    translate([0,0,(R01_vyska_preryti_statoru+lozisko_vyska)/2+S01_sila_materialu])   
+        cylinder (h = R01_vyska_preryti_statoru+lozisko_vyska, r=(lozisko_prumer_vnejsi+2*S01_sila_materialu)/2, center = true, $fn=100);     
     
-    translate([0,0,(R01_vyska_preryti_statoru+2*lozisko_vyska)/2+S01_sila_materialu])
-      cylinder (h = R01_vyska_preryti_statoru+2*lozisko_vyska+0.01, r=(lozisko_prumer_vnejsi+0.2)/2, center = true, $fn=100);
+    translate([0,0,(R01_vyska_preryti_statoru+lozisko_vyska)/2+S01_sila_materialu])
+      cylinder (h = R01_vyska_preryti_statoru+lozisko_vyska+0.01, r=(lozisko_prumer_vnejsi+0.2)/2, center = true, $fn=100);
       
     //otvory na hlavy sroubu v uchytu loziska     
     translate([-senzor_delka/2,-senzor_sirka/2,0])
@@ -120,10 +120,10 @@ module WINDGAUGE02A_S01()
         }
         
         translate([0,0,0])    
-            cylinder (h = R01_vyska_preryti_statoru+2*lozisko_vyska+S01_sila_materialu, r=(lozisko_prumer_vnejsi+0.2)/2, $fn=100);  
+            cylinder (h = R01_vyska_preryti_statoru+lozisko_vyska+S01_sila_materialu, r=(lozisko_prumer_vnejsi+0.2)/2, $fn=100);  
    
         //doraz loziska
-        translate([0,0,(R01_vyska_preryti_statoru+2*lozisko_vyska)+S01_sila_materialu+8/2])      
+        translate([0,0,(R01_vyska_preryti_statoru+lozisko_vyska)+S01_sila_materialu+8/2])      
             cylinder(h=8, r1=(lozisko_prumer_vnejsi+0.2)/2, r2=0, center=true);   
     
     }
@@ -138,9 +138,9 @@ translate([0,0,S01_sila_materialu])
     difference () 
     {
         
-        cylinder (h = R01_vyska_preryti_statoru+2*lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky, r= sirka_matky/2+S01_sila_materialu, $fn=20);
+        cylinder (h = R01_vyska_preryti_statoru+lozisko_vyska+magnet_vyska+R03_vyska_narezeni_hridelky+2*S01_sila_materialu, r= sirka_matky/2+S01_sila_materialu, $fn=20);
         
-        translate([0,0,R01_vyska_preryti_statoru+2*lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky-vyska_matky]) 
+        translate([0,0,R01_vyska_preryti_statoru+lozisko_vyska+magnet_vyska+R03_vyska_narezeni_hridelky+2*S01_sila_materialu-vyska_matky]) 
             cylinder (h = vyska_matky+0.01, r= (sirka_matky+0.2)/2, $fn=6);
         
         translate([0,0,-0.01]) 
