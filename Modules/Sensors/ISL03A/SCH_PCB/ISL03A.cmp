@@ -1,0 +1,107 @@
+Cmp-Mod V01 Created by PcbNew   date = 12. 5. 2016 16:20:43
+
+BeginCmp
+TimeStamp = 57349070
+Path = /573488E5
+Reference = C1;
+ValeurCmp = 10uF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 5734907D
+Path = /57348896
+Reference = C2;
+ValeurCmp = 100nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 5734908A
+Path = /573487C3
+Reference = J1;
+ValeurCmp = JUMP_5X2;
+IdModule  = Mlab_Pin_Headers:Straight_2x02;
+EndCmp
+
+BeginCmp
+TimeStamp = 57349090
+Path = /5734ABE4
+Reference = M1;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 57349096
+Path = /5734ACBB
+Reference = M2;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 573490A3
+Path = /57348903
+Reference = R1;
+ValeurCmp = 4k7;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 573490B0
+Path = /573489C4
+Reference = R2;
+ValeurCmp = 4k7;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 573490BD
+Path = /57349734
+Reference = R3;
+ValeurCmp = -;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 573490CA
+Path = /5734985F
+Reference = R4;
+ValeurCmp = 0R;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 573490D7
+Path = /573489EB
+Reference = R5;
+ValeurCmp = 10k;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 5734BFA8
+Path = /5734C5AD
+Reference = D1;
+ValeurCmp = BZV55C-3,6V;
+IdModule  = Mlab_D:Diode-MiniMELF_Standard;
+EndCmp
+
+BeginCmp
+TimeStamp = 5734BFB2
+Path = /5734BE61
+Reference = J2;
+ValeurCmp = CONN1_1;
+IdModule  = Mlab_Pin_Headers:Straight_1x01;
+EndCmp
+
+BeginCmp
+TimeStamp = 5734BFBC
+Path = /57348D17
+Reference = U1;
+ValeurCmp = VEML6030;
+IdModule  = Mlab_IO:VEML6030;
+EndCmp
+
+EndListe
