@@ -38,11 +38,11 @@ difference () {
 	translate ([1, 66 , pedestal_height - 4.5]) // HOLE for ODROD's USB and Ethernet connectors
 	   cube([54,15.5,5]);
 
-	translate ([15, 14 , pedestal_height - 3.5]) // HOLE for ODROD's Passive components 
-	   cube([39,46,5]);
+	translate ([15, 7 , pedestal_height - 3.5]) // HOLE for ODROD's Passive components 
+	   cube([39,53,5]);
 
 	translate ([19, 45 , pedestal_height - 3.5]) // eMMc Card 
-	   cube([14,20,5]);
+	   cube([14,23,5]);
 
 	translate ([0, 46 , pedestal_height - 3.5]) // SD Card 
 	   cube([17,14,5]);
@@ -98,10 +98,7 @@ difference () {
 ////  lightening central holes
         
 	translate ([9,16, 0])  // ODROIDs passive components hole. 
-	cube([40,43,pedestal_height ]);        
-        
-	translate ([10,67, 0])  // ODROIDs passive components hole. 
-	cube([38,11,pedestal_height ]);        
+	cube([40,62,pedestal_height ]);        
         
 // MLAB logo on the side
     union (){
