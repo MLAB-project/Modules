@@ -51,7 +51,7 @@ difference () {
 	   cube([4.5,50.5,5]);
 
 	translate ([30, 3.5, pedestal_height - 3])  // ODROID serial connector 
-	   cube([10,2,5]);
+	   cube([12,2,5]);
     
     translate ([52, 19.5, pedestal_height - 3])  // USB selection jumper 
         cube([6,2.5,5]);
