@@ -1,9 +1,9 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.1-stable)
+(kicad_pcb (version 4) (host pcbnew 4.0.2+e4-6225~38~ubuntu15.10.1-stable)
 
   (general
     (links 29)
     (no_connects 0)
-    (area 0.178999 -9.981001 40.461001 -0.178999)
+    (area -4.7625 -13.1445 44.704001 2.984501)
     (thickness 1.6)
     (drawings 13)
     (tracks 97)
@@ -37,7 +37,7 @@
   )
 
   (setup
-    (last_trace_width 0.5)
+    (last_trace_width 0.25)
     (user_trace_width 0.2)
     (user_trace_width 0.3)
     (user_trace_width 0.4)
@@ -65,11 +65,11 @@
     (mod_text_width 0.15)
     (pad_size 6 6)
     (pad_drill 3)
-    (pad_to_mask_clearance 0.2)
+    (pad_to_mask_clearance 0.12)
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFF7F)
     (pcbplotparams
-      (layerselection 0x00030_80000001)
+      (layerselection 0x010e0_80000001)
       (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.500000)
@@ -90,9 +90,9 @@
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory ../CAM_PROFI/))
   )
 
   (net 0 "")
