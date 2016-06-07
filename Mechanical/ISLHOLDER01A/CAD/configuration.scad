@@ -29,7 +29,7 @@ D02_vyska_matky=3;
 
 
 D05_vyska_drzaku_senzoru=35;
-D05_prumer_zkumavky_vnitrni=22;
+D05_prumer_zkumavky_vnitrni=21.4;
 D05_vyska_podstavce=10;
 D05_sirka_otvoru_na_kabel=5;
 
