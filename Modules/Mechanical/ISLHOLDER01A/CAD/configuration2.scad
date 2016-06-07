@@ -20,7 +20,7 @@ D01_sirka_tyce=15;
 //D04 - uchyt na sloup
 D02_sila_materialu=4;
 D02_vyska_uchytky=30;
-D02_prumer_obruby=23; //pruměr zkumavky
+D02_prumer_obruby=24.2; //pruměr zkumavky
 D02_delka_celeho_uchytu=50;
 D02_dotahova_vzdalenost=1.5;
 D02_prumer_uchytneho_sroubu=4.2;

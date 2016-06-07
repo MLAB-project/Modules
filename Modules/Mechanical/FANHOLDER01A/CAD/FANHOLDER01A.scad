@@ -1,8 +1,8 @@
 $fn=100;
 //Univerzální model držáku ventilátoru
 //Parametry ventilátoru
-roztec_mezi_srouby=20;
-vzdalenost_stredu_sroubu_od_okraje=4;
+roztec_mezi_srouby=24.1;
+vzdalenost_stredu_sroubu_od_okraje=3.1;
 
 //Parametry úchytu ventilátoru
 sirka_uchytu=10;
@@ -18,7 +18,7 @@ sila_materialu=1.8;
 vzdalenost_od_okraje=5;
 
 pocet_der_x=2;
-pocet_der_y=4;
+pocet_der_y=5;
 
 difference(){
        
