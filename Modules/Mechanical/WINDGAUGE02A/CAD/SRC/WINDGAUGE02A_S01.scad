@@ -134,7 +134,7 @@ module WINDGAUGE02A_S01()
 //sloupek na senzor
 module SLOUPEK()
 {    
-translate([0,0,S01_sila_materialu]) 
+translate([0,0,0]) 
     difference () 
     {
         
