@@ -127,8 +127,9 @@ difference() {
         posun_pr4=0;    
             translate([0,posun_pr4*vzdalenost_der,0])
                 rotate(a=[0,0,90])  
-                    CHLADICI_OTVORY(tloustka_bocnice,vzdalenost_der,pocet_der1-1,vyska_bocnice);
+                    CHLADICI_OTVORY2(tloustka_bocnice,vzdalenost_der,pocet_der1-1,vyska_bocnice);
                           
         }
 }
 }
+

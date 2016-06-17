@@ -15,7 +15,7 @@ barva_dno_bocnice = "cyan";
 barva_spodni_kryt = "green";
 barva_plbase_horni = "yellow";
 
-posuv_dilu=0; //pro složeni krabičky zadat 0 pro rozebrání zdat 10
+posuv_dilu=10; //pro složeni krabičky zadat 0 pro rozebrání zdat 10
 
 //BOCNICE SE DNEM
 //-------------------------------------------------------------

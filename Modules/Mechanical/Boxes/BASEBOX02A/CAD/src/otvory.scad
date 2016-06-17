@@ -171,3 +171,39 @@ CHLADICI_OTVORY_prekryti=1.2;
     translate([0,-(tloustka_bocnice/2-IR_hloubka_venkovni),vyska_bocnice/2-IR_vyska_kon/2-IR_vyska_pro_vodice])
    cube(size = [IR_sirka_kon,tloustka_bocnice,IR_vyska_kon+IR_vyska_pro_vodice], center = false);
  } 
+ 
+ 
+ module OTVOR_NA_PRUDUCH(tloustka_bocnice,vzdalenost_der,delka,vyska_bocnice)
+{
+OTVOR_NA_PRUDUCH_vzdalenost_od_kraje=5; 
+    
+    
+  
+     translate([0,-0.05-tloustka_bocnice/2,OTVOR_NA_PRUDUCH_vzdalenost_od_kraje])  
+      
+  
+   cube(size = [vzdalenost_der*(delka),tloustka_bocnice+0.1,vyska_bocnice-2*OTVOR_NA_PRUDUCH_vzdalenost_od_kraje], center = false);
+    
+     
+ 
+ 
+ }
+ 
+ 
+ module CHLADICI_OTVORY2(tloustka_bocnice,vzdalenost_der,delka,vyska_bocnice)
+{
+CHLADICI_OTVORY2_mezera=1.0; 
+CHLADICI_OTVORY2_snizeni_vysky=10; 
+    
+    
+   for (a =[1:delka]) 
+     translate([vzdalenost_der*(a-1),0,0])  
+   {   
+
+   translate([vzdalenost_der/2,-0.05-tloustka_bocnice/2,CHLADICI_OTVORY2_snizeni_vysky/2])
+   cube(size = [CHLADICI_OTVORY2_mezera,tloustka_bocnice+0.1,vyska_bocnice-CHLADICI_OTVORY2_snizeni_vysky], center = false);
+    
+     
+ 
+ }
+ }
