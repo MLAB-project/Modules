@@ -75,7 +75,7 @@ D01_delka_tyce=40;
 D01_sirka_tyce=10;
 
 //WINDGAUGE02A_D02 //uchyt na sloup
-D02_sila_materialu=4;
+D02_sila_materialu=5;
 D02_vyska_uchytky=40;
 D02_prumer_obruby=27; // 3/4 trubka
 D02_delka_celeho_uchytu=70;
