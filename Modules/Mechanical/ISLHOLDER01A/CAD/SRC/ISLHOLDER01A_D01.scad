@@ -2,7 +2,7 @@ $fn=40; // model faces resolution.
 include <../configuration.scad>
 
 include <ISLHOLDER01A_D02.scad>
-include <polyScrewThread_r1.scad>
+
 
 PI=3.141592;
 

@@ -2,13 +2,12 @@ $fn=40; // model faces resolution.
 
 //Parametry pro D01 a D02
 //nastavení držáku na sloup
+//Parametry pro D5
 //----------------------------------------------------------------
 //----------------------------------------------------------------
-//není potřeba měnit
-S01_prumer_vnitrni=40;
-S01_tolerance_zavit=1.5;
 
-S01_sila_materialu=1.3; //sila výtuhy
+
+S01_sila_materialu=1.3; //sila výztuhy
 
 //D01 - uchyt velky
 D01_material_pod_zavitem=5;
@@ -37,7 +36,9 @@ D05_sirka_otvoru_na_kabel=5;
 
 
 
-
+//není potřeba měnit
+S01_prumer_vnitrni=40;
+S01_tolerance_zavit=1.5;
 
 
 
