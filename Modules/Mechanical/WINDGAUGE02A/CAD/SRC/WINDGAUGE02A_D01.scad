@@ -15,6 +15,7 @@ difference()
     union()  
         { 
         //výstuha
+      translate([S01_sila_materialu/2,0,0])       
         rotate ([0,-90,0])
             linear_extrude (height = S01_sila_materialu, convexity = 10)
                 polygon(points=[[D02_vyska_uchytky/2,D01_delka_tyce+S01_prumer_vnitrni/2+D01_material_pred_zavitem+D02_sila_materialu-1],[0, D01_delka_tyce+S01_prumer_vnitrni/2+D01_material_pred_zavitem+D02_sila_materialu-1],[0,S01_prumer_vnitrni/2+D01_material_pred_zavitem],[D01_material_pod_zavitem,S01_prumer_vnitrni/2+D01_material_pred_zavitem]]);   
@@ -49,7 +50,7 @@ difference()
         //uchyt na sloupek
         translate([0,D01_delka_tyce+(S01_prumer_vnitrni-S01_tolerance_zavit)/2+D01_material_pred_zavitem+D02_sila_materialu+(D02_prumer_obruby)/2,D02_vyska_uchytky/2])
             rotate(a=[0,0,270])
-                WINDGAUGE02A_D02_2();      
+                WINDGAUGE02A_D02();      
 
         }
 
