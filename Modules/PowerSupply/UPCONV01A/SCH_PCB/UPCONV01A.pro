@@ -1,4 +1,4 @@
-update=9. 8. 2016 14:57:37
+update=Po 15. srpen 2016, 10:18:20 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -34,8 +34,6 @@ RptD_X=0
 RptD_Y=100
 RptLab=1
 LabSize=60
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=../../../../../kicad-mlab/symbols
@@ -132,3 +130,5 @@ LibName89=video
 LibName90=Xicor
 LibName91=xilinx
 LibName92=Zilog
+[general]
+version=1
