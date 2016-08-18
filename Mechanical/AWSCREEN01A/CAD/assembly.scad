@@ -1,4 +1,3 @@
-use <SRC/AWSCREEN01A_D01.scad>
 use <SRC/AWSCREEN01A_D02.scad>
 use <SRC/AWSCREEN01A_D03.scad>
 use <SRC/AWSCREEN01A_D04.scad>
