@@ -45,7 +45,7 @@
 %               THIS IS THE PLACE FOR ABSTRACT
 
 \begin{abstract}
-Wind vane sensor is classical meteorology instrument used for measuring wind directions. Wind directions are reported relatively to the magnetic north of weather station coordinates. Therefore precise directional adjustment of the sensor is needed. We introduced a self calibrating wind vane sensor which report the wind direction data without adjustments. Therefore it is more tolerant to the installation mistakes. 
+Wind vane sensor is classical meteorology instrument used for measuring wind directions. Wind directions are reported relatively to the magnetic north of weather station coordinates. Therefore precise directional adjustment of the sensor is needed. We introduced a self calibrating wind vane sensor which reports the wind direction data without adjustments. Therefore it is more tolerant to the installation mistakes. 
 \end{abstract}
 
 %----------------------------------------------------------
@@ -59,16 +59,16 @@ Wind sensor, 3D printing, scientific instrumentation.
 
 \section{Introduction}
 
-Wind vane is classical measuring device in meteorology. It is used for wind direction sensing at automatic weather stations. The classical construction of such sensor consist a analogue resistive position sensing or "digital" magnetic leaf switch contacts. Both discrete and continuous signal sensing approach measure the position of wind vane relatively to the local word coordinates. Although the wind direction is reported relatively to the magnetic north of weather station location. Therefore the precise direction adjustment of wind vane sensor is mandatory for achieving consistent and reliable wind direction data.
+Wind vane is classical measuring device in meteorology. It is used for wind direction sensing at automatic weather stations. The classical construction of such sensor consist a analogue resistive position sensing or "digital" magnetic reed switch contacts \cite{wind_vane}. Both discrete and continuous signal sensing approach measure the position of wind vane relatively to the local word coordinates. Although the wind direction is occasionally reported relatively to the magnetic north of weather station location \cite{wind_direction}. Therefore the precise direction adjustment of wind vane sensor is mandatory for achieving consistent and reliable wind direction data.
 
-But we could use the state of the art technology consisting of MEMS magnetometer sensors which could directly report the wind vane position relatively to the magnetic north. This concept of wind vane is unique because it report continuous values which allows reliable auto-diagnostics of sensing element. 
+But we could use the state of the art technology consisting of MEMS magnetometer sensors which could directly report the wind vane position relatively to the magnetic north. This concept of wind vane is unique because it reports continuous values which allows reliable auto-diagnostics of sensing element. 
 
 \section{Design evolution}
 
 The construction of the wind vane should be special because the sensing element in rotor part. The sensor is MAG01A module from MLAB electronic development system. This sensor is a I2C bus based sensor which requests four signals - Power, Ground, Data and clock. 
 
 Therefore the one of main design problem is signal conduction from rotary part to the stator. A commercially available slip-rings were used as solution for that. 
-The used slip-ring is shown in the figure X. 
+The used slip-ring is shown in the figure \ref{fig:slip_ring}. 
 
 
 The integration of such device in to the wind vane construction needs special shape of the rotor and the stator part. A 3D printing technology is ideal for that task. We decided to use the Fused deposition modelling (FDM) additive manufacturing technology as a best candidate for anemometer sensor design. The main reason for that decision was a fact, that this type of 3D printing technology is widely accessible and is of sufficient quality to build the sensor body which could withstand the mechanical and weather stresses in outdoor. The second reason is the fact that this type of technology is relatively  cheap in comparison to other additive manufacturing methods. 
@@ -79,7 +79,7 @@ The design of wind vane therefore must have special construction which allows re
 \begin{figure}[ht]
 \begin{center}
 \resizebox{\linewidth}{!}{\includegraphics{./img/WINDGAUGE01A_Assembly.png}}
-\caption{A sample of printable rocket design. (Experimentally printed from red ABS)} 
+\caption{A magnetic sensor wind vane assembly.} 
 \label{fig:printed_parts}
 \end{center}
 \end{figure}
@@ -87,12 +87,17 @@ The design of wind vane therefore must have special construction which allows re
 
 \subsection{Wind vane rotor}
 
-The rotor part of the wind vane houses the magnetometer sensor. The MAG01A sensor module is triple axis one chip solution for magnetic orientation measurement. Sensor module is mounted directly in rotation center of wind wane, this position was choosed as the best option to optimizing the overall sensor dimensions. 
+The rotor part of the wind vane houses the magnetometer sensor. The MAG01A sensor module is triple axis one chip solution for magnetic orientation measurement. Sensor module is mounted directly in rotation center of wind wane, this position was selected as the best option to optimizing the overall sensor dimensions.  The digital magnetometer signals are guided to the stator via slip rings.
 
-\subsection{Stator and holder}
+\begin{figure}[ht]
+\begin{center}
+\resizebox{\linewidth}{!}{\includegraphics{./img/slip_ring.jpg}}
+\caption{A sample of printable rocket design. (Experimentally printed from red ABS)} 
+\label{fig:slip_ring}
+\end{center}
+\end{figure}
 
-
-
+Hence electrical signal chain in the sensor is very simple and reliable. 
 
 \subsection{Software data processing}
 
@@ -103,14 +108,8 @@ Output of the magnetometer hardware driver is a uncalibrated vector of magnetic 
 
 \section{Conclusion}
 
-A considerable amount of development work resulted in a partially usable 3D printable rocket model. The FDM technology was proven to be a right selection. But large amount of development work will be needed to finish the rocket design to the level which will allow an easy usage by students. 
-Specifically the following problems must be resolved before widespread usage: 
+The 3D printable design of the wind vane housing was successfully developed. Measuring principle based on the magnetometer sensor was also verified although long time outdoor testing in different weather conditions is needed.
 
-\begin{itemize}
-\item Reliable recovery system
-\item Easily producible rocket engine design  
-\item On board avionics which could universally provide power source, recovery and measurement functions for any student payload. 
-\end{itemize}
 
 \section*{Acknowledgements}
 
@@ -119,14 +118,10 @@ The research presented in this proposal was not supported from any grant or from
 %----------------------------------------------------------
 %               THIS IS THE PLACE FOR REFERENCES
 \begin{thebibliography}{9}
-\bibitem{rocket_sounding}
-NASA Sounding Rockets User Handbook, Sounding Rockets Program Office,Sub-orbital and Special Orbital Projects Directorate
-NASA Goddard Space Flight Center,Wallops Flight Facility, 23.3.2016 [online] http://sites.wff.nasa.gov/code810/files/SRHB.pdf
-\bibitem{grid_fins}
-Zaloga, Steve (2000). The Scud and Other Russian Ballistic Missile Vehicles. New Territories, Hong Kong: Concord Publications Co. ISBN 962-361-675-9.
-\bibitem{openscad}
-Marius Kintel et al.  23.3.2016 [Online]
-http://www.openscad.org/about.html
+\bibitem{wind_vane}
+The ULTIMETER PRO Anemometer/Wind Vane, 23.3.2016 [online] http://www.peetbros.com/shop/category.aspx?catid=35
+\bibitem{wind_direction}
+Computing Magnetic Wind Direction, 23.3.2016 [online] http://www.nws.noaa.gov/asos/magwind.htm
 \end{thebibliography}
 
 
