@@ -15,7 +15,10 @@ while True:
 
     if oldstav == 0 and stav == 0:
       subprocess.call("shutdown -P 1", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-      oldstav = stav
+    else:
+	print "power is OK."
+    
+    oldstav = stav
 
     time.sleep(2)
 
