@@ -48,9 +48,9 @@ Fázový jitter  & $<$ 0,3ps & Pro obvody řady Si570 \\
 \section{Popis konstrukce}
 
 \subsection{Zapojení}
-Zapojení modulu je řešeno tak, aby umožnilo připojení řídícího mikroprocesoru provozovaného na stejném i jiném napájecím napětí vůči čipu Si5XX. V konstrukci je proto využit převodník napěťových úrovní, který může být při jeho absenci přemostěn dvěma nulovými odpory.
+Zapojení modulu je řešeno tak, aby umožnilo připojení řídícího mikroprocesoru provozovaného na stejném i jiném napájecím napětí vůči čipu Si5XX. V konstrukci je proto využit převodník napěťových úrovní, který může být při jeho absenci přemostěn dvěma nulovými odpory R4 a R5.
 
-V případě provozování modulu na napájecím napětí různém od napájecího napětí Si570 si modul může stabilizovat napájení sám díky lineárnímu stabilizátoru. V takovém případě je ale přesto dát pozor, aby napájení nepřesáhlo dovolené napětí na translátoru, tedy hranici 5V.  
+V případě provozování modulu na napájecím napětí různém od napájecího napětí Si570 si modul může stabilizovat napájení sám díky lineárnímu stabilizátoru. V takovém případě je ale přesto dát pozor, aby napájení nepřesáhlo dovolené napětí na translátoru, tedy hranici 5V. 
 
 \includepdf[pages={1},landscape=true]{../../SCH/CLKGEN.pdf}
 
@@ -78,8 +78,9 @@ Modul je možné osadit i ručně, avšak je třeba dbát zvýšené opatrnosti 
 \end{center}
 \end{figure}
 
-Osazení rezistorů R4 a R5 je volitelné pro případ, že je zbytený I$^2$C napěťový translátor U2. 
+Odpory R2 a R4 se osazují jen v případě že se neosazuje U3.
 
+\begin{center}
 \begin{tabular}{|c|c|c|c|}
 \hline 
 Počet & Označení & Typ  & Pouzdro  \\ 
@@ -93,13 +94,14 @@ Počet & Označení & Typ  & Pouzdro  \\
 1 &	J6 & JUMP2X2 & \\
 4 & R1,R2,R6,R7 & 4k7 & 0805 \\
 1 &	R3 & 200k & 0805 \\
-2 &	R4,R5 & 0R & 0805\\
+2 &	R4,R5 & - 0R & 0805\\
 2 &	R10,R11 & 195R & 0805 \\
 1 &	U1 & LM1117MPX & SOT-23 \\
 1 & U2 & Si570 & 5x7 mm \\
 1 &	U3 & GTL2002 & SO8 \\
 \hline 
 \end{tabular} 
+\end{center}
 
 
 \subsubsection{Nastavení}
