@@ -69,19 +69,22 @@ Modul je z z důvodu zabezpečení kvalitního blokování i na vysokých frekve
 
 \subsubsection{Osazení}
 
-Modul je možné osadit i ručně, avšak je třeba dbát zvýšené opatrnosti kvůli elektrostatickým nábojům, neboť čipy Si570 je snadné poškodit.
+Modul je možné osadit i ručně, avšak je třeba dbát zvýšené opatrnosti kvůli elektrostatickým nábojům, neboť čipy Si570 je snadné poškodit. Rozložení součástek je na Obr. \ref{Osazovaky}.
 
-\begin{figure} [htbp]
+\begin{figure}[htbp]
 \begin{center}
 \includegraphics [width=75mm] {./img/O1.png} 
 \includegraphics [width=75mm] {./img/O2.png} 
 \end{center}
+\caption{Rozložení součástek na plošném spoji.}
+\label{Osazovaky}
 \end{figure}
 
-Odpory R2 a R4 se osazují jen v případě že se neosazuje U3.
+Odpory R2 a R4 se osazují jen v případě že se neosazuje U3. Seznam součástek je v tabulce \ref{seznam_soucastek}.
 
+\begin{table}[h!]
 \begin{center}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{ |c|c|c|c| }
 \hline 
 Počet & Označení & Typ  & Pouzdro  \\ 
 \hline 
@@ -94,14 +97,17 @@ Počet & Označení & Typ  & Pouzdro  \\
 1 &	J6 & JUMP2X2 & \\
 4 & R1,R2,R6,R7 & 4k7 & 0805 \\
 1 &	R3 & 200k & 0805 \\
-2 &	R4,R5 & - 0R & 0805\\
+2 &	R4,R5 & 0R \footnote{} & 0805\\
 2 &	R10,R11 & 195R & 0805 \\
 1 &	U1 & LM1117MPX & SOT-23 \\
 1 & U2 & Si570 & 5x7 mm \\
 1 &	U3 & GTL2002 & SO8 \\
 \hline 
-\end{tabular} 
+\end{tabular}
 \end{center}
+\caption{$^1$ Pro 5V I$^2$C neosazovat pro 3,3 V osazovat. Ve standardu osazována 5 V verze.}
+\label{seznam_soucastek}
+\end{table}
 
 
 \subsubsection{Nastavení}
