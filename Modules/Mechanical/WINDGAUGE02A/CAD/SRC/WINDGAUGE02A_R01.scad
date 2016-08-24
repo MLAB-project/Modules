@@ -133,6 +133,8 @@ difference()
         translate([0,0,0]) 
             cylinder(h=(L01_prumer_lopatky/2), r1=(L01_prumer_lopatky)/3.5, r2=(L01_prumer_lopatky-1)/2, center=false, $fn=100);       
        
+                  
+            
         } 
       
       
@@ -143,4 +145,12 @@ difference()
         cube([L01_prumer_lopatky+0.01,2*(L01_delka_uchytu+L01_prumer_lopatky/2+10),L01_prumer_lopatky],center=false);    
        
     } 
+    
+   polomer_valce=2; 
+ //válec pro vylepšení tisku
+         translate([-polomer_valce,L01_prumer_lopatky/2+1.5+L01_sila_materialu_lopatky,0]) 
+            cylinder(h=(L01_prumer_lopatky), r1=polomer_valce, r2=polomer_valce, center=false, $fn=100);         
+    
 }
+
+
