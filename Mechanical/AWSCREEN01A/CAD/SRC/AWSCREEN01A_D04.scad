@@ -98,7 +98,9 @@ translate([0,7,-2])
 translate([0,0,(15+5.08)/2-(5.08+3.3+2)/2])
 cube([10.16,3,25],true);
             
-
+//odstranění spodních výčnělků
+translate([0,0,-25/2])
+cube([S01_prumer_zavitu,S01_prumer_zavitu,25],true);
 
 }
 

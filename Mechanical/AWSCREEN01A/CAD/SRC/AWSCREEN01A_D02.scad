@@ -3,9 +3,15 @@ include <../configuration.scad>
 include <polyScrewThread_r1.scad>
 
 
+
+
+difference () {
 AWSCREEN01A_D02(D03_vyska_zavitu,D03_tolerance_zavitu,D03_material_za_zavitem,D03_polomer_zavitu,D03_polomer_stitu,D03_tloustka_materialu,3*D03_vyska_zavitu,D03_pocet_vyztuh,screen_bevel);
 
 
+cube([180,180,180]);
+
+    }
 
 
 
@@ -20,9 +26,27 @@ module AWSCREEN01A_D02(D03_vyska_zavitu,D03_tolerance_zavitu,D03_material_za_zav
 difference () {
         cylinder (h=3*D03_tloustka_materialu,r = D03_polomer_stitu,$fn=100);
     translate ([0,0,-0.005])
+        cylinder (h=2*D03_tloustka_materialu+0.01,r = D03_polomer_stitu-D03_tloustka_materialu,$fn=100);
+                 
+    translate ([0,0,3*D03_tloustka_materialu])
+            translate ([0,0,-D03_tloustka_materialu-0.01/2])
+            cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu-0.4,r1=D03_polomer_stitu ,r2=D03_polomer_zavitu,$fn=100);
+    
+       
+                    }
+    
+//spodní kruh - kvůli doplnění výkroje
+difference () {
+    
+    
+        cylinder (h=3*D03_tloustka_materialu,r = D03_polomer_stitu,$fn=100);
+    translate ([0,0,-0.005])
         cylinder (h=3*D03_tloustka_materialu+0.01,r = D03_polomer_stitu-D03_tloustka_materialu,$fn=100);
                  
-                    }
+             
+    
+                    }         
+                    
 
 
 
@@ -35,8 +59,8 @@ difference () {
      translate ([0,0,3*D03_tloustka_materialu])
     difference () {
         cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu,r1=D03_polomer_stitu ,r2=D03_polomer_zavitu,$fn=100);
-        translate ([0,0,-0.01/2])
-            cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu-0.4,r1=D03_polomer_stitu-D03_tloustka_materialu ,r2=D03_polomer_zavitu -D03_tloustka_materialu,$fn=100);
+        translate ([0,0,-D03_tloustka_materialu-0.01/2])
+            cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu-0.4,r1=D03_polomer_stitu ,r2=D03_polomer_zavitu,$fn=100);
     
        
                     }
