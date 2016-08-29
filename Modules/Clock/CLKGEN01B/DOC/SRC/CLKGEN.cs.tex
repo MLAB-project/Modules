@@ -1,5 +1,5 @@
 \documentclass[12pt,a4paper,oneside]{article}
-\usepackage[colorlinks=true]{hyperref}
+\usepackage[colorlinks=true, unicode]{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage[czech]{babel}
 \usepackage{graphicx}
@@ -7,6 +7,7 @@
 \textwidth 16cm \textheight 25cm
 \topmargin -1.3cm 
 \oddsidemargin 0cm
+\usepackage{footnote}
 \pagestyle{empty}
 \begin{document}
 \title{Generátor hodin CLKGEN01B}
@@ -71,6 +72,9 @@ Modul je z z důvodu zabezpečení kvalitního blokování i na vysokých frekve
 
 Modul je možné osadit i ručně, avšak je třeba dbát zvýšené opatrnosti kvůli elektrostatickým nábojům, neboť čipy Si570 je snadné poškodit. Rozložení součástek je na Obr. \ref{Osazovaky}.
 
+
+\newpage
+
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics [width=75mm] {./img/O1.png} 
@@ -82,6 +86,7 @@ Modul je možné osadit i ručně, avšak je třeba dbát zvýšené opatrnosti 
 
 Odpory R2 a R4 se osazují jen v případě že se neosazuje U3. Seznam součástek je v tabulce \ref{seznam_soucastek}.
 
+\begin{savenotes}
 \begin{table}[h!]
 \begin{center}
 \begin{tabular}{ |c|c|c|c| }
@@ -97,7 +102,7 @@ Počet & Označení & Typ  & Pouzdro  \\
 1 &	J6 & JUMP2X2 & \\
 4 & R1,R2,R6,R7 & 4k7 & 0805 \\
 1 &	R3 & 200k & 0805 \\
-2 &	R4,R5 & 0R \footnote{} & 0805\\
+2 &	R4,R5 & 0R \footnote{ Pro 5V I$^2$C neosazovat pro 3,3 V osazovat. Ve standardu osazována 5 V verze.} & 0805\\
 2 &	R10,R11 & 195R & 0805 \\
 1 &	U1 & LM1117MPX & SOT-23 \\
 1 & U2 & Si570 & 5x7 mm \\
@@ -105,16 +110,19 @@ Počet & Označení & Typ  & Pouzdro  \\
 \hline 
 \end{tabular}
 \end{center}
-\caption{$^1$ Pro 5V I$^2$C neosazovat pro 3,3 V osazovat. Ve standardu osazována 5 V verze.}
+\caption{Seznam součástek pro všechny varianty osazení plošného spoje.}
 \label{seznam_soucastek}
 \end{table}
+\end{savenotes}
 
+\newpage
 
 \subsubsection{Nastavení}
 Při připojení modulu k napájení generuje frekvenci nastavenou při výrobě v Silicon Labs. Je ale možné zpřesnit generovanou frekvenci. K tomu je nutné zprovoznit komunikaci přes I2C sběrnici. 
 
 \section{Programové vybavení}
 V kombinaci s jinými moduly, lze generátor ladit z počítače. Jedním z nejjednodušších řešení je použít modul PIC18F4550v01A a firmware ze zdroje \cite{DG8SAQemulator} pak lze k ladění použít jakýkoli software pracující s konstrukcí \cite{DG8SAQSynthesizer}, například USBSynth \cite{USB_Synth}.
+
 
 
 \begin{thebibliography}{99}
