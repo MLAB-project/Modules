@@ -56,7 +56,7 @@ difference () {
             screw_thread((D03_polomer_zavitu-D03_tolerance_zavitu)*2,4,55,D03_vyska_zavitu+5,PI/2,2);
     
     translate ([0,0,-0.01])
-        cylinder (h=D03_vyska_zavitu+0.02 ,r= D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem ,$fn=100);
+        cylinder (h=D03_vyska_zavitu+0.02 ,r= D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem-1 ,$fn=100);
             
             
      translate ([0,0,D03_vyska_zavitu-0.01])
@@ -72,7 +72,7 @@ difference () {
             
             
      translate ([0,0,-0.01])
-        cylinder (h=D03_tloustka_materialu+0.02 ,r= D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem ,$fn=100);        
+        cylinder (h=D03_tloustka_materialu+0.02 ,r= D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem-1 ,$fn=100);        
             
     }
 
@@ -82,12 +82,12 @@ difference () {
     
      translate ([0,0,3*D03_tloustka_materialu])
     difference () {
-        cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu,r1=D03_polomer_stitu ,r2=D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem,$fn=100);
+        cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu,r1=D03_polomer_stitu ,r2=D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem-1,$fn=100);
         translate ([0,0,-0.01/2-D03_tloustka_materialu])
-            cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu+0.01,r1=D03_polomer_stitu ,r2=D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem,$fn=100);
+            cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu+0.01,r1=D03_polomer_stitu ,r2=D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem-1,$fn=100);
        
         translate ([0,0,D03_vyska_stitu-D03_vyska_zavitu-3*D03_tloustka_materialu])
-        cylinder (h=D03_vyska_zavitu+0.02 ,r= D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem ,$fn=100);
+        cylinder (h=D03_vyska_zavitu+0.02 ,r= D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem-1 ,$fn=100);
     
        
                     }
