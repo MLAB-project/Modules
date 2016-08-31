@@ -50,7 +50,7 @@ difference () {
 
 
 //horni zavit
-    translate ([0,0,D03_vyska_stitu])
+    translate ([0,0,D03_vyska_stitu-0.01])
     // screen upper rim
         difference () {
             screw_thread((D03_polomer_zavitu-D03_tolerance_zavitu)*2,4,55,D03_vyska_zavitu+5,PI/2,2);

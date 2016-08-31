@@ -67,7 +67,7 @@ difference () {
                     
                     //horni kuzel
     
-     translate ([0,0,D03_vyska_stitu])
+     translate ([0,0,D03_vyska_stitu-0.01])
    
         cylinder (h=5,r1=D03_polomer_zavitu ,r2=1,$fn=100);
         
@@ -88,7 +88,7 @@ for (i = [0 : (D03_pocet_vyztuh-1)]) {
 	rotate ([90,0,angle_sep* i])
 	translate ([0,0,-D03_tloustka_materialu/2])
 	linear_extrude (height = D03_tloustka_materialu, convexity = 10)
-	polygon(points=[[D03_polomer_zavitu,D03_vyska_stitu],[D03_polomer_zavitu, 0],[D03_polomer_stitu - D03_tloustka_materialu,0],[D03_polomer_stitu- D03_tloustka_materialu,3*D03_tloustka_materialu]]);
+	polygon(points=[[D03_polomer_zavitu,D03_vyska_stitu+0.01],[D03_polomer_zavitu, 0],[D03_polomer_stitu - D03_tloustka_materialu+0.01,0],[D03_polomer_stitu- D03_tloustka_materialu+0.01,3*D03_tloustka_materialu]]);
 
 }
 }
