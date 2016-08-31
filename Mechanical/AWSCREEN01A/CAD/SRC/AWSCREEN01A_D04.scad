@@ -58,9 +58,7 @@ difference()
         {   
 cylinder (h = (S01_prumer_zavitu-2*D01_material_za_zavitem-4*D03_tolerance_zavitu)/2, r=(D04_konenektor_x+6+2*D03_tloustka_materialu)/2, $fn=100); 
             
- translate([0,-(S01_prumer_zavitu-2*D01_material_za_zavitem-4*D03_tolerance_zavitu)/4,(D04_konenektor_x+6+2*D03_tloustka_materialu)/2])
-           
-cube([(S01_prumer_zavitu-2*D01_material_za_zavitem-4*D03_tolerance_zavitu)/2,(S01_prumer_zavitu-2*D01_material_za_zavitem-4*D03_tolerance_zavitu)/2,D04_konenektor_x+6+2*D03_tloustka_materialu],true);
+ 
 }
 
 }
