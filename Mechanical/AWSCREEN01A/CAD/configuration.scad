@@ -9,6 +9,7 @@ $fn=40; // model faces resolution.
 D03_vyska_zavitu=5;
 D03_tolerance_zavitu=0.75; //tolerance s poloměru
 D03_material_za_zavitem=2;
+D03_material_za_zavitem_pridani=1.5; //tímto se pridává materiál za horním závitem 
 D03_polomer_zavitu=32.5;
 D03_polomer_stitu=47.5;
 D03_tloustka_materialu=1.8;
