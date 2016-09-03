@@ -23,12 +23,12 @@ if len(sys.argv) < 2:
 
 elif len(sys.argv) == 2:
     PORT = eval(sys.argv[1])
-    SPEED = 5
-    DISTANCE = 50
+    SPEED = 50
+    DISTANCE = 5000
 
 elif len(sys.argv) == 3:
     SPEED = eval(sys.argv[2])
-    DISTANCE = 100
+    DISTANCE = 1000
 
 elif len(sys.argv) == 4:
     SPEED = eval(sys.argv[2])
@@ -36,8 +36,8 @@ elif len(sys.argv) == 4:
 
 else: 
     PORT = 0
-    SPEED = 10
-    DISTANCE = 50
+    SPEED = 20
+    DISTANCE = 5000
 
 class axis:
     def __init__(self, SPI_handler, Direction, StepsPerUnit, MaxSpeed):
@@ -45,9 +45,39 @@ class axis:
         self.spi = SPI_handler
         self.Dir = Direction
         self.SPU = StepsPerUnit
-        self.maxseed = MaxSpeed
+        self.maxspeed = MaxSpeed
+
+        self.L6470_ABS_POS      =0x01
+        self.L6470_EL_POS       =0x02
+        self.L6470_MARK         =0x03
+        self.L6470_SPEED        =0x04
+        self.L6470_ACC          =0x05
+        self.L6470_DEC          =0x06
+        self.L6470_MAX_SPEED    =0x07
+        self.L6470_MIN_SPEED    =0x08
+        self.L6470_FS_SPD       =0x15
+        self.L6470_KVAL_HOLD    =0x09
+        self.L6470_KVAL_RUN     =0x0A
+        self.L6470_KVAL_ACC     =0x0B
+        self.L6470_KVAL_DEC     =0x0C
+        self.L6470_INT_SPEED    =0x0D
+        self.L6470_ST_SLP       =0x0E
+        self.L6470_FN_SLP_ACC   =0x0F
+        self.L6470_FN_SLP_DEC   =0x10
+        self.L6470_K_THERM      =0x11
+        self.L6470_ADC_OUT      =0x12
+        self.L6470_OCD_TH       =0x13
+        self.L6470_STALL_TH     =0x14
+        self.L6470_STEP_MODE    =0x16
+        self.L6470_ALARM_EN     =0x17
+        self.L6470_CONFIG       =0x18
+        self.L6470_STATUS       =0x19
+
         self.Reset()
         self.Initialize()
+
+
+
 
     def Reset(self):
         'Reset the Axis'
@@ -68,27 +98,29 @@ class axis:
         self.spi.xfer([0x06])      # DEC 
         self.spi.xfer([0x00])
         self.spi.xfer([0x10]) 
-        self.spi.xfer([0x0A])      # KVAL_RUN
+        self.spi.xfer([self.L6470_KVAL_RUN])      # KVAL_RUN
         self.spi.xfer([0x50])
-        self.spi.xfer([0x0B])      # KVAL_ACC
+        self.spi.xfer([self.L6470_KVAL_ACC])      # KVAL_ACC
         self.spi.xfer([0x50])
-        self.spi.xfer([0x0C])      # KVAL_DEC
+        self.spi.xfer([self.L6470_KVAL_DEC])      # KVAL_DEC
         self.spi.xfer([0x50])
  #       self.spi.xfer([0x18])      # CONFIG
  #       self.spi.xfer([0b00111000])
  #       self.spi.xfer([0b00000000])
+        self.MaxSpeed(self.maxspeed)
       
     def MaxSpeed(self, speed):
-        'Setup of maximum speed in steps/s'
+        'Setup of maximum speed in steps/s. The available range is from 15.25 to 15610 step/s with a resolution of 15.25 step/s.'
         speed_value = int(speed / 15.25)
-        if (speed_value == 0):
+        if (speed_value <= 0):
             speed_value = 1
-        print hex(speed_value)
+        elif (speed_value >= 1023):
+            speed_value = 1023
 
-        data = [(speed_value >> i & 0xff) for i in (16,8,0)]
-        self.spi.xfer([data[0]])       # Max Speed setup 
+        data = [(speed_value >> i & 0xff) for i in (8,0)]
+        self.spi.xfer([self.L6470_MAX_SPEED])       # Max Speed setup 
+        self.spi.xfer([data[0]])
         self.spi.xfer([data[1]])
-        self.spi.xfer([data[2]])
         return (speed_value * 15.25)
 
     def ReleaseSW(self):
@@ -191,7 +223,7 @@ try:
     time.sleep(1)
 
     print "Axis inicialization"
-    X = axis(spi, 0, 641, MaxSpeed = SPEED)    # set Number of Steps per axis Unit and set Direction of Rotation
+    X = axis(spi, 0, 1, MaxSpeed = SPEED)    # set Number of Steps per axis Unit and set Direction of Rotation
 
     print X.MaxSpeed(SPEED)                      # set maximal motor speed 
 
