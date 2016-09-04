@@ -41,6 +41,7 @@ else:
     SPEED = 20
     DISTANCE = 5000
 
+# Begin of Class Axis --------------------------------------------------
 
 class axis:
     def __init__(self, SPI_CS, Direction, StepsPerUnit, MaxSpeed):
@@ -78,6 +79,7 @@ class axis:
 
         self.Reset()
         self.Initialize()
+        self.MaxSpeed(self.maxspeed)
 
     def Reset(self):
         'Reset the Axis'
@@ -152,6 +154,41 @@ class axis:
         time.sleep(0.3)
         self.ReleaseSW()
 
+    def GetStatus(self):
+        #self.spi.xfer([0b11010000])  # Get status command from datasheet - does not work for uknown rasons
+        spi.SPI_write_byte(self.CS, 0x39)       # Gotparam  command on status register
+        spi.SPI_write_byte(self.CS, 0x00)
+        data = spi.SPI_read_byte()
+        spi.SPI_write_byte(self.CS, 0x00)
+        data = data + spi.SPI_read_byte()
+
+        status = dict([('SCK_MOD',data[0] & 0x80 == 0x80),  #The SCK_MOD bit is an active high flag indicating that the device is working in Step-clock mode. In this case the step-clock signal should be provided through the STCK input pin. The DIR bit indicates the current motor direction
+                    ('STEP_LOSS_B',data[0] & 0x40 == 0x40),
+                    ('STEP_LOSS_A',data[0] & 0x20 == 0x20),
+                    ('OCD',data[0] & 0x10 == 0x10),
+                    ('TH_SD',data[0] & 0x08 == 0x08),
+                    ('TH_WRN',data[0] & 0x04 == 0x04),
+                    ('UVLO',data[0] & 0x02 == 0x02),
+                    ('WRONG_CMD',data[0] & 0x01 == 0x01),   #The NOTPERF_CMD and WRONG_CMD flags are active high and indicate, respectively, that the command received by SPI cannot be performed or does not exist at all.
+                    ('NOTPERF_CMD',data[1] & 0x80 == 0x80),
+                    ('MOT_STATUS',data[1] & 0x60),
+                    ('DIR',data[1] & 0x10 == 0x10),
+                    ('SW_EVN',data[1] & 0x08 == 0x08),
+                    ('SW_F',data[1] & 0x04 == 0x04),        #The SW_F flag reports the SW input status (low for open and high for closed).
+                    ('BUSY',data[1] & 0x02 != 0x02),
+                    ('HIZ',data[1] & 0x01 == 0x01)])
+        return status
+
+    def GetACC(self):
+#        self.spi.xfer([0x29])       # Gotparam  command on status register
+        spi.SPI_write_byte(self.CS, self.L6470_ACC + 0x20)  # TODO check register read address seting         
+        spi.SPI_write_byte(self.CS, 0x00)
+        data = spi.SPI_read_byte()
+        spi.SPI_write_byte(self.CS, 0x00)
+        data = data + self.spi.readbytes(1)
+        print data                      # return speed in real units
+
+
     def Move(self, units):
         ' Move some distance units from current position '
         steps = units * self.SPU  # translate units to steps 
@@ -179,8 +216,8 @@ class axis:
     def MoveWait(self, units):
         ' Move some distance units from current position and wait for execution '
         self.Move(units)
-        while self.IsBusy():
-            pass
+        while self.GetStatus()['BUSY']:
+            time.sleep(0.1)
 
     def Float(self, hard = False):
         ' switch H-bridge to High impedance state '
@@ -189,27 +226,6 @@ class axis:
         else:
             spi.SPI_write_byte(self.CS, 0xA8)
 
-    def ReadStatusBit(self, bit):
-        ' Report given status bit '
-        spi.SPI_write_byte(self.CS, 0x39)   # Read from address 0x19 (STATUS)
-        spi.SPI_write_byte(self.CS, 0x00)
-        data0 = spi.SPI_read_byte()           # 1st byte
-        spi.SPI_write_byte(self.CS, 0x00)
-        data1 = spi.SPI_read_byte()           # 2nd byte
-        #print hex(data0), hex(data1)
-        if bit > 7:                                   # extract requested bit
-            OutputBit = (data0 >> (bit - 8)) & 1
-        else:
-            OutputBit = (data1 >> bit) & 1        
-        return OutputBit
-
-    
-    def IsBusy(self):
-        """ Return True if tehre are motion """
-        if self.ReadStatusBit(1) == 1:
-            return False
-        else:
-            return True
 
 # End Class axis --------------------------------------------------
 
@@ -247,7 +263,7 @@ try:
 
     print "Axis inicialization"
     X = axis(spi.I2CSPI_SS0, 0, 1, MaxSpeed = SPEED)    # set Number of Steps per axis Unit and set Direction of Rotation
-    X.MaxSpeed(SPEED)                      # set maximal motor speed 
+    X.MaxSpeed(SPEED)                      # Reset maximal motor speed 
 
     print "Axis is running"
 
