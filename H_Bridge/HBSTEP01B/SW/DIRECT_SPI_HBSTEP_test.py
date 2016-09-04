@@ -24,7 +24,7 @@ if len(sys.argv) < 2:
 elif len(sys.argv) == 2:
     PORT = eval(sys.argv[1])
     SPEED = 50
-    DISTANCE = 5000
+    DISTANCE = 500
 
 elif len(sys.argv) == 3:
     SPEED = eval(sys.argv[2])
@@ -73,11 +73,8 @@ class axis:
         self.L6470_CONFIG       =0x18
         self.L6470_STATUS       =0x19
 
-        self.Reset()
-        self.Initialize()
-
-
-
+#        self.Reset()
+#        self.Initialize()
 
     def Reset(self):
         'Reset the Axis'
@@ -89,9 +86,10 @@ class axis:
 #        self.spi.xfer( 0xFF)  
 #        self.spi.xfer( 0x13)      # Over Current Treshold setup 
 #        self.spi.xfer( 0xFF)  
-        self.spi.xfer([0x15])      # Full Step speed 
-        self.spi.xfer([0xFF])
-        self.spi.xfer([0xFF]) 
+#        self.spi.xfer([0x15])      # Full Step speed 
+#        self.spi.xfer([0xFF])
+#        self.spi.xfer([0xFF]) 
+#        self.spi.xfer([0xFF]) 
         self.spi.xfer([0x05])      # ACC 
         self.spi.xfer([0x00])
         self.spi.xfer([0x10]) 
@@ -107,7 +105,7 @@ class axis:
  #       self.spi.xfer([0x18])      # CONFIG
  #       self.spi.xfer([0b00111000])
  #       self.spi.xfer([0b00000000])
-        self.MaxSpeed(self.maxspeed)
+#        self.MaxSpeed(self.maxspeed)
       
     def MaxSpeed(self, speed):
         'Setup of maximum speed in steps/s. The available range is from 15.25 to 15610 step/s with a resolution of 15.25 step/s.'
@@ -165,6 +163,13 @@ class axis:
                     ('HIZ',data[1] & 0x01 == 0x01)])
         return status
 
+    def GetACC(self):
+#        self.spi.xfer([0x29])       # Gotparam  command on status register
+        self.spi.xfer([0x2D])       # Gotparam  command on status register
+        data = self.spi.readbytes(1)
+        data = data + self.spi.readbytes(1)
+	print data
+
     def Move(self, units):
         ' Move some distance units from current position '
         steps = units * self.SPU  # translate units to steps 
@@ -194,7 +199,9 @@ class axis:
         self.Move(units)
         while self.GetStatus()['BUSY']:
             pass
+            print self.GetStatus()
             time.sleep(0.8)
+
 
     def Float(self, hard = False):
         ' switch H-bridge to High impedance state '
@@ -225,10 +232,23 @@ try:
     print "Axis inicialization"
     X = axis(spi, 0, 1, MaxSpeed = SPEED)    # set Number of Steps per axis Unit and set Direction of Rotation
 
-    print X.MaxSpeed(SPEED)                      # set maximal motor speed 
+    #X.Reset()
 
-    #print X.Run(1, 200.456431)
-    #time.sleep(10)
+    X.GetACC()
+
+    exit()
+
+    print X.GetStatus()
+    time.sleep(1)
+
+    print "Setting maximal speed"
+    print X.MaxSpeed(SPEED)                      # set maximal motor speed 
+    print X.GetStatus()
+    time.sleep(1)
+
+    print X.Run(1, 20.456431)
+    print X.GetStatus()
+    time.sleep(5)
     
     print "Axis is running"
     for i in range(5):
