@@ -199,8 +199,7 @@ class axis:
         self.Move(units)
         while self.GetStatus()['BUSY']:
             pass
-            print self.GetStatus()
-            time.sleep(0.8)
+            time.sleep(0.1)
 
 
     def Float(self, hard = False):
