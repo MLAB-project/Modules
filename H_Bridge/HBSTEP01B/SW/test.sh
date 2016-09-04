@@ -1,3 +1,3 @@
 #!/bin/bash
-./I2CSPI_HBSTEP_test.py 1 1200 2000
+./I2CSPI_HBSTEP_test.py 1 200 2000
 
