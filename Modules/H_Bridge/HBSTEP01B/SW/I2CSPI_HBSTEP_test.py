@@ -158,9 +158,9 @@ class axis:
         #self.spi.xfer([0b11010000])  # Get status command from datasheet - does not work for uknown rasons
         spi.SPI_write_byte(self.CS, 0x39)       # Gotparam  command on status register
         spi.SPI_write_byte(self.CS, 0x00)
-        data = spi.SPI_read_byte()
+        data = [spi.SPI_read_byte()]
         spi.SPI_write_byte(self.CS, 0x00)
-        data = data + spi.SPI_read_byte()
+        data = data + [spi.SPI_read_byte()]
 
         status = dict([('SCK_MOD',data[0] & 0x80 == 0x80),  #The SCK_MOD bit is an active high flag indicating that the device is working in Step-clock mode. In this case the step-clock signal should be provided through the STCK input pin. The DIR bit indicates the current motor direction
                     ('STEP_LOSS_B',data[0] & 0x40 == 0x40),
@@ -185,7 +185,7 @@ class axis:
         spi.SPI_write_byte(self.CS, 0x00)
         data = spi.SPI_read_byte()
         spi.SPI_write_byte(self.CS, 0x00)
-        data = data + self.spi.readbytes(1)
+        data = data + [spi.SPI_read_byte()]
         print data                      # return speed in real units
 
 
