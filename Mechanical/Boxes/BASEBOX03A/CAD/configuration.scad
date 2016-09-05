@@ -4,6 +4,8 @@ box_jmeno="BASEBOX02A";
 vzdalenost_der = 10.16; //rozteč děr mezi sebou
 radidus_hrany = 5; //radius zaobleni sloupku
 vzdalenost_od_okraje = 8.2; //vzdalenost stredu upevnovaci diry od kraje desky
+vzdalenost_od_okraje1 = 5;
+vzdalenost_od_okraje2 = 20;
 pocet_der1 = 4; //pocet děr v ose y
 pocet_der2 = 5; //pocet der v ose x
 
