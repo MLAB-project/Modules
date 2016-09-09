@@ -1,0 +1,171 @@
+Cmp-Mod V01 Created by PcbNew   date = 9. 9. 2016 12:39:58
+
+BeginCmp
+TimeStamp = 57D25475
+Path = /57D269CE
+Reference = C1;
+ValeurCmp = 10nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D2547B
+Path = /57D26AA8
+Reference = C2;
+ValeurCmp = 100nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D25481
+Path = /57D26AEE
+Reference = C3;
+ValeurCmp = 10uF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D25487
+Path = /57D26757
+Reference = D1;
+ValeurCmp = BZV55C;
+IdModule  = Mlab_D:Diode-MiniMELF_Standard;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D25491
+Path = /57D2642C
+Reference = J1;
+ValeurCmp = JUMP_3X2;
+IdModule  = Mlab_Pin_Headers:Straight_2x03;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D254A0
+Path = /57D273F3
+Reference = J3;
+ValeurCmp = JUMP_3X2;
+IdModule  = Mlab_Pin_Headers:Straight_2x03;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D254A5
+Path = /57D299A2
+Reference = M1;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D254AA
+Path = /57D2A387
+Reference = M2;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D254AF
+Path = /57D2A075
+Reference = M3;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D254B4
+Path = /57D2A395
+Reference = M4;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D254BA
+Path = /57D25C77
+Reference = R1;
+ValeurCmp = R;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D254C0
+Path = /57D25CC8
+Reference = R2;
+ValeurCmp = R;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D254CD
+Path = /57D140B9
+Reference = X1;
+ValeurCmp = ASFL1, ASFLK;
+IdModule  = Mlab_XTAL:ASFL1;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D254DA
+Path = /57D14167
+Reference = X2;
+ValeurCmp = CFPS-72,CFPS-73;
+IdModule  = Mlab_XTAL:CFPS-72,73;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D254E7
+Path = /57D1428F
+Reference = X3;
+ValeurCmp = ISM92;
+IdModule  = Mlab_XTAL:ISM92;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D254F4
+Path = /57D144BA
+Reference = X4;
+ValeurCmp = ISM97;
+IdModule  = Mlab_XTAL:ISM97;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D2550E
+Path = /57D141F8
+Reference = X6;
+ValeurCmp = I533_I534_I733_I734_Series;
+IdModule  = Mlab_XTAL:I533_1534_1733_1734;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D2551B
+Path = /57D1425E
+Reference = X7;
+ValeurCmp = ISM81;
+IdModule  = Mlab_XTAL:ISM81;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D25528
+Path = /57D14302
+Reference = X8;
+ValeurCmp = ISM95;
+IdModule  = Mlab_XTAL:ISM95;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D25535
+Path = /57D2949D
+Reference = X9;
+ValeurCmp = OSC-F;
+IdModule  = Mlab_XTAL:OSC-F;
+EndCmp
+
+BeginCmp
+TimeStamp = 57D25622
+Path = /57D25FB0
+Reference = J2;
+ValeurCmp = JUMP_2x1;
+IdModule  = Mlab_Pin_Headers:Straight_1x02;
+EndCmp
+
+EndListe
