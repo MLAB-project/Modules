@@ -1,4 +1,4 @@
-update=Út 13. září 2016, 12:56:44 CEST
+update=Čt 15. září 2016, 13:34:24 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -21,19 +21,6 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.2
 BoardOutlineThickness=0.15
 ModuleOutlineThickness=0.15
-[schematic_editor]
-version=1
-PageLayoutDescrFile=pagelayout_mlab.kicad_wks
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
 [eeschema]
 version=1
 LibDir=
@@ -134,3 +121,14 @@ LibName93=/home/kaklik/repos/kicad-mlab/symbols/MLAB_T
 LibName94=/home/kaklik/repos/kicad-mlab/symbols/MLAB_U
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=pagelayout_mlab.kicad_wks
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
+ERC_TestSimilarLabels=1
