@@ -1,4 +1,4 @@
-update=15. 9. 2016 13:29:28
+update=Pá 16. září 2016, 11:06:43 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -34,8 +34,6 @@ RptD_X=0
 RptD_Y=100
 RptLab=1
 LabSize=60
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=../../../../../kicad-mlab/symbols
@@ -144,3 +142,5 @@ LibName101=MLAB_SW
 LibName102=MLAB_T
 LibName103=MLAB_U
 LibName104=MLAB_TR
+[general]
+version=1
