@@ -18,6 +18,7 @@ while True:
 
     if oldstav == 0 and stav == 0:
       subprocess.call("shutdown -P 0", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+      exit(0)
     else:
 	print "power is OK."
 
