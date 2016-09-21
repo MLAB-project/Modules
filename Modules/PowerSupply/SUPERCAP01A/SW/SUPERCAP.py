@@ -9,7 +9,7 @@ gpio.wiringPiSetupGpio()
 gpio.pinMode(power_sense_pin, 0)
 gpio.pullUpDnControl(power_sense_pin, 0)
 
-time.sleep(2)
+time.sleep(30)          # wait for complete startup. 
 
 oldstav = gpio.digitalRead(power_sense_pin)
 
