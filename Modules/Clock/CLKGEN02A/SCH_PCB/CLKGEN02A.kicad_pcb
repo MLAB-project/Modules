@@ -37,7 +37,7 @@
   )
 
   (setup
-    (last_trace_width 0.3)
+    (last_trace_width 0.25)
     (user_trace_width 0.3)
     (user_trace_width 0.4)
     (user_trace_width 0.5)
@@ -71,7 +71,7 @@
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFF7F)
     (pcbplotparams
-      (layerselection 0x00030_80000001)
+      (layerselection 0x010e0_80000001)
       (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.500000)
@@ -92,9 +92,9 @@
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory ../CAM_PROFI/))
   )
 
   (net 0 "")
@@ -891,7 +891,7 @@
     (filled_polygon
       (pts
         (xy 19.356 -13.795073) (xy 19.041084 -14.557229) (xy 18.370758 -15.228726) (xy 17.494487 -15.592585) (xy 17.127327 -15.592905)
-        (xy 18.547211 -17.012789) (xy 18.595595 -17.085201) (xy 18.782409 -17.364788) (xy 18.865 -17.78) (xy 18.865 -20.828)
+        (xy 18.547211 -17.012789) (xy 18.72041 -17.272) (xy 18.782409 -17.364788) (xy 18.865 -17.78) (xy 18.865 -20.828)
         (xy 18.782409 -21.243212) (xy 18.547211 -21.595211) (xy 14.991211 -25.151211) (xy 14.75774 -25.307211) (xy 14.639212 -25.386409)
         (xy 14.224 -25.469) (xy 11.117422 -25.469) (xy 10.927211 -25.659211) (xy 10.575211 -25.894409) (xy 10.16 -25.977)
         (xy 9.744789 -25.894409) (xy 9.392789 -25.659211) (xy 9.157591 -25.307211) (xy 9.075 -24.892) (xy 9.157591 -24.476789)

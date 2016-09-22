@@ -3,7 +3,7 @@
   (general
     (links 78)
     (no_connects 0)
-    (area 0.178999 -40.461001 50.621001 -0.178999)
+    (area -5.588 -45.72 53.340001 3.048001)
     (thickness 1.6)
     (drawings 22)
     (tracks 454)
@@ -37,7 +37,7 @@
   )
 
   (setup
-    (last_trace_width 1.5)
+    (last_trace_width 0.3)
     (user_trace_width 0.2)
     (user_trace_width 0.3)
     (user_trace_width 0.4)
@@ -69,10 +69,11 @@
     (pad_size 6 6)
     (pad_drill 3)
     (pad_to_mask_clearance 0.2)
+    (solder_mask_min_width 0.2)
     (aux_axis_origin 0 0)
     (visible_elements 7FFCFF7F)
     (pcbplotparams
-      (layerselection 0x00030_80000001)
+      (layerselection 0x010e0_80000001)
       (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.500000)
@@ -93,9 +94,9 @@
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory ../CAM_PROFI/))
   )
 
   (net 0 "")
