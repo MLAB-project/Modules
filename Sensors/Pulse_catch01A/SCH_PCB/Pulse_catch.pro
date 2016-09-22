@@ -1,4 +1,4 @@
-update=So 2. červenec 2016, 21:53:02 CEST
+update=Čt 22. září 2016, 11:17:58 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,8 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=/home/kaklik/repos/kicad-mlab/symbols
@@ -60,3 +58,5 @@ LibName28=contrib
 LibName29=valves
 LibName30=MLAB_HEADER
 LibName31=MLAB_MECHANICAL
+[general]
+version=1
