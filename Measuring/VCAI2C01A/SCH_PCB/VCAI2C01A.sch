@@ -1,13 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:MLAB_BATERY
-LIBS:MLAB_CONNECTORS
-LIBS:MLAB_D
-LIBS:MLAB_DISPLAY
-LIBS:MLAB_IO
-LIBS:MLAB_Jumpers
-LIBS:MLAB_SW
-LIBS:MLAB_T
-LIBS:MLAB_U
 LIBS:74xgxx
 LIBS:74xx
 LIBS:ac-dc
@@ -52,8 +43,6 @@ LIBS:microchip_pic16mcu
 LIBS:microchip_pic18mcu
 LIBS:microchip_pic32mcu
 LIBS:microcontrollers
-LIBS:mlab_header
-LIBS:mlab_mechanical
 LIBS:motor_drivers
 LIBS:motorola
 LIBS:msp430
