@@ -1,7 +1,6 @@
 EESchema Schematic File Version 2
 LIBS:74xgxx
 LIBS:74xx
-LIBS:ac-dc
 LIBS:actel
 LIBS:adc-dac
 LIBS:Altera
@@ -9,9 +8,10 @@ LIBS:analog_devices
 LIBS:analog_switches
 LIBS:atmel
 LIBS:audio
+LIBS:battery_management
+LIBS:bbd
 LIBS:brooktre
 LIBS:cmos4000
-LIBS:cmos_ieee
 LIBS:conn
 LIBS:contrib
 LIBS:cypress
@@ -21,11 +21,9 @@ LIBS:digital-audio
 LIBS:diode
 LIBS:display
 LIBS:dsp
-LIBS:elec-unifil
 LIBS:ESD_Protection
 LIBS:ftdi
 LIBS:gennum
-LIBS:graphic
 LIBS:hc11
 LIBS:intel
 LIBS:interface
@@ -35,14 +33,14 @@ LIBS:linear
 LIBS:logo
 LIBS:maxim
 LIBS:memory
-LIBS:microchip_dspic33dsc
+LIBS:microcontrollers
 LIBS:microchip
+LIBS:microchip_dspic33dsc
 LIBS:microchip_pic10mcu
 LIBS:microchip_pic12mcu
 LIBS:microchip_pic16mcu
 LIBS:microchip_pic18mcu
 LIBS:microchip_pic32mcu
-LIBS:microcontrollers
 LIBS:motor_drivers
 LIBS:motorola
 LIBS:msp430
@@ -52,9 +50,9 @@ LIBS:onsemi
 LIBS:opto
 LIBS:Oscillators
 LIBS:philips
-LIBS:powerint
 LIBS:power
 LIBS:Power_Management
+LIBS:powerint
 LIBS:pspice
 LIBS:references
 LIBS:regul
@@ -63,19 +61,30 @@ LIBS:rfcom
 LIBS:sensors
 LIBS:silabs
 LIBS:siliconi
-LIBS:stm32
 LIBS:stm8
+LIBS:stm32
 LIBS:supertex
 LIBS:switches
 LIBS:texas
 LIBS:transf
 LIBS:transistors
-LIBS:ttl_ieee
 LIBS:valves
 LIBS:video
+LIBS:Worldsemi
 LIBS:Xicor
-LIBS:xilinx
 LIBS:Zilog
+LIBS:MLAB_BATERY
+LIBS:MLAB_CONNECTORS
+LIBS:MLAB_D
+LIBS:MLAB_DISPLAY
+LIBS:MLAB_IO
+LIBS:MLAB_Jumpers
+LIBS:MLAB_SW
+LIBS:MLAB_T
+LIBS:MLAB_U
+LIBS:MLAB_HEADER
+LIBS:MLAB_MECHANICAL
+LIBS:MLAB_TR
 LIBS:VCAI2C01A-cache
 EELAYER 25 0
 EELAYER END
@@ -1913,4 +1922,20 @@ Wire Wire Line
 Wire Wire Line
 	10200 4400 10200 4800
 Connection ~ 10200 4800
+Text Label 2750 1850 0    60   ~ 0
+IN1_2-
+Text Label 2500 2000 0    60   ~ 0
+IN1_2+
+Text Label 2700 3850 0    60   ~ 0
+IN2_2-
+Text Label 6500 1850 0    60   ~ 0
+IN3_2-
+Text Label 6500 3850 0    60   ~ 0
+IN4_2-
+Text Label 2500 4000 0    60   ~ 0
+IN2_2+
+Text Label 6300 2000 0    60   ~ 0
+IN3_2+
+Text Label 6300 4000 0    60   ~ 0
+IN4_2+
 $EndSCHEMATC
