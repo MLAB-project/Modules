@@ -1,4 +1,4 @@
-update=29. 4. 2016 7:26:30
+update=Út 27. září 2016, 11:13:34 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,8 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=../../../../../kicad-mlab/symbols
@@ -78,3 +76,5 @@ NetFmtName=
 SpiceForceRefPrefix=0
 SpiceUseNetNumbers=0
 LabSize=60
+[general]
+version=1
