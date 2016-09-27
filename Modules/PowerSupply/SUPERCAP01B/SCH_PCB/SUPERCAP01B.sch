@@ -9,7 +9,6 @@ LIBS:74xx
 LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
-LIBS:xilinx
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -28,6 +27,16 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:MLAB_BATERY
+LIBS:MLAB_CONNECTORS
+LIBS:MLAB_D
+LIBS:MLAB_HEADER
+LIBS:MLAB_IO
+LIBS:MLAB_Jumpers
+LIBS:MLAB_MECHANICAL
+LIBS:MLAB_SW
+LIBS:MLAB_T
+LIBS:MLAB_U
 LIBS:SUPERCAP01B-cache
 EELAYER 25 0
 EELAYER END
@@ -541,7 +550,7 @@ Wire Wire Line
 	9200 2050 9200 2100
 Wire Wire Line
 	8550 1900 9350 1900
-Text Label 8150 2600 0    60   ~ 0
+Text Label 9000 1900 0    60   ~ 0
 OUT
 $Comp
 L D_Schottky D2
@@ -558,10 +567,8 @@ Wire Wire Line
 	6100 1600 5950 1600
 Wire Wire Line
 	6400 1600 6600 1600
-Text Label 5950 1600 1    60   ~ 0
+Text Label 5950 1600 0    60   ~ 0
 VIN
-Text Label 6600 1600 1    60   ~ 0
-OUT
 $Comp
 L R R7
 U 1 1 57EA841E
@@ -593,11 +600,6 @@ Wire Wire Line
 Wire Wire Line
 	8550 1900 8550 2600
 Connection ~ 8550 2600
-Wire Wire Line
-	8900 2450 9000 2450
-Wire Wire Line
-	9000 2450 9000 2600
-Connection ~ 9000 2600
 Connection ~ 8550 2450
 $Comp
 L R R5
@@ -691,4 +693,13 @@ Wire Wire Line
 	6250 4850 6250 4800
 Wire Wire Line
 	6500 4800 6500 5000
+Text Label 8950 2600 0    60   ~ 0
+OUT2
+Wire Wire Line
+	8950 2450 8950 2600
+Connection ~ 8950 2600
+Wire Wire Line
+	8900 2450 8950 2450
+Text Label 6600 1600 0    60   ~ 0
+OUT2
 $EndSCHEMATC
