@@ -67,11 +67,11 @@ class axis:
         spi.SPI_write_byte(self.CS, 0x00)
         spi.SPI_write_byte(self.CS, 0x10) 
         spi.SPI_write_byte(self.CS, 0x0A)      # KVAL_RUN
-        spi.SPI_write_byte(self.CS, 0x1F)
+        spi.SPI_write_byte(self.CS, 0x18)
         spi.SPI_write_byte(self.CS, 0x0B)      # KVAL_ACC
-        spi.SPI_write_byte(self.CS, 0x1F)
+        spi.SPI_write_byte(self.CS, 0x18)
         spi.SPI_write_byte(self.CS, 0x0C)      # KVAL_DEC
-        spi.SPI_write_byte(self.CS, 0x1F)
+        spi.SPI_write_byte(self.CS, 0x18)
  #       spi.SPI_write_byte(self.CS, 0x18)      # CONFIG
 #        spi.SPI_write_byte(self.CS, 0b00111000)
 #        spi.SPI_write_byte(self.CS, 0b00000000)
