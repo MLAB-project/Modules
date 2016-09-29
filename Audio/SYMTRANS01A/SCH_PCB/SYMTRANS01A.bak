@@ -735,26 +735,26 @@ F 3 "" H 5250 2450 50  0000 C CNN
 	1    5250 2450
 	1    0    0    -1  
 $EndComp
-Text Label 3500 2400 0    60   ~ 0
+Text Label 3550 2400 0    60   ~ 0
 AIN+
-Text Label 3500 2500 0    60   ~ 0
+Text Label 3550 2500 0    60   ~ 0
 AIN-
 Text Label 4150 2250 1    60   ~ 0
-+A2
+A2+
 Text Label 4150 2650 1    60   ~ 0
--A2
+A2-
 Text Label 4600 2250 0    60   ~ 0
-+A3
+A3+
 Text Label 4600 2650 0    60   ~ 0
--A3
+A3-
 Text Label 6100 2200 0    60   ~ 0
-+AOUT
+AOUT+
 Text Label 6100 2700 0    60   ~ 0
--AOUT
+AOUT-
 Text Label 3550 4500 0    60   ~ 0
-+BIN
+BIN+
 Text Label 3550 4600 0    60   ~ 0
--BIN
+BIN-
 Wire Wire Line
 	3400 4600 3800 4600
 Wire Wire Line
@@ -764,15 +764,15 @@ Wire Wire Line
 Wire Wire Line
 	3800 4600 3800 4750
 Text Label 4050 4350 1    60   ~ 0
-+B2
+B2+
 Text Label 4050 4750 1    60   ~ 0
--B2
+B2-
 Text Label 4600 4350 0    60   ~ 0
-+B3
+B3+
 Text Label 4600 4750 0    60   ~ 0
--B3
+B3-
 Text Label 6100 4300 0    60   ~ 0
-+BOUT
+BOUT+
 Text Label 6100 4800 0    60   ~ 0
--BOUT
+BOUT-
 $EndSCHEMATC
