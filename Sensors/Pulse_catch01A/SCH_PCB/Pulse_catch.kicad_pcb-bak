@@ -5,7 +5,7 @@
     (no_connects 0)
     (area 35.738999 25.578999 76.021001 55.701001)
     (thickness 1.6)
-    (drawings 10)
+    (drawings 11)
     (tracks 89)
     (zones 0)
     (modules 18)
@@ -639,6 +639,9 @@
     )
   )
 
+  (gr_text Pulse_catch01A (at 55.88 50.4952) (layer B.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
+  )
   (gr_text INT_OUT (at 59.69 38.1) (layer B.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
