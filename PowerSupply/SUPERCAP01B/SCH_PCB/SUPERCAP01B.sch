@@ -164,43 +164,10 @@ F 3 "" H 5150 2850 60  0000 C CNN
 	1    5100 2900
 	-1   0    0    1   
 $EndComp
-$Comp
-L CONN1_1 J3
-U 1 1 56E8268B
-P 4650 3200
-F 0 "J3" H 4700 3250 50  0000 C CNN
-F 1 "CONN1_1" H 4750 3150 40  0001 C CNN
-F 2 "Mlab_Pin_Headers:Straight_1x01" H 4700 3150 60  0001 C CNN
-F 3 "" H 4700 3150 60  0000 C CNN
-	1    4650 3200
-	-1   0    0    1   
-$EndComp
-$Comp
-L CONN1_1 J2
-U 1 1 56E826DF
-P 4650 3100
-F 0 "J2" H 4700 3150 50  0000 C CNN
-F 1 "CONN1_1" H 4750 3050 40  0001 C CNN
-F 2 "Mlab_Pin_Headers:Straight_1x01" H 4700 3050 60  0001 C CNN
-F 3 "" H 4700 3050 60  0000 C CNN
-	1    4650 3100
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	5800 2850 5950 2850
 Wire Wire Line
 	5950 3050 5400 3050
-$Comp
-L CONN1_1 J4
-U 1 1 56E82A16
-P 4650 3300
-F 0 "J4" H 4700 3350 50  0000 C CNN
-F 1 "CONN1_1" H 4750 3250 40  0001 C CNN
-F 2 "Mlab_Pin_Headers:Straight_1x01" H 4700 3250 60  0001 C CNN
-F 3 "" H 4700 3250 60  0000 C CNN
-	1    4650 3300
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	3650 2600 5950 2600
 $Comp
@@ -252,16 +219,13 @@ F 3 "" H 3700 3100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4950 3150 4950 2600
-Connection ~ 4950 2600
-Wire Wire Line
 	5400 2950 5400 2600
 Connection ~ 5400 2600
 Wire Wire Line
 	5900 2750 5900 2600
 Connection ~ 5900 2600
 Wire Wire Line
-	4950 3450 4950 3350
+	4950 3250 4950 3450
 Text Label 5000 3250 0    60   ~ 0
 CTL
 Text Label 5400 3050 0    60   ~ 0
@@ -650,17 +614,6 @@ Connection ~ 7100 3700
 Text Label 7100 3700 0    60   ~ 0
 Vpull-up
 $Comp
-L C C4
-U 1 1 57EAF3DA
-P 4400 2850
-F 0 "C4" H 4425 2950 50  0000 L CNN
-F 1 "10uF" H 4425 2750 50  0000 L CNN
-F 2 "Mlab_R:SMD-0805" H 4438 2700 50  0001 C CNN
-F 3 "" H 4400 2850 50  0000 C CNN
-	1    4400 2850
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR011
 U 1 1 57EAFA42
 P 4400 3100
@@ -702,4 +655,15 @@ Wire Wire Line
 	8900 2450 8950 2450
 Text Label 6600 1600 0    60   ~ 0
 OUT2
+$Comp
+L CP C4
+U 1 1 57ECAE60
+P 4400 2850
+F 0 "C4" H 4518 2896 50  0000 L CNN
+F 1 "47uF" H 4518 2805 50  0000 L CNN
+F 2 "Mlab_C:TantalC_SizeC_Reflow" H 4438 2700 50  0001 C CNN
+F 3 "" H 4400 2850 50  0000 C CNN
+	1    4400 2850
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
