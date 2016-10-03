@@ -19,7 +19,7 @@ D01_sirka_tyce=15;
 //D02 - uchyt na sloup
 D02_sila_materialu=5;
 D02_vyska_uchytky=40;
-D02_prumer_obruby=32; 
+D02_prumer_obruby=27; 
 //27mm - 3/4 trubka
 D02_delka_celeho_uchytu=60;
 D02_dotahova_vzdalenost=1.5;
