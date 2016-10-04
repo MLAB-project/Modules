@@ -1,8 +1,8 @@
 (export (version D)
   (design
-    (source C:/Chroust/Zaloha/stare/MLAB/Modules/Clock/RTC02A/SCH_PCB/RTC02A.sch)
-    (date "22. 9. 2016 6:43:30")
-    (tool "Eeschema 4.0.3-stable")
+    (source C:\Chroust\Zaloha\stare\MLAB\Modules\Clock\RTC02A\SCH_PCB\RTC02A.sch)
+    (date "4. 10. 2016 10:44:13")
+    (tool "Eeschema (2016-09-17 revision 679eef1)-makepkg")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title)
@@ -274,7 +274,7 @@
     (library (logical MLAB_Jumpers)
       (uri C:\Chroust\Zaloha\stare\kicad-mlab\symbols\MLAB_Jumpers.lib))
     (library (logical device)
-      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\device.lib"))
+      (uri C:\KiCad\share\kicad\library\device.lib))
     (library (logical mlab_mechanical)
       (uri C:\Chroust\Zaloha\stare\kicad-mlab\symbols\mlab_mechanical.lib)))
   (nets
