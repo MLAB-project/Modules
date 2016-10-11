@@ -36,7 +36,7 @@ difference () {
 
     ////////////////////////////////////
 	translate ([1, 66 , pedestal_height - 4.5]) // HOLE for ODROD's USB and Ethernet connectors
-	   cube([54,15.5,5]);
+	   cube([55,18,5]);
 
 	translate ([15, 8 , pedestal_height - 3.5]) // HOLE for ODROD's Passive components 
 	   cube([41,50,5]);
@@ -54,17 +54,23 @@ difference () {
 	   cube([20,12.5,5]);
 
 	translate ([2, 8 , pedestal_height - 1.7]) // IO connector
-	   cube([4.5,50.5,5]);
+	    cube([4.5,50.5,5]);
 
-	translate ([30, 3.5, pedestal_height - 3])  // ODROID serial connector 
-	   cube([10,2,5]);
-    
+	translate ([30, 3, pedestal_height - 3])  // ODROID serial connector 
+	    cube([10,3,5]);
+
+    translate ([48, 1, pedestal_height - 3])  // ODROID power switch connector
+        cube([3.5,5,5]);
+
+    translate ([52, 43, pedestal_height - 3])  // ODROID power connector
+        cube([5,3,5]);
+
     rotate([30,0,0])
         translate ([15,5.8, -3.0])  // ODROID eMMC adapter pocket 
             cube([25,2,15]);
 
-    translate ([8.8,3.5, pedestal_height - 3])  // ODROID IR receiver
-	   cube([7.5,2,5]);
+    translate ([8.8,2.5, pedestal_height - 3])  // ODROID IR receiver
+	    cube([7.5,4,5]);
 
     translate ([19,10, pedestal_height - 5])  // Heatsink mount holes
         cylinder (h = 6, r= 3, $fn=10);
