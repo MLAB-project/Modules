@@ -107,4 +107,11 @@ difference () {
                 scale(v = [0.4, 0.4, 0.4])
                     MLAB_logo_long();
     }
+
+    translate ([50, 86.5, 4])  // ODROIDs passive components hole.
+        rotate ([90,0,180])
+            linear_extrude(height = 0.5) {
+                text(text = "ODROID-C2", size = pedestal_height * 0.4);
+            }
+
 }
