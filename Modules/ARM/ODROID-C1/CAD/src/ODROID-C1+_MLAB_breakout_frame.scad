@@ -41,8 +41,8 @@ difference () {
 	translate ([15, 8 , pedestal_height - 3.5]) // HOLE for ODROD's Passive components 
 	   cube([41,50,5]);
 
-    translate ([21, 1.5 , pedestal_height - 2]) // HOLE for ODROD's Passive components 
-       cube([7,10,5]);
+    translate ([21.25, 1.5 , pedestal_height - 2]) // HOLE for ODROD's Passive components 
+       cube([7.5,10,5]);
 
     translate ([51.5, 19.5 , pedestal_height - 2]) // HOLE for ODROD's power header 
        cube([6,3,5]);
@@ -50,7 +50,7 @@ difference () {
 	translate ([5, 27.5 , pedestal_height - 3.5]) // eMMc Card 
 	   cube([14,20,5]);
 
-	translate ([0, 46.5 , pedestal_height - 3.5]) // SD Card 
+	translate ([0, 47 , pedestal_height - 3.5]) // SD Card 
 	   cube([20,12.5,5]);
 
 	translate ([2, 8 , pedestal_height - 1.7]) // IO connector
@@ -59,8 +59,8 @@ difference () {
 	translate ([30, 3, pedestal_height - 3])  // ODROID serial connector 
 	    cube([10,3,5]);
 
-    translate ([48, 1, pedestal_height - 3])  // ODROID power switch connector
-        cube([3.5,5,5]);
+    translate ([42.5, 1, pedestal_height - 3])  // ODROID power switch connector
+        cube([8.5, 10, 5]);
 
     translate ([52, 43, pedestal_height - 3])  // ODROID power connector
         cube([5,3,5]);
