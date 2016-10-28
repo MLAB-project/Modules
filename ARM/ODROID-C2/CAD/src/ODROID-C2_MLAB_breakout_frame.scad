@@ -36,7 +36,7 @@ difference () {
 
         ////////////////////////////////////
 	translate ([1, 66 , pedestal_height - 4.5]) // HOLE for ODROD's USB and Ethernet connectors
-	   cube([54,15.5,5]);
+	   cube([54,17.5,5]);
 
 	translate ([15, 7 , pedestal_height - 3.5]) // HOLE for ODROD's Passive components 
 	   cube([39,53,5]);
