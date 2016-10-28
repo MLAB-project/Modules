@@ -56,6 +56,9 @@ difference () {
     translate ([52, 19.5, pedestal_height - 3])  // USB selection jumper 
         cube([6,2.5,5]);
 
+    translate ([52, 43, pedestal_height - 3])  // ODROID power connector
+        cube([6,3,5]);
+
     rotate([30,0,0])
         translate ([15,5.8, -3.0])  // ODROID eMMC adapter pocket 
             cube([25,2,15]);
