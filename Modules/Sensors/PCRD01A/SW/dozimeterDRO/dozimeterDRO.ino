@@ -1,4 +1,4 @@
-/* PCRD Japan */
+/* PCRD DRO */
 
 /*
  * SD card attached to SPI bus as follows:
@@ -174,7 +174,19 @@ void record()
       break;      
     }
   }
-     
+  
+  //!!!!!!!!!!!!!! uprava pro DRO
+  for (int n=0; n<CHANNELS; n++) // clear recording buffer
+  {
+    channelA[n]=0;
+  }  
+  delay(100000);
+  digitalWrite(LED1, LOW);   // LED OFF
+  digitalWrite(LED2, LOW);   // LED OFF
+  digitalWrite(LED3, LOW);   // LED OFF
+  digitalWrite(LED4, LOW);   // LED OFF
+  return;
+  
   dataString = "";        // make a string for assembling the data to log
   //*
   ReadGPRMC();            // read NMEA sentences from GPS
@@ -296,14 +308,14 @@ void setup()
   //Serial.println("card initialized.");
 
   noInterrupts();          // disable all interrupts
-  attachInterrupt(0, isr, RISING);  // initialise interrupt from rising edge of 1PPS
+  //!!! attachInterrupt(0, isr, RISING);  // initialise interrupt from rising edge of 1PPS
 
   for (int n=0; n<CHANNELS; n++) // clear recoding buffer
   {
     channelA[n]=0; 
   }
 
-  interrupts();             // enable all interrupts
+  //!!! interrupts();             // enable all interrupts
   
   //Serial.println("#Hmmm");
 }
@@ -333,7 +345,7 @@ void loop()
     
     if (channelA[val] < 255) channelA[val]++;
 
-    if (rise)  // recording time is now
+    if (count > 10000)  // recording time cca 1s pro ukazku na DRO
     {
         record();  // make record
         digitalWrite(ADreset, HIGH);  // reset Peack Detector
