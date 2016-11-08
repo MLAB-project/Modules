@@ -1,4 +1,4 @@
-/* PCRD DRO */
+/* CANDY DRO */
 
 /*
  * SD card attached to SPI bus as follows:
