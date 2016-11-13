@@ -1,6 +1,7 @@
 EESchema Schematic File Version 2
 LIBS:74xgxx
 LIBS:74xx
+LIBS:ac-dc
 LIBS:actel
 LIBS:adc-dac
 LIBS:Altera
@@ -10,6 +11,7 @@ LIBS:atmel
 LIBS:audio
 LIBS:brooktre
 LIBS:cmos4000
+LIBS:cmos_ieee
 LIBS:conn
 LIBS:contrib
 LIBS:cypress
@@ -19,9 +21,11 @@ LIBS:digital-audio
 LIBS:diode
 LIBS:display
 LIBS:dsp
+LIBS:elec-unifil
 LIBS:ESD_Protection
 LIBS:ftdi
 LIBS:gennum
+LIBS:graphic
 LIBS:hc11
 LIBS:intel
 LIBS:interface
@@ -39,8 +43,6 @@ LIBS:microchip_pic16mcu
 LIBS:microchip_pic18mcu
 LIBS:microchip_pic32mcu
 LIBS:microcontrollers
-LIBS:mlab_header
-LIBS:mlab_mechanical
 LIBS:motor_drivers
 LIBS:motorola
 LIBS:msp430
@@ -68,20 +70,12 @@ LIBS:switches
 LIBS:texas
 LIBS:transf
 LIBS:transistors
+LIBS:ttl_ieee
 LIBS:valves
 LIBS:video
 LIBS:Xicor
+LIBS:xilinx
 LIBS:Zilog
-LIBS:MLAB_BATERY
-LIBS:MLAB_CONNECTORS
-LIBS:MLAB_D
-LIBS:MLAB_DISPLAY
-LIBS:MLAB_IO
-LIBS:MLAB_Jumpers
-LIBS:MLAB_SW
-LIBS:MLAB_T
-LIBS:MLAB_U
-LIBS:MLAB_TR
 LIBS:USB4xUART01A-cache
 EELAYER 25 0
 EELAYER END
