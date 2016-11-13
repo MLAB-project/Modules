@@ -1,9 +1,9 @@
-(kicad_pcb (version 20160815) (host pcbnew 201611122049+7349~55~ubuntu16.04.1)
+(kicad_pcb (version 20160815) (host pcbnew no-vcs-found-undefined)
 
   (general
     (links 209)
     (no_connects 0)
-    (area 0.178999 -40.461001 70.941001 -0.178999)
+    (area -7.239 -44.831 81.026001 4.572001)
     (thickness 1.6)
     (drawings 40)
     (tracks 826)
@@ -47,7 +47,7 @@
   )
 
   (setup
-    (last_trace_width 0.3)
+    (last_trace_width 0.2)
     (user_trace_width 0.3)
     (user_trace_width 0.4)
     (user_trace_width 0.5)
@@ -77,6 +77,7 @@
     (pad_size 1.524 1.524)
     (pad_drill 0.762)
     (pad_to_mask_clearance 0.2)
+    (solder_mask_min_width 0.2)
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFF7F)
     (pcbplotparams
