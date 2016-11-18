@@ -183,7 +183,7 @@ void record()
   // make a string for assembling the data to log:
   dataString += String(num++);
   //dataString += ","; 
-  //!!! Serial.print(dataString);
+  Serial.print(dataString);
   
   // open the file. note that only one file can be open at a time,
   // so you have to close this one before opening another.
@@ -241,7 +241,7 @@ void record()
   
   digitalWrite(chipSelect, LOW);   
 
-  /*!!! control print
+  //*!!! control print
   //TODO print to I2C display
   Serial.print(":");       
   Serial.print(count);       
