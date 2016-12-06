@@ -47,8 +47,14 @@ difference()
     
     //odecet koule
     translate([0,0,R01_vyska_preryti_statoru])
-        sphere(d = (S01_prumer_vnitrni/2+4*S01_sila_materialu)*2, $fn=100);      
-    }  
+        sphere(d = (S01_prumer_vnitrni/2+4*S01_sila_materialu)*2, $fn=100); 
+   
+        
+        //odečet přesahující koule
+        translate([0,0,-R01_vyska_preryti_statoru])
+       cylinder (h = R01_vyska_preryti_statoru, r=S01_prumer_vnitrni/2+5*S01_sila_materialu, $fn=100);  
+        
+        }  
     
 difference()
     {       
