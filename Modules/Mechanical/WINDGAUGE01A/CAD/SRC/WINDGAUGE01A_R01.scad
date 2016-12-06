@@ -13,9 +13,9 @@ module WINDGAUGE01A_R01()
     {  
     //kužel 
         
-    cylinder(h=10, r1=R03_prumer_zavitu/2+S01_sila_materialu, r2=5, center=false, $fn=100); 
+    cylinder(h=4, r1=R03_prumer_zavitu/2+S01_sila_materialu, r2=5, center=false, $fn=100); 
         
-    cylinder(h=10-2*S01_sila_materialu, r1=R03_prumer_zavitu/2, r2=5-S01_sila_materialu, center=false,$fn=100);     
+    
     
     }
     
@@ -35,6 +35,6 @@ module WINDGAUGE01A_R01()
 }
 
 //válec pro držení PCB
- cylinder (h = R01_zavit_vyska+10, r=2, $fn=100);
+ cylinder (h = R01_zavit_vyska+4, r=2, $fn=100);
 
 }
