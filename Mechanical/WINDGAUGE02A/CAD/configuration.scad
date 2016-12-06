@@ -51,7 +51,7 @@ prumer_orechu=10;
 //WINDGAUGE02A_R01 //pro lopatku
 L01_hrana_drzaku_a=10;
 L01_hrana_drzaku_b=3;
-L01_delka_uchytu=19;
+L01_delka_uchytu=18;
 L01_prumer_lopatky=40;
 L01_sila_materialu_lopatky=1.2;
 
@@ -63,7 +63,7 @@ D01_delka_tyce=60;
 D01_sirka_tyce=10;
 
 //WINDGAUGE02A_D02 //uchyt na sloup
-D02_sila_materialu=5;
+D02_sila_materialu=6;
 D02_vyska_uchytky=40;
 D02_prumer_obruby=27; 
 

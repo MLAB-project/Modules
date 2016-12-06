@@ -138,7 +138,7 @@ translate([0,0,0])
     difference () 
     {
         
-        cylinder (h = R01_vyska_preryti_statoru+lozisko_vyska+magnet_vyska+R03_vyska_narezeni_hridelky+2*S01_sila_materialu, r= sirka_matky/2+S01_sila_materialu, $fn=20);
+        cylinder (h = R01_vyska_preryti_statoru+lozisko_vyska+magnet_vyska+R03_vyska_narezeni_hridelky+2*S01_sila_materialu, r= sirka_matky/2+S01_sila_materialu/2, $fn=20);
         
         translate([0,0,R01_vyska_preryti_statoru+lozisko_vyska+magnet_vyska+R03_vyska_narezeni_hridelky+2*S01_sila_materialu-vyska_matky]) 
             cylinder (h = vyska_matky+0.01, r= (sirka_matky+0.2)/2, $fn=6);
