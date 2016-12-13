@@ -50,7 +50,7 @@ cylinder(h=D01_material_pod_zavitem+0.01,r=D02_prumer_uchytneho_sroubu/2,center=
         //uchyt na sloupek
         translate([0,D01_delka_tyce+(S01_prumer_vnitrni-S01_tolerance_zavit)/2+D01_material_pred_zavitem+D02_sila_materialu+(D02_prumer_obruby)/2,D02_vyska_uchytky/2])
             rotate(a=[0,0,270])
-                ISLHOLDER01A_D04_2();      
+                ISLHOLDER01A_D04();      
 
         }
 

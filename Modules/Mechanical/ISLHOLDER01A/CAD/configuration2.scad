@@ -18,10 +18,10 @@ D01_delka_tyce=20;
 D01_sirka_tyce=15;
 
 //D04 - uchyt na sloup
-D02_sila_materialu=4;
+D02_sila_materialu=5;
 D02_vyska_uchytky=30;
 D02_prumer_obruby=25; //pruměr zkumavky
-D02_delka_celeho_uchytu=50;
+D02_delka_celeho_uchytu=60;
 D02_dotahova_vzdalenost=1.5;
 D02_prumer_uchytneho_sroubu=4.2;
 D02_sirka_matky=9.1; //pro M4
