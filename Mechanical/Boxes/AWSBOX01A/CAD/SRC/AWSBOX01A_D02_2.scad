@@ -1,22 +1,7 @@
 $fn=40; // model faces resolution.
+include <../configuration.scad>
 
 
-//WINDGAUGE02A_D01 //uchyt velky
-D01_material_pod_zavitem=5;
-D01_material_za_zavitem=3;
-D01_material_pred_zavitem=2;
-D01_delka_tyce=60;
-D01_sirka_tyce=10;
-
-//WINDGAUGE02A_D02 //uchyt na sloup
-D02_sila_materialu=5;
-D02_vyska_uchytky=40;
-D02_prumer_obruby=27; //3/4 trubka
-D02_delka_celeho_uchytu=60;
-D02_dotahova_vzdalenost=1.5;
-D02_prumer_uchytneho_sroubu=4.2;
-D02_sirka_matky=9.2; //pro M4
-D02_vyska_matky=3;
 
 
 //Drzak na sloup - cast bez drzaku anemometru
@@ -64,7 +49,7 @@ difference()
     }
 }
 
-module WINDGAUGE02A_D02_2(){
+module WINDGAUGE02A_D02_2(D02_sila_materialu){
 	
 difference()
     {
