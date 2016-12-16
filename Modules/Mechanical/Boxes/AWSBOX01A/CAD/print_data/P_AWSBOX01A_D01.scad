@@ -7,6 +7,6 @@ rotate([0, 0, 0])
  
 translate([0,0,0])
         rotate([0,0,0])
-     AWSBOX01A_D01(pocet_der1,pocet_der2,radidus_hrany,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der);
+     AWSBOX01A_D01(pocet_der1,pocet_der2,1,vzdalenost_der,vzdalenost_od_okraje,prumer_sroubu,tloustka_plbase,prekryti_der);
 
             
