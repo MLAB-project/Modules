@@ -154,7 +154,7 @@ difference()
     
    polomer_valce=2; 
  //válec pro vylepšení tisku
-         translate([-polomer_valce,L01_prumer_lopatky/2+1.5+L01_sila_materialu_lopatky,0]) 
+         translate([polomer_valce-0.01,L01_prumer_lopatky/2+1.5+L01_sila_materialu_lopatky,0]) 
             cylinder(h=(L01_prumer_lopatky), r1=polomer_valce, r2=polomer_valce, center=false, $fn=100);         
     
 }
