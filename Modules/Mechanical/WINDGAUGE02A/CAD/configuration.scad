@@ -7,7 +7,7 @@ $fn=40; // model faces resolution.
 S01_hloubka_zavitu=4;
 S01_vyska=80; //80
 S01_prumer_vnitrni=40;
-S01_sila_materialu=3.3;
+S01_sila_materialu=1.3;
 S01_vyska_horni_zavit=10;
 S01_vyska_spodniho_zavitu=10;
 S01_sila_drzaku_RJ11=3; //vyška drážky
@@ -51,7 +51,7 @@ prumer_orechu=10;
 //WINDGAUGE02A_R01 //pro lopatku
 L01_hrana_drzaku_a=10;
 L01_hrana_drzaku_b=3;
-L01_delka_uchytu=18;
+L01_delka_uchytu=19;
 L01_prumer_lopatky=40;
 L01_sila_materialu_lopatky=1.2;
 
