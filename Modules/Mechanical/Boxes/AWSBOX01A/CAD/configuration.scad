@@ -15,7 +15,7 @@ tloustka_plbase=2;
 prekryti_der=-2;
 
 //WINDGAUGE02A_D02 //uchyt na sloup
-D02_sila_materialu=5;
+D02_sila_materialu=5; //nefunguje
 D02_vyska_uchytky=40;
 D02_prumer_obruby=27; //3/4 trubka
 D02_delka_celeho_uchytu=60;
@@ -31,7 +31,7 @@ D02_vyska_boxu_pod_plbase=6;
 D02_vyska_boxu_nad_plbase=50;
 D02_zapusteni_spodniho_krytu=10;
 D02_sila_materialu=1.2;
-D02_dolerance_na_zasunuti=0.4; //tolerance je pro obě strany
+D02_dolerance_na_zasunuti=0.8; //tolerance je pro obě strany
 
 drzak_sroubu_hloubka=15;
 drzak_sroubu_vyska=10;

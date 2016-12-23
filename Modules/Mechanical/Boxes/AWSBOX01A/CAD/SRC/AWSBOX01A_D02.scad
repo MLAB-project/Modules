@@ -2,11 +2,7 @@ $fn=40; // model faces resolution.
 include <AWSBOX01A_D02_2.scad>
 include <../configuration.scad>
 
-
-
-
-
-
+      
 
 AWSBOX01A_D02();
 
@@ -16,9 +12,9 @@ difference () {
     union () {
         
         //uchyt na sloup
-        translate([((pocet_der1-1)*vzdalenost_der+2*vzdalenost_od_okraje+2*radidus_hrany+2*D02_sila_materialu+D02_dolerance_na_zasunuti)/2,-D02_prumer_obruby/2-2.5-D02_dotahova_vzdalenost/2,(pocet_der2-1)*vzdalenost_der+2*vzdalenost_od_okraje-1*radidus_hrany+2*radidus_hrany+D02_zapusteni_spodniho_krytu-D02_vyska_uchytky/2])
+        translate([((pocet_der1-1)*vzdalenost_der+2*vzdalenost_od_okraje+2*D02_sila_materialu+D02_dolerance_na_zasunuti)/2,-D02_prumer_obruby/2-2.5-D02_dotahova_vzdalenost/2,(pocet_der2-1)*vzdalenost_der+2*vzdalenost_od_okraje-1*radidus_hrany+2*radidus_hrany+D02_zapusteni_spodniho_krytu-D02_vyska_uchytky/2])
         rotate([0,0,90]) 
-        WINDGAUGE02A_D02(5);
+        WINDGAUGE02A_D02(6);
         
         
 translate([radidus_hrany,radidus_hrany,0])
@@ -155,6 +151,7 @@ translate([radidus_hrany,D02_vyska_boxu_pod_plbase+D02_vyska_boxu_nad_plbase+2*D
 sphere(d = 2*radidus_hrany-2*D02_sila_materialu, center=true, $fn=100);
 
 }
+
 //lišty na zasunutí plbase
 translate([D02_sila_materialu,D02_sila_materialu+D02_vyska_boxu_pod_plbase-(2*D02_sila_materialu+tloustka_plbase+D02_dolerance_na_zasunuti)/2,D02_zapusteni_spodniho_krytu])
 
@@ -175,6 +172,28 @@ drzak_sroubu();
 translate([(pocet_der1-1)*vzdalenost_der+2*vzdalenost_od_okraje+2*D02_sila_materialu+D02_dolerance_na_zasunuti,(D02_vyska_boxu_pod_plbase+D02_vyska_boxu_nad_plbase+2*D02_sila_materialu+2*radidus_hrany)/2+(prumer_sroubu+3*D02_sila_materialu)/2,D02_zapusteni_spodniho_krytu+matka_vyska])
  rotate([0,0,180])
 drzak_sroubu();
+
+//lišty aby nepropadávalo čelo
+
+//lišta 1 osa x
+translate([(3/2*vzdalenost_der)+D02_sila_materialu,D02_sila_materialu,D02_zapusteni_spodniho_krytu])
+rantl((pocet_der1-3)*vzdalenost_der);
+
+//lišta 2 osa x
+translate([(pocet_der1-3)*vzdalenost_der+(3/2*vzdalenost_der)+D02_sila_materialu,D02_vyska_boxu_pod_plbase+D02_vyska_boxu_nad_plbase+D02_sila_materialu+2*radidus_hrany,D02_zapusteni_spodniho_krytu])
+     rotate([0,0,180])
+        rantl((pocet_der1-3)*vzdalenost_der);
+//lišta 3 osa y        
+translate([D02_sila_materialu,D02_vyska_boxu_nad_plbase-2*radidus_hrany+D02_vyska_boxu_pod_plbase+D02_sila_materialu+D02_dolerance_na_zasunuti+10,D02_zapusteni_spodniho_krytu])
+ rotate([0,0,-90])
+        rantl(D02_vyska_boxu_nad_plbase-2*radidus_hrany);
+  
+  //lišta 4 osa y
+translate([(pocet_der1-1)*vzdalenost_der+2*vzdalenost_od_okraje+D02_sila_materialu+D02_dolerance_na_zasunuti,D02_vyska_boxu_pod_plbase+D02_sila_materialu+D02_dolerance_na_zasunuti+10,D02_zapusteni_spodniho_krytu])
+ rotate([0,0,90])
+        rantl(D02_vyska_boxu_nad_plbase-2*radidus_hrany);                
+
+
 }
 
 module lista(){
@@ -240,7 +259,28 @@ difference () {
     
 }
   }  
-  
-  
-  
-  
+
+//aby čelo nepropadávalo  
+module rantl(delka_rantlu){
+    translate([0,0,0])
+difference () {
+
+union () {
+	cube([delka_rantlu,D02_sila_materialu,D02_sila_materialu]);
+    
+   
+    translate([delka_rantlu/2,0,D02_sila_materialu]) 
+ 
+ rotate([0,90,0])   
+cylinder(h=delka_rantlu, r=D02_sila_materialu, center=true);
+   
+    
+}
+
+
+translate([0,-D02_sila_materialu,0])
+cube([delka_rantlu,D02_sila_materialu,2*D02_sila_materialu]);
+
+}
+
+}
