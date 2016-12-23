@@ -20,89 +20,75 @@ module AWSCREEN01A_D03(D03_vyska_zavitu,D03_tolerance_zavitu,D03_material_za_zav
 
 //spodní kruh - kvůli výkroji
 difference () {
+    cylinder (h=3*D03_tloustka_materialu,r = D03_polomer_stitu,$fn=100);
     
-    
-        cylinder (h=3*D03_tloustka_materialu,r = D03_polomer_stitu,$fn=100);
     translate ([0,0,-0.005])
         cylinder (h=2*D03_tloustka_materialu+0.01,r = D03_polomer_stitu-D03_tloustka_materialu,$fn=100);
                  
     translate ([0,0,3*D03_tloustka_materialu])
- 
        translate ([0,0,-0.01/2-D03_tloustka_materialu])
             cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu+0.01,r1=D03_polomer_stitu ,r2=D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem,$fn=100);
     
-       
-                    
-    
-                    }
+    }
                     
 //spodní kruh - kvůli doplnění výkroje
 difference () {
+    cylinder (h=3*D03_tloustka_materialu,r = D03_polomer_stitu,$fn=100);
     
-    
-        cylinder (h=3*D03_tloustka_materialu,r = D03_polomer_stitu,$fn=100);
     translate ([0,0,-0.005])
         cylinder (h=3*D03_tloustka_materialu+0.01,r = D03_polomer_stitu-D03_tloustka_materialu,$fn=100);
-                 
-             
-    
+     
                     }                    
 
-
 //horni zavit
-    translate ([0,0,D03_vyska_stitu-0.01])
-    // screen upper rim
-        difference () {
-            screw_thread((D03_polomer_zavitu-D03_tolerance_zavitu)*2,4,55,D03_vyska_zavitu+5,PI/2,2);
+translate ([0,0,D03_vyska_stitu-0.01])
+// screen upper rim
+difference () {
+    screw_thread((D03_polomer_zavitu-D03_tolerance_zavitu)*2,4,55,D03_vyska_zavitu+5,PI/2,2);
     
     translate ([0,0,-0.01])
         cylinder (h=D03_vyska_zavitu+0.02 ,r= D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem-D03_material_za_zavitem_pridani ,$fn=100);
-            
-            
+          
      translate ([0,0,D03_vyska_zavitu-0.01])
         cylinder (h=D03_vyska_zavitu+0.02 ,r= D03_polomer_zavitu ,$fn=100);        
             
     }
 
-//materiál pod horním závitem
-     translate ([0,0,D03_vyska_stitu-D03_tloustka_materialu])
-    difference () {
-    translate ([0,0,0])
-        cylinder (h=D03_tloustka_materialu ,r=D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem+D03_tloustka_materialu ,$fn=100);
-            
-            
-     translate ([0,0,-0.01])
-        cylinder (h=D03_tloustka_materialu+0.02 ,r= D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem-D03_material_za_zavitem_pridani ,$fn=100);        
-            
-    }
-
-
-
 //screen
     
-     translate ([0,0,3*D03_tloustka_materialu])
-    difference () {
+translate ([0,0,3*D03_tloustka_materialu])
+difference () {
+    union () { 
         cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu,r1=D03_polomer_stitu ,r2=D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem-D03_material_za_zavitem_pridani,$fn=100);
-        translate ([0,0,-0.01/2-D03_tloustka_materialu])
-            cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu+0.01,r1=D03_polomer_stitu ,r2=D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem-D03_material_za_zavitem_pridani,$fn=100);
        
-        translate ([0,0,D03_vyska_stitu-D03_vyska_zavitu-3*D03_tloustka_materialu])
+    //materiál pod horním závitem       
+        translate ([0,0,D03_vyska_stitu-2*D03_tloustka_materialu-3*D03_tloustka_materialu])
+            translate ([0,0,0])
+                cylinder (h=2*D03_tloustka_materialu ,r=D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem+D03_tloustka_materialu ,$fn=100);     
+                       
+            }
+            
+    //materiál pod horním závitem - odečet        
+    translate ([0,0,D03_vyska_stitu-2*D03_tloustka_materialu-3*D03_tloustka_materialu]) 
+        translate ([0,0,-0.01])
+            cylinder (h=2*D03_tloustka_materialu+0.02 ,r= D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem-D03_material_za_zavitem_pridani ,$fn=100);  
+              
+    translate ([0,0,-0.01/2-D03_tloustka_materialu])
+        cylinder (h=D03_vyska_stitu-3*D03_tloustka_materialu+0.01,r1=D03_polomer_stitu ,r2=D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem-D03_material_za_zavitem_pridani,$fn=100);
+       
+    translate ([0,0,D03_vyska_stitu-D03_vyska_zavitu-3*D03_tloustka_materialu])
         cylinder (h=D03_vyska_zavitu+0.02 ,r= D03_polomer_zavitu -D03_tolerance_zavitu- D03_material_za_zavitem-D03_material_za_zavitem_pridani ,$fn=100);
-    
-       
-                    }
-
+          
+                }
 
 //inner ring
-
 //spodní závit
-    difference () {
-        
-        union(){
+difference () {
+    union(){
         cylinder (h=D03_vyska_zavitu,r = D03_polomer_zavitu + D03_material_za_zavitem/2,$fn=100);
-        
-            //výztuhy
-        // center ribs
+      
+//výztuhy
+// center ribs
 for (i = [0 : (D03_pocet_vyztuh-1)]) {
 	rotate ([90,0,angle_sep* i])
 	translate ([0,0,-D03_tloustka_materialu/2])
@@ -110,13 +96,8 @@ for (i = [0 : (D03_pocet_vyztuh-1)]) {
 	polygon(points=[[D03_polomer_zavitu- D03_material_za_zavitem-D03_tolerance_zavitu-D03_material_za_zavitem_pridani,D03_vyska_stitu],[D03_polomer_zavitu, 0],[D03_polomer_stitu - D03_tloustka_materialu,0],[D03_polomer_stitu- D03_tloustka_materialu,3*D03_tloustka_materialu]]);
 
 }
-        
-        
-         }
-        translate([0,0,-1])
-                screw_thread(D03_polomer_zavitu*2,4,55,D03_vyska_zavitu+2,PI/2,2);  
+            }
+translate([0,0,-1])
+    screw_thread(D03_polomer_zavitu*2,4,55,D03_vyska_zavitu+2,PI/2,2);  
                     }
-
-
-
 }
