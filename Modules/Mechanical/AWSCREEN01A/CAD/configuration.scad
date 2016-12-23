@@ -37,7 +37,7 @@ S01_prumer_zavitu=2*D03_polomer_zavitu;
 
 
 //AWSCREEN01A_D06 //uchyt na sloup
-D02_sila_materialu=4;
+D02_sila_materialu=6;
 D02_vyska_uchytky=40;
 D02_prumer_obruby=27; 
 
