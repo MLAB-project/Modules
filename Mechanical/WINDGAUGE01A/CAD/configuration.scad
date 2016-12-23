@@ -18,7 +18,7 @@ S01_tolerance_zavit=1.5;
 //Rozměry ložiska se závity
 //LO_spodni_prumer=22;
 LO_spodni_prumer=17.2; //bez krytu
-LO_vyska_bez_krytu=13;
+LO_vyska_bez_krytu=15;
 LO_doraz_prumer=44.3;
 LO_horni_prumer=7.7;
 LO_vyska_spodni_doraz=5;
