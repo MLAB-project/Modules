@@ -17,7 +17,7 @@ difference()
  union()  
    {
 //výstuha
- //translate ([0,0,-D03_tloustka_materialu/2])
+ translate ([+D03_tloustka_materialu/2,0,0])
 	rotate ([0,-90,0])
        linear_extrude (height = D03_tloustka_materialu, convexity = 10)
 	polygon(points=[[D02_vyska_uchytky/2,D01_delka_tyce+S01_prumer_zavitu/2+D01_material_pred_zavitem+D02_sila_materialu],[0, D01_delka_tyce+S01_prumer_zavitu/2+D01_material_pred_zavitem+D02_sila_materialu],[0,D03_polomer_stitu+D01_material_pred_zavitem],[D01_material_pod_zavitem,D03_polomer_stitu+D01_material_pred_zavitem]]);      
@@ -64,7 +64,7 @@ difference()
        
        translate([0,D01_delka_tyce+S01_prumer_zavitu/2+D01_material_pred_zavitem+D02_sila_materialu+(D02_prumer_obruby)/2,D02_vyska_uchytky/2])
         rotate(a=[0,0,270])
-            AWSCREEN01A_D06_2();      
+            AWSCREEN01A_D06();      
 
 }
 
