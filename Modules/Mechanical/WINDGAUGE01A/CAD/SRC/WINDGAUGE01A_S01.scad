@@ -64,6 +64,7 @@ module WINDGAUGE01A_S01()
                 
                 cylinder (h = LO_vyska_bez_krytu, r=(LO_spodni_prumer)/2, $fn=100);
                 }
+/*
 //držák ložiska doraz                
  difference()
             {
@@ -76,9 +77,10 @@ module WINDGAUGE01A_S01()
    cylinder(h=2*S01_sila_materialu, r1=(LO_spodni_prumer)/2, r2=(LO_spodni_prumer-2*S01_sila_materialu)/2, center=false,$fn=100);    
                 }                
                 
-        }
-    }
-
+        
+   
+*/
+ }}
 
 //sloupek na senzor
 module SLOUPEK()
