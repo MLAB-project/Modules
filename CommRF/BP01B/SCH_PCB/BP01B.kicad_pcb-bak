@@ -1,4 +1,4 @@
-(kicad_pcb (version 20160815) (host pcbnew "(2016-09-17 revision 679eef1)-makepkg")
+(kicad_pcb (version 20160815) (host pcbnew no-vcs-found-7409~56~ubuntu16.04.1)
 
   (general
     (links 49)
@@ -83,7 +83,7 @@
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFF7F)
     (pcbplotparams
-      (layerselection 0x00030_80000001)
+      (layerselection 0x010e0_ffffffff)
       (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.150000)
@@ -103,9 +103,9 @@
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory ../CAM_PROFI/))
   )
 
   (net 0 "")
@@ -1403,9 +1403,9 @@
   (segment (start 35.56 -20.2565) (end 35.4965 -20.32) (width 0.9) (layer B.Cu) (net 7))
   (segment (start 43.688 -24.892) (end 43.688 -23.2935) (width 0.9) (layer B.Cu) (net 8))
   (segment (start 43.688 -23.2935) (end 44.1215 -22.86) (width 0.9) (layer B.Cu) (net 8))
-  (segment (start 44.1215 -22.86) (end 45.477 -22.86) (width 0.9) (layer B.Cu) (net 8))
-  (segment (start 45.477 -22.86) (end 46.4185 -21.9185) (width 0.9) (layer B.Cu) (net 8))
-  (segment (start 46.4185 -21.9185) (end 46.4185 -20.32) (width 0.9) (layer B.Cu) (net 8))
+  (segment (start 46.4185 -21.5011) (end 46.4185 -20.32) (width 0.9) (layer B.Cu) (net 8))
+  (segment (start 44.1215 -22.86) (end 45.0596 -22.86) (width 0.9) (layer B.Cu) (net 8))
+  (segment (start 45.0596 -22.86) (end 46.4185 -21.5011) (width 0.9) (layer B.Cu) (net 8))
   (segment (start 46.4185 -20.32) (end 50.8 -20.32) (width 0.9) (layer B.Cu) (net 8))
   (segment (start 43.1165 -20.32) (end 44.5135 -20.32) (width 0.9) (layer B.Cu) (net 9))
 
