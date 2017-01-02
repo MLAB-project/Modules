@@ -1,15 +1,21 @@
 M48
-;DRILL file {KiCad 4.0.1-3.201512221401+6198~38~ubuntu15.10.1-stable} date Út 19. leden 2016, 20:27:32 CET
-;FORMAT={-:-/ absolute / inch / decimal}
+;DRILL file {KiCad (2016-09-17 revision 679eef1)-makepkg} date 01/02/17 11:13:42
+;FORMAT={3:3/ absolute / metric / suppress leading zeros}
 FMAT,2
-INCH,TZ
-T1C0.106
+METRIC,TZ
+T1C1.300
+T2C1.750
+T3C2.700
 %
 G90
 G05
-M72
+M71
 T1
-X1.52Y1.89
-X1.52Y1.74
+X21432Y16484
+T2
+X33432Y32284
+T3
+X38608Y48006
+X38608Y44196
 T0
 M30
