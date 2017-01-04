@@ -16,7 +16,8 @@ S01_hrana_B_RJ11=19;
 S01_tolerance_zavit=1.5;
 
 //Obecné parametry
-prumer_osicky=5.3;
+prumer_osicky=5;
+sterbina_na_osicku=0.5; //aby nepraskal a držel držák rotoru na hřídelce
 
 //Rozmery modulu se senzorem
 senzor_delka=20.32;

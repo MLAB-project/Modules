@@ -44,6 +44,12 @@ module WINDGAUGE02A_R03()
             
             cylinder(  S01_sila_materialu, d1=lozisko_prumer_vnitrni+2*lozisko_prekryv,d2=R05_sirka_matky  );
             }
+            
+            
+  //sterbina
+translate([0,0,-R01_mezera_mezi_statorem_rotorem]) 
+   cube([(lozisko_prumer_vnitrni+2*lozisko_prekryv+2)/2+2,sterbina_na_osicku,R01_vyska_preryti_statoru+R01_mezera_mezi_statorem_rotorem+0.2]);          
+            
         }
     }
 

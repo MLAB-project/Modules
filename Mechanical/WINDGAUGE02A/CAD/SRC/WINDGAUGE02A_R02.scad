@@ -26,6 +26,12 @@ module WINDGAUGE02A_R02()
         translate([0,0,-R01_mezera_mezi_statorem_rotorem-0.05])        
             cylinder (h = R01_vyska_preryti_statoru+R01_mezera_mezi_statorem_rotorem+0.1, r=prumer_osicky/2, $fn=100);
 
+
+//sterbina
+translate([0,0,-R01_mezera_mezi_statorem_rotorem]) 
+   cube([(lozisko_prumer_vnitrni+2*lozisko_prekryv+2)/2+2,sterbina_na_osicku,R01_vyska_preryti_statoru+R01_mezera_mezi_statorem_rotorem+0.2]);
+
+
         }
 
     }
