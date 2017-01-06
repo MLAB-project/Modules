@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source C:\Chroust\Zaloha\stare\MLAB\Modules\CommRF\BP01B\SCH_PCB\BP01B.sch)
-    (date "16. 12. 2016 13:57:46")
+    (source C:\Chroust\Zaloha\stare\MLAB_G\Modules\CommRF\BP01B\SCH_PCB\BP01B.sch)
+    (date "6. 1. 2017 10:24:58")
     (tool "Eeschema (2016-09-17 revision 679eef1)-makepkg")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -52,7 +52,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 584A84A8))
     (comp (ref C1)
-      (value 1nF)
+      (value 100nF)
       (footprint Mlab_R:SMD-0805)
       (libsource (lib device) (part C_Small))
       (sheetpath (names /) (tstamps /))
@@ -130,7 +130,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 584A9631))
     (comp (ref C17)
-      (value 1nF)
+      (value 100nF)
       (footprint Mlab_R:SMD-0805)
       (libsource (lib device) (part C_Small))
       (sheetpath (names /) (tstamps /))
@@ -256,7 +256,7 @@
     (library (logical device)
       (uri C:\KiCad\share\kicad\library\device.lib))
     (library (logical BP01B-cache)
-      (uri C:\Chroust\Zaloha\stare\MLAB\Modules\CommRF\BP01B\SCH_PCB\BP01B-cache.lib)))
+      (uri C:\Chroust\Zaloha\stare\MLAB_G\Modules\CommRF\BP01B\SCH_PCB\BP01B-cache.lib)))
   (nets
     (net (code 1) (name GND)
       (node (ref L5) (pin 1))

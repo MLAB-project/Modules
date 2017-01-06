@@ -1,4 +1,4 @@
-(kicad_pcb (version 20160815) (host pcbnew no-vcs-found-7409~56~ubuntu16.04.1)
+(kicad_pcb (version 20160815) (host pcbnew "(2016-09-17 revision 679eef1)-makepkg")
 
   (general
     (links 49)
@@ -139,7 +139,7 @@
     (add_net "Net-(C6-Pad1)")
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5CBA)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5CBA)
     (at 16.002 -20.32)
     (path /584A851A)
     (attr smd)
@@ -167,7 +167,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5CC0)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5CC0)
     (at 21.59 -30.734 90)
     (path /584A9E07)
     (attr smd)
@@ -195,7 +195,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5CC6)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5CC6)
     (at 24.13 -19.304 90)
     (path /584A88A6)
     (attr smd)
@@ -223,7 +223,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5CD2)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5CD2)
     (at 24.384 -30.734 90)
     (path /584A9E8F)
     (attr smd)
@@ -251,7 +251,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5CD8)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5CD8)
     (at 26.924 -20.32 180)
     (path /584A8A5E)
     (attr smd)
@@ -279,7 +279,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5CDE)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5CDE)
     (at 31.75 -19.304 90)
     (path /584A941D)
     (attr smd)
@@ -307,7 +307,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5CEA)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5CEA)
     (at 34.544 -20.32 180)
     (path /584A9379)
     (attr smd)
@@ -335,7 +335,7 @@
     )
   )
 
-  (module Mlab_C:TantalC_SizeC_Reflow (layer B.Cu) (tedit 586B3F01) (tstamp 584E5CF0)
+  (module Mlab_C:TantalC_SizeC_Reflow (layer B.Cu) (tedit 586F5E77) (tstamp 584E5CF0)
     (at 34.29 -31.75 90)
     (descr "Tantal Cap. , Size C, EIA-6032, Reflow,")
     (tags "Tantal Cap. , Size C, EIA-6032, Reflow,")
@@ -366,7 +366,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5CF6)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5CF6)
     (at 39.37 -19.304 90)
     (path /584A9559)
     (attr smd)
@@ -394,7 +394,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5D0E)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5D0E)
     (at 37.592 -30.48 90)
     (path /584AA61E)
     (attr smd)
@@ -422,7 +422,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5D14)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5D14)
     (at 40.132 -30.48 90)
     (path /584AA618)
     (attr smd)
@@ -450,7 +450,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5D1A)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5D1A)
     (at 45.466 -20.32 180)
     (path /584A98B9)
     (attr smd)
@@ -478,13 +478,13 @@
     )
   )
 
-  (module Mlab_D:SMB_Standard (layer B.Cu) (tedit 586B3F01) (tstamp 584E5D20)
+  (module Mlab_D:SMB_Standard (layer B.Cu) (tedit 586F5EAB) (tstamp 584E5D20)
     (at 29.21 -31.75 270)
     (descr "Diode SMB Standard")
     (tags "Diode SMB Standard")
     (path /584AA354)
     (attr smd)
-    (fp_text reference D1 (at 0 3.81 270) (layer B.SilkS)
+    (fp_text reference D1 (at 0.254 0 270) (layer B.SilkS)
       (effects (font (thickness 0.3048)) (justify mirror))
     )
     (fp_text value SMBJ15A-E3/52 (at 0 -3.81 270) (layer B.SilkS) hide
@@ -523,7 +523,7 @@
     )
   )
 
-  (module Mlab_CON:SMA6251A13G50 locked (layer F.Cu) (tedit 586B3F01) (tstamp 584E5D29)
+  (module Mlab_CON:SMA6251A13G50 locked (layer F.Cu) (tedit 586F5E77) (tstamp 584E5D29)
     (at 10.16 -20.32)
     (path /584A8252)
     (fp_text reference J1 (at 0 6.096) (layer F.SilkS)
@@ -565,7 +565,7 @@
       (net 2 "Net-(C1-Pad1)"))
   )
 
-  (module Mlab_CON:SMA6251A13G50 locked (layer F.Cu) (tedit 586B3F01) (tstamp 584E5D32)
+  (module Mlab_CON:SMA6251A13G50 locked (layer F.Cu) (tedit 586F5E77) (tstamp 584E5D32)
     (at 50.8 -20.32)
     (path /584A84A8)
     (fp_text reference J2 (at 0 7.112) (layer F.SilkS)
@@ -607,7 +607,7 @@
       (net 4 GND))
   )
 
-  (module Mlab_R:SMD-1812 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5D38)
+  (module Mlab_R:SMD-1812 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5D38)
     (at 17.526 -27.178 270)
     (tags "CMS SMD")
     (path /584A9631)
@@ -636,7 +636,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5D3E)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5D3E)
     (at 19.304 -20.32 180)
     (path /584A9157)
     (attr smd)
@@ -664,7 +664,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5D44)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5D44)
     (at 22.098 -19.304 90)
     (path /584A9186)
     (attr smd)
@@ -692,7 +692,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5D4A)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5D4A)
     (at 26.924 -22.352 180)
     (path /584A8DE8)
     (attr smd)
@@ -720,7 +720,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5D50)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5D50)
     (at 29.718 -19.304 90)
     (path /584A9423)
     (attr smd)
@@ -748,7 +748,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5D56)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5D56)
     (at 34.544 -22.352 180)
     (path /584A937F)
     (attr smd)
@@ -776,7 +776,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5D5C)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5D5C)
     (at 37.338 -19.304 90)
     (path /584A955F)
     (attr smd)
@@ -804,7 +804,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5D6E)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5D6E)
     (at 42.164 -20.32)
     (path /584A98C5)
     (attr smd)
@@ -832,7 +832,7 @@
     )
   )
 
-  (module Mlab_R:SMD-1812 (layer B.Cu) (tedit 586B3F01) (tstamp 584E5D74)
+  (module Mlab_R:SMD-1812 (layer B.Cu) (tedit 586F5E77) (tstamp 584E5D74)
     (at 43.688 -27.178 270)
     (tags "CMS SMD")
     (path /584A9A94)
@@ -861,7 +861,7 @@
     )
   )
 
-  (module Mlab_Mechanical:MountingHole_3mm locked placed (layer F.Cu) (tedit 586B3F01) (tstamp 584E5D79)
+  (module Mlab_Mechanical:MountingHole_3mm locked placed (layer F.Cu) (tedit 586F5E77) (tstamp 584E5D79)
     (at 55.88 -5.08)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
@@ -877,7 +877,7 @@
       (net 4 GND) (clearance 1) (zone_connect 2))
   )
 
-  (module Mlab_Mechanical:MountingHole_3mm locked placed (layer F.Cu) (tedit 586B3F01) (tstamp 584E5D7E)
+  (module Mlab_Mechanical:MountingHole_3mm locked placed (layer F.Cu) (tedit 586F5E77) (tstamp 584E5D7E)
     (at 5.08 -5.08)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
@@ -893,7 +893,7 @@
       (net 4 GND) (clearance 1) (zone_connect 2))
   )
 
-  (module Mlab_Mechanical:MountingHole_3mm locked placed (layer F.Cu) (tedit 586B3F01) (tstamp 584E5D83)
+  (module Mlab_Mechanical:MountingHole_3mm locked placed (layer F.Cu) (tedit 586F5E77) (tstamp 584E5D83)
     (at 55.88 -35.56)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
@@ -909,7 +909,7 @@
       (net 4 GND) (clearance 1) (zone_connect 2))
   )
 
-  (module Mlab_Mechanical:MountingHole_3mm placed (layer F.Cu) (tedit 586B3F01) (tstamp 584E5D88)
+  (module Mlab_Mechanical:MountingHole_3mm placed (layer F.Cu) (tedit 586F5E77) (tstamp 584E5D88)
     (at 5.08 -35.56)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
@@ -926,7 +926,7 @@
   )
 
   (dimension 60.452 (width 0.3) (layer Dwgs.User)
-    (gr_text "2,3800 in" (at 30.48 -43.9204) (layer Dwgs.User) (tstamp 586B9E3B)
+    (gr_text "2,3800 in" (at 30.48 -43.9204) (layer Dwgs.User) (tstamp 586F5EB1)
       (effects (font (size 1.5 1.5) (thickness 0.3)))
     )
     (feature1 (pts (xy 60.706 -40.132) (xy 60.706 -45.2704)))
@@ -938,7 +938,7 @@
     (arrow2b (pts (xy 0.254 -42.5704) (xy 1.380504 -43.156821)))
   )
   (dimension 39.878 (width 0.3) (layer Dwgs.User)
-    (gr_text "1,5700 in" (at 65.866 -20.193 90) (layer Dwgs.User) (tstamp 586B9E4A)
+    (gr_text "1,5700 in" (at 65.866 -20.193 90) (layer Dwgs.User) (tstamp 586F5EB2)
       (effects (font (size 1.5 1.5) (thickness 0.3)))
     )
     (feature1 (pts (xy 60.452 -40.132) (xy 67.216 -40.132)))
@@ -979,10 +979,10 @@
   (gr_text MLAB.CZ (at 44.704 -9.398) (layer B.Cu)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
-  (gr_line (start 0.254 -0.254) (end 0.254 -40.132) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 0.254 -0.254) (end 0.254 -40.386) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 60.706 -0.254) (end 0.254 -0.254) (layer Edge.Cuts) (width 0.15))
-  (gr_line (start 60.706 -40.132) (end 60.706 -0.254) (layer Edge.Cuts) (width 0.15))
-  (gr_line (start 0.254 -40.132) (end 60.706 -40.132) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 60.706 -40.386) (end 60.706 -0.254) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 0.254 -40.386) (end 60.706 -40.386) (layer Edge.Cuts) (width 0.15))
 
   (segment (start 18.3515 -20.32) (end 16.9545 -20.32) (width 0.9) (layer B.Cu) (net 1))
   (segment (start 10.16 -20.32) (end 15.0495 -20.32) (width 0.9) (layer B.Cu) (net 2))
@@ -1553,7 +1553,7 @@
         (xy 25.096903 -30.6585) (xy 25.0825 -30.661365) (xy 23.6855 -30.661365) (xy 23.671097 -30.6585) (xy 22.302903 -30.6585)
         (xy 22.2885 -30.661365) (xy 20.8915 -30.661365) (xy 20.877097 -30.6585) (xy 17.843505 -30.6585) (xy 17.8435 -30.658501)
         (xy 17.538669 -30.597865) (xy 15.621 -30.597865) (xy 15.454393 -30.564725) (xy 15.31315 -30.47035) (xy 15.218775 -30.329107)
-        (xy 15.185635 -30.1625) (xy 0.756 -30.1625) (xy 0.756 -39.63) (xy 60.204 -39.63)
+        (xy 15.185635 -30.1625) (xy 0.756 -30.1625) (xy 0.756 -39.884) (xy 60.204 -39.884)
       )
     )
   )
@@ -1576,7 +1576,7 @@
         (xy 49.851297 -21.74252) (xy 49.379138 -21.271184) (xy 49.123292 -20.655039) (xy 49.12271 -19.987888) (xy 11.83671 -19.987888)
         (xy 11.83729 -20.652112) (xy 11.58252 -21.268703) (xy 11.111184 -21.740862) (xy 10.495039 -21.996708) (xy 9.827888 -21.99729)
         (xy 9.211297 -21.74252) (xy 8.739138 -21.271184) (xy 8.483292 -20.655039) (xy 8.48271 -19.987888) (xy 0.756 -19.987888)
-        (xy 0.756 -39.63) (xy 60.204 -39.63)
+        (xy 0.756 -39.884) (xy 60.204 -39.884)
       )
     )
   )
