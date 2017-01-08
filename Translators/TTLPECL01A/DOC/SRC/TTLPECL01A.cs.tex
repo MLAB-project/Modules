@@ -77,11 +77,6 @@ potisku modulu vedle SATA konektoru permanentním fixem. Při osazení obvodem S
   \caption{Rozložení součástek na vrchní a spodní straně plošného spoje modulu.}
 \end{figure}
 
-\begin{tabular}{ccc}
-Označení & Typ & Pouzdro\\ 
-
-\end{tabular} 
-
 \begin{savenotes}
 \begin{table}[h!]
 \begin{center}
@@ -95,8 +90,8 @@ Počet & Označení & Typ  & Pouzdro  \\
 1	& 	J8 	& SATA connector &  \\
 1	&	(J9,J10,J11,J12) & JUMP2X4 & \\
 2	&	R1,R2	 & 33	& 0805\\
-4	& 	R3,R4,R7,R8	&	130 & 0805\\
-4	&	R5,R6,R9,R10	&	82 & 0805\\
+4	& 	R3,R4,R7,R8	&	130\footnote{Terminační rezistory se osazují pouze v případě differenčního vstupu} & 0805\\
+4	&	R5,R6,R9,R10	&	82 \footnote{Terminační rezistory se osazují pouze v případě differenčního vstupu} & 0805\\
 1	&	U1	&	SY100ELT22(23)\footnote{Konkrétní typ se osazuje podle typu vstupního signálu} & SO8 \\
 \hline 
 \end{tabular}
