@@ -1,6 +1,6 @@
 <!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
 <!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170111-16:38: ---> 
+<!--- Created:20170112-18:22: ---> 
 <!--- Author:Mlab: ---> 
 <!--- AuthorEmail:mlab@mlab.cz: ---> 
 <!--- Tags:imported: ---> 
@@ -16,6 +16,8 @@ The module is universal converter from USB to RS232 with TTL/CMOS
   signal levels (both 3.3V and 5V). The converter uses FT232R chip 
   from FTDI and is supported in all main operating systems.
 <!--- ELead ---> 
+
+![LeadImg](USB23201B_Top_Small.jpg) 
 
 
 ​

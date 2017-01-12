@@ -1,6 +1,6 @@
 <!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
 <!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170111-16:38: ---> 
+<!--- Created:20170112-18:22: ---> 
 <!--- Author:Mlab: ---> 
 <!--- AuthorEmail:mlab@mlab.cz: ---> 
 <!--- Tags:imported: ---> 
@@ -14,6 +14,8 @@
 <!--- Lead --->
 This base board has size 11x15 holes and standard MLAB grid 400mils (10.16mm). It is especially suited for simple measuring instruments and mobile robots constructions.
 <!--- ELead ---> 
+
+![LeadImg](ALBASE1115_Small.jpg) 
 
 
 ​

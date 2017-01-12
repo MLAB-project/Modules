@@ -1,6 +1,6 @@
 <!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
 <!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170111-16:38: ---> 
+<!--- Created:20170112-18:22: ---> 
 <!--- Author:Mlab: ---> 
 <!--- AuthorEmail:mlab@mlab.cz: ---> 
 <!--- Tags:imported: ---> 
@@ -15,6 +15,8 @@ Module with LCD 2 line display, 4 buttons and piezo
 Module with two-line LCD display (with Hitachi controller),
   with 4 push buttons and with piezoelement powered by 74HC04.
 <!--- ELead ---> 
+
+![LeadImg](LCD2L4P02A_PCB_Top_Small.jpg) 
 
 
 ​

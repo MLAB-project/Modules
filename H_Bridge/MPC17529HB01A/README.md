@@ -1,6 +1,6 @@
 <!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
 <!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170111-16:38: ---> 
+<!--- Created:20170112-18:22: ---> 
 <!--- Author:Mlab: ---> 
 <!--- AuthorEmail:mlab@mlab.cz: ---> 
 <!--- Tags:imported: ---> 
@@ -16,6 +16,8 @@ The module uses dual H-Bridge made by Freescale MC17529.
 The power voltage is 2.0-6.8V, the current 2x0.7A, 
 maximum current max 2x1.4A. It is intended for small motors.
 <!--- ELead ---> 
+
+![LeadImg](MPC17529HB01A_Top_Small.jpg) 
 
 
 ​

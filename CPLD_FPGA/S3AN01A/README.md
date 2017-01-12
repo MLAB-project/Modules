@@ -1,6 +1,6 @@
 <!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
 <!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170111-16:38: ---> 
+<!--- Created:20170112-18:22: ---> 
 <!--- Author:Mlab: ---> 
 <!--- AuthorEmail:mlab@mlab.cz: ---> 
 <!--- Tags:imported: ---> 
@@ -22,6 +22,8 @@ Replaced by an updated version S3AN01B. <br>
   The board is powered from 5V, internal power supply is included.
   For timing there is one 100MHz crystal oscillator.
 <!--- ELead ---> 
+
+![LeadImg](S3AN01A_Top_Small.jpg) 
 
 
 ​

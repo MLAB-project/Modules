@@ -1,6 +1,6 @@
 <!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
 <!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170111-16:38: ---> 
+<!--- Created:20170112-18:22: ---> 
 <!--- Author:Mlab: ---> 
 <!--- AuthorEmail:mlab@mlab.cz: ---> 
 <!--- Tags:imported: ---> 
@@ -20,6 +20,8 @@ The mlab_xvcd program converts JTAG commands received across TCP/IP
   tools (both configuration tool IMPACT and debugging 
   embedded logic analyzer ChipScope Analyzer).
 <!--- ELead ---> 
+
+![LeadImg](XVC_SOFTWARE_Small.png) 
 
 
 ​

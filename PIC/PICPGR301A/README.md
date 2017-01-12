@@ -1,6 +1,6 @@
 <!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
 <!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170111-16:38: ---> 
+<!--- Created:20170112-18:22: ---> 
 <!--- Author:Mlab: ---> 
 <!--- AuthorEmail:mlab@mlab.cz: ---> 
 <!--- Tags:imported: ---> 
@@ -16,6 +16,8 @@ The programmer uses LPT port of PC and contains 5V voltage regulator so it can b
   for powering target application. The programmer has tree state outputs and that is why it is 
   not necessary to disconnect it from target application while debugging.
 <!--- ELead ---> 
+
+![LeadImg](PICPGR301A_Small.jpg) 
 
 
 ​

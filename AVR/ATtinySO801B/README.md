@@ -1,6 +1,6 @@
 <!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
 <!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170111-16:38: ---> 
+<!--- Created:20170112-18:22: ---> 
 <!--- Author:Mlab: ---> 
 <!--- AuthorEmail:mlab@mlab.cz: ---> 
 <!--- Tags:imported: ---> 
@@ -15,6 +15,8 @@ Module for ATtiny in SO8 package
 The processor module for TAMEL ATtiny in SO8 package consists of 
   processor, headers, programming header and RESET push button.
 <!--- ELead ---> 
+
+![LeadImg](ATtinySO801B_TOP_Small.jpg) 
 
 
 ​

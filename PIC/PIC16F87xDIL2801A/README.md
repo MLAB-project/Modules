@@ -1,6 +1,6 @@
 <!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
 <!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170111-16:38: ---> 
+<!--- Created:20170112-18:22: ---> 
 <!--- Author:Mlab: ---> 
 <!--- AuthorEmail:mlab@mlab.cz: ---> 
 <!--- Tags:imported: ---> 
@@ -17,6 +17,8 @@ PIC microprocesor module
 [InfoShortDescription.cs]
 Modul pro procesor PIC
 <!--- ELead ---> 
+
+![LeadImg](PIC16F87xDIL2801A_Small.jpg) 
 
 
 ​

@@ -1,6 +1,6 @@
 <!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
 <!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170111-16:38: ---> 
+<!--- Created:20170112-18:22: ---> 
 <!--- Author:Mlab: ---> 
 <!--- AuthorEmail:mlab@mlab.cz: ---> 
 <!--- Tags:imported: ---> 
@@ -15,6 +15,8 @@ USB ISP AVR programmer
 The USB programmer allows ISP programming of Atmel AVR uControllers.
   It can provide target 3.3V or 5V power from USB.
 <!--- ELead ---> 
+
+![LeadImg](ATprogISPUSB02A_Top_Small.jpg) 
 
 
 ​

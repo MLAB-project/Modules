@@ -1,6 +1,6 @@
 <!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
 <!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170111-16:38: ---> 
+<!--- Created:20170112-18:22: ---> 
 <!--- Author:Mlab: ---> 
 <!--- AuthorEmail:mlab@mlab.cz: ---> 
 <!--- Tags:imported: ---> 
@@ -16,6 +16,8 @@ Module with two-line LCD display with Hitachi controller and
   with 4 push buttons. It can be used as human interface for
   small projects with microcontrollers.
 <!--- ELead ---> 
+
+![LeadImg](LCD2L4P01A_Small.jpg) 
 
 
 ​
