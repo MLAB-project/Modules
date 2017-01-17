@@ -56,13 +56,21 @@ module WINDGAUGE01A_S01()
 //držák ložiska
  difference()
             {
- cylinder (h = LO_vyska_bez_krytu, r=(LO_spodni_prumer+2*S01_sila_materialu)/2, $fn=100); 
+ cylinder (h = LO_vyska_bez_krytu+2+prumer_sroubu+2*S01_sila_materialu, r=(LO_spodni_prumer+4*S01_sila_materialu)/2, $fn=100); 
   
-              translate([0,0,LO_vyska_bez_krytu])   
-   cylinder(h=R02_zavit_vyska+100, r1=(LO_spodni_prumer+S01_sila_materialu)/2, r2=(LO_spodni_prumer+2*S01_sila_materialu)/2, center=false,$fn=100); 
-               
+                         
+         //otvor na ložisko       
+                cylinder (h = LO_vyska_bez_krytu+2+prumer_sroubu+2*S01_sila_materialu+0.5, r=(LO_spodni_prumer)/2, $fn=100);
                 
-                cylinder (h = LO_vyska_bez_krytu, r=(LO_spodni_prumer)/2, $fn=100);
+       //otvor na zasunuti loziska do ohradky         
+                translate([0,0,LO_vyska_bez_krytu]) 
+                cylinder (h = 2+prumer_sroubu+2*S01_sila_materialu+0.5, r=(LO_spodni_prumer+2*S01_sila_materialu)/2, $fn=100);
+                
+      //otvor na pojistny sroub
+        translate([0,(LO_spodni_prumer+4*S01_sila_materialu+1)/2,LO_vyska_bez_krytu+2+0.4+(prumer_sroubu)/2]) 
+              rotate(a=[90,0,0])
+                cylinder (h = LO_spodni_prumer+4*S01_sila_materialu+1, r=(prumer_sroubu)/2, $fn=100); 
+                
                 }
 /*
 //držák ložiska doraz                
@@ -110,3 +118,4 @@ translate([0,0,S01_sila_materialu])
   
 WINDGAUGE01A_S01(); 
 
+ 
