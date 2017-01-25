@@ -201,7 +201,7 @@ module lista(){
 difference () {
 
 union () {
-	cube([D02_sila_materialu,2*D02_sila_materialu+tloustka_plbase+D02_dolerance_na_zasunuti,(pocet_der2-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*radidus_hrany-2*D02_sila_materialu]);
+	cube([D02_sila_materialu,2*D02_sila_materialu+tloustka_plbase+D02_dolerance_na_zasunuti,(pocet_der2-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*radidus_hrany-D02_sila_materialu]);
     
    
     translate([0,(2*D02_sila_materialu+tloustka_plbase+D02_dolerance_na_zasunuti)/2,0]) 
@@ -210,14 +210,14 @@ union () {
 cylinder(h=2*D02_sila_materialu+tloustka_plbase+D02_dolerance_na_zasunuti, r=D02_sila_materialu, center=true);
     
     //vrchni zakulaceni
-    translate([0,(2*D02_sila_materialu+tloustka_plbase+D02_dolerance_na_zasunuti)/2,(pocet_der2-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*radidus_hrany-2*D02_sila_materialu]) 
+    translate([0,(2*D02_sila_materialu+tloustka_plbase+D02_dolerance_na_zasunuti)/2,(pocet_der2-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*radidus_hrany-D02_sila_materialu]) 
      rotate([0,90,90])   
 cylinder(h=2*D02_sila_materialu+tloustka_plbase+D02_dolerance_na_zasunuti, r=D02_sila_materialu, center=true);
 }
 
 
 translate([0,D02_sila_materialu,-D02_sila_materialu])
-cube([D02_sila_materialu,tloustka_plbase+D02_dolerance_na_zasunuti,(pocet_der2-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*radidus_hrany-D02_sila_materialu]);
+cube([D02_sila_materialu,tloustka_plbase+D02_dolerance_na_zasunuti,(pocet_der2-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*radidus_hrany]);
 
 }
 

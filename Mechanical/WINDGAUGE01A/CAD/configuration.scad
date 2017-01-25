@@ -52,8 +52,8 @@ magnet_tolerance_prumeru=0.2;
 
 //Parametry sroubu
 prumer_sroubu=3.4;
-prumer_hlavy_sroubu=6;
-vyska_hlavy_sroubu=4;
+prumer_hlavy_sroubu=8.2;
+vyska_hlavy_sroubu=4.3;
 vyska_matky=3;
 sirka_matky=6.7;
 
