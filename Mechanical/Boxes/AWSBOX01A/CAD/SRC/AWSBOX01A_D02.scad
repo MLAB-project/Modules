@@ -2,9 +2,17 @@ $fn=40; // model faces resolution.
 include <AWSBOX01A_D02_2.scad>
 include <../configuration.scad>
 
-      
+use <MLAB_logo.scad>
 
-AWSBOX01A_D02();
+
+
+AWSBOX01A_D02(); 
+
+
+
+ 
+    
+
 
 module AWSBOX01A_D02(){
 
@@ -149,6 +157,16 @@ sphere(d = 2*radidus_hrany-2*D02_sila_materialu, center=true, $fn=100);
 translate([radidus_hrany,D02_vyska_boxu_pod_plbase+D02_vyska_boxu_nad_plbase+2*D02_sila_materialu+radidus_hrany,(pocet_der2-1)*vzdalenost_der+2*vzdalenost_od_okraje-2*radidus_hrany+2*radidus_hrany+D02_zapusteni_spodniho_krytu]) 
 
 sphere(d = 2*radidus_hrany-2*D02_sila_materialu, center=true, $fn=100);
+
+// MLAB logo
+translate ([((pocet_der1-1)*vzdalenost_der+2*vzdalenost_od_okraje+2*radidus_hrany+2*D02_sila_materialu+D02_dolerance_na_zasunuti)-40,D02_vyska_boxu_pod_plbase+D02_vyska_boxu_nad_plbase+2*D02_sila_materialu+2*radidus_hrany-0.4, 15])  
+            rotate ([90,0,180])
+                scale(v = [0.2, 0.2, 0.2])
+                    MLAB_logo_short();   
+       
+    
+
+
 
 }
 
