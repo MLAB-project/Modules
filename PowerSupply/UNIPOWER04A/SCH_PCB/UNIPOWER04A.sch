@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:MLAB_SW
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -10,6 +9,7 @@ LIBS:74xx
 LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
+LIBS:xilinx
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -28,15 +28,10 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:MLAB_BATERY
-LIBS:MLAB_CONNECTORS
-LIBS:MLAB_D
-LIBS:MLAB_IO
-LIBS:MLAB_Jumpers
-LIBS:MLAB_T
-LIBS:MLAB_U
+LIBS:header
+LIBS:mechanical
 LIBS:UNIPOWER04A-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -373,7 +368,7 @@ Wire Wire Line
 	2300 5050 2300 5000
 Connection ~ 2300 5000
 Wire Wire Line
-	2050 5050 2050 5000
+	2050 5000 2050 5100
 Connection ~ 2050 5000
 Wire Wire Line
 	3100 4900 2900 4900
@@ -420,7 +415,7 @@ Wire Wire Line
 Wire Wire Line
 	2300 5850 2300 5450
 Wire Wire Line
-	2050 5500 2050 5450
+	2050 5400 2050 5500
 $Comp
 L JUMP_4X2 J4
 U 1 1 58816065
@@ -572,7 +567,7 @@ Wire Wire Line
 	2300 6550 2300 6500
 Connection ~ 2300 6500
 Wire Wire Line
-	2050 6550 2050 6500
+	2050 6500 2050 6600
 Connection ~ 2050 6500
 Wire Wire Line
 	3100 6400 2900 6400
@@ -619,7 +614,7 @@ Wire Wire Line
 Wire Wire Line
 	2300 7350 2300 6950
 Wire Wire Line
-	2050 7000 2050 6950
+	2050 6900 2050 7000
 $Comp
 L JUMP_4X2 J7
 U 1 1 588160D2
@@ -771,7 +766,7 @@ Wire Wire Line
 	5550 5050 5550 5000
 Connection ~ 5550 5000
 Wire Wire Line
-	5300 5050 5300 5000
+	5300 5000 5300 5100
 Connection ~ 5300 5000
 Wire Wire Line
 	6350 4900 6150 4900
@@ -818,7 +813,7 @@ Wire Wire Line
 Wire Wire Line
 	5550 5850 5550 5450
 Wire Wire Line
-	5300 5500 5300 5450
+	5300 5400 5300 5500
 $Comp
 L JUMP_4X2 J8
 U 1 1 5881613F
@@ -970,7 +965,7 @@ Wire Wire Line
 	5550 6550 5550 6500
 Connection ~ 5550 6500
 Wire Wire Line
-	5300 6550 5300 6500
+	5300 6500 5300 6600
 Connection ~ 5300 6500
 Wire Wire Line
 	6350 6400 6150 6400
@@ -1017,7 +1012,7 @@ Wire Wire Line
 Wire Wire Line
 	5550 7350 5550 6950
 Wire Wire Line
-	5300 7000 5300 6950
+	5300 6900 5300 7000
 $Comp
 L JUMP_4X2 J11
 U 1 1 588165D4
@@ -1169,7 +1164,7 @@ Wire Wire Line
 	8800 3550 8800 3500
 Connection ~ 8800 3500
 Wire Wire Line
-	8550 3550 8550 3500
+	8550 3500 8550 3600
 Connection ~ 8550 3500
 Wire Wire Line
 	9600 3400 9400 3400
@@ -1216,7 +1211,7 @@ Wire Wire Line
 Wire Wire Line
 	8800 4350 8800 3950
 Wire Wire Line
-	8550 4000 8550 3950
+	8550 3900 8550 4000
 $Comp
 L JUMP_4X2 J2
 U 1 1 588186D1
@@ -1368,7 +1363,7 @@ Wire Wire Line
 	2300 3550 2300 3500
 Connection ~ 2300 3500
 Wire Wire Line
-	2050 3550 2050 3500
+	2050 3500 2050 3600
 Connection ~ 2050 3500
 Wire Wire Line
 	3100 3400 2900 3400
@@ -1415,7 +1410,7 @@ Wire Wire Line
 Wire Wire Line
 	2300 4350 2300 3950
 Wire Wire Line
-	2050 4000 2050 3950
+	2050 3900 2050 4000
 $Comp
 L JUMP_4X2 J6
 U 1 1 5881873E
@@ -1567,7 +1562,7 @@ Wire Wire Line
 	5550 3550 5550 3500
 Connection ~ 5550 3500
 Wire Wire Line
-	5300 3550 5300 3500
+	5300 3500 5300 3600
 Connection ~ 5300 3500
 Wire Wire Line
 	6350 3400 6150 3400
@@ -1614,7 +1609,7 @@ Wire Wire Line
 Wire Wire Line
 	5550 4350 5550 3950
 Wire Wire Line
-	5300 4000 5300 3950
+	5300 3900 5300 4000
 $Comp
 L JUMP_4X2 J5
 U 1 1 5881B110
@@ -1766,7 +1761,7 @@ Wire Wire Line
 	5550 2050 5550 2000
 Connection ~ 5550 2000
 Wire Wire Line
-	5300 2050 5300 2000
+	5300 2000 5300 2100
 Connection ~ 5300 2000
 Wire Wire Line
 	6350 1900 6150 1900
@@ -1813,7 +1808,7 @@ Wire Wire Line
 Wire Wire Line
 	5550 2850 5550 2450
 Wire Wire Line
-	5300 2500 5300 2450
+	5300 2400 5300 2500
 $Comp
 L JUMP_4X2 J9
 U 1 1 5881B17D
@@ -1965,7 +1960,7 @@ Wire Wire Line
 	8800 2050 8800 2000
 Connection ~ 8800 2000
 Wire Wire Line
-	8550 2050 8550 2000
+	8550 2000 8550 2100
 Connection ~ 8550 2000
 Wire Wire Line
 	9600 1900 9400 1900
@@ -2012,7 +2007,7 @@ Wire Wire Line
 Wire Wire Line
 	8800 2850 8800 2450
 Wire Wire Line
-	8550 2500 8550 2450
+	8550 2400 8550 2500
 $Comp
 L CONN1_1 J12
 U 1 1 58821980
