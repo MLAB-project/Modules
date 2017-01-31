@@ -1,6 +1,13 @@
+height = 1.5;
 
 module body() {
-    color("Red") cube([110,55,1]); 
+    translate([2,2,0])
+        minkowski()
+        {
+            $fn=30;
+            color("Red") cube([110-4,55-4,height/2]); 
+            cylinder(r=2,h=height/2);
+        }    
 }
 
 module bigFrame() {
@@ -12,7 +19,7 @@ module smallFrame() {
 }
 
 module hole() {
-    color("blue") cylinder($fn=20, h=10, r=1.5);
+        color("blue") cylinder($fn=10, h=10, r=1.6);
 }
 
 module object(){
@@ -28,13 +35,3 @@ module object(){
 }
 
 object();
-
-/*
-difference() {
-    cube(30, center=true);
-    sphere(20);
-}
-translate([0, 0, 30]) {
-    cylinder(h=40, r=10);
-}
-    */
