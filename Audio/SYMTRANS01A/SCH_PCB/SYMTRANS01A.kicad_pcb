@@ -178,7 +178,7 @@
     (add_net "Net-(J6-Pad2)")
   )
 
-  (module Mlab_TR:H110X_H1121_HX1188 (layer B.Cu) (tedit 57FDEED8) (tstamp 57DB7D38)
+  (module Mlab_TR:H110X_H1121_HX1188 (layer B.Cu) (tedit 5890279D) (tstamp 57DB7D38)
     (at 26.924 -20.32 90)
     (path /57DA8991)
     (fp_text reference TR1 (at 0 -0.5 90) (layer B.SilkS)
@@ -222,7 +222,7 @@
       (net 20 /AOUT+))
   )
 
-  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 57FDEE7A) (tstamp 57DB7CB8)
+  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 5890279D) (tstamp 57DB7CB8)
     (at 10.5156 -27.1272 180)
     (path /57D7EDD1)
     (attr smd)
@@ -250,7 +250,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 57FDEE7A) (tstamp 57DB7CDF)
+  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 5890279D) (tstamp 57DB7CDF)
     (at 14.3764 -25.908 90)
     (path /57D7EDC5)
     (attr smd)
@@ -278,7 +278,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 57FDEE7A) (tstamp 57DB7D06)
+  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 5890279D) (tstamp 57DB7D06)
     (at 17.9705 -27.1272 180)
     (path /57D7EDDD)
     (attr smd)
@@ -306,7 +306,7 @@
     )
   )
 
-  (module Mlab_Pin_Headers:Straight_2x04 placed (layer F.Cu) (tedit 57FDEE7A) (tstamp 57DB7C26)
+  (module Mlab_Pin_Headers:Straight_2x04 placed (layer F.Cu) (tedit 5890279D) (tstamp 57DB7C26)
     (at 5.08 -25.908)
     (descr "pin header straight 2x04")
     (tags "pin header straight 2x04")
@@ -347,7 +347,7 @@
     )
   )
 
-  (module Mlab_Pin_Headers:Straight_2x04 placed (layer F.Cu) (tedit 57FDEE7A) (tstamp 57DB7C4A)
+  (module Mlab_Pin_Headers:Straight_2x04 placed (layer F.Cu) (tedit 5890279D) (tstamp 57DB7C4A)
     (at 36.576 -14.732)
     (descr "pin header straight 2x04")
     (tags "pin header straight 2x04")
@@ -388,7 +388,7 @@
     )
   )
 
-  (module Mlab_Pin_Headers:Straight_2x04 placed (layer F.Cu) (tedit 57FDEE7A) (tstamp 57DB7C56)
+  (module Mlab_Pin_Headers:Straight_2x04 placed (layer F.Cu) (tedit 5890279D) (tstamp 57DB7C56)
     (at 36.576 -25.908)
     (descr "pin header straight 2x04")
     (tags "pin header straight 2x04")
@@ -429,7 +429,7 @@
     )
   )
 
-  (module Mlab_Mechanical:MountingHole_3mm placed (layer F.Cu) (tedit 57FDEE7A) (tstamp 57DB7C60)
+  (module Mlab_Mechanical:MountingHole_3mm placed (layer F.Cu) (tedit 5890279D) (tstamp 57DB7C60)
     (at 35.56 -35.56)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
@@ -445,7 +445,7 @@
       (net 2 GND) (clearance 1) (zone_connect 2))
   )
 
-  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 57FDEE7A) (tstamp 57DB7C77)
+  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 5890279D) (tstamp 57DB7C77)
     (at 22.86 -6.096)
     (path /57D7E244)
     (attr smd)
@@ -473,7 +473,7 @@
     )
   )
 
-  (module Mlab_Pin_Headers:Straight_2x01 placed (layer F.Cu) (tedit 57FDEE7A) (tstamp 57DB7C2C)
+  (module Mlab_Pin_Headers:Straight_2x01 placed (layer F.Cu) (tedit 5890279D) (tstamp 57DB7C2C)
     (at 23.876 -10.668 270)
     (descr "pin header straight 2x01")
     (tags "pin header straight 2x01")
@@ -499,7 +499,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 57FDEE7A) (tstamp 57DB7C91)
+  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 5890279D) (tstamp 57DB7C91)
     (at 27.432 -6.096 180)
     (path /57D7E01A)
     (attr smd)
@@ -527,7 +527,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 57FDEE7A) (tstamp 57DB7C01)
+  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 5890279D) (tstamp 57DB7C01)
     (at 26.416 -3.048 270)
     (path /57D7D977)
     (attr smd)
@@ -555,7 +555,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 57FDEE7A) (tstamp 57DB7C0E)
+  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 5890279D) (tstamp 57DB7C0E)
     (at 26.416 -37.592 90)
     (path /57D7EA08)
     (attr smd)
@@ -583,7 +583,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 57FDEE7A) (tstamp 57DB7D13)
+  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 5890279D) (tstamp 57DB7D13)
     (at 17.9197 -13.462 180)
     (path /57D7E0F0)
     (attr smd)
@@ -611,7 +611,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 57FDEE7A) (tstamp 57DB7C9E)
+  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 5890279D) (tstamp 57DB7C9E)
     (at 27.432 -34.544 180)
     (path /57D7EA1A)
     (attr smd)
@@ -639,7 +639,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 57FDEE7A) (tstamp 57DB7CD2)
+  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 5890279D) (tstamp 57DB7CD2)
     (at 10.4648 -15.9512 180)
     (path /57D7E0A1)
     (attr smd)
@@ -667,7 +667,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 57FDEE7A) (tstamp 57DB7CEC)
+  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 5890279D) (tstamp 57DB7CEC)
     (at 14.3256 -14.732 90)
     (path /57D7DD01)
     (attr smd)
@@ -695,7 +695,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 57FDEE7A) (tstamp 57DB7CC5)
+  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 5890279D) (tstamp 57DB7CC5)
     (at 10.4648 -13.5128 180)
     (path /57D7E033)
     (attr smd)
@@ -723,7 +723,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 57FDEE7A) (tstamp 57DB7D20)
+  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 5890279D) (tstamp 57DB7D20)
     (at 17.9197 -16.002 180)
     (path /57D7E0F6)
     (attr smd)
@@ -751,7 +751,7 @@
     )
   )
 
-  (module Mlab_Mechanical:MountingHole_3mm placed (layer F.Cu) (tedit 57FDEE7A) (tstamp 57DB7C5B)
+  (module Mlab_Mechanical:MountingHole_3mm placed (layer F.Cu) (tedit 5890279D) (tstamp 57DB7C5B)
     (at 5.08 -35.56)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
@@ -767,7 +767,7 @@
       (net 2 GND) (clearance 1) (zone_connect 2))
   )
 
-  (module Mlab_Mechanical:MountingHole_3mm placed (layer F.Cu) (tedit 57FDEE7A) (tstamp 57DB7C6A)
+  (module Mlab_Mechanical:MountingHole_3mm placed (layer F.Cu) (tedit 5890279D) (tstamp 57DB7C6A)
     (at 5.08 -5.08)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
@@ -783,7 +783,7 @@
       (net 2 GND) (clearance 1) (zone_connect 2))
   )
 
-  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 57FDEE7A) (tstamp 57DB7BF4)
+  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 5890279D) (tstamp 57DB7BF4)
     (at 23.876 -37.592 90)
     (path /57D7EA26)
     (attr smd)
@@ -811,7 +811,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 57FDEE7A) (tstamp 57DB7C84)
+  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 5890279D) (tstamp 57DB7C84)
     (at 22.86 -34.544)
     (path /57D7EA38)
     (attr smd)
@@ -839,7 +839,7 @@
     )
   )
 
-  (module Mlab_Pin_Headers:Straight_2x01 placed (layer F.Cu) (tedit 57FDEE7A) (tstamp 57DB7C38)
+  (module Mlab_Pin_Headers:Straight_2x01 placed (layer F.Cu) (tedit 5890279D) (tstamp 57DB7C38)
     (at 26.416 -10.668 270)
     (descr "pin header straight 2x01")
     (tags "pin header straight 2x01")
@@ -865,7 +865,7 @@
     )
   )
 
-  (module Mlab_Mechanical:MountingHole_3mm placed (layer F.Cu) (tedit 57FDEE7A) (tstamp 57DB7C65)
+  (module Mlab_Mechanical:MountingHole_3mm placed (layer F.Cu) (tedit 5890279D) (tstamp 57DB7C65)
     (at 35.56 -5.08)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
@@ -881,7 +881,7 @@
       (net 2 GND) (clearance 1) (zone_connect 2))
   )
 
-  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 57FDEE7A) (tstamp 57DB7BE7)
+  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 5890279D) (tstamp 57DB7BE7)
     (at 23.876 -3.048 270)
     (path /57D7E232)
     (attr smd)
@@ -909,7 +909,7 @@
     )
   )
 
-  (module Mlab_Pin_Headers:Straight_2x04 placed (layer F.Cu) (tedit 57FDEE7A) (tstamp 57DB7C1A)
+  (module Mlab_Pin_Headers:Straight_2x04 placed (layer F.Cu) (tedit 5890279D) (tstamp 57DB7C1A)
     (at 5.08 -14.732)
     (descr "pin header straight 2x04")
     (tags "pin header straight 2x04")
@@ -950,7 +950,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 57FDEE7A) (tstamp 57DB7CAB)
+  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 5890279D) (tstamp 57DB7CAB)
     (at 10.5156 -24.6888 180)
     (path /57D7EDCB)
     (attr smd)
@@ -978,7 +978,7 @@
     )
   )
 
-  (module Mlab_Pin_Headers:Straight_2x01 placed (layer F.Cu) (tedit 57FDEE7A) (tstamp 57DB7C3E)
+  (module Mlab_Pin_Headers:Straight_2x01 placed (layer F.Cu) (tedit 5890279D) (tstamp 57DB7C3E)
     (at 26.416 -30.48 90)
     (descr "pin header straight 2x01")
     (tags "pin header straight 2x01")
@@ -1004,7 +1004,7 @@
     )
   )
 
-  (module Mlab_Pin_Headers:Straight_2x01 placed (layer F.Cu) (tedit 57FDEE7A) (tstamp 57DB7C32)
+  (module Mlab_Pin_Headers:Straight_2x01 placed (layer F.Cu) (tedit 5890279D) (tstamp 57DB7C32)
     (at 23.876 -30.48 90)
     (descr "pin header straight 2x01")
     (tags "pin header straight 2x01")
@@ -1030,7 +1030,7 @@
     )
   )
 
-  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 57FDEE7A) (tstamp 57DB7CF9)
+  (module Mlab_R:SMD-0805 placed (layer B.Cu) (tedit 5890279D) (tstamp 57DB7CF9)
     (at 17.9705 -24.6888 180)
     (path /57D7EDD7)
     (attr smd)
@@ -1070,13 +1070,13 @@
   (gr_text BIAS (at 25.2476 -24.7904 90) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
-  (gr_text 2016 (at 14.732 -4.572) (layer B.Cu)
+  (gr_text 2017 (at 14.732 -4.572) (layer B.Cu)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
   (gr_text MLAB.CZ (at 14.732 -7.62) (layer B.Cu)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
-  (gr_text "JACHO 2016" (at 16.2052 -2.8956) (layer F.SilkS)
+  (gr_text "JACHO 2017" (at 16.2052 -2.8956) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
   (gr_text MLAB.CZ (at 16.256 -21.336 90) (layer F.SilkS)
