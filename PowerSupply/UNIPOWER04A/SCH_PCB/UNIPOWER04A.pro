@@ -1,4 +1,4 @@
-update=Pá 27. leden 2017, 19:26:38 CET
+update=12. 2. 2016 10:26:35
 version=1
 last_client=kicad
 [pcbnew]
@@ -74,13 +74,3 @@ LibName42=MLAB_T
 LibName43=MLAB_U
 LibName44=OpAmp
 LibName45=sata7-67491-1030
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceAjustPassiveValues=0
-LabSize=60
-ERC_TestSimilarLabels=1
