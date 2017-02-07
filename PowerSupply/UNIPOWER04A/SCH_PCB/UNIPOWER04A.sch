@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:MLAB_SW
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -28,8 +29,14 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:header
 LIBS:mechanical
+LIBS:MLAB_BATERY
+LIBS:MLAB_CONNECTORS
+LIBS:MLAB_D
+LIBS:MLAB_IO
+LIBS:MLAB_Jumpers
+LIBS:MLAB_T
+LIBS:MLAB_U
 LIBS:UNIPOWER04A-cache
 EELAYER 26 0
 EELAYER END
@@ -181,42 +188,6 @@ F 3 "" H 2350 1400 50  0000 C CNN
 	1    2350 1400
 	1    0    0    -1  
 $EndComp
-$Comp
-L GND #PWR04
-U 1 1 58812A5A
-P 3800 1050
-F 0 "#PWR04" H 3800 800 50  0001 C CNN
-F 1 "GND" H 3800 900 50  0000 C CNN
-F 2 "" H 3800 1050 50  0000 C CNN
-F 3 "" H 3800 1050 50  0000 C CNN
-	1    3800 1050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3850 750  3800 750 
-Wire Wire Line
-	3800 750  3800 1050
-Wire Wire Line
-	3850 950  3800 950 
-Connection ~ 3800 950 
-$Comp
-L GND #PWR05
-U 1 1 588131E7
-P 4400 1050
-F 0 "#PWR05" H 4400 800 50  0001 C CNN
-F 1 "GND" H 4400 900 50  0000 C CNN
-F 2 "" H 4400 1050 50  0000 C CNN
-F 3 "" H 4400 1050 50  0000 C CNN
-	1    4400 1050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4400 750  4400 1050
-Wire Wire Line
-	4400 750  4450 750 
-Wire Wire Line
-	4450 950  4400 950 
-Connection ~ 4400 950 
 $Comp
 L JUMP_4X2 J3
 U 1 1 58815FF8
