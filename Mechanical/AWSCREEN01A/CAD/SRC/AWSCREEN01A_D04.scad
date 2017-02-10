@@ -39,9 +39,16 @@ cylinder (h = D04_sila_materialu_na_konektor, r=(S01_prumer_zavitu+4*D01_materia
 }
 
 //materiál držáku konektoru
-translate([0,0,D04_sila_materialu_na_konektor/2])
-cube([D04_konenektor_x+12,(S01_prumer_zavitu-D01_material_za_zavitem-2*D03_tolerance_zavitu-D01_material_za_zavitem),D04_sila_materialu_na_konektor],true);
+translate([0,4,D04_sila_materialu_na_konektor/2])
+cube([60,7,D04_sila_materialu_na_konektor],true);
 
+translate([0,15,D04_sila_materialu_na_konektor/2])
+cube([7,27,D04_sila_materialu_na_konektor],true);
+
+/*
+cube([D04_konenektor_x+1.5,(S01_prumer_zavitu-D01_material_za_zavitem-2*D03_tolerance_zavitu-D01_material_za_zavitem),D04_sila_materialu_na_konektor],true);
+*/
+/*
 //materiál pro kryt konektoru
 //spodní krychle
 translate([0,-(S01_prumer_zavitu-2*D01_material_za_zavitem-4*D03_tolerance_zavitu)/4+5,D04_konenektor_z/2+D04_sila_materialu_na_konektor])
@@ -60,10 +67,11 @@ cylinder (h = (S01_prumer_zavitu-2*D01_material_za_zavitem-4*D03_tolerance_zavit
             
  
 }
-
+*/
 }
-
+/*
 //otvor na konektor
+
  translate([0,-(S01_prumer_zavitu-D01_material_za_zavitem-2*D03_tolerance_zavitu-D01_material_za_zavitem-2)/2+D04_konenektor_y/2,-0.01])
 cube([D04_konenektor_x,D04_konenektor_y,10],true);
 
@@ -73,9 +81,10 @@ cube([D04_konenektor_x,D04_konenektor_y,10],true);
 cube([D04_konenektor_x,D04_konenektor_y,18],true);
 
  translate([0,-(S01_prumer_zavitu-D01_material_za_zavitem-2*D03_tolerance_zavitu-D01_material_za_zavitem)/4,D04_sila_materialu_na_konektor+(D04_konenektor_z)/2])
+
 //odstranění spodního kvádru v oblasti krytu konektoru
 cube([D04_konenektor_x+6,(S01_prumer_zavitu-D01_material_za_zavitem-2*D03_tolerance_zavitu-D01_material_za_zavitem)/2+8,D04_konenektor_z+0.01],true);
-
+*/
 //odstranění vrchního válce
 translate([0,5-D03_tloustka_materialu,D04_sila_materialu_na_konektor+D04_konenektor_z])
 
@@ -91,9 +100,9 @@ cube([(S01_prumer_zavitu-2*D01_material_za_zavitem-4*D03_tolerance_zavitu)/2,(S0
 
 
 //otvor na senzor v držáku
-translate([0,7,-2])
-translate([0,0,(15+5.08)/2-(5.08+3.3+2)/2])
-cube([10.16,3,25],true);
+translate([0,4,-2])
+translate([0,0,(5+5.08)/2-(5.08+3.3+2)/2])
+cube([5.16,3,25],true);
             
 //odstranění spodních výčnělků
 translate([0,0,-25/2])
@@ -101,15 +110,30 @@ cube([S01_prumer_zavitu,S01_prumer_zavitu,25],true);
 
 }
 
-translate([0,7,(D04_vyska_drzaku_senzoru)/2])
+translate([0,4,(D04_vyska_drzaku_senzoru)/2])
 difference()
         {  
-cube([10.16+2*D03_tloustka_materialu,3+2*D03_tloustka_materialu,D04_vyska_drzaku_senzoru],true);
+cube([5.16+2*D03_tloustka_materialu,3+2*D03_tloustka_materialu,D04_vyska_drzaku_senzoru],true);
 
-cube([10.16,3,D04_vyska_drzaku_senzoru+0.01],true);
+cube([5.16,3,D04_vyska_drzaku_senzoru+0.01],true);
             translate([0,5,D04_vyska_drzaku_senzoru/2-3.08])
             rotate ([90,0,0])
             cylinder (h = 30, r=(3.3/2), $fn=100);
             }
+
+
+            
+ difference() {             
+    translate([0,1.7,41])     
+    cube([15.5,2,8],true);  
+        
+    translate([5,1.7,42])    
+    rotate ([90,0,0]) 
+    cylinder (h = 2, r=1.5, center = true, $fn=100);
+     
+    translate([-5,1.7,42])    
+    rotate ([90,0,0]) 
+    cylinder (h = 2, r=1.5, center = true, $fn=100);
+    } 
 }
 }

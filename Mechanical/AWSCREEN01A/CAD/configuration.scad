@@ -23,7 +23,7 @@ D04_sila_materialu_na_konektor=3;
 D04_konenektor_x=12.3;
 D04_konenektor_y=19;
 D04_konenektor_z=5; //vyska krytu
-D04_vyska_drzaku_senzoru=28;
+D04_vyska_drzaku_senzoru=38;
 
 
 //AWSCREEN01A_D05 //uchyt velky
