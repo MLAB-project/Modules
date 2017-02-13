@@ -105,7 +105,7 @@ R02_delka_kridla=45;
 R02_vzdalenost_der=25;
 
 R02_delka_vyrovnnavaci_tyce=35;
-R02_hrana_drzaku=13;
+R02_hrana_drzaku=14;
 R02_sila_materialu_pod_tyci=5;
 R02_sila_materialu_kridla=1.2;
 R02_sila_materialu_kridla_tolerance=0.3;
