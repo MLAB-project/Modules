@@ -22,6 +22,8 @@ https://www.gme.cz/liyy-4x0-19-bal
 <!--- ELead ---> 
 
 ![LeadImg](20170122_111953.jpg) 
+![LeadImg](2017-02-13-10-40-38.jpg) 
+![LeadImg](2017-02-13-10-43-25.jpg) 
 
 
 ​
