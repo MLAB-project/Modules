@@ -6,16 +6,10 @@ EESchema-LIBRARY Version 2.3
 DEF CP_Small C 0 10 N N 1 F N
 F0 "C" 10 70 50 H V L CNN
 F1 "CP_Small" 10 -80 50 H V L CNN
-F2 "" 0 0 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 $FPLIST
- CP*
- C_Axial*
- C_Radial*
- TantalC*
- C*elec
- c_elec*
- SMD*_Pol
+ CP_*
 $ENDFPLIST
 DRAW
 S -60 -12 60 -27 0 1 0 F
@@ -32,14 +26,10 @@ ENDDEF
 DEF C_Small C 0 10 N N 1 F N
 F0 "C" 10 70 50 H V L CNN
 F1 "C_Small" 10 -80 50 H V L CNN
-F2 "" 0 0 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 $FPLIST
- C?
- C_????_*
- C_????
- SMD*_c
- Capacitor*
+ C_*
 $ENDFPLIST
 DRAW
 P 2 0 1 13 -60 -20 60 -20 N
@@ -54,11 +44,10 @@ ENDDEF
 DEF D_TVS_ALT D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
 F1 "D_TVS_ALT" 0 -100 50 H V C CNN
-F2 "" 0 0 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 $FPLIST
- Diode_*
- D-Pak_TO252AA
+ TO-???*
  *SingleDiode
  *_Diode_*
  *SingleDiode*
@@ -79,8 +68,8 @@ ENDDEF
 DEF GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
 F1 "GND" 0 -150 50 H V C CNN
-F2 "" 0 0 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 DRAW
 P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
 X GND 1 0 0 0 D 50 50 1 1 W N
@@ -105,11 +94,13 @@ ENDDEF
 DEF L_Small L 0 10 N N 1 F N
 F0 "L" 30 40 50 H V L CNN
 F1 "L_Small" 30 -40 50 H V L CNN
-F2 "" 0 0 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 $FPLIST
  Choke_*
  *Coil*
+ Inductor_*
+ L_*
 $ENDFPLIST
 DRAW
 A 0 -60 20 -899 899 0 1 0 N 0 -80 0 -40

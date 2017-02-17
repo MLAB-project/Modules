@@ -1,8 +1,8 @@
 (export (version D)
   (design
-    (source C:\Chroust\Zaloha\stare\MLAB_G\Modules\CommRF\BP01B\SCH_PCB\BP01B.sch)
-    (date "6. 1. 2017 10:24:58")
-    (tool "Eeschema (2016-09-17 revision 679eef1)-makepkg")
+    (source C:/Chroust/Zaloha/stare/MLAB_G/Modules/CommRF/BP01B/SCH_PCB/BP01B.sch)
+    (date "17. 2. 2017 8:19:07")
+    (tool "Eeschema (2017-02-05 revision 431abcf)-makepkg")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title NAME)
@@ -124,7 +124,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 584A955F))
     (comp (ref L1)
-      (value 100uH)
+      (value DL4N-100uH)
       (footprint Mlab_R:SMD-1812)
       (libsource (lib device) (part L_Small))
       (sheetpath (names /) (tstamps /))
@@ -142,7 +142,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 584A98C5))
     (comp (ref L11)
-      (value 100uH)
+      (value DL4N-100uH)
       (footprint Mlab_R:SMD-1812)
       (libsource (lib device) (part L_Small))
       (sheetpath (names /) (tstamps /))
@@ -168,7 +168,7 @@
     (comp (ref D1)
       (value SMBJ15A-E3/52)
       (footprint Mlab_D:SMB_Standard)
-      (libsource (lib BP01B-cache) (part D_TVS_ALT))
+      (libsource (lib device) (part D_TVS_ALT))
       (sheetpath (names /) (tstamps /))
       (tstamp 584AA354))
     (comp (ref C16)
@@ -187,13 +187,7 @@
     (libpart (lib device) (part CP_Small)
       (description "Polarised capacitor")
       (footprints
-        (fp CP*)
-        (fp C_Axial*)
-        (fp C_Radial*)
-        (fp TantalC*)
-        (fp C*elec)
-        (fp c_elec*)
-        (fp SMD*_Pol))
+        (fp CP_*))
       (fields
         (field (name Reference) C)
         (field (name Value) CP_Small))
@@ -203,21 +197,18 @@
     (libpart (lib device) (part C_Small)
       (description "Unpolarized capacitor")
       (footprints
-        (fp C?)
-        (fp C_????_*)
-        (fp C_????)
-        (fp SMD*_c)
-        (fp Capacitor*))
+        (fp C_*))
       (fields
         (field (name Reference) C)
         (field (name Value) C_Small))
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
-    (libpart (lib BP01B-cache) (part D_TVS_ALT)
+    (libpart (lib device) (part D_TVS_ALT)
+      (description "Bidirectional transient-voltage-suppression (TVS) diode, alternative symbol")
+      (docs https://en.wikipedia.org/wiki/Transient-voltage-suppression_diode)
       (footprints
-        (fp Diode_*)
-        (fp D-Pak_TO252AA)
+        (fp TO-???*)
         (fp *SingleDiode)
         (fp *_Diode_*)
         (fp *SingleDiode*)
@@ -235,10 +226,12 @@
       (pins
         (pin (num 1) (name ~) (type input))))
     (libpart (lib device) (part L_Small)
-      (description Inductor)
+      (description "Inductor, small symbol")
       (footprints
         (fp Choke_*)
-        (fp *Coil*))
+        (fp *Coil*)
+        (fp Inductor_*)
+        (fp L_*))
       (fields
         (field (name Reference) L)
         (field (name Value) L_Small))
@@ -254,7 +247,7 @@
         (pin (num 2) (name ~) (type unspc)))))
   (libraries
     (library (logical device)
-      (uri C:\KiCad\share\kicad\library\device.lib))
+      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\device.lib"))
     (library (logical BP01B-cache)
       (uri C:\Chroust\Zaloha\stare\MLAB_G\Modules\CommRF\BP01B\SCH_PCB\BP01B-cache.lib)))
   (nets
