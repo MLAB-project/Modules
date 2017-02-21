@@ -13,6 +13,19 @@ module I2CDIFF01A(){
    cube(size = [I2CDIFF01A_sirka_kon,I2CDIFF01A_vyska_kon,D02_sila_materialu+0.4], center = true);  
     
 }
+
+module RJ12_3x2(){
+  
+ RJ_12_sirka_kon=30; //sirka konektoru
+ RJ_12_vyska_kon=42; //vyska konektoru
+ RJ_12_sirka_mod_otvory=5; //kolik modul zabira der
+ RJ_12_vyska_nad_plbase=7; //jak je vzdálen konektor nad plbase    
+      
+      
+   translate([vzdalenost_der*(RJ_12_sirka_mod_otvory-1)/2,RJ_12_vyska_nad_plbase+RJ_12_vyska_kon/2,D02_sila_materialu/2])
+   cube(size = [RJ_12_sirka_kon,RJ_12_vyska_kon,D02_sila_materialu+0.4], center = true);  
+    
+}
       
 
 module RJ12_2x2(){

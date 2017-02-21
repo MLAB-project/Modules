@@ -20,7 +20,7 @@ translate([vzdalenost_od_okraje+D02_sila_materialu+D02_dolerance_na_zasunuti/2,D
         //nastavení posunu otvoru v násobcích děr
         translate([vzdalenost_der*(1+4),0,0])
         
-        RJ12_2x2();
+        RJ12_3x2();
     }
 
 
