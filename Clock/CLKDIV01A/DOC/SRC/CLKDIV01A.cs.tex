@@ -54,17 +54,21 @@ Dělící poměry QB & $\div$2, $\div$4, $\div$8, $\div$16 & \\ \hline
 
 \subsection{Zapojení}
 
-Zapojení modulů je identické s doporučeným zapojením z katalogového listu. Vstupy a výstupy jsou vyvedeny na differenční signály SATA konektorů. Řídící signály lze ovládat přímo z procesoru připojením výstupního pinu na hřebínek, nebo lze dělící poměr navolit pevně Jumpery. 
+Zapojení modulů je identické s doporučeným zapojením z katalogového listu. Vstupy a výstupy jsou vyvedeny na diferenční signály SATA konektorů. Řídící signály lze ovládat přímo z procesoru připojením výstupního pinu na hřebínek, nebo lze dělící poměr navolit pevně Jumpery. 
 
 \includepdf[pages={1},landscape=true]{../../SCH/clkdiv.pdf}
 
 \subsection{Odrušení}
 
-Tento modul může produkovat rušení v napájení. Je proto vhodné jej v citlivých analogových aplikacích připojovat krátkým napájecím kablíkem.
+Tento digitální modul může produkovat rušení v napájení. Je proto vhodné jej v citlivých analogových aplikacích připojovat krátkým napájecím kablíkem.
 
 \section{Výroba a testování}
 
+Modul se testuje optickou kontrolou spojů a následným připojením na laboratorní zdroj s omezením proudu. Dále by po připojení zdroje hodinového signálu například CLKGEN01B musí být na všech jeho výstupech přítomný digitální vydělený signál odpovídající nastavenému dělícímu poměru. To lze ověřit například zařízením ACOUNTER02A.
+
 \subsection{Osazení}
+
+Modul se osazuje standardním postupem požívaným pro SMD součástky.
 
 \begin{figure} [h!tbp]
   \centering
@@ -74,7 +78,28 @@ Tento modul může produkovat rušení v napájení. Je proto vhodné jej v citl
   \label{fig:osazovaci_plan}
 \end{figure}
 
-\section{Programové vybavení}
+\begin{savenotes}
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{ |c|c|c|c| }
+\hline 
+Počet & Označení & Typ  & Pouzdro  \\ 
+\hline 
+2	&	C2,C3	&	100nF	&	C0805	\\
+1	&	C1	&	10uF	&	ELYTB	\\
+1	&	D1	&	M4	&	SMA	\\
+1	&	R2	&	50	&	R0805	\\
+1	&	U1	&	NB6L239	&	QFN16-3x3	\\
+4	&	J1,J2,J3,J4	&	SATA\_MALE	&	SATA7	\\
+2	&	J6,J7	&	JUMP2X1	&	JUMP2X1	\\
+3	&	J8,J9,J5	&	JUMP2X3	&	JUMP2X3	\\
+\hline 
+\end{tabular}
+\end{center}
+\caption{Seznam součástek osazovaných na desku plošného spoje.}
+\label{seznam_soucastek_galvanic_isolation}
+\end{table}
+\end{savenotes}
 
 \begin{thebibliography}{99}
 \bibitem{CLKDIV_Wiki}{Wiki stránka modulu} 
