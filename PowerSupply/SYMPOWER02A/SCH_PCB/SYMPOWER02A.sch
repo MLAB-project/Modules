@@ -923,4 +923,6 @@ F 3 "" H -1950 2200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6050 5300 6050 5250
+Text Notes 10050 6000 0    60   ~ 0
+For Uout 5V\nR5,R6 - 150k\nR4,R7 - 475k\n
 $EndSCHEMATC
