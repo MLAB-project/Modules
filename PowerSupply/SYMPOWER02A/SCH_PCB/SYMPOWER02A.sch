@@ -613,9 +613,6 @@ Wire Wire Line
 Wire Wire Line
 	5900 2850 7750 2850
 Wire Wire Line
-	6050 2900 6050 2850
-Connection ~ 6050 2850
-Wire Wire Line
 	6450 2900 6450 2850
 Connection ~ 6450 2850
 Wire Wire Line
@@ -626,9 +623,6 @@ Wire Wire Line
 Connection ~ 7350 2850
 Wire Wire Line
 	5900 4450 7750 4450
-Wire Wire Line
-	6050 4400 6050 4450
-Connection ~ 6050 4450
 Wire Wire Line
 	6950 4400 6950 4450
 Connection ~ 6950 4450
@@ -925,4 +919,14 @@ Wire Wire Line
 	6050 5300 6050 5250
 Text Notes 10050 6000 0    60   ~ 0
 For Uout 5V\nR5,R6 - 150k\nR4,R7 - 475k\n
+Text Label 6150 2950 0    60   ~ 0
+Vout+
+Text Label 6100 4400 0    60   ~ 0
+Vout-
+Wire Wire Line
+	6050 4400 6100 4400
+Wire Wire Line
+	6050 2900 6150 2900
+Wire Wire Line
+	6150 2900 6150 2950
 $EndSCHEMATC
