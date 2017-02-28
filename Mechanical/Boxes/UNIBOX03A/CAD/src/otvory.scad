@@ -9,8 +9,10 @@
     1F) - Pro modul I2CDIFF01A
     1G) - Pro modul UNIPOWER03A
     1H) - Větrací otvor
-    
+        
     2A) - Otvor na IR
+    2B) - Otvor C1+
+    2C) - Otvor na RJ12V01A
 */
 
 
@@ -207,3 +209,44 @@ CHLADICI_OTVORY2_snizeni_vysky=10;
  
  }
  }
+ 
+ /*2B) - Pro C1+
+--------------------------------------------------------
+--------------------------------------------------------
+vzdalenost_der - definuje roztec der
+
+modul na dvou matkách má vysku 6.5 mm, pokud nebudo zasahne do nastaveni list krabicky, bude nutno zvednout vysku modulu.
+
+*/
+
+module C1(tloustka_bocnice,vzdalenost_der) //uz upraveno
+{
+ C1_sirka_kon=53; //sirka konektoru
+ C1_vyska_kon=16; //vyska konektoru
+ C1_sirka_mod_otvory=6; //kolik modul zabira der
+ C1_svyska_nad_plbase=14; //kolik modul zabira der   
+   translate([vzdalenost_der*(C1_sirka_mod_otvory-1)/2,0,C1_vyska_kon/2+C1_svyska_nad_plbase])
+   cube(size = [C1_sirka_kon,tloustka_bocnice+0.2,C1_vyska_kon], center = true);  
+    
+}
+
+
+/*2C) - RJ12V01A
+--------------------------------------------------------
+--------------------------------------------------------
+vzdalenost_der - definuje roztec der
+
+modul na dvou matkách má vysku 6.5 mm, pokud nebudo zasahne do nastaveni list krabicky, bude nutno zvednout vysku modulu.
+
+*/
+
+module RJ12V01A(tloustka_bocnice,vzdalenost_der) //uz upraveno
+{
+ RJ12V01A_sirka_kon=15; //sirka konektoru
+ RJ12V01A_vyska_kon=13.5; //vyska konektoru
+ RJ12V01A_sirka_mod_otvory=5; //kolik modul zabira der
+ RJ12V01A_svyska_nad_plbase=6; //kolik modul zabira der   
+   translate([vzdalenost_der*(RJ12V01A_sirka_mod_otvory-1)/2-RJ12V01A_sirka_kon/2-0.5,0,RJ12V01A_vyska_kon/2+RJ12V01A_svyska_nad_plbase])
+   cube(size = [RJ12V01A_sirka_kon,tloustka_bocnice+0.2,RJ12V01A_vyska_kon], center = true);  
+    
+}
