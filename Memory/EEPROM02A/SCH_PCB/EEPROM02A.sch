@@ -1,6 +1,7 @@
 EESchema Schematic File Version 2
 LIBS:74xgxx
 LIBS:74xx
+LIBS:ac-dc
 LIBS:actel
 LIBS:adc-dac
 LIBS:Altera
@@ -10,6 +11,7 @@ LIBS:atmel
 LIBS:audio
 LIBS:brooktre
 LIBS:cmos4000
+LIBS:cmos_ieee
 LIBS:conn
 LIBS:contrib
 LIBS:cypress
@@ -19,9 +21,11 @@ LIBS:digital-audio
 LIBS:diode
 LIBS:display
 LIBS:dsp
+LIBS:elec-unifil
 LIBS:ESD_Protection
 LIBS:ftdi
 LIBS:gennum
+LIBS:graphic
 LIBS:hc11
 LIBS:intel
 LIBS:interface
@@ -30,6 +34,7 @@ LIBS:Lattice
 LIBS:linear
 LIBS:logo
 LIBS:maxim
+LIBS:mechanical
 LIBS:memory
 LIBS:microchip_dspic33dsc
 LIBS:microchip
@@ -68,9 +73,11 @@ LIBS:switches
 LIBS:texas
 LIBS:transf
 LIBS:transistors
+LIBS:ttl_ieee
 LIBS:valves
 LIBS:video
 LIBS:Xicor
+LIBS:xilinx
 LIBS:Zilog
 LIBS:MLAB_BATERY
 LIBS:MLAB_CONNECTORS
@@ -83,7 +90,7 @@ LIBS:MLAB_T
 LIBS:MLAB_U
 LIBS:MLAB_TR
 LIBS:EEPROM02A-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -681,17 +688,6 @@ Wire Wire Line
 	5450 2800 5450 2750
 Wire Wire Line
 	5450 1850 5450 1800
-$Comp
-L JUMP_2x1 J9
-U 1 1 583D529D
-P 2800 2750
-F 0 "J9" H 2500 2750 50  0000 C CNN
-F 1 "JUMP_2x1" V 2750 2750 40  0001 C CNN
-F 2 "Mlab_Pin_Headers:Straight_2x01" H 2800 2750 60  0001 C CNN
-F 3 "" H 2800 2750 60  0000 C CNN
-	1    2800 2750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2950 2750 3050 2750
 Text Label 3050 2750 0    60   ~ 0
@@ -879,4 +875,45 @@ Wire Wire Line
 	3150 6900 3150 6750
 Wire Wire Line
 	3150 6400 3150 6550
+$Comp
+L CONN_3 J9
+U 1 1 58C15358
+P 2600 2750
+F 0 "J9" H 2369 2430 50  0000 C CNN
+F 1 "CONN_3" H 2369 2514 40  0000 C CNN
+F 2 "Mlab_Pin_Headers:Straight_1x03" H -350 800 60  0001 C CNN
+F 3 "" H -350 800 60  0000 C CNN
+	1    2600 2750
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR028
+U 1 1 58C15E69
+P 3000 2900
+F 0 "#PWR028" H 3000 2650 50  0001 C CNN
+F 1 "GND" H 3005 2727 50  0000 C CNN
+F 2 "" H 3000 2900 50  0000 C CNN
+F 3 "" H 3000 2900 50  0000 C CNN
+	1    3000 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 2850 3000 2850
+Wire Wire Line
+	3000 2850 3000 2900
+$Comp
+L VCC #PWR029
+U 1 1 58C16543
+P 3000 2500
+F 0 "#PWR029" H 3000 2350 50  0001 C CNN
+F 1 "VCC" H 3017 2673 50  0000 C CNN
+F 2 "" H 3000 2500 50  0000 C CNN
+F 3 "" H 3000 2500 50  0000 C CNN
+	1    3000 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 2650 3000 2650
+Wire Wire Line
+	3000 2650 3000 2500
 $EndSCHEMATC

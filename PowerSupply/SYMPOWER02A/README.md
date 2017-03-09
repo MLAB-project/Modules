@@ -5,17 +5,17 @@
 <!--- AuthorEmail:mlab@mlab.cz: ---> 
 <!--- Tags:imported: ---> 
 <!--- Ust:[End: ---> 
-<!--- Name:HBRIDGE03A: --->
-#HBRIDGE03A 
+<!--- Name:SYMPOWER02A: --->
+#SYMPOWER02A 
 <!--- LongName --->
-H-bridge
+Symmetric power source
 <!--- ELongName ---> 
 
 <!--- Lead --->
-Full bridge 6-45 V max 3.6A for DC motors. It uses circuit DRV8871.
+Symmetric power supply ranging from 1.5 V - 5 V, 250 mA.. It uses circuit LM27762.
 <!--- ELead ---> 
 
-![LeadImg](HBRIDGE03A_Top_Small.JPG) 
+![LeadImg](SYMPOWER02A_Top_Small.JPG) 
 
 
 ​
