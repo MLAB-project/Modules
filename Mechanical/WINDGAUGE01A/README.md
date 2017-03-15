@@ -15,7 +15,7 @@ Measurement of wind direction
 Printable variation sensor for measuring the wind direction. The detection is used three-axis magnetometer.
 <!--- ELead ---> 
 
-![LeadImg](WINDGAUGE01A_small.png) 
+![LeadImg](WINDGAUGE01A_small.jpg) 
 
 
 ​
