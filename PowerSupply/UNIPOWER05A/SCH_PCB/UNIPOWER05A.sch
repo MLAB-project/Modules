@@ -94,45 +94,45 @@ Wire Wire Line
 $Comp
 L _ P1
 U 1 1 587F245C
-P 8500 800
-F 0 "P1" H 8479 868 50  0000 L CNN
-F 1 "_" H 8479 784 40  0000 L CNN
-F 2 "Mlab_Mechanical:MountingHole_3mm" H 8750 650 60  0001 C CNN
-F 3 "" H 8750 650 60  0000 C CNN
-	1    8500 800 
+P 10350 700
+F 0 "P1" H 10329 768 50  0000 L CNN
+F 1 "_" H 10329 684 40  0000 L CNN
+F 2 "Mlab_Mechanical:MountingHole_3mm" H 10600 550 60  0001 C CNN
+F 3 "" H 10600 550 60  0000 C CNN
+	1    10350 700 
 	1    0    0    -1  
 $EndComp
 $Comp
 L _ P3
 U 1 1 587F26AA
-P 9100 800
-F 0 "P3" H 9079 868 50  0000 L CNN
-F 1 "_" H 9079 784 40  0000 L CNN
-F 2 "Mlab_Mechanical:MountingHole_3mm" H 9350 650 60  0001 C CNN
-F 3 "" H 9350 650 60  0000 C CNN
-	1    9100 800 
+P 10950 700
+F 0 "P3" H 10929 768 50  0000 L CNN
+F 1 "_" H 10929 684 40  0000 L CNN
+F 2 "Mlab_Mechanical:MountingHole_3mm" H 11200 550 60  0001 C CNN
+F 3 "" H 11200 550 60  0000 C CNN
+	1    10950 700 
 	1    0    0    -1  
 $EndComp
 $Comp
 L _ P2
 U 1 1 587F2725
-P 8500 1000
-F 0 "P2" H 8479 1068 50  0000 L CNN
-F 1 "_" H 8479 984 40  0000 L CNN
-F 2 "Mlab_Mechanical:MountingHole_3mm" H 8750 850 60  0001 C CNN
-F 3 "" H 8750 850 60  0000 C CNN
-	1    8500 1000
+P 10350 900
+F 0 "P2" H 10329 968 50  0000 L CNN
+F 1 "_" H 10329 884 40  0000 L CNN
+F 2 "Mlab_Mechanical:MountingHole_3mm" H 10600 750 60  0001 C CNN
+F 3 "" H 10600 750 60  0000 C CNN
+	1    10350 900 
 	1    0    0    -1  
 $EndComp
 $Comp
 L _ P4
 U 1 1 587F27A7
-P 9100 1000
-F 0 "P4" H 9079 1068 50  0000 L CNN
-F 1 "_" H 9079 984 40  0000 L CNN
-F 2 "Mlab_Mechanical:MountingHole_3mm" H 9350 850 60  0001 C CNN
-F 3 "" H 9350 850 60  0000 C CNN
-	1    9100 1000
+P 10950 900
+F 0 "P4" H 10929 968 50  0000 L CNN
+F 1 "_" H 10929 884 40  0000 L CNN
+F 2 "Mlab_Mechanical:MountingHole_3mm" H 11200 750 60  0001 C CNN
+F 3 "" H 11200 750 60  0000 C CNN
+	1    10950 900 
 	1    0    0    -1  
 $EndComp
 $Comp
