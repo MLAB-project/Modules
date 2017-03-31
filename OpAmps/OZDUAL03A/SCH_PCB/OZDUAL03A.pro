@@ -1,4 +1,4 @@
-update=Čt 21. červenec 2016, 12:35:04 CEST
+update=Thu 16 Feb 2017 10:20:27 AM CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,16 +23,6 @@ BoardOutlineThickness=0.15
 ModuleOutlineThickness=0.15
 [general]
 version=1
-[schematic_editor]
-version=1
-PageLayoutDescrFile=pagelayout_mlab.kicad_wks
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
 [eeschema]
 version=1
 LibDir=
@@ -130,3 +120,13 @@ LibName90=/home/jirka/git/kicad-library/library/Worldsemi
 LibName91=/home/jirka/git/kicad-library/library/Xicor
 LibName92=/home/jirka/git/kicad-library/library/xilinx
 LibName93=/home/jirka/git/kicad-library/library/Zilog
+[schematic_editor]
+version=1
+PageLayoutDescrFile=pagelayout_mlab.kicad_wks
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
