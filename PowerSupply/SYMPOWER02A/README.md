@@ -15,7 +15,7 @@ Symmetric power source
 Symmetric power supply ranging from 1.5 V - 5 V, 250 mA.. It uses circuit LM27762.
 <!--- ELead ---> 
 
-![LeadImg](SYMPOWER02A_Top_Small.JPG) 
+![LeadImg](SYMPOWER02A_Top_Small.jpg) 
 
 
 ​
