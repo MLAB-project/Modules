@@ -5,17 +5,17 @@
 <!--- AuthorEmail:mlab@mlab.cz: ---> 
 <!--- Tags:imported: ---> 
 <!--- Ust:[End]: ---> 
-<!--- Name:CLKGEN02A: --->
-#CLKGEN02A 
+<!--- Name:LINREG01A: --->
+#LINREG01A
 <!--- LongName --->
-Universal module for crystal oscillators
+Universal module for linear regulators
 <!--- ELongName ---> 
 
 <!--- Lead --->
-The module comprises a plurality of housings for mounting a variety of crystal oscillators.
+The module can be fitted in housings linear stabilizers D2PAK (TO263), SOT223, DPAK (252).
 <!--- ELead ---> 
 
-![LeadImg](CLKGEN02A_Top_Small.jpg) 
+![LeadImg](LINREG01A_Top_Small.jpg) 
 
 
 ​
