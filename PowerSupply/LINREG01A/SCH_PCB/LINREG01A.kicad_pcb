@@ -189,7 +189,7 @@
     (fp_text reference C1 (at 0 3.556 180) (layer B.SilkS)
       (effects (font (thickness 0.3048)) (justify mirror))
     )
-    (fp_text value CP (at 0 -3.556 180) (layer B.SilkS) hide
+    (fp_text value 10uF (at 0 -3.556 180) (layer B.SilkS) hide
       (effects (font (thickness 0.3048)) (justify mirror))
     )
     (fp_text user + (at -3.59918 2.49936 180) (layer B.SilkS)
@@ -220,7 +220,7 @@
     (fp_text reference C2 (at 0.0127 -0.0381 180) (layer B.SilkS)
       (effects (font (thickness 0.3048)) (justify mirror))
     )
-    (fp_text value CP (at -0.09906 -3.59918 180) (layer B.SilkS) hide
+    (fp_text value 47uF (at -0.09906 -3.59918 180) (layer B.SilkS) hide
       (effects (font (thickness 0.3048)) (justify mirror))
     )
     (fp_line (start -4.30022 1.69926) (end -4.30022 -1.69926) (layer B.SilkS) (width 0.15))
@@ -354,16 +354,16 @@
     )
   )
 
-  (module Mlab_C:TantalC_SizeB_Reflow (layer B.Cu) (tedit 54BBE393) (tstamp 58B57EA2)
+  (module Mlab_C:TantalC_SizeB_Reflow (layer B.Cu) (tedit 58F5C004) (tstamp 58B57EA2)
     (at 25.4 -22.86)
     (descr "Tantal Cap. , Size B, EIA-3528, Reflow,")
     (tags "Tantal Cap. , Size B, EIA-3528, Reflow,")
     (path /58B608A4)
     (attr smd)
-    (fp_text reference C7 (at 0 3.556) (layer B.SilkS)
+    (fp_text reference C7 (at 1.16 0.28) (layer B.SilkS)
       (effects (font (thickness 0.3048)) (justify mirror))
     )
-    (fp_text value CP (at 0 -3.556) (layer B.SilkS) hide
+    (fp_text value 10uF (at 0 -3.556) (layer B.SilkS) hide
       (effects (font (thickness 0.3048)) (justify mirror))
     )
     (fp_line (start -4.20116 2.5019) (end -3.00228 2.5019) (layer B.SilkS) (width 0.15))
@@ -371,7 +371,7 @@
     (fp_line (start 2.49682 -1.89992) (end -2.5019 -1.89992) (layer B.SilkS) (width 0.15))
     (fp_line (start 2.49936 1.89992) (end -2.49936 1.89992) (layer B.SilkS) (width 0.15))
     (fp_line (start -2.99974 1.89992) (end -2.99974 -1.89992) (layer B.SilkS) (width 0.15))
-    (fp_text user + (at -3.59918 2.49936) (layer B.SilkS)
+    (fp_text user + (at -1.32 -0.06) (layer B.SilkS)
       (effects (font (thickness 0.3048)) (justify mirror))
     )
     (pad 1 smd rect (at -1.5494 0) (size 1.95072 2.49936) (layers B.Cu B.Paste B.Mask)
@@ -385,7 +385,7 @@
     )
   )
 
-  (module Mlab_C:TantalC_SizeC_Reflow (layer B.Cu) (tedit 564C624B) (tstamp 58B57EA8)
+  (module Mlab_C:TantalC_SizeC_Reflow (layer B.Cu) (tedit 58F5BF75) (tstamp 58B57EA8)
     (at 25.654 -26.67)
     (descr "Tantal Cap. , Size C, EIA-6032, Reflow,")
     (tags "Tantal Cap. , Size C, EIA-6032, Reflow,")
@@ -394,12 +394,12 @@
     (fp_text reference C8 (at 0.0127 -0.0381) (layer B.SilkS)
       (effects (font (thickness 0.3048)) (justify mirror))
     )
-    (fp_text value CP (at -0.09906 -3.59918) (layer B.SilkS) hide
+    (fp_text value 47uF (at -0.09906 -3.59918) (layer B.SilkS) hide
       (effects (font (thickness 0.3048)) (justify mirror))
     )
     (fp_line (start -5.6007 2.5527) (end -4.40182 2.5527) (layer B.SilkS) (width 0.15))
     (fp_line (start -5.00126 3.05308) (end -5.00126 1.95326) (layer B.SilkS) (width 0.15))
-    (fp_text user + (at -4.99872 2.55016) (layer B.SilkS)
+    (fp_text user + (at -2.514 -0.13) (layer B.SilkS)
       (effects (font (thickness 0.3048)) (justify mirror))
     )
     (fp_line (start 2.99974 1.69926) (end -2.99974 1.69926) (layer B.SilkS) (width 0.15))
@@ -416,13 +416,13 @@
     )
   )
 
-  (module Mlab_D:Diode-SMA_Standard (layer B.Cu) (tedit 56BDB339) (tstamp 58B57EAE)
+  (module Mlab_D:Diode-SMA_Standard (layer B.Cu) (tedit 58F5C00B) (tstamp 58B57EAE)
     (at 5.08 -22.606)
     (descr "Diode SMA")
     (tags "Diode SMA")
     (path /58B5881C)
     (attr smd)
-    (fp_text reference D1 (at 0 3.81) (layer B.SilkS)
+    (fp_text reference D1 (at -0.09 0.136) (layer B.SilkS)
       (effects (font (thickness 0.3048)) (justify mirror))
     )
     (fp_text value M4 (at 0 -3.81) (layer B.SilkS) hide
@@ -454,13 +454,13 @@
     )
   )
 
-  (module Mlab_D:Diode-SMA_Standard (layer B.Cu) (tedit 56BDB339) (tstamp 58B57EB4)
+  (module Mlab_D:Diode-SMA_Standard (layer B.Cu) (tedit 58F5C015) (tstamp 58B57EB4)
     (at 13.462 -19.812 180)
     (descr "Diode SMA")
     (tags "Diode SMA")
     (path /58B56CF4)
     (attr smd)
-    (fp_text reference D2 (at 0 3.81 180) (layer B.SilkS)
+    (fp_text reference D2 (at 0.052 0.058 180) (layer B.SilkS)
       (effects (font (thickness 0.3048)) (justify mirror))
     )
     (fp_text value M4 (at 0 -3.81 180) (layer B.SilkS) hide
@@ -630,13 +630,13 @@
     )
   )
 
-  (module Mlab_IO:D2PAK-TO-263-2Lead (layer B.Cu) (tedit 58B40229) (tstamp 58B57EEE)
+  (module Mlab_IO:D2PAK-TO-263-2Lead (layer B.Cu) (tedit 58F5C034) (tstamp 58B57EEE)
     (at 15.24 -10.414 270)
     (descr "D2PAK / TO-263 3-lead smd package")
     (tags "D2PAK D2PAK-3 TO-263AB TO-263")
     (path /58B5395C)
     (attr smd)
-    (fp_text reference U1 (at 0 6.4 90) (layer B.SilkS)
+    (fp_text reference U1 (at -1.086 -0.15 180) (layer B.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_text value L78_DPAK_D2PAK (at 0 -6.45 270) (layer B.Fab)
@@ -705,13 +705,13 @@
     )
   )
 
-  (module Mlab_IO:D2PAK-TO-263-2Lead (layer B.Cu) (tedit 58B66603) (tstamp 58B57F14)
+  (module Mlab_IO:D2PAK-TO-263-2Lead (layer B.Cu) (tedit 58F5BFD2) (tstamp 58B57F14)
     (at 15.24 -28.956 90)
     (descr "D2PAK / TO-263 3-lead smd package")
     (tags "D2PAK D2PAK-3 TO-263AB TO-263")
     (path /58B5B96C)
     (attr smd)
-    (fp_text reference U3 (at 0 6.4 -90) (layer B.SilkS)
+    (fp_text reference U3 (at -0.816 0.04) (layer B.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_text value LM317M_LM217_DPAK_D2PAK (at 0 -6.45 90) (layer B.Fab) hide
@@ -745,12 +745,12 @@
     )
   )
 
-  (module Mlab_IO:DPAK-TO-252-2Lead (layer B.Cu) (tedit 58B66606) (tstamp 58B57F31)
+  (module Mlab_IO:DPAK-TO-252-2Lead (layer B.Cu) (tedit 58F5BFF0) (tstamp 58B57F31)
     (at 15.24 -28.702 90)
     (descr "TO-252-2Lead DPAK")
     (path /58B67DA3)
     (attr smd)
-    (fp_text reference U4 (at 0.3 4.54 90) (layer B.SilkS)
+    (fp_text reference U4 (at -0.542 -2.21 180) (layer B.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_text value LM317M_LM217_DPAK_D2PAK (at 0.25 -4.81 90) (layer B.Fab) hide
