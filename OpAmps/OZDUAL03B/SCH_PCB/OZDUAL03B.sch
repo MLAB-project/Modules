@@ -1,16 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:MLAB_BATERY
-LIBS:MLAB_CONNECTORS
-LIBS:MLAB_D
-LIBS:MLAB_DISPLAY
-LIBS:MLAB_HEADER
-LIBS:MLAB_IO
-LIBS:MLAB_Jumpers
-LIBS:MLAB_MECHANICAL
-LIBS:MLAB_SW
-LIBS:MLAB_T
-LIBS:MLAB_U
-LIBS:mlab-default-cache
 LIBS:74xgxx
 LIBS:74xx
 LIBS:ac-dc
@@ -91,20 +79,20 @@ LIBS:Worldsemi
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:OZDUAL03A-cache
-EELAYER 25 0
+LIBS:OZDUAL03B-cache
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "NAME"
+Title "OZDUAL"
 Date "%F"
-Rev "REV"
-Comp "Mlab www.mlab.cz"
-Comment1 "VERSION"
-Comment2 "Short description \\nTwo lines are maximum"
-Comment3 "nickname <email@example.com>"
-Comment4 "BSD"
+Rev "03B"
+Comp "MLAB www.mlab.cz"
+Comment1 ""
+Comment2 "Universal module for operational amplifiers"
+Comment3 "Jiri Zahora"
+Comment4 ""
 $EndDescr
 Text Notes 5800 2350 0    60   ~ 0
 POWER INPUT
