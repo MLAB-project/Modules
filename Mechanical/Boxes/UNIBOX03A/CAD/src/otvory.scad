@@ -13,6 +13,7 @@
     2A) - Otvor na IR
     2B) - Otvor C1+
     2C) - Otvor na RJ12V01A
+    2D) - VLFANT01B
 */
 
 
@@ -64,7 +65,7 @@ modul na dvou matkách má vysku 6.5 mm, pokud nebudo zasahne do nastaveni list 
 
 */
 
-
+//uz upraveno
 
 module UNIPOWER02A(tloustka_bocnice,vzdalenost_der)
 {
@@ -73,8 +74,8 @@ module UNIPOWER02A(tloustka_bocnice,vzdalenost_der)
  UNIPOWER02A_sirka_mod_otvory=4; //kolik modul zabira der
  UNIPOWER02A_vzdalenost_konektoru=6; //vzdalenost kraje konektoru od středu šroubu
     UNIPOWER02A_vyska_nad_plbase=6; //vyska mezi albase a konektorem
-   translate([UNIPOWER02A_vzdalenost_konektoru,-tloustka_bocnice/2-0.05,UNIPOWER02A_vyska_nad_plbase])
-   cube(size = [UNIPOWER02A_sirka_kon,tloustka_bocnice+0.1,UNIPOWER02A_vyska_kon], center = false);
+   translate([UNIPOWER02A_vzdalenost_konektoru,-tloustka_bocnice/2-0.2,UNIPOWER02A_vyska_nad_plbase])
+   cube(size = [UNIPOWER02A_sirka_kon,tloustka_bocnice+0.2,UNIPOWER02A_vyska_kon], center = false);
  }   
  
 /*1F) - Pro modul I2CDIFF01A
@@ -248,5 +249,25 @@ module RJ12V01A(tloustka_bocnice,vzdalenost_der) //uz upraveno
  RJ12V01A_svyska_nad_plbase=6; //kolik modul zabira der   
    translate([vzdalenost_der*(RJ12V01A_sirka_mod_otvory-1)/2-RJ12V01A_sirka_kon/2-0.5,0,RJ12V01A_vyska_kon/2+RJ12V01A_svyska_nad_plbase])
    cube(size = [RJ12V01A_sirka_kon,tloustka_bocnice+0.2,RJ12V01A_vyska_kon], center = true);  
+    
+}
+
+/*2D) - VLFANT01B
+--------------------------------------------------------
+--------------------------------------------------------
+vzdalenost_der - definuje roztec der
+
+modul na dvou matkách má vysku 6.5 mm, pokud nebudo zasahne do nastaveni list krabicky, bude nutno zvednout vysku modulu.
+
+*/
+
+module VLFANT01B(tloustka_bocnice,vzdalenost_der) //uz upraveno
+{
+ VLFANT01B_sirka_kon=16.5; //sirka konektoru
+ VLFANT01B_vyska_kon=13.5; //vyska konektoru
+ VLFANT01B_sirka_mod_otvory=5; //kolik modul zabira der
+ VLFANT01B_vyska_nad_plbase=6; //vyska mezi albase a konektorem
+   translate([vzdalenost_der*(VLFANT01B_sirka_mod_otvory-1)/2,0,VLFANT01B_vyska_kon/2+VLFANT01B_vyska_nad_plbase])
+   cube(size = [VLFANT01B_sirka_kon,tloustka_bocnice+0.2,VLFANT01B_vyska_kon], center = true);  
     
 }
