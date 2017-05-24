@@ -271,3 +271,45 @@ module VLFANT01B(tloustka_bocnice,vzdalenost_der) //uz upraveno
    cube(size = [VLFANT01B_sirka_kon,tloustka_bocnice+0.2,VLFANT01B_vyska_kon], center = true);  
     
 }
+
+/*2E) - GPS01B
+--------------------------------------------------------
+--------------------------------------------------------
+vzdalenost_der - definuje roztec der
+
+modul na dvou matkách má vysku 6.5 mm, pokud nebudo zasahne do nastaveni list krabicky, bude nutno zvednout vysku modulu.
+
+*/
+
+module GPS01B(tloustka_bocnice,vzdalenost_der) //uz upraveno
+
+{
+ GPS01B_sirka_kon=12; //sirka konektoru
+ GPS01B_vyska_kon=11; //vyska konektoru
+ GPS01B_sirka_mod_otvory=4; //kolik modul zabira der
+ GPS01B_svyska_nad_plbase=6; //kolik modul zabira der   
+   
+    translate([vzdalenost_der*(GPS01B_sirka_mod_otvory-1)/2,0,GPS01B_vyska_kon/2+GPS01B_svyska_nad_plbase])
+   cube(size = [GPS01B_sirka_kon,tloustka_bocnice+0.2,GPS01B_vyska_kon], center = true);  
+    
+}
+
+/*2F) - AT32TQ14401A
+--------------------------------------------------------
+--------------------------------------------------------
+vzdalenost_der - definuje roztec der
+
+modul na dvou matkách má vysku 6.5 mm, pokud nebudo zasahne do nastaveni list krabicky, bude nutno zvednout vysku modulu.
+
+*/
+module AT32TQ14401A(tloustka_bocnice,vzdalenost_der)
+{
+ AT32TQ14401A_sirka_kon=16.5; //sirka konektoru
+ AT32TQ14401A_vyska_kon=13.5; //vyska konektoru
+ AT32TQ14401A_sirka_mod_otvory=8; //kolik modul zabira der
+ AT32TQ14401A_vzdalenost_konektoru=41.1; //vzdalenost kraje konektoru od středu šroubu
+ AT32TQ14401A_vyska_nad_plbase=6; //vyska mezi albase a konektorem
+  
+    translate([AT32TQ14401A_vzdalenost_konektoru,-tloustka_bocnice/2-0.2,AT32TQ14401A_vyska_nad_plbase])
+   cube(size = [AT32TQ14401A_sirka_kon,tloustka_bocnice+0.2,AT32TQ14401A_vyska_kon], center = false);
+ }   

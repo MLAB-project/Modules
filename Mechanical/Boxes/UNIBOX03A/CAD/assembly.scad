@@ -22,7 +22,7 @@ UNIBOX03A_D01();
 
 
 
-posun_modulu_der_x=10;
+posun_modulu_der_x=30;
 rotate(a=[-90,0,0])
 translate([posun_modulu_der_x*roztec_der-roztec_der*(pocet_der_osa_x-1)/2,0,-rozmer_y/2+vzdalenost_AL])
 VLFANT01B(2*sila,roztec_der);
@@ -31,12 +31,12 @@ posun_modulu_der_x1=0;
 rotate(a=[-90,0,0])
 translate([posun_modulu_der_x1*roztec_der-roztec_der*(pocet_der_osa_x-1)/2,0,-rozmer_y/2+vzdalenost_AL])
 
-UNIPOWER02A(2*sila,roztec_der); 
+AT32TQ14401A(2*sila,roztec_der); 
     
     
- posun_modulu_der_x2=4;
+ posun_modulu_der_x2=10;
 rotate(a=[-90,0,0])
 translate([posun_modulu_der_x2*roztec_der-roztec_der*(pocet_der_osa_x-1)/2,0,-rozmer_y/2+vzdalenost_AL])   
- C1(2*sila,roztec_der);   
+ GPS01B(2*sila,roztec_der);   
     
      }  
