@@ -13,7 +13,7 @@ barva_plbase = "yellow";
 //Předni čeličko
 //------------------------------------------------------------
 
-vzdalenost_AL=4; //vzdalenost od hrany čelíčka k vrchní hraně ALbase
+vzdalenost_AL=9; //vzdalenost od hrany čelíčka k vrchní hraně ALbase 9
 
 difference() {
 color(barva_sloupku)

@@ -304,8 +304,8 @@ modul na dvou matkách má vysku 6.5 mm, pokud nebudo zasahne do nastaveni list 
 */
 module AT32TQ14401A(tloustka_bocnice,vzdalenost_der)
 {
- AT32TQ14401A_sirka_kon=16.5; //sirka konektoru
- AT32TQ14401A_vyska_kon=13.5; //vyska konektoru
+ AT32TQ14401A_sirka_kon=12; //sirka konektoru
+ AT32TQ14401A_vyska_kon=11; //vyska konektoru
  AT32TQ14401A_sirka_mod_otvory=8; //kolik modul zabira der
  AT32TQ14401A_vzdalenost_konektoru=41.1; //vzdalenost kraje konektoru od středu šroubu
  AT32TQ14401A_vyska_nad_plbase=6; //vyska mezi albase a konektorem
