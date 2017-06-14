@@ -40,7 +40,7 @@ LIBS:MLAB_SW
 LIBS:MLAB_T
 LIBS:MLAB_TR
 LIBS:MLAB_U
-LIBS:NFC-Controller-cache
+LIBS:PN715001A-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -276,17 +276,6 @@ F 3 "" H 4300 4700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R3
-U 1 1 592EDEDA
-P 3000 4100
-F 0 "R3" V 3080 4100 50  0000 C CNN
-F 1 "0R" V 3000 4100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 2930 4100 50  0001 C CNN
-F 3 "" H 3000 4100 50  0000 C CNN
-	1    3000 4100
-	0    1    1    0   
-$EndComp
-$Comp
 L R R4
 U 1 1 592EDF0D
 P 3000 4250
@@ -297,7 +286,7 @@ F 3 "" H 3000 4250 50  0000 C CNN
 	1    3000 4250
 	0    1    1    0   
 $EndComp
-Text Label 2600 4100 0    60   ~ 0
+Text Label 5450 2650 0    60   ~ 0
 VANT
 Text Label 2600 4400 0    60   ~ 0
 VBAT
@@ -674,17 +663,6 @@ F 3 "" H 1500 6750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X03 P2
-U 1 1 59398DCA
-P 1800 6050
-F 0 "P2" H 1800 6250 50  0000 C CNN
-F 1 "CONN_01X03" V 1900 6050 50  0000 C CNN
-F 2 "Mlab_Pin_Headers:Straight_1x03" H 1800 6050 50  0001 C CNN
-F 3 "" H 1800 6050 50  0000 C CNN
-	1    1800 6050
-	1    0    0    -1  
-$EndComp
-$Comp
 L JUMP_3X2 J1
 U 1 1 5939AC0A
 P 1950 6650
@@ -831,7 +809,7 @@ Wire Wire Line
 Wire Wire Line
 	5400 2500 5400 2650
 Wire Wire Line
-	5400 2650 5200 2650
+	5200 2650 5450 2650
 Connection ~ 5400 2550
 Wire Wire Line
 	5400 2200 5400 2150
@@ -843,13 +821,6 @@ Wire Wire Line
 	3900 4000 3900 4250
 Wire Wire Line
 	3900 4250 3150 4250
-Wire Wire Line
-	3150 4100 3250 4100
-Wire Wire Line
-	3250 4100 3250 4250
-Connection ~ 3250 4250
-Wire Wire Line
-	2600 4100 2850 4100
 Wire Wire Line
 	3700 4000 3700 4550
 Wire Wire Line
@@ -1182,4 +1153,16 @@ Text Label 4450 850  0    60   ~ 0
 VBAT
 Text Label 4950 1000 0    60   ~ 0
 VBAT
+Connection ~ 5400 2650
+$Comp
+L HEADER_2x03_PARALLEL J4
+U 1 1 59411EB8
+P 1850 6050
+F 0 "J4" H 1850 5850 60  0000 C CNN
+F 1 "HEADER_2x03_PARALLEL" H 1850 6250 60  0000 C CNN
+F 2 "Mlab_Pin_Headers:Straight_2x03" H 1850 6150 60  0001 C CNN
+F 3 "" H 1850 6150 60  0000 C CNN
+	1    1850 6050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
