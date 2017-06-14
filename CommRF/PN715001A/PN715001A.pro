@@ -1,4 +1,4 @@
-update=6/8/2017 13:56:09
+update=6/12/2017 10:27:31
 version=1
 last_client=kicad
 [pcbnew]
@@ -70,3 +70,13 @@ LibName38=symbols/MLAB_SW
 LibName39=symbols/MLAB_T
 LibName40=symbols/MLAB_TR
 LibName41=symbols/MLAB_U
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
