@@ -1,7 +1,7 @@
 Plocs cosmic ray detector (PCRD)
 
-1. Technické parametry
-======================
+1 Technické parametry
+=====================
 
 |              |                     |                           |
 |--------------|---------------------|---------------------------|
@@ -9,19 +9,19 @@ Plocs cosmic ray detector (PCRD)
 | Napájení     | +/- 2.4V            |                           |
 | Rozměry      | 30.0 x 50.3 x 16 mm | Výška nad základní deskou |
 
-2. Popis konstrukce
-===================
+2 Popis konstrukce
+==================
 
-2.1. Úvodem
------------
+2.1 Úvodem
+----------
 
-2.2. Mechanická konstrukce
---------------------------
+2.2 Mechanická konstrukce
+-------------------------
 
 Modul obsahuje úchytné šroubky ve všech rozích v rozteči MLAB (10.16mm). Při potřebě šetřit místem je možné odlomení části PCB se dvěma šrouby.
 
-3. Osazení a oživení
-====================
+3 Osazení a oživení
+===================
 
 3.1 Osazení
 -----------
