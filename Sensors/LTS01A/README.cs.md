@@ -1,4 +1,4 @@
-Modul contains 16bit temperature sensor MAX31725, which measuring temperature in range -40 °C - 105 °C with accuracy +/- 0.5 °C. Komunikace probíhá přes I2C rozhraní. Integrovaný obvod lze nastavit i jako termostat.
+Modul obsahuje digitální 16-bitový senzor teploty MAX31725, který měří teplotu v rozsahu -40 °C - 105 °C s přesností +/- 0.5 °C. Komunikace probíhá přes I2C rozhraní. Integrovaný obvod lze nastavit i jako termostat.
 
 <img src="https://raw.githubusercontent.com/MLAB-project/Modules/master/Sensors/LTS01A/DOC/SRC/img/LTS01A_Top_Big.jpg" width="563" height="157" />
 
