@@ -18,9 +18,7 @@ Plocs cosmic ray detector (PCRD)
 2.2. Mechanická konstrukce
 --------------------------
 
-Modul obsahuje úchytné šroubky ve všech rozích v rozteči MLAB (10.16mm). Při potřebě šetřit
-
-místem je možné odlomení části PCB se dvěma šrouby.
+Modul obsahuje úchytné šroubky ve všech rozích v rozteči MLAB (10.16mm). Při potřebě šetřit místem je možné odlomení části PCB se dvěma šrouby.
 
 3. Osazení a oživení
 ====================
