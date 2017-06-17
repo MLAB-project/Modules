@@ -1,5 +1,7 @@
 Modul obsahuje integrovaný obvod AS5048B, který umožňuje měření magnetického pole kolmého k povrchu integrovaného obvodu. Modul je vhodný pro měření úhlové polohy magnetu, konstrukci otáčkoměrů. Komunikační rozhraní je I2C. 
 
+<img src="https://raw.githubusercontent.com/roman-dvorak/Modules/master/Sensors/RPS01A/DOC/SRC/img/RPS01A_top_big.jpg" style="width:80.0%" />
+
 1 Technické parametry
 =====================
 
