@@ -1,0 +1,57 @@
+<p>Jedn&aacute; se o modul, kter&yacute; je možn&eacute; osadit IO SHT30 nebo SHT31, kter&eacute; um&iacute; měřit relativn&iacute; vlhkost a teplotu s velkou přesnost&iacute; a stabilitou. Rozsah měřen&eacute; vlhkosti je 0 % až 100 %. Teplota je měřena v rozsahu -40 &deg;C až 125 &deg;C. Komunikace prob&iacute;h&aacute; přes rozhrann&iacute; I2C.</p>
+<h1>1. Technick&eacute; parametry</h1>
+<table style="border-color: black; margin-left: auto; margin-right: auto;" border="solid">
+<tbody>
+<tr>
+<td>Parametr</td>
+<td>Hodnota</td>
+<td>Pozn&aacute;mka</td>
+</tr>
+<tr>
+<td>
+<p>Relativn&iacute; vlhkost</p>
+</td>
+<td>0% - 100%</td>
+<td>Typ. přesnost dle IO</td>
+</tr>
+<tr>
+<td>Teplota</td>
+<td>&nbsp;-40&deg;C - 125&deg;C</td>
+<td>Typ. přesnost dle IO</td>
+</tr>
+<tr>
+<td>Integrovan&yacute; obvod</td>
+<td>&nbsp;SHT30, SHT31</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>
+<p>Rozhran&iacute;</p>
+</td>
+<td>I2C</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Nap&aacute;jen&iacute;</td>
+<td>Min 2.4V - max. 5.5V</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Rozměr</td>
+<td>9.65 x 40.13</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h1>2. Popis konstrukce</h1>
+<h2>2.1. &Uacute;vodem</h2>
+<p>Jedn&aacute; se o modul založen&yacute; na IO SHT31V01A, kter&yacute; umožňuje měřen&iacute; relativn&iacute; vlhkosti a teploty a velkou přesnost&iacute; a stabilitou. Dal&scaron;&iacute; přesn&eacute; informace IO je možn&eacute; vyč&iacute;st z ofici&aacute;ln&iacute;ho dokumentačn&iacute;ho listu v&yacute;robce. Modul obsahuje ve&scaron;ker&eacute; potřebn&eacute; souč&aacute;stky pro spr&aacute;vn&yacute; chod.</p>
+<h2>2.2. Zapojen&iacute; modulu</h2>
+<h1>3. Osazen&iacute; a oživen&iacute;</h1>
+<h2>3.1. Osazen&iacute;</h2>
+<p>Označen&iacute; Typ Pouzdro Počet J1,J2 CONN1_1 Straight_1x01 2 J9,J10,J11,J12,J13 JUMP_2x1 Straight_1x02 5 M1,M2 HOLE MountingHole_3mm 2 R1,R2,R5,R6 10k SMD-0805 4 R3 - SMD-0805 1 R4 0R SMD-0805 1 C1 100nF SMD-0805 1 U1 SHT31 DFN-8- 1EP_2.4x2.4mm_Pitch0.5mm 1 D1 BZV55C-5,6V Diode-MiniMELF_Standard 1&nbsp;</p>
+<h2>3.2. Oživen&iacute;</h2>
+<p>Je potřeba prov&eacute;st kontrolu zda nen&iacute; na plo&scaron;n&eacute;m spoji zkrat a zda je dobře zap&aacute;jen IO. Jinak nen&iacute; třeba nic oživovat, pouze připojit a napsat program. Když je nulov&yacute;m odporem osazena pozice R4 adresa modulu je 0x44, pokud je osazena pozice R3 je adresa 0x45.</p>
+<h2>3.3. Program</h2>
+<p>Vzorov&yacute; program se nach&aacute;z&iacute; ve složce SW modulu. Pro spu&scaron;těn&iacute; je potřeba m&iacute;t nainstalovan&yacute; pyMLAB.</p>
