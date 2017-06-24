@@ -1,4 +1,5 @@
 
+[English](./README.md)
 # <!--- module --->SHT31V01A<!--- Emodule --->
 
 <!--- subtitle --->Digitální senzor relativní vlhkosti a teploty<!--- Esubtitle --->

@@ -1,4 +1,5 @@
 
+[Czech](./README.cs.md)
 # <!--- module --->SHT31V01A<!--- Emodule --->
 
 <!--- subtitle --->Digital relative humidity and temperature sensor<!--- Esubtitle --->
