@@ -18,7 +18,7 @@
                         font-size: 200%;
                         
                     }
-                    
+
                     h1::before {
                         counter-increment: count-h1;
                         content: counter(count-h1) " ";
@@ -72,6 +72,7 @@
                     .infotable th {
                       background-color: #eee;
                     }
+
                     /*** HEADER ***/
                     #header {
                       border: 1px solid #000;
@@ -109,8 +110,8 @@
                         
                         @frame footer_frame {           /* Static frame */
                             -pdf-frame-content: footer;
-                            margin-left: 2cm;
-                            margin-right: 2cm;
+                            left: 2cm;
+                            right: 2cm;
                             bottom: 0.5cm;
                             height: 20pt;
                         }
@@ -131,6 +132,7 @@
                     </div>
                     
                     <div id="content_frame">
+
                     <p>Jedná se o modul, který je možné osadit IO SHT30 nebo SHT31, které umí měřit relativní vlhkost a teplotu s velkou přesností a stabilitou. Rozsah měřené vlhkosti je 0 % až 100 %. Teplota je měřena v rozsahu -40 °C až 125 °C. Komunikace probíhá přes rozhranní </p>
 <h1>1. Technické parametry</h1>
 <table style="border-color: black; margin-left: auto; margin-right: auto;" border="solid">
