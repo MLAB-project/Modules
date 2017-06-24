@@ -4,7 +4,7 @@
 # SHT31V01A
 <!--- Emodule --->
 
-<!--- subtitle --->Digital relative humidity and temperature sensor<!--- Esubtitle --->
+<!--- subtitle --->bb Digital relative humidity and temperature sensor<!--- Esubtitle --->
 
 ![SHT31V01A](DOC/SRC/img/SHT31V01A_top_big.jpg)
 
