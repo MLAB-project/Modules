@@ -16,16 +16,21 @@
 
                     h1 {
                         font-size: 200%;
+                        
                     }
-
+                    
+                    h1::before {
+                        counter-increment: count-h1;
+                        content: counter(count-h1) " ";
+                    }
 
                     h2::before {
                         counter-increment: count-h2;
-                        content: counter(count-h2) " ";
+                        content: counter(count-h1) "." counter(count-h2) " ";
                     }
                     h3:before {
                         counter-increment: count-h3;
-                        content: counter(count-h2) "." counter(count-h3) " ";
+                        content: counter(count-h1) "." counter(count-h2) "." counter(count-h3) " ";
                     }
 
                     #header, p {
