@@ -1,57 +1,183 @@
-<p>Jedn&aacute; se o modul, kter&yacute; je možn&eacute; osadit IO SHT30 nebo SHT31, kter&eacute; um&iacute; měřit relativn&iacute; vlhkost a teplotu s velkou přesnost&iacute; a stabilitou. Rozsah měřen&eacute; vlhkosti je 0 % až 100 %. Teplota je měřena v rozsahu -40 &deg;C až 125 &deg;C. Komunikace prob&iacute;h&aacute; přes rozhrann&iacute;&nbsp;</p>
-<h1>1. Technick&eacute; parametry</h1>
+
+                <html>
+                <head>
+                <meta charset="UTF-8">
+                <style>
+
+                    html {
+                        max-width: 1000px;
+                    }
+
+                    h1, h2, h3, h4 {
+                        color: #f00;
+                        line-height: 1em;
+                        font-size: 150%;
+                    }
+
+                    h1 {
+                        font-size: 200%;
+                    }
+
+                    #header, p {
+                        font-size: 1.2em;
+                    }
+
+                    #footer table {
+                        width:100%;
+                    }
+
+                    #footer td {
+                      width:50%;
+                    }
+                    #footer .generated {
+                      text-align: right;
+                    }
+
+
+                    /*** Tables ***/
+                    table.gridtable , .gridtable td, .gridtable th{
+                      border: 1px solid #666;
+                      border-collapse: collapse;
+                      padding: 4px;
+                    }
+                    .gridtable th {
+                      background-color: #dedede;
+                    }
+                    table.infotable, .infotable td, .infotable th {
+                      border: 1px solid #666;
+                      border-collapse: collapse;
+                      padding: 2px 2px 0 2px;
+                      line-height: 1.2em;
+                      vertical-align: top;
+                      text-align: left;
+                    }
+                    table.infotable {
+                      width: 100%;
+                    }
+                    .infotable th {
+                      background-color: #eee;
+                    }
+                    /*** HEADER ***/
+                    #header {
+                      border: 1px solid #000;
+                      border-collapse: collapse;
+                      margin-bottom: 2em;
+                      width:100%;
+                      vertical-align: middle;
+                      line-height: 1em;
+                    }
+                    .attribute {
+                      font-weight: bold;
+                    }
+                    #header .logo, #header .logo img {
+                      width:100px;
+                    }
+                    #header table , #header td {
+                      border: 1px solid #000;
+                      padding: 0.3em;
+                      margin-bottom: 0;
+                    }
+
+
+                    @page {
+                        size: a4 portrait;
+                        margin: 1cm;
+                        margin-bottom: 2cm;
+                        @frame header_frame {           /* Static frame */
+                            -pdf-frame-content: header_content;
+                            left: 50pt; right: 50pt; top: 20pt;
+                        }
+                        @frame content_frame {             /* Content frame 1 */
+                            -pdf-frame-content: content_frame;
+                            left: 44pt; right: 44pt; top: 90pt; height: 632pt;
+                        }
+                        
+                        @frame footer_frame {           /* Static frame */
+                            -pdf-frame-content: footer;
+                            margin-left: 2cm;
+                            margin-right: 2cm;
+                            bottom: 0.5cm;
+                            height: 20pt;
+                        }
+                        @font-face {
+                          font-family: Example, "Example Font";
+                          src: url(example.ttf);
+                        }
+                    }
+
+                </style>
+                <head>
+                <body>
+
+                    <div id="header_content">
+                        <img src="http://195.88.142.202/static/logo.png" style="width: 150pt;"> </img>  
+                        <span style="width: 150pt;"> </span>  
+                        MLAB module SHT
+                    </div>
+                    <div id="footer">
+                        <hr>
+                        MLAB.cz - page <pdf:pagenumber> of <pdf:pagecount>
+                    </div>
+                    <div id="content_frame">
+                    <p>Jedná se o modul, který je možné osadit IO SHT30 nebo SHT31, které umí měřit relativní vlhkost a teplotu s velkou přesností a stabilitou. Rozsah měřené vlhkosti je 0 % až 100 %. Teplota je měřena v rozsahu -40 °C až 125 °C. Komunikace probíhá přes rozhranní </p>
+<h1>1. Technické parametry</h1>
 <table style="border-color: black; margin-left: auto; margin-right: auto;" border="solid">
 <tbody>
 <tr>
 <td>Parametr</td>
 <td>Hodnota</td>
-<td>Pozn&aacute;mka</td>
+<td>Poznámka</td>
 </tr>
 <tr>
 <td>
-<p>Relativn&iacute; vlhkost</p>
+<p>Relativní vlhkost</p>
 </td>
 <td>0% - 100%</td>
 <td>Typ. přesnost dle IO</td>
 </tr>
 <tr>
 <td>Teplota</td>
-<td>&nbsp;-40&deg;C - 125&deg;C</td>
+<td> -40°C - 125°C</td>
 <td>Typ. přesnost dle IO</td>
 </tr>
 <tr>
-<td>Integrovan&yacute; obvod</td>
-<td>&nbsp;SHT30, SHT31</td>
-<td>&nbsp;</td>
+<td>Integrovaný obvod</td>
+<td> SHT30, SHT31</td>
+<td> </td>
 </tr>
 <tr>
 <td>
-<p>Rozhran&iacute;</p>
+<p>Rozhraní</p>
 </td>
 <td>I2C</td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
-<td>Nap&aacute;jen&iacute;</td>
+<td>Napájení</td>
 <td>Min 2.4V - max. 5.5V</td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>Rozměr</td>
 <td>9.65 x 40.13</td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
+<p> </p>
 <h1>2. Popis konstrukce</h1>
-<h2>2.1. &Uacute;vodem</h2>
-<p>Jedn&aacute; se o modul založen&yacute; na IO SHT31V01A, kter&yacute; umožňuje měřen&iacute; relativn&iacute; vlhkosti a teploty a velkou přesnost&iacute; a stabilitou. Dal&scaron;&iacute; přesn&eacute; informace IO je možn&eacute; vyč&iacute;st z ofici&aacute;ln&iacute;ho dokumentačn&iacute;ho listu v&yacute;robce. Modul obsahuje ve&scaron;ker&eacute; potřebn&eacute; souč&aacute;stky pro spr&aacute;vn&yacute; chod.</p>
-<h2>2.2. Zapojen&iacute; modulu</h2>
-<h1>3. Osazen&iacute; a oživen&iacute;</h1>
-<h2>3.1. Osazen&iacute;</h2>
-<p>Označen&iacute; Typ Pouzdro Počet J1,J2 CONN1_1 Straight_1x01 2 J9,J10,J11,J12,J13 JUMP_2x1 Straight_1x02 5 M1,M2 HOLE MountingHole_3mm 2 R1,R2,R5,R6 10k SMD-0805 4 R3 - SMD-0805 1 R4 0R SMD-0805 1 C1 100nF SMD-0805 1 U1 SHT31 DFN-8- 1EP_2.4x2.4mm_Pitch0.5mm 1 D1 BZV55C-5,6V Diode-MiniMELF_Standard 1&nbsp;</p>
-<h2>3.2. Oživen&iacute;</h2>
-<p>Je potřeba prov&eacute;st kontrolu zda nen&iacute; na plo&scaron;n&eacute;m spoji zkrat a zda je dobře zap&aacute;jen IO. Jinak nen&iacute; třeba nic oživovat, pouze připojit a napsat program. Když je nulov&yacute;m odporem osazena pozice R4 adresa modulu je 0x44, pokud je osazena pozice R3 je adresa 0x45.</p>
+<h2>2.1. Úvodem</h2>
+<p>Jedná se o modul založený na IO SHT31V01A, který umožňuje měření relativní vlhkosti a teploty a velkou přesností a stabilitou. Další přesné informace IO je možné vyčíst z oficiálního dokumentačního listu výrobce. Modul obsahuje veškeré potřebné součástky pro správný chod.</p>
+<h2>2.2. Zapojení modulu</h2>
+<h1>3. Osazení a oživení</h1>
+<h2>3.1. Osazení</h2>
+<p>Označení Typ Pouzdro Počet J1,J2 CONN1_1 Straight_1x01 2 J9,J10,J11,J12,J13 JUMP_2x1 Straight_1x02 5 M1,M2 HOLE MountingHole_3mm 2 R1,R2,R5,R6 10k SMD-0805 4 R3 - SMD-0805 1 R4 0R SMD-0805 1 C1 100nF SMD-0805 1 U1 SHT31 DFN-8- 1EP_2.4x2.4mm_Pitch0.5mm 1 D1 BZV55C-5,6V Diode-MiniMELF_Standard 1 </p>
+<h2>3.2. Oživení</h2>
+<p>Je potřeba provést kontrolu zda není na plošném spoji zkrat a zda je dobře zapájen IO. Jinak není třeba nic oživovat, pouze připojit a napsat program. Když je nulovým odporem osazena pozice R4 adresa modulu je 0x44, pokud je osazena pozice R3 je adresa 0x45.</p>
 <h2>3.3. Program</h2>
-<p>Vzorov&yacute; program se nach&aacute;z&iacute; ve složce SW modulu. Pro spu&scaron;těn&iacute; je potřeba m&iacute;t nainstalovan&yacute; pyMLAB.</p>
+<p>Vzorový program se nachází ve složce SW modulu. Pro spuštění je potřeba mít nainstalovaný pyMLAB.</p>
+                    </div>
+                </body>
+                </html>
+
+                
