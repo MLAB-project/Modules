@@ -1,10 +1,9 @@
 
-            # SHT31V01A
+# SHT31V01A
 
-            Digitální senzor relativní vlhkosti a teploty
+Digital sensor relative humidity and temperature
 
-            ![SHT31V01A](DOC/SRC/img/SHT31V01A_top_big.jpg)
+![SHT31V01A](DOC/SRC/img/SHT31V01A_top_big.jpg)
 
-            Modul se senzorem SHT31, který měří relativní vlhkost v rozsahu 0 % až 100 % s přesností +/- 2 %. Teplota je měřena v rozsahu -40 °C až 125 °C s typ. přesností 0.3 °C.
-
+SHT31 sensor module which measures relative humidity from 0% to 100% with an accuracy of + / - 2%. Temperature is measured in the range -40 ° C to 125 ° C with a an accuracy of 0.3 ° C.
             
