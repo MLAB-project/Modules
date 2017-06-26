@@ -1,0 +1,156 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SHT31V01A</title>
+    <meta name="generator" content="pandoc" />
+    <meta name="subtitle" content="SHT31V01A - Digitální senzor relativní vlhkosti a teploty"/>
+    <meta name="author" content="Autor 1, Autor 2"/>
+    <meta name="TopImage" content="/home/roman/repos/Modules/OpAmps/OZDUAL02B/DOC/SRC/img/OZDUAL02B_Top_Big.JPG"/>
+    <meta name="QR" content="/home/roman/repos/Modules/OpAmps/OZDUAL02B/DOC/SRC/img/OZDUAL02B_QRcode.png"/>
+    <meta name="abstract" content="Modul se senzorem SHT31, který měří relativní vlhkost v rozsahu 0 % až 100 % s přesností +/- 2 %. Teplota je měřena v rozsahu -40 °C až 125 °C s typ. přesností 0.3 °C."/>
+
+<style>
+    html {
+        max-width: 1000px;
+    }
+</style>
+<head>
+<body>
+    
+    <h1>Technické parametry</h1>
+<table style="border-color: black; margin-left: auto; margin-right: auto;" border="solid">
+<tbody>
+<tr>
+<td><strong>Parametr</strong></td>
+<td><strong>Hodnota</strong></td>
+<td><strong>Poznámka</strong></td>
+</tr>
+<tr>
+<td>
+<p>Relativní vlhkost</p>
+</td>
+<td>0% - 100%</td>
+<td>Typ. přesnost dle IO</td>
+</tr>
+<tr>
+<td>Teplota</td>
+<td> -40°C - 125°C</td>
+<td>Typ. přesnost dle IO</td>
+</tr>
+<tr>
+<td>Integrovaný obvod</td>
+<td> SHT30, SHT31</td>
+<td> </td>
+</tr>
+<tr>
+<td>
+<p>Rozhraní</p>
+</td>
+<td>I2C</td>
+<td> </td>
+</tr>
+<tr>
+<td>Napájení</td>
+<td>Min 2.4V - max. 5.5V</td>
+<td> </td>
+</tr>
+<tr>
+<td>Rozměr</td>
+<td>9.65 x 40.13</td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<h1>Popis konstrukce</h1>
+<h2>Úvodem</h2>
+<p>Jedná se o modul založený na IO SHT31V01A, který umožňuje měření relativní vlhkosti a teploty a velkou přesností a stabilitou. Další přesné informace IO je možné vyčíst z oficiálního dokumentačního listu výrobce. Modul obsahuje veškeré potřebné součástky pro správný chod.</p>
+<h2>Zapojení modulu</h2>
+<h1>Osazení a oživení</h1>
+<h2>Osazení</h2>
+<table>
+<tbody>
+<tr>
+<td><strong>Označení</strong></td>
+<td><strong>Typ</strong></td>
+<td><strong>Pouzdro</strong></td>
+<td><strong>Počet</strong></td>
+</tr>
+<tr>
+<td>J1,J2</td>
+<td>CONN1_1</td>
+<td>Straight_1x01</td>
+<td>2</td>
+</tr>
+<tr>
+<td>J9,J10,J11,J12,J13</td>
+<td>JUMP_2x1</td>
+<td>Straight_1x02</td>
+<td>5</td>
+</tr>
+<tr>
+<td>M1,M2</td>
+<td>HOLE</td>
+<td>MountingHole_3mm</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R1,R2,R5,R6</td>
+<td>10k</td>
+<td>SMD-0805</td>
+<td>4</td>
+</tr>
+<tr>
+<td>R3</td>
+<td>-</td>
+<td>SMD-0805</td>
+<td>1</td>
+</tr>
+<tr>
+<td>R4 </td>
+<td>0R</td>
+<td>SMD-0805 </td>
+<td>1</td>
+</tr>
+<tr>
+<td>C1</td>
+<td>100nF</td>
+<td>SMD-0805</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U1</td>
+<td>SHT31</td>
+<td>DFN-8- 1EP_2.4x2.4mm_Pitch0.5mm</td>
+<td>1</td>
+</tr>
+<tr>
+<td>D1</td>
+<td>BZV55C-5,6V</td>
+<td>Diode-MiniMELF_Standard</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h2>Oživení</h2>
+<p>Je potřeba provést kontrolu zda není na plošném spoji zkrat a zda je dobře zapájen IO. Jinak není třeba nic oživovat, pouze připojit a napsat program. Když je nulovým odporem osazena pozice R4 adresa modulu je 0x44, pokud je osazena pozice R3 je adresa 0x45.</p>
+<h2>Program</h2>
+<p>Vzorový program se nachází ve složce SW modulu. Pro spuštění je potřeba mít nainstalovaný pyMLAB.</p>
+<p> </p>
+<h2>Testovací část</h2>
+<p>chacu</p>
+<p><code>
+blobl
+import sys<br />
+test blabol<br />
+</code></p>
+<p><code>code část</code></p>
+<p><code>import sys</code></p>
+<p><code>print help(sys)</code></p>
+<p><code>print mohlo by to fungovat</code></p>
+
+</body>
+</html>
+
+                

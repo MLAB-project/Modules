@@ -1,0 +1,77 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SHT31V01A</title>
+    <meta name="generator" content="pandoc" />
+    <meta name="subtitle" content="Digital relative humidity and temperature sensor"/>
+    <meta name="author" content="Autor 1, Autor 2"/>
+    <meta name="TopImage" content="/home/roman/repos/Modules/OpAmps/OZDUAL02B/DOC/SRC/img/OZDUAL02B_Top_Big.JPG"/>
+    <meta name="QR" content="/home/roman/repos/Modules/OpAmps/OZDUAL02B/DOC/SRC/img/OZDUAL02B_QRcode.png"/>
+    <meta name="abstract" content="SHT31 sensor module which measures relative humidity from 0% to 100% with an accuracy of + / - 2%. Temperature is measured in the range -40 ° C to 125 ° C with a an accuracy of 0.3 ° C."/>
+
+<style>
+    html {
+        max-width: 1000px;
+    }
+</style>
+<head>
+<body>
+    
+    <p>Jedná se o modul, který je možné osadit IO SHT30 nebo SHT31, které umí měřit relativní vlhkost a teplotu s velkou přesností a stabilitou. Rozsah měřené vlhkosti je 0 % až 100 %. Teplota je měřena v rozsahu -40 °C až 125 °C. Komunikace probíhá přes rozhranní I2C.</p>
+<h1>1. en Technické parametry</h1>
+<table style="border-color: black; margin-left: auto; margin-right: auto;" border="solid">
+<tbody>
+<tr>
+<td>Parametr</td>
+<td>Hodnota</td>
+<td>Poznámka</td>
+</tr>
+<tr>
+<td>
+<p>Relativní vlhkost</p>
+</td>
+<td> </td>
+<td>Typ. přesnost dle IO</td>
+</tr>
+<tr>
+<td>Teplota</td>
+<td> </td>
+<td>Typ. přesnost dle IO</td>
+</tr>
+<tr>
+<td>Integrovaný obvod</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>
+<p>Napájení</p>
+</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>Rozhraní</td>
+<td>I2C</td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<h1>2. en Popis konstrukce</h1>
+<h2>2.1. en Úvodem</h2>
+<p>Jedná se o modul založený na IO SHT31V01A, který umožňuje měření relativní vlhkosti a teploty a velkou přesností a stabilitou. Další přesné informace IO je možné vyčíst z oficiálního dokumentačního listu výrobce. Modul obsahuje veškeré potřebné součástky pro správný chod.</p>
+<h2>2.2. Zapojení modulu</h2>
+<h1>3. en Osazení a oživení</h1>
+<h2>3.1. Osazení</h2>
+<p>Označení Typ Pouzdro Počet J1,J2 CONN1_1 Straight_1x01 2 J9,J10,J11,J12,J13 JUMP_2x1 Straight_1x02 5 M1,M2 HOLE MountingHole_3mm 2 R1,R2,R5,R6 10k SMD-0805 4 R3 - SMD-0805 1 R4 0R SMD-0805 1 C1 100nF SMD-0805 1 U1 SHT31 DFN-8- 1EP_2.4x2.4mm_Pitch0.5mm 1 D1 BZV55C-5,6V Diode-MiniMELF_Standard 1 </p>
+<h2>3.2. en Oživení</h2>
+<p>Je potřeba provést kontrolu zda není na plošném spoji zkrat a zda je dobře zapájen IO. Jinak není třeba nic oživovat, pouze připojit a napsat program. Když je nulovým odporem osazena pozice R4 adresa modulu je 0x44, pokud je osazena pozice R3 je adresa 0x45.</p>
+<h2>3.3. en Program</h2>
+<p>Vzorový program se nachází ve složce SW modulu. Pro spuštění je potřeba mít nainstalovaný pyMLAB.</p>
+
+</body>
+</html>
+
+                
