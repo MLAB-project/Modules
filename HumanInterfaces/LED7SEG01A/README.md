@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:[End]: ---> 
-<!--- Name:LED7SEG01A: --->
-#LED7SEG01A 
-<!--- LongName --->
 
-<!--- ELongName ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# LED7SEG01A
+<!--- Emodule --->
 
-<!--- Lead --->
-LED 7-segmentový display ovládaný přes I2C
-<!--- ELead ---> 
+<!--- subtitle --->None<!--- Esubtitle --->
 
-![LeadImg](LED7SEG01A_Small.jpg) 
+![LED7SEG01A]()
 
-
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->LED 7-segmentový display ovládaný přes I2C        <!--- Edescription --->
             
