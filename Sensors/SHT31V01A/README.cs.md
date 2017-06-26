@@ -4,7 +4,7 @@
 # SHT31V01A
 <!--- Emodule --->
 
-<!--- subtitle --->Digitální senzor relativní vlhkosti a teploty<!--- Esubtitle --->
+<!--- subtitle --->SHT31V01A - Digitální senzor relativní vlhkosti a teploty<!--- Esubtitle --->
 
 ![SHT31V01A](DOC/SRC/img/SHT31V01A_top_big.jpg)
 
