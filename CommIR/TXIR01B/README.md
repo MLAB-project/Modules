@@ -1,25 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
-<!--- Name:TXIR01B: --->
-#TXIR01B 
-<!--- LongName --->
-IR transmitter module
-<!--- ELongName ---> 
 
-<!--- Lead --->
-The module is useful for quick implementation SPI IR transmitter
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# TXIR01B
+<!--- Emodule --->
 
+<!--- subtitle ---> IR transmitter module <!--- Esubtitle --->
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+![TXIR01B]()
+
+<!--- description ---> The module is useful for quick implementation SPI IR transmitter<!--- Edescription --->
             
