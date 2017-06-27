@@ -1,3 +1,5 @@
+include <../configuration.scad>
+include <otvory_conf.scad>
 //Funkce otvuru pro ruzne prvky umistene do celicek
 
 /*OBSAHUJE
@@ -14,6 +16,10 @@
     2B) - Otvor C1+
     2C) - Otvor na RJ12V01A
     2D) - VLFANT01B
+    2E)
+    2F)
+    2G) - otvor vypinac
+    2H) - LCD
 */
 
 
@@ -159,19 +165,18 @@ CHLADICI_OTVORY_prekryti=1.2;
 --------------------------------------------------------
 
 */
- 
+
  module IR(tloustka_bocnice,vyska_bocnice)
 {
     IR_sirka_kon=7; //sirka senzoru
     IR_vyska_kon=7.5; //vyska senzoru
     IR_hloubka_venkovni=1.2; //sila senzoru od vodičů ven
     IR_vyska_pro_vodice=5; 
+   
+   translate([0,-tloustka_bocnice-1,vyska_bocnice/2-IR_vyska_kon/2])
+   cube(size = [IR_sirka_kon,IR_hloubka_venkovni+2,IR_vyska_kon], center = false);
     
-    
-   translate([0,-tloustka_bocnice/2-0.01,vyska_bocnice/2-IR_vyska_kon/2])
-   cube(size = [IR_sirka_kon,IR_hloubka_venkovni+0.1,IR_vyska_kon], center = false);
-    
-    translate([0,-(tloustka_bocnice/2-IR_hloubka_venkovni),vyska_bocnice/2-IR_vyska_kon/2-IR_vyska_pro_vodice])
+    translate([0,-tloustka_bocnice+IR_hloubka_venkovni,vyska_bocnice/2-IR_vyska_kon/2-IR_vyska_pro_vodice])
    cube(size = [IR_sirka_kon,tloustka_bocnice,IR_vyska_kon+IR_vyska_pro_vodice], center = false);
  } 
  
@@ -312,4 +317,61 @@ module AT32TQ14401A(tloustka_bocnice,vzdalenost_der)
   
     translate([AT32TQ14401A_vzdalenost_konektoru,-tloustka_bocnice/2-0.2,AT32TQ14401A_vyska_nad_plbase])
    cube(size = [AT32TQ14401A_sirka_kon,tloustka_bocnice+0.2,AT32TQ14401A_vyska_kon], center = false);
- }   
+ } 
+
+
+/*2G) - Pro vypinac otvor 13x19
+--------------------------------------------------------
+--------------------------------------------------------
+
+*/
+
+module VYPINAC(tloustka_bocnice,vzdalenost_der,vzdalenost) //uz upraveno
+{
+  Vypinac_sirka_kon=13; //sirka konektoru
+  Vypinac_vyska_kon=19; //vyska konektoru
+  Vypinac_sirka_mod_otvory=1; //kolik modul zabira der
+  Vypinac_vyska_nad_plbase=rozmer_y/2-vzdalenost; //kolik modul zabira der   
+   translate([vzdalenost_der*( Vypinac_sirka_mod_otvory-1)/2,0, Vypinac_vyska_nad_plbase])
+   cube(size = [ Vypinac_sirka_kon,tloustka_bocnice+0.2, Vypinac_vyska_kon], center = true);  
+    
+} 
+
+/*2H) - Pro LCD s I2C
+--------------------------------------------------------
+--------------------------------------------------------
+
+*/
+
+module LCD(tloustka_bocnice,vzdalenost_der,vzdalenost) //uz upraveno
+{
+  LCD_roztec_x=75.4;
+  LCD_roztec_y=31.4;
+  LCD_x=71.3;
+  LCD_y=24.5; 
+  LCD_sroub_prumer=3.2;  
+   
+  LCD_sirka_mod_otvory=1; //kolik modul zabira der
+  LCD_vyska_nad_plbase=rozmer_y/2-vzdalenost; //kolik modul zabira der   
+   translate([vzdalenost_der*( LCD_sirka_mod_otvory-1)/2,0, LCD_vyska_nad_plbase])
+    
+ {   
+   cube(size = [ LCD_x,tloustka_bocnice+0.5, LCD_y], center = true);  
+
+rotate([90, 0, 0]) 
+    translate([-LCD_roztec_x/2,LCD_roztec_y/2, 0]) 
+        cylinder(h=tloustka_bocnice+0.5, r=LCD_sroub_prumer/2, center=true);
+  
+rotate([90, 0, 0]) 
+    translate([LCD_roztec_x/2,LCD_roztec_y/2, 0]) 
+        cylinder(h=tloustka_bocnice+0.5, r=LCD_sroub_prumer/2, center=true);   
+   
+rotate([90, 0, 0]) 
+    translate([-LCD_roztec_x/2,-LCD_roztec_y/2, 0]) 
+        cylinder(h=tloustka_bocnice+0.5, r=LCD_sroub_prumer/2, center=true);
+  
+rotate([90, 0, 0]) 
+    translate([LCD_roztec_x/2,-LCD_roztec_y/2, 0]) 
+        cylinder(h=tloustka_bocnice+0.5, r=LCD_sroub_prumer/2, center=true);     
+}     
+} 

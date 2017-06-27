@@ -1,3 +1,4 @@
+$fn=40; // model faces resolution.
 use <src/UNIBOX03A_D01.scad>
 use <src/otvory.scad>
 
@@ -22,21 +23,25 @@ UNIBOX03A_D01();
 
 
 
-posun_modulu_der_x=30;
+posun_modulu_der_x=10.5;
 rotate(a=[-90,0,0])
 translate([posun_modulu_der_x*roztec_der-roztec_der*(pocet_der_osa_x-1)/2,0,-rozmer_y/2+vzdalenost_AL])
-VLFANT01B(2*sila,roztec_der);
+IR(sila,rozmer_y-vzdalenost_AL);
     
-posun_modulu_der_x1=0;
+posun_modulu_der_x1=5;
 rotate(a=[-90,0,0])
 translate([posun_modulu_der_x1*roztec_der-roztec_der*(pocet_der_osa_x-1)/2,0,-rozmer_y/2+vzdalenost_AL])
 
-AT32TQ14401A(2*sila,roztec_der); 
+LCD(2*sila,roztec_der,vzdalenost_AL); 
     
     
- posun_modulu_der_x2=10;
+ posun_modulu_der_x2=13;
 rotate(a=[-90,0,0])
-translate([posun_modulu_der_x2*roztec_der-roztec_der*(pocet_der_osa_x-1)/2,0,-rozmer_y/2+vzdalenost_AL])   
- GPS01B(2*sila,roztec_der);   
+translate([posun_modulu_der_x2*roztec_der-roztec_der*(pocet_der_osa_x-1)/2,0,-rozmer_y/2+vzdalenost_AL])
+
+ VYPINAC(2*sila,roztec_der,vzdalenost_AL);
+  
     
      }  
+     
+    
