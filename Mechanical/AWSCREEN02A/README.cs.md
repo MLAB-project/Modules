@@ -1,5 +1,5 @@
 
-[Czech](./README.cs.md)
+[English](./README.md)
 <!--- module --->
 # AWSCREEN02A
 <!--- Emodule --->
