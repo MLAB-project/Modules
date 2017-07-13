@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
-<!--- Name:BASEBOX03A: --->
-#BASEBOX03A 
-<!--- LongName --->
-3D printable device housing box
-<!--- ELongName ---> 
 
-<!--- Lead --->
-The printed plastic parts are sandwiched between standard hole-grid plates which makes the enclosure very rigid. The box sides can be easily customized for individual project needs, or separately exchanged during an instrument development.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# BASEBOX03A
+<!--- Emodule --->
 
-![LeadImg](BASEBOX03A_Small.png) 
+<!--- subtitle --->3D printable device housing box<!--- Esubtitle --->
 
+![BASEBOX03A](BASEBOX03A/DOC/SRC/img/BASEBOX03A_QRcode.png)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->The printed plastic parts are sandwiched between standard hole-grid plates which makes the enclosure very rigid. The box sides can be easily customized for individual project needs, or separately exchanged during an instrument development.<!--- Edescription --->
             
