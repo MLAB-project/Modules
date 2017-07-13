@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:[End]: ---> 
-<!--- Name:SUPERCAP01A: --->
-#SUPERCAP01A 
-<!--- LongName --->
-Circuit for charging and balancing two supercapacitors.
-<!--- ELongName ---> 
 
-<!--- Lead --->
-The module is suitable for covering power outages devices. By detecting the input voltage drop can be used for early shutdown of computers type ODROID on power.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# SUPERCAP01A
+<!--- Emodule --->
 
-![LeadImg](SUPERCAP01A_TOP_Small.jpg) 
+<!--- subtitle --->Circuit for charging and balancing two supercapacitors.<!--- Esubtitle --->
 
+![SUPERCAP01A](DOC/SRC/img/SUPERCAP01A_QRcode.png)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description ---> The module is suitable for covering power outages devices. By detecting the input voltage drop can be used for early shutdown of computers type ODROID on power.<!--- Edescription --->
             
