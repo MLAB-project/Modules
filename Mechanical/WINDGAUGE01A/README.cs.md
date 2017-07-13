@@ -6,7 +6,7 @@
 
 <!--- subtitle --->WINDGAUGE01A<!--- Esubtitle --->
 
-![WINDGAUGE01A]()
+![WINDGAUGE01A](DOC/SRC/img/WINDGAUGE01A_big.jpg)
 
 <!--- description --->None<!--- Edescription --->
             
