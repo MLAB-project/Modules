@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
-<!--- Name:BP01B: --->
-#BP01B 
-<!--- LongName --->
-Radio ferequency band pass filter
-<!--- ELongName ---> 
 
-<!--- Lead --->
-SMD construction of band pass filter intented to be used in radioastronomy applications. Primarily designed to 20-40MHz pass band.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# BP01B
+<!--- Emodule --->
 
-![LeadImg](DOC/SRC/img/BP01B_Top_Big.JPG) 
+<!--- subtitle --->Radio ferequency band pass filter<!--- Esubtitle --->
 
+![BP01B](DOC/SRC/img/BP01B_Top_Big.JPG)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->SMD construction of band pass filter intented to be used in radioastronomy applications. Primarily designed to 20-40MHz pass band.<!--- Edescription --->
             
