@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:http://www.ust.cz/shop/product_info.php?cPath=22_27&products_id=266: ---> 
-<!--- Name:I2CDIFF01A: --->
-#I2CDIFF01A 
-<!--- LongName --->
-Differential I²C transceiver
-<!--- ELongName ---> 
 
-<!--- Lead --->
-Allows long range I²C communication in harsh environment.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# I2CDIFF01A
+<!--- Emodule --->
 
-![LeadImg](DOC/SRC/img/I2CDIFF01A_top_big.jpg) 
+<!--- subtitle --->Differential I²C transceiver<!--- Esubtitle --->
 
+![I2CDIFF01A]()
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->Allows long range I²C communication in harsh environment.<!--- Edescription --->
             
