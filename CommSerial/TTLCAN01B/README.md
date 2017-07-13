@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:http://www.ust.cz/shop/product_info.php?cPath=22_27&products_id=40: ---> 
-<!--- Name:TTLCAN01B: --->
-#TTLCAN01B 
-<!--- LongName --->
-TTL to CAN bus Converter
-<!--- ELongName ---> 
 
-<!--- Lead --->
-The module allow conecting uprocessors to CAN bus
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# TTLCAN01B
+<!--- Emodule --->
 
-![LeadImg](DOC/SRC/img/TTLCAN01B_Top_Big.JPG) 
+<!--- subtitle ---> TTL to CAN bus Converter <!--- Esubtitle --->
 
+![TTLCAN01B](DOC/SRC/img/TTLCAN01B_Top_Big.JPG)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description ---> The module allow conecting uprocessors to CAN bus<!--- Edescription --->
             
