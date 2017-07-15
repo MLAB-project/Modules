@@ -75,7 +75,6 @@ Modul je z z důvodu zabezpečení kvalitního blokování i na vysokých frekve
 
 \subsubsection{Osazení}
 
-Modul je možné osadit i ručně, avšak je třeba dbát zvýšené opatrnosti kvůli elektrostatickým nábojům, neboť čipy Si570 je snadné poškodit. Rozložení součástek je na Obr. \ref{Osazovaky}.
 
 
 \newpage
@@ -83,13 +82,11 @@ Modul je možné osadit i ručně, avšak je třeba dbát zvýšené opatrnosti 
 
 \begin{figure} [h!tbp]
   \centering
-  \includegraphics[trim = 8.5cm 13.0cm 8.5cm 13.0cm, clip, width=6.5cm]{../../CAM_DOC/O1.pdf}
-  \includegraphics[trim = 8.5cm 13.0cm 8.5cm 13.0cm, clip, width=6.5cm]{../../CAM_DOC/O2.pdf}
+  \includegraphics[trim = 7.3cm 12.7cm 7.3cm 12.7cm, clip, width=6.5cm]{../../CAM_DOC/O1.pdf}
+  \includegraphics[trim = 7.3cm 12.7cm 7.3cm 12.7cm, clip, width=6.5cm]{../../CAM_DOC/O2.pdf}
   \caption{Osazovací plán horní a spodní strany plošného spoje}
   \label{fig:osazovaci_plan}
 \end{figure}
-
-Odpory R2 a R4 se osazují jen v případě že se neosazuje U3. Seznam součástek je v tabulce \ref{seznam_soucastek}.
 
 \begin{savenotes}
 \begin{table}[h!]
@@ -111,7 +108,7 @@ Počet & Označení & Typ  & Pouzdro  \\
 1	&	J3	&	JUMP2X3	&	JUMP2X3	\\
 1	&	J5	&	JUMP3	&	Power Bypass	\\
 3	&	L1,L2,L3	&	R0805	&	MI0805K400R-10	\\
-3	&	L4,L5,L6	&	L1812	&	10uH	\\
+3	&	L4,L5,L6	&	L1812	&	1uH	\\
 1	&	R1	&	R1206	&	10R/0R	\\
 1	&	U1	&	TO252	&	LM78M05CDT	\\
 1	&	U2	&	SOT89	&	ADL5536	\\
@@ -126,25 +123,12 @@ Počet & Označení & Typ  & Pouzdro  \\
 \newpage
 
 \subsubsection{Nastavení}
-Při připojení modulu k napájení generuje frekvenci nastavenou při výrobě v Silicon Labs. Je ale možné zpřesnit generovanou frekvenci. K tomu je nutné zprovoznit komunikaci přes I2C sběrnici. 
-
-\section{Programové vybavení}
-V kombinaci s jinými moduly, lze generátor ladit z počítače. Jedním z nejjednodušších řešení je použít modul PIC18F4550v01A a firmware ze zdroje \cite{DG8SAQemulator} pak lze k ladění použít jakýkoli software pracující s konstrukcí \cite{DG8SAQSynthesizer}, například USBSynth \cite{USB_Synth}.
-
+Nastavení modulu se provádí jumpery na jeho vrchní straně. 
 
 
 \begin{thebibliography}{99}
 \bibitem{Si570board}{Původní konstrukce Si570 Board } 
 \href{http://wb6dhw.com/inactive.html}{http://wb6dhw.com/inactive.html}
-
-\bibitem{DG8SAQemulator}{PIC emulátor USB syntezátoru od DG8SAQ} 
-\href{http://www.qrpradio.org/pub/softrocks/manuals/Softrock Group Files 210109/21 9V1AL/02 UBW Emulator/README.txt}{http://www.qrpradio.org/pub/softrocks/manuals/Softrock Group Files 210109/21 9V1AL/02 UBW Emulator/README.txt}
-
-\bibitem{DG8SAQSynthesizer}{Wideband RF Synthesizer} 
-\href{http://www.mydarc.de/dg8saq/SI570/index.shtml}{http://www.mydarc.de/dg8saq/SI570/index.shtml}
-
-\bibitem{USB_Synth}{USB Synth}
-\href{ http://www.mydarc.de/dg8saq/hidden/USB\_Synth3.zip}{http://www.mydarc.de/dg8saq/hidden/USB\_Synth3.zip}
 
 \end{thebibliography}
 \end{document}
