@@ -10,13 +10,14 @@
 \usepackage{footnote}
 \pagestyle{empty}
 \begin{document}
-\title{Základní RF zesilovač - GB01A}
+\title{Linkový RF zesilovač - GB01A}
 \author{Jakub Kákona, kaklik@mlab.cz}
 \maketitle
 
 \thispagestyle{empty}
 \begin{abstract}
-Poskytuje širokopásmový zisk závislý podle osazeného MMIC obvodu.
+Modul určený k zesílení RF signálu například na vstupu přijímače.
+Poskytuje širokopásmový zisk zvolený podle osazeného MMIC obvodu.
 \end{abstract}
 
 \begin{figure} [htbp]
@@ -39,13 +40,9 @@ Poskytuje širokopásmový zisk závislý podle osazeného MMIC obvodu.
 \hline
 Parametr & Hodnota & Poznámka \\
 \hline
-Napájecí napětí POWER  & max 5V &  160mA \\ 
+Napájecí napětí  & max 12V &  130mA \\ 
 \hline
-Napájecí napětí Vcore & +1,8V, 2,7V, 3,3V &  Záleží na konkrétním typu čipu Si5XX \\ 
-\hline
-Frekvenční rozsah  & 10 - 1500 MHz & Záleží na konkrétním typu čipu Si5XX, obvykle 10-810MHz \\ 
-\hline
-Fázový jitter  & $<$ 0,3ps & Pro obvody řady Si570 \\ 
+Frekvenční rozsah  & 20 - 1000 MHz & Záleží na konkrétním typu osazeného obvodu \\ 
 \hline
 \end{tabular}
 \end{center}
@@ -53,29 +50,30 @@ Fázový jitter  & $<$ 0,3ps & Pro obvody řady Si570 \\
 
 \section{Popis konstrukce}
 
-\subsection{Zapojení}
-Zapojení modulu je řešeno tak, aby umožnilo připojení řídícího mikroprocesoru provozovaného na stejném i jiném napájecím napětí vůči čipu Si5XX. V konstrukci je proto využit převodník napěťových úrovní, který může být při jeho absenci přemostěn dvěma nulovými odpory R4 a R5.
+Modul linkového zesilovače je konstruován pro univerzální širokopásmové zesílení. Může být také využit jako napájecí výhybka. 
 
-V případě provozování modulu na napájecím napětí různém od napájecího napětí Si570 si modul může stabilizovat napájení sám díky lineárnímu stabilizátoru. V takovém případě je ale přesto dát pozor, aby napájení nepřesáhlo dovolené napětí na translátoru, tedy hranici 5V. 
+\subsection{Zapojení}
+
+Zapojení je navrženo tak, aby zesilovač mohl být napájen po výstupním koaxiálním kabelu a aby toto napájení mohlo být sdíleno s dalšími komponentami zapojenými před zesilovač. Typicky jde například o LNA. Jestli tato možnost bude využita závisí na konfiguraci jumperu. 
 
 \includepdf[pages={1},landscape=true]{../../SCH/GB01A.pdf}
 
-Jak je vidět ze zapojení, výstup je předpokládán diferenciální, avšak není problém osadit verzi čipu Si570 s CMOS výstupem. 
 
 \subsection{Odrušení}
 
-Vzhledem k tomu, že modul je ze své podstaty generátorem signálu, je s ním i třeba tak pracovat a dbát na dostatečné odrušení vůči jiným součástem aparatury. Tomuto výrazně pomáhá vhodná volba základní desky, z MLABu nejlépe ALBASE.
+
+Protože zesilovač je z principu zdrojem vysokofrekvenčního signálu, tak je nutné zajistit, aby se zesílený vysokofrekvenční signál nemohl vyzářit do okolí modulu.  Tomuto výrazně pomáhá vhodná volba základní desky, z MLABu nejlépe ALBASE. Případně lze ve volném prostoru modul stínit našroubováním stejně velkého plošného spoje na montážní šrouby modulu. 
 
 \subsection{Mechanická konstrukce}
 
-Modul klasicky předpokládá uchycení na čtyřech šroubech, z důvodu vhodného odstínění je vhodné zabezpečit aby všechny šrouby byly vodivě spojeny s podložkou.  
+Modul klasicky předpokládá uchycení na čtyřech šroubech, z důvodu vhodného odstínění je vhodné zabezpečit aby všechny šrouby byly vodivě spojeny s podložkou, která musí též být tvořena dobře vodivým materiálem.  
 
 \section{Výroba a testování}
-Modul je z z důvodu zabezpečení kvalitního blokování i na vysokých frekvencích (až 1,5GHz) navržen na dvouvrstvém silně prokoveném plošném spoji. A proto je obtížná jeho amatérská výroba.
+Modul je z z důvodu zabezpečení kvalitního blokování i na vysokých frekvencích (až 1,5GHz) navržen na dvouvrstvém silně prokoveném plošném spoji. Modul má vynechánu vrstvu masky, což vyžaduje zvýšenou opatrnost při testování, neboť zde existuje zvýšené riziko zkratu. 
 
 \subsubsection{Osazení}
 
-
+Modul se osazuje použitím pájecí pasty a reflow technologie. Na součástky není nutné používat lepidlo.  Po osazení a zaletování je vhodné provést základní test ještě před mytím modulu, neboť je možné, že bude potřeba opravit zkraty na modulu vzhledem k absenci masky. 
 
 \newpage
 
@@ -98,7 +96,7 @@ Počet & Označení & Typ  & Pouzdro  \\
 7	&	C1,C2,C5,C6,C10,C11,C14	&	C0805	&	100nF	\\
 2	&	C3,C4	&	ELYTC	&	47uF	\\
 1	&	C7	&	C0805	&	68pF	\\
-1	&	C8	&	C0805	&	1n2	\\
+1	&	C8	&	C0805	&	1nF	\\
 1	&	C9	&	C0805	&	1uF	\\
 2	&	C12,C13	&	ELYTB	&	10uF/16V	\\
 3	&	D1,D2,D3	&	SMA	&	M4	\\
@@ -107,7 +105,7 @@ Počet & Označení & Typ  & Pouzdro  \\
 2	&	J2,J4	&	SMA6251A13G50	&	SMA6251A13G50	\\
 1	&	J3	&	JUMP2X3	&	JUMP2X3	\\
 1	&	J5	&	JUMP3	&	Power Bypass	\\
-3	&	L1,L2,L3	&	R0805	&	MI0805K400R-10	\\
+3	&	L1,L2,L3	&	R0805	&	BLM21PG300SN1D	\\
 3	&	L4,L5,L6	&	L1812	&	CC453232-1R2KL	\\
 1	&	R1	&	R1206	&	10R/0R	\\
 1	&	U1	&	TO252	&	LM78M05CDT	\\
@@ -123,7 +121,7 @@ Počet & Označení & Typ  & Pouzdro  \\
 \newpage
 
 \subsubsection{Nastavení}
-Nastavení modulu se provádí jumpery na jeho vrchní straně. 
+Nastavení modulu se provádí jumperem na jeho vrchní straně. 
 
 
 \begin{thebibliography}{99}
