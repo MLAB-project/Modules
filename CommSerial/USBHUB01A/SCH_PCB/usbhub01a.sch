@@ -1249,65 +1249,65 @@ USB_SSTXM_DN4-
 Text Label 9580 700  0    60   ~ 0
 USB_VBUS_UP
 Text Label 7080 1500 2    60   ~ 0
-USB_DM_UP+
-Text Label 7080 1400 2    60   ~ 0
 USB_DM_UP-
+Text Label 7080 1400 2    60   ~ 0
+USB_DM_UP+
 Text Label 7080 1700 2    60   ~ 0
-USB_SSTXM_UP+
-Text Label 7080 1600 2    60   ~ 0
 USB_SSTXM_UP-
+Text Label 7080 1600 2    60   ~ 0
+USB_SSTXM_UP+
 Text Label 7080 1900 2    60   ~ 0
-USB_SSRXM_UP+
-Text Label 7080 1800 2    60   ~ 0
 USB_SSRXM_UP-
+Text Label 7080 1800 2    60   ~ 0
+USB_SSRXM_UP+
 Text Label 9230 1500 0    60   ~ 0
-USB_DM_DN1+
-Text Label 9230 1400 0    60   ~ 0
 USB_DM_DN1-
+Text Label 9230 1400 0    60   ~ 0
+USB_DM_DN1+
 Text Label 9230 1900 0    60   ~ 0
-USB_SSRXM_DN1+
-Text Label 9230 1800 0    60   ~ 0
 USB_SSRXM_DN1-
+Text Label 9230 1800 0    60   ~ 0
+USB_SSRXM_DN1+
 Text Label 9230 1700 0    60   ~ 0
-USB_SSTXM_DN1+
-Text Label 9230 1600 0    60   ~ 0
 USB_SSTXM_DN1-
+Text Label 9230 1600 0    60   ~ 0
+USB_SSTXM_DN1+
 Text Label 9230 2200 0    60   ~ 0
-USB_DM_DN2+
-Text Label 9230 2100 0    60   ~ 0
 USB_DM_DN2-
+Text Label 9230 2100 0    60   ~ 0
+USB_DM_DN2+
 Text Label 9230 2600 0    60   ~ 0
-USB_SSRXM_DN2+
-Text Label 9230 2500 0    60   ~ 0
 USB_SSRXM_DN2-
+Text Label 9230 2500 0    60   ~ 0
+USB_SSRXM_DN2+
 Text Label 9230 2400 0    60   ~ 0
-USB_SSTXM_DN2+
-Text Label 9230 2300 0    60   ~ 0
 USB_SSTXM_DN2-
+Text Label 9230 2300 0    60   ~ 0
+USB_SSTXM_DN2+
 Text Label 9230 2900 0    60   ~ 0
-USB_DM_DN3+
-Text Label 9230 2800 0    60   ~ 0
 USB_DM_DN3-
+Text Label 9230 2800 0    60   ~ 0
+USB_DM_DN3+
 Text Label 9230 3300 0    60   ~ 0
-USB_SSRXM_DN3+
-Text Label 9230 3200 0    60   ~ 0
 USB_SSRXM_DN3-
+Text Label 9230 3200 0    60   ~ 0
+USB_SSRXM_DN3+
 Text Label 9230 3100 0    60   ~ 0
-USB_SSTXM_DN3+
-Text Label 9230 3000 0    60   ~ 0
 USB_SSTXM_DN3-
+Text Label 9230 3000 0    60   ~ 0
+USB_SSTXM_DN3+
 Text Label 9230 3600 0    60   ~ 0
-USB_DM_DN4+
-Text Label 9230 3500 0    60   ~ 0
 USB_DM_DN4-
+Text Label 9230 3500 0    60   ~ 0
+USB_DM_DN4+
 Text Label 9230 4000 0    60   ~ 0
-USB_SSRXM_DN4+
-Text Label 9230 3900 0    60   ~ 0
 USB_SSRXM_DN4-
+Text Label 9230 3900 0    60   ~ 0
+USB_SSRXM_DN4+
 Text Label 9230 3800 0    60   ~ 0
-USB_SSTXM_DN4+
-Text Label 9230 3700 0    60   ~ 0
 USB_SSTXM_DN4-
+Text Label 9230 3700 0    60   ~ 0
+USB_SSTXM_DN4+
 $Comp
 L +3V3 #PWR030
 U 1 1 55EC3BF3
@@ -1793,10 +1793,10 @@ Wire Wire Line
 Wire Wire Line
 	1810 6420 760  6420
 $Comp
-L GND #PWR?
+L GND #PWR036
 U 1 1 594CEA46
 P 6520 2800
-F 0 "#PWR?" H 6520 2550 50  0001 C CNN
+F 0 "#PWR036" H 6520 2550 50  0001 C CNN
 F 1 "GND" V 6525 2672 50  0000 R CNN
 F 2 "" H 6520 2800 50  0001 C CNN
 F 3 "" H 6520 2800 50  0001 C CNN
