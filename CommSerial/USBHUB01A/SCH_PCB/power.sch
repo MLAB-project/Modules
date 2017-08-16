@@ -83,7 +83,7 @@ Wire Wire Line
 Wire Wire Line
 	6200 2950 6500 2950
 Wire Wire Line
-	6500 2950 6500 3050
+	6500 2800 6500 3050
 Wire Wire Line
 	6950 2650 6950 2850
 Connection ~ 6950 2800
@@ -561,4 +561,6 @@ Wire Wire Line
 	1940 2010 2300 2010
 Connection ~ 2300 2210
 NoConn ~ 9600 2950
+Connection ~ 6500 2800
+Connection ~ 6500 2950
 $EndSCHEMATC
