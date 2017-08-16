@@ -1,4 +1,4 @@
-update=6/21/2017 10:27:21
+update=8/14/2017 15:41:27
 version=1
 last_client=kicad
 [cvpcb]
@@ -25,8 +25,6 @@ SolderMaskMinWidth=0.000000000000
 DrawSegmentWidth=0.200000000000
 BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
-[general]
-version=1
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -86,3 +84,5 @@ LibName42=MLAB_T
 LibName43=OpAmp
 LibName44=sata7-67491-1030
 LibName45=MLAB_CONNECTORS
+[general]
+version=1
