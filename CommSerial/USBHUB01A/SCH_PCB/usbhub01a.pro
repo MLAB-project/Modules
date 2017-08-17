@@ -1,4 +1,4 @@
-update=8/14/2017 15:41:27
+update=8/17/2017 10:51:58
 version=1
 last_client=kicad
 [cvpcb]
@@ -35,9 +35,11 @@ NetFmtName=
 SpiceForceRefPrefix=0
 SpiceUseNetNumbers=0
 LabSize=60
+[general]
+version=1
 [eeschema]
 version=1
-LibDir=../../../../../kicad-mlab/symbols
+LibDir=C:/Users/cernohorsky/Documents/GIT/kicad-mlab-master;C:/Users/cernohorsky/Documents/GIT/KiCadLib
 [eeschema/libraries]
 LibName1=usbhub01a-rescue
 LibName2=power
@@ -79,10 +81,19 @@ LibName37=mechanical
 LibName38=MLAB_BATERY
 LibName39=MLAB_D
 LibName40=MLAB_IO
-LibName41=MLAB_Jumpers
-LibName42=MLAB_T
-LibName43=OpAmp
-LibName44=sata7-67491-1030
-LibName45=MLAB_CONNECTORS
-[general]
-version=1
+LibName41=MLAB_T
+LibName42=OpAmp
+LibName43=sata7-67491-1030
+LibName44=MLAB_CONNECTORS
+LibName45=symbols/MLAB_BATERY
+LibName46=symbols/MLAB_CONNECTORS
+LibName47=symbols/MLAB_D
+LibName48=symbols/MLAB_DISPLAY
+LibName49=symbols/MLAB_HEADER
+LibName50=symbols/MLAB_IO
+LibName51=symbols/MLAB_Jumpers
+LibName52=symbols/MLAB_MECHANICAL
+LibName53=symbols/MLAB_SW
+LibName54=symbols/MLAB_T
+LibName55=symbols/MLAB_TR
+LibName56=symbols/MLAB_U

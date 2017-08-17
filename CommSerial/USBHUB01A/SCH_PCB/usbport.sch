@@ -30,6 +30,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:mechanical
+LIBS:MLAB_Jumpers
 LIBS:usbhub01a-cache
 EELAYER 26 0
 EELAYER END
@@ -1134,4 +1135,12 @@ Text Label 8870 5300 0    60   ~ 0
 DN4-
 Text Label 8960 2300 0    60   ~ 0
 DN3-
+Text HLabel 2000 3850 0    60   BiDi ~ 0
+VBUS1
+Text HLabel 5100 3850 0    60   BiDi ~ 0
+VBUS2
+Text HLabel 8800 3850 0    60   BiDi ~ 0
+VBUS4
+Text HLabel 8900 850  0    60   BiDi ~ 0
+VBUS3
 $EndSCHEMATC

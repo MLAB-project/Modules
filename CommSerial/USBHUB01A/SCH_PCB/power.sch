@@ -30,6 +30,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:mechanical
+LIBS:MLAB_Jumpers
 LIBS:usbhub01a-cache
 EELAYER 26 0
 EELAYER END
