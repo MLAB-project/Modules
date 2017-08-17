@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 5)
+    (drawings 7)
     (tracks 1679)
     (zones 0)
     (modules 140)
@@ -11,10 +11,10 @@
 
   (page A4)
   (layers
-    (0 F.Cu signal)
-    (1 In1.Cu signal)
+    (0 F.Cu signal hide)
+    (1 In1.Cu signal hide)
     (2 In2.Cu signal hide)
-    (31 B.Cu signal)
+    (31 B.Cu signal hide)
     (32 B.Adhes user)
     (33 F.Adhes user)
     (34 B.Paste user)
@@ -36,7 +36,7 @@
   )
 
   (setup
-    (last_trace_width 0.8)
+    (last_trace_width 0.2)
     (user_trace_width 0.2)
     (user_trace_width 0.25)
     (user_trace_width 0.3)
@@ -1004,7 +1004,7 @@
       (net 2 GND) (zone_connect 1))
   )
 
-  (module Mlab_D:LED_1206 placed (layer B.Cu) (tedit 599596A6) (tstamp 55659AD7)
+  (module Mlab_D:LED_1206 placed (layer B.Cu) (tedit 5995A26E) (tstamp 55659AD7)
     (at 179.8828 100.9904)
     (descr "Diode Mini-MELF Standard")
     (tags "Diode Mini-MELF Standard")
@@ -1013,7 +1013,7 @@
     (fp_text reference D1 (at 0 2.54) (layer B.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value +3V3 (at -0.0508 -2.54) (layer F.SilkS)
+    (fp_text value "+3V3 ON" (at 2.286 2.3368) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
     (fp_line (start 2.21488 -1.50622) (end 2.53492 -1.81102) (layer B.Cu) (width 0.15))
@@ -1210,7 +1210,7 @@
     (fp_text reference J12 (at 0 -7.62 180) (layer F.SilkS) hide
       (effects (font (size 1.5 1.5) (thickness 0.15)))
     )
-    (fp_text value I2C (at -4.0132 0.0508 270) (layer F.SilkS)
+    (fp_text value I2C (at 3.7084 4.5212 90) (layer F.SilkS)
       (effects (font (size 1.5 1.5) (thickness 0.15)))
     )
     (fp_text user 1 (at -2.921 -5.08 180) (layer F.SilkS)
@@ -4359,7 +4359,7 @@
     (fp_text reference J2 (at 0 -8.89) (layer F.SilkS) hide
       (effects (font (size 1.5 1.5) (thickness 0.15)))
     )
-    (fp_text value "Test & Misc Signals" (at 4.0132 0 90) (layer F.SilkS)
+    (fp_text value "Test & Misc Signals" (at -3.6576 0 90) (layer F.SilkS)
       (effects (font (size 1.5 1.5) (thickness 0.15)))
     )
     (fp_text user 1 (at -2.921 -6.35) (layer F.SilkS)
@@ -4400,6 +4400,12 @@
     )
   )
 
+  (gr_text "SMBUSZ_SS_SUS\nFULLPWRMGMTz\nPWRCTL_POL\nGANGED/SMBA2\nAUTOENz\nTEST " (at 161.8488 110.744) (layer F.SilkS)
+    (effects (font (size 1.2 1.2) (thickness 0.15)) (justify left))
+  )
+  (gr_text "GND\nSDA\n+3V3\nSCL\nGND" (at 173.8376 98.044) (layer F.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.15)))
+  )
   (gr_text "USB: 1  2  3  4" (at 161.8996 90.932) (layer F.SilkS)
     (effects (font (size 1.1 1.1) (thickness 0.15)))
   )
