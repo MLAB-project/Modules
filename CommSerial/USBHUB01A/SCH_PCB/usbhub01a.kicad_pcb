@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 7)
+    (drawings 9)
     (tracks 1679)
     (zones 0)
     (modules 140)
@@ -4351,7 +4351,7 @@
     )
   )
 
-  (module Mlab_Pin_Headers:Straight_2x06 (layer F.Cu) (tedit 5454C210) (tstamp 5998016E)
+  (module Mlab_Pin_Headers:Straight_2x06 (layer F.Cu) (tedit 5995A2C3) (tstamp 5998016E)
     (at 158.8008 109.22)
     (descr "pin header straight 2x06")
     (tags "pin header straight 2x06")
@@ -4359,7 +4359,7 @@
     (fp_text reference J2 (at 0 -8.89) (layer F.SilkS) hide
       (effects (font (size 1.5 1.5) (thickness 0.15)))
     )
-    (fp_text value "Test & Misc Signals" (at -3.6576 0 90) (layer F.SilkS)
+    (fp_text value "Test & Misc Signals" (at -3.6576 0 90) (layer F.SilkS) hide
       (effects (font (size 1.5 1.5) (thickness 0.15)))
     )
     (fp_text user 1 (at -2.921 -6.35) (layer F.SilkS)
@@ -4400,7 +4400,13 @@
     )
   )
 
-  (gr_text "SMBUSZ_SS_SUS\nFULLPWRMGMTz\nPWRCTL_POL\nGANGED/SMBA2\nAUTOENz\nTEST " (at 161.8488 110.744) (layer F.SilkS)
+  (gr_text "USBHUB01A\nTUSB8041-Q1" (at 141.2748 87.122) (layer F.SilkS)
+    (effects (font (size 2 2) (thickness 0.3)))
+  )
+  (gr_text "1\n2\n3\n4\n5\n6" (at 162.4076 109.1692) (layer F.SilkS)
+    (effects (font (size 1.6 1.6) (thickness 0.15)))
+  )
+  (gr_text "1. SMBUSz/SS_SUSPEND\n2. FULLPWRMGMTz\n3. PWRCTL_POL\n4. GANGED/SMBA2\n5. AUTOENz\n6. TEST " (at 132.1308 116.5352) (layer F.SilkS)
     (effects (font (size 1.2 1.2) (thickness 0.15)) (justify left))
   )
   (gr_text "GND\nSDA\n+3V3\nSCL\nGND" (at 173.8376 98.044) (layer F.SilkS)
