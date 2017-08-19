@@ -4,7 +4,7 @@
 # ALBASE1115
 <!--- Emodule --->
 
-<!--- subtitle --->Duralová základní deska 15x11 děr<!--- Esubtitle --->
+<!--- subtitle --->Duralová základní deska o velikosti 15x11 děr<!--- Esubtitle --->
 
 ![ALBASE1115](DOC/SRC/img/ALBASE1115_QRcode.png)
 
