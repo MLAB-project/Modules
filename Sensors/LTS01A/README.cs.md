@@ -1,12 +1,12 @@
 
 [English](./README.md)
 <!--- module --->
-# LTS01A
+# module
 <!--- Emodule --->
 
 <!--- subtitle --->Lokální snímač teploty<!--- Esubtitle --->
 
-![LTS01A](DOC/SRC/img/LTS01A_Top_Big.jpg)
+![module](DOC/SRC/img/LTS01A_Top_Big.jpg)
 
 <!--- description --->Čidlo teploty s I2C digitalní sběrnicí a absolutní přesností 0,5 K<!--- Edescription --->
             
