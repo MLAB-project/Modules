@@ -1,0 +1,123 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LTS01A</title>
+    <meta name="generator" content="pandoc" />
+    <meta name="subtitle" content="Local Temperature Sensor"/>
+    <meta name="author" content="Autor 1, Autor 2"/>
+    <meta name="TopImage" content="/home/roman/repos/Modules/OpAmps/OZDUAL02B/DOC/SRC/img/OZDUAL02B_Top_Big.JPG"/>
+    <meta name="QR" content="/home/roman/repos/Modules/OpAmps/OZDUAL02B/DOC/SRC/img/OZDUAL02B_QRcode.png"/>
+    <meta name="abstract" content="Temperature sensor with I2C digital bus and absolute accuracy of 0.5 K."/>
+
+<style>
+</style>
+<head>
+<body>
+    
+    <p>Modul contains 16bit temperature sensor MAX31725, which measuring temperature in range -40 °C - 105 °C with accuracy +/- 0.5 °C. Komunikace probíhá přes I2C rozhraní. Integrovaný obvod lze nastavit i jako termostat.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/MLAB-project/Modules/master/Sensors/LTS01A/DOC/SRC/img/LTS01A_Top_Big.jpg" alt="" width="563" height="157" /></p>
+<h1>1 Technické parametry</h1>
+<p>Parametr Hodnota Poznámka Napájení 3.3V Integrovaný obvod MAX31725 Využití Měření teploty Rozhraní I2C Rozměry 60.45 x 9.65 x 16 mm Výška nad základní deskou</p>
+<table style="margin-left: auto; margin-right: auto;" border="solid black">
+<tbody>
+<tr>
+<td><strong>Parametr</strong></td>
+<td><strong>Hodnota</strong></td>
+<td><strong>Poznámka</strong></td>
+</tr>
+<tr>
+<td>Napájení</td>
+<td>3.3V</td>
+<td> </td>
+</tr>
+<tr>
+<td>Integrovaný obvod</td>
+<td>MAX31725</td>
+<td> </td>
+</tr>
+<tr>
+<td>Využití</td>
+<td>Měření teploty</td>
+<td> </td>
+</tr>
+<tr>
+<td>Rozhraní</td>
+<td>I2C</td>
+<td> </td>
+</tr>
+<tr>
+<td>Rozměry</td>
+<td>60.45 x 9.65 x 16 mm</td>
+<td>Výška nad základní deskou</td>
+</tr>
+</tbody>
+</table>
+<h1>2 Popis konstrukce</h1>
+<h2>2.1 Úvod</h2>
+<p>Modul může sloužit jako náhrada za oblíbený senzor teploty DS18B20. Koncepce modulu umožňuje zapojení až 8 senzorů na jedné sběrnici I2C. Adresa daného senzoru se nastavuje pomocí nulových odporů. V integrovaném obvodu je možné použít i jako termostat. Přes I2C rozhraní se nastaví hodnota teploty, při které se má měnit logická úroveň na pinu OS.</p>
+<h2>2.2 Zapojení</h2>
+<h1>3 Osazení a oživení</h1>
+<h2>3.1 Osazení</h2>
+<p>Označení Typ (pouzdro) R4 nebo R5 0R (0805) R6 nebo R7 0R (0805) R8 nebo R9 0R (0805) R10 0R (0805) R1, R2, R3 10k (0805) C1 100nF (0805) D1 BZV55C-3V6 (minimelf) SV1 JUMP2x5 SV4 JUMP1x1 X2 Šroub M3 X3 MAX31725 (TDFN8)</p>
+<table style="margin-left: auto; margin-right: auto;" border="black solid">
+<tbody>
+<tr>
+<td><strong>Označení</strong></td>
+<td><strong>Typ (pouzdro)</strong></td>
+</tr>
+<tr>
+<td>R4 nebo R5</td>
+<td>0R (0805)</td>
+</tr>
+<tr>
+<td>R6 nebo R7</td>
+<td>0R (0805)</td>
+</tr>
+<tr>
+<td>R8 nebo R9</td>
+<td>0R (0805)</td>
+</tr>
+<tr>
+<td>R10 </td>
+<td>0R (0805)</td>
+</tr>
+<tr>
+<td>R1, R2, R3 </td>
+<td>10k (0805)</td>
+</tr>
+<tr>
+<td>C1</td>
+<td>100nF (0805)</td>
+</tr>
+<tr>
+<td>D1</td>
+<td>BZV55C-3V6 (minimelf)</td>
+</tr>
+<tr>
+<td>SV1</td>
+<td>JUMP2x5</td>
+</tr>
+<tr>
+<td>SV4</td>
+<td>JUMP1x1</td>
+</tr>
+<tr>
+<td>X2</td>
+<td>Šroub M3</td>
+</tr>
+<tr>
+<td>X3</td>
+<td>MAX31725 (TDFN8)</td>
+</tr>
+</tbody>
+</table>
+<h2>3.2 Oživení</h2>
+<p>Po osazení modulu je dobré provést vizuální kontrolu, případně proměřit, zda na napájení není zkrat. Další oživení není potřeba.</p>
+<h2>3.3 Program</h2>
+<p>Ve složce SW tohoto modulu v databázi SVN je umístěn vzorový program pro výčet teploty ze senzoru. Zdrojový kód je v C pro PIC16F887.</p>
+
+</body>
+</html>
+
+                
