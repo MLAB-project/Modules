@@ -4,7 +4,7 @@
 # I2CPWM01A
 <!--- Emodule --->
 
-<!--- subtitle --->PWM řízené I2C<!--- Esubtitle --->
+<!--- subtitle --->PWM řízené I2C blablabla<!--- Esubtitle --->
 
 ![I2CPWM01A]()
 
