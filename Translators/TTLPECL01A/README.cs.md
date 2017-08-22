@@ -6,7 +6,7 @@
 
 <!--- subtitle --->Translátor TTL na PECL a opačně <!--- Esubtitle --->
 
-![TTLPECL01A](DOC/SRC/img/TTLPECL01A_Top_Big.JPG)
+![TTLPECL01A](DOC/SRC/img/TTLPECL01A_Top_Big2.jpg)
 
 <!--- description --->Převádí logické úrovně mezi PECL a TTL. Směr převodu může být vybrán typem osazeného obvodu.<!--- Edescription --->
             
