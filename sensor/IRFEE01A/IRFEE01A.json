@@ -1,16 +1,1 @@
-{
-    "wiki": "None", 
-    "status": "2", 
-    "name": "IRFEE01A", 
-    "short_en": "None", 
-    "image": "DOC/SRC/img/IRFEE01A_QRcode.png", 
-    "longname_cs": "IRFEE01A", 
-    "longname_en": "IRFEE01A", 
-    "autor": "", 
-    "ust": "None", 
-    "doc_cs": "<p>None</p>", 
-    "short_cs": "None", 
-    "doc_en": "<p>None</p>", 
-    "category": "", 
-    "root": "Sensors/IRFEE01A"
-}
+{"wiki": null, "status": 4, "name": "IRFEE01A", "short_en": "The sensor uses modulated infrared signal for distant detection of obstacles. It mmaybe seen as virtual feeler for roboot. The sensor uses processor ATtiny and infraredsensor for remote control. The modulation and statistical processing of the signalgives the sensor good noise imunity.", "image": "/doc/img/IRFEE01A_QRcode.png", "short_cs": "\u010cidlo vyu\u017e\u00edv\u00e1 modulovan\u00e9 Ir z\u00e1\u0159en\u00ed pro bezdotykovou detekci p\u0159edm\u011bt\u016f. Takov\u00e9 virtu\u00e1ln\u00edtykadlo pro roota. J\u00e1drem \u010didla je procesor \u0159ady ATtiny a p\u0159ij\u00edma\u010d Ir pro d\u00e1lkov\u00e9ovl\u00e1d\u00e1n\u00ed. Modulace a pr\u016fm\u011brov\u00e1n\u00ed sign\u00e1lu zaji\u0161\u0165uje zv\u00fd\u0161enou odolnost proti ru\u0161en\u00ed.", "longname_en": "Infrared Feeler - proximity sensor", "autor": "", "ust": null, "doc_cs": "<p>None</p>", "longname_cs": "Intfra\u010derven\u00e9 tykadlo - senzor na p\u0159ek\u00e1\u017eky", "doc_en": "<p>None</p>", "category": "", "root": "sensor/IRFEE01A"}
