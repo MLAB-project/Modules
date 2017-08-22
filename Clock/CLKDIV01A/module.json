@@ -1,0 +1,17 @@
+{
+    "wiki": "None", 
+    "status": "2", 
+    "name": "CLKDIV01A", 
+    "short_en": "Multiple division ratios can be selected by jumpers. Possible division ratios are: (\u00f71, \u00f72, \u00f74, \u00f78) or (\u00f72, \u00f74, \u00f78, \u00f716) every output is synchronous each other. The common enable (EN) is synchronous so that the internal dividers will only be enabled/disabled when the internal clock is already in the LOW state.", 
+    "image": "", 
+    "longname_cs": "D\u011bli\u010dka hodin s differen\u010dn\u00edm vstupem", 
+    "longname_en": "Differential input Clock divider", 
+    "mark": "40", 
+    "autor": "", 
+    "ust": "http://www.ust.cz/shop/product_info.php?products_id=245", 
+    "doc_cs": "<p>None</p>", 
+    "short_cs": "M\u016f\u017ee b\u00fdt nastaveno v\u00edce d\u011bl\u00edc\u00edch pom\u011br\u016f. Mo\u017enosti jsou (\u00f71, \u00f72, \u00f74, \u00f78) nebo (\u00f72, \u00f74, \u00f78, \u00f716). EN vstup je synchronn\u00ed s intern\u00edmi hodinami, proto dojde k vypnut\u00ed p\u0159i n\u00e1vratu na nulu.", 
+    "doc_en": "<p>None</p>", 
+    "category": "", 
+    "root": "Clock/CLKDIV01A"
+}
