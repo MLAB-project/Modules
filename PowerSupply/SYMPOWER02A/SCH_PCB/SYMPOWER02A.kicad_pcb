@@ -3,7 +3,7 @@
   (general
     (links 85)
     (no_connects 0)
-    (area -8.659285 -49.299286 37.465001 8.001001)
+    (area 0.178999 -40.461001 30.301001 -0.178999)
     (thickness 1.6)
     (drawings 21)
     (tracks 312)
@@ -1054,7 +1054,7 @@
     (fp_text reference R7 (at 0 0.3175) (layer B.SilkS)
       (effects (font (size 0.50038 0.50038) (thickness 0.10922)) (justify mirror))
     )
-    (fp_text value 210 (at 0.127 -0.381) (layer B.SilkS)
+    (fp_text value 210k (at 0.127 -0.381) (layer B.SilkS)
       (effects (font (size 0.50038 0.50038) (thickness 0.10922)) (justify mirror))
     )
     (fp_circle (center -1.651 -0.762) (end -1.651 -0.635) (layer B.SilkS) (width 0.15))

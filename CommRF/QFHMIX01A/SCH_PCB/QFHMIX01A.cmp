@@ -1,0 +1,59 @@
+Cmp-Mod V01 Created by Cvpcb (2015-04-05 BZR 5577)-product   date = Ne 24. květen 2015, 22:17:13 CEST
+
+BeginCmp
+TimeStamp = /549D6FF1;
+Reference = C1;
+ValeurCmp = C/U;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /549D6F9A;
+Reference = C2;
+ValeurCmp = 100nF;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /549D660A;
+Reference = D1;
+ValeurCmp = DIODE;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /549D65BC;
+Reference = J1;
+ValeurCmp = Umin ... Umax;
+IdModule  = Pin_Header_Rect_Pads:Straight_2x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /549D7549;
+Reference = M1;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /549D7628;
+Reference = M2;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /549D7646;
+Reference = M3;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /549D7665;
+Reference = M4;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+EndListe
