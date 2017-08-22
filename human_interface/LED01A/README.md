@@ -6,7 +6,7 @@
 
 <!--- subtitle --->None<!--- Esubtitle --->
 
-![LED01A](DOC/SRC/img/LED01A_QRcode.png)
+![LED01A](/home/roman/repos/Modules/human_interface/LED01A/doc/img/LED01A_big.jpg)
 
 <!--- description --->LED01A<!--- Edescription --->
             
