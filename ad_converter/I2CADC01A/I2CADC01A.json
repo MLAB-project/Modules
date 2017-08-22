@@ -1,1 +1,14 @@
-{"wiki": null, "status": 4, "name": "I2CADC01A", "short_en": "24-bit converter, which is controlled via the I2C interface. It includes a temperature sensor that can be used to compensate. Therefore, this module is also suitable for use with thermocouples, because it can provide cold junction compensation.", "image": "/doc/img/I2CADC01A_top_big.jpg", "short_cs": "Precizn\u00ed analogov\u011b digit\u00e1ln\u00ed p\u0159evodn\u00edk s I2C rozhran\u00edm. Obsahuje teplotn\u00ed senzor, kter\u00fd je mo\u017eno pou\u017e\u00edt pro kompenzaci. Proto se tento modul hod\u00ed i pro pou\u017eit\u00ed s termo\u010dl\u00e1nky, proto\u017ee m\u016f\u017ee zajistit kompenzaci studen\u00e9ho konce. ", "longname_en": "24-bit converter controlled via I2C interface", "ust": "\nhttp://www.ust.cz/shop/product_info.php?cPath=22_37&products_id=260\r\n\r\n", "doc_cs": null, "longname_cs": "24-bitov\u00fd p\u0159evodn\u00edk ovl\u00e1dan\u00fd p\u0159es I2C rozhran\u00ed", "doc_en": null, "root": "ad_converter/I2CADC01A"}
+{
+    "wiki": null, 
+    "status": 4, 
+    "name": "I2CADC01A", 
+    "short_en": "24-bit converter, which is controlled via the I2C interface. It includes a temperature sensor that can be used to compensate. Therefore, this module is also suitable for use with thermocouples, because it can provide cold junction compensation.", 
+    "image": "/doc/img/I2CADC01A_top_big.jpg", 
+    "longname_cs": "24-bitov\u00fd p\u0159evodn\u00edk ovl\u00e1dan\u00fd p\u0159es I2C rozhran\u00ed", 
+    "longname_en": "24-bit converter controlled via I2C interface", 
+    "ust": "\nhttp://www.ust.cz/shop/product_info.php?cPath=22_37&products_id=260\r\n\r\n", 
+    "doc_cs": null, 
+    "short_cs": "Precizn\u00ed analogov\u011b digit\u00e1ln\u00ed p\u0159evodn\u00edk s I2C rozhran\u00edm. Obsahuje teplotn\u00ed senzor, kter\u00fd je mo\u017eno pou\u017e\u00edt pro kompenzaci. Proto se tento modul hod\u00ed i pro pou\u017eit\u00ed s termo\u010dl\u00e1nky, proto\u017ee m\u016f\u017ee zajistit kompenzaci studen\u00e9ho konce. ", 
+    "doc_en": null, 
+    "root": "ad_converter/I2CADC01A"
+}

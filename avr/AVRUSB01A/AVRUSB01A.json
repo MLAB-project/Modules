@@ -1,1 +1,14 @@
-{"wiki": null, "status": 4, "name": "AVRUSB01A", "short_en": " Processor module for AVR software version of (Low Speed) USB. May be used as ISP AVR programmer (with USBasp firmware), or USB to I2C convertor (with i2c-tiny-usb firmware). Uses ATmega88 in TQFP32 package.", "image": "/doc/img/AVRUSB01A_QRcode.png", "short_cs": " Procesorov\u00fd modul pro softwarov\u011b realizovan\u00e9 USB rozhran\u00ed na procesoru AVR ATmega88 v pouzdru TQFP32. M\u016f\u017ee se pou\u017e\u00edt jako ISP program\u00e1tor pro AVR procesory (s firmwarem USBasp), nebo jako p\u0159evodn\u00edk USB na I2C (s firmwarem i2c-tiny-usb).", "longname_en": " USB module for AVR processors ", "ust": null, "doc_cs": null, "longname_cs": " Modul USB pro AVR procesory ", "doc_en": null, "root": "avr/AVRUSB01A"}
+{
+    "wiki": null, 
+    "status": 4, 
+    "name": "AVRUSB01A", 
+    "short_en": " Processor module for AVR software version of (Low Speed) USB. May be used as ISP AVR programmer (with USBasp firmware), or USB to I2C convertor (with i2c-tiny-usb firmware). Uses ATmega88 in TQFP32 package.", 
+    "image": "/doc/img/AVRUSB01A_QRcode.png", 
+    "longname_cs": " Modul USB pro AVR procesory ", 
+    "longname_en": " USB module for AVR processors ", 
+    "ust": null, 
+    "doc_cs": null, 
+    "short_cs": " Procesorov\u00fd modul pro softwarov\u011b realizovan\u00e9 USB rozhran\u00ed na procesoru AVR ATmega88 v pouzdru TQFP32. M\u016f\u017ee se pou\u017e\u00edt jako ISP program\u00e1tor pro AVR procesory (s firmwarem USBasp), nebo jako p\u0159evodn\u00edk USB na I2C (s firmwarem i2c-tiny-usb).", 
+    "doc_en": null, 
+    "root": "avr/AVRUSB01A"
+}

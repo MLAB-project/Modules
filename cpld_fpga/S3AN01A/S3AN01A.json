@@ -1,1 +1,14 @@
-{"wiki": null, "status": 4, "name": "S3AN01A", "short_en": " Replaced by an updated version S3AN01B. <br> The school board allows interested people to play with FPGA from XILINX. The board contains LED display, some switches and push buttons. It has VGA video port, PS/2 ports for keyboard and mouse. Because the main chip is not 5V tolerant, the board is equipped with 5V tolerant buffers (inputs). The board is powered from 5V, internal power supply is included. For timing there is one 100MHz crystal oscillator.", "image": "/doc/img/S3AN01A_QRcode.png", "short_cs": " Nahrazeno novou verz\u00ed desky S3AN01B. <br> \u0160koln\u00ed deska umo\u017e\u0148uje za rozumn\u00e9 pen\u00edze za\u010d\u00edt pracovat s obvody FPGA firmy XILINX. Obsahuje LED display, sadu tla\u010d\u00edtek a p\u0159ep\u00edna\u010d\u016f a porty pro p\u0159ipojen\u00ed VGA monitoru a PS/2 kl\u00e1vesnice nebo my\u0161i. Proto\u017ee obvod nen\u00ed 5V tolerantn\u00ed, je p\u0159ed \u010d\u00e1st vstup\u016f p\u0159ed\u0159azen 5V tolerantn\u00ed budi\u010d (vstup). Sou\u010d\u00e1st\u00ed desky jsou nap\u00e1jec\u00ed zdroje a oscil\u00e1tor 100MHz.", "longname_en": " Xilinx Spartan 3 XC3S50AN FPGA School Board ", "ust": null, "doc_cs": null, "longname_cs": " \u0160koln\u00ed deska Xilinx Spartan 3AN XC3S50AN", "doc_en": null, "root": "cpld_fpga/S3AN01A"}
+{
+    "wiki": null, 
+    "status": 4, 
+    "name": "S3AN01A", 
+    "short_en": " Replaced by an updated version S3AN01B. <br> The school board allows interested people to play with FPGA from XILINX. The board contains LED display, some switches and push buttons. It has VGA video port, PS/2 ports for keyboard and mouse. Because the main chip is not 5V tolerant, the board is equipped with 5V tolerant buffers (inputs). The board is powered from 5V, internal power supply is included. For timing there is one 100MHz crystal oscillator.", 
+    "image": "/doc/img/S3AN01A_QRcode.png", 
+    "longname_cs": " \u0160koln\u00ed deska Xilinx Spartan 3AN XC3S50AN", 
+    "longname_en": " Xilinx Spartan 3 XC3S50AN FPGA School Board ", 
+    "ust": null, 
+    "doc_cs": null, 
+    "short_cs": " Nahrazeno novou verz\u00ed desky S3AN01B. <br> \u0160koln\u00ed deska umo\u017e\u0148uje za rozumn\u00e9 pen\u00edze za\u010d\u00edt pracovat s obvody FPGA firmy XILINX. Obsahuje LED display, sadu tla\u010d\u00edtek a p\u0159ep\u00edna\u010d\u016f a porty pro p\u0159ipojen\u00ed VGA monitoru a PS/2 kl\u00e1vesnice nebo my\u0161i. Proto\u017ee obvod nen\u00ed 5V tolerantn\u00ed, je p\u0159ed \u010d\u00e1st vstup\u016f p\u0159ed\u0159azen 5V tolerantn\u00ed budi\u010d (vstup). Sou\u010d\u00e1st\u00ed desky jsou nap\u00e1jec\u00ed zdroje a oscil\u00e1tor 100MHz.", 
+    "doc_en": null, 
+    "root": "cpld_fpga/S3AN01A"
+}
