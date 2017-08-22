@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:http://www.ust.cz/shop/product_info.php?cPath=22_27&products_id=250: ---> 
-<!--- Name:I2CSPI01A: --->
-#I2CSPI01A 
-<!--- LongName --->
-I2C to SPI bridge
-<!--- ELongName ---> 
 
-<!--- Lead --->
-Allows connection of SPI devices to I2C bus. The  module is capable co handle up to four SPI slaves.  Not used chip-select pins can be used as GPIO pins.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# I2CSPI01A
+<!--- Emodule --->
 
-![LeadImg](DOC/SRC/img/I2CSPI01A_Top_Big.jpg) 
+<!--- subtitle --->I2C to SPI bridge<!--- Esubtitle --->
 
+![I2CSPI01A](DOC/SRC/img/I2CSPI01A_Top_Big.jpg)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->Allows connection of SPI devices to I2C bus. The module is capable co handle up to four SPI slaves. Not used chip-select pins can be used as GPIO pins. <!--- Edescription --->
             
