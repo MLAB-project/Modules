@@ -1,26 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:Time: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
-<!--- Label --->
-<!--- ELabel ---> 
-<!--- Name:module: --->
-#module 
-<!--- LongName --->
-module description
-<!--- ELongName ---> 
 
-<!--- Lead --->
-module lead text
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# RAINGUAGE01A
+<!--- Emodule --->
 
-![LeadImg](doc/img/module_top_big.jpg) 
+<!--- subtitle --->RAINGUAGE01A module<!--- Esubtitle --->
 
+![RAINGUAGE01A](doc/img/RAINGUAGE01A_top_big.png)
 
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->RAINGUAGE01A module<!--- Edescription --->
+            
