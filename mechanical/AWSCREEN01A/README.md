@@ -6,7 +6,7 @@
 
 <!--- subtitle --->AWSCREEN01A<!--- Esubtitle --->
 
-![AWSCREEN01A](DOC/SRC/img/20170120_224408.jpg)
+![AWSCREEN01A](/doc/img/20170120_224408.jpg)
 
 <!--- description --->None<!--- Edescription --->
             
