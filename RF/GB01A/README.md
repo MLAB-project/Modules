@@ -6,7 +6,7 @@
 
 <!--- subtitle --->Basic RF gain block module<!--- Esubtitle --->
 
-![GB01A](DOC/SRC/img/GB01A_Top_Big.JPG)
+![GB01A](/doc/img/GB01A_top_big.jpg)
 
-<!--- description --->Provide FR wideband gain dependend on type of MMIC populated on the board. <!--- Edescription --->
+<!--- description --->Provide FR wideband gain dependend on type of MMIC populated on the board.<!--- Edescription --->
             

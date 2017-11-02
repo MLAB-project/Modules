@@ -4,9 +4,9 @@
 # GB01A
 <!--- Emodule --->
 
-<!--- subtitle --->Základní RF zesilovač <!--- Esubtitle --->
+<!--- subtitle --->Základní RF zesilovač<!--- Esubtitle --->
 
-![GB01A](DOC/SRC/img/GB01A_Top_Big.JPG)
+![GB01A](/doc/img/GB01A_top_big.jpg)
 
-<!--- description --->Poskytuje širokopásmový zisk závislý podle osazeného MMIC obvodu. <!--- Edescription --->
+<!--- description --->Poskytuje širokopásmový zisk závislý podle osazeného MMIC obvodu.<!--- Edescription --->
             
