@@ -8,5 +8,5 @@
 
 ![LNA01A](/doc/img/LNA01A_bottom_big.jpg)
 
-<!--- description --->Very low noise <0.8dB band pass amplifier to multi frequency bands. <!--- Edescription --->
+<!--- description --->Very low noise <0.8dB band pass amplifier to multi frequency bands.<!--- Edescription --->
             
