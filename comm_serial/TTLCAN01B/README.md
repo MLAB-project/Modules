@@ -4,9 +4,9 @@
 # TTLCAN01B
 <!--- Emodule --->
 
-<!--- subtitle ---> TTL to CAN bus Converter <!--- Esubtitle --->
+<!--- subtitle --->TTL to CAN bus Converter<!--- Esubtitle --->
 
-![TTLCAN01B](DOC/SRC/img/TTLCAN01B_Top_Big.JPG)
+![TTLCAN01B](/doc/img/TTLCAN01B_top_big.jpg)
 
-<!--- description ---> The module allow conecting uprocessors to CAN bus<!--- Edescription --->
+<!--- description --->The module allow conecting uprocessors to CAN bus<!--- Edescription --->
             
