@@ -8,5 +8,5 @@
 
 ![BP01B](/doc/img/BP01B_top_big.jpg)
 
-<!--- description --->Radiofrekvenční pásmový filtr SMD konstrukce. Primárně konstruovaný pro propustnost v pásmu 20-40MHz. <!--- Edescription --->
+<!--- description --->Radiofrekvenční pásmový filtr SMD konstrukce. Primárně konstruovaný pro propustnost v pásmu 20-40MHz.<!--- Edescription --->
             
