@@ -1,14 +1,16 @@
 {
-    "wiki": null, 
-    "status": 2, 
+    "wiki": "None", 
+    "status": "2", 
     "name": "I2CHUB02B", 
     "short_en": "", 
     "image": "/doc/img/I2CHUB02B_top_big.jpg", 
     "longname_cs": "HUB pro I2C sb\u011brnici.", 
     "longname_en": "HUB for I2C bus.", 
-    "ust": "\nhttp://www.ust.cz/shop/product_info.php?cPath=22_27&products_id=230\r\n\r\n", 
-    "doc_cs": null, 
+    "mark": "50.0", 
+    "ust": "http://www.ust.cz/shop/product_info.php?cPath=22_27&products_id=230", 
+    "doc_cs": "<p>None</p>", 
     "short_cs": "Umo\u017e\u0148uje p\u0159ipojit a\u017e 8 I2C za\u0159\u00edzen\u00ed. \u0158e\u0161en\u00ed pro p\u0159ipojen\u00ed v\u00edce I2C senzor\u016f se stejnou adresou na jednu sb\u011brnici. Mo\u017eno kombinovat i jin\u00e9 nap\u011b\u0165ov\u00e9 \u00farovn\u011b. Aktualizovan\u00e1 verze od I2CHUB02A.                                             ", 
-    "doc_en": null, 
-    "root": "comm_serial/I2CHUB02B"
+    "doc_en": "<p>None</p>", 
+    "root": "comm_serial/I2CHUB02B", 
+    "category[]": "commserial"
 }
