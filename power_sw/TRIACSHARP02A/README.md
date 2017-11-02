@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:http://www.ust.cz/shop/product_info.php?products_id=246: ---> 
-<!--- Name:TRIACSHARP02A: --->
-#TRIACSHARP02A 
-<!--- LongName --->
-Semiconductor relay switch module
-<!--- ELongName ---> 
 
-<!--- Lead --->
-There are 8 solid state switching relays which can be digitally controlled by open collector. It can operate up to 8A on 250VAC.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# TRIACSHARP02A
+<!--- Emodule --->
 
-![LeadImg](DOC/SRC/img/TRIACSHARP02A_Top_Big.jpg) 
+<!--- subtitle --->Semiconductor relay switch module <!--- Esubtitle --->
 
+![TRIACSHARP02A](/doc/img/TRIACSHARP02A_top_big.jpg)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->There are 8 solid state switching relays which can be digitally controlled by open collector. It can operate up to 8A on 250VAC.<!--- Edescription --->
             
