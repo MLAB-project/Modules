@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:http://www.ust.cz/shop/product_info.php?products_id=92: ---> 
-<!--- Name:ISL2902001A: --->
-#ISL2902001A 
-<!--- LongName --->
-Light sensor.
-<!--- ELongName ---> 
 
-<!--- Lead --->
-Light sensor ISL29020 with I2C interface. Measurement range 0.015lux - 64.000lux.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# ISL2902001A
+<!--- Emodule --->
 
-![LeadImg](DOC/SRC/img/ISL2902001A_Top_Big.jpg) 
+<!--- subtitle --->Light sensor.<!--- Esubtitle --->
 
+![ISL2902001A](/doc/img/ISL2902001A_top_big.jpg)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->Light sensor ISL29020 with I2C interface. Measurement range 0.015lux - 64.000lux.<!--- Edescription --->
             
