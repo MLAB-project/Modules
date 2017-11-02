@@ -8,5 +8,5 @@
 
 ![RPS01A](/doc/img/RPS01A_top_big.jpg)
 
-<!--- description --->Bezkontaktní magnetické čidlo pozice. K měření je pouze potřeba dvoupólový magnet rotující nad středem čipu. Změřená pozice pak může být vyčtena digitálním rozhraním. <!--- Edescription --->
+<!--- description --->Bezkontaktní magnetické čidlo pozice. K měření je pouze potřeba dvoupólový magnet rotující nad středem čipu. Změřená pozice pak může být vyčtena digitálním rozhraním.<!--- Edescription --->
             
