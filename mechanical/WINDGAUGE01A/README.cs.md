@@ -6,7 +6,7 @@
 
 <!--- subtitle --->WINDGAUGE01A<!--- Esubtitle --->
 
-![WINDGAUGE01A](DOC/SRC/img/WINDGAUGE01A_big.jpg)
+![WINDGAUGE01A](/doc/img/WINDGAUGE01A_big.jpg)
 
-<!--- description --->None<!--- Edescription --->
+<!--- description --->Chytrý tisknutelný senzor směru větru<!--- Edescription --->
             
