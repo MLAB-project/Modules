@@ -1,17 +1,16 @@
 {
     "wiki": "None", 
-    "status": 2, 
+    "status": "2", 
     "name": "I2CSPI01A", 
     "short_en": "Allows connection of SPI devices to I2C bus. The module is capable co handle up to four SPI slaves. Not used chip-select pins can be used as GPIO pins.", 
     "image": "/doc/img/I2CSPI01A_top_big.jpg", 
     "longname_cs": "Konvertor z I\u00b2C na SPI", 
     "longname_en": "I2C to SPI bridge", 
-    "mark": "50", 
-    "autor": "", 
+    "mark": "50.0", 
     "ust": "http://www.ust.cz/shop/product_info.php?cPath=22_27&products_id=250", 
     "doc_cs": "<p>None</p>", 
     "short_cs": "Modul je ur\u010den\u00fd k p\u0159ipojen\u00ed SPI za\u0159\u00edzen\u00ed na sb\u011brnici I\u00b2C. Je mo\u017en\u00e9 p\u0159ipojit a\u017e \u010dty\u0159i SPI za\u0159\u00edzen\u00ed sou\u010dasn\u011b. P\u0159\u00edpadn\u011b nevyu\u017eit\u00e9 piny modou b\u00fdt pou\u017e\u00edv\u00e1ny jako GPIO.", 
     "doc_en": "<p>None</p>", 
-    "category": "", 
-    "root": "comm_serial/I2CSPI01A"
+    "root": "comm_serial/I2CSPI01A", 
+    "category[]": "commserial"
 }
