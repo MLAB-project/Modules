@@ -6,7 +6,7 @@
 
 <!--- subtitle --->Simple IR reflexive sensor.<!--- Esubtitle --->
 
-![ADCdual01A](DOC/SRC/img/ADCdual01A_Top_Big.JPG)
+![ADCdual01A](/doc/img/ADCdual01A_top_big.jpg)
 
 <!--- description ---><!--- Edescription --->
             
