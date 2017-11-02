@@ -6,7 +6,7 @@
 
 <!--- subtitle --->ANT communication module<!--- Esubtitle --->
 
-![ANT01A](DOC/SRC/img/ANT01A_Top_Big.JPG)
+![ANT01A](/doc/img/ANT01A_top_big.jpg)
 
-<!--- description --->Module contain a ANT transceiver and SMA antenna conector. Module has serial interface for direct connection to microcontroller. <!--- Edescription --->
+<!--- description --->Module contain a ANT transceiver and SMA antenna conector. Module has serial interface for direct connection to microcontroller.<!--- Edescription --->
             

@@ -6,7 +6,7 @@
 
 <!--- subtitle --->Komunikační modul pro ANT<!--- Esubtitle --->
 
-![ANT01A](DOC/SRC/img/ANT01A_Top_Big.JPG)
+![ANT01A](/doc/img/ANT01A_top_big.jpg)
 
 <!--- description --->Modul s ANT transceiverem a SMA konektorem pro anténu. Modul může být přímo připojen k mikroprocesoru přes sériové rozhraní.<!--- Edescription --->
             
