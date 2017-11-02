@@ -6,7 +6,7 @@
 
 <!--- subtitle --->RAINGUAGE01A module<!--- Esubtitle --->
 
-![RAINGUAGE01A](doc/img/RAINGUAGE01A_top_big.png)
+![RAINGUAGE01A]()
 
 <!--- description --->RAINGUAGE01A module<!--- Edescription --->
             
