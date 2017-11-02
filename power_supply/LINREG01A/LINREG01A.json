@@ -1,16 +1,16 @@
 {
     "wiki": "None", 
-    "status": 2, 
+    "status": "2", 
     "name": "LINREG01A", 
     "short_en": "The module can be fitted in housings linear stabilizers D2PAK (TO263), SOT223, DPAK (252).", 
     "image": "/doc/img/LINREG01A_top_big.jpg", 
     "longname_cs": "niverz\u00e1ln\u00ed modul pro line\u00e1rn\u00ed stabiliz\u00e1tory", 
     "longname_en": "niversal module for linear regulators", 
-    "autor": "", 
+    "mark": "50.0", 
     "ust": "", 
     "doc_cs": "<p>linearni stabilizator</p>", 
     "short_cs": "Modul je mo\u017en\u00e9 osadit line\u00e1rn\u00edmi stabiliz\u00e1tory v pouzdrech D2PAK (TO263), SOT223, DPAK (252).", 
     "doc_en": "<p>linear regulator</p>", 
-    "category": "", 
-    "root": "power_supply/LINREG01A"
+    "root": "power_supply/LINREG01A", 
+    "category[]": "powersupply"
 }

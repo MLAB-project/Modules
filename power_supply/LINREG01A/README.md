@@ -6,7 +6,7 @@
 
 <!--- subtitle --->niversal module for linear regulators<!--- Esubtitle --->
 
-![LINREG01A](DOC/SRC/img/LINREG01A_Top_Big.jpg)
+![LINREG01A](/doc/img/LINREG01A_top_big.jpg)
 
 <!--- description --->The module can be fitted in housings linear stabilizers D2PAK (TO263), SOT223, DPAK (252).<!--- Edescription --->
             

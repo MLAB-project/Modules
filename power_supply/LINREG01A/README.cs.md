@@ -6,7 +6,7 @@
 
 <!--- subtitle --->niverzální modul pro lineární stabilizátory<!--- Esubtitle --->
 
-![LINREG01A](DOC/SRC/img/LINREG01A_Top_Big.jpg)
+![LINREG01A](/doc/img/LINREG01A_top_big.jpg)
 
 <!--- description --->Modul je možné osadit lineárními stabilizátory v pouzdrech D2PAK (TO263), SOT223, DPAK (252).<!--- Edescription --->
             
