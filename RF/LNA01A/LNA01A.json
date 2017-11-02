@@ -1,14 +1,16 @@
 {
-    "wiki": null, 
-    "status": 4, 
+    "wiki": "None", 
+    "status": "2", 
     "name": "LNA01A", 
     "short_en": "Very low noise <0.8dB band pass amplifier to multi frequency bands. ", 
-    "image": "/doc/img/LNA01A_QRcode.png", 
+    "image": "/doc/img/LNA01A_bottom_big.jpg", 
     "longname_cs": "N\u00edzko\u0161umov\u00fd ant\u00e9nn\u00ed zesilova\u010d.", 
     "longname_en": "Low noise antenna preamplifier", 
-    "ust": "\nhttp://www.ust.cz/shop/product_info.php?cPath=22_62&products_id=192&osCsid=69e11e09ca730fe7ff7ea73a63005c82\r\n\r\n", 
-    "doc_cs": null, 
+    "mark": "50.0", 
+    "ust": "http://www.ust.cz/shop/product_info.php?cPath=22_62&products_id=192&osCsid=69e11e09ca730fe7ff7ea73a63005c82", 
+    "doc_cs": "<p>None</p>", 
     "short_cs": "N\u00edzko\u0161umov\u00fd <0.8dB p\u00e1smov\u00fd zesilova\u010d, pro r\u016fzn\u00e1 frekven\u010dn\u00ed p\u00e1sma.", 
-    "doc_en": null, 
-    "root": "comm_rf/LNA01A"
+    "doc_en": "<p>None</p>", 
+    "root": "RF/LNA01A", 
+    "category[]": "commrf"
 }
