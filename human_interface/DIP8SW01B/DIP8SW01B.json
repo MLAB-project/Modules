@@ -1,16 +1,19 @@
 {
     "wiki": "None", 
-    "status": 2, 
+    "status": "2", 
     "name": "DIP8SW01B", 
     "short_en": "DIP8SW01B", 
     "image": "/doc/img/DIP8SW01B_QRcode.png", 
     "longname_cs": "DIP8SW01B", 
     "longname_en": "None", 
-    "autor": "", 
+    "mark": "50.0", 
     "ust": "http://www.ust.cz/shop/product_info.php?products_id=187{3}19&osCsid=2c8d517e6e9382e2b1ec8bb26175bf49", 
     "doc_cs": "<p>None</p>", 
     "short_cs": " Modul p\u0159ep\u00edna\u010d\u016f slou\u017e\u00ed pro snadn\u00e9 p\u0159ep\u00edn\u00e1n\u00ed digit\u00e1ln\u00edch sign\u00e1l\u016f. Sestaven z osmin\u00e1sobn\u00e9ho DIP p\u0159ep\u00edna\u010de opat\u0159en\u00e9ho voliteln\u00fdmi Pull-Up (nebo Pull-Down) odpory a indika\u010dn\u00edmi LED.", 
     "doc_en": "<p>None</p>", 
-    "category": "", 
-    "root": "human_interface/DIP8SW01B"
+    "root": "human_interface/DIP8SW01B", 
+    "author[]": [], 
+    "category[]": [
+        "human_interface"
+    ]
 }
