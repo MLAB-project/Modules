@@ -6,7 +6,7 @@
 
 <!--- subtitle --->None<!--- Esubtitle --->
 
-![TL01A](DOC/SRC/img/TL01A_QRcode.png)
+![TL01A](/doc/img/TL01A_QRcode.png)
 
 <!--- description --->TL01A<!--- Edescription --->
             
