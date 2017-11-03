@@ -6,7 +6,7 @@
 
 <!--- subtitle --->Převodník napěťových úrovní<!--- Esubtitle --->
 
-![VLT01A](DOC/SRC/img/VLT01A_Top_Big.jpg)
+![VLT01A](/doc/img/VLT01A_top_big.jpg)
 
 <!--- description --->Převodník digitálních signálů mezi dvěma různými napěťovými úrovněmi.<!--- Edescription --->
             
