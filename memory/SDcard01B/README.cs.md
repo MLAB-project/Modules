@@ -6,7 +6,7 @@
 
 <!--- subtitle --->Slot pro SD kartu<!--- Esubtitle --->
 
-![SDcard01B](DOC/SRC/img/SDCARD01B_Top_Big.jpg)
+![SDcard01B](/doc/img/SDCARD01B_top_big.jpg)
 
 <!--- description --->Patice pro připojení SDkarty vybavená napetovým stabilizátorem. Vstupy jsou chráněné sériovými odpory pro větší přepěťovou odolnost.<!--- Edescription --->
             
