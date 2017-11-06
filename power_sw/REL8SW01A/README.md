@@ -1,25 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
-<!--- Name:REL8SW01A: --->
-#REL8SW01A 
-<!--- LongName --->
-Relay switch module
-<!--- ELongName ---> 
 
-<!--- Lead --->
-There are 8 switching relays. Digitaly controlled by ULN2803
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# REL8SW01A
+<!--- Emodule --->
 
+<!--- subtitle --->Relay switch module <!--- Esubtitle --->
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+![REL8SW01A](/doc/img/REL8SW01A_QRcode.png)
+
+<!--- description --->There are 8 switching relays. Digitaly controlled by ULN2803<!--- Edescription --->
             
