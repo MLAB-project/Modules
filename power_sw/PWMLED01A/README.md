@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
-<!--- Name:PWMLED01A: --->
-#PWMLED01A 
-<!--- LongName --->
-PWM LED control module
-<!--- ELongName ---> 
 
-<!--- Lead --->
-Replaced by PWMLED01C.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# PWMLED01A
+<!--- Emodule --->
 
-![LeadImg](PWMLED01A_Top_Small.JPG) 
+<!--- subtitle --->PWM LED control module <!--- Esubtitle --->
 
+![PWMLED01A](/doc/img/PWMLED01A_QRcode.png)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->Replaced by PWMLED01C. <!--- Edescription --->
             
