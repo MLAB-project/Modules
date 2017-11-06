@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:[End: ---> 
-<!--- Name:DIG4SW01A: --->
-#DIG4SW01A 
-<!--- LongName --->
-Quad-Channel Smart High-Side Switch
-<!--- ELongName ---> 
 
-<!--- Lead --->
-Full bridge 6-45 V max 3.6A for DC motors. It uses circuit DRV8871.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# DIG4SW01A
+<!--- Emodule --->
 
-![LeadImg](DIG4SW01A _Top_Small.JPG) 
+<!--- subtitle --->uad-Channel Smart High-Side Switch<!--- Esubtitle --->
 
+![DIG4SW01A]()
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->Switch for voltage from 3.4 V to 40 V. Resistance in spliced state 160 mOhm. Integrated circuit TPS4H160.<!--- Edescription --->
             
