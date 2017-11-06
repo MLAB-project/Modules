@@ -1,16 +1,19 @@
 {
     "wiki": "None", 
-    "status": 2, 
+    "status": "2", 
     "name": "GPS01B", 
     "short_en": "The module is capable of receiving GPS signals. Communications interfaces I2C, USB, serial line.", 
     "image": "/doc/img/GPS01B_top_big.jpg", 
     "longname_cs": "GPS p\u0159ij\u00edma\u010d", 
     "longname_en": "GPS receiver", 
-    "autor": "", 
+    "mark": "50.0", 
     "ust": "http://www.ust.cz/shop/product_info.php?cPath=22_74&products_id=229", 
     "doc_cs": "<p>None</p>", 
     "short_cs": "Modul umo\u017e\u0148uj\u00edv\u00ed p\u0159\u00edjem GPS sign\u00e1lu. Komunika\u010dn\u00ed rozhran\u00ed I2C, USB, s\u00e9riov\u00e1 linka. Budouc\u00ed n\u00e1hrada GPS01A.", 
     "doc_en": "<p>None</p>", 
-    "category": "", 
-    "root": "measuring/GPS01B"
+    "root": "sensors/GPS01B", 
+    "author[]": [], 
+    "category[]": [
+        "sensor"
+    ]
 }
