@@ -6,7 +6,7 @@
 
 <!--- subtitle --->PWM LED budič<!--- Esubtitle --->
 
-![PWMLED01C](DOC/SRC/img/PWMLED01C_top_big.jpg)
+![PWMLED01C](/doc/img/PWMLED01C_top_big.jpg)
 
 <!--- description --->Modul slouží ke stmívání výkonových LED PWM modulací.<!--- Edescription --->
             
