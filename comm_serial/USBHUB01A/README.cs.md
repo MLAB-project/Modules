@@ -1,5 +1,5 @@
 
-[Czech](./README.cs.md)
+[English](./README.md)
 <!--- module --->
 # USBHUB01A
 <!--- Emodule --->
@@ -8,5 +8,5 @@
 
 ![USBHUB01A](/doc/img/USBHUB01A_QRcode.png)
 
-<!--- description --->Fourfold USB 3.0 HUB settings via I2C.<!--- Edescription --->
+<!--- description --->Čtyřnásobný USB 3.0 HUB s nastavením přes I2C.<!--- Edescription --->
             
