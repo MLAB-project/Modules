@@ -6,7 +6,7 @@
 
 <!--- subtitle --->FMC-LPC differetial connector adapter board<!--- Esubtitle --->
 
-![FMC2DIFF01A](DOC/SRC/img/FMC2DIFF_Top_Big.JPG)
+![FMC2DIFF01A](/doc/img/FMC2DIFF_top_big.jpg)
 
 <!--- description --->This module converts VITA 57 FMC-LPC connector to SATA or miniSAS connectors.<!--- Edescription --->
             
