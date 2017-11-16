@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:[End: ---> 
-<!--- Name:LION2CELL01B: --->
-#LION2CELL01B 
-<!--- LongName --->
-Li-ion battery management module
-<!--- ELongName ---> 
 
-<!--- Lead --->
-Replaced by LION2CELL01D
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# LION2CELL01B
+<!--- Emodule --->
 
-![LeadImg](LION2CELL01B_Small.jpg) 
+<!--- subtitle --->Li-ion battery management module<!--- Esubtitle --->
 
+![LION2CELL01B](/doc/img/LION2CELL01B_QRcode.png)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->Replaced by LION2CELL01D<!--- Edescription --->
             
