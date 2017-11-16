@@ -6,7 +6,7 @@
 
 <!--- subtitle --->None<!--- Esubtitle --->
 
-![TOUCHBOARD01A]()
+![TOUCHBOARD01A](/doc/img/TOUCHBOARD01A_QRcode.png)
 
 <!--- description --->Capacitive touch board with I²C interface. <!--- Edescription --->
             
