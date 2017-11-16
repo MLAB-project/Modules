@@ -1,25 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
-<!--- Name:BATPOWER01A: --->
-#BATPOWER01A 
-<!--- LongName --->
-Stepdown converter
-<!--- ELongName ---> 
 
-<!--- Lead --->
-Switched power unit.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# BATPOWER01A
+<!--- Emodule --->
 
+<!--- subtitle ---> Stepdown converter <!--- Esubtitle --->
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+![BATPOWER01A](/doc/img/BATPOWER01A_QRcode.png)
+
+<!--- description ---> Switched power unit.<!--- Edescription --->
             
