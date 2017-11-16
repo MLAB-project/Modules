@@ -1,14 +1,19 @@
 {
-    "wiki": null, 
-    "status": 4, 
+    "wiki": "None", 
+    "status": "4", 
     "name": "NFET4X01B", 
     "short_en": "There are 4 NFETs switching to GND. Parameters depending on type of soldered FETs. Inductive load is allowed.", 
     "image": "/doc/img/NFET4X01B_top_big.jpg", 
     "longname_cs": "4NFET v\u00fdkonov\u00fd budi\u010d", 
     "longname_en": "4NFET Power Driver ", 
-    "ust": "\nhttp://www.ust.cz/shop/product_info.php?cPath=22_54&products_id=133\r\n\r\n", 
-    "doc_cs": null, 
+    "mark": "50", 
+    "ust": "http://www.ust.cz/shop/product_info.php?cPath=22_54&products_id=133", 
+    "doc_cs": "<p>None</p>", 
     "short_cs": "Modul slou\u017e\u00ed jako \u010dty\u0159n\u00e1sobn\u00fd v\u00fdkonov\u00fd budi\u010d se sp\u00edn\u00e1n\u00edm do GND. Parametry z\u00e1vis\u00ed na typu osazen\u00fdch FET tranzistor\u016f, p\u0159edpokl\u00e1d\u00e1 se pouzdro D-PAK. Sp\u00ednan\u00e1 z\u00e1t\u011b\u017e m\u016f\u017ee m\u00edt induk\u010dn\u00ed charakter.", 
-    "doc_en": null, 
-    "root": "power_sw/NFET4X01B"
+    "doc_en": "<p>None</p>", 
+    "root": "power_sw/NFET4X01B", 
+    "author[]": [], 
+    "category[]": [
+        "powersw"
+    ]
 }
