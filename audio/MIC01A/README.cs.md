@@ -1,10 +1,10 @@
 
-[Czech](./README.cs.md)
+[English](./README.md)
 <!--- module --->
 # MIC01A
 <!--- Emodule --->
 
-<!--- subtitle --->MEMS microphone module<!--- Esubtitle --->
+<!--- subtitle --->Miniaturni MEMS mikrofon<!--- Esubtitle --->
 
 ![MIC01A](/doc/img/MIC01A_QRcode.png)
 
