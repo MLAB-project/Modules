@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:[End]: ---> 
-<!--- Name:RTC01A: --->
-#RTC01A 
-<!--- LongName --->
-Real Time Clock Modules
-<!--- ELongName ---> 
 
-<!--- Lead --->
-Replaced RTC02A
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# RTC01A
+<!--- Emodule --->
 
-![LeadImg](RTC01A_Top_Small.JPG) 
+<!--- subtitle --->Real Time Clock Modules<!--- Esubtitle --->
 
+![RTC01A](/doc/img/RTC01A_QRcode.png)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->Replaced RTC02A<!--- Edescription --->
             
