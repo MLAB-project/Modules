@@ -6,7 +6,7 @@
 
 <!--- subtitle --->I2C EEPROM<!--- Esubtitle --->
 
-![EEPROM02A](DOC/SRC/img/EEPROM02A_Top_Big.JPG)
+![EEPROM02A](/doc/img/EEPROM02A_top_big.jpg)
 
-<!--- description --->Univerzální modul pro EEPROM komunikující přes rozhraní I2C v pouzdrech SO8, TSSOP8, MSOP8.                                             <!--- Edescription --->
+<!--- description --->Univerzální modul pro EEPROM komunikující přes rozhraní I2C v pouzdrech SO8, TSSOP8, MSOP8.<!--- Edescription --->
             
