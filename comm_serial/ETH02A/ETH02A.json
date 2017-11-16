@@ -1,14 +1,19 @@
 {
-    "wiki": null, 
-    "status": 4, 
+    "wiki": "None", 
+    "status": "4", 
     "name": "ETH02A", 
     "short_en": "RJ-45 socket with impedation matching useful for connecting ethernet compatible controllers to ethernet standard network.", 
     "image": "/doc/img/ETH02A_QRcode.png", 
     "longname_cs": "Ethernet konektor", 
     "longname_en": "Ethernet connecor", 
-    "ust": null, 
-    "doc_cs": null, 
+    "mark": "50", 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
     "short_cs": "RJ-45 s impedan\u010dn\u00edm p\u0159izp\u016fsoben\u00edm. Umo\u017e\u0148uje p\u0159ipojen\u00ed mikrokontrol\u00e9r\u016f vybaven\u00fdch ethernet periferi\u00ed do s\u00edt\u011b standardu ethernet.", 
-    "doc_en": null, 
-    "root": "comm_serial/ETH02A"
+    "doc_en": "<p>None</p>", 
+    "root": "comm_serial/ETH02A", 
+    "author[]": [], 
+    "category[]": [
+        "commserial"
+    ]
 }
