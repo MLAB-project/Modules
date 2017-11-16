@@ -1,16 +1,19 @@
 {
-    "wiki": null, 
-    "status": 4, 
+    "wiki": "None", 
+    "status": "4", 
     "name": "SYMPOWER02A", 
     "short_en": "Symmetric power supply ranging from 1.5 V - 5 V, 250 mA.. It uses circuit LM27762.", 
     "image": "/doc/img/SYMPOWER02A_top_big.jpg", 
     "longname_cs": "droj symetrick\u00e9ho nap\u00e1jen\u00ed", 
     "longname_en": "ymmetric power source", 
-    "autor": "", 
-    "ust": "\n\n", 
+    "mark": "50", 
+    "ust": "", 
     "doc_cs": "<p>None</p>", 
     "short_cs": "Symetrick\u00e9 nap\u00e1jen\u00ed v rozsahu 1.5 V - 5 V se zat\u00ed\u017eitelnost\u00ed 250 mA. Vyu\u017e\u00edv\u00e1 obvodu LM27762.                                             ", 
     "doc_en": "<p>None</p>", 
-    "category": "", 
-    "root": "power_supply/SYMPOWER02A"
+    "root": "power_supply/SYMPOWER02A", 
+    "author[]": [], 
+    "category[]": [
+        "powersupply"
+    ]
 }
