@@ -6,7 +6,7 @@
 
 <!--- subtitle --->ADCoctoSPI01A<!--- Esubtitle --->
 
-![ADCoctoSPI01A](doc/img/ADCoctoSPI01A_QRcode.png)
+![ADCoctoSPI01A]()
 
 <!--- description --->None<!--- Edescription --->
             
