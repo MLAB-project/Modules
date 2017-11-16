@@ -3,15 +3,17 @@
     "status": "4", 
     "name": "BP01A", 
     "short_en": "SMD construction of band pass filter intented to be used in radioastronomy applications. Primarily designed to 20-40MHz pass band.", 
-    "image": "/data/Modules/RF/BP01A/doc/img/BP01A_top_big.jpg", 
+    "image": "", 
     "longname_cs": "Radiostronomick\u00fd p\u00e1smov\u00fd filtr", 
     "longname_en": "Radio ferequency band pass filter", 
     "mark": "50", 
-    "autor": "", 
     "ust": "None", 
     "doc_cs": "<p>None</p>", 
     "short_cs": "Radiofrekven\u010dn\u00ed p\u00e1smov\u00fd filtr SMD konstrukce. Prim\u00e1rn\u011b konstruovan\u00fd pro propustnost v p\u00e1smu 20-40MHz. ", 
     "doc_en": "<p>None</p>", 
-    "category": "", 
-    "root": "RF/BP01A"
+    "root": "RF/BP01A", 
+    "author[]": [], 
+    "category[]": [
+        "commrf"
+    ]
 }
