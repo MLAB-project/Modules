@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
-<!--- Name:OZpower01A: --->
-#OZpower01A 
-<!--- LongName --->
-Power operational amplifier
-<!--- ELongName ---> 
 
-<!--- Lead --->
-Construction of single power operational aplifier suitable for 18V/3A
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# OZpower01A
+<!--- Emodule --->
 
-![LeadImg](OZPOWER01A_Small.jpg) 
+<!--- subtitle --->Power operational amplifier <!--- Esubtitle --->
 
+![OZpower01A](/doc/img/OZpower01A_QRcode.png)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->Construction of single power operational aplifier suitable for 18V/3A<!--- Edescription --->
             
