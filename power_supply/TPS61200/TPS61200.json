@@ -1,14 +1,19 @@
 {
-    "wiki": null, 
-    "status": 4, 
+    "wiki": "None", 
+    "status": "4", 
     "name": "TPS61200", 
     "short_en": " Switched adjustable power unit step-down and step-up in one module.", 
     "image": "/doc/img/TPS61200_QRcode.png", 
     "longname_cs": " Zvy\u0161uj\u00edc\u00ed i zni\u017euj\u00edc\u00ed m\u011bni\u010d", 
     "longname_en": " UP/DOWN converter ", 
-    "ust": null, 
-    "doc_cs": null, 
+    "mark": "50", 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
     "short_cs": " Sp\u00ednan\u00fd nap\u00e1jec\u00ed modul automaticky p\u0159ep\u00edn\u00e1 mezi step-down a step-up re\u017eimem.", 
-    "doc_en": null, 
-    "root": "power_supply/TPS61200"
+    "doc_en": "<p>None</p>", 
+    "root": "power_supply/TPS61200", 
+    "author[]": [], 
+    "category[]": [
+        "powersupply"
+    ]
 }
