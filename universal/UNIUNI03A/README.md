@@ -6,7 +6,7 @@
 
 <!--- subtitle --->None<!--- Esubtitle --->
 
-![UNIUNI03A](DOC/SRC/img/UNIUNI03A_QRcode.png)
+![UNIUNI03A](/doc/img/UNIUNI03A_QRcode.png)
 
 <!--- description --->UNIUNI03A<!--- Edescription --->
             
