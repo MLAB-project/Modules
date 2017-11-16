@@ -1,14 +1,19 @@
 {
-    "wiki": null, 
-    "status": 4, 
+    "wiki": "None", 
+    "status": "4", 
     "name": "LION1CELL01A", 
     "short_en": "Replaced module of LION1CELL01B.", 
     "image": "/doc/img/LION1CELL01A_QRcode.png", 
     "longname_cs": "Nap\u00e1jec\u00ed s Li-ion akumul\u00e1tory", 
     "longname_en": "Li-ion battery management module", 
-    "ust": null, 
-    "doc_cs": null, 
+    "mark": "50", 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
     "short_cs": "Nahrazen modulem LION1CELL01B.", 
-    "doc_en": null, 
-    "root": "power_supply/LION1CELL01A"
+    "doc_en": "<p>None</p>", 
+    "root": "power_supply/LION1CELL01A", 
+    "author[]": [], 
+    "category[]": [
+        "powersupply"
+    ]
 }
