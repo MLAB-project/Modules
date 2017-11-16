@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
-<!--- Name:SDcard01A: --->
-#SDcard01A 
-<!--- LongName --->
-SDcard Slot
-<!--- ELongName ---> 
 
-<!--- Lead --->
-Simple SD card terminal with voltage regulator.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# SDcard01A
+<!--- Emodule --->
 
-![LeadImg](SDCARD01A_Top_Small.JPG) 
+<!--- subtitle --->SDcard Slot <!--- Esubtitle --->
 
+![SDcard01A](/doc/img/SDcard01A_QRcode.png)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->Simple SD card terminal with voltage regulator.<!--- Edescription --->
             
