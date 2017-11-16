@@ -6,7 +6,7 @@
 
 <!--- subtitle --->AWSCREEN02A<!--- Esubtitle --->
 
-![AWSCREEN02A](DOC/SRC/img/AWSCREEN02A_QRcode.png)
+![AWSCREEN02A](/doc/img/AWSCREEN02A_QRcode.png)
 
 <!--- description --->None<!--- Edescription --->
             

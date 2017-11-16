@@ -1,16 +1,19 @@
 {
     "wiki": "None", 
-    "status": 4, 
+    "status": "4", 
     "name": "AWSCREEN02A", 
     "short_en": "None", 
     "image": "/doc/img/AWSCREEN02A_QRcode.png", 
     "longname_cs": "AWSCREEN02A", 
     "longname_en": "AWSCREEN02A", 
-    "autor": "", 
+    "mark": "50", 
     "ust": "None", 
     "doc_cs": "<p>None</p>", 
     "short_cs": "None", 
     "doc_en": "<p>None</p>", 
-    "category": "", 
-    "root": "mechanical/AWSCREEN02A"
+    "root": "mechanical/AWSCREEN02A", 
+    "author[]": [], 
+    "category[]": [
+        "mechanical"
+    ]
 }
