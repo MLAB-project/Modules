@@ -1,20 +1,18 @@
 {
     "wiki": "None", 
-    "status": "2", 
+    "status": "1", 
     "name": "ANT01A", 
     "short_en": "Module contain a ANT transceiver and SMA antenna conector. Module has serial interface for direct connection to microcontroller.", 
     "image": "/doc/img/ANT01A_top_big.jpg", 
     "longname_cs": "Komunika\u010dn\u00ed modul pro ANT", 
     "longname_en": "ANT communication module", 
-    "mark": "50.0", 
+    "mark": "50", 
     "ust": "None", 
     "doc_cs": "<p>None</p>", 
     "short_cs": "Modul s ANT transceiverem a SMA konektorem pro ant\u00e9nu. Modul m\u016f\u017ee b\u00fdt p\u0159\u00edmo p\u0159ipojen k mikroprocesoru p\u0159es s\u00e9riov\u00e9 rozhran\u00ed.", 
     "doc_en": "<p>None</p>", 
     "root": "RF/ANT01A", 
-    "author[]": [
-        "ChroustJan"
-    ], 
+    "author[]": [], 
     "category[]": [
         "commrf"
     ]
