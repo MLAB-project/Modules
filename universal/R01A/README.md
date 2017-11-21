@@ -6,7 +6,7 @@
 
 <!--- subtitle --->None<!--- Esubtitle --->
 
-![R01A](/doc/img/R01A_QRcode.png)
+![R01A](/doc/img/R01A.jpg)
 
 <!--- description --->R01A<!--- Edescription --->
             
