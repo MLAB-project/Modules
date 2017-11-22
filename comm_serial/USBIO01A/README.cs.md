@@ -4,7 +4,7 @@
 # USBIO01A
 <!--- Emodule --->
 
-<!--- subtitle --->Rychlý IO řadič <!--- Esubtitle --->
+<!--- subtitle --->Rychlý IO řadič<!--- Esubtitle --->
 
 ![USBIO01A](/doc/img/USBIO01A_top_big.jpg)
 
