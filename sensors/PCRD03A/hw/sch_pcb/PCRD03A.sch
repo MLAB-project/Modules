@@ -226,7 +226,7 @@ F 3 "" H 6650 4600 50  0000 C CNN
 $EndComp
 Text Label 10050 4450 0    60   ~ 0
 MEASURE
-Text Label 10050 4550 0    60   ~ 0
+Text Label 10050 4650 0    60   ~ 0
 RESET
 $Comp
 L D D4
@@ -375,18 +375,7 @@ F 3 "" H 4750 3700 50  0000 C CNN
 	1    4750 3700
 	1    0    0    -1  
 $EndComp
-$Comp
-L HEADER_2x04_PARALLEL J2
-U 1 1 5A08F6E3
-P 10750 4500
-F 0 "J2" H 10750 4250 60  0000 C CNN
-F 1 "OUT" H 10750 4750 60  0000 C CNN
-F 2 "Mlab_Pin_Headers:Straight_2x04" H 10750 4650 60  0001 C CNN
-F 3 "" H 10750 4650 60  0000 C CNN
-	1    10750 4500
-	1    0    0    -1  
-$EndComp
-Text Label 10050 4650 0    60   ~ 0
+Text Label 10050 4150 0    60   ~ 0
 ENABLE
 $Comp
 L OP275 U4
@@ -421,7 +410,7 @@ F 3 "" H 850 1050 50  0000 C CNN
 	1    850  1050
 	1    0    0    -1  
 $EndComp
-Text Label 10050 4350 0    60   ~ 0
+Text Label 10050 4250 0    60   ~ 0
 VREF
 $Comp
 L PWR_FLAG #FLG016
@@ -962,8 +951,6 @@ Wire Wire Line
 Wire Wire Line
 	9550 4450 10500 4450
 Wire Wire Line
-	10500 4550 9850 4550
-Wire Wire Line
 	8800 4450 8850 4450
 Wire Wire Line
 	8350 4250 8350 4350
@@ -987,8 +974,6 @@ Wire Wire Line
 Wire Wire Line
 	6300 4350 6450 4350
 Connection ~ 4050 1900
-Wire Wire Line
-	9850 4550 9850 5750
 Wire Wire Line
 	9150 6300 9150 6200
 Wire Wire Line
@@ -1028,8 +1013,6 @@ Wire Wire Line
 Wire Wire Line
 	4950 3350 4950 4050
 Connection ~ 4950 4050
-Wire Wire Line
-	10500 4650 10050 4650
 Wire Wire Line
 	1800 1350 1800 1650
 Wire Wire Line
@@ -1207,36 +1190,6 @@ Connection ~ 9550 4450
 Wire Wire Line
 	10500 4350 10050 4350
 $Comp
-L HEADER_2x02_PARALLEL J3
-U 1 1 5A13D772
-P 10750 3000
-F 0 "J3" H 10750 2850 60  0000 C CNN
-F 1 "BIAS" H 10750 3150 60  0000 C CNN
-F 2 "Mlab_Pin_Headers:Straight_2x02" H 10750 3050 60  0001 C CNN
-F 3 "" H 10750 3050 60  0000 C CNN
-	1    10750 3000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10500 2950 10200 2950
-$Comp
-L GND #PWR030
-U 1 1 5A13DBCF
-P 10350 3100
-F 0 "#PWR030" H 10350 2850 50  0001 C CNN
-F 1 "GND" H 10350 2950 50  0000 C CNN
-F 2 "" H 10350 3100 50  0000 C CNN
-F 3 "" H 10350 3100 50  0000 C CNN
-	1    10350 3100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10350 3100 10350 3050
-Wire Wire Line
-	10350 3050 10500 3050
-Text Label 10200 2950 0    60   ~ 0
-BIAS
-$Comp
 L CP C5
 U 1 1 5A13EE1F
 P 9200 1700
@@ -1247,4 +1200,31 @@ F 3 "" H 9200 1700 50  0000 C CNN
 	1    9200 1700
 	1    0    0    -1  
 $EndComp
+$Comp
+L HEADER_2x06_PARALLEL J2
+U 1 1 5A19A96B
+P 10750 4400
+F 0 "J2" H 10750 4050 60  0000 C CNN
+F 1 "OUT" H 10750 4750 60  0000 C CNN
+F 2 "Mlab_Pin_Headers:Straight_2x06" H 10750 4650 60  0001 C CNN
+F 3 "" H 10750 4650 60  0000 C CNN
+	1    10750 4400
+	1    0    0    -1  
+$EndComp
+Text Label 10050 4350 0    60   ~ 0
+BIAS
+Wire Wire Line
+	9850 4650 10500 4650
+Text Label 5700 4150 0    60   ~ 0
+OUT_AMP
+Text Label 10050 4550 0    60   ~ 0
+OUT_AMP
+Wire Wire Line
+	10500 4250 10050 4250
+Wire Wire Line
+	10500 4150 10050 4150
+Wire Wire Line
+	10500 4550 10050 4550
+Wire Wire Line
+	9850 5750 9850 4650
 $EndSCHEMATC
