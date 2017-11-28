@@ -1,0 +1,59 @@
+\ProvidesPackage{MLABdoc}
+
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{pdfpages}
+\usepackage{PTSans} 
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=2cm]{geometry}
+\usepackage{lipsum}
+\usepackage{fancyhdr} 
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[R]{\includegraphics[height=0.9cm]{/home/roman/logo.png}}
+\fancyfoot[LE,RO]{\thepage}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\newcommand\uvod[7]{
+	\title{#1}
+	
+	\vspace*{0pt}
+	\begin{center}
+		\begin{Large}
+		#1 - #2
+		\end{Large}\\	
+	#3
+	\end{center}\vspace{1cm}
+	{\large #5}
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[height=50mm]{#4}
+	\end{figure}
+	
+	\section{Technické parametry}
+	\begin{table}[htbp]\begin{center}\begin{tabular}{|c|c|c|}
+		\hline
+		\multicolumn{1}{|c|}{\textbf{Parametr}} & \multicolumn{1}{|c|}{\textbf{Hodnota}} & \multicolumn{1}{|c|}{\textbf{Poznámka}} \\ \hline
+		#6
+	\end{tabular}\end{center}\end{table}
+	\vfill
+	\begin{figure}[ht!]
+		\hfill\includegraphics[height=30mm]{#7}
+	\end{figure}
+	\newpage
+	\tableofcontents
+	\newpage
+}
+
+\author{MLAB}
+\date{\today}
+
