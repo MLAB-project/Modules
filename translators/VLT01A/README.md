@@ -6,7 +6,7 @@
 
 <!--- subtitle --->Voltage Level Translator<!--- Esubtitle --->
 
-![VLT01A](DOC/SRC/img/VLT01A_Top_Big.jpg)
+![VLT01A](/doc/img/VLT01A_top_big.jpg)
 
-<!--- description --->Convert digital signals between two voltage levels. <!--- Edescription --->
+<!--- description --->Convert digital signals between two voltage levels.<!--- Edescription --->
             

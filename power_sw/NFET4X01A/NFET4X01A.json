@@ -1,14 +1,19 @@
 {
-    "wiki": null, 
-    "status": 4, 
+    "wiki": "None", 
+    "status": "4", 
     "name": "NFET4X01A", 
     "short_en": "There are 4 NFETs switching to earth. Inductive load is allowed.", 
     "image": "/doc/img/NFET4X01A_QRcode.png", 
     "longname_cs": "4NFET v\u00fdkonov\u00fd budi\u010d", 
     "longname_en": "4NFET Power Driver ", 
-    "ust": null, 
-    "doc_cs": null, 
+    "mark": "50", 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
     "short_cs": "Modul slou\u017e\u00ed jako \u010dty\u0159n\u00e1sobn\u00fd v\u00fdkonov\u00fd budi\u010d se sp\u00edn\u00e1n\u00edm dozem\u011b. Sp\u00ednan\u00e1 z\u00e1t\u011b\u017e m\u016f\u017ee m\u00edt induk\u010dn\u00ed charakter.", 
-    "doc_en": null, 
-    "root": "power_sw/NFET4X01A"
+    "doc_en": "<p>None</p>", 
+    "root": "power_sw/NFET4X01A", 
+    "author[]": [], 
+    "category[]": [
+        "powersw"
+    ]
 }

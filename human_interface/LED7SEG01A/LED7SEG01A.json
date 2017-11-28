@@ -1,16 +1,19 @@
 {
     "wiki": "None", 
-    "status": 4, 
+    "status": "4", 
     "name": "LED7SEG01A", 
     "short_en": "LED 7-segmentov\u00fd display ovl\u00e1dan\u00fd p\u0159es I2C        ", 
     "image": "/doc/img/LED7SEG01A_QRcode.png", 
     "longname_cs": "LED 7 segments display", 
     "longname_en": "None", 
-    "autor": "", 
+    "mark": "50", 
     "ust": "None", 
     "doc_cs": "<p>None</p>", 
     "short_cs": "Modul obsahuje jednu LED \u010d\u00edslici o v\u00fd\u0161ce 101,66 mm, kter\u00e1 je ovl\u00e1dateln\u00e1 p\u0159es rozhran\u00ed I2C.", 
     "doc_en": "<p>None</p>", 
-    "category": "", 
-    "root": "human_interface/LED7SEG01A"
+    "root": "human_interface/LED7SEG01A", 
+    "author[]": [], 
+    "category[]": [
+        "human_interfaces"
+    ]
 }

@@ -1,14 +1,19 @@
 {
-    "wiki": null, 
-    "status": 4, 
+    "wiki": "None", 
+    "status": "4", 
     "name": "UNIATMEGA8TQFP01A", 
     "short_en": "Single sided PCB proto-board for ATMEGA8 in TQFP32 or compatible, with TL317 regulator position, free SOIP/SO/SOIC-8, -14, -16, -20 and MSOP-8 positions. Matrix for both through-hole and SMD prototyping included.IMPORTANT: ISP ground has to be wired!", 
     "image": "/doc/img/UNIATMEGA8TQFP01A_QRcode.png", 
     "longname_cs": "TMEGA/TL317/SMD prototypovac\u00ed deska. ", 
     "longname_en": "TMEGA/TL317/SMD proto-board.", 
-    "ust": null, 
-    "doc_cs": null, 
+    "mark": "50", 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
     "short_cs": "Prototypovac\u00ed deska pro ATMEGA8 v TQFP32, s pozic\u00ed pro TL317 regul\u00e1tor a voln\u00fdmi sloty pro SOIP/SO/SOIC a MSOP sou\u010d\u00e1stky. Matice plo\u0161ek po 100 mil vyplnuje voln\u00e9 m\u00edsto. Jednostrann\u00e1 deska ur\u010den\u00e1 pro dom\u00e1c\u00ed v\u00fdrobu.POZOR: ISP zem mus\u00ed b\u00fdt p\u0159\u00edpajena dr\u00e1tkem.", 
-    "doc_en": null, 
-    "root": "universal/UNIATMEGA8TQFP01A"
+    "doc_en": "<p>None</p>", 
+    "root": "universal/UNIATMEGA8TQFP01A", 
+    "author[]": [], 
+    "category[]": [
+        "universal"
+    ]
 }

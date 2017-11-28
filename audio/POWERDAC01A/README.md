@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
-<!--- Name:POWERDAC01A: --->
-#POWERDAC01A 
-<!--- LongName --->
-Simple IR reflexive sensor.
-<!--- ELongName ---> 
 
-<!--- Lead --->
+[Czech](./README.cs.md)
+<!--- module --->
+# POWERDAC01A
+<!--- Emodule --->
 
-<!--- ELead ---> 
+<!--- subtitle --->Simple IR reflexive sensor.<!--- Esubtitle --->
 
-![LeadImg](POWERDAC_Bottom_Small.jpg) 
+![POWERDAC01A](/doc/img/POWERDAC01A_QRcode.png)
 
-
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description ---><!--- Edescription --->
             

@@ -1,29 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:http://www.ust.cz/shop/product_info.php?cPath=22_23&products_id=114: ---> 
-<!--- Name:ATmegaTQ3201A: --->
-#ATmegaTQ3201A 
-<!--- LongName --->
-Module for ATmega MCU in TQFP32
-<!--- ELongName ---> 
 
-<!--- Lead --->
-Processor module for ATMEL ATmega in TQFP32 package.
-  The module contains processor and standard crystal or clock crystal
-  can be used. There is RESET push button and ATMEL ISP 6 PIN connector.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# ATmegaTQ3201A
+<!--- Emodule --->
 
-![LeadImg](ATmegaTQ3201A_Top_Small.jpg) 
+<!--- subtitle --->ATmegaTQ3201A<!--- Esubtitle --->
 
+![ATmegaTQ3201A](/doc/img/ATmegaTQ3201A_QRcode.png)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->None<!--- Edescription --->
             

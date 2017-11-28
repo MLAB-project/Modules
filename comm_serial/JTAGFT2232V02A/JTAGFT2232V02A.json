@@ -1,17 +1,19 @@
 {
     "wiki": "None", 
-    "status": 2, 
+    "status": "2", 
     "name": "JTAGFT2232V02A", 
     "short_en": "The module allow J-TAG programming via USB.", 
     "image": "/doc/img/JTAGFT2232V02A_top_big.jpg", 
     "longname_cs": "J-TAG program\u00e1tor", 
     "longname_en": "USB to JTAG converter", 
-    "mark": "50", 
-    "autor": "", 
+    "mark": "50.0", 
     "ust": "http://www.ust.cz/shop/product_info.php?products_id=236", 
     "doc_cs": "<p>None</p>", 
     "short_cs": "Modul slou\u017e\u00ed jako z\u00e1kladn\u00ed J-TAG program\u00e1tor. Vyu\u017e\u00edv\u00e1 \u010dip od FTDI.", 
     "doc_en": "<p>None</p>", 
-    "category": "", 
-    "root": "comm_serial/JTAGFT2232V02A"
+    "root": "comm_serial/JTAGFT2232V02A", 
+    "author[]": [], 
+    "category[]": [
+        "commserial"
+    ]
 }

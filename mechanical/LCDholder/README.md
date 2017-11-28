@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:[End]: ---> 
-<!--- Name:LCDholder: --->
-#LCDholder 
-<!--- LongName --->
-3D printable LCD 16x2 holder for MLAB base boards
-<!--- ELongName ---> 
 
-<!--- Lead --->
-The hodlder can be prited at almost any 3D printer.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# LCDholder
+<!--- Emodule --->
 
-![LeadImg](LCD_16x2_panel_Small.jpg) 
+<!--- subtitle --->3D printable LCD 16x2 holder for MLAB base boards<!--- Esubtitle --->
 
+![LCDholder](/doc/img/LCDholder_QRcode.png)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->The hodlder can be prited at almost any 3D printer.<!--- Edescription --->
             

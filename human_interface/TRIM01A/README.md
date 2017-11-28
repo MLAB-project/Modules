@@ -6,7 +6,7 @@
 
 <!--- subtitle --->None<!--- Esubtitle --->
 
-![TRIM01A](DOC/SRC/img/TRIM01A_QRcode.png)
+![TRIM01A](/doc/img/TRIM01A_QRcode.png)
 
 <!--- description --->TRIM01A<!--- Edescription --->
             

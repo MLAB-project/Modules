@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
-<!--- Name:OZdual01A: --->
-#OZdual01A 
-<!--- LongName --->
-Dual operational amplifier
-<!--- ELongName ---> 
 
-<!--- Lead --->
-Construction of the module is optimized for most dual operational apmlifier in DIL8 package. Contains voltage reference.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# OZdual01A
+<!--- Emodule --->
 
-![LeadImg](OZDUAL01A_Small.JPG) 
+<!--- subtitle --->Dual operational amplifier <!--- Esubtitle --->
 
+![OZdual01A](/doc/img/OZdual01A_QRcode.png)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->Construction of the module is optimized for most dual operational apmlifier in DIL8 package. Contains voltage reference.<!--- Edescription --->
             

@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
-<!--- Name:LEDbar01A: --->
-#LEDbar01A 
-<!--- LongName --->
-LED bar
-<!--- ELongName ---> 
 
-<!--- Lead --->
-There are 8 LEDs drived by simple shift register. Construction is useful to indicate status on small robots.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# LEDbar01A
+<!--- Emodule --->
 
-![LeadImg](LEDbar_Small.jpg) 
+<!--- subtitle --->LED bar <!--- Esubtitle --->
 
+![LEDbar01A](/doc/img/LEDbar01A_QRcode.png)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->There are 8 LEDs drived by simple shift register. Construction is useful to indicate status on small robots.<!--- Edescription --->
             

@@ -1,25 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
-<!--- Name:ETH01A: --->
-#ETH01A 
-<!--- LongName --->
-Ethernet connectivity module
-<!--- ELongName ---> 
 
-<!--- Lead --->
-MII standard interface ethernet module with full PoE compatibility.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# ETH01A
+<!--- Emodule --->
 
+<!--- subtitle --->Ethernet connectivity module<!--- Esubtitle --->
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+![ETH01A](/doc/img/ETH01A_QRcode.png)
+
+<!--- description --->MII standard interface ethernet module with full PoE compatibility. <!--- Edescription --->
             

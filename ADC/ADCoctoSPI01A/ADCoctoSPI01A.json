@@ -3,15 +3,17 @@
     "status": "1", 
     "name": "ADCoctoSPI01A", 
     "short_en": "None", 
-    "image": "doc/img/ADCoctoSPI01A_QRcode.png", 
+    "image": "", 
     "longname_cs": "ADCoctoSPI01A", 
     "longname_en": "ADCoctoSPI01A", 
-    "mark": "25", 
-    "autor": "", 
+    "mark": "50", 
     "ust": "None", 
     "doc_cs": "<p>None</p>", 
     "short_cs": "Osmikan\u00e1lov\u00fd rychl\u00fd ADC se seriov\u00fdm v\u00fdstupem dat", 
     "doc_en": "<p>None</p>", 
-    "category": "", 
-    "root": "ADC/ADCoctoSPI01A"
+    "root": "ADC/ADCoctoSPI01A", 
+    "author[]": [], 
+    "category[]": [
+        "adconventers"
+    ]
 }

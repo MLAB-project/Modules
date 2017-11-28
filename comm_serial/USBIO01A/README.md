@@ -6,7 +6,7 @@
 
 <!--- subtitle --->Universal USB fast IO expander<!--- Esubtitle --->
 
-![USBIO01A]()
+![USBIO01A](/doc/img/USBIO01A_top_big.jpg)
 
 <!--- description --->A high speed USB2.0 IO communication module. It si suitable for fast parallel transfers. It is based on CY7C68013A USB chip.<!--- Edescription --->
             

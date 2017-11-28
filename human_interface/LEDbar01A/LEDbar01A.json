@@ -1,14 +1,19 @@
 {
-    "wiki": null, 
-    "status": 4, 
+    "wiki": "None", 
+    "status": "4", 
     "name": "LEDbar01A", 
     "short_en": "There are 8 LEDs drived by simple shift register. Construction is useful to indicate status on small robots.", 
     "image": "/doc/img/LEDbar01A_QRcode.png", 
     "longname_cs": "Sloupec LED diod", 
     "longname_en": "LED bar ", 
-    "ust": null, 
-    "doc_cs": null, 
+    "mark": "50", 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
     "short_cs": "Obsahuje 8 LED \u0159\u00edzen\u00fdch p\u0159es posuvn\u00fd registr. Hod\u00ed se na indikaci stavu mal\u00fdch robot\u016f.", 
-    "doc_en": null, 
-    "root": "human_interface/LEDbar01A"
+    "doc_en": "<p>None</p>", 
+    "root": "human_interface/LEDbar01A", 
+    "author[]": [], 
+    "category[]": [
+        "human_interfaces"
+    ]
 }

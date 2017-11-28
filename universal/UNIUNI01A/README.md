@@ -1,25 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
-<!--- Name:UNIUNI01A: --->
-#UNIUNI01A 
-<!--- LongName --->
-Universal PCB
-<!--- ELongName ---> 
 
-<!--- Lead --->
-Platfolm for soldering testing circuits.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# UNIUNI01A
+<!--- Emodule --->
 
+<!--- subtitle --->Universal PCB<!--- Esubtitle --->
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+![UNIUNI01A](/doc/img/UNIUNI01A_QRcode.png)
+
+<!--- description --->Platfolm for soldering testing circuits. <!--- Edescription --->
             

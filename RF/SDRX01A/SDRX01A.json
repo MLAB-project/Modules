@@ -1,16 +1,19 @@
 {
     "wiki": "None", 
-    "status": 2, 
+    "status": "2", 
     "name": "SDRX01A", 
     "short_en": "None", 
     "image": "/doc/img/SDRX01A_QRcode.png", 
     "longname_cs": "SDRX01A", 
     "longname_en": "SDRX01A", 
-    "autor": "", 
+    "mark": "50.0", 
     "ust": "None", 
     "doc_cs": "<p>None</p>", 
     "short_cs": "None", 
     "doc_en": "<p>None</p>", 
-    "category": "", 
-    "root": "comm_rf/SDRX01A"
+    "root": "RF/SDRX01A", 
+    "author[]": [], 
+    "category[]": [
+        "commrf"
+    ]
 }

@@ -1,30 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
-<!--- Name:LM38601A: --->
-#LM38601A 
-<!--- LongName --->
-Small Audio Amplifier with LM386
-<!--- ELongName ---> 
 
-<!--- Lead --->
-Module of small universal audio amplifier with LM386 can be 
-  used for receivers and other devices requiring low output power. 
-  The amplifier is equipped with jumpers for setting of parameters 
-  (gain and frequency) so that it can be used more universally.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# LM38601A
+<!--- Emodule --->
 
-![LeadImg](LM38601A_Small.jpg) 
+<!--- subtitle ---> Small Audio Amplifier with LM386<!--- Esubtitle --->
 
+![LM38601A](/doc/img/LM38601A_QRcode.png)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description ---> Module of small universal audio amplifier with LM386 can be used for receivers and other devices requiring low output power. The amplifier is equipped with jumpers for setting of parameters (gain and frequency) so that it can be used more universally.<!--- Edescription --->
             

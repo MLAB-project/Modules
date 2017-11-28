@@ -1,25 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
-<!--- Name:MIC01A: --->
-#MIC01A 
-<!--- LongName --->
-MEMS microphone module
-<!--- ELongName ---> 
 
-<!--- Lead --->
+[Czech](./README.cs.md)
+<!--- module --->
+# MIC01A
+<!--- Emodule --->
 
-<!--- ELead ---> 
+<!--- subtitle --->MEMS microphone module<!--- Esubtitle --->
 
+![MIC01A](/doc/img/MIC01A_QRcode.png)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description ---><!--- Edescription --->
             

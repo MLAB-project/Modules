@@ -6,7 +6,7 @@
 
 <!--- subtitle --->Duralová základní deska s rozměrem 15x11 děr<!--- Esubtitle --->
 
-![ALBASE1115](DOC/SRC/img/ALBASE1115_QRcode.png)
+![ALBASE1115](/doc/img/ALBASE1115_QRcode.png)
 
 <!--- description --->Základní deska má 11x15 děr se standardní MLAB roztečí 400mils (10.16mm). Je vhodná pro malé konstrukce, jako jsou jednoduché meřící přístroje nebo základní mobilní roboti. <!--- Edescription --->
             

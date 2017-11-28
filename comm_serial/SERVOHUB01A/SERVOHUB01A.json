@@ -1,17 +1,19 @@
 {
     "wiki": "None", 
-    "status": 2, 
+    "status": "2", 
     "name": "SERVOHUB01A", 
     "short_en": "Hub interface for powering and driving standard RC servos from an MCU.", 
     "image": "/doc/img/SERVOHUB01A_top_big.jpg", 
     "longname_cs": "Hub pro RC serva", 
     "longname_en": "RC servo hub", 
-    "mark": "50", 
-    "autor": "", 
+    "mark": "50.0", 
     "ust": "http://www.ust.cz/shop/product_info.php?cPath=22_27&products_id=218", 
     "doc_cs": "<p>None</p>", 
     "short_cs": "Modul je ur\u010den\u00fd k \u0159\u00edzen\u00ed v\u00edce klasick\u00fdch model\u00e1\u0159sk\u00fdch serv z mikrokontroleru.", 
     "doc_en": "<p>None</p>", 
-    "category": "", 
-    "root": "comm_serial/SERVOHUB01A"
+    "root": "comm_serial/SERVOHUB01A", 
+    "author[]": [], 
+    "category[]": [
+        "commserial"
+    ]
 }

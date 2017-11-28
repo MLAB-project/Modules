@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:[End]: ---> 
-<!--- Name:UPCONV01A: --->
-#UPCONV01A 
-<!--- LongName --->
-Voltage up converter
-<!--- ELongName ---> 
 
-<!--- Lead --->
-Voltage up-converting module for 5V, 12V power levels or user selectable voltage. Usually used for powering devices from single cell battery.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# UPCONV01A
+<!--- Emodule --->
 
-![LeadImg](UPCONV01A_Small.JPG) 
+<!--- subtitle ---> Voltage up converter <!--- Esubtitle --->
 
+![UPCONV01A](/doc/img/UPCONV01A_QRcode.png)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description ---> Voltage up-converting module for 5V, 12V power levels or user selectable voltage. Usually used for powering devices from single cell battery. <!--- Edescription --->
             

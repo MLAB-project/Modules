@@ -1,27 +1,12 @@
-<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
-<!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:20170112-18:22: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
-<!--- Name:NFET2x2: --->
-#NFET2x2 
-<!--- LongName --->
-2x2NFET Power Driver
-<!--- ELongName ---> 
 
-<!--- Lead --->
-There are 4 NFETs switching to earth. Inductive load is allowed.
-<!--- ELead ---> 
+[Czech](./README.cs.md)
+<!--- module --->
+# NFET2x2
+<!--- Emodule --->
 
-![LeadImg](NFET_Small.jpg) 
+<!--- subtitle --->2x2NFET Power Driver <!--- Esubtitle --->
 
+![NFET2x2](/doc/img/NFET2x2_QRcode.png)
 
-​
-​
-<!--- Description --->
-<!--- EDescription --->
-<!--- Content --->
-<!--- EContent --->
+<!--- description --->There are 4 NFETs switching to earth. Inductive load is allowed.<!--- Edescription --->
             
