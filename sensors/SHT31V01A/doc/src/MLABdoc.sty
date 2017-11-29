@@ -12,13 +12,14 @@
 \renewcommand*\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
 \usepackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=2cm]{geometry}
-\usepackage{lipsum}
+%\usepackage{lipsum}
+\usepackage{lastpage}
 \usepackage{fancyhdr} 
 \pagestyle{fancy}
 \fancyhf{}
 
 \fancyhead[R]{\includegraphics[height=0.9cm]{/home/roman/logo.png}}
-\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LE,RO]{\thepage {\small \hspace{1pt}/ \pageref{LastPage}}}
 
 \renewcommand{\headrulewidth}{2pt}
 \renewcommand{\footrulewidth}{1pt}
@@ -26,11 +27,11 @@
 \newcommand\uvod[7]{
 	\title{#1}
 	
-	\vspace*{0pt}
+	\vspace*{1cm}
 	\begin{center}
-		\begin{Large}
+		\begin{Huge}
 		#1 - #2
-		\end{Large}\\	
+		\end{Huge}\\	
 	#3
 	\end{center}\vspace{1cm}
 	{\large #5}
