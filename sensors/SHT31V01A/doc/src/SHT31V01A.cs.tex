@@ -1,9 +1,10 @@
 \documentclass[12pt,a4paper,final,titlepage,twoside]{article}
 \usepackage{MLABdoc}
+\usepackage{newclude}
 \fancyhead[L]{{\huge SHT31V01A}}
 \fancyfoot[RE,LO]{\today |  Autor1,  Autor2 | mlab.cz}
 
-\includeonly{SHT31V01A.cs.title, SHT31V01A.cs.components}
+\includeonly{SHT31V01A.cs.title, SHT31V01A.cs.assembly}
 
 \begin{document}
 %vytvori uvodni stranku
@@ -27,10 +28,9 @@ Jedná se o modul založený na IO SHT31V01A, který umožňuje měření relati
 \includepdf[angle=90]{../../hw/sch_pcb/SHT31V01A.pdf}
 
 \section{Osazení a oživení}
-\subsection{Osazení}
 % totot naimportuje cast, kde jsou osazováky a BOM tabulka
-\include{SHT31V01A.cs.components}
-\subsubsection{Oživení}
+\input{SHT31V01A.cs.assembly}
+\subsection{Oživení}
 Je potřeba provést kontrolu zda není na plošném spoji zkrat a zda je dobře zapájen IO. Jinak není třeba nic oživovat, pouze připojit a napsat program.
 
 Když je nulovým odporem osazena pozice R4 adresa modulu je 0x44, pokud je osazena pozice R3 je adresa 0x45.
