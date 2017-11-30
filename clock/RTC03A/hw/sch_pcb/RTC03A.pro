@@ -1,4 +1,4 @@
-update=Ne 5. listopad 2017, 21:51:14 CET
+update=Čt 30. listopad 2017, 19:23:13 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -21,19 +21,6 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.2
 BoardOutlineThickness=0.15
 ModuleOutlineThickness=0.15
-[schematic_editor]
-version=1
-PageLayoutDescrFile=pagelayout_mlab.kicad_wks
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
 [general]
 version=1
 [eeschema]
@@ -135,3 +122,13 @@ LibName92=video
 LibName93=Xicor
 LibName94=xilinx
 LibName95=Zilog
+[schematic_editor]
+version=1
+PageLayoutDescrFile=pagelayout_mlab.kicad_wks
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=60
+ERC_TestSimilarLabels=1

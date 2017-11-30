@@ -1,8 +1,8 @@
 
 [English version](./README.md)
 <!---module--->
-# RTC03A - Modul RTC03A
+# RTC03A - hodiny reálného času s funkcí čítače
 <!---Emodule--->
-![RTC03A](.//doc/img/RTC03A_QRcode.png)
+![RTC03A](.//doc/img/pcb.png)
 
-<!--- description --->Modul RTC03A<!--- Edescription --->
+<!--- description --->Modul obsahuje hodiny reálného času PCF8583, který po přenastavení může fungovat jako čítač signálů až do 20kHz.<!--- Edescription --->
