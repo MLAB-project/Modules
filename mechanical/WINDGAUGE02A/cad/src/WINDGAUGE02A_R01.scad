@@ -36,7 +36,7 @@ difference()
         //lopatka 3
         rotate([0, 0, 240])    
             translate([L01_hrana_drzaku_a/2,-(S01_prumer_vnitrni/2+2*S01_sila_materialu+L01_delka_uchytu+L01_prumer_lopatky/2),0])
-                lopatka();    
+                lopatka();
     
   
         }    
@@ -152,11 +152,13 @@ difference()
        
     } 
     
-   polomer_valce=2; 
+  /* polomer_valce=2; 
  //válec pro vylepšení tisku
          translate([polomer_valce-0.01,L01_prumer_lopatky/2+1.5+L01_sila_materialu_lopatky,0]) 
             cylinder(h=(L01_prumer_lopatky), r1=polomer_valce, r2=polomer_valce, center=false, $fn=100);         
-    
+  */  
 }
 
-
+rotate([0,0,90])
+translate([-70,-65,0])
+%cube([110,130,90]);

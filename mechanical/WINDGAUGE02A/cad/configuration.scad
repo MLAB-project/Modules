@@ -52,7 +52,7 @@ prumer_orechu=10;
 //WINDGAUGE02A_R01 //pro lopatku
 L01_hrana_drzaku_a=10;
 L01_hrana_drzaku_b=3;
-L01_delka_uchytu=19;
+L01_delka_uchytu=6;
 L01_prumer_lopatky=40;
 L01_sila_materialu_lopatky=1.2;
 
