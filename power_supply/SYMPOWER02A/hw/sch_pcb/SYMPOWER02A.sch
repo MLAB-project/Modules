@@ -1,8 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:74xgxx
-LIBS:74xx
+EESchema Schematic File Version 4
+LIBS:SYMPOWER02A-rescue
 LIBS:ac-dc
-LIBS:actel
 LIBS:adc-dac
 LIBS:Altera
 LIBS:analog_devices
@@ -10,47 +8,29 @@ LIBS:analog_switches
 LIBS:atmel
 LIBS:audio
 LIBS:brooktre
-LIBS:cmos4000
-LIBS:cmos_ieee
-LIBS:conn
 LIBS:contrib
 LIBS:cypress
 LIBS:dc-dc
 LIBS:device
 LIBS:digital-audio
-LIBS:diode
-LIBS:display
 LIBS:dsp
 LIBS:elec-unifil
 LIBS:ESD_Protection
 LIBS:ftdi
 LIBS:gennum
-LIBS:graphic
 LIBS:hc11
 LIBS:intel
 LIBS:interface
 LIBS:ir
 LIBS:Lattice
 LIBS:linear
-LIBS:logo
 LIBS:maxim
-LIBS:mechanical
 LIBS:memory
-LIBS:microchip_dspic33dsc
 LIBS:microchip
-LIBS:microchip_pic10mcu
-LIBS:microchip_pic12mcu
-LIBS:microchip_pic16mcu
-LIBS:microchip_pic18mcu
-LIBS:microchip_pic32mcu
 LIBS:microcontrollers
-LIBS:mlab_header
-LIBS:mlab_mechanical
 LIBS:motor_drivers
 LIBS:motorola
-LIBS:msp430
 LIBS:nordicsemi
-LIBS:nxp_armmcu
 LIBS:onsemi
 LIBS:opto
 LIBS:Oscillators
@@ -61,20 +41,12 @@ LIBS:Power_Management
 LIBS:pspice
 LIBS:references
 LIBS:regul
-LIBS:relays
 LIBS:rfcom
 LIBS:sensors
 LIBS:silabs
 LIBS:siliconi
-LIBS:stm32
-LIBS:stm8
 LIBS:supertex
-LIBS:switches
 LIBS:texas
-LIBS:transf
-LIBS:transistors
-LIBS:ttl_ieee
-LIBS:valves
 LIBS:video
 LIBS:Xicor
 LIBS:xilinx
@@ -82,13 +54,13 @@ LIBS:Zilog
 LIBS:MLAB_BATERY
 LIBS:MLAB_CONNECTORS
 LIBS:MLAB_D
-LIBS:MLAB_DISPLAY
+LIBS:MLAB_HEADER
 LIBS:MLAB_IO
 LIBS:MLAB_Jumpers
+LIBS:MLAB_MECHANICAL
 LIBS:MLAB_SW
 LIBS:MLAB_T
 LIBS:MLAB_U
-LIBS:MLAB_TR
 LIBS:SYMPOWER02A-cache
 EELAYER 26 0
 EELAYER END
@@ -173,7 +145,7 @@ F 3 "" H 3050 2750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LM27762 U1
+L LM27762-RESCUE-SYMPOWER02A U1
 U 1 1 58AAF79A
 P 5450 3850
 F 0 "U1" H 5250 5150 60  0000 C CNN

@@ -1685,11 +1685,11 @@
       (net 16 "Net-(F2-Pad1)"))
   )
 
-  (module Mlab_CON:2_kontakty (layer F.Cu) (tedit 5A030F48) (tstamp 5A0317BC)
+  (module Mlab_CON:2_kontakty (layer F.Cu) (tedit 5A27862F) (tstamp 5A0317BC)
     (at 127 102.616 90)
     (descr "Pro vypínač do panelu na vodičích")
     (path /5A018B9F)
-    (fp_text reference SW2 (at -5.842 0 180) (layer F.SilkS)
+    (fp_text reference SW2 (at -5.842 0 180) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
     )
     (fp_text value SW_SPST (at 0.254 4.064 90) (layer F.SilkS) hide
@@ -1705,11 +1705,11 @@
       (net 17 "Net-(F3-Pad1)"))
   )
 
-  (module Mlab_CON:2_kontakty (layer F.Cu) (tedit 5A030F48) (tstamp 5A0317C6)
+  (module Mlab_CON:2_kontakty (layer F.Cu) (tedit 5A27863C) (tstamp 5A0317C6)
     (at 137.16 102.616 90)
     (descr "Pro vypínač do panelu na vodičích")
     (path /5A025B2A)
-    (fp_text reference SW3 (at -5.842 0 180) (layer F.SilkS)
+    (fp_text reference SW3 (at -5.842 0 180) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
     )
     (fp_text value SW_SPST (at 0.254 4.064 90) (layer F.SilkS) hide
@@ -1725,11 +1725,11 @@
       (net 2 /OUT02))
   )
 
-  (module Mlab_CON:2_kontakty (layer F.Cu) (tedit 5A030F48) (tstamp 5A0317D0)
+  (module Mlab_CON:2_kontakty (layer F.Cu) (tedit 5A278641) (tstamp 5A0317D0)
     (at 147.32 102.616 90)
     (descr "Pro vypínač do panelu na vodičích")
     (path /5A02CA99)
-    (fp_text reference SW4 (at -5.842 0 180) (layer F.SilkS)
+    (fp_text reference SW4 (at -5.842 0 180) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
     )
     (fp_text value SW_SPST (at 0.254 4.064 90) (layer F.SilkS) hide
@@ -1745,11 +1745,11 @@
       (net 19 "Net-(F5-Pad1)"))
   )
 
-  (module Mlab_CON:2_kontakty (layer F.Cu) (tedit 5A030F48) (tstamp 5A0317DA)
+  (module Mlab_CON:2_kontakty (layer F.Cu) (tedit 5A278647) (tstamp 5A0317DA)
     (at 157.48 102.616 90)
     (descr "Pro vypínač do panelu na vodičích")
     (path /5A02D284)
-    (fp_text reference SW5 (at -5.842 0 180) (layer F.SilkS)
+    (fp_text reference SW5 (at -5.842 0 180) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
     )
     (fp_text value SW_SPST (at 0.254 4.064 90) (layer F.SilkS) hide
@@ -1765,11 +1765,11 @@
       (net 5 /OUT04))
   )
 
-  (module Mlab_CON:2_kontakty (layer F.Cu) (tedit 5A030F48) (tstamp 5A0317E4)
+  (module Mlab_CON:2_kontakty (layer F.Cu) (tedit 5A278651) (tstamp 5A0317E4)
     (at 167.64 102.616 90)
     (descr "Pro vypínač do panelu na vodičích")
     (path /5A02D2A9)
-    (fp_text reference SW6 (at -5.842 0 180) (layer F.SilkS)
+    (fp_text reference SW6 (at -5.842 0 180) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
     )
     (fp_text value SW_SPST (at 0.254 4.064 90) (layer F.SilkS) hide
