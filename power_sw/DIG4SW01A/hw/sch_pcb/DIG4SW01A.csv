@@ -1,0 +1,16 @@
+"ID";"Určovatel";"Pouzdro";"Množství";"Určení";"Tisk rohového razítka";
+1;"U1";"HTSSOP28";1;"TPS4H160-Q1-B";;;
+2;"M1,M2,M3,M4";"MountingHole_3mm";4;"HOLE";;;
+3;"C3";"TantalC_SizeC_Reflow";1;"47uF/16V";;;
+4;"C4";"SMD-0805";1;"100pF";;;
+5;"D1";"Diode-SMB_Standard";1;"STPS340U";;;
+6;"D2,D3,D4,D5";"SMB_Standard";4;"SMBJ15A-E3/52";;;
+7;"J1,J2";"WAGO256";2;"CONN1_1";;;
+8;"J4,J5,J6,J7,J8,J9,J10,J11,J12,J13,J18";"Straight_2x01";11;"JUMP_2x1";;;
+9;"J14,J15,J16,J17";"Straight_2x04";4;"JUMP_4X2";;;
+10;"R1,R2,R4,R5,R6,R7,R8,R9,R10,R11";"SMD-0805";10;"4k7";;;
+11;"R3";"SMD-0805";1;"1k2";;;
+12;"R12";"SMD-0805";1;"820R";;;
+13;"R13";"SMD-0805";1;"-";;;
+14;"R14,R15,R16,R17";"SMD-0805";4;"20k";;;
+15;"J3";"Straight_1x02";1;"CONN1_2";;;
