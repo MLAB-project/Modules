@@ -1,10 +1,4 @@
-jeden dvojity hrebinek pro napajeni zrejme nebude stacit, protoze pri maximalnim vyuziti Hubu by skrz nej teklo cca 4A. Coz je 8x vic, nez je povolena zatez na pin.. 
-Bylo by zrejme lepsi tam dat WAGO. Naopak mechanicky vypinac napajeni je pro zamyslene pouziti zbytecny. Mozna i nezadouci, protoze tim pak muze nekdo omylem vypnout cele zarizeni. 
+Bylo by zrejme lepsi na přivod výkonového 5V napájení dat WAGO.
 
-Navrzeny plosny spoj neprojde pres DRC.
-
-Nejsou chladici VIA pod IO. 
-
-Layout desky by mel respektovat minimalne oddil 12.1.3 Differential Pairs  z datasheetu.  Lepe celou kapitolu 12 Layout.
-
+Na plošky by chtělo přidat termaly, neboť je těžké zaletovat 4vrstvý plošný spoj s mědí vylitou až k plošce. Zvláště významné je to u USB konektorů. 
  
