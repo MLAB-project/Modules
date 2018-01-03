@@ -14,24 +14,24 @@ difference () {
 
 	//mount holes for ODROID
 
-        translate ([4.5, 4.5,0])
+    translate ([4.5, 4.5,0])
         cylinder (h = 6, r= (nut_size+clear)/2, $fn=6);
-        translate ([4.5, 4.5, 6.2])  // one solid layer for slicer (the holes will be pierced on demand )
+    translate ([4.5, 4.5, 6.2])  // one solid layer for slicer (the holes will be pierced on demand )
         cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
 
-        translate ([4.5 + 49, 4.5,0])
+    translate ([4.5 + 49, 4.5,0])
         cylinder (h = 6, r= (nut_size+clear)/2, $fn=6);
-        translate ([4.5 + 49, 4.5, 6.2])  // one solid layer for slicer (the holes will be pierced on demand )
+    translate ([4.5 + 49, 4.5, 6.2])  // one solid layer for slicer (the holes will be pierced on demand )
         cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
 
-        translate ([4.5, 4.5 + 58,0])
+    translate ([4.5, 4.5 + 58,0])
         cylinder (h = 6, r= (nut_size+clear)/2, $fn=6);
-        translate ([4.5, 4.5 + 58, 6.2])  // one solid layer for slicer (the holes will be pierced on demand )
+    translate ([4.5, 4.5 + 58, 6.2])  // one solid layer for slicer (the holes will be pierced on demand )
         cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
 
-        translate ([4.5 + 49, 4.5 + 58,0])
+    translate ([4.5 + 49, 4.5 + 58,0])
         cylinder (h = 6, r= (nut_size+clear)/2, $fn=6);
-        translate ([4.5 + 49, 4.5 + 58, 6.2])  // one solid layer for slicer (the holes will be pierced on demand )
+    translate ([4.5 + 49, 4.5 + 58, 6.2])  // one solid layer for slicer (the holes will be pierced on demand )
         cylinder (h = pedestal_height, r= mount_hole/2, $fn=10);
 
         ////////////////////////////////////
@@ -78,20 +78,20 @@ difference () {
 // MLAB grid holes
 
         for (j = [0 : 5], i = [1 : 5]) {
-                translate ([MLAB_grid_xoffset + j*10.16, MLAB_grid_yoffset + i*10.16,0])
+            translate ([MLAB_grid_xoffset + j*10.16, MLAB_grid_yoffset + i*10.16,0])
                 cylinder (h = 3, r= (nut_size+clear)/2, $fn=6);
-                translate ([MLAB_grid_xoffset + j*10.16, MLAB_grid_yoffset + i*10.16, 3.2])  // one solid layer for slicer (the holes will be pierced on demand )
+            translate ([MLAB_grid_xoffset + j*10.16, MLAB_grid_yoffset + i*10.16, 3.2])  // one solid layer for slicer (the holes will be pierced on demand )
                 cylinder (h = pedestal_height /3, r= mount_hole/2, $fn=10);
-                translate ([MLAB_grid_xoffset + j*10.16, MLAB_grid_yoffset + i*10.16, 6.0])
+            translate ([MLAB_grid_xoffset + j*10.16, MLAB_grid_yoffset + i*10.16, 6.0])
                 cylinder (h = 10, r= nut_size/2, $fn=6);
         }
 
         for (j = [0 : 5], i = [7 : 8]) {
-                translate ([MLAB_grid_xoffset + j*10.16, MLAB_grid_yoffset + i*10.16,0])
+            translate ([MLAB_grid_xoffset + j*10.16, MLAB_grid_yoffset + i*10.16,0])
                 cylinder (h = 3, r= (nut_size+clear)/2, $fn=6);
-                translate ([MLAB_grid_xoffset + j*10.16, MLAB_grid_yoffset + i*10.16, 3.2])  // one solid layer for slicer (the holes will be pierced on demand )
+            translate ([MLAB_grid_xoffset + j*10.16, MLAB_grid_yoffset + i*10.16, 3.2])  // one solid layer for slicer (the holes will be pierced on demand )
                 cylinder (h = pedestal_height /3, r= mount_hole/2, $fn=10);
-                translate ([MLAB_grid_xoffset + j*10.16, MLAB_grid_yoffset + i*10.16, 6.0])
+            translate ([MLAB_grid_xoffset + j*10.16, MLAB_grid_yoffset + i*10.16, 6.0])
                 cylinder (h = 10, r= nut_size/2, $fn=6);
         }
 
@@ -101,7 +101,7 @@ difference () {
 ////  lightening central holes
         
 	translate ([9,16, 0])  // ODROIDs passive components hole. 
-	cube([40,62,pedestal_height ]);        
+	   cube([40,62,pedestal_height ]);        
         
 // MLAB logo on the side
     union (){
