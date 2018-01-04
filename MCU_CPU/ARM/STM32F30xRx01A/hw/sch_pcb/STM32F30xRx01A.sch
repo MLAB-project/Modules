@@ -972,17 +972,6 @@ F 3 "" H 7800 4250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Crystal_GND2 Y2
-U 1 1 5A389C54
-P 8750 4250
-F 0 "Y2" H 8700 4450 50  0000 C BNN
-F 1 "32k768Hz" H 8700 4400 50  0000 C CNN
-F 2 "Crystals:Crystal_DS26_d2.0mm_l6.0mm_Horizontal_1EP_style1" H 8750 4250 50  0001 C CNN
-F 3 "" H 8750 4250 50  0001 C CNN
-	1    8750 4250
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR022
 U 1 1 5A389F57
 P 8250 4750
@@ -1521,8 +1510,6 @@ Wire Wire Line
 Wire Wire Line
 	3800 6950 3800 6900
 Wire Wire Line
-	8750 4700 8750 4450
-Wire Wire Line
 	8000 4200 8000 4350
 Wire Wire Line
 	8000 4250 7950 4250
@@ -1535,13 +1522,10 @@ Connection ~ 8000 4250
 Wire Wire Line
 	8250 4700 8250 4750
 Wire Wire Line
-	7600 4700 9000 4700
-Wire Wire Line
 	7600 4700 7600 4650
 Wire Wire Line
 	9000 4700 9000 4650
 Connection ~ 8250 4700
-Connection ~ 8750 4700
 Wire Wire Line
 	8500 4650 8500 4700
 Connection ~ 8500 4700
@@ -1864,4 +1848,17 @@ Wire Notes Line
 	6400 2950 7950 2950
 Wire Notes Line
 	8000 1850 8000 3300
+$Comp
+L Crystal Y2
+U 1 1 5A4E1BA0
+P 8750 4250
+F 0 "Y2" H 8700 4450 50  0000 C BNN
+F 1 "32k768Hz" H 8700 4400 50  0000 C CNN
+F 2 "Crystals:Crystal_DS26_d2.0mm_l6.0mm_Horizontal" H 8750 4250 50  0001 C CNN
+F 3 "" H 8750 4250 50  0001 C CNN
+	1    8750 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 4700 9000 4700
 $EndSCHEMATC
