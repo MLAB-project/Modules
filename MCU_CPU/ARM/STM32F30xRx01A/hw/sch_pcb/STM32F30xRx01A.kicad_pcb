@@ -3,7 +3,7 @@
   (general
     (links 441)
     (no_connects 0)
-    (area 105.512999 58.514 209.272 135.330285)
+    (area 107.874999 63.678999 198.957001 134.441001)
     (thickness 1.6)
     (drawings 77)
     (tracks 578)
@@ -3543,7 +3543,7 @@
     )
   )
 
-  (module Mlab_Pin_Headers:Straight_2x02 (layer F.Cu) (tedit 5A4E1315) (tstamp 5A3998FE)
+  (module Mlab_Pin_Headers:Straight_2x02 (layer F.Cu) (tedit 5A4E148C) (tstamp 5A3998FE)
     (at 166.624 67.564)
     (descr "pin header straight 2x02")
     (tags "pin header straight 2x02")
@@ -3576,7 +3576,7 @@
     )
   )
 
-  (module Mlab_Pin_Headers:Straight_2x01 (layer F.Cu) (tedit 5A4E130D) (tstamp 5A39990A)
+  (module Mlab_Pin_Headers:Straight_2x01 (layer F.Cu) (tedit 5A4E1488) (tstamp 5A39990A)
     (at 187.96 67.564 90)
     (descr "pin header straight 2x01")
     (tags "pin header straight 2x01")
@@ -4076,14 +4076,14 @@
     )
   )
 
-  (module Mlab_CON:MCSP-Q-08-A-SG (layer B.Cu) (tedit 5A481F3F) (tstamp 5A4808AC)
+  (module Mlab_CON:MCSP-Q-08-A-SG (layer B.Cu) (tedit 5A4E146F) (tstamp 5A4808AC)
     (at 113.538 114.3 90)
     (path /5A48110E)
     (zone_connect 2)
     (fp_text reference J5 (at 0 0 90) (layer B.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value card (at 0 9.8 90) (layer B.Fab)
+    (fp_text value MCSP-Q-08-A-SG-T/R (at 0 -1.524 90) (layer B.Fab)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -6.35 -5.45) (end -6.35 -7.75) (layer B.Fab) (width 0.15))
