@@ -2,8 +2,8 @@
 
   (general
     (links 444)
-    (no_connects 8)
-    (area 107.874999 63.678999 198.957001 134.441001)
+    (no_connects 0)
+    (area 102.270999 58.514 209.272 135.330285)
     (thickness 1.6)
     (drawings 77)
     (tracks 586)
@@ -4389,14 +4389,14 @@
       (zone_connect 2))
   )
 
-  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 54799E0C) (tstamp 5A4E7F51)
+  (module Mlab_R:SMD-0805 (layer B.Cu) (tedit 5A4E6B41) (tstamp 5A4E7F51)
     (at 132.9055 123.19 180)
     (path /5A4E731A)
     (attr smd)
-    (fp_text reference R12 (at 0 0.3175 180) (layer B.SilkS)
+    (fp_text reference R12 (at -0.0127 0 180) (layer B.SilkS)
       (effects (font (size 0.50038 0.50038) (thickness 0.10922)) (justify mirror))
     )
-    (fp_text value 10k (at 0.127 -0.381 180) (layer B.SilkS)
+    (fp_text value 10k (at 0.127 -0.381 180) (layer B.SilkS) hide
       (effects (font (size 0.50038 0.50038) (thickness 0.10922)) (justify mirror))
     )
     (fp_circle (center -1.651 -0.762) (end -1.651 -0.635) (layer B.SilkS) (width 0.15))
