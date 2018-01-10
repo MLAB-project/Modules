@@ -1,104 +1,30 @@
-"Source:","/home/ondra6ak/documents/Modules/MCU_CPU/ARM/STM32F30xRx01A/hw/sch_pcb/STM32F30xRx01A.sch"
-"Date:","Thu 04 Jan 2018 11:17:16 AM CET"
-"Tool:","Eeschema 4.0.7+dfsg1-1"
-"Generator:","/usr/lib/kicad/plugins/bom_csv_grouped_by_value.py"
-"Component Count:","57"
-
-"Individual Components:"
-
-"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet"
-"","","C1","100nF","device:C_Small","Mlab_R:SMD-0805",""
-"","","C2","100nF","device:C_Small","Mlab_R:SMD-0805",""
-"","","C3","100nF","device:C_Small","Mlab_R:SMD-0805",""
-"","","C4","100nF","device:C_Small","Mlab_R:SMD-0805",""
-"","","C5","10nF","device:C","Mlab_R:SMD-0805",""
-"","","C6","100nF","device:C_Small","Mlab_R:SMD-0805",""
-"","","C7","100nF","device:C_Small","Mlab_R:SMD-0805",""
-"","","C8","100nF","device:C_Small","Mlab_R:SMD-0805",""
-"","","C9","10uF/6V3","device:CP_Small","Mlab_C:TantalC_SizeD_Reflow",""
-"","","C10","20pF","device:C","Mlab_R:SMD-0805",""
-"","","C11","20pF","device:C","Mlab_R:SMD-0805",""
-"","","C12","4p3F","device:C","Mlab_R:SMD-0805",""
-"","","C13","100nF","device:C_Small","Mlab_R:SMD-0805",""
-"","","C14","2u2F/6V6","device:CP_Small","Mlab_C:TantalC_SizeD_Reflow",""
-"","","C15","4p3F","device:C","Mlab_R:SMD-0805",""
-"","","C16","100nF","device:C_Small","Mlab_R:SMD-0805",""
-"","","C17","10uF/6V3","device:CP_Small","Mlab_C:TantalC_SizeD_Reflow",""
-"","","D2","M4","device:D_Small","Mlab_D:Diode-SMA_Standard",""
-"","","D3","M4","device:D_Small","Mlab_D:Diode-SMA_Standard",""
-"","","F1","750mA","device:Fuse_Small","Mlab_R:SMD-1206",""
-"","","J1","USB_B","conn:USB_B","Connectors:USB_B",""
-"","","J2","USB_PULLUP","MLAB_HEADER:HEADER_2x01","Mlab_Pin_Headers:Straight_1x02",""
-"","","J3","USB_POWER","MLAB_HEADER:HEADER_2x01","Mlab_Pin_Headers:Straight_1x02",""
-"","","J4","5V","MLAB_HEADER:HEADER_2x03_PARALLEL","Mlab_Pin_Headers:Straight_2x03",""
-"","","J5","card","MLAB_CONNECTORS:card","Mlab_CON:MCSP-Q-08-A-SG",""
-"","","J6","I2C1","MLAB_HEADER:HEADER_2x05_PARALLEL","Mlab_Pin_Headers:Straight_2x05",""
-"","","J7","JTAG","MLAB_HEADER:HEADER_2x07","Mlab_Pin_Headers:Straight_2x07",""
-"","","J8","3V3","MLAB_HEADER:HEADER_2x03_PARALLEL","Mlab_Pin_Headers:Straight_2x03",""
-"","","J9","HEADER_2x16_PARALLEL","MLAB_HEADER:HEADER_2x16_PARALLEL","Mlab_Pin_Headers:Straight_2x16",""
-"","","J10","HEADER_2x16_PARALLEL","MLAB_HEADER:HEADER_2x16_PARALLEL","Mlab_Pin_Headers:Straight_2x16",""
-"","","J11","HEADER_2x16_PARALLEL","MLAB_HEADER:HEADER_2x16_PARALLEL","Mlab_Pin_Headers:Straight_2x16",""
-"","","J12","I2C_PULLUP","MLAB_HEADER:HEADER_2x02","Mlab_Pin_Headers:Straight_2x02",""
-"","","J13","I2C_POWER","MLAB_HEADER:HEADER_2x01","Mlab_Pin_Headers:Straight_2x01",""
-"","","J14","HEADER_2x16_PARALLEL","MLAB_HEADER:HEADER_2x16_PARALLEL","Mlab_Pin_Headers:Straight_2x16",""
-"","","L1","MI0805K400R-10 ","device:Ferrite_Bead_Small","Mlab_R:SMD-0805",""
-"","","L2","10uH","device:L","Mlab_R:SMD-0805",""
-"","","M1","HOLE","MLAB_MECHANICAL:HOLE","Mlab_Mechanical:MountingHole_3mm",""
-"","","M2","HOLE","MLAB_MECHANICAL:HOLE","Mlab_Mechanical:MountingHole_3mm",""
-"","","M3","HOLE","MLAB_MECHANICAL:HOLE","Mlab_Mechanical:MountingHole_3mm",""
-"","","M4","HOLE","MLAB_MECHANICAL:HOLE","Mlab_Mechanical:MountingHole_3mm",""
-"","","R1","22","device:R","Mlab_R:SMD-0805",""
-"","","R2","22","device:R","Mlab_R:SMD-0805",""
-"","","R3","1k5","device:R","Mlab_R:SMD-0805",""
-"","","R4","10k","device:R","Mlab_R:SMD-0805",""
-"","","R5","10k","device:R","Mlab_R:SMD-0805",""
-"","","R6","10k","device:R","Mlab_R:SMD-0805",""
-"","","R7","10k","device:R","Mlab_R:SMD-0805",""
-"","","R8","10k","device:R","Mlab_R:SMD-0805",""
-"","","R9","4k7","device:R","Mlab_R:SMD-0805",""
-"","","R10","4k7","device:R","Mlab_R:SMD-0805",""
-"","","R11","10k","device:R","Mlab_R:SMD-0805",""
-"","","SW1","RESET","switches:SW_Push","Mlab_SW:SW_PUSH_SMALL",""
-"","","SW2","BOOT","switches:SW_Push","Mlab_SW:SW_PUSH_SMALL",""
-"","","U1","STM32F303RE","STM32F30xRx01A-cache:STM32F303RE","Mlab_IO:LQFP64",""
-"","","U2","LM1117MPX","MLAB_U:LM1117_ADJ_SOT","Mlab_IO:SOT-223",""
-"","","Y1","8MHz","device:Crystal","Mlab_XTAL:Crystal_HC49-U_Vertical",""
-"","","Y2","32k768Hz","device:Crystal_GND2","Crystals:Crystal_DS26_d2.0mm_l6.0mm_Horizontal_1EP_style1",""
-
-
-
-"Collated Components:"
-
-"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet"
-"1","9","C1, C2, C3, C4, C6, C7, C8, C13, C16","100nF","device:C_Small","Mlab_R:SMD-0805",""
-"2","1","C5","10nF","device:C","Mlab_R:SMD-0805",""
-"3","2","C9, C17","10uF/6V3","device:CP_Small","Mlab_C:TantalC_SizeD_Reflow",""
-"4","2","C10, C11","20pF","device:C","Mlab_R:SMD-0805",""
-"5","2","C12, C15","4p3F","device:C","Mlab_R:SMD-0805",""
-"6","1","C14","2u2F/6V6","device:CP_Small","Mlab_C:TantalC_SizeD_Reflow",""
-"7","2","D2, D3","M4","device:D_Small","Mlab_D:Diode-SMA_Standard",""
-"8","1","F1","750mA","device:Fuse_Small","Mlab_R:SMD-1206",""
-"9","1","J1","USB_B","conn:USB_B","Connectors:USB_B",""
-"10","1","J2","USB_PULLUP","MLAB_HEADER:HEADER_2x01","Mlab_Pin_Headers:Straight_1x02",""
-"11","1","J3","USB_POWER","MLAB_HEADER:HEADER_2x01","Mlab_Pin_Headers:Straight_1x02",""
-"12","1","J4","5V","MLAB_HEADER:HEADER_2x03_PARALLEL","Mlab_Pin_Headers:Straight_2x03",""
-"13","1","J5","card","MLAB_CONNECTORS:card","Mlab_CON:MCSP-Q-08-A-SG",""
-"14","1","J6","I2C1","MLAB_HEADER:HEADER_2x05_PARALLEL","Mlab_Pin_Headers:Straight_2x05",""
-"15","1","J7","JTAG","MLAB_HEADER:HEADER_2x07","Mlab_Pin_Headers:Straight_2x07",""
-"16","1","J8","3V3","MLAB_HEADER:HEADER_2x03_PARALLEL","Mlab_Pin_Headers:Straight_2x03",""
-"17","4","J9, J10, J11, J14","HEADER_2x16_PARALLEL","MLAB_HEADER:HEADER_2x16_PARALLEL","Mlab_Pin_Headers:Straight_2x16",""
-"18","1","J12","I2C_PULLUP","MLAB_HEADER:HEADER_2x02","Mlab_Pin_Headers:Straight_2x02",""
-"19","1","J13","I2C_POWER","MLAB_HEADER:HEADER_2x01","Mlab_Pin_Headers:Straight_2x01",""
-"20","1","L1","MI0805K400R-10 ","device:Ferrite_Bead_Small","Mlab_R:SMD-0805",""
-"21","1","L2","10uH","device:L","Mlab_R:SMD-0805",""
-"22","4","M1, M2, M3, M4","HOLE","MLAB_MECHANICAL:HOLE","Mlab_Mechanical:MountingHole_3mm",""
-"23","2","R1, R2","22","device:R","Mlab_R:SMD-0805",""
-"24","1","R3","1k5","device:R","Mlab_R:SMD-0805",""
-"25","6","R4, R5, R6, R7, R8, R11","10k","device:R","Mlab_R:SMD-0805",""
-"26","2","R9, R10","4k7","device:R","Mlab_R:SMD-0805",""
-"27","1","SW1","RESET","switches:SW_Push","Mlab_SW:SW_PUSH_SMALL",""
-"28","1","SW2","BOOT","switches:SW_Push","Mlab_SW:SW_PUSH_SMALL",""
-"29","1","U1","STM32F303RE","STM32F30xRx01A-cache:STM32F303RE","Mlab_IO:LQFP64",""
-"30","1","U2","LM1117MPX","MLAB_U:LM1117_ADJ_SOT","Mlab_IO:SOT-223",""
-"31","1","Y1","8MHz","device:Crystal","Mlab_XTAL:Crystal_HC49-U_Vertical",""
-"32","1","Y2","32k768Hz","device:Crystal_GND2","Crystals:Crystal_DS26_d2.0mm_l6.0mm_Horizontal_1EP_style1",""
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"C17,C9";"TantalC_SizeD_Reflow";2;"10uF/6V3";;;
+2;"C14";"TantalC_SizeD_Reflow";1;"2u2F/6V6";;;
+3;"C2,C1,C3,C4,C6,C7,C8,C13,C16";"SMD-0805";9;"100nF";;;
+4;"C5";"SMD-0805";1;"10nF";;;
+5;"M1,M2,M3,M4";"MountingHole_3mm";4;"HOLE";;;
+6;"SW1,SW2";"SW_PUSH_SMALL";2;"SW_Push";;;
+7;"Y1";"Crystal_HC49-U_Vertical";1;"8MHz";;;
+8;"J2,J3";"Straight_1x02";2;"HEADER_2x01";;;
+9;"J4,J8";"Straight_2x03";2;"HEADER_2x03_PARALLEL";;;
+10;"J6";"Straight_2x05";1;"HEADER_2x05_PARALLEL";;;
+11;"J10,J9,J11,J14";"Straight_2x16";4;"HEADER_2x16_PARALLEL";;;
+12;"C10,C11";"SMD-0805";2;"20pF";;;
+13;"C12,C15";"SMD-0805";2;"4p3F";;;
+14;"D2,D3";"Diode-SMA_Standard";2;"M4";;;
+15;"F1";"SMD-1206";1;"750mA";;;
+16;"R1,R2";"SMD-0805";2;"22";;;
+17;"R3";"SMD-0805";1;"1k5";;;
+18;"R4,R5,R6,R7,R8,R11,R12";"SMD-0805";7;"10k";;;
+19;"U2";"SOT-223";1;"LM1117MPX";;;
+20;"R9,R10";"SMD-0805";2;"4k7";;;
+21;"J1";"USB_B";1;"USB_B";;;
+22;"J12";"Straight_2x02";1;"HEADER_2x02";;;
+23;"J13";"Straight_2x01";1;"HEADER_2x01";;;
+24;"L1";"SMD-0805";1;"MI0805K400R-10 ";;;
+25;"L2";"SMD-0805";1;"10uH";;;
+26;"U1";"LQFP64";1;"STM32F303RE";;;
+27;"J7";"Straight_2x07";1;"HEADER_2x07";;;
+28;"Y2";"Crystal_DS26_d2.0mm_l6.0mm_Horizontal";1;"32k768Hz";;;
+29;"J5";"MCSP-Q-08-A-SG";1;"MCSP-Q-08-A-SG-T/R";;;
