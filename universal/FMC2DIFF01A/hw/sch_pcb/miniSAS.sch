@@ -1,39 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:conn
-LIBS:Jumpers
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:special
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:clock
-LIBS:konektory
+EESchema Schematic File Version 4
 LIBS:FMC2DIFF-cache
-EELAYER 24 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -48,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L SAS_mini_1888174 J6
+L konektory:SAS_mini_1888174 J6
 U 1 1 531F7DD7
 P 3050 2900
 F 0 "J6" H 2650 4600 60  0000 C CNN
@@ -59,7 +26,7 @@ F 3 "" H 3450 2850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SAS_mini_1888174 J6
+L konektory:SAS_mini_1888174 J6
 U 2 1 531F7DEB
 P 6400 2900
 F 0 "J6" H 6000 4600 60  0000 C CNN
@@ -72,7 +39,7 @@ $EndComp
 Wire Wire Line
 	5600 1400 5400 1400
 Wire Wire Line
-	5400 1400 5400 3250
+	5400 1400 5400 1700
 Wire Wire Line
 	5600 1700 5400 1700
 Connection ~ 5400 1700
@@ -89,7 +56,7 @@ Wire Wire Line
 	5600 2500 5400 2500
 Connection ~ 5400 2500
 $Comp
-L DGND #PWR041
+L FMC2DIFF-rescue:DGND-RESCUE-FMC2DIFF #PWR041
 U 1 1 531F7E4E
 P 2150 3250
 F 0 "#PWR041" H 2150 3250 40  0001 C CNN
@@ -100,7 +67,7 @@ F 3 "" H 2150 3250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2150 1400 2150 3250
+	2150 1400 2150 1700
 Text GLabel 1850 1500 0    55   BiDi ~ 0
 LA19_N
 Text GLabel 1850 1600 0    55   BiDi ~ 0
@@ -199,7 +166,7 @@ Wire Wire Line
 Wire Wire Line
 	2000 3000 2100 2900
 $Comp
-L DGND #PWR042
+L FMC2DIFF-rescue:DGND-RESCUE-FMC2DIFF #PWR042
 U 1 1 531F9131
 P 5400 3250
 F 0 "#PWR042" H 5400 3250 40  0001 C CNN
@@ -290,7 +257,7 @@ Wire Wire Line
 Wire Wire Line
 	5250 3000 5350 2900
 $Comp
-L SAS_mini_1888174 J7
+L konektory:SAS_mini_1888174 J7
 U 1 1 531F9589
 P 3050 5350
 F 0 "J7" H 2650 7050 60  0000 C CNN
@@ -301,7 +268,7 @@ F 3 "" H 3450 5300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SAS_mini_1888174 J7
+L konektory:SAS_mini_1888174 J7
 U 2 1 531F958F
 P 6400 5350
 F 0 "J7" H 6000 7050 60  0000 C CNN
@@ -314,7 +281,7 @@ $EndComp
 Wire Wire Line
 	5600 3850 5400 3850
 Wire Wire Line
-	5400 3850 5400 5700
+	5400 3850 5400 4150
 Wire Wire Line
 	5600 4150 5400 4150
 Connection ~ 5400 4150
@@ -331,7 +298,7 @@ Wire Wire Line
 	5600 4950 5400 4950
 Connection ~ 5400 4950
 $Comp
-L DGND #PWR043
+L FMC2DIFF-rescue:DGND-RESCUE-FMC2DIFF #PWR043
 U 1 1 531F95A1
 P 2150 5700
 F 0 "#PWR043" H 2150 5700 40  0001 C CNN
@@ -342,7 +309,7 @@ F 3 "" H 2150 5700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2150 3850 2150 5700
+	2150 3850 2150 4150
 Text GLabel 1850 3950 0    55   BiDi ~ 0
 LA04_N
 Text GLabel 1850 4050 0    55   BiDi ~ 0
@@ -441,7 +408,7 @@ Wire Wire Line
 Wire Wire Line
 	2000 5450 2100 5350
 $Comp
-L DGND #PWR044
+L FMC2DIFF-rescue:DGND-RESCUE-FMC2DIFF #PWR044
 U 1 1 531F95DB
 P 5400 5700
 F 0 "#PWR044" H 5400 5700 40  0001 C CNN
@@ -532,7 +499,7 @@ Wire Wire Line
 Wire Wire Line
 	5250 5450 5350 5350
 $Comp
-L JUMP_3X2_CONN J8
+L FMC2DIFF-rescue:JUMP_3X2_CONN-RESCUE-FMC2DIFF J8
 U 1 1 531F9E3C
 P 9000 1950
 F 0 "J8" H 8650 2150 50  0000 C CNN
@@ -543,7 +510,7 @@ F 3 "" H 9000 1950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DGND #PWR045
+L FMC2DIFF-rescue:DGND-RESCUE-FMC2DIFF #PWR045
 U 1 1 531F9EF0
 P 8500 2100
 F 0 "#PWR045" H 8500 2100 40  0001 C CNN
@@ -554,16 +521,18 @@ F 3 "" H 8500 2100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8500 2100 8500 1800
+	8500 2100 8500 2000
 Wire Wire Line
 	8500 1800 8600 1800
 Wire Wire Line
 	8600 2000 8500 2000
 Connection ~ 8500 2000
 $Comp
-L 3V3 #PWR046
+L FMC2DIFF-rescue:3V3-RESCUE-FMC2DIFF #PWR046
 U 1 1 531FA04C
 P 8350 1800
+AR Path="/531FA04C" Ref="#PWR046"  Part="1" 
+AR Path="/531CAD5A/531FA04C" Ref="#PWR046"  Part="1" 
 F 0 "#PWR046" H 8350 1900 40  0001 C CNN
 F 1 "3V3" H 8350 1925 40  0000 C CNN
 F 2 "" H 8350 1800 60  0000 C CNN
@@ -575,4 +544,46 @@ Wire Wire Line
 	8350 1800 8350 1900
 Wire Wire Line
 	8350 1900 8600 1900
+Wire Wire Line
+	5400 1700 5400 2000
+Wire Wire Line
+	5400 2000 5400 2500
+Wire Wire Line
+	5400 3100 5400 3250
+Wire Wire Line
+	5400 2800 5400 3100
+Wire Wire Line
+	5400 2500 5400 2800
+Wire Wire Line
+	2150 1700 2150 2000
+Wire Wire Line
+	2150 2000 2150 2500
+Wire Wire Line
+	2150 2500 2150 2800
+Wire Wire Line
+	2150 2800 2150 3100
+Wire Wire Line
+	2150 3100 2150 3250
+Wire Wire Line
+	5400 4150 5400 4450
+Wire Wire Line
+	5400 4450 5400 4950
+Wire Wire Line
+	5400 5550 5400 5700
+Wire Wire Line
+	5400 5250 5400 5550
+Wire Wire Line
+	5400 4950 5400 5250
+Wire Wire Line
+	2150 4150 2150 4450
+Wire Wire Line
+	2150 4450 2150 4950
+Wire Wire Line
+	2150 4950 2150 5250
+Wire Wire Line
+	2150 5250 2150 5550
+Wire Wire Line
+	2150 5550 2150 5700
+Wire Wire Line
+	8500 2000 8500 1800
 $EndSCHEMATC
