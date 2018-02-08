@@ -1,16 +1,23 @@
 {
-    "autor[]": ["roman-dvorak"],
-    "category[]": [],
-    "doc_cs": "",
-    "doc_en": "",
-    "image": "/doc/img/pcb.png",
-    "longname_cs": "hodiny reálného času s funkcí čítače",
-    "longname_en": "real-time clock with counting mode",
-    "name": "RTC03A",
-    "root": "clock",
-    "short_cs": "Modul obsahuje hodiny reálného času PCF8583, který po přenastavení může fungovat jako čítač signálů až do 20kHz.",
-    "short_en": "Modul contains real-time clock IO PCF8583, which can work as signal counter up to 20kHz.",
-    "status": 1,
-    "ust": "None",
-    "wiki": "None"
+    "wiki": "None", 
+    "status": "1", 
+    "name": "RTC03A", 
+    "short_en": "Modul contains real-time clock IO PCF8583, which can work as signal counter up to 20kHz.", 
+    "image": "/doc/img/pcb.png", 
+    "longname_cs": "hodiny re\u00e1ln\u00e9ho \u010dasu s funkc\u00ed \u010d\u00edta\u010de", 
+    "longname_en": "real-time clock with counting mode", 
+    "mark": "0", 
+    "ust": "None", 
+    "doc_cs": "", 
+    "short_cs": "Modul obsahuje hodiny re\u00e1ln\u00e9ho \u010dasu PCF8583, kter\u00fd po p\u0159enastaven\u00ed m\u016f\u017ee fungovat jako \u010d\u00edta\u010d sign\u00e1l\u016f a\u017e do 20kHz.", 
+    "doc_en": "", 
+    "root": "clock/RTC03A", 
+    "author[]": [
+        "roman-dvorak", 
+        "ChroustJan"
+    ], 
+    "category[]": [
+        "sensor", 
+        "clock"
+    ]
 }
