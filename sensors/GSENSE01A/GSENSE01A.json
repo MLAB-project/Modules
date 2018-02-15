@@ -1,14 +1,22 @@
 {
-    "wiki": null, 
+    "wiki": "None", 
     "status": 4, 
     "name": "GSENSE01A", 
-    "short_en": "Triple axis accelerometer with proportional analog output. ", 
-    "image": "/doc/img/GSENSE01A_QRcode.png", 
-    "longname_cs": "T\u0159\u00edos\u00fd analogov\u00fd akcelerometr", 
+    "parameters": [], 
+    "short_en": "Triple axis accelerometer with proportional analog output.", 
+    "image_small": ".jpgs", 
+    "image": "/doc/img/GSENSE01A_QRcode.jpg", 
+    "longname_cs": "Tříosý analogový akcelerometr", 
     "longname_en": "Simple 3axis analog accelerometer sensor", 
-    "ust": "\nhttp://www.ust.cz/shop/product_info.php?cPath=22_28&products_id=42\r\n\r\n", 
+    "mark": 50.0, 
+    "ust": "http://www.ust.cz/shop/product_info.php?cPath=22_28&products_id=42", 
     "doc_cs": "<p>None</p>", 
-    "short_cs": "Modul t\u0159\u00edos\u00e9ho akcelerometru s analogov\u00fdm v\u00fdstupem a integrovan\u00fdm nap\u011b\u0165ov\u00fdm stabiliz\u00e1torem. Mo\u017enost p\u0159\u00edm\u00e9ho p\u0159ipojen\u00ed k mikroporocesoru.", 
+    "short_cs": "Modul tříosého akcelerometru s analogovým výstupem a integrovaným napěťovým stabilizátorem. Možnost přímého připojení k mikroporocesoru.", 
     "doc_en": "<p>None</p>", 
-    "root": "sensor/GSENSE01A"
+    "_id": "GSENSE01A", 
+    "root": "sensors/GSENSE01A", 
+    "author[]": [], 
+    "category[]": [
+        "sensor"
+    ]
 }
