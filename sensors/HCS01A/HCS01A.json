@@ -1,16 +1,24 @@
 {
-    "wiki": null, 
+    "wiki": "None", 
     "status": 4, 
     "name": "HCS01A", 
-    "short_en": "", 
-    "image": "/doc/img/HCS01A_QRcode.png", 
-    "longname_cs": "Sn\u00edma\u010d vysok\u00fdch proud\u016f", 
-    "longname_en": "High Current Sensor", 
-    "autor": "", 
-    "ust": null, 
-    "doc_cs": "<p>None</p>", 
-    "short_cs": "Sn\u00edm\u00e1n\u00ed vysok\u00fdch proud\u016f induktivn\u00edm bezkontaktn\u00edm zp\u016fsobem.", 
-    "doc_en": "<p>None</p>", 
     "category": "", 
-    "root": "sensor/HCS01A"
+    "short_en": "", 
+    "image_small": ".jpgs", 
+    "image": "/doc/img/HCS01A_QRcode.jpg", 
+    "longname_cs": "Snímač vysokých proudů", 
+    "longname_en": "High Current Sensor", 
+    "mark": 50.0, 
+    "autor": "", 
+    "parameters": [], 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
+    "short_cs": "Snímání vysokých proudů induktivním bezkontaktním způsobem.", 
+    "doc_en": "<p>None</p>", 
+    "_id": "HCS01A", 
+    "root": "sensors/HCS01A", 
+    "author[]": [], 
+    "category[]": [
+        "sensor"
+    ]
 }
