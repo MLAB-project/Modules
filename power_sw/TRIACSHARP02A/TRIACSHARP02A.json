@@ -1,41 +1,41 @@
 {
     "wiki": "None", 
-    "status": "2", 
+    "status": 2, 
     "name": "TRIACSHARP02A", 
     "parameters": [
         {
             "name": "$size", 
             "description_cs": "", 
-            "description_en": "", 
-            "name_cs": "", 
             "value": "00x00", 
+            "name_cs": "", 
+            "description_en": "", 
             "name_en": "", 
             "unit": "mm"
         }, 
         {
             "name": "false", 
             "description_cs": "", 
-            "description_en": "", 
-            "name_cs": "Po\u010det vstup\u016f", 
             "value": "4", 
+            "name_cs": "Počet vstupů", 
+            "description_en": "", 
             "name_en": "Number of outputs", 
             "unit": "x"
         }, 
         {
             "name": "false", 
             "description_cs": "", 
-            "value": "8", 
-            "name_cs": "Maxim\u00e1ln\u00ed proud", 
             "description_en": "", 
+            "name_cs": "Maximální proud", 
+            "value": "8", 
             "name_en": "Maximal current", 
             "unit": "A"
         }, 
         {
             "name": "false", 
             "description_cs": "", 
-            "value": "250", 
-            "name_cs": "Maxim\u00e1ln\u00ed nap\u011bt\u00ed", 
             "description_en": "", 
+            "name_cs": "Maximální napětí", 
+            "value": "250", 
             "name_en": "Maximal voltage", 
             "unit": "V AC"
         }
@@ -43,13 +43,14 @@
     "short_en": "There are 8 solid state switching relays which can be digitally controlled by open collector. It can operate up to 8A on 250VAC.", 
     "image_small": "/doc/img/TRIACSHARP02A_top_big.jpgs", 
     "image": "/doc/img/TRIACSHARP02A_top_big.jpg", 
-    "longname_cs": "Polovodi\u010dov\u00fd releov\u00fd sp\u00edna\u010d", 
+    "longname_cs": "Polovodičový releový spínač", 
     "longname_en": "Semiconductor relay switch module", 
-    "mark": "50.0", 
+    "mark": 50.0, 
     "ust": "http://www.ust.cz/shop/product_info.php?products_id=246", 
     "doc_cs": "<p>None</p>", 
-    "short_cs": "Modul s 8 rel\u00e9 moduly do 8A na 250V AC. \u0158\u00edzen\u00fd digit\u00e1ln\u011b pomoc\u00ed otev\u0159en\u00e9ho kolektoru.", 
+    "short_cs": "Modul s 8 relé moduly do 8A na 250V AC. Řízený digitálně pomocí otevřeného kolektoru.", 
     "doc_en": "<p>None</p>", 
+    "_id": "TRIACSHARP02A", 
     "root": "power_sw/TRIACSHARP02A", 
     "author[]": [], 
     "category[]": [
