@@ -1,14 +1,22 @@
 {
-    "wiki": null, 
+    "wiki": "None", 
     "status": 4, 
     "name": "FOTX01A", 
+    "parameters": [], 
     "short_en": "", 
-    "image": "/doc/img/FOTX01A_QRcode.png", 
-    "longname_cs": "Optick\u00fd vl\u00e1knov\u00fd vys\u00edla\u010d", 
+    "image_small": ".jpgs", 
+    "image": "/doc/img/FOTX01A_QRcode.jpg", 
+    "longname_cs": "Optický vláknový vysílač", 
     "longname_en": "Fiber Optic transmitter", 
-    "ust": null, 
-    "doc_cs": null, 
-    "short_cs": "Vl\u00e1knov\u00fd vys\u00edla\u010d pro analogovou modulaci sign\u00e1lu p\u0159en\u00e1\u0161en\u00e9ho optick\u00fdm vl\u00e1knem.", 
-    "doc_en": null, 
-    "root": "comm_rf/FOTX01A"
+    "mark": 50.0, 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
+    "short_cs": "Vláknový vysílač pro analogovou modulaci signálu přenášeného optickým vláknem.", 
+    "doc_en": "<p>None</p>", 
+    "_id": "FOTX01A", 
+    "root": "RF/FOTX01A", 
+    "author[]": [], 
+    "category[]": [
+        "commrf"
+    ]
 }
