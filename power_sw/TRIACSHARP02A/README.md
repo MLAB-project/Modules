@@ -4,7 +4,7 @@
 # TRIACSHARP02A
 <!--- Emodule --->
 
-<!--- subtitle --->Semiconductor relay switch module <!--- Esubtitle --->
+<!--- subtitle --->Semiconductor relay switch module<!--- Esubtitle --->
 
 ![TRIACSHARP02A](/doc/img/TRIACSHARP02A_top_big.jpg)
 
