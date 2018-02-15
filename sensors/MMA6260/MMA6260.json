@@ -1,16 +1,24 @@
 {
-    "wiki": null, 
+    "wiki": "None", 
     "status": 4, 
     "name": "MMA6260", 
-    "short_en": "", 
-    "image": "/doc/img/MMA6260_QRcode.png", 
-    "longname_cs": "Dvouos\u00fd Analogov\u00fd akcelerometr", 
-    "longname_en": "Simple 2axis analog accelerometer sensor", 
-    "autor": "", 
-    "ust": null, 
-    "doc_cs": "<p>None</p>", 
-    "short_cs": "Modul dvouos\u00e9ho akcelerometru s analogov\u00fdm v\u00fdstupem a integrovan\u00fdm nap\u011b\u0165ov\u00fdm stabiliz\u00e1torem. Mo\u017enost p\u0159\u00edm\u00e9ho p\u0159ipojen\u00ed k mikroporocesoru.", 
-    "doc_en": "<p>None</p>", 
     "category": "", 
-    "root": "sensor/MMA6260"
+    "short_en": "", 
+    "image_small": ".jpgs", 
+    "image": "/doc/img/MMA6260_QRcode.jpg", 
+    "longname_cs": "Dvouosý Analogový akcelerometr", 
+    "longname_en": "Simple 2axis analog accelerometer sensor", 
+    "mark": 50.0, 
+    "autor": "", 
+    "parameters": [], 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
+    "short_cs": "Modul dvouosého akcelerometru s analogovým výstupem a integrovaným napěťovým stabilizátorem. Možnost přímého připojení k mikroporocesoru.", 
+    "doc_en": "<p>None</p>", 
+    "_id": "MMA6260", 
+    "root": "sensors/MMA6260", 
+    "author[]": [], 
+    "category[]": [
+        "sensor"
+    ]
 }
