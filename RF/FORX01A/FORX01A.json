@@ -1,14 +1,22 @@
 {
-    "wiki": null, 
+    "wiki": "None", 
     "status": 4, 
     "name": "FORX01A", 
+    "parameters": [], 
     "short_en": "", 
-    "image": "/doc/img/FORX01A_QRcode.png", 
-    "longname_cs": "Optick\u00fd vl\u00e1knov\u00fd p\u0159ij\u00edma\u010d", 
+    "image_small": ".jpgs", 
+    "image": "/doc/img/FORX01A_QRcode.jpg", 
+    "longname_cs": "Optický vláknový přijímač", 
     "longname_en": "Fiber Optic Receiver", 
-    "ust": null, 
-    "doc_cs": null, 
-    "short_cs": "Vl\u00e1knov\u00fd p\u0159ij\u00edma\u010d pro analogovou modulaci sign\u00e1lu p\u0159en\u00e1\u0161en\u00e9ho optick\u00fdm vl\u00e1knem.", 
-    "doc_en": null, 
-    "root": "comm_rf/FORX01A"
+    "mark": 50.0, 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
+    "short_cs": "Vláknový přijímač pro analogovou modulaci signálu přenášeného optickým vláknem.", 
+    "doc_en": "<p>None</p>", 
+    "_id": "FORX01A", 
+    "root": "RF/FORX01A", 
+    "author[]": [], 
+    "category[]": [
+        "commrf"
+    ]
 }
