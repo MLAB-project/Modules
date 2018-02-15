@@ -1,16 +1,24 @@
 {
-    "wiki": null, 
+    "wiki": "None", 
     "status": 4, 
     "name": "RGBHD01A", 
+    "category": "", 
     "short_en": "RGB Head consists of 3 pairs of Read, Green and Blue LEDs and of one fototransistor.", 
-    "image": "/doc/img/RGBHD01A_QRcode.png", 
+    "image_small": ".jpgs", 
+    "image": "/doc/img/RGBHD01A_QRcode.jpg", 
     "longname_cs": "Hlava RGB Tykadla", 
     "longname_en": "RGB Feeler Head", 
+    "mark": 50.0, 
     "autor": "", 
-    "ust": null, 
+    "parameters": [], 
+    "ust": "None", 
     "doc_cs": "<p>None</p>", 
-    "short_cs": "RGB hlava tykladla nese 3 p\u00e1ry LED diod (\u010derven\u00e1, zelen\u00e1 a modr\u00e1) a jeden fototranzitor.", 
+    "short_cs": "RGB hlava tykladla nese 3 páry LED diod (červená, zelená a modrá) a jeden fototranzitor.", 
     "doc_en": "<p>None</p>", 
-    "category": "", 
-    "root": "sensor/RGBFEE01A/RGBHD01A"
+    "_id": "RGBHD01A", 
+    "root": "sensors/RGBFEE01A/RGBHD01A", 
+    "author[]": [], 
+    "category[]": [
+        "sensor"
+    ]
 }
