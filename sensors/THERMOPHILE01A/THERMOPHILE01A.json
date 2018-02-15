@@ -1,16 +1,24 @@
 {
-    "wiki": null, 
+    "wiki": "None", 
     "status": 4, 
     "name": "THERMOPHILE01A", 
+    "category": "", 
     "short_en": "Contact less IR temperature sensor with SMBus interface.", 
-    "image": "/doc/img/THERMOPHILE01A_QRcode.png", 
+    "image_small": ".jpgs", 
+    "image": "/doc/img/THERMOPHILE01A_QRcode.jpg", 
     "longname_cs": "Infracerveny teplomer", 
     "longname_en": "Simple thermophile temperature sensor", 
+    "mark": 50.0, 
     "autor": "", 
-    "ust": null, 
+    "parameters": [], 
+    "ust": "None", 
     "doc_cs": "<p>None</p>", 
-    "short_cs": "Umoznuje bezkontaktni mereni teploty objektu. Pro mereni se vyuziva IR zareni z oblasti priblizne 2um. ", 
+    "short_cs": "Umoznuje bezkontaktni mereni teploty objektu. Pro mereni se vyuziva IR zareni z oblasti priblizne 2um.", 
     "doc_en": "<p>None</p>", 
-    "category": "", 
-    "root": "sensor/THERMOPHILE01A"
+    "_id": "THERMOPHILE01A", 
+    "root": "sensors/THERMOPHILE01A", 
+    "author[]": [], 
+    "category[]": [
+        "sensor"
+    ]
 }
