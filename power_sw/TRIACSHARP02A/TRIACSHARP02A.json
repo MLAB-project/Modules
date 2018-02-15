@@ -6,36 +6,36 @@
         {
             "name": "$size", 
             "description_cs": "", 
-            "description_en": "", 
-            "name_cs": "", 
             "value": "00x00", 
+            "name_cs": "", 
+            "description_en": "", 
             "name_en": "", 
             "unit": "mm"
         }, 
         {
             "name": "false", 
             "description_cs": "", 
-            "description_en": "", 
-            "name_cs": "Po\u010det vstup\u016f", 
             "value": "4", 
+            "name_cs": "Po\u010det vstup\u016f", 
+            "description_en": "", 
             "name_en": "Number of outputs", 
             "unit": "x"
         }, 
         {
             "name": "false", 
             "description_cs": "", 
-            "value": "8", 
-            "name_cs": "Maxim\u00e1ln\u00ed proud", 
             "description_en": "", 
+            "name_cs": "Maxim\u00e1ln\u00ed proud", 
+            "value": "8", 
             "name_en": "Maximal current", 
             "unit": "A"
         }, 
         {
             "name": "false", 
             "description_cs": "", 
-            "value": "250", 
-            "name_cs": "Maxim\u00e1ln\u00ed nap\u011bt\u00ed", 
             "description_en": "", 
+            "name_cs": "Maxim\u00e1ln\u00ed nap\u011bt\u00ed", 
+            "value": "250", 
             "name_en": "Maximal voltage", 
             "unit": "V AC"
         }
