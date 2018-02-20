@@ -11,6 +11,9 @@ prumer_hlavy=6;
 prumer_sroubu=3.3;
 
 //Matice - parametry
+vyska_matky=3;
+sirka_matky=6.7;
+
 prumer_matice=6; //hrany k hraně
 vyska_matice=3;  //vyska matice
 posuv_dorazu=0;  //pro moznost posuvu dorazu pro vsunutí matice

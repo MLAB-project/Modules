@@ -10,6 +10,7 @@ include <../configuration.scad>
 barva = "cyan";
 
 rotate([90,0,0])
+translate([0,(((vzdalenost_od_diry+vzdalenost_od_okraje)/2)-vzdalenost_od_diry)+((((vzdalenost_od_okraje+vzdalenost_od_diry)/2)-sirka_materialu)),0])
 {
     // podstavec drzaku
     //--------------------------------------------------------
@@ -20,7 +21,7 @@ rotate([90,0,0])
             lista (vzdalenost_der,pocet_der2,vzdalenost_od_okraje,vzdalenost_od_diry,vzdalenost_1,
                    vzdalenost_2, zapust,vyska_listy,tloustka_celicka,sirka_materialu,vyska_hlavy,
                    prumer_hlavy,prumer_sroubu,prumer_matice,vyska_matice,posuv_dorazu,
-                   matice_sila_materialu);
+                   matice_sila_materialu,vyska_matky,sirka_matky);
 
 
     //CELICKA - drzak LCD

@@ -12,5 +12,5 @@ ramecek_x = 72; // delka LCD zobrazovace bez PCB
 ramecek_y = 26; // vyska LCD zobrazovace bez PCB
 
 //vyska ramecku LCD - vyska LCD na PCB
-ramecek_vyska = 5; //vyska ramecku LCD bez PCB
+ramecek_vyska = 7; //vyska ramecku LCD bez PCB
 
