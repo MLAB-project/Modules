@@ -1,0 +1,30 @@
+\documentclass[12pt,a4paper,final,titlepage,twoside]{article}
+\usepackage{MLABdoc}
+\fancyhead[L]{{\huge RPS01A}}
+\fancyfoot[RE,LO]{\today\hspace{1pt}|  | mlab.cz}
+
+\includeonly{RPS01A.cs.title, RPS01A.cs.assembly}
+
+\begin{document}
+%vytvori uvodni stranku
+\include{RPS01A.cs.title}
+
+
+\section{Popis konstrukce}
+Modul obsahuje úchytné šroubky ve všech rozích v rozteči MLAB (10.16mm). Při potřebě šetřit místem je možné odstřihnutí části PCB se dvěma šrouby.
+\subsection{Zapojení}
+%naimportuje schema 
+\includepdf[angle=90]{../../hw/sch_pcb/RPS01A.pdf}
+
+\subsection{Odrušení}
+
+\subsection{Mechanická konstrukce}
+
+\section{Výroba a testování}
+
+% totot naimportuje cast, kde jsou osazováky a BOM tabulka
+\input{RPS01A.cs.assembly}
+\subsection{Oživení}
+Vzorový program je napsán v programu pyMLAB.
+
+\end{document}
