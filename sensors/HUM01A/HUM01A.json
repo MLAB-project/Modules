@@ -1,16 +1,24 @@
 {
-    "wiki": null, 
+    "wiki": "None", 
     "status": 4, 
     "name": "HUM01A", 
-    "short_en": "Humidity sensor based on HIH-5030/5031 chip. Analog output is ratiometric.", 
-    "image": "/doc/img/HUM01A_QRcode.png", 
-    "short_cs": "Čidlo k měření vlhkosti s ratiometrickým analogovým výstupem. ", 
-    "longname_en": "Simple analog humidity sensor", 
-    "autor": "", 
-    "ust": null, 
-    "doc_cs": "<p>None</p>", 
-    "longname_cs": "Analogové vlhkostní čidlo", 
-    "doc_en": "<p>None</p>", 
     "category": "", 
-    "root": "sensors/HUM01A"
+    "short_en": "Humidity sensor based on HIH-5030/5031 chip. Analog output is ratiometric.", 
+    "image_small": ".jpgs", 
+    "image": "/doc/img/HUM01A_QRcode.jpg", 
+    "longname_cs": "Analogové vlhkostní čidlo", 
+    "longname_en": "Simple analog humidity sensor", 
+    "mark": 50.0, 
+    "autor": "", 
+    "parameters": [], 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
+    "short_cs": "Čidlo k měření vlhkosti s ratiometrickým analogovým výstupem.", 
+    "doc_en": "<p>None</p>", 
+    "_id": "HUM01A", 
+    "root": "sensors/HUM01A", 
+    "author[]": [], 
+    "category[]": [
+        "sensor"
+    ]
 }
