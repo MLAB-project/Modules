@@ -1,16 +1,24 @@
 {
-    "wiki": null, 
+    "wiki": "None", 
     "status": 4, 
     "name": "R1S01A", 
-    "short_en": "", 
-    "image": "/doc/img/R1S01A_QRcode.png", 
-    "short_cs": "Čidlo obsahuje pouze reflexní optron s odporovým trimrem a slouží k rozlišování tmavého a světlého povrchu. Dá se použít jak pro detekci čáry pro čárového robota tak i pro snímání otáčení pohonných kol.", 
-    "longname_en": "Simple IR reflexive sensor.", 
-    "autor": "", 
-    "ust": null, 
-    "doc_cs": "<p>None</p>", 
-    "longname_cs": "Jednoduche reflexivni cidlo.", 
-    "doc_en": "<p>None</p>", 
     "category": "", 
-    "root": "sensors/R1S01A"
+    "short_en": "", 
+    "image_small": "/doc/img/R1S01A_QRcode.jpgs", 
+    "image": "/doc/img/R1S01A_QRcode.png", 
+    "longname_cs": "Jednoduche reflexivni cidlo.", 
+    "longname_en": "Simple IR reflexive sensor.", 
+    "mark": 50.0, 
+    "autor": "", 
+    "parameters": [], 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
+    "short_cs": "Čidlo obsahuje pouze reflexní optron s odporovým trimrem a slouží k rozlišování tmavého a světlého povrchu. Dá se použít jak pro detekci čáry pro čárového robota tak i pro snímání otáčení pohonných kol.", 
+    "doc_en": "<p>None</p>", 
+    "_id": "R1S01A", 
+    "root": "sensors/R1S01A", 
+    "author[]": [], 
+    "category[]": [
+        "sensor"
+    ]
 }
