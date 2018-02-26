@@ -4,13 +4,13 @@
     "name": "G-metr", 
     "short_en": "", 
     "image": "/doc/img/G-metr_QRcode.png", 
-    "longname_cs": "Jednoos\u00fd Analogov\u00fd akcelerometr", 
+    "short_cs": "Modul alcelerometru s analogovým výstupem napájení 5V. Možnost přímého připojení k mikroporocesoru.", 
     "longname_en": "Simple 1axis analog accelerometer sensor", 
     "autor": "", 
     "ust": null, 
     "doc_cs": "<p>None</p>", 
-    "short_cs": "Modul alcelerometru s analogov\u00fdm v\u00fdstupem nap\u00e1jen\u00ed 5V. Mo\u017enost p\u0159\u00edm\u00e9ho p\u0159ipojen\u00ed k mikroporocesoru.", 
+    "longname_cs": "Jednoosý Analogový akcelerometr", 
     "doc_en": "<p>None</p>", 
     "category": "", 
-    "root": "sensor/G-metr"
+    "root": "sensors/G-metr"
 }

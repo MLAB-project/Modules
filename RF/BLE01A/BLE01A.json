@@ -4,11 +4,11 @@
     "name": "BLE01A", 
     "short_en": "This module can add wireless comunication capability to your project via Bluetooth Low Energy protocol. This module uses NRF8001 chip, wich comunicates with the host controler via SPI the interface. ", 
     "image": "/doc/img/BLE01A_QRcode.png", 
-    "longname_cs": "Modul s Bluetooth Low Energy \u010dipem Nordic Semiconductor NRF8001", 
+    "short_cs": "", 
     "longname_en": "Module with the NRF8001 Bluetooth Low Energy chip from Nordic Semiconductor", 
     "ust": null, 
     "doc_cs": null, 
-    "short_cs": "", 
+    "longname_cs": "Modul s Bluetooth Low Energy čipem Nordic Semiconductor NRF8001", 
     "doc_en": null, 
-    "root": "comm_rf/BLE01A"
+    "root": "RF/BLE01A"
 }

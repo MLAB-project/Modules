@@ -4,11 +4,11 @@
     "name": "ATtinySO801B", 
     "short_en": " The processor module for TAMEL ATtiny in SO8 package consists of processor, headers, programming header and RESET push button. ", 
     "image": "/doc/img/ATtinySO801B_QRcode.png", 
-    "longname_cs": " Modul pro procesor ATtiny v pouzdru SO8", 
+    "short_cs": " Standardní modul pro nejmenší procesory ATMEL rodiny ATtiny. Obsahuje jenom procesor, připojovací hřebínky, programovací konektor a tlačítko RESET.", 
     "longname_en": " Module for ATtiny in SO8 package ", 
     "ust": null, 
     "doc_cs": null, 
-    "short_cs": " Standardn\u00ed modul pro nejmen\u0161\u00ed procesory ATMEL rodiny ATtiny. Obsahuje jenom procesor, p\u0159ipojovac\u00ed h\u0159eb\u00ednky, programovac\u00ed konektor a tla\u010d\u00edtko RESET.", 
+    "longname_cs": " Modul pro procesor ATtiny v pouzdru SO8", 
     "doc_en": null, 
-    "root": "avr/ATtinySO801B"
+    "root": "MCU_CPU/AVR/ATtinySO801B"
 }
