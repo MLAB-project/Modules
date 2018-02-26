@@ -2,15 +2,23 @@
     "wiki": "None", 
     "status": 1, 
     "name": "HBSTEP02A", 
+    "category": "", 
     "short_en": "Stepper motor driver", 
-    "image": "/doc/img/HBSTEP02A_QRcode.png", 
-    "short_cs": "Budič krokových motorů s integrovaným obvodem TMC5130. Řízený pomocí inkrementárních, anologových, PWM, STEP/DIR nebo UART rozhraní.", 
+    "image_small": ".jpgs", 
+    "image": "/doc/img/HBSTEP02A_QRcode.jpg", 
+    "longname_cs": "Budič krokových motorů", 
     "longname_en": "None", 
+    "mark": 50.0, 
     "autor": "", 
+    "parameters": [], 
     "ust": "", 
     "doc_cs": "<p>None</p>", 
-    "longname_cs": "udič krokových motorů", 
+    "short_cs": "Budič krokových motorů s integrovaným obvodem TMC5130. Řízený pomocí inkrementárních, anologových, PWM, STEP/DIR nebo UART rozhraní.", 
     "doc_en": "<p>None</p>", 
-    "category": "", 
-    "root": "motor_drivers/HBSTEP02A"
+    "_id": "HBSTEP02A", 
+    "root": "motor_drivers/HBSTEP02A", 
+    "author[]": [], 
+    "category[]": [
+        "motor_drivers"
+    ]
 }
