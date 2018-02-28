@@ -1,0 +1,30 @@
+{
+    "short_en": "", 
+    "status": 1, 
+    "name": "LIGHTNING01A", 
+    "parameters": [
+        {
+            "name": "$io", 
+            "description_cs": "", 
+            "description_en": "", 
+            "name_cs": "", 
+            "value": "AS3935", 
+            "name_en": "", 
+            "unit": ""
+        }
+    ], 
+    "wiki": "", 
+    "longname_en": "Lightening detector with I2C interface", 
+    "image": "/doc/img/LIGHTNING01A_QRcode.jpg", 
+    "short_cs": "", 
+    "image_small": ".jpgs", 
+    "mark": 0.0, 
+    "ust": "", 
+    "doc_cs": "", 
+    "longname_cs": "Detektor blesku", 
+    "doc_en": "", 
+    "_id": "LIGHTNING01A", 
+    "root": "sensor/LIGHTNING01A", 
+    "author[]": [], 
+    "category[]": []
+}
