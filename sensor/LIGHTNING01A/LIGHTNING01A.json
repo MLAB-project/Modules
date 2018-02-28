@@ -15,9 +15,9 @@
     ], 
     "wiki": "", 
     "longname_en": "Lightening detector with I2C interface", 
-    "image": "/doc/img/LIGHTNING01A_QRcode.jpg", 
+    "image": "/doc/img/LIGHTNING01A_QRcode.png", 
     "short_cs": "", 
-    "image_small": ".jpgs", 
+    "image_small": "/doc/img/LIGHTNING01A_QRcode.jpgs", 
     "mark": 0.0, 
     "ust": "", 
     "doc_cs": "", 
@@ -25,6 +25,10 @@
     "doc_en": "", 
     "_id": "LIGHTNING01A", 
     "root": "sensor/LIGHTNING01A", 
-    "author[]": [], 
-    "category[]": []
+    "author[]": [
+        "roman-dvorak"
+    ], 
+    "category[]": [
+        "sensor"
+    ]
 }
