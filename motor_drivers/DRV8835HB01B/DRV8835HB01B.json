@@ -4,11 +4,11 @@
     "name": "DRV8835HB01B", 
     "short_en": "H-bridge-based ICs DRV8835HB. Allows you to control two DC motors in the range voltage 2V to 11V and maximum current of 1.5 A on the engine, or parallel, where it is then possible to control the 3A engine. Or the module can be used to control a stepper motor. ", 
     "image": "/doc/img/DRV8835HB01B_QRcode.png", 
-    "longname_cs": "2x H-m\u016fstek 2V - 11V", 
+    "short_cs": "H-můstek založený na IO DRV8835HB. Umožňuje řídit dva stejnosměrné motory v rozmětí napětí 2V až 11V a maximálním proudem na motor 1,5A, nebo paralelní zapojení, kde je pak možné řídit 3A motor. Nebo je možné modul využít pro řízení jednoho krokového motoru. Nahrazuje DRV8835HB01A.", 
     "longname_en": "2x H-bridge 2V - 11V", 
     "ust": "\n\r\n\r\n", 
     "doc_cs": null, 
-    "short_cs": "H-m\u016fstek zalo\u017een\u00fd na IO DRV8835HB. Umo\u017e\u0148uje \u0159\u00eddit dva stejnosm\u011brn\u00e9 motory v rozm\u011bt\u00ed nap\u011bt\u00ed 2V a\u017e 11V a maxim\u00e1ln\u00edm proudem na motor 1,5A, nebo paraleln\u00ed zapojen\u00ed, kde je pak mo\u017en\u00e9 \u0159\u00eddit 3A motor. Nebo je mo\u017en\u00e9 modul vyu\u017e\u00edt pro \u0159\u00edzen\u00ed jednoho krokov\u00e9ho motoru. Nahrazuje DRV8835HB01A.", 
+    "longname_cs": "2x H-můstek 2V - 11V", 
     "doc_en": null, 
-    "root": "h_bridge/DRV8835HB01B"
+    "root": "motor_drivers/DRV8835HB01B"
 }

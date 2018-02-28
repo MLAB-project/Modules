@@ -4,11 +4,11 @@
     "name": "ATprogISPUSB01A", 
     "short_en": " The module allows ISP programming of AVR uControllers.", 
     "image": "/doc/img/ATprogISPUSB01A_QRcode.png", 
-    "longname_cs": " ISP program\u00e1tor procesor\u016f AVR ", 
+    "short_cs": " Programátor umožňuje systémové (ISP) programování mikropočítačů AVR firmy Atmel.", 
     "longname_en": " ISP AVR programmer ", 
     "ust": null, 
     "doc_cs": null, 
-    "short_cs": " Program\u00e1tor umo\u017e\u0148uje syst\u00e9mov\u00e9 (ISP) programov\u00e1n\u00ed mikropo\u010d\u00edta\u010d\u016f AVR firmy Atmel.", 
+    "longname_cs": " ISP programátor procesorů AVR ", 
     "doc_en": null, 
-    "root": "avr/ATprogISPUSB01A"
+    "root": "MCU_CPU/AVR/ATprogISPUSB01A"
 }

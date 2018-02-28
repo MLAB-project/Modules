@@ -1,16 +1,41 @@
 {
     "wiki": "None", 
-    "status": "2", 
+    "status": 2, 
     "name": "USBI2C01A", 
+    "parameters": [
+        {
+            "name": "$io", 
+            "description_cs": "", 
+            "description_en": "", 
+            "name_cs": "", 
+            "value": "CP2112", 
+            "name_en": "", 
+            "unit": ""
+        }, 
+        {
+            "name": "$size", 
+            "description_cs": "3x4 MLAB", 
+            "description_en": "3x4 MLAB", 
+            "name_cs": "", 
+            "value": "", 
+            "name_en": "", 
+            "unit": ""
+        }
+    ], 
     "short_en": "Convert interface I2C to USB standard, it acts as a HID device, so you do not need non-standard drivers. It also allows participation in the I2C system bus.", 
+    "image_small": "/doc/img/USBI2C01A_top_big.jpgs", 
     "image": "/doc/img/USBI2C01A_top_big.jpg", 
-    "longname_cs": "P\u0159evodn\u00edk z USB na I\u00b2C master", 
-    "longname_en": "USB slave to I\u00b2C master adapter", 
-    "mark": "50.0", 
+    "longname_cs": "Převodník z USB na I²C master", 
+    "longname_en": "USB slave to I²C master adapter", 
+    "mark": 50.0, 
     "ust": "http://www.ust.cz/shop/product_info.php?products_id=243", 
     "doc_cs": "<p>None</p>", 
-    "short_cs": "Konvertuje rozhran\u00ed I2C na standardn\u00ed USB, chov\u00e1 se jako HID za\u0159\u00edzen\u00ed, tak\u017ee nejsou pot\u0159eba nestandardn\u00ed drivery. Umo\u017e\u0148uje i zapojen\u00ed do syst\u00e9mov\u00e9 zb\u011brnice I2C.", 
+    "short_cs": "Konvertuje rozhraní I2C na standardní USB, chová se jako HID zařízení, takže nejsou potřeba nestandardní drivery. Umožňuje i zapojení do systémové zběrnice I2C.", 
     "doc_en": "<p>None</p>", 
+    "_id": "USBI2C01A", 
     "root": "comm_serial/USBI2C01A", 
-    "category[]": "commserial"
+    "author[]": [], 
+    "category[]": [
+        "commserial"
+    ]
 }

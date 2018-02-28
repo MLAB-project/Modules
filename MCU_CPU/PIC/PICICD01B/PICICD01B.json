@@ -4,11 +4,11 @@
     "name": "PICICD01B", 
     "short_en": "None", 
     "image": "/doc/img/PICICD01B_QRcode.png", 
-    "longname_cs": "seriov\u00fd program\u00e1tor", 
+    "short_cs": "Modul PICICD je jednoduchý programátor a ICD pro procesory PIC firmy MICROCHIP. Modul je kompatibilní s MPLAB™ ICD firmy MICROCHIP a je jej také možno použít s překladačem PCW firmy CCS. Umožňuje programování zapájených procesorů PIC, krokování programů, nastavování BreakPointu a čtení a zápis z a do vnitřních pamětí laděného procesoru PIC", 
     "longname_en": "None", 
     "ust": null, 
     "doc_cs": null, 
-    "short_cs": "Modul PICICD je jednoduch\u00fd program\u00e1tor a ICD pro procesory PIC firmy MICROCHIP. Modul je kompatibiln\u00ed s MPLAB\u2122 ICD firmy MICROCHIP a je jej tak\u00e9 mo\u017eno pou\u017e\u00edt s p\u0159eklada\u010dem PCW firmy CCS. Umo\u017e\u0148uje programov\u00e1n\u00ed zap\u00e1jen\u00fdch procesor\u016f PIC, krokov\u00e1n\u00ed program\u016f, nastavov\u00e1n\u00ed BreakPointu a \u010dten\u00ed a z\u00e1pis z a do vnit\u0159n\u00edch pam\u011bt\u00ed lad\u011bn\u00e9ho procesoru PIC", 
+    "longname_cs": "seriový programátor", 
     "doc_en": null, 
-    "root": "pic/PICICD01B"
+    "root": "MCU_CPU/PIC/PICICD01B"
 }

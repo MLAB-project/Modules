@@ -1,14 +1,22 @@
 {
-    "wiki": null, 
+    "wiki": "None", 
     "status": 4, 
     "name": "SPIDIFF01A", 
-    "short_en": "Allows middle range SPI communication in harsh environment. ", 
+    "parameters": [], 
+    "short_en": "Allows middle range SPI communication in harsh environment.", 
+    "image_small": "/doc/img/SPIDIFF01A_QRcode.jpgs", 
     "image": "/doc/img/SPIDIFF01A_QRcode.png", 
-    "longname_cs": "Diferen\u010dn\u00ed SPI transceiver", 
+    "longname_cs": "Diferenční SPI transceiver", 
     "longname_en": "Differential SPI transceiver", 
-    "ust": "\n\r\n", 
-    "doc_cs": null, 
-    "short_cs": "Dovoluje p\u0159enos dat po rozhran\u00ed SPI na del\u0161\u00ed vzd\u00e1lenosti i v nep\u0159\u00edzniv\u00fdch podm\u00ednk\u00e1ch.", 
-    "doc_en": null, 
-    "root": "translator/SPIDIFF01A"
+    "mark": 50.0, 
+    "ust": "", 
+    "doc_cs": "<p>None</p>", 
+    "short_cs": "Dovoluje přenos dat po rozhraní SPI na delší vzdálenosti i v nepříznivých podmínkách.", 
+    "doc_en": "<p>None</p>", 
+    "_id": "SPIDIFF01A", 
+    "root": "translators/SPIDIFF01A", 
+    "author[]": [], 
+    "category[]": [
+        "translators"
+    ]
 }
