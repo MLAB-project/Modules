@@ -1,0 +1,34 @@
+{
+    "short_en": "Lightening sensor module based on AS3935 IO", 
+    "status": 0, 
+    "name": "LIGHTNING01A", 
+    "parameters": [
+        {
+            "name": "$io", 
+            "description_cs": "", 
+            "description_en": "", 
+            "name_cs": "", 
+            "value": "AS3935", 
+            "name_en": "", 
+            "unit": ""
+        }
+    ], 
+    "wiki": "", 
+    "longname_en": "Lightening sensor", 
+    "image": "/doc/img/LIGHTNING01A_QRcode.jpg", 
+    "short_cs": "Detektor blesků založený na integrovaném obvodu AS3935.", 
+    "image_small": ".jpgs", 
+    "mark": 45.0, 
+    "ust": "", 
+    "doc_cs": "", 
+    "longname_cs": "Detektor blesků", 
+    "doc_en": "", 
+    "_id": "LIGHTNING01A", 
+    "root": "sensors/LIGHTNING01A", 
+    "author[]": [
+        "roman-dvorak"
+    ], 
+    "category[]": [
+        "sensor"
+    ]
+}
