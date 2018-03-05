@@ -1,5 +1,5 @@
 {
-    "short_en": "Lightening sensor module based on AS3935 IO", 
+    "short_en": "Lightning sensor module based on AS3935 Franklin Lightning Sensor IO. Sensor can be connected via I2C or SPI bus.", 
     "status": 1, 
     "name": "LIGHTNING01A", 
     "parameters": [
@@ -13,15 +13,15 @@
             "unit": ""
         }
     ], 
-    "longname_en": "Lightening sensor", 
+    "longname_en": "Digital lightning sensor", 
     "wiki": "", 
-    "short_cs": "Detektor blesků založený na integrovaném obvodu AS3935.", 
+    "short_cs": "Detektor blesků založený na integrovaném obvodu AS3935. Senzor může být připojen přes I2C nebo SPI.", 
     "image_small": "/doc/img/LIGHTNING01A_top.jpgs", 
     "mark": 45.0, 
     "ust": "", 
     "doc_cs": "", 
     "image": "/doc/img/LIGHTNING01A_top.jpg", 
-    "longname_cs": "Detektor blesků", 
+    "longname_cs": "Digitální detektor blesků.", 
     "doc_en": "", 
     "_id": "LIGHTNING01A", 
     "root": "sensors/LIGHTNING01A", 
