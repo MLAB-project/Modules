@@ -1,4 +1,4 @@
-update=Pá 2. březen 2018, 00:26:50 CET
+update=Po 5. březen 2018, 17:39:06 CET
 version=1
 last_client=kicad
 [general]
