@@ -1,15 +1,15 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Device:CP_Small
+# Device_CP_Small
 #
-DEF Device:CP_Small C 0 10 N N 1 F N
+DEF Device_CP_Small C 0 10 N N 1 F N
 F0 "C" 10 70 50 H V L CNN
-F1 "Device:CP_Small" 10 -80 50 H V L CNN
+F1 "Device_CP_Small" 10 -80 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
- CP_*
+ *:CP_*
 $ENDFPLIST
 DRAW
 S -60 -12 60 -27 0 1 0 F
@@ -21,15 +21,15 @@ X ~ 2 0 -100 73 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:C_Small
+# Device_C_Small
 #
-DEF Device:C_Small C 0 10 N N 1 F N
+DEF Device_C_Small C 0 10 N N 1 F N
 F0 "C" 10 70 50 H V L CNN
-F1 "Device:C_Small" 10 -80 50 H V L CNN
+F1 "Device_C_Small" 10 -80 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
- C_*
+ *:C_*
 $ENDFPLIST
 DRAW
 P 2 0 1 13 -60 -20 60 -20 N
@@ -39,11 +39,11 @@ X ~ 2 0 -100 80 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:D_Small
+# Device_D_Small
 #
-DEF Device:D_Small D 0 10 N N 1 F N
+DEF Device_D_Small D 0 10 N N 1 F N
 F0 "D" -50 80 50 H V L CNN
-F1 "Device:D_Small" -150 -80 50 H V L CNN
+F1 "Device_D_Small" -150 -80 50 H V L CNN
 F2 "" 0 0 50 V I C CNN
 F3 "" 0 0 50 V I C CNN
 $FPLIST
@@ -51,7 +51,7 @@ $FPLIST
  *SingleDiode
  *_Diode_*
  *SingleDiode*
- D_*
+ *:D_*
 $ENDFPLIST
 DRAW
 P 2 0 1 0 -30 -40 -30 40 N
@@ -62,18 +62,18 @@ X A 2 100 0 70 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:L_Small
+# Device_L_Small
 #
-DEF Device:L_Small L 0 10 N N 1 F N
+DEF Device_L_Small L 0 10 N N 1 F N
 F0 "L" 30 40 50 H V L CNN
-F1 "Device:L_Small" 30 -40 50 H V L CNN
+F1 "Device_L_Small" 30 -40 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
  Choke_*
  *Coil*
  Inductor_*
- L_*
+ *:L_*
 $ENDFPLIST
 DRAW
 A 0 -60 20 -899 899 0 1 0 N 0 -80 0 -40
@@ -85,15 +85,15 @@ X ~ 2 0 -100 20 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:R_Small
+# Device_R_Small
 #
-DEF Device:R_Small R 0 10 N N 1 F N
+DEF Device_R_Small R 0 10 N N 1 F N
 F0 "R" 30 20 50 H V L CNN
-F1 "Device:R_Small" 30 -40 50 H V L CNN
+F1 "Device_R_Small" 30 -40 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
- R_*
+ *:R_*
 $ENDFPLIST
 DRAW
 S -30 70 30 -70 0 1 8 N
@@ -102,11 +102,11 @@ X ~ 2 0 -100 30 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# MLAB_IO:AS3935
+# MLAB_IO_AS3935
 #
-DEF MLAB_IO:AS3935 U 0 40 Y Y 1 F N
+DEF MLAB_IO_AS3935 U 0 40 Y Y 1 F N
 F0 "U" 200 600 50 H V L CNN
-F1 "MLAB_IO:AS3935" 200 500 50 H V L CNN
+F1 "MLAB_IO_AS3935" 200 500 50 H V L CNN
 F2 "Mlab_IO:MLPQ-16" 550 700 50 H I C CNN
 F3 "" -100 0 50 H I C CNN
 $FPLIST
@@ -134,11 +134,11 @@ X SI 9 500 -300 100 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# MLAB_Jumpers:JUMP2_2x1
+# MLAB_Jumpers_JUMP2_2x1
 #
-DEF ~MLAB_Jumpers:JUMP2_2x1 J 0 40 Y N 1 F N
+DEF ~MLAB_Jumpers_JUMP2_2x1 J 0 40 Y N 1 F N
 F0 "J" -300 50 50 H V C CNN
-F1 "MLAB_Jumpers:JUMP2_2x1" 200 -100 40 H I C CNN
+F1 "MLAB_Jumpers_JUMP2_2x1" 200 -100 40 H I C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -147,11 +147,11 @@ X 1 2 -350 0 300 R 60 60 1 1 P I
 ENDDRAW
 ENDDEF
 #
-# MLAB_Jumpers:JUMP_2x1
+# MLAB_Jumpers_JUMP_2x1
 #
-DEF ~MLAB_Jumpers:JUMP_2x1 J 0 40 Y N 1 F N
+DEF ~MLAB_Jumpers_JUMP_2x1 J 0 40 Y N 1 F N
 F0 "J" 100 50 50 H V C CNN
-F1 "MLAB_Jumpers:JUMP_2x1" -50 0 40 V I C CNN
+F1 "MLAB_Jumpers_JUMP_2x1" -50 0 40 V I C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -160,11 +160,11 @@ X 1 2 150 0 300 L 60 60 1 1 P NI
 ENDDRAW
 ENDDEF
 #
-# MLAB_Jumpers:JUMP_3X2
+# MLAB_Jumpers_JUMP_3X2
 #
-DEF ~MLAB_Jumpers:JUMP_3X2 J 0 40 Y N 1 F N
+DEF ~MLAB_Jumpers_JUMP_3X2 J 0 40 Y N 1 F N
 F0 "J" -350 200 50 H V C CNN
-F1 "MLAB_Jumpers:JUMP_3X2" 0 50 40 V I C CNN
+F1 "MLAB_Jumpers_JUMP_3X2" 0 50 40 V I C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -177,11 +177,11 @@ X 6 6 -400 -50 300 R 60 60 1 1 P NI
 ENDDRAW
 ENDDEF
 #
-# MLAB_MECHANICAL:HOLE
+# MLAB_MECHANICAL_HOLE
 #
-DEF MLAB_MECHANICAL:HOLE M 0 40 N N 1 F N
+DEF MLAB_MECHANICAL_HOLE M 0 40 N N 1 F N
 F0 "M" 0 100 60 H V C CNN
-F1 "MLAB_MECHANICAL:HOLE" 0 -100 60 H V C CNN
+F1 "MLAB_MECHANICAL_HOLE" 0 -100 60 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -190,11 +190,11 @@ X ~ 1 50 0 25 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# power:GND
+# power_GND
 #
-DEF power:GND #PWR 0 0 Y Y 1 F P
+DEF power_GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power:GND" 0 -150 50 H V C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -203,11 +203,11 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# power:VCC
+# power_VCC
 #
-DEF power:VCC #PWR 0 0 Y Y 1 F P
+DEF power_VCC #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:VCC" 0 150 50 H V C CNN
+F1 "power_VCC" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW

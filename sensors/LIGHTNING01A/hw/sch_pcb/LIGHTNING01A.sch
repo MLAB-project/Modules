@@ -145,7 +145,7 @@ L Device:CP_Small C5
 U 1 1 55623093
 P 9350 1200
 F 0 "C5" H 9350 1300 50  0000 L CNN
-F 1 "C/U" H 9350 1100 50  0000 L CNN
+F 1 "10uF/10V" V 9250 1000 50  0000 L CNN
 F 2 "Mlab_R:SMD-0805" H 9350 1200 60  0001 C CNN
 F 3 "" H 9350 1200 60  0000 C CNN
 	1    9350 1200
@@ -334,8 +334,6 @@ F 3 "~" H 3900 4100 50  0001 C CNN
 	1    3900 4100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4500 3450 4300 3450
 $Comp
 L power:VCC #PWR01
 U 1 1 5A97FB3A
@@ -351,14 +349,6 @@ Wire Wire Line
 	3900 4000 3900 3850
 Wire Wire Line
 	3900 3850 4850 3850
-Connection ~ 4300 3450
-Connection ~ 4300 3650
-Connection ~ 4050 3450
-Connection ~ 4050 3650
-Wire Wire Line
-	4050 3650 4300 3650
-Wire Wire Line
-	4050 3450 4300 3450
 $Comp
 L power:VCC #PWR08
 U 1 1 5A98496D
@@ -530,7 +520,6 @@ Wire Wire Line
 Connection ~ 6550 3450
 Wire Wire Line
 	6850 2950 6850 2750
-Connection ~ 6850 2950
 $Comp
 L Device:R_Small R8
 U 1 1 5A9A8AE1
@@ -634,7 +623,6 @@ F 3 "" H 3600 3850 60  0000 C CNN
 	1    3600 3850
 	1    0    0    -1  
 $EndComp
-Connection ~ 3900 3850
 $Comp
 L MLAB_Jumpers:JUMP_3X2 J10
 U 1 1 5A9C810D
@@ -668,8 +656,6 @@ Wire Wire Line
 	4500 3550 4500 3450
 Wire Wire Line
 	4500 3550 4850 3550
-Wire Wire Line
-	4300 3650 4850 3650
 Wire Wire Line
 	5250 2850 4600 2850
 Wire Wire Line
@@ -746,7 +732,6 @@ F 3 "" H 7850 3750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7850 3650 7850 3750
-Connection ~ 7850 3750
 $Comp
 L Device:C_Small C1
 U 1 1 5A99B02D
@@ -758,16 +743,6 @@ F 3 "~" H 3750 3550 50  0001 C CNN
 	1    3750 3550
 	1    0    0    -1  
 $EndComp
-Connection ~ 3750 3450
-Wire Wire Line
-	3750 3450 3600 3450
-Connection ~ 3750 3650
-Wire Wire Line
-	3750 3650 3600 3650
-Wire Wire Line
-	3750 3450 4050 3450
-Wire Wire Line
-	3750 3650 4050 3650
 $Comp
 L Device:R_Small R10
 U 1 1 5A9A7502
@@ -818,13 +793,36 @@ F 3 "" H 3400 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3600 3450 3400 3450
-Wire Wire Line
 	3400 3450 3400 3500
-Connection ~ 3600 3450
 Wire Wire Line
 	3250 3850 3100 3850
 Wire Wire Line
 	4600 2850 4400 2850
 Connection ~ 4600 2850
+Wire Wire Line
+	3400 3450 3600 3450
+Wire Wire Line
+	3600 3650 3750 3650
+Connection ~ 3750 3450
+Wire Wire Line
+	3750 3450 4050 3450
+Connection ~ 3750 3650
+Wire Wire Line
+	3750 3650 4050 3650
+Connection ~ 4050 3450
+Wire Wire Line
+	4050 3450 4300 3450
+Connection ~ 4050 3650
+Wire Wire Line
+	4050 3650 4300 3650
+Connection ~ 4300 3450
+Wire Wire Line
+	4300 3450 4500 3450
+Connection ~ 4300 3650
+Wire Wire Line
+	4300 3650 4850 3650
+Connection ~ 3600 3450
+Wire Wire Line
+	3600 3450 3750 3450
+Connection ~ 6850 2950
 $EndSCHEMATC
