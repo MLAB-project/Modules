@@ -1,14 +1,22 @@
 {
-    "wiki": null, 
+    "wiki": "None", 
     "status": 4, 
     "name": "ADCmonoPPI01A", 
+    "parameters": [], 
     "short_en": "Mono high speed analog to digital converter. With parallel data output.", 
+    "image_small": "/doc/img/ADCmonoPPI01A_QRcode.jpgs", 
     "image": "/doc/img/ADCmonoPPI01A_QRcode.png", 
     "short_cs": "Převodník s jedním analogovým vstupem a paralelním digitálním výstupem.", 
     "longname_en": "Single input ADC", 
-    "ust": null, 
+    "mark": 0.0, 
+    "ust": "None", 
     "doc_cs": "<p>None</p>", 
     "longname_cs": "Rychlý analogově digitální převodník", 
     "doc_en": "<p>None</p>", 
-    "root": "ADC/ADCmonoPPI01A"
+    "_id": "ADCmonoPPI01A", 
+    "root": "ADC/ADCmonoPPI01A", 
+    "author[]": [], 
+    "category[]": [
+        "adconventers"
+    ]
 }
