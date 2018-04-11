@@ -1,14 +1,22 @@
 {
-    "wiki": null, 
+    "wiki": "None", 
     "status": 4, 
     "name": "ATmega801B", 
-    "short_en": " Processor module for ATMEL ATmega8 in TQFP32 package. The module contains processor and standard crystal or clock crystal can be used. There is RESET push button and ATMEL ISP 6 PIN connector.", 
+    "parameters": [], 
+    "short_en": "Processor module for ATMEL ATmega8 in TQFP32 package. The module contains processor and standard crystal or clock crystal can be used. There is RESET push button and ATMEL ISP 6 PIN connector.", 
+    "image_small": "/doc/img/ATmega801B_QRcode.jpgs", 
     "image": "/doc/img/ATmega801B_QRcode.png", 
-    "short_cs": " Procesorový modul pro práci s procesorem ATMEL Atmega8 v pouzdru TQFP32. Modul obsahuje procesor a může být osazen krystalem standardní velikosti, nebo hodinkovým krystalem 32768Hz. Modul je dále vybaven tlačítkem RESET a programovacím konektorem ATMEL ISP 6 PIN.", 
-    "longname_en": " Module for ATmega8 in TQFP32 ", 
-    "ust": "\nhttp://www.ust.cz/shop/product_info.php?products_id=114\r\n\r\n", 
-    "doc_cs": null, 
-    "longname_cs": " Modul pro ATmega8 v pouzdru TQFP32 ", 
-    "doc_en": null, 
-    "root": "MCU_CPU/AVR/ATmega801B"
+    "short_cs": "Procesorový modul pro práci s procesorem ATMEL Atmega8 v pouzdru TQFP32. Modul obsahuje procesor a může být osazen krystalem standardní velikosti, nebo hodinkovým krystalem 32768Hz. Modul je dále vybaven tlačítkem RESET a programovacím konektorem ATMEL ISP 6 PIN.", 
+    "longname_en": "Module for ATmega8 in TQFP32", 
+    "mark": 0.0, 
+    "ust": "http://www.ust.cz/shop/product_info.php?products_id=114", 
+    "doc_cs": "<p>None</p>", 
+    "longname_cs": "Modul pro ATmega8 v pouzdru TQFP32", 
+    "doc_en": "<p>None</p>", 
+    "_id": "ATmega801B", 
+    "root": "MCU_CPU/AVR/ATmega801B", 
+    "author[]": [], 
+    "category[]": [
+        "avr"
+    ]
 }
