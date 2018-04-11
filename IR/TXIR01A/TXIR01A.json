@@ -1,14 +1,22 @@
 {
-    "wiki": null, 
+    "wiki": "None", 
     "status": 4, 
     "name": "TXIR01A", 
-    "short_en": " The module is useful for quick implementation SPI IR transmitter", 
+    "parameters": [], 
+    "short_en": "The module is useful for quick implementation SPI IR transmitter", 
+    "image_small": "/doc/img/TXIR01A_QRcode.jpgs", 
     "image": "/doc/img/TXIR01A_QRcode.png", 
-    "short_cs": " Modul je vhodny pro seriovy IR prenos.", 
-    "longname_en": " IR transmitter module ", 
-    "ust": null, 
+    "short_cs": "Modul je vhodny pro seriovy IR prenos.", 
+    "longname_en": "IR transmitter module", 
+    "mark": 0.0, 
+    "ust": "None", 
     "doc_cs": "<p>teplotn&iacute; senzor:</p>\n<table style=\"width: 100%; border-color: black; height: 97px; margin-left: auto; margin-right: auto;\" border=\"true\"><caption>&nbsp;</caption>\n<tbody>\n<tr>\n<td style=\"width: 73px; text-align: left;\"><strong>data</strong></td>\n<td style=\"width: 593px;\"><strong>&nbsp;</strong></td>\n<td style=\"width: 541px; text-align: left;\"><strong>blablo</strong></td>\n</tr>\n<tr>\n<td style=\"width: 73px;\">ř&aacute;dek</td>\n<td style=\"width: 593px;\">&nbsp;</td>\n<td style=\"width: 541px;\">test</td>\n</tr>\n<tr>\n<td style=\"width: 73px;\">&nbsp;</td>\n<td style=\"width: 593px;\">&nbsp;</td>\n<td style=\"width: 541px;\">&nbsp;</td>\n</tr>\n<tr>\n<td style=\"width: 73px;\">teteto</td>\n<td style=\"width: 593px;\">&nbsp;</td>\n<td style=\"width: 541px;\">cggdgchcch</td>\n</tr>\n</tbody>\n</table>\n<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">test:&nbsp;</p>\n<p style=\"text-align: center;\">&nbsp;</p>\n<h1 style=\"text-align: center;\">nadpis 1 :) tohle je super :)</h1>", 
-    "longname_cs": " IR vysilaci modul", 
+    "longname_cs": "IR vysilaci modul", 
     "doc_en": "<p>temperature sensor: english version&nbsp;</p>\n<p>test:&nbsp;</p>\n<p>&nbsp;</p>\n<h1>nadpis 1 :) tohle je super :)</h1>", 
-    "root": "IR/TXIR01A"
+    "_id": "TXIR01A", 
+    "root": "IR/TXIR01A", 
+    "author[]": [], 
+    "category[]": [
+        "commir"
+    ]
 }
