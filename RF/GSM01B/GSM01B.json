@@ -1,14 +1,22 @@
 {
-    "wiki": null, 
+    "wiki": "None", 
     "status": 4, 
     "name": "GSM01B", 
+    "parameters": [], 
     "short_en": "Provide wideband GSM and 3G data connectivity services available in standard cellular phone networks.", 
+    "image_small": "/doc/img/GSM01B_QRcode.jpgs", 
     "image": "/doc/img/GSM01B_QRcode.png", 
-    "short_cs": "Umožňuje připojení do mobilní GSM a 3G sítě včetně datových přenosů ", 
+    "short_cs": "Umožňuje připojení do mobilní GSM a 3G sítě včetně datových přenosů", 
     "longname_en": "GSM conetcivity module", 
-    "ust": null, 
-    "doc_cs": null, 
-    "longname_cs": "Modul pro připojení do mobilní sítě. ", 
-    "doc_en": null, 
-    "root": "RF/GSM01B"
+    "mark": 0.0, 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
+    "longname_cs": "Modul pro připojení do mobilní sítě.", 
+    "doc_en": "<p>None</p>", 
+    "_id": "GSM01B", 
+    "root": "RF/GSM01B", 
+    "author[]": [], 
+    "category[]": [
+        "commrf"
+    ]
 }
