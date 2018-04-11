@@ -1,14 +1,22 @@
 {
-    "wiki": null, 
+    "wiki": "None", 
     "status": 4, 
     "name": "RX433MHz01A", 
-    "short_en": " Receiver useful for low speed telemetry transmision.", 
+    "parameters": [], 
+    "short_en": "Receiver useful for low speed telemetry transmision.", 
+    "image_small": "/doc/img/RX433MHz01A_QRcode.jpgs", 
     "image": "/doc/img/RX433MHz01A_QRcode.png", 
-    "short_cs": " Modul je vhodny pro pomaly prenos dat, napriklad telemetrie.", 
-    "longname_en": " Simple receiver for 433MHz band ", 
-    "ust": null, 
-    "doc_cs": null, 
-    "longname_cs": " Přijímač pro pásmo 433MHz", 
-    "doc_en": null, 
-    "root": "RF/RX433MHz01A"
+    "short_cs": "Modul je vhodny pro pomaly prenos dat, napriklad telemetrie.", 
+    "longname_en": "Simple receiver for 433MHz band", 
+    "mark": 0.0, 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
+    "longname_cs": "Přijímač pro pásmo 433MHz", 
+    "doc_en": "<p>None</p>", 
+    "_id": "RX433MHz01A", 
+    "root": "RF/RX433MHz01A", 
+    "author[]": [], 
+    "category[]": [
+        "commrf"
+    ]
 }
