@@ -1,4 +1,4 @@
-update=Po 23. dubna 2018, 20:46:37 CEST
+update=Po 23. dubna 2018, 20:18:13 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,9 +23,6 @@ BoardOutlineThickness=0.15
 ModuleOutlineThickness=0.15
 [general]
 version=1
-[eeschema]
-version=1
-LibDir=
 [schematic_editor]
 version=1
 PageLayoutDescrFile=pagelayout_mlab.kicad_wks
@@ -36,3 +33,6 @@ NetFmtName=
 SpiceAjustPassiveValues=0
 LabSize=60
 ERC_TestSimilarLabels=1
+[eeschema]
+version=1
+LibDir=

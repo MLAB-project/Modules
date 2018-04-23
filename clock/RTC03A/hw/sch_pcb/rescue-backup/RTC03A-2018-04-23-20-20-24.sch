@@ -1,4 +1,67 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 3
+LIBS:MLAB_BATERY
+LIBS:MLAB_CONNECTORS
+LIBS:MLAB_D
+LIBS:MLAB_DISPLAY
+LIBS:MLAB_HEADER
+LIBS:MLAB_IO
+LIBS:MLAB_Jumpers
+LIBS:MLAB_MECHANICAL
+LIBS:MLAB_SW
+LIBS:MLAB_T
+LIBS:MLAB_TR
+LIBS:MLAB_U
+LIBS:ac-dc
+LIBS:adc-dac
+LIBS:Altera
+LIBS:analog_devices
+LIBS:analog_switches
+LIBS:atmel
+LIBS:audio
+LIBS:brooktre
+LIBS:contrib
+LIBS:cypress
+LIBS:dc-dc
+LIBS:device
+LIBS:digital-audio
+LIBS:dsp
+LIBS:elec-unifil
+LIBS:ESD_Protection
+LIBS:ftdi
+LIBS:gennum
+LIBS:hc11
+LIBS:intel
+LIBS:interface
+LIBS:ir
+LIBS:Lattice
+LIBS:linear
+LIBS:maxim
+LIBS:memory
+LIBS:microchip
+LIBS:microcontrollers
+LIBS:motor_drivers
+LIBS:motorola
+LIBS:nordicsemi
+LIBS:onsemi
+LIBS:opto
+LIBS:Oscillators
+LIBS:philips
+LIBS:powerint
+LIBS:power
+LIBS:Power_Management
+LIBS:pspice
+LIBS:references
+LIBS:regul
+LIBS:rfcom
+LIBS:sensors
+LIBS:silabs
+LIBS:siliconi
+LIBS:supertex
+LIBS:texas
+LIBS:video
+LIBS:Xicor
+LIBS:xilinx
+LIBS:Zilog
 LIBS:RTC03A-cache
 EELAYER 26 0
 EELAYER END
@@ -15,7 +78,7 @@ Comment3 ""
 Comment4 "Open-source"
 $EndDescr
 $Comp
-L power:GND #PWR012
+L GND #PWR012
 U 1 1 549D73B2
 P 9350 1600
 F 0 "#PWR012" H 9350 1350 60  0001 C CNN
@@ -28,7 +91,7 @@ $EndComp
 Text Notes 9200 1900 0    60   ~ 0
 POWER INPUT
 $Comp
-L MLAB_MECHANICAL:HOLE M1
+L HOLE M1
 U 1 1 549D7549
 P 9950 2150
 F 0 "M1" V 9850 2150 60  0000 C CNN
@@ -39,7 +102,7 @@ F 3 "" H 9950 2150 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L MLAB_MECHANICAL:HOLE M2
+L HOLE M2
 U 1 1 549D7628
 P 10150 2150
 F 0 "M2" V 10050 2150 60  0000 C CNN
@@ -50,7 +113,7 @@ F 3 "" H 10150 2150 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L MLAB_MECHANICAL:HOLE M3
+L HOLE M3
 U 1 1 549D7646
 P 10350 2150
 F 0 "M3" V 10250 2150 60  0000 C CNN
@@ -61,7 +124,7 @@ F 3 "" H 10350 2150 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L MLAB_MECHANICAL:HOLE M4
+L HOLE M4
 U 1 1 549D7665
 P 10550 2150
 F 0 "M4" V 10450 2150 60  0000 C CNN
@@ -72,7 +135,7 @@ F 3 "" H 10550 2150 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR013
+L GND #PWR013
 U 1 1 549D770F
 P 10750 2100
 F 0 "#PWR013" H 10750 1850 60  0001 C CNN
@@ -85,7 +148,7 @@ $EndComp
 Text Notes 9850 2400 0    60   ~ 0
 MOUNTING HOLES
 $Comp
-L RTC03A-rescue:C_Small C4
+L C_Small C4
 U 1 1 5562302C
 P 9650 1300
 F 0 "C4" H 9650 1400 50  0000 L CNN
@@ -96,7 +159,7 @@ F 3 "" H 9650 1300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RTC03A-rescue:PCF8583 U1
+L PCF8583 U1
 U 1 1 59FF55BA
 P 5700 3650
 F 0 "U1" H 5450 4100 60  0000 C CNN
@@ -107,7 +170,7 @@ F 3 "" H 5700 4350 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR05
+L VCC #PWR05
 U 1 1 59FF572E
 P 5700 3150
 F 0 "#PWR05" H 5700 3000 50  0001 C CNN
@@ -118,7 +181,7 @@ F 3 "" H 5700 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR06
+L GND #PWR06
 U 1 1 59FF57AD
 P 5700 4000
 F 0 "#PWR06" H 5700 3750 50  0001 C CNN
@@ -129,7 +192,7 @@ F 3 "" H 5700 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MLAB_Jumpers:JUMP_5X2 J4
+L JUMP_5X2 J4
 U 1 1 59FF8AD4
 P 7750 3650
 F 0 "J4" H 7679 3580 50  0000 L CNN
@@ -140,7 +203,7 @@ F 3 "" H 7750 3650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR09
+L GND #PWR09
 U 1 1 59FF8DDB
 P 7150 4000
 F 0 "#PWR09" H 7150 3750 50  0001 C CNN
@@ -151,7 +214,7 @@ F 3 "" H 7150 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR010
+L VCC #PWR010
 U 1 1 59FF8E22
 P 7250 3400
 F 0 "#PWR010" H 7250 3250 50  0001 C CNN
@@ -162,7 +225,7 @@ F 3 "" H 7250 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RTC03A-rescue:Crystal Y1
+L Crystal Y1
 U 1 1 59FF900D
 P 4050 3000
 F 0 "Y1" H 4050 2732 50  0000 C CNN
@@ -173,7 +236,7 @@ F 3 "" H 4050 3000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:VCC #PWR03
+L VCC #PWR03
 U 1 1 59FF93CA
 P 5100 3950
 F 0 "#PWR03" H 5100 3800 50  0001 C CNN
@@ -184,7 +247,7 @@ F 3 "" H 5100 3950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MLAB_Jumpers:JUMP_2x1 J3
+L JUMP_2x1 J3
 U 1 1 59FF9561
 P 6250 3500
 F 0 "J3" H 6256 3559 50  0000 L CNN
@@ -195,23 +258,23 @@ F 3 "" H 6250 3500 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L RTC03A-rescue:C C1
+L C C1
 U 1 1 59FF9DBC
 P 3850 3300
 F 0 "C1" H 3965 3346 50  0000 L CNN
 F 1 "10pF" H 3965 3255 50  0000 L CNN
-F 2 "Mlab_R:SMD-0805" H 3888 3150 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" H 3888 3150 50  0001 C CNN
 F 3 "" H 3850 3300 50  0001 C CNN
 	1    3850 3300
 	1    0    0    -1  
 $EndComp
 $Comp
-L RTC03A-rescue:C C2
+L C C2
 U 1 1 59FF9E5D
 P 4250 3300
 F 0 "C2" H 4365 3346 50  0000 L CNN
 F 1 "10pF" H 4365 3255 50  0000 L CNN
-F 2 "Mlab_R:SMD-0805" H 4288 3150 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" H 4288 3150 50  0001 C CNN
 F 3 "" H 4250 3300 50  0001 C CNN
 	1    4250 3300
 	1    0    0    -1  
@@ -219,7 +282,7 @@ $EndComp
 Wire Wire Line
 	10750 2100 10750 2050
 Wire Wire Line
-	10750 2050 10550 2050
+	10750 2050 9950 2050
 Wire Wire Line
 	9950 2050 9950 2100
 Wire Wire Line
@@ -240,9 +303,9 @@ Wire Notes Line
 Wire Notes Line
 	9850 2400 9850 2000
 Wire Wire Line
-	10300 1050 9950 1050
+	10300 1050 9350 1050
 Wire Wire Line
-	9350 1000 9350 1050
+	9350 1000 9350 1200
 Connection ~ 9350 1050
 Wire Wire Line
 	9650 1050 9650 1200
@@ -253,11 +316,11 @@ Connection ~ 9950 1050
 Wire Wire Line
 	10300 950  10250 950 
 Wire Wire Line
-	10250 950  10250 1150
+	10250 950  10250 1550
 Wire Wire Line
-	10250 1550 9950 1550
+	10250 1550 9350 1550
 Wire Wire Line
-	9350 1400 9350 1550
+	9350 1400 9350 1600
 Connection ~ 9350 1550
 Wire Wire Line
 	9650 1400 9650 1550
@@ -273,7 +336,7 @@ Wire Wire Line
 Wire Wire Line
 	5700 4000 5700 3950
 Wire Wire Line
-	6100 3600 6950 3600
+	6100 3600 7350 3600
 Wire Wire Line
 	7350 3700 7250 3700
 Wire Wire Line
@@ -281,7 +344,7 @@ Wire Wire Line
 Wire Wire Line
 	7350 3500 7150 3500
 Wire Wire Line
-	7150 3500 7150 3900
+	7150 3500 7150 4000
 Wire Wire Line
 	7350 3900 7150 3900
 Connection ~ 7150 3900
@@ -290,7 +353,7 @@ Wire Wire Line
 Wire Wire Line
 	7050 3800 7050 3700
 Wire Wire Line
-	7050 3700 6700 3700
+	7050 3700 6100 3700
 Wire Wire Line
 	5300 3700 5200 3700
 Wire Wire Line
@@ -304,11 +367,11 @@ Wire Wire Line
 Wire Wire Line
 	4250 3150 4250 3000
 Wire Wire Line
-	4200 3000 4250 3000
+	4200 3000 5000 3000
 Wire Wire Line
 	3900 3000 3850 3000
 Wire Wire Line
-	3850 2600 3850 3000
+	3850 2600 3850 3150
 Connection ~ 4250 3000
 Wire Wire Line
 	3850 2600 5100 2600
@@ -320,7 +383,7 @@ Wire Wire Line
 Wire Wire Line
 	3850 3600 3850 3450
 $Comp
-L power:GND #PWR01
+L GND #PWR01
 U 1 1 59FFA939
 P 3850 3600
 F 0 "#PWR01" H 3850 3350 50  0001 C CNN
@@ -331,7 +394,7 @@ F 3 "" H 3850 3600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RTC03A-rescue:R R3
+L R R3
 U 1 1 59FFB143
 P 6950 3350
 F 0 "R3" H 7020 3396 50  0000 L CNN
@@ -342,7 +405,7 @@ F 3 "" H 6950 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RTC03A-rescue:R R2
+L R R2
 U 1 1 59FFB1AA
 P 6700 3350
 F 0 "R2" H 6770 3396 50  0000 L CNN
@@ -356,7 +419,7 @@ Wire Wire Line
 	6700 3500 6700 3700
 Connection ~ 6700 3700
 $Comp
-L power:VCC #PWR08
+L VCC #PWR08
 U 1 1 59FFB484
 P 6950 3200
 F 0 "#PWR08" H 6950 3050 50  0001 C CNN
@@ -367,7 +430,7 @@ F 3 "" H 6950 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR07
+L VCC #PWR07
 U 1 1 59FFB4DC
 P 6700 3200
 F 0 "#PWR07" H 6700 3050 50  0001 C CNN
@@ -381,7 +444,7 @@ Wire Wire Line
 	6950 3500 6950 3600
 Connection ~ 6950 3600
 $Comp
-L MLAB_Jumpers:JUMP_2X2 J1
+L JUMP_2X2 J1
 U 1 1 59FFB788
 P 4550 3450
 F 0 "J1" H 4294 3280 50  0000 C CNN
@@ -392,15 +455,15 @@ F 3 "" H 4550 3450 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	5300 3500 5250 3500
+	5300 3500 4950 3500
 Connection ~ 5100 3500
 Wire Wire Line
-	4950 3600 5000 3600
+	4950 3600 5300 3600
 Wire Wire Line
 	5000 3000 5000 3600
 Connection ~ 5000 3600
 $Comp
-L MLAB_Jumpers:JUMP_3X2 J5
+L JUMP_3X2 J5
 U 1 1 59FFBC49
 P 10700 1100
 F 0 "J5" H 10629 1130 50  0000 L CNN
@@ -411,7 +474,7 @@ F 3 "" H 10700 1100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR011
+L VCC #PWR011
 U 1 1 59FFBCF6
 P 9350 1000
 F 0 "#PWR011" H 9350 850 50  0001 C CNN
@@ -422,7 +485,7 @@ F 3 "" H 9350 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR04
+L GND #PWR04
 U 1 1 59FFBE0A
 P 5100 4150
 F 0 "#PWR04" H 5100 3900 50  0001 C CNN
@@ -433,7 +496,7 @@ F 3 "" H 5100 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RTC03A-rescue:C_Small C3
+L C_Small C3
 U 1 1 59FFC6A8
 P 9350 1300
 F 0 "C3" H 9350 1400 50  0000 L CNN
@@ -444,7 +507,7 @@ F 3 "" H 9350 1300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MLAB_D:D_ZENER D1
+L D_ZENER D1
 U 1 1 59FFCB7D
 P 9950 1300
 F 0 "D1" V 9904 1379 50  0000 L CNN
@@ -463,7 +526,7 @@ Wire Notes Line
 Wire Notes Line
 	10850 750  10850 1950
 $Comp
-L MLAB_Jumpers:CONN_3 J2
+L CONN_3 J2
 U 1 1 59FFD9B8
 P 4600 4050
 F 0 "J2" H 4369 3730 50  0000 C CNN
@@ -474,7 +537,7 @@ F 3 "" H 4600 4050 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L RTC03A-rescue:R R1
+L R R1
 U 1 1 5A002631
 P 5250 2650
 F 0 "R1" H 5320 2696 50  0000 L CNN
@@ -485,7 +548,7 @@ F 3 "" H 5250 2650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR02
+L VCC #PWR02
 U 1 1 5A002862
 P 5250 2500
 F 0 "#PWR02" H 5250 2350 50  0001 C CNN
@@ -496,7 +559,7 @@ F 3 "" H 5250 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MLAB_Jumpers:JUMP2_2x1 J6
+L JUMP2_2x1 J6
 U 1 1 5A01C42A
 P 5250 3150
 F 0 "J6" V 5225 3209 50  0000 L CNN
@@ -511,40 +574,4 @@ Wire Wire Line
 Wire Wire Line
 	5250 3500 5250 3450
 Connection ~ 5250 3500
-Wire Wire Line
-	10150 2050 9950 2050
-Wire Wire Line
-	10350 2050 10150 2050
-Wire Wire Line
-	10550 2050 10350 2050
-Wire Wire Line
-	9350 1050 9350 1200
-Wire Wire Line
-	9650 1050 9350 1050
-Wire Wire Line
-	9950 1050 9650 1050
-Wire Wire Line
-	9350 1550 9350 1600
-Wire Wire Line
-	9650 1550 9350 1550
-Wire Wire Line
-	9950 1550 9650 1550
-Wire Wire Line
-	10250 1150 10250 1550
-Wire Wire Line
-	7150 3900 7150 4000
-Wire Wire Line
-	4250 3000 5000 3000
-Wire Wire Line
-	3850 3000 3850 3150
-Wire Wire Line
-	6700 3700 6100 3700
-Wire Wire Line
-	6950 3600 7350 3600
-Wire Wire Line
-	5100 3500 4950 3500
-Wire Wire Line
-	5000 3600 5300 3600
-Wire Wire Line
-	5250 3500 5100 3500
 $EndSCHEMATC
