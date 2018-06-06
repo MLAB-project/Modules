@@ -3,7 +3,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title "NAME"
 Date "%F"
 Rev "REV"
@@ -218,4 +218,56 @@ Wire Wire Line
 	9950 1350 9650 1350
 Wire Wire Line
 	10250 1150 10250 1350
+$Comp
+L atmel:ATMEGA1284P-AU U?
+U 1 1 5B17AB5A
+P 5850 3200
+F 0 "U?" H 5850 5378 50  0000 C CNN
+F 1 "ATMEGA1284P-AU" H 5850 5287 50  0000 C CNN
+F 2 "TQFP44" H 5850 3200 50  0001 C CIN
+F 3 "http://www.atmel.com/Images/Atmel-8272-8-bit-AVR-microcontroller-ATmega164A_PA-324A_PA-644A_PA-1284_P_datasheet.pdf" H 5850 3200 50  0001 C CNN
+	1    5850 3200
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 9600 5350 1000 650 
+U 5B17B038
+F0 "DATALOGGER01A_power" 60
+F1 "DATALOGGER01A_power.sch" 60
+$EndSheet
+$Comp
+L Connector:SD_Card J?
+U 1 1 5B17BA92
+P 9700 3650
+F 0 "J?" H 9700 4315 50  0000 C CNN
+F 1 "SD_Card" H 9700 4224 50  0000 C CNN
+F 2 "10067847-001" H 9900 4000 50  0001 C CNN
+F 3 "http://portal.fciconnect.com/Comergent//fci/drawing/10067847.pdf" H 9700 3650 50  0001 C CNN
+	1    9700 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B17BC13
+P 8600 4350
+F 0 "#PWR?" H 8600 4100 50  0001 C CNN
+F 1 "GND" H 8605 4177 50  0000 C CNN
+F 2 "" H 8600 4350 50  0001 C CNN
+F 3 "" H 8600 4350 50  0001 C CNN
+	1    8600 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 3550 8600 3550
+Wire Wire Line
+	8600 3550 8600 3850
+Wire Wire Line
+	8800 3850 8600 3850
+Connection ~ 8600 3850
+Wire Wire Line
+	8600 3850 8600 4350
+Wire Wire Line
+	8800 3650 8750 3650
+Wire Wire Line
+	8750 3650 8750 3000
 $EndSCHEMATC

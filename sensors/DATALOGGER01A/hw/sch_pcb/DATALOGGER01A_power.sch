@@ -1,0 +1,129 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L device:Battery_Cell BT?
+U 1 1 5B17B11F
+P 1650 2850
+F 0 "BT?" H 1768 2946 50  0000 L CNN
+F 1 "BX0037" H 1768 2855 50  0000 L CNN
+F 2 "" V 1650 2910 50  0001 C CNN
+F 3 "" V 1650 2910 50  0001 C CNN
+	1    1650 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:Battery_Cell BT?
+U 1 1 5B17B163
+P 2250 2850
+F 0 "BT?" H 2368 2946 50  0000 L CNN
+F 1 "BX0037" H 2368 2855 50  0000 L CNN
+F 2 "" V 2250 2910 50  0001 C CNN
+F 3 "" V 2250 2910 50  0001 C CNN
+	1    2250 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 2650 1650 2600
+Wire Wire Line
+	1650 2600 2250 2600
+Wire Wire Line
+	2250 2650 2250 2600
+Connection ~ 2250 2600
+Wire Wire Line
+	1650 2950 1650 3000
+Wire Wire Line
+	1650 3000 2250 3000
+Wire Wire Line
+	2250 2950 2250 3000
+Connection ~ 2250 3000
+$Comp
+L device:Polyfuse F?
+U 1 1 5B17B41B
+P 2900 2600
+F 0 "F?" V 2675 2600 50  0000 C CNN
+F 1 "750mA" V 2766 2600 50  0000 C CNN
+F 2 "" H 2950 2400 50  0001 L CNN
+F 3 "" H 2900 2600 50  0001 C CNN
+	1    2900 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L device:D D?
+U 1 1 5B17B4AB
+P 3200 2800
+F 0 "D?" V 3154 2879 50  0000 L CNN
+F 1 "M4" V 3245 2879 50  0000 L CNN
+F 2 "" H 3200 2800 50  0001 C CNN
+F 3 "" H 3200 2800 50  0001 C CNN
+	1    3200 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 5B17B561
+P 3650 2600
+F 0 "SW?" H 3650 2835 50  0000 C CNN
+F 1 "SW_SPST" H 3650 2744 50  0000 C CNN
+F 2 "" H 3650 2600 50  0001 C CNN
+F 3 "" H 3650 2600 50  0001 C CNN
+	1    3650 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 2600 2750 2600
+Wire Wire Line
+	3050 2600 3200 2600
+Wire Wire Line
+	3200 2650 3200 2600
+Connection ~ 3200 2600
+Wire Wire Line
+	3200 2600 3450 2600
+Wire Wire Line
+	3200 3000 3200 2950
+Wire Wire Line
+	2250 3000 3200 3000
+$Comp
+L power:GND #PWR?
+U 1 1 5B17B713
+P 2250 3100
+F 0 "#PWR?" H 2250 2850 50  0001 C CNN
+F 1 "GND" H 2255 2927 50  0000 C CNN
+F 2 "" H 2250 3100 50  0001 C CNN
+F 3 "" H 2250 3100 50  0001 C CNN
+	1    2250 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 3100 2250 3000
+Wire Wire Line
+	3850 2600 4050 2600
+$Comp
+L power:+BATT #PWR?
+U 1 1 5B17B878
+P 4050 2500
+F 0 "#PWR?" H 4050 2350 50  0001 C CNN
+F 1 "+BATT" H 4065 2673 50  0000 C CNN
+F 2 "" H 4050 2500 50  0001 C CNN
+F 3 "" H 4050 2500 50  0001 C CNN
+	1    4050 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 2500 4050 2600
+Connection ~ 4050 2600
+Wire Wire Line
+	4050 2600 4250 2600
+$EndSCHEMATC
