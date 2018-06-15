@@ -101,23 +101,23 @@ Wire Wire Line
 Wire Wire Line
 	10800 600  10600 600 
 $Comp
-L atmel:ATMEGA1284P-AU U3
+L DATALOGGER01A-rescue:ATMEGA1284P-AU-atmel U3
 U 1 1 5B17AB5A
 P 5850 3200
 F 0 "U3" H 5400 3350 50  0000 C CNN
 F 1 "ATMEGA1284P-AU" H 5450 3200 50  0000 C CNN
-F 2 "" H 5850 3200 50  0001 C CIN
+F 2 "Package_QFP:TQFP-44_10x10mm_P0.8mm" H 5850 3200 50  0001 C CIN
 F 3 "http://www.atmel.com/Images/Atmel-8272-8-bit-AVR-microcontroller-ATmega164A_PA-324A_PA-644A_PA-1284_P_datasheet.pdf" H 5850 3200 50  0001 C CNN
 	1    5850 3200
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:SD_Card J7
+L DATALOGGER01A-rescue:SD_Card-Connector J7
 U 1 1 5B17BA92
 P 2550 6800
 F 0 "J7" H 2550 7465 50  0000 C CNN
 F 1 "SD_Card" H 2550 7374 50  0000 C CNN
-F 2 "" H 2750 7150 50  0001 C CNN
+F 2 "Connector_Card:SD_TE_2041021" H 2750 7150 50  0001 C CNN
 F 3 "http://portal.fciconnect.com/Comergent//fci/drawing/10067847.pdf" H 2550 6800 50  0001 C CNN
 	1    2550 6800
 	1    0    0    -1  
@@ -143,7 +143,7 @@ Connection ~ 1450 7000
 Wire Wire Line
 	1450 7000 1450 7500
 $Comp
-L device:R R1
+L DATALOGGER01A-rescue:R-device R1
 U 1 1 5B18F2AD
 P 1050 6500
 F 0 "R1" V 1000 6650 50  0000 C CNN
@@ -154,7 +154,7 @@ F 3 "" H 1050 6500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L device:R R2
+L DATALOGGER01A-rescue:R-device R2
 U 1 1 5B18F329
 P 1050 6600
 F 0 "R2" V 1000 6750 50  0000 C CNN
@@ -165,7 +165,7 @@ F 3 "" H 1050 6600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L device:R R4
+L DATALOGGER01A-rescue:R-device R4
 U 1 1 5B18F359
 P 1050 7100
 F 0 "R4" V 1000 7250 50  0000 C CNN
@@ -176,7 +176,7 @@ F 3 "" H 1050 7100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L device:R R3
+L DATALOGGER01A-rescue:R-device R3
 U 1 1 5B18F393
 P 1050 6900
 F 0 "R3" V 1000 7050 50  0000 C CNN
@@ -215,7 +215,7 @@ PB7
 Text Label 600  6800 0    60   ~ 0
 SD_VDD
 $Comp
-L device:C C15
+L DATALOGGER01A-rescue:C-device C15
 U 1 1 5B194068
 P 4250 7150
 F 0 "C15" H 4365 7196 50  0000 L CNN
@@ -226,7 +226,7 @@ F 3 "" H 4250 7150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C11
+L DATALOGGER01A-rescue:C-device C11
 U 1 1 5B19413F
 P 3800 7150
 F 0 "C11" H 3915 7196 50  0000 L CNN
@@ -249,13 +249,6 @@ F 3 "" H 3550 7500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3450 6900 3550 6900
-Wire Wire Line
-	3550 6900 3550 7000
-Wire Wire Line
-	3450 7000 3550 7000
-Connection ~ 3550 7000
-Wire Wire Line
-	3550 7000 3550 7500
 $Comp
 L power:GND #PWR04
 U 1 1 5B196356
@@ -538,7 +531,7 @@ Wire Wire Line
 Wire Wire Line
 	6850 3100 6950 3100
 $Comp
-L device:C C14
+L DATALOGGER01A-rescue:C-device C14
 U 1 1 5B1D7340
 P 4150 2950
 F 0 "C14" H 4265 2996 50  0000 L CNN
@@ -549,7 +542,7 @@ F 3 "" H 4150 2950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C17
+L DATALOGGER01A-rescue:C-device C17
 U 1 1 5B1D748A
 P 4600 2950
 F 0 "C17" H 4715 2996 50  0000 L CNN
@@ -595,7 +588,7 @@ Wire Wire Line
 Wire Wire Line
 	4600 3150 4600 3100
 $Comp
-L device:C C16
+L DATALOGGER01A-rescue:C-device C16
 U 1 1 5B1E158F
 P 4400 1500
 F 0 "C16" H 4515 1546 50  0000 L CNN
@@ -606,7 +599,7 @@ F 3 "" H 4400 1500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L device:R R9
+L DATALOGGER01A-rescue:R-device R9
 U 1 1 5B1E1A11
 P 4700 1200
 F 0 "R9" V 4650 1350 50  0000 C CNN
@@ -676,7 +669,7 @@ Wire Wire Line
 Wire Wire Line
 	5650 1150 5650 1000
 $Comp
-L device:C C1
+L DATALOGGER01A-rescue:C-device C1
 U 1 1 5B1F6794
 P 750 1000
 F 0 "C1" H 865 1046 50  0000 L CNN
@@ -687,7 +680,7 @@ F 3 "" H 750 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C2
+L DATALOGGER01A-rescue:C-device C2
 U 1 1 5B1F69A6
 P 1200 1000
 F 0 "C2" H 1315 1046 50  0000 L CNN
@@ -698,7 +691,7 @@ F 3 "" H 1200 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C3
+L DATALOGGER01A-rescue:C-device C3
 U 1 1 5B1F6A02
 P 1650 1000
 F 0 "C3" H 1765 1046 50  0000 L CNN
@@ -709,7 +702,7 @@ F 3 "" H 1650 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:L L1
+L DATALOGGER01A-rescue:L-device L1
 U 1 1 5B1F6A96
 P 2100 800
 F 0 "L1" V 2290 800 50  0000 C CNN
@@ -720,7 +713,7 @@ F 3 "" H 2100 800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L device:C C6
+L DATALOGGER01A-rescue:C-device C6
 U 1 1 5B1F6B7D
 P 2500 1000
 F 0 "C6" H 2615 1046 50  0000 L CNN
@@ -875,18 +868,7 @@ SCK
 Text Notes 8850 2600 0    60   ~ 0
 MOSI
 $Comp
-L device:Crystal_GND2 Y1
-U 1 1 5B23563E
-P 2800 2300
-F 0 "Y1" H 2800 2568 50  0000 C CNN
-F 1 "16MHz" H 2800 2477 50  0000 C CNN
-F 2 "Mlab_XTAL:Crystal_HC49-U_Vertical" H 2800 2300 50  0001 C CNN
-F 3 "" H 2800 2300 50  0001 C CNN
-	1    2800 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L device:R R8
+L DATALOGGER01A-rescue:R-device R8
 U 1 1 5B242EEC
 P 3300 2200
 F 0 "R8" V 3200 2100 50  0000 C CNN
@@ -908,7 +890,7 @@ F 3 "" H 3550 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C5
+L DATALOGGER01A-rescue:C-device C5
 U 1 1 5B2480A8
 P 2400 2600
 F 0 "C5" H 2515 2646 50  0000 L CNN
@@ -919,7 +901,7 @@ F 3 "" H 2400 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C8
+L DATALOGGER01A-rescue:C-device C8
 U 1 1 5B24828C
 P 3000 2600
 F 0 "C8" H 3115 2646 50  0000 L CNN
@@ -927,17 +909,6 @@ F 1 "100nF" H 3115 2555 50  0000 L CNN
 F 2 "Mlab_R:SMD-0805" H 3038 2450 50  0001 C CNN
 F 3 "" H 3000 2600 50  0001 C CNN
 	1    3000 2600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR020
-U 1 1 5B2483DA
-P 2800 2800
-F 0 "#PWR020" H 2800 2550 50  0001 C CNN
-F 1 "GND" H 2805 2627 50  0000 C CNN
-F 2 "" H 2800 2800 50  0001 C CNN
-F 3 "" H 2800 2800 50  0001 C CNN
-	1    2800 2800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -964,8 +935,6 @@ F 3 "" H 2400 2800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2400 2800 2400 2750
-Wire Wire Line
-	2800 2800 2800 2500
 Wire Wire Line
 	3000 2800 3000 2750
 Wire Wire Line
@@ -997,7 +966,7 @@ U 1 1 5B288D80
 P 3850 2700
 F 0 "J9" H 3850 2841 60  0000 C CNN
 F 1 "HEADER_2x01" H 3850 2841 60  0001 C CNN
-F 2 "" H 3850 2700 60  0001 C CNN
+F 2 "Mlab_Pin_Headers:Straight_2x01" H 3850 2700 60  0001 C CNN
 F 3 "" H 3850 2700 60  0000 C CNN
 	1    3850 2700
 	1    0    0    -1  
@@ -1014,7 +983,7 @@ Wire Wire Line
 Text Label 3400 2700 0    60   ~ 0
 AREF
 $Comp
-L device:LED D3
+L DATALOGGER01A-rescue:LED-device D3
 U 1 1 5B2AFFF7
 P 10750 2100
 F 0 "D3" V 10788 1983 50  0000 R CNN
@@ -1068,11 +1037,11 @@ Connection ~ 5750 5250
 Wire Wire Line
 	5750 5250 5850 5250
 $Comp
-L device:R R10
+L DATALOGGER01A-rescue:R-device R10
 U 1 1 5B2CE6CA
 P 10750 1750
 F 0 "R10" V 10650 1650 50  0000 C CNN
-F 1 "240" V 10750 1750 50  0000 C CNN
+F 1 "1k" V 10750 1750 50  0000 C CNN
 F 2 "Mlab_R:SMD-0805" V 10680 1750 50  0001 C CNN
 F 3 "" H 10750 1750 50  0001 C CNN
 	1    10750 1750
@@ -1242,7 +1211,7 @@ Wire Wire Line
 Wire Wire Line
 	1250 4250 1650 4250
 $Comp
-L device:R R6
+L DATALOGGER01A-rescue:R-device R6
 U 1 1 5B34D4AA
 P 1650 3750
 F 0 "R6" V 1550 3650 50  0000 C CNN
@@ -1253,7 +1222,7 @@ F 3 "" H 1650 3750 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L device:R R7
+L DATALOGGER01A-rescue:R-device R7
 U 1 1 5B34D7C9
 P 1850 3750
 F 0 "R7" V 1750 3650 50  0000 C CNN
@@ -1323,7 +1292,7 @@ Wire Wire Line
 Text Label 10300 5050 0    60   ~ 0
 INTA
 $Comp
-L device:Crystal Y2
+L DATALOGGER01A-rescue:Crystal-device Y2
 U 1 1 5B36B778
 P 8750 4450
 F 0 "Y2" H 8750 4600 50  0000 C CNN
@@ -1342,7 +1311,7 @@ Wire Wire Line
 Wire Wire Line
 	8550 4650 9050 4650
 $Comp
-L device:Battery_Cell BT3
+L DATALOGGER01A-rescue:Battery_Cell-device BT3
 U 1 1 5B36B783
 P 8850 5850
 F 0 "BT3" H 8968 5946 50  0000 L CNN
@@ -1409,7 +1378,7 @@ F 3 "" H 10750 5050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C18
+L DATALOGGER01A-rescue:C-device C18
 U 1 1 5B38BB8A
 P 10800 5650
 F 0 "C18" H 10915 5696 50  0000 L CNN
@@ -1446,26 +1415,15 @@ Wire Wire Line
 Wire Wire Line
 	10800 5800 10800 5900
 $Comp
-L references:ISL21070CIH320Z-TK U1
+L DATALOGGER01A-rescue:ISL21070CIH320Z-TK-references U1
 U 1 1 5B3B0708
 P 900 2400
 F 0 "U1" H 950 2650 50  0000 R CNN
-F 1 "ISL21080DIH309Z-TK" V 650 2750 50  0000 R CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23" H 1400 2150 50  0001 C CIN
+F 1 "ISL21080CIH320Z-TK" V 650 2750 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1400 2150 50  0001 C CIN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/fn75/fn7599.pdf" H 900 2400 50  0001 C CIN
 	1    900  2400
 	1    0    0    -1  
-$EndComp
-$Comp
-L MLAB_D:REFERENCE D1
-U 1 1 5B3B0A6E
-P 1600 2400
-F 0 "D1" V 1700 2550 50  0000 R CNN
-F 1 "LM4041CIM3-1.2" H 1700 2300 40  0000 R CNN
-F 2 "Mlab_T:SOT-23" H 1600 2400 60  0001 C CNN
-F 3 "" H 1600 2400 60  0000 C CNN
-	1    1600 2400
-	0    -1   -1   0   
 $EndComp
 $Comp
 L power:VDD #PWR032
@@ -1479,7 +1437,7 @@ F 3 "" H 1600 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:R R5
+L DATALOGGER01A-rescue:R-device R5
 U 1 1 5B3B14FF
 P 1600 1950
 F 0 "R5" V 1500 1850 50  0000 C CNN
@@ -1536,7 +1494,7 @@ Wire Wire Line
 Text Label 2000 2150 0    60   ~ 0
 AREF
 $Comp
-L device:C C4
+L DATALOGGER01A-rescue:C-device C4
 U 1 1 5B40F4A8
 P 1950 2450
 F 0 "C4" H 2065 2496 50  0000 L CNN
@@ -1594,18 +1552,18 @@ Connection ~ 8850 5550
 Wire Wire Line
 	8450 6100 8450 6050
 $Comp
-L MLAB_IO:TPS22965-Q1 U2
+L DATALOGGER01A-rescue:TPS22965-Q1-MLAB_IO U2
 U 1 1 5B22EF1B
 P 3450 4000
 F 0 "U2" H 3475 4347 60  0000 C CNN
 F 1 "TPS22965-Q1" H 3475 4241 60  0000 C CNN
-F 2 "" H 3000 3250 60  0001 C CNN
+F 2 "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm_ThermalVias" H 3000 3250 60  0001 C CNN
 F 3 "" H 3000 3250 60  0001 C CNN
 	1    3450 4000
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C12
+L DATALOGGER01A-rescue:C-device C12
 U 1 1 5B22F305
 P 3950 4150
 F 0 "C12" H 4065 4196 50  0000 L CNN
@@ -1652,7 +1610,7 @@ Connection ~ 2650 3900
 Wire Wire Line
 	2650 3900 2650 4000
 $Comp
-L device:C C7
+L DATALOGGER01A-rescue:C-device C7
 U 1 1 5B25A565
 P 2650 4200
 F 0 "C7" H 2765 4246 50  0000 L CNN
@@ -1691,18 +1649,18 @@ PA2
 Wire Wire Line
 	3150 4250 2950 4250
 $Comp
-L device:Battery_Cell BT1
+L DATALOGGER01A-rescue:Battery_Cell-device BT1
 U 1 1 5B2AE71A
 P 850 5550
 F 0 "BT1" H 968 5646 50  0000 L CNN
 F 1 "BX0037" H 968 5555 50  0000 L CNN
-F 2 "" V 850 5610 50  0001 C CNN
+F 2 "Connector_Card:SD_TE_2041021" V 850 5610 50  0001 C CNN
 F 3 "" V 850 5610 50  0001 C CNN
 	1    850  5550
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:Battery_Cell BT2
+L DATALOGGER01A-rescue:Battery_Cell-device BT2
 U 1 1 5B2AE721
 P 1450 5550
 F 0 "BT2" H 1568 5646 50  0000 L CNN
@@ -1726,7 +1684,7 @@ Wire Wire Line
 	1450 5650 1450 5700
 Connection ~ 1450 5700
 $Comp
-L device:D D2
+L DATALOGGER01A-rescue:D-device D2
 U 1 1 5B2AE72F
 P 2700 5500
 F 0 "D2" V 2654 5579 50  0000 L CNN
@@ -1783,7 +1741,7 @@ F 3 "" H 1950 5700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:Polyfuse F1
+L DATALOGGER01A-rescue:Polyfuse-device F1
 U 1 1 5B2AE750
 P 2450 5300
 F 0 "F1" V 2225 5300 50  0000 C CNN
@@ -1814,7 +1772,7 @@ $EndComp
 Wire Wire Line
 	2700 5700 2700 5650
 $Comp
-L device:EMI_Filter_C C10
+L DATALOGGER01A-rescue:EMI_Filter_C-device C10
 U 1 1 5B2AE762
 P 3650 5400
 F 0 "C10" H 3650 5705 50  0000 C CNN
@@ -1825,7 +1783,7 @@ F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/e
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:CP C9
+L DATALOGGER01A-rescue:CP-device C9
 U 1 1 5B2AE769
 P 3300 5500
 F 0 "C9" H 3418 5546 50  0000 L CNN
@@ -1836,7 +1794,7 @@ F 3 "" H 3300 5500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C13
+L DATALOGGER01A-rescue:C-device C13
 U 1 1 5B2AE770
 P 4050 5500
 F 0 "C13" H 4165 5546 50  0000 L CNN
@@ -1852,7 +1810,7 @@ U 1 1 5B2AE777
 P 1950 4950
 F 0 "J6" V 1869 4772 60  0000 R CNN
 F 1 "HEADER_2x03_PARALLEL" V 1816 4772 60  0001 R CNN
-F 2 "" H 1950 5050 60  0001 C CNN
+F 2 "Mlab_Pin_Headers:Straight_2x03" H 1950 5050 60  0001 C CNN
 F 3 "" H 1950 5050 60  0000 C CNN
 	1    1950 4950
 	0    -1   -1   0   
@@ -1961,5 +1919,94 @@ F 2 "" H 4250 4350 50  0001 C CNN
 F 3 "" H 4250 4350 50  0001 C CNN
 	1    4250 4350
 	1    0    0    -1  
+$EndComp
+$Comp
+L MLAB_HEADER:HEADER_2x03 J31
+U 1 1 5B253FC7
+P 5900 6200
+F 0 "J31" H 5900 6441 60  0000 C CNN
+F 1 "HEADER_2x03" H 5900 6441 60  0001 C CNN
+F 2 "Mlab_Pin_Headers:Straight_2x03" H 5900 6300 60  0001 C CNN
+F 3 "" H 5900 6300 60  0000 C CNN
+	1    5900 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0101
+U 1 1 5B254901
+P 6400 6000
+F 0 "#PWR0101" H 6400 5850 50  0001 C CNN
+F 1 "VDD" H 6417 6173 50  0000 C CNN
+F 2 "" H 6400 6000 50  0001 C CNN
+F 3 "" H 6400 6000 50  0001 C CNN
+	1    6400 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5B254E96
+P 6250 6400
+F 0 "#PWR0102" H 6250 6150 50  0001 C CNN
+F 1 "GND" H 6255 6227 50  0000 C CNN
+F 2 "" H 6250 6400 50  0001 C CNN
+F 3 "" H 6250 6400 50  0001 C CNN
+	1    6250 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 6300 6250 6300
+Wire Wire Line
+	6250 6300 6250 6400
+Wire Wire Line
+	6150 6200 6400 6200
+Text Label 6400 6200 0    60   ~ 0
+PB5
+Text Label 5200 6100 0    60   ~ 0
+PB6
+Text Label 5200 6200 0    60   ~ 0
+PB7
+Text Label 5200 6300 0    60   ~ 0
+RST#
+Wire Wire Line
+	5200 6100 5650 6100
+Wire Wire Line
+	5200 6200 5650 6200
+Wire Wire Line
+	5200 6300 5650 6300
+Text Notes 5450 6100 0    60   ~ 0
+MISO
+Text Notes 5450 6200 0    60   ~ 0
+SCK
+Text Notes 6150 6100 0    60   ~ 0
+VTG
+Text Notes 6150 6200 0    60   ~ 0
+MOSI
+Wire Wire Line
+	6400 6100 6400 6000
+Wire Wire Line
+	6150 6100 6400 6100
+Wire Wire Line
+	3550 6900 3550 7500
+$Comp
+L Device:Crystal Y1
+U 1 1 5B257330
+P 2800 2300
+F 0 "Y1" H 2800 2568 50  0000 C CNN
+F 1 "16MHz" H 2800 2477 50  0000 C CNN
+F 2 "Mlab_XTAL:Crystal_HC49-U_Vertical" H 2800 2300 50  0001 C CNN
+F 3 "~" H 2800 2300 50  0001 C CNN
+	1    2800 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L MLAB_D:LM4041CIM3-1.2 U5
+U 1 1 5B291FC2
+P 1600 2400
+F 0 "U5" V 1653 2321 60  0000 R CNN
+F 1 "LM4041CIM3-1.2(neosazovat)" H 2200 2600 60  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1600 2800 60  0001 C CNN
+F 3 "" H 1600 2800 60  0001 C CNN
+	1    1600 2400
+	0    -1   -1   0   
 $EndComp
 $EndSCHEMATC
