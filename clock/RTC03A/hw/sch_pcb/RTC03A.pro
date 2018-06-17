@@ -1,4 +1,4 @@
-update=Po 23. dubna 2018, 20:46:37 CEST
+update=Po 18. června 2018, 01:17:33 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -29,7 +29,7 @@ LibDir=
 [schematic_editor]
 version=1
 PageLayoutDescrFile=pagelayout_mlab.kicad_wks
-PlotDirectoryName=
+PlotDirectoryName=../cam_profi/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=
