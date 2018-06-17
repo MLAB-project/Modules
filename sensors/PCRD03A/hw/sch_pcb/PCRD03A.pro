@@ -1,4 +1,4 @@
-update=Mon 20 Nov 2017 09:46:03 AM CET
+update=08.06.2018 17:20:02
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,16 +25,6 @@ version=1
 NetIExt=net
 [general]
 version=1
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
 [eeschema]
 version=1
 LibDir=/usr/share/kicad/library
@@ -84,3 +74,13 @@ LibName42=lib/ts5a4594
 LibName43=lib/lm2621
 LibName44=lib/tps6104
 LibName45=lib/lm4041
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=60
+ERC_TestSimilarLabels=1
