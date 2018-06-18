@@ -1,18 +1,24 @@
 {
     "wiki": "None", 
-    "status": "2", 
+    "status": 2, 
     "name": "WINDGAUGE02B", 
-    "short_en": "Anemometer", 
-    "image": "/doc/img/WINDGAUGE02A_QRcode.png", 
+    "parameters": [], 
+    "short_en": "Anemometer with RTC03A counter", 
+    "image_small": "/doc/img/render.jpgs", 
+    "image": "/doc/img/render.jpg", 
     "longname_cs": "WINDGAUGE02B", 
     "longname_en": "WINDGAUGE02B", 
-    "mark": "50.0", 
+    "mark": 50.0, 
     "ust": "None", 
     "doc_cs": "<p>None</p>", 
-    "short_cs": "Anemometr", 
+    "short_cs": "Anemometr s čítačem RTC03A", 
     "doc_en": "<p>None</p>", 
-    "root": "mechanical/WINDGAUGE02B",
-    "author[]": [], 
+    "_id": "WINDGAUGE02B", 
+    "root": "mechanical/WINDGAUGE02B", 
+    "author[]": [
+        "roman-dvorak", 
+        "ChroustJan"
+    ], 
     "category[]": [
         "mechanical", 
         "sensor"
