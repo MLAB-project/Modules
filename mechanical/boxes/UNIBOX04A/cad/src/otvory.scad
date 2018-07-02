@@ -8,7 +8,7 @@ include <otvory_conf.scad>
     1C) - Pro modul USBI2C01A
     1D) - Pro konektor MIC338
     1E) - Pro modul UNIPOWER02A
-    1F) - Pro modul I2CDIFF01A
+    1F) - Pro modul I2CDIFF01A a RJ45V01A
     1G) - Pro modul UNIPOWER03A
     1H) - Větrací otvor
         
