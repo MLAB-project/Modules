@@ -14,7 +14,7 @@ barva_plbase = "yellow";
 //Předni čeličko
 //------------------------------------------------------------
 
-vzdalenost_AL=9; //vzdalenost od hrany čelíčka k vrchní hraně ALbase 9
+vzdalenost_AL=8.3; //vzdalenost od hrany čelíčka k vrchní hraně ALbase 9
 
 difference() {
 color(barva_sloupku)
@@ -26,13 +26,14 @@ UNIBOX04A_D01();
 posun_modulu_der_x=0;
 rotate(a=[-90,0,0])
 translate([posun_modulu_der_x*roztec_der-roztec_der*(pocet_der_osa_x-1)/2,0,-rozmer_y/2+vzdalenost_AL])
-IR(sila,rozmer_y-vzdalenost_AL);
+UNIPOWER02A(2*sila,roztec_der);
+   
     
-posun_modulu_der_x1=15;
+posun_modulu_der_x1=4;
 rotate(a=[-90,0,0])
 translate([posun_modulu_der_x1*roztec_der-roztec_der*(pocet_der_osa_x-1)/2,0,-rozmer_y/2+vzdalenost_AL])
 
-LCD(2*sila,roztec_der,vzdalenost_AL); 
+USBI2C01A(2*sila,roztec_der);
     
     
  posun_modulu_der_x2=13;
