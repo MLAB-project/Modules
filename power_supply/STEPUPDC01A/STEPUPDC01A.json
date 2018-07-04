@@ -1,0 +1,34 @@
+{
+    "short_en": "", 
+    "status": 0, 
+    "name": "STEPUPDC01A", 
+    "parameters": [
+        {
+            "name": "$io", 
+            "description_cs": "", 
+            "description_en": "", 
+            "name_cs": "", 
+            "value": "MAX5026", 
+            "name_en": "", 
+            "unit": ""
+        }
+    ], 
+    "wiki": "", 
+    "longname_en": "", 
+    "image": "/doc/img/STEPUPDC01A_QRcode.jpg", 
+    "short_cs": "Vin 3 V - 11 V, Vout do 36 V, maximální výstupní výkon 120mW", 
+    "image_small": ".jpgs", 
+    "mark": 0.0, 
+    "ust": "", 
+    "doc_cs": "", 
+    "longname_cs": "Step-Up DC/DC", 
+    "doc_en": "", 
+    "_id": "STEPUPDC01A", 
+    "root": "power_supply/STEPUPDC01A", 
+    "author[]": [
+        "ChroustJan"
+    ], 
+    "category[]": [
+        "powersupply"
+    ]
+}
