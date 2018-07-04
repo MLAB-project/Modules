@@ -57,6 +57,9 @@ Zapojení zesilovače je realizováno na plošném spoji materiálu FR4. Plošn�
 
 Zapojení modulu je následující
 
+\includepdf[pages={1},landscape=true]{../../sch/LNA.pdf}
+
+
 \subsection{Odrušení}
 
 Zesilovač musí být nutně umístěn v plechové stínící krabičce, aby nemohlo dojít k jeho rozkmitání signálem vyzařovaným do antény. Taktéž kovová krabička zabezpečuje vyšší kvalitu signálu na výstupu zesilovače. 
@@ -64,7 +67,7 @@ Zesilovač musí být nutně umístěn v plechové stínící krabičce, aby nem
 \subsection{Mechanická konstrukce}
 
 U zesilovače se předpokládá jeho umístění do plechové pocínované stínící krabičky ve které je zesilovač zaletován za konektory. 
-Otvory pro konektory se do krabičky vytváří lochovacími kleštěmi s průměrem nástroje 6.35mm. 
+Otvory pro konektory se do krabičky vytváří lochovacími kleštěmi s průměrem nástroje 6.35mm.  Pro lochování děr je vytvořena šablona \textit{hole\_pattern.pdf}
 
 \section{Výroba a testování}
 
@@ -77,7 +80,19 @@ Následně po úplném zaletování cívky je možné odzkratovat, vstup a výst
 
 \subsubsection{Osazení}
 
-Vzduchová cívka pro naladění na 143 MHz vychází 7 závitů z měděného drátu průměru 0,5 mm motáno na průměr tyčky 4mm (vrták). Cívka je roztažená tak jak je vidět na fotografii. Kondenzátory C1 a C2 jsou 8,2 pF. Zpětná vazba u LNA není potřeba, pouze zvyšuje šumové číslo a snižuje zisk asi o 1dB. Trim je nahrazen odporem 45 $/Omega$ a celkový proud celým LNA by měl být kolem 153mA, potom je proud Source tranzistoru asi 135mA. 
+Trimr P1 se neosazuje, místo toho je nahrazen kombinací rezistorů R9, R10 a R11, které jsou osazeny na jeho pozici. Osazení rezistorů na místo trimru je vidět na obrázku \ref{osazeni}.
+
+
+\begin{figure} [htbp]
+\begin{center}
+\includegraphics [width=130mm] {../img/LNA01A_bottom_big.jpg}
+\caption{Fotografie osazení rezistorů na místo trimru.}
+\label{osazeni}
+\end{center}
+\end{figure}
+
+
+Vzduchová cívka L3 pro naladění na 143 MHz vychází 7 závitů z měděného drátu průměru 0,5 mm motáno na průměr tyčky 4mm (vrták). Cívka je roztažená tak jak je vidět na fotografii. Kondenzátory C1 a C2 jsou 8,2 pF. Zpětná vazba u LNA není potřeba, pouze zvyšuje šumové číslo a snižuje zisk asi o 1dB. Trim je nahrazen odporem 45 $/Omega$ a celkový proud celým LNA by měl být kolem 153mA, potom je proud Source tranzistoru asi 135mA. 
 
 \newpage
 
@@ -97,27 +112,35 @@ Vzduchová cívka pro naladění na 143 MHz vychází 7 závitů z měděného d
 \hline 
 Počet & Označení & Typ  & Pouzdro  \\ 
 \hline 
-7	&	C1,C2,C5,C6,C10,C11,C14	&	C0805	&	100nF	\\
-2	&	C3,C4	&	ELYTC	&	47uF	\\
-1	&	C7	&	C0805	&	68pF	\\
-1	&	C8	&	C0805	&	1nF	\\
-1	&	C9	&	C0805	&	1uF	\\
-2	&	C12,C13	&	ELYTB	&	10uF/16V	\\
-3	&	D1,D2,D3	&	SMA	&	M4	\\
-2	&	D4,D5	&	SOT23	&	BAR43SSMD	\\
-1	&	J1	&	JUMP2X4	&	JUMP2X4	\\
-2	&	J2,J4	&	SMA6251A13G50	&	SMA6251A13G50	\\
-1	&	J3	&	JUMP2X3	&	JUMP2X3	\\
-1	&	J5	&	JUMP3	&	Power Bypass	\\
-3	&	L1,L2,L3	&	R0805	&	BLM21PG300SN1D	\\
-3	&	L4,L5,L6	&	L1812	&	CC453232-1R2KL	\\
-1	&	R1	&	R1206	&	10R/0R	\\
-1	&	U1	&	TO252	&	LM78M05CDT	\\
-1	&	U2	&	SOT89	&	ADL5536	\\
+1	&	C1	&	47uF	&	ELYT-C	\\
+2	&	C2,C13	&	100nF	&	C0805	\\
+2	&	C3,C12	&	100pF	&	C0805	\\
+5	&	C4,C9,C11,C14	&	1nF	&	C0805	\\
+1	&	C8	&	-	&		\\
+1	&	C5	&	10nF	&	C0805	\\
+1	&	C6	&	8,2pF	&	C0805	\\
+1	&	C7	&	5,6pF	&	C0805	\\
+1	&	C10	&	5pF	&	C0805	\\
+1	&	D1	&	M4	&	SMA	\\
+2	&	J1,J2	&	SMA6251A13G50	&		\\
+3	&	L1,L2,L4	&	10uH 160mA	&	L1812	\\
+1	&	L3	&	L	&	7x 0.5mm 4mm	\\
+1	&	P1	&	-	&		\\
+1	&	Q1	&	ATF53189	&	SOT89	\\
+1	&	R1	&	33	&	R0805	\\
+2	&	R2,R3	&	150	&	R0805	\\
+1	&	R4	&	-	&		\\
+1	&	R5	&	4R7	&	R1206	\\
+1	&	R6	&	330	&	R0805	\\
+1	&	R7	&	68	&	R0805	\\
+1	&	R8	&	47	&	R0805	\\
+1	&	R9	&	180	&	R0805	\\
+1	&	R10,R11	&	120	&	R0805	\\
+1	&	U1	&	LM78M05CDT	&	TO252	\\
 \hline 
 \end{tabular}
 \end{center}
-\caption{Seznam součástek pro všechny varianty osazení plošného spoje.}
+\caption{Seznam součástek pro osazení plošného spoje.}
 \label{seznam_soucastek}
 \end{table}
 \end{savenotes}
@@ -137,7 +160,7 @@ Součástí PySDR je detekční skript, který umožňuje přijímač přelaďov
 
 \begin{thebibliography}{99}
 \bibitem{DR2G}{Původní konstrukce} 
-\href{http:// odkaz na nejakou zajimavou konstrukci}{odkaz na nejakou zajimavou konstrukci}
+\href{http://}{Původní konstrukce LNA}
 
 \end{thebibliography}
 \end{document}
