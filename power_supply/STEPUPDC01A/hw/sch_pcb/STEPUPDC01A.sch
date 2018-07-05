@@ -58,32 +58,6 @@ F 3 "" H 10800 700 60  0000 C CNN
 	1    10800 700 
 	0    -1   -1   0   
 $EndComp
-$Comp
-L power:GND #PWR03
-U 1 1 549D770F
-P 11000 650
-F 0 "#PWR03" H 11000 400 60  0001 C CNN
-F 1 "GND" H 11000 500 60  0000 C CNN
-F 2 "" H 11000 650 60  0000 C CNN
-F 3 "" H 11000 650 60  0000 C CNN
-	1    11000 650 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	11000 650  11000 600 
-Wire Wire Line
-	11000 600  10800 600 
-Wire Wire Line
-	10200 600  10200 650 
-Wire Wire Line
-	10400 650  10400 600 
-Connection ~ 10400 600 
-Wire Wire Line
-	10600 650  10600 600 
-Connection ~ 10600 600 
-Wire Wire Line
-	10800 650  10800 600 
-Connection ~ 10800 600 
 Wire Notes Line
 	10100 550  11100 550 
 Wire Notes Line
@@ -105,12 +79,6 @@ F 3 "" V 3600 3750 60  0000 C CNN
 	1    3600 3750
 	0    -1   1    0   
 $EndComp
-Wire Wire Line
-	10400 600  10200 600 
-Wire Wire Line
-	10600 600  10400 600 
-Wire Wire Line
-	10800 600  10600 600 
 $Comp
 L MLAB_IO:MAX5026 U1
 U 1 1 5B3B41E8

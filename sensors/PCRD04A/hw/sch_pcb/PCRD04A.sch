@@ -120,13 +120,7 @@ Wire Wire Line
 	10650 1850 10650 1800
 Connection ~ 10650 1800
 Wire Notes Line
-	9950 1750 10950 1750
-Wire Notes Line
 	10950 1750 10950 2150
-Wire Notes Line
-	10950 2150 9950 2150
-Wire Notes Line
-	9950 2150 9950 1750
 Text Notes 9950 2150 0    60   ~ 0
 MOUNTING HOLES
 $Comp
@@ -287,7 +281,7 @@ U 1 1 5B3A05A5
 P 1250 4550
 F 0 "D2" H 1200 4845 50  0000 C CNN
 F 1 "D_Photo" H 1200 4754 50  0000 C CNN
-F 2 "" H 1200 4550 50  0001 C CNN
+F 2 "Mlab_D:HAMAMATSU_S2744-09" H 1200 4550 50  0001 C CNN
 F 3 "~" H 1200 4550 50  0001 C CNN
 	1    1250 4550
 	1    0    0    -1  
@@ -299,7 +293,7 @@ Wire Wire Line
 Wire Wire Line
 	800  4600 800  4550
 Wire Wire Line
-	1350 4550 1900 4550
+	1350 4550 1400 4550
 Wire Wire Line
 	1900 4550 1900 4750
 Wire Wire Line
@@ -1366,7 +1360,7 @@ F 3 "" H 5300 1950 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	800  4550 1050 4550
+	800  4550 1000 4550
 Text Label 5700 1300 0    60   ~ 0
 REF
 $Comp
@@ -1477,4 +1471,93 @@ Ubiasout
 Wire Wire Line
 	800  4550 800  4450
 Connection ~ 800  4550
+$Comp
+L MLAB_HEADER:HEADER_1x02 J9
+U 1 1 5B43C736
+P 750 5500
+F 0 "J9" V 668 5638 60  0000 L CNN
+F 1 "HEADER_1x02" V 616 5372 60  0001 R CNN
+F 2 "Mlab_Pin_Headers:Straight_1x02" H 750 5550 60  0001 C CNN
+F 3 "" H 750 5550 60  0000 C CNN
+	1    750  5500
+	0    1    1    0   
+$EndComp
+Connection ~ 800  4950
+Wire Wire Line
+	700  4550 800  4550
+Text Label 700  5300 1    60   ~ 0
+BAT+
+Wire Wire Line
+	700  4550 700  5300
+Wire Wire Line
+	800  4950 800  5300
+Text Label 800  5300 1    60   ~ 0
+BAT-
+$Comp
+L MLAB_HEADER:HEADER_1x02 J10
+U 1 1 5B4670EE
+P 1200 3900
+F 0 "J10" V 1119 3772 60  0000 R CNN
+F 1 "HEADER_1x02" V 1066 3772 60  0001 R CNN
+F 2 "Mlab_Pin_Headers:Straight_2x02" H 1200 3950 60  0001 C CNN
+F 3 "" H 1200 3950 60  0000 C CNN
+	1    1200 3900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1150 4100 1000 4100
+Wire Wire Line
+	1000 4100 1000 4550
+Connection ~ 1000 4550
+Wire Wire Line
+	1000 4550 1050 4550
+Wire Wire Line
+	1250 4100 1400 4100
+Wire Wire Line
+	1400 4100 1400 4550
+Connection ~ 1400 4550
+Wire Wire Line
+	1400 4550 1900 4550
+Text Label 1400 4200 1    60   ~ 0
+A
+Text Label 1000 4200 1    60   ~ 0
+K
+$Comp
+L MLAB_MECHANICAL:HOLE M5
+U 1 1 5B47DB0E
+P 9650 1900
+F 0 "M5" V 9550 1900 60  0000 C CNN
+F 1 "HOLE" H 9650 1800 60  0001 C CNN
+F 2 "Mlab_Mechanical:MountingHole_3mm" H 9650 1900 60  0001 C CNN
+F 3 "" H 9650 1900 60  0000 C CNN
+	1    9650 1900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MLAB_MECHANICAL:HOLE M6
+U 1 1 5B47DBA2
+P 9850 1900
+F 0 "M6" V 9750 1900 60  0000 C CNN
+F 1 "HOLE" H 9850 1800 60  0001 C CNN
+F 2 "Mlab_Mechanical:MountingHole_3mm" H 9850 1900 60  0001 C CNN
+F 3 "" H 9850 1900 60  0000 C CNN
+	1    9850 1900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9650 1850 9650 1800
+Wire Wire Line
+	9650 1800 9850 1800
+Connection ~ 10050 1800
+Wire Wire Line
+	9850 1850 9850 1800
+Connection ~ 9850 1800
+Wire Wire Line
+	9850 1800 10050 1800
+Wire Notes Line
+	9550 1750 9550 2150
+Wire Notes Line
+	9550 1750 10950 1750
+Wire Notes Line
+	9550 2150 10950 2150
 $EndSCHEMATC
