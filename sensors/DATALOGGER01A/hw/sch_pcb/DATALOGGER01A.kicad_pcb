@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew "(2018-02-10 revision a04965c36)-makepkg")
+(kicad_pcb (version 20171130) (host pcbnew "(5.0.0-rc2-18-g3893c43eb)")
 
   (general
     (thickness 1.6)
@@ -21,8 +21,8 @@
   )
 
   (layers
-    (0 F.Cu signal)
-    (31 B.Cu signal)
+    (0 F.Cu signal hide)
+    (31 B.Cu signal hide)
     (34 B.Paste user)
     (36 B.SilkS user)
     (37 F.SilkS user)
@@ -32,7 +32,7 @@
   )
 
   (setup
-    (last_trace_width 2)
+    (last_trace_width 0.25)
     (user_trace_width 0.3)
     (user_trace_width 0.4)
     (user_trace_width 0.5)
@@ -2917,7 +2917,7 @@
       (net 1 GND))
   )
 
-  (module Mlab_R:SMD-1210 (layer B.Cu) (tedit 54799812) (tstamp 5B40E008)
+  (module Mlab_R:SMD-1210 (layer B.Cu) (tedit 5B443A84) (tstamp 5B40E008)
     (at 38.735 -76.835)
     (tags "CMS SM")
     (path /5B1F6A96)
@@ -2925,7 +2925,7 @@
     (fp_text reference L1 (at -0.127 0.635) (layer B.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.127)) (justify mirror))
     )
-    (fp_text value "10uH - LQH32CN100K23L" (at -0.127 -0.762) (layer B.SilkS)
+    (fp_text value "10uH - LQH32CN100K23L" (at -0.127 -0.762) (layer B.SilkS) hide
       (effects (font (size 0.762 0.762) (thickness 0.127)) (justify mirror))
     )
     (fp_circle (center -2.413 -1.524) (end -2.286 -1.397) (layer B.SilkS) (width 0.15))
