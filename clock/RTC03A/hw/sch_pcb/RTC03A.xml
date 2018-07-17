@@ -2,8 +2,8 @@
 <export version="D">
   <design>
     <source>/home/roman/repos/Modules/clock/RTC03A/hw/sch_pcb/RTC03A.sch</source>
-    <date>Čt 16. listopad 2017, 23:46:36 CET</date>
-    <tool>Eeschema no-vcs-found-ad9916e~61~ubuntu16.04.1</tool>
+    <date>Út 17. července 2018, 02:50:37 CEST</date>
+    <tool>Eeschema 6.0.0-rc1-unknown-1a22918~65~ubuntu18.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>RTC03A</title>
@@ -22,197 +22,248 @@
     <comp ref="M1">
       <value>HOLE</value>
       <footprint>Mlab_Mechanical:MountingHole_3mm</footprint>
-      <libsource lib="MLAB_MECHANICAL" part="HOLE"/>
+      <libsource lib="MLAB_MECHANICAL" part="HOLE" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>549D7549</tstamp>
     </comp>
     <comp ref="M2">
       <value>HOLE</value>
       <footprint>Mlab_Mechanical:MountingHole_3mm</footprint>
-      <libsource lib="MLAB_MECHANICAL" part="HOLE"/>
+      <libsource lib="MLAB_MECHANICAL" part="HOLE" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>549D7628</tstamp>
     </comp>
     <comp ref="M3">
       <value>HOLE</value>
       <footprint>Mlab_Mechanical:MountingHole_3mm</footprint>
-      <libsource lib="MLAB_MECHANICAL" part="HOLE"/>
+      <libsource lib="MLAB_MECHANICAL" part="HOLE" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>549D7646</tstamp>
     </comp>
     <comp ref="M4">
       <value>HOLE</value>
       <footprint>Mlab_Mechanical:MountingHole_3mm</footprint>
-      <libsource lib="MLAB_MECHANICAL" part="HOLE"/>
+      <libsource lib="MLAB_MECHANICAL" part="HOLE" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>549D7665</tstamp>
     </comp>
     <comp ref="C4">
       <value>100nF</value>
       <footprint>Mlab_R:SMD-0805</footprint>
-      <libsource lib="device" part="C_Small"/>
+      <libsource lib="RTC03A-rescue" part="C_Small" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5562302C</tstamp>
     </comp>
     <comp ref="U1">
       <value>PCF8583</value>
       <footprint>Mlab_IO:SO-8</footprint>
-      <libsource lib="MLAB_IO" part="PCF8583"/>
+      <libsource lib="RTC03A-rescue" part="PCF8583" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59FF55BA</tstamp>
     </comp>
     <comp ref="J4">
       <value>JUMP_5X2</value>
       <footprint>Mlab_Pin_Headers:Straight_2x05</footprint>
-      <libsource lib="MLAB_Jumpers" part="JUMP_5X2"/>
+      <libsource lib="MLAB_Jumpers" part="JUMP_5X2" description="MLAB modified doubled pinheader connector"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59FF8AD4</tstamp>
     </comp>
     <comp ref="Y1">
       <value>Crystal</value>
       <footprint>Mlab_XTAL:Crystal_HC49-U_Vertical</footprint>
-      <libsource lib="device" part="Crystal"/>
+      <libsource lib="RTC03A-rescue" part="Crystal" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59FF900D</tstamp>
     </comp>
     <comp ref="J3">
       <value>JUMP_2x1</value>
       <footprint>Mlab_Pin_Headers:Straight_2x01</footprint>
-      <libsource lib="MLAB_Jumpers" part="JUMP_2x1"/>
+      <libsource lib="MLAB_Jumpers" part="JUMP_2x1" description="MLAB modified doubled pinheader connector"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59FF9561</tstamp>
     </comp>
     <comp ref="C1">
       <value>10pF</value>
-      <footprint>Capacitors_SMD:C_0805</footprint>
-      <libsource lib="device" part="C"/>
+      <footprint>Mlab_R:SMD-0805</footprint>
+      <libsource lib="RTC03A-rescue" part="C" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59FF9DBC</tstamp>
     </comp>
     <comp ref="C2">
       <value>10pF</value>
-      <footprint>Capacitors_SMD:C_0805</footprint>
-      <libsource lib="device" part="C"/>
+      <footprint>Mlab_R:SMD-0805</footprint>
+      <libsource lib="RTC03A-rescue" part="C" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59FF9E5D</tstamp>
     </comp>
     <comp ref="R3">
       <value>10k</value>
       <footprint>Mlab_R:SMD-0805</footprint>
-      <libsource lib="device" part="R"/>
+      <libsource lib="RTC03A-rescue" part="R" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59FFB143</tstamp>
     </comp>
     <comp ref="R2">
       <value>10k</value>
       <footprint>Mlab_R:SMD-0805</footprint>
-      <libsource lib="device" part="R"/>
+      <libsource lib="RTC03A-rescue" part="R" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59FFB1AA</tstamp>
-    </comp>
-    <comp ref="J1">
-      <value>JUMP_2X2</value>
-      <footprint>Mlab_Pin_Headers:Straight_2x02</footprint>
-      <libsource lib="MLAB_Jumpers" part="JUMP_2X2"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>59FFB788</tstamp>
     </comp>
     <comp ref="J5">
       <value>JUMP_3X2</value>
       <footprint>Mlab_Pin_Headers:Straight_2x03</footprint>
-      <libsource lib="MLAB_Jumpers" part="JUMP_3X2"/>
+      <libsource lib="MLAB_Jumpers" part="JUMP_3X2" description="MLAB modified doubled pinheader connector"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59FFBC49</tstamp>
     </comp>
     <comp ref="C3">
       <value>10uF</value>
       <footprint>Mlab_R:SMD-0805</footprint>
-      <libsource lib="device" part="C_Small"/>
+      <libsource lib="RTC03A-rescue" part="C_Small" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59FFC6A8</tstamp>
     </comp>
     <comp ref="D1">
-      <value>ZENER-3.6V</value>
+      <value>ZENER-5.6V</value>
       <footprint>Mlab_D:Diode-MiniMELF_Standard</footprint>
-      <libsource lib="MLAB_D" part="D_ZENER"/>
+      <libsource lib="MLAB_D" part="D_ZENER" description="Diode zener"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59FFCB7D</tstamp>
     </comp>
-    <comp ref="J2">
-      <value>CONN_3</value>
-      <footprint>Mlab_Pin_Headers:Straight_1x03</footprint>
-      <libsource lib="MLAB_Jumpers" part="CONN_3"/>
+    <comp ref="U2">
+      <value>74AHC1G14GV</value>
+      <footprint>Package_SO:TSOP-5_1.65x3.05mm_P0.95mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74HC14</datasheet>
+      <libsource lib="74xx" part="74HC14" description="Hex inverter schmitt trigger"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>59FFD9B8</tstamp>
+      <tstamp>5B1B4DEA</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>LED</value>
+      <footprint>Mlab_D:LED_1206</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="LED generic"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B1BC617</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>JUMP_2x1</value>
+      <footprint>Mlab_Pin_Headers:Straight_1x02</footprint>
+      <libsource lib="MLAB_Jumpers" part="JUMP_2x1" description="MLAB modified doubled pinheader connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B1BF918</tstamp>
     </comp>
     <comp ref="R1">
       <value>-</value>
       <footprint>Mlab_R:SMD-0805</footprint>
-      <libsource lib="device" part="R"/>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5A002631</tstamp>
+      <tstamp>5B1C4727</tstamp>
     </comp>
     <comp ref="J6">
       <value>JUMP2_2x1</value>
-      <footprint>Mlab_Pin_Headers:Straight_1x02</footprint>
-      <libsource lib="MLAB_Jumpers" part="JUMP2_2x1"/>
+      <footprint>Mlab_Pin_Headers:Straight_2x01</footprint>
+      <libsource lib="MLAB_Jumpers" part="JUMP2_2x1" description="MLAB modified doubled pinheader connector"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5A01C42A</tstamp>
+      <tstamp>5B1C8129</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>R</value>
+      <footprint>Mlab_R:SMD-0805</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B1D2DC1</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>10k</value>
+      <footprint>Mlab_R:SMD-0805</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B2680DA</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>CONN1_2</value>
+      <footprint>Mlab_Pin_Headers:Straight_2x01</footprint>
+      <libsource lib="MLAB_Jumpers" part="CONN1_2" description="Symbole general de connecteur"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B2682FB</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>-</value>
+      <footprint>Mlab_R:SMD-0805</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B26E741</tstamp>
     </comp>
   </components>
   <libparts>
-    <libpart lib="device" part="C">
-      <description>Unpolarized capacitor</description>
+    <libpart lib="74xx" part="74HCT04">
+      <aliases>
+        <alias>74HC14</alias>
+        <alias>74HC04</alias>
+        <alias>74LS14</alias>
+      </aliases>
+      <description>hex inverter</description>
+      <docs>http://www.nxp.com/documents/data_sheet/74HC_HCT04.pdf</docs>
       <footprints>
-        <fp>C_*</fp>
+        <fp>DIP?14*</fp>
       </footprints>
       <fields>
-        <field name="Reference">C</field>
-        <field name="Value">C</field>
+        <field name="Reference">U</field>
+        <field name="Value">74HCT04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="output"/>
+        <pin num="3" name="~" type="input"/>
+        <pin num="4" name="~" type="output"/>
+        <pin num="5" name="~" type="input"/>
+        <pin num="6" name="~" type="output"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="~" type="output"/>
+        <pin num="9" name="~" type="input"/>
+        <pin num="10" name="~" type="output"/>
+        <pin num="11" name="~" type="input"/>
+        <pin num="12" name="~" type="output"/>
+        <pin num="13" name="~" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>LED generic</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
       </fields>
       <pins>
         <pin num="1" name="~" type="passive"/>
         <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="MLAB_Jumpers" part="CONN_3">
-      <description>Symbole general de connecteur</description>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">CONN_3</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="PM" type="passive"/>
-        <pin num="3" name="P3" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="C_Small">
-      <description>Unpolarized capacitor</description>
-      <footprints>
-        <fp>C_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">C</field>
-        <field name="Value">C_Small</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="Crystal">
-      <description>Two pin crystal</description>
-      <footprints>
-        <fp>Crystal*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">Y</field>
-        <field name="Value">Crystal</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="MLAB_D" part="D_ZENER">
@@ -231,13 +282,15 @@
         <pin num="2" name="A" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="MLAB_MECHANICAL" part="HOLE">
+    <libpart lib="MLAB_Jumpers" part="CONN1_2">
+      <description>Symbole general de connecteur</description>
       <fields>
-        <field name="Reference">M</field>
-        <field name="Value">HOLE</field>
+        <field name="Reference">J</field>
+        <field name="Value">CONN1_2</field>
       </fields>
       <pins>
-        <pin num="1" name="~" type="input"/>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="PM" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="MLAB_Jumpers" part="JUMP2_2x1">
@@ -249,19 +302,6 @@
       <pins>
         <pin num="1" name="1" type="passive"/>
         <pin num="2" name="1" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="MLAB_Jumpers" part="JUMP_2X2">
-      <description>MLAB modified doubled pinheader connector</description>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">JUMP_2X2</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="1" type="passive"/>
-        <pin num="3" name="4" type="passive"/>
-        <pin num="4" name="4" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="MLAB_Jumpers" part="JUMP_2x1">
@@ -309,8 +349,55 @@
         <pin num="10" name="10" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="MLAB_IO" part="PCF8583">
-      <description>PCF8583 RTC componet with counting mode</description>
+    <libpart lib="MLAB_MECHANICAL" part="HOLE">
+      <fields>
+        <field name="Reference">M</field>
+        <field name="Value">HOLE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="RTC03A-rescue" part="C">
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RTC03A-rescue" part="C_Small">
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RTC03A-rescue" part="Crystal">
+      <footprints>
+        <fp>Crystal*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">Crystal</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RTC03A-rescue" part="PCF8583">
       <footprints>
         <fp>DIP8</fp>
         <fp>SO8</fp>
@@ -331,8 +418,7 @@
         <pin num="8" name="VDD" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="R">
-      <description>Resistor</description>
+    <libpart lib="RTC03A-rescue" part="R">
       <footprints>
         <fp>R_*</fp>
         <fp>R_*</fp>
@@ -348,97 +434,111 @@
     </libpart>
   </libparts>
   <libraries>
+    <library logical="74xx">
+      <uri>/usr/share/kicad/library/74xx.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/library/Device.lib</uri>
+    </library>
+    <library logical="MLAB_D">
+      <uri>/home/roman/repos/kicad-mlab/symbols/MLAB_D.lib</uri>
+    </library>
     <library logical="MLAB_Jumpers">
       <uri>/home/roman/repos/kicad-mlab/symbols/MLAB_Jumpers.lib</uri>
     </library>
     <library logical="MLAB_MECHANICAL">
       <uri>/home/roman/repos/kicad-mlab/symbols/MLAB_MECHANICAL.lib</uri>
     </library>
-    <library logical="MLAB_D">
-      <uri>/home/roman/repos/kicad-mlab/symbols/MLAB_D.lib</uri>
-    </library>
-    <library logical="MLAB_IO">
-      <uri>/home/roman/repos/kicad-mlab/symbols/MLAB_IO.lib</uri>
-    </library>
-    <library logical="device">
-      <uri>/usr/share/kicad/library/device.lib</uri>
+    <library logical="RTC03A-rescue">
+      <uri>/home/roman/repos/Modules/clock/RTC03A/hw/sch_pcb/RTC03A-rescue.lib</uri>
     </library>
   </libraries>
   <nets>
-    <net code="1" name="Net-(J4-Pad3)">
-      <node ref="U1" pin="5"/>
-      <node ref="R3" pin="2"/>
-      <node ref="J4" pin="4"/>
-      <node ref="J4" pin="3"/>
-    </net>
-    <net code="2" name="Net-(C2-Pad1)">
-      <node ref="J1" pin="2"/>
-      <node ref="J1" pin="1"/>
-      <node ref="Y1" pin="1"/>
-      <node ref="U1" pin="2"/>
-      <node ref="C2" pin="1"/>
-    </net>
-    <net code="3" name="Net-(C1-Pad1)">
-      <node ref="U1" pin="1"/>
-      <node ref="Y1" pin="2"/>
-      <node ref="J1" pin="3"/>
-      <node ref="J1" pin="4"/>
-      <node ref="J6" pin="1"/>
-      <node ref="C1" pin="1"/>
-    </net>
-    <net code="4" name="GND">
-      <node ref="J4" pin="9"/>
-      <node ref="J4" pin="10"/>
-      <node ref="M1" pin="1"/>
-      <node ref="J4" pin="2"/>
-      <node ref="J4" pin="1"/>
-      <node ref="C1" pin="2"/>
+    <net code="1" name="GND">
       <node ref="C4" pin="2"/>
-      <node ref="C2" pin="2"/>
-      <node ref="U1" pin="4"/>
       <node ref="M4" pin="1"/>
       <node ref="M3" pin="1"/>
       <node ref="M2" pin="1"/>
-      <node ref="J5" pin="6"/>
-      <node ref="C3" pin="2"/>
-      <node ref="D1" pin="2"/>
-      <node ref="J2" pin="1"/>
+      <node ref="M1" pin="1"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="J4" pin="2"/>
+      <node ref="U1" pin="4"/>
+      <node ref="J4" pin="10"/>
+      <node ref="J4" pin="9"/>
+      <node ref="D2" pin="1"/>
+      <node ref="R6" pin="2"/>
+      <node ref="R5" pin="2"/>
       <node ref="J5" pin="5"/>
+      <node ref="J4" pin="1"/>
       <node ref="J5" pin="2"/>
       <node ref="J5" pin="1"/>
+      <node ref="D1" pin="2"/>
+      <node ref="C3" pin="2"/>
+      <node ref="J5" pin="6"/>
     </net>
-    <net code="5" name="VCC">
-      <node ref="U1" pin="8"/>
-      <node ref="R3" pin="1"/>
-      <node ref="R2" pin="1"/>
-      <node ref="J5" pin="4"/>
-      <node ref="J5" pin="3"/>
-      <node ref="J4" pin="5"/>
-      <node ref="J4" pin="6"/>
-      <node ref="J2" pin="3"/>
-      <node ref="D1" pin="1"/>
-      <node ref="C3" pin="1"/>
-      <node ref="C4" pin="1"/>
-      <node ref="R1" pin="1"/>
+    <net code="2" name="Net-(J6-Pad2)">
+      <node ref="R4" pin="1"/>
+      <node ref="J6" pin="2"/>
+      <node ref="U2" pin="2"/>
     </net>
-    <net code="6" name="Net-(J4-Pad7)">
-      <node ref="J4" pin="8"/>
-      <node ref="J4" pin="7"/>
+    <net code="3" name="Net-(D2-Pad2)">
+      <node ref="R4" pin="2"/>
+      <node ref="D2" pin="2"/>
+    </net>
+    <net code="4" name="/COUNT">
+      <node ref="U2" pin="1"/>
+      <node ref="R6" pin="1"/>
+      <node ref="R1" pin="2"/>
+      <node ref="J7" pin="2"/>
+      <node ref="J7" pin="1"/>
+    </net>
+    <net code="5" name="Net-(J4-Pad7)">
       <node ref="U1" pin="6"/>
       <node ref="R2" pin="2"/>
+      <node ref="J4" pin="7"/>
+      <node ref="J4" pin="8"/>
     </net>
-    <net code="7" name="Net-(J2-Pad2)">
-      <node ref="J2" pin="2"/>
-      <node ref="U1" pin="3"/>
+    <net code="6" name="Net-(C1-Pad1)">
+      <node ref="J6" pin="1"/>
+      <node ref="U1" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="Y1" pin="2"/>
     </net>
-    <net code="8" name="Net-(J6-Pad2)">
-      <node ref="J6" pin="2"/>
-      <node ref="R1" pin="2"/>
-    </net>
-    <net code="9" name="Net-(J3-Pad1)">
+    <net code="7" name="Net-(J3-Pad1)">
+      <node ref="U1" pin="7"/>
       <node ref="J3" pin="2"/>
       <node ref="J3" pin="1"/>
-      <node ref="U1" pin="7"/>
+    </net>
+    <net code="8" name="Net-(C2-Pad1)">
+      <node ref="U1" pin="2"/>
+      <node ref="C2" pin="1"/>
+      <node ref="Y1" pin="1"/>
+    </net>
+    <net code="9" name="Net-(J2-Pad1)">
+      <node ref="R5" pin="1"/>
+      <node ref="J2" pin="1"/>
+      <node ref="U1" pin="3"/>
+    </net>
+    <net code="10" name="VCC">
+      <node ref="J5" pin="4"/>
+      <node ref="J5" pin="3"/>
+      <node ref="J2" pin="2"/>
+      <node ref="D1" pin="1"/>
+      <node ref="R2" pin="1"/>
+      <node ref="U1" pin="8"/>
+      <node ref="J4" pin="6"/>
+      <node ref="J4" pin="5"/>
+      <node ref="R1" pin="1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="C4" pin="1"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="11" name="Net-(J4-Pad3)">
+      <node ref="J4" pin="3"/>
+      <node ref="J4" pin="4"/>
+      <node ref="U1" pin="5"/>
+      <node ref="R3" pin="2"/>
     </net>
   </nets>
 </export>
