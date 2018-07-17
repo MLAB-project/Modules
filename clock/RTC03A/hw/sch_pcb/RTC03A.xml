@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/roman/repos/Modules/clock/RTC03A/hw/sch_pcb/RTC03A.sch</source>
-    <date>Út 17. července 2018, 02:50:37 CEST</date>
+    <date>Út 17. července 2018, 02:54:15 CEST</date>
     <tool>Eeschema 6.0.0-rc1-unknown-1a22918~65~ubuntu18.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -57,6 +57,9 @@
     <comp ref="U1">
       <value>PCF8583</value>
       <footprint>Mlab_IO:SO-8</footprint>
+      <fields>
+        <field name="UST_id">PCF8583T/5,518</field>
+      </fields>
       <libsource lib="RTC03A-rescue" part="PCF8583" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59FF55BA</tstamp>
@@ -135,6 +138,9 @@
       <value>74AHC1G14GV</value>
       <footprint>Package_SO:TSOP-5_1.65x3.05mm_P0.95mm</footprint>
       <datasheet>http://www.ti.com/lit/gpn/sn74HC14</datasheet>
+      <fields>
+        <field name="UST_id">74AHC1G14GV</field>
+      </fields>
       <libsource lib="74xx" part="74HC14" description="Hex inverter schmitt trigger"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B1B4DEA</tstamp>
