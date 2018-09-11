@@ -1,8 +1,8 @@
-use <SRC/AWSCREEN01A_D02.scad>
-use <SRC/AWSCREEN01A_D03.scad>
-use <SRC/AWSCREEN01A_D04.scad>
-use <SRC/AWSCREEN01A_D05.scad>
-use <SRC/AWSCREEN01A_D06.scad>
+use <./src/AWSCREEN01A_D02.scad>
+use <./src/AWSCREEN01A_D03.scad>
+use <./src/AWSCREEN01A_D04.scad>
+use <./src/AWSCREEN01A_D05.scad>
+use <./src/AWSCREEN01A_D06.scad>
 
 include <configuration.scad>
 

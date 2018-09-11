@@ -2,8 +2,8 @@ $fn=100; // model faces resolution.
 include <../configuration.scad>
 
 
-use <../SRC/polyScrewThread_r1.scad>
-use <../SRC/AWSCREEN01A_D05.scad>
+use <../src/polyScrewThread_r1.scad>
+use <../src/AWSCREEN01A_D05.scad>
 
 
 PI=3.141592;

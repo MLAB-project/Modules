@@ -1,6 +1,6 @@
 $fn=100; // model faces resolution.
 include <../configuration.scad>
-use <../SRC/AWSCREEN01A_D03.scad>
+use <../src/AWSCREEN01A_D03.scad>
 
 rotate([0, 0, 0])
             
