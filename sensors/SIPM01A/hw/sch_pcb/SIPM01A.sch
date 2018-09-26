@@ -230,13 +230,13 @@ Wire Wire Line
 Connection ~ 10800 600 
 Wire Wire Line
 	10800 600  11000 600 
-Text Label 8950 3300 0    60   ~ 0
+Text Label 8950 2650 0    60   ~ 0
 U1
-Text Label 9200 3300 0    60   ~ 0
+Text Label 9200 2650 0    60   ~ 0
 U2
-Text Label 9400 3300 0    60   ~ 0
+Text Label 9400 2650 0    60   ~ 0
 U3
-Text Label 9600 3300 0    60   ~ 0
+Text Label 9600 2650 0    60   ~ 0
 U4
 Wire Wire Line
 	8950 3350 8950 3300
@@ -660,4 +660,48 @@ Connection ~ 8400 4000
 Connection ~ 4650 4000
 Connection ~ 5900 4000
 Connection ~ 7150 4000
+$Comp
+L MLAB_Jumpers:JUMP2_2x1 J2
+U 1 1 5BAC3451
+P 8950 3000
+F 0 "J2" V 8925 3059 50  0000 L CNN
+F 1 "JUMP2_2x1" H 9150 2900 40  0001 C CNN
+F 2 "Mlab_Pin_Headers:Zkrat" H 8950 3000 60  0001 C CNN
+F 3 "" H 8950 3000 60  0000 C CNN
+	1    8950 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L MLAB_Jumpers:JUMP2_2x1 J3
+U 1 1 5BAC3746
+P 9200 3000
+F 0 "J3" V 9175 3059 50  0000 L CNN
+F 1 "JUMP2_2x1" H 9400 2900 40  0001 C CNN
+F 2 "Mlab_Pin_Headers:Zkrat" H 9200 3000 60  0001 C CNN
+F 3 "" H 9200 3000 60  0000 C CNN
+	1    9200 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L MLAB_Jumpers:JUMP2_2x1 J4
+U 1 1 5BAC37A8
+P 9400 3000
+F 0 "J4" V 9375 3059 50  0000 L CNN
+F 1 "JUMP2_2x1" H 9600 2900 40  0001 C CNN
+F 2 "Mlab_Pin_Headers:Zkrat" H 9400 3000 60  0001 C CNN
+F 3 "" H 9400 3000 60  0000 C CNN
+	1    9400 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L MLAB_Jumpers:JUMP2_2x1 J5
+U 1 1 5BAC3804
+P 9600 3000
+F 0 "J5" V 9575 3059 50  0000 L CNN
+F 1 "JUMP2_2x1" H 9800 2900 40  0001 C CNN
+F 2 "Mlab_Pin_Headers:Zkrat" H 9600 3000 60  0001 C CNN
+F 3 "" H 9600 3000 60  0000 C CNN
+	1    9600 3000
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
