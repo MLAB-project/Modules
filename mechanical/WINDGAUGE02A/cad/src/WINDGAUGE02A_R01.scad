@@ -1,4 +1,3 @@
-$fn=40; // model faces resolution.
 include <../configuration.scad>
 include <polyScrewThread_r1.scad>
 PI=3.141592;

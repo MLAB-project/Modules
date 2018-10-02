@@ -5,7 +5,7 @@ $fn=40; // model faces resolution.
 //----------------------------------------------------------------
 //WINDGAUGE02A_S02 - Parametry pro hlavni valec anemometru
 S01_hloubka_zavitu=4;
-S01_vyska=80; //80
+S01_vyska=80;
 S01_prumer_vnitrni=40;
 S01_sila_materialu=1.3;
 S01_vyska_horni_zavit=10;
