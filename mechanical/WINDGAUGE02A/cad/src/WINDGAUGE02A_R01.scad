@@ -124,40 +124,43 @@ difference()
 
 module lopatka()
 { 
-difference()
+    difference()
     { 
-    union()
+        union()
         {
+            translate([0,0,L01_prumer_lopatky/2])
+                sphere(d = L01_prumer_lopatky, $fn=100);   
+                
+            translate([-L01_hrana_drzaku_a,0,0])
+                cube([L01_hrana_drzaku_a,L01_delka_uchytu+L01_prumer_lopatky/2+10,L01_hrana_drzaku_b],center=false);
+        
+            //podpěra     
+            translate([0,0,0]) 
+                cylinder(h=(L01_prumer_lopatky/2), r1=(L01_prumer_lopatky)/3.5, r2=(L01_prumer_lopatky-1)/2, center=false, $fn=100);       
+           
+                      
+                
+            } 
+          
+          
         translate([0,0,L01_prumer_lopatky/2])
-            sphere(d = L01_prumer_lopatky, $fn=100);   
-            
-        translate([-L01_hrana_drzaku_a,0,0])
-            cube([L01_hrana_drzaku_a,L01_delka_uchytu+L01_prumer_lopatky/2+10,L01_hrana_drzaku_b],center=false);
-    
-        //podpěra     
-        translate([0,0,0]) 
-            cylinder(h=(L01_prumer_lopatky/2), r1=(L01_prumer_lopatky)/3.5, r2=(L01_prumer_lopatky-1)/2, center=false, $fn=100);       
-       
-                  
-            
-        } 
+             sphere(d = L01_prumer_lopatky-L01_sila_materialu_lopatky*2, $fn=100); 
       
-      
-    translate([0,0,L01_prumer_lopatky/2])
-         sphere(d = L01_prumer_lopatky-L01_sila_materialu_lopatky*2, $fn=100); 
-  
-    translate([0,-L01_prumer_lopatky,0])
-        cube([L01_prumer_lopatky+0.01,2*(L01_delka_uchytu+L01_prumer_lopatky/2+10),L01_prumer_lopatky],center=false);    
-       
+        translate([0,-L01_prumer_lopatky,0])
+            cube([L01_prumer_lopatky+0.01,2*(L01_delka_uchytu+L01_prumer_lopatky/2+10),L01_prumer_lopatky],center=false);    
+           
     } 
     
-  /* polomer_valce=2; 
- //válec pro vylepšení tisku
-         translate([polomer_valce-0.01,L01_prumer_lopatky/2+1.5+L01_sila_materialu_lopatky,0]) 
-            cylinder(h=(L01_prumer_lopatky), r1=polomer_valce, r2=polomer_valce, center=false, $fn=100);         
-  */  
+    polomer_valce=2; 
+    //válec pro vylepšení tisku
+    translate([polomer_valce-0.01,L01_prumer_lopatky/2+1.5+L01_sila_materialu_lopatky,0]) 
+        cylinder(h=(L01_prumer_lopatky), r1=polomer_valce, r2=polomer_valce, center=false, $fn=100);         
+
+    translate([-polomer_valce,0,0]) 
+        cylinder(h=(L01_prumer_lopatky - L01_sila_materialu_lopatky/2), r = polomer_valce, center=false, $fn=20);
 }
 
-rotate([0,0,90])
-translate([-70,-65,0])
-%cube([110,130,90]);
+// ověření tiskových rozměrů
+/*translate([-75,-85,0])
+%cube([150,150,150]);
+*/
