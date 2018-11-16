@@ -249,8 +249,8 @@ $Comp
 L Device:Battery_Cell BT1
 U 1 1 5B3A047F
 P 800 4600
-F 0 "BT1" H 950 4850 50  0000 L CNN
-F 1 "CH28-2032" H 650 4950 50  0000 L CNN
+F 0 "BT1" V 950 4300 50  0000 L CNN
+F 1 "CH28-2032" V 1050 4300 50  0000 L CNN
 F 2 "Mlab_Batery:CH28-2032" V 800 4660 50  0001 C CNN
 F 3 "~" V 800 4660 50  0001 C CNN
 	1    800  4600
@@ -261,7 +261,7 @@ L Device:D_Photo D2
 U 1 1 5B3A05A5
 P 1700 4350
 F 0 "D2" H 1650 4645 50  0000 C CNN
-F 1 "D_Photo" H 1650 4554 50  0000 C CNN
+F 1 "S2744-09" H 1650 4554 50  0000 C CNN
 F 2 "Mlab_D:HAMAMATSU_S2744-09_rozs" H 1650 4350 50  0001 C CNN
 F 3 "~" H 1650 4350 50  0001 C CNN
 	1    1700 4350
@@ -276,7 +276,7 @@ L Device:C C5
 U 1 1 5B3A36AE
 P 2400 4150
 F 0 "C5" V 2148 4150 50  0000 C CNN
-F 1 "1pF - 251R15S1R0AV4E" V 2239 4150 50  0000 C CNN
+F 1 "1pFNP0 251R15S1R0AV4E" V 2250 4150 50  0000 C CNN
 F 2 "Mlab_R:SMD-0805" H 2438 4000 50  0001 C CNN
 F 3 "~" H 2400 4150 50  0001 C CNN
 	1    2400 4150
@@ -354,7 +354,7 @@ L Device:R R9
 U 1 1 5B3ACFA9
 P 4150 5700
 F 0 "R9" V 4250 5650 50  0000 L CNN
-F 1 "15k" V 4150 5700 50  0000 C CNN
+F 1 "4k7" V 4150 5700 50  0000 C CNN
 F 2 "Mlab_R:SMD-0805" V 4080 5700 50  0001 C CNN
 F 3 "~" H 4150 5700 50  0001 C CNN
 	1    4150 5700
@@ -463,8 +463,8 @@ $Comp
 L Device:C C19
 U 1 1 5B3BD161
 P 8250 3900
-F 0 "C19" H 8365 3946 50  0000 L CNN
-F 1 "1nF" H 8365 3855 50  0000 L CNN
+F 0 "C19" V 8350 3700 50  0000 L CNN
+F 1 "1nF/NP0" V 8450 3700 50  0000 L CNN
 F 2 "Mlab_R:SMD-0805" H 8288 3750 50  0001 C CNN
 F 3 "~" H 8250 3900 50  0001 C CNN
 	1    8250 3900
@@ -1366,7 +1366,7 @@ L Device:EMI_Filter_C C21
 U 1 1 5B6A5E8E
 P 9950 1150
 F 0 "C21" H 9950 1455 50  0000 C CNN
-F 1 "EMI_Filter_C" H 9950 1364 50  0000 C CNN
+F 1 "NFM21PC105-1uF" H 9850 1350 50  0000 C CNN
 F 2 "Mlab_L:FIR1" V 9950 1150 50  0001 C CNN
 F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/emc/emifil/c31e.ashx?la=en-gb" V 9950 1150 50  0001 C CNN
 	1    9950 1150
@@ -1392,7 +1392,7 @@ L Device:EMI_Filter_C C22
 U 1 1 5B6C4183
 P 10250 3900
 F 0 "C22" H 10250 4205 50  0000 C CNN
-F 1 "EMI_Filter_C" H 10250 4114 50  0000 C CNN
+F 1 "NFM21CC221R1H3D-220pF" H 9900 4100 50  0000 C CNN
 F 2 "Mlab_L:FIR1" V 10250 3900 50  0001 C CNN
 F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/emc/emifil/c31e.ashx?la=en-gb" V 10250 3900 50  0001 C CNN
 	1    10250 3900
@@ -1423,7 +1423,7 @@ L Device:EMI_Filter_C C2
 U 1 1 5B729EB5
 P 9300 5250
 F 0 "C2" H 9300 5555 50  0000 C CNN
-F 1 "EMI_Filter_C" H 9300 5464 50  0000 C CNN
+F 1 "NFM21CC221R1H3D-220pF" H 9300 5464 50  0000 C CNN
 F 2 "Mlab_L:FIR1" V 9300 5250 50  0001 C CNN
 F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/emc/emifil/c31e.ashx?la=en-gb" V 9300 5250 50  0001 C CNN
 	1    9300 5250
@@ -1452,7 +1452,7 @@ L Device:EMI_Filter_C C23
 U 1 1 5B748928
 P 10350 5850
 F 0 "C23" H 10350 6155 50  0000 C CNN
-F 1 "EMI_Filter_C" H 10350 6064 50  0000 C CNN
+F 1 "NFM21PC105-1uF" H 10350 6064 50  0000 C CNN
 F 2 "Mlab_L:FIR1" V 10350 5850 50  0001 C CNN
 F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/emc/emifil/c31e.ashx?la=en-gb" V 10350 5850 50  0001 C CNN
 	1    10350 5850
@@ -1541,7 +1541,7 @@ L Device:EMI_Filter_C C24
 U 1 1 5B6E701C
 P 1200 4450
 F 0 "C24" H 1200 4755 50  0000 C CNN
-F 1 "EMI_Filter_C" H 1200 4664 50  0000 C CNN
+F 1 "NFM21PC105-1uF" H 1000 4650 50  0000 C CNN
 F 2 "Mlab_L:FIR1" V 1200 4450 50  0001 C CNN
 F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/emc/emifil/c31e.ashx?la=en-gb" V 1200 4450 50  0001 C CNN
 	1    1200 4450
@@ -1558,7 +1558,7 @@ L Device:EMI_Filter_C C25
 U 1 1 5B6FB081
 P 1200 5050
 F 0 "C25" H 900 5050 50  0000 C CNN
-F 1 "EMI_Filter_C" H 850 4950 50  0000 C CNN
+F 1 "NFM21PC105-1uF" H 850 4950 50  0000 C CNN
 F 2 "Mlab_L:FIR1" V 1200 5050 50  0001 C CNN
 F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/emc/emifil/c31e.ashx?la=en-gb" V 1200 5050 50  0001 C CNN
 	1    1200 5050
