@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Chroust\stare\MLAB_G\Modules\RF\ISM01A\hw\sch_pcb\ISM01A.sch)
-    (date "30.11.2018 9:19:17")
+    (date "03.12.2018 8:51:41")
     (tool "Eeschema (6.0.0-rc1-dev-205-gc0615c5ef)")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -61,7 +61,7 @@
       (tstamp 5562302C))
     (comp (ref U2)
       (value Si1060-A-GM)
-      (footprint Package_DFN_QFN:QFN-36-1EP_5x6mm_P0.5mm_EP3.6x4.1mm)
+      (footprint Package_DFN_QFN:QFN-36-1EP_5x6mm_P0.5mm_EP3.6x4.1mm_ThermalVias)
       (libsource (lib MLAB_IO) (part Si1060-A-GM) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 5C000575))
