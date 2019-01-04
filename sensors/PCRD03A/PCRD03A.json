@@ -2,15 +2,22 @@
     "short_en": "PCRD03A module", 
     "status": 1, 
     "name": "PCRD03A", 
+    "parameters": [], 
+    "image_small": ".jpgs", 
     "wiki": "None", 
-    "image": "/doc/img/PCRD03A_QRcode.png", 
     "short_cs": "Modul PCRD03A", 
     "longname_en": "PCRD03A module", 
+    "author[]": [], 
+    "mark": 50.0, 
     "ust": "None", 
     "doc_cs": "", 
     "autor[]": [], 
     "longname_cs": "Modul PCRD03A", 
     "doc_en": "", 
+    "_id": "PCRD03A", 
     "root": "sensors/PCRD03A", 
-    "category[]": []
+    "image": "/doc/img/PCRD03A_QRcode.jpg", 
+    "category[]": [
+        "sensor"
+    ]
 }
