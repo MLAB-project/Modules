@@ -8,7 +8,7 @@
 <!--- Label --->
 <!--- ELabel ---> 
 <!--- Name:STEPUPDC01A: --->
-#STEPUPDC01A
+# STEPUPDC01A
 <!--- LongName --->
 Step-Up DC/DC
 <!--- ELongName ---> 
@@ -17,7 +17,7 @@ Step-Up DC/DC
 Vin 3 V - 11 V, Vout up to 36 V, maximal output power 120mW
 <!--- ELead ---> 
 
-![STEPUPDC01A](/doc/img/STEPUPDC01A_QRcode.png) 
+![STEPUPDC01A](doc/img/STEPUPDC01A_QRcode.png) 
 
 
 <!--- Description --->
