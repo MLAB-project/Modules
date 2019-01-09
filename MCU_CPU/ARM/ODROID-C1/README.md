@@ -17,7 +17,7 @@
 Computer module for applications which needs full Linux operating system and lot of computing power. It is suitable for machine control or home automation as example.
 <!--- ELead ---> 
 
-![ODROID-C1](doc/img/ODROID-C1_top_big.jpg) 
+![ODROID-C1](doc/img/ODROID-C1_top_small.jpg) 
 
 
 <!--- Description --->
