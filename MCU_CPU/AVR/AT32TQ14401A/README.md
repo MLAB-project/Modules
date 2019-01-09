@@ -1,12 +1,27 @@
-
-[Czech](./README.cs.md)
-<!--- module --->
+<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
+<!--- 00a56be08b96043df9e37d6aff7b6990 --->
+<!--- Created:2019-01-10 00:38:30.591606: ---> 
+<!--- Author:: ---> 
+<!--- AuthorEmail:: ---> 
+<!--- Tags:: ---> 
+<!--- Ust:: ---> 
+<!--- Label --->
+<!--- ELabel ---> 
+<!--- Name:AT32TQ14401A: --->
 # AT32TQ14401A
-<!--- Emodule --->
+<!--- LongName --->
+## AVR32 MCU module
+<!--- ELongName ---> 
 
-<!--- subtitle --->AVR32 MCU module<!--- Esubtitle --->
+<!--- Lead --->
+Module is intended for development of applications based on powerful 32bit Atmel microcontrolers with AVR32 core AT32UC3A series.
+<!--- ELead ---> 
 
-![AT32TQ14401A](/doc/img/AT32TQ14401A_big.png)
+![AT32TQ14401A](doc/img/AT32TQ14401A_small.png) 
 
-<!--- description --->Module is intended for development of applications based on powerful 32bit Atmel microcontrolers with AVR32 core AT32UC3A series.<!--- Edescription --->
-            
+
+<!--- Description --->
+<!--- EDescription --->
+<!--- Content --->
+<!--- EContent --->
+<sub><sup> Generated with [https://github.com/MLAB-project/MLABweb](MLABweb). 2019-01-10</sup></sub>
