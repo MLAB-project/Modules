@@ -1,23 +1,23 @@
 <!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
 <!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:Time: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
+<!--- Created:: ---> 
+<!--- Author:: ---> 
+<!--- AuthorEmail:: ---> 
+<!--- Tags:: ---> 
+<!--- Ust:: ---> 
 <!--- Label --->
 <!--- ELabel ---> 
-<!--- Name:module: --->
-#module 
+<!--- Name:STEPUPDC01A: --->
+#STEPUPDC01A
 <!--- LongName --->
-module description
+Step-Up DC/DC
 <!--- ELongName ---> 
 
 <!--- Lead --->
-module lead text
+Vin 3 V - 11 V, Vout up to 36 V, maximal output power 120mW
 <!--- ELead ---> 
 
-![LeadImg](doc/img/module_top_big.jpg) 
+![STEPUPDC01A](/doc/img/STEPUPDC01A_QRcode.png) 
 
 
 <!--- Description --->
