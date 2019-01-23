@@ -1,13 +1,13 @@
-use <src/WINDGAUGE01A_D01.scad>
-use <src/WINDGAUGE01A_D02.scad>
-use <src/WINDGAUGE01A_R01.scad>
-use <src/WINDGAUGE01A_R02.scad>
-use <src/WINDGAUGE01A_R03.scad>
-use <src/WINDGAUGE01A_R04.scad>
-use <src/WINDGAUGE01A_R05.scad>
-use <src/WINDGAUGE01A_S01.scad>
-use <src/WINDGAUGE01A_S02.scad>
-use <src/WINDGAUGE01A_S03.scad>
+use <src/WINDGAUGE_D01.scad>
+use <src/WINDGAUGE_D02.scad>
+use <src/WINDGAUGE_R01.scad>
+use <src/WINDGAUGE_R02.scad>
+use <src/WINDGAUGE_R03.scad>
+use <src/WINDGAUGE_R04.scad>
+use <src/WINDGAUGE_R05.scad>
+use <src/WINDGAUGE_S01.scad>
+use <src/WINDGAUGE_S02.scad>
+use <src/WINDGAUGE_S03.scad>
 
 include <configuration.scad>
 
