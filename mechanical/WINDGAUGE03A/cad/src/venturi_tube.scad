@@ -9,6 +9,7 @@ module WINDGAUGE01A_S03()
 wall_thickness = 2; 
 D = 25;  // venturi tube base diameter
 D_Diaphragm = D/2;
+connection_tube_diameter =  4;
 
     difference()
     {
@@ -29,11 +30,11 @@ D_Diaphragm = D/2;
 
         translate([0,0,3*D + D_Diaphragm/2])
             rotate([90,0,0])
-                cylinder (h = 2*D,d = 3 , $fn=100); 
+                cylinder (h = 2*D, d = connection_tube_diameter , $fn=100); 
 
-        translate([0,0,3*D + D_Diaphragm + D])
+        translate([0,0,3*D + D_Diaphragm + D + D_Diaphragm /2 ])
             rotate([90,0,0])
-                cylinder (h = 2*D,d = 3 , $fn=100); 
+                cylinder (h = 2*D, d = connection_tube_diameter , $fn=100); 
 
             
     }
