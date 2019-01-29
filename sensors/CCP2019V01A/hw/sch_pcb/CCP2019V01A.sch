@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:CCP2019V01A-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -201,7 +201,7 @@ U 1 1 5B3A05A5
 P 1700 4350
 F 0 "D2" H 1650 4645 50  0000 C CNN
 F 1 "S2744-09" H 1650 4554 50  0000 C CNN
-F 2 "Mlab_D:HAMAMATSU_S2744-09_rozs" H 1650 4350 50  0001 C CNN
+F 2 "Mlab_D:HAMAMATSU_S2744-09" H 1650 4350 50  0001 C CNN
 F 3 "~" H 1650 4350 50  0001 C CNN
 	1    1700 4350
 	1    0    0    -1  
@@ -561,8 +561,6 @@ F 3 "" H 7100 5650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7100 5650 7100 5450
-Text Label 9750 5150 0    60   ~ 0
-#PeakDetect/Trace
 Wire Wire Line
 	7500 5150 7550 5150
 Wire Wire Line
@@ -1075,33 +1073,7 @@ Wire Notes Line
 	9700 600  11100 600 
 Wire Notes Line
 	9700 1000 11100 1000
-$Comp
-L MLAB_MECHANICAL:HOLE M5
-U 1 1 5B69B79B
-P 9800 750
-F 0 "M5" V 9700 750 60  0000 C CNN
-F 1 "BMIS-209-C" H 9800 650 60  0001 C CNN
-F 2 "Mlab_Mechanical:BMIS-209-C" H 9800 750 60  0001 C CNN
-F 3 "" H 9800 750 60  0000 C CNN
-	1    9800 750 
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	10000 650  9800 650 
-Wire Wire Line
-	9800 650  9800 700 
 Connection ~ 10000 650 
-$Comp
-L Device:EMI_Filter_C C22
-U 1 1 5B6C4183
-P 10250 3900
-F 0 "C22" H 10250 4205 50  0000 C CNN
-F 1 "NFM21CC221R1H3D-220pF" H 9900 4100 50  0000 C CNN
-F 2 "Mlab_L:FIR1" V 10250 3900 50  0001 C CNN
-F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/emc/emifil/c31e.ashx?la=en-gb" V 10250 3900 50  0001 C CNN
-	1    10250 3900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6750 4450 7450 4450
 Wire Wire Line
@@ -1109,48 +1081,6 @@ Wire Wire Line
 Wire Wire Line
 	9600 3800 9700 3800
 Connection ~ 9600 3800
-$Comp
-L power:GND #PWR027
-U 1 1 5B6ED0AF
-P 10250 4250
-F 0 "#PWR027" H 10250 4000 50  0001 C CNN
-F 1 "GND" H 10255 4077 50  0000 C CNN
-F 2 "" H 10250 4250 50  0001 C CNN
-F 3 "" H 10250 4250 50  0001 C CNN
-	1    10250 4250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10250 4250 10250 4000
-$Comp
-L Device:EMI_Filter_C C2
-U 1 1 5B729EB5
-P 9300 5250
-F 0 "C2" H 9300 5555 50  0000 C CNN
-F 1 "NFM21CC221R1H3D-220pF" H 9300 5464 50  0000 C CNN
-F 2 "Mlab_L:FIR1" V 9300 5250 50  0001 C CNN
-F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/emc/emifil/c31e.ashx?la=en-gb" V 9300 5250 50  0001 C CNN
-	1    9300 5250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8350 5150 9100 5150
-Connection ~ 8350 5150
-Wire Wire Line
-	9500 5150 10700 5150
-$Comp
-L power:GND #PWR028
-U 1 1 5B73E3FB
-P 9300 5400
-F 0 "#PWR028" H 9300 5150 50  0001 C CNN
-F 1 "GND" H 9305 5227 50  0000 C CNN
-F 2 "" H 9300 5400 50  0001 C CNN
-F 3 "" H 9300 5400 50  0001 C CNN
-	1    9300 5400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9300 5400 9300 5350
 $Comp
 L Device:R R1
 U 1 1 5B690004
@@ -1175,10 +1105,6 @@ Wire Wire Line
 Wire Wire Line
 	8250 3700 8550 3700
 Connection ~ 8250 3700
-Wire Wire Line
-	10000 3800 10050 3800
-Wire Wire Line
-	10450 3800 10700 3800
 Wire Wire Line
 	1500 4950 1750 4950
 Wire Wire Line
@@ -1265,34 +1191,34 @@ $EndComp
 $Comp
 L Device:R R22
 U 1 1 5C61685E
-P 2000 6750
-F 0 "R22" V 2100 6700 50  0000 L CNN
-F 1 "4k7" V 2000 6750 50  0000 C CNN
-F 2 "Mlab_R:SMD-0805" V 1930 6750 50  0001 C CNN
-F 3 "~" H 2000 6750 50  0001 C CNN
-	1    2000 6750
+P 2600 6750
+F 0 "R22" V 2700 6700 50  0000 L CNN
+F 1 "4k7" V 2600 6750 50  0000 C CNN
+F 2 "Mlab_R:SMD-0805" V 2530 6750 50  0001 C CNN
+F 3 "~" H 2600 6750 50  0001 C CNN
+	1    2600 6750
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:C C24
 U 1 1 5C616902
-P 2250 7000
-F 0 "C24" H 2365 7046 50  0000 L CNN
-F 1 "1uF" H 2365 6955 50  0000 L CNN
-F 2 "Mlab_R:SMD-0805" H 2288 6850 50  0001 C CNN
-F 3 "~" H 2250 7000 50  0001 C CNN
-	1    2250 7000
+P 2850 7000
+F 0 "C24" H 2965 7046 50  0000 L CNN
+F 1 "1uF" H 2965 6955 50  0000 L CNN
+F 2 "Mlab_R:SMD-0805" H 2888 6850 50  0001 C CNN
+F 3 "~" H 2850 7000 50  0001 C CNN
+	1    2850 7000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2150 6750 2250 6750
-Connection ~ 2250 6750
+	2750 6750 2850 6750
+Connection ~ 2850 6750
 Wire Wire Line
-	2250 6750 2450 6750
+	2850 6750 3050 6750
 Wire Wire Line
-	2250 6750 2250 6850
+	2850 6750 2850 6850
 Wire Wire Line
-	2250 7150 2450 7150
+	2850 7150 3050 7150
 Wire Wire Line
 	950  6750 1000 6750
 Wire Wire Line
@@ -1333,11 +1259,9 @@ Wire Wire Line
 Wire Wire Line
 	1750 6850 1750 6750
 Connection ~ 1750 6750
-Wire Wire Line
-	1750 6750 1850 6750
-Text Label 2450 6750 0    60   ~ 0
+Text Label 3050 6750 0    60   ~ 0
 Ubiasout
-Text Label 2450 7150 0    60   ~ 0
+Text Label 3050 7150 0    60   ~ 0
 REF
 Text Label 1000 4350 0    60   ~ 0
 Ubiasout
@@ -1371,12 +1295,60 @@ U 5C69BCB4
 F0 "power" 60
 F1 "power.sch" 60
 $EndSheet
-Text Label 10300 5600 0    60   ~ 0
+Text Label 10450 4050 0    60   ~ 0
 REF
 Wire Wire Line
-	10300 5600 10550 5600
+	10450 4050 10700 4050
 Text GLabel 10700 3800 2    60   Input ~ 0
 PA0
-Text GLabel 10550 5600 2    60   Input ~ 0
+Text GLabel 10700 4050 2    60   Input ~ 0
 PA1
+Wire Wire Line
+	10000 3800 10700 3800
+$Comp
+L Device:C C2
+U 1 1 5C52C88C
+P 2200 7000
+F 0 "C2" H 2315 7046 50  0000 L CNN
+F 1 "100nF" H 2315 6955 50  0000 L CNN
+F 2 "Mlab_R:SMD-0805" H 2238 6850 50  0001 C CNN
+F 3 "" H 2200 7000 50  0001 C CNN
+	1    2200 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 6750 2200 6750
+Wire Wire Line
+	2200 6850 2200 6750
+Connection ~ 2200 6750
+Wire Wire Line
+	2200 6750 2450 6750
+$Comp
+L power:GND #PWR0119
+U 1 1 5C53D6D2
+P 2200 7200
+F 0 "#PWR0119" H 2200 6950 50  0001 C CNN
+F 1 "GND" H 2205 7027 50  0000 C CNN
+F 2 "" H 2200 7200 50  0001 C CNN
+F 3 "" H 2200 7200 50  0001 C CNN
+	1    2200 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 7200 2200 7150
+$Comp
+L MLAB_MECHANICAL:HOLE M7
+U 1 1 5C564E7A
+P 9600 750
+F 0 "M7" V 9500 750 60  0000 C CNN
+F 1 "BMI-S-210-F" H 9600 650 60  0001 C CNN
+F 2 "Mlab_Mechanical:BMI-S-210-F" H 9600 750 60  0001 C CNN
+F 3 "" H 9600 750 60  0000 C CNN
+	1    9600 750 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9600 650  9600 700 
+Wire Wire Line
+	9600 650  10000 650 
 $EndSCHEMATC
