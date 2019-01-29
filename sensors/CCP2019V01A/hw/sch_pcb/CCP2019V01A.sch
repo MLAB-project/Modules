@@ -1371,12 +1371,12 @@ U 5C69BCB4
 F0 "power" 60
 F1 "power.sch" 60
 $EndSheet
-Text Label 10700 3800 0    60   ~ 0
-PA0
-Text Label 10550 5600 0    60   ~ 0
-PA1
 Text Label 10300 5600 0    60   ~ 0
 REF
 Wire Wire Line
 	10300 5600 10550 5600
+Text GLabel 10700 3800 2    60   Input ~ 0
+PA0
+Text GLabel 10550 5600 2    60   Input ~ 0
+PA1
 $EndSCHEMATC

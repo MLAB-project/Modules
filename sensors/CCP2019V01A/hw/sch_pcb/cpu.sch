@@ -214,10 +214,6 @@ Wire Wire Line
 	6850 1500 6950 1500
 Wire Wire Line
 	6850 1600 6950 1600
-Text Label 6950 1500 0    60   ~ 0
-PA0
-Text Label 6950 1600 0    60   ~ 0
-PA1
 Text Label 6950 2400 0    60   ~ 0
 PB0
 Wire Wire Line
@@ -567,7 +563,7 @@ U 1 1 5B2AFFF7
 P 9650 1300
 F 0 "D4" H 9600 1550 50  0000 R CNN
 F 1 "HLMP-K150+FIX-LED-313" H 9800 1450 50  0000 R CNN
-F 2 "Mlab_D:FIX-LED-313" H 9650 1300 50  0001 C CNN
+F 2 "Mlab_D:LED_1206" H 9650 1300 50  0001 C CNN
 F 3 "~" H 9650 1300 50  0001 C CNN
 	1    9650 1300
 	0    -1   -1   0   
@@ -997,14 +993,6 @@ Wire Wire Line
 	4050 1200 4050 1150
 Wire Wire Line
 	4050 800  4050 850 
-Connection ~ 1650 6500
-Connection ~ 3450 6900
-Connection ~ 1650 6600
-Connection ~ 1650 6700
-Connection ~ 1650 6800
-Connection ~ 1650 6900
-Connection ~ 1650 7000
-Connection ~ 1650 7100
 Text Label 4600 1500 1    60   ~ 0
 RST#_P
 Text Label 5200 6300 0    60   ~ 0
@@ -1301,4 +1289,8 @@ F 3 "" H 900 3500 50  0001 C CNN
 	1    900  3500
 	1    0    0    -1  
 $EndComp
+Text GLabel 6950 1500 2    60   Input ~ 0
+PA0
+Text GLabel 6950 1600 2    60   Input ~ 0
+PA1
 $EndSCHEMATC
