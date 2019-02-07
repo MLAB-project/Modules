@@ -1,5 +1,7 @@
-$fn=40; // model faces resolution.
 include <../configuration.scad>
+use <./lib/naca4.scad>
+use <./lib/curvedPipe.scad>
+
 
 //Držák na konektor RJ11
 
@@ -36,7 +38,7 @@ module fins(outer_r, inner_r, wall, height, count, angle) {
 }
 
 
-module WINDGAUGE01A_S03()
+module WINDGAUGE01A_S03(draft = true)
 {
 
 wall_thickness = 1.2; 
@@ -46,8 +48,29 @@ connection_tube_diameter =  4;
 
     difference()
     {
-        
-        cylinder (h = 5*D, d = D + 2*wall_thickness, $fn=100); 
+        union(){
+            translate([0,-D/2,120])   
+                rotate_extrude($fn = draft ? 50 : 200)
+                    rotate([0,180,90])
+                        difference()
+                        {
+                            polygon(points = airfoil_data(naca=0050, L =50 , N=draft ? 50 : 200));
+                            square(150);
+                        }
+            
+            cylinder (h = 5*D, d = D + 2*wall_thickness, $fn=100); 
+
+            translate([0,0,50])
+                hull(){
+                    cylinder (h = 2*D, d = D + 2*wall_thickness, $fn=100); 
+
+                    translate([0,D/2,D])
+                        rotate([-90,0,0])
+                            cylinder (h = 10, d = 40, $fn=100); 
+                }
+
+
+        }
 
         translate([0,0,0])
             cylinder (h = 6*D, d = D_Diaphragm , $fn=100); 
@@ -73,9 +96,25 @@ connection_tube_diameter =  4;
     }
 
     fins(2*D, D/2, wall_thickness, 20, 6, 16);
-}
 
-   
+/// kanálky příklad
+    translate([100,0,0])
+
+    curvedPipe([ [0,0,0],
+                [100,0,0],
+                [100,100,0],
+                [50,100,100],
+                [50,100,150],
+                [0,100,50],
+                [0,0,0],
+                [50,0,50]
+               ],
+                7,
+                [70,30,30,6,50,30],
+                3,
+                0);
+
+}
 
   
 WINDGAUGE01A_S03(); 

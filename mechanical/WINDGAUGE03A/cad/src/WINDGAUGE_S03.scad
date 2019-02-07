@@ -1,7 +1,7 @@
 $fn=40; // model faces resolution.
 include <../configuration.scad>
 
-include <polyScrewThread_r1.scad>
+include <./lib/polyScrewThread_r1.scad>
 
 //Držák na konektor RJ11
 

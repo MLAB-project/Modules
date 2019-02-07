@@ -2,7 +2,7 @@ $fn=40; // model faces resolution.
 include <../configuration.scad>
 
 
-include <polyScrewThread_r1.scad>
+include <./lib/polyScrewThread_r1.scad>
 
 PI=3.141592;
 
@@ -38,3 +38,5 @@ module WINDGAUGE01A_R05()
      translate([R05_vyska_kridla/2-R02_zavit_vyska/2,R05_vyska_kridla/2+R02_zavit_vyska/2,0]) 
     cylinder(r=R05_vyska_kridla/2,h=R02_sila_materialu_kridla);
         }
+
+WINDGAUGE01A_R05();

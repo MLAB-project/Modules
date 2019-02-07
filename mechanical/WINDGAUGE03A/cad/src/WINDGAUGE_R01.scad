@@ -1,6 +1,6 @@
 $fn=100; // model faces resolution.
 include <../configuration.scad>
-include <polyScrewThread_r1.scad>
+include <./lib/polyScrewThread_r1.scad>
 PI=3.141592;
 
 WINDGAUGE01A_R01();
