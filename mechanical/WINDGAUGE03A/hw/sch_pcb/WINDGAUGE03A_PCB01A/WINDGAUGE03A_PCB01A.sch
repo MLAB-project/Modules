@@ -1,0 +1,212 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "NAME"
+Date "%F"
+Rev "REV"
+Comp "Mlab www.mlab.cz"
+Comment1 "VERSION"
+Comment2 "Short description \\nTwo lines are maximum"
+Comment3 "nickname <email@example.com>"
+Comment4 "BSD"
+$EndDescr
+$Comp
+L MLAB_MECHANICAL:HOLE M1
+U 1 1 5C4AF3DA
+P 10200 750
+F 0 "M1" V 10100 750 60  0000 C CNN
+F 1 "HOLE" H 10200 650 60  0001 C CNN
+F 2 "Mlab_Mechanical:MountingHole_3mm" H 10200 750 60  0001 C CNN
+F 3 "" H 10200 750 60  0000 C CNN
+	1    10200 750 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MLAB_MECHANICAL:HOLE M2
+U 1 1 549D7628
+P 10400 750
+F 0 "M2" V 10300 750 60  0000 C CNN
+F 1 "HOLE" H 10400 650 60  0001 C CNN
+F 2 "Mlab_Mechanical:MountingHole_3mm" H 10400 750 60  0001 C CNN
+F 3 "" H 10400 750 60  0000 C CNN
+	1    10400 750 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MLAB_MECHANICAL:HOLE M3
+U 1 1 5B3D3F17
+P 10600 750
+F 0 "M3" V 10500 750 60  0000 C CNN
+F 1 "HOLE" H 10600 650 60  0001 C CNN
+F 2 "Mlab_Mechanical:MountingHole_3mm" H 10600 750 60  0001 C CNN
+F 3 "" H 10600 750 60  0000 C CNN
+	1    10600 750 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MLAB_MECHANICAL:HOLE M4
+U 1 1 5B3D3F18
+P 10800 750
+F 0 "M4" V 10700 750 60  0000 C CNN
+F 1 "HOLE" H 10800 650 60  0001 C CNN
+F 2 "Mlab_Mechanical:MountingHole_3mm" H 10800 750 60  0001 C CNN
+F 3 "" H 10800 750 60  0000 C CNN
+	1    10800 750 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5B3D3F19
+P 11000 700
+F 0 "#PWR03" H 11000 450 60  0001 C CNN
+F 1 "GND" H 11000 550 60  0000 C CNN
+F 2 "" H 11000 700 60  0000 C CNN
+F 3 "" H 11000 700 60  0000 C CNN
+	1    11000 700 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11000 700  11000 650 
+Wire Wire Line
+	11000 650  10800 650 
+Wire Wire Line
+	10200 650  10200 700 
+Wire Wire Line
+	10400 700  10400 650 
+Connection ~ 10400 650 
+Wire Wire Line
+	10600 700  10600 650 
+Connection ~ 10600 650 
+Wire Wire Line
+	10800 700  10800 650 
+Connection ~ 10800 650 
+Wire Notes Line
+	11100 600  11100 1000
+Text Notes 10100 1000 0    60   ~ 0
+MOUNTING HOLES
+Wire Wire Line
+	10400 650  10200 650 
+Wire Wire Line
+	10600 650  10400 650 
+Wire Wire Line
+	10800 650  10600 650 
+Wire Notes Line
+	9700 600  9700 1000
+Wire Notes Line
+	9700 600  11100 600 
+Wire Notes Line
+	9700 1000 11100 1000
+$Comp
+L MLAB_IO:SDP3x U1
+U 1 1 5C5CE96A
+P 5300 3600
+F 0 "U1" H 5400 4050 60  0000 L CNN
+F 1 "SDP3x" H 5350 3750 60  0000 L CNN
+F 2 "Mlab_IO:SDP3x" H 5300 3600 60  0001 C CNN
+F 3 "" H 5300 3600 60  0001 C CNN
+	1    5300 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5C5CEABD
+P 5950 3500
+F 0 "R3" H 6020 3546 50  0000 L CNN
+F 1 "0R" V 5950 3450 50  0000 L CNN
+F 2 "Mlab_R:SMD-0805" V 5880 3500 50  0001 C CNN
+F 3 "~" H 5950 3500 50  0001 C CNN
+	1    5950 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3300 5950 3300
+Wire Wire Line
+	5950 3300 5950 3350
+$Comp
+L power:GND #PWR0101
+U 1 1 5C5CEBB2
+P 5300 3900
+F 0 "#PWR0101" H 5300 3650 50  0001 C CNN
+F 1 "GND" H 5305 3727 50  0000 C CNN
+F 2 "" H 5300 3900 50  0001 C CNN
+F 3 "" H 5300 3900 50  0001 C CNN
+	1    5300 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5C5CEBDC
+P 5950 3900
+F 0 "#PWR0102" H 5950 3650 50  0001 C CNN
+F 1 "GND" H 5955 3727 50  0000 C CNN
+F 2 "" H 5950 3900 50  0001 C CNN
+F 3 "" H 5950 3900 50  0001 C CNN
+	1    5950 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 3650 5950 3900
+Wire Wire Line
+	5300 3800 5300 3900
+Text Notes 6250 3750 0    60   ~ 0
+ADDR\n0R - 0x21\n1,2k - 0x22\n2,7k - 0x23
+$Comp
+L Device:C C1
+U 1 1 5C5CEE8A
+P 7150 3550
+F 0 "C1" H 7265 3596 50  0000 L CNN
+F 1 "100nF" H 7265 3505 50  0000 L CNN
+F 2 "Mlab_R:SMD-0805" H 7188 3400 50  0001 C CNN
+F 3 "~" H 7150 3550 50  0001 C CNN
+	1    7150 3550
+	1    0    0    -1  
+$EndComp
+Text Notes 6250 3300 0    60   ~ 0
+VDD 2,7-5,5V
+$Comp
+L Device:R R1
+U 1 1 5C5D0604
+P 4350 3050
+F 0 "R1" H 4420 3096 50  0000 L CNN
+F 1 "0R" V 4350 3000 50  0000 L CNN
+F 2 "Mlab_R:SMD-0805" V 4280 3050 50  0001 C CNN
+F 3 "~" H 4350 3050 50  0001 C CNN
+	1    4350 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5C5D0652
+P 4650 3100
+F 0 "R2" H 4720 3146 50  0000 L CNN
+F 1 "0R" V 4650 3050 50  0000 L CNN
+F 2 "Mlab_R:SMD-0805" V 4580 3100 50  0001 C CNN
+F 3 "~" H 4650 3100 50  0001 C CNN
+	1    4650 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 3300 4300 3300
+Wire Wire Line
+	4750 3400 4300 3400
+Text Label 4300 3400 0    60   ~ 0
+SCL
+Text Label 4300 3300 0    60   ~ 0
+SDA
+$Comp
+L power:VDD #PWR?
+U 1 1 5C5D0C06
+P 5300 3000
+F 0 "#PWR?" H 5300 2850 50  0001 C CNN
+F 1 "VDD" H 5317 3173 50  0000 C CNN
+F 2 "" H 5300 3000 50  0001 C CNN
+F 3 "" H 5300 3000 50  0001 C CNN
+	1    5300 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3100 5300 3000
+$EndSCHEMATC
