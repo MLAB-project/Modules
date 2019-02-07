@@ -1,6 +1,6 @@
-STL_DIR=./print_data
+STL_DIR=../amf
 IMG_DIR=../doc/img
-SRC_DIR=./src/
+SRC_DIR=./src
 PLATE_DIMMENSIONS=120
 SIMARRANGE=/usr/local/bin/simarrange
 STLSORT=stlsort
