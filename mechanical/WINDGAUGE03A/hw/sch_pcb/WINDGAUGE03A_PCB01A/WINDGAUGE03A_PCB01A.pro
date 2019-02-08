@@ -1,4 +1,4 @@
-update=07.02.2019 15:42:58
+update=08.02.2019 15:46:01
 version=1
 last_client=kicad
 [general]
@@ -33,12 +33,13 @@ MinMicroViaDiameter=0.2
 MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.25
 TrackWidth1=0.25
-TrackWidth2=0.3
-TrackWidth3=0.4
-TrackWidth4=0.5
-TrackWidth5=0.6
-TrackWidth6=0.7
-TrackWidth7=0.8
+TrackWidth2=0.2
+TrackWidth3=0.3
+TrackWidth4=0.4
+TrackWidth5=0.5
+TrackWidth6=0.6
+TrackWidth7=0.7
+TrackWidth8=0.8
 ViaDiameter1=0.8
 ViaDrill1=0.4
 dPairWidth1=0.2
@@ -66,7 +67,7 @@ OthersTextUpright=1
 SolderMaskClearance=0.2
 SolderMaskMinWidth=0
 SolderPasteClearance=0
-SolderPasteRatio=0
+SolderPasteRatio=-0
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/1]
 Name=MLAB_default
