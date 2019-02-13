@@ -546,7 +546,7 @@ F 3 "" H 6350 2350 50  0001 C CNN
 	1    6350 2350
 	1    0    0    -1  
 $EndComp
-Text Label 6750 3500 0    60   ~ 0
+Text Label 6750 3600 0    60   ~ 0
 P_SDA_3V3
 Text Label 6750 3400 0    60   ~ 0
 P_SCL_3V3
@@ -554,7 +554,7 @@ Wire Wire Line
 	6650 3200 6750 3200
 Wire Wire Line
 	6650 3300 6750 3300
-Text Label 5000 3500 0    60   ~ 0
+Text Label 5000 3600 0    60   ~ 0
 P_SDA_1V8
 Text Label 5350 3400 0    60   ~ 0
 P_SCL_1V8
@@ -638,19 +638,19 @@ Text Label 4300 5350 0    60   ~ 0
 P_SDA_1V8
 Text Label 4300 5450 0    60   ~ 0
 P_SCL_1V8
-Text Label 6750 3800 0    60   ~ 0
+Text Label 6750 3700 0    60   ~ 0
 SPI_EXT_MOSI_3V3
 Text Label 6750 3300 0    60   ~ 0
 SPI_EXT_MISO_3V3
-Text Label 6750 3600 0    60   ~ 0
+Text Label 6750 3500 0    60   ~ 0
 !SPI_SS1_3V3
-Text Label 6750 3700 0    60   ~ 0
+Text Label 6750 3800 0    60   ~ 0
 SPI_EXT_SCK_3V3
 Text Label 5000 3300 0    60   ~ 0
 SPI_EXT_MISO_1V8
-Text Label 5000 3700 0    60   ~ 0
+Text Label 5000 3800 0    60   ~ 0
 SPI_EXT_SCK_1V8
-Text Label 5000 3600 0    60   ~ 0
+Text Label 5000 3500 0    60   ~ 0
 !SPI_SS1_1V8
 Wire Wire Line
 	5000 3500 5850 3500
@@ -1051,7 +1051,7 @@ Wire Wire Line
 	5000 3300 5850 3300
 Wire Wire Line
 	5850 3400 5350 3400
-Text Label 5000 3800 0    60   ~ 0
+Text Label 5000 3700 0    60   ~ 0
 SPI_EXT_MOSI_1V8
 Wire Wire Line
 	6650 3400 6750 3400
