@@ -2,23 +2,23 @@
     "wiki": "None", 
     "status": 4, 
     "name": "PIND01A", 
-    "category": "", 
+    "parameters": [], 
     "short_en": "The module includes a parallel-connected diodes for PINS dosimeter.", 
-    "image_small": ".jpgs", 
-    "image": "/doc/img/PIND01A_QRcode.jpg", 
+    "image_small": "/doc/img/PIND01A_QRcode.png", 
+    "image": "/doc/img/PIND01A_QRcode.png", 
     "longname_cs": "Pole PIN diod fotodiod pro dozimetr", 
     "longname_en": "PIN diode array of photodiodes for dosimeter", 
     "mark": 50.0, 
     "autor": "", 
-    "parameters": [], 
     "ust": "", 
     "doc_cs": "<p>None</p>", 
     "short_cs": "Modul obsahuje paralelně zapojené PIN fotodiody pro dozimetr.", 
+    "category[]": [
+        "sensor"
+    ], 
     "doc_en": "<p>None</p>", 
     "_id": "PIND01A", 
     "root": "sensors/PIND01A", 
     "author[]": [], 
-    "category[]": [
-        "sensor"
-    ]
+    "category": ""
 }
