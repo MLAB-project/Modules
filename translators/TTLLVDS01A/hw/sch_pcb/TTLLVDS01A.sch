@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:TTLLVDS01A-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -118,18 +118,6 @@ Wire Notes Line
 	9950 2150 9950 1750
 Text Notes 9950 2150 0    60   ~ 0
 MOUNTING HOLES
-$Comp
-L Device:CP_Small C1
-U 1 1 55623093
-P 9550 1150
-F 0 "C1" H 9550 1250 50  0000 L CNN
-F 1 "10uF" H 9550 1050 50  0000 L CNN
-F 2 "Mlab_R:SMD-0805" H 9550 1150 60  0001 C CNN
-F 3 "" H 9550 1150 60  0000 C CNN
-	1    9550 1150
-	1    0    0    -1  
-$EndComp
-Connection ~ 9550 1350
 Wire Wire Line
 	10250 1800 10050 1800
 Wire Wire Line
@@ -153,11 +141,6 @@ Wire Wire Line
 	9550 900  9550 950 
 Wire Wire Line
 	10150 950  9850 950 
-Connection ~ 9550 950 
-Wire Wire Line
-	9550 950  9550 1050
-Wire Wire Line
-	9550 1250 9550 1350
 $Comp
 L MLAB_Jumpers:JUMP_3X2 J1
 U 1 1 5B4DDE60
@@ -438,13 +421,13 @@ Text Label 4100 3450 0    60   ~ 0
 Text Label 4100 3850 0    60   ~ 0
 2A
 Text Label 6300 3350 0    60   ~ 0
-1Y
+1+
 Text Label 6300 3550 0    60   ~ 0
-1Z
+1-
 Text Label 6300 3750 0    60   ~ 0
-2Y
+2+
 Text Label 6300 3950 0    60   ~ 0
-2Z
+2-
 $Comp
 L Device:R R1
 U 1 1 5C6CC9E7
