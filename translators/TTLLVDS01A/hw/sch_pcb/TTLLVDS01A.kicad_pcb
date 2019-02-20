@@ -3,7 +3,7 @@
   (general
     (thickness 1.6)
     (drawings 14)
-    (tracks 62)
+    (tracks 71)
     (zones 0)
     (modules 17)
     (nets 11)
@@ -21,7 +21,7 @@
   )
 
   (layers
-    (0 F.Cu signal)
+    (0 F.Cu signal hide)
     (31 B.Cu signal)
     (34 B.Paste user)
     (36 B.SilkS user)
@@ -37,7 +37,7 @@
   )
 
   (setup
-    (last_trace_width 0.3)
+    (last_trace_width 0.5)
     (user_trace_width 0.3)
     (user_trace_width 0.5)
     (user_trace_width 0.8)
@@ -45,7 +45,7 @@
     (trace_clearance 0.2)
     (zone_clearance 0.3)
     (zone_45_only no)
-    (trace_min 0.1)
+    (trace_min 0.2)
     (via_size 0.8)
     (via_drill 0.4)
     (via_min_size 0.4)
@@ -68,7 +68,7 @@
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFF7F)
     (pcbplotparams
-      (layerselection 0x00030_80000001)
+      (layerselection 0x010e0_ffffffff)
       (usegerberextensions false)
       (usegerberattributes false)
       (usegerberadvancedattributes false)
@@ -91,9 +91,9 @@
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory "../CAM_PROFI/"))
   )
 
   (net 0 "")
@@ -755,6 +755,15 @@
   (gr_line (start 40.386 -0.254) (end 40.386 -20.066) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 0.254 -20.066) (end 40.386 -20.066) (layer Edge.Cuts) (width 0.15))
 
+  (via (at 15.621 -13.081) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
+  (via (at 15.621 -12.065) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
+  (via (at 15.621 -11.049) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
+  (via (at 22.225 -13.208) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
+  (via (at 22.225 -12.192) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
+  (via (at 22.225 -11.176) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
+  (via (at 20.32 -3.556) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
+  (via (at 21.463 -3.556) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
+  (via (at 22.479 -3.556) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
   (segment (start 13.843 -5.207) (end 13.462 -5.588) (width 0.5) (layer B.Cu) (net 2))
   (segment (start 16.096 -5.207) (end 13.843 -5.207) (width 0.5) (layer B.Cu) (net 2))
   (segment (start 16.096 -4.097) (end 16.764 -3.429) (width 0.5) (layer B.Cu) (net 2))
@@ -818,7 +827,7 @@
   (segment (start 24.0665 -8.4455) (end 26.8836 -11.2626) (width 0.4) (layer B.Cu) (net 10))
   (segment (start 27.651093 -10.96259) (end 27.82461 -10.96259) (width 0.4) (layer B.Cu) (net 10))
 
-  (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 5C6CC74E) (hatch edge 0.508)
+  (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 5C6D8165) (hatch edge 0.508)
     (connect_pads thru_hole_only (clearance 0.3))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -1040,7 +1049,7 @@
       )
     )
   )
-  (zone (net 1) (net_name GND) (layer F.Cu) (tstamp 5C6CC74B) (hatch edge 0.508)
+  (zone (net 1) (net_name GND) (layer F.Cu) (tstamp 5C6D8162) (hatch edge 0.508)
     (connect_pads thru_hole_only (clearance 0.3))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
