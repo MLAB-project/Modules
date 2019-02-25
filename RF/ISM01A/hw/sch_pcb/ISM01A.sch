@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:ISM01A-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -2160,4 +2160,6 @@ F 4 "5c70984712875079b91f8aec" H 10700 4100 50  0001 C CNN "UST_ID"
 	1    10700 4100
 	1    0    0    -1  
 $EndComp
+Text Notes 5100 750  0    60   ~ 0
+433MHz
 $EndSCHEMATC
