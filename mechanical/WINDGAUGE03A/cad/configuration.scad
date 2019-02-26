@@ -32,10 +32,6 @@ LO_vyska_dorazu=0;
 //Obecné parametry
 prumer_osicky=5.1;
 
-//Rozmery modulu se senzorem
-senzor_delka=22;
-senzor_sirka=20.4;
-senzor_sila=2;
 
 
 //Parametry loziska
@@ -71,8 +67,9 @@ L01_sila_materialu_lopatky=0.9;
 D01_material_pod_zavitem=5;
 D01_material_za_zavitem=3;
 D01_material_pred_zavitem=2;
-D01_delka_tyce=40;
-D01_sirka_tyce=10;
+D01_polomer_zakladny=40;
+D01_sila_setny_spodniho_drzaku=5;
+D01_vyska_spodni_casti_drzaku=50;
 
 //WINDGAUGE02A_D02 //uchyt na sloup
 D02_sila_materialu=6;

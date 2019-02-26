@@ -11,6 +11,13 @@ use <src/WINDGAUGE_S03.scad>
 
 include <configuration.scad>
 
+//R01 - kryt který je možné přilepit na trubici 
+//R03 - horní díl na ložicko
+//R04 - kryt kvůli vodě
+
+
+
+
 posunuti_dilu=0; //posunuti dilu od sebe
 difference()
 {     
