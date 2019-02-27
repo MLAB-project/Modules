@@ -70,6 +70,9 @@ D01_material_pred_zavitem=2;
 D01_polomer_zakladny=40;
 D01_sila_setny_spodniho_drzaku=5;
 D01_vyska_spodni_casti_drzaku=50;
+D01_uchytna_matice_vyska=6;
+D01_uchytna_matice_sirka=11.1;
+D01_ucyhtna_matice_material_nad=2;
 
 //WINDGAUGE02A_D02 //uchyt na sloup
 D02_sila_materialu=6;

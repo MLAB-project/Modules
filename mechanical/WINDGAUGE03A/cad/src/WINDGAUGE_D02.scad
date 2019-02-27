@@ -28,8 +28,8 @@ difference()
       translate([0,0,-(D01_vyska_spodni_casti_drzaku-D01_sila_setny_spodniho_drzaku)])    
   cylinder(h=D01_vyska_spodni_casti_drzaku-D01_sila_setny_spodniho_drzaku, r1=D01_polomer_zakladny, r2=(S01_prumer_vnitrni-S01_tolerance_zavit+D01_material_pred_zavitem*2)/2, center=false, $fn=100); 
       
-     translate([0,0,-D01_vyska_spodni_casti_drzaku])
-            cylinder (h = D01_sila_setny_spodniho_drzaku,r=D01_polomer_zakladny, center = false, $fn=100); 
+    translate([0,0,-((D01_vyska_spodni_casti_drzaku-D01_sila_setny_spodniho_drzaku)+(D01_uchytna_matice_vyska+D01_ucyhtna_matice_material_nad))])
+            cylinder (h = D01_uchytna_matice_vyska+D01_ucyhtna_matice_material_nad,r=D01_polomer_zakladny, center = false, $fn=100); 
 
 
       
@@ -43,6 +43,12 @@ difference()
 
 translate([0,0,-(D01_vyska_spodni_casti_drzaku-D01_sila_setny_spodniho_drzaku)])    
   cylinder(h=D01_vyska_spodni_casti_drzaku-D01_sila_setny_spodniho_drzaku, r1=D01_polomer_zakladny-D01_sila_setny_spodniho_drzaku, r2=(S01_prumer_vnitrni-S01_tolerance_zavit+D01_material_pred_zavitem*2)/2-D01_sila_setny_spodniho_drzaku, center=false, $fn=100);
+
+
+//otvor na matici
+       cylinder (h = D01_uchytna_matice_vyska+0.01, r= (D01_uchytna_matice_sirka+0.2)/2, $fn=6);
+        
+        
 
 
     }
