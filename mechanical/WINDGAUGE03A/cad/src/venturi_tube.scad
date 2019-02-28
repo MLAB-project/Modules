@@ -2,9 +2,6 @@ include <../configuration.scad>
 use <./lib/naca4.scad>
 use <./lib/curvedPipe.scad>
 
-
-//Držák na konektor RJ11
-
 module fins(outer_r, inner_r, wall, height, count, angle) {
     for (i = [1 : count]) {
         rotate([0, 0, i * 360/count])
@@ -69,7 +66,6 @@ connection_tube_diameter =  4;
                             cylinder (h = 10, d = 40, $fn=100); 
                 }
 
-
         }
 
         translate([0,0,0])
@@ -98,7 +94,7 @@ connection_tube_diameter =  4;
     fins(2*D, D/2, wall_thickness, 20, 6, 16);
 
 /// kanálky příklad
-    translate([100,0,0])
+%    translate([100,0,0])
 
     curvedPipe([ [0,0,0],
                 [100,0,0],
