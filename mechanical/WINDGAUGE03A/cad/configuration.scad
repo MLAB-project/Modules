@@ -5,8 +5,8 @@ $fn=40; // model faces resolution.
 //----------------------------------------------------------------
 //WINDGAUGE02A_S02 - Parametry pro hlavni valec anemometru
 S01_hloubka_zavitu=4;
-S01_vyska=80; //80
-S01_prumer_vnitrni=46;
+S01_vyska=110; //80
+S01_prumer_vnitrni=50;
 S01_sila_materialu=1.2;
 S01_vyska_horni_zavit=10;
 S01_vyska_spodniho_zavitu=10;
@@ -69,10 +69,13 @@ D01_material_za_zavitem=3;
 D01_material_pred_zavitem=2;
 D01_polomer_zakladny=40;
 D01_sila_setny_spodniho_drzaku=5;
-D01_vyska_spodni_casti_drzaku=50;
+D01_vyska_spodni_casti_drzaku=60;
+D01_sirka_otvoru_pro_konektor=40;
+//Šroub M6
 D01_uchytna_matice_vyska=6;
 D01_uchytna_matice_sirka=11.1;
 D01_ucyhtna_matice_material_nad=2;
+D01_uchytny_sroub_prumer=6.2;
 
 //WINDGAUGE02A_D02 //uchyt na sloup
 D02_sila_materialu=6;
@@ -114,8 +117,12 @@ R05_vyska_kridla=100;
 R05_delka_kridla=100;
 
 
-
-
+//S04
+ I2CDIFF01A_sirka_kon=16.5; //sirka konektoru
+ I2CDIFF01A_vyska_kon=13.5; //vyska konektoru
+ I2CDIFF01A_sirka_mod_otvory=4; //kolik modul zabira der
+ I2CDIFF01A_vyska_PCB=2; //vyska mezi albase a konektorem
+S04_sila_materialu=2;
 
 
 
