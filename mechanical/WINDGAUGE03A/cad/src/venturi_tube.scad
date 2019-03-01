@@ -1,6 +1,8 @@
 include <../configuration.scad>
 use <./lib/naca4.scad>
 use <./lib/curvedPipe.scad>
+use <WINDGAUGE_R06.scad>
+
 
 module fins(outer_r, inner_r, wall, height, count, angle) {
     for (i = [1 : count]) {
@@ -46,7 +48,7 @@ connection_tube_diameter =  4;
     difference()
     {
         union(){
-            translate([0,-D/2,120])   
+            translate([0,-D/2,145])   
                 rotate_extrude($fn = draft ? 50 : 200)
                     rotate([0,180,90])
                         difference()
@@ -55,18 +57,35 @@ connection_tube_diameter =  4;
                             square(150);
                         }
             
-            cylinder (h = 5*D, d = D + 2*wall_thickness, $fn=100); 
+            cylinder (h = 150, d = D + 2*wall_thickness, $fn=100); 
 
             translate([0,0,50])
                 hull(){
-                    cylinder (h = 2*D, d = D + 2*wall_thickness, $fn=100); 
+                    cylinder (h = 3*D, d = D + 2*wall_thickness, $fn=100); 
 
-                    translate([0,D/2,D])
+                    translate([0,D/2,40])
                         rotate([-90,0,0])
-                            cylinder (h = 10, d = 40, $fn=100); 
+                            cylinder (h = R01_vyska_preryti_statoru+R04_zavit_vyska+0.01, r = S01_prumer_vnitrni/2+4*S01_sila_materialu, $fn=100); 
                 }
 
         }
+
+        //provizorni dira pro vodice
+        translate([0,-50,90])
+            rotate([-90,0,0])
+                cylinder (h = 100, r = 2, $fn=100); 
+
+        // otvor pro narazeni na slip-ring
+        translate([0,D/2,90])
+            rotate([90,0,0])
+                WINDGAUGE01A_R06();
+
+
+        //lem proti vode
+        translate([0,D/2,90])
+            rotate([-90,0,0])
+                cylinder (h = R01_vyska_preryti_statoru+R04_zavit_vyska+0.01, r = S01_prumer_vnitrni/2+3*S01_sila_materialu, $fn=100); 
+
 
         translate([0,0,0])
             cylinder (h = 6*D, d = D_Diaphragm , $fn=100); 
