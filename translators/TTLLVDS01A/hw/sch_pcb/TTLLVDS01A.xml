@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>D:\G_MLAB\Modules\translators\TTLLVDS01A\hw\sch_pcb\TTLLVDS01A.sch</source>
-    <date>24.02.2019 10:54:21</date>
-    <tool>Eeschema (5.1.0-rc1-108-gb4c0af021)</tool>
+    <source>C:\Chroust\stare\MLAB_G\Modules\translators\TTLLVDS01A\hw\sch_pcb\TTLLVDS01A.sch</source>
+    <date>04.03.2019 14:37:21</date>
+    <tool>Eeschema (6.0.0-rc1-dev-205-gc0615c5ef)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>NAME</title>
@@ -93,22 +93,22 @@
       <tstamp>5C6BE664</tstamp>
     </comp>
     <comp ref="R3">
-      <value>100R</value>
+      <value>33R</value>
       <footprint>Mlab_R:SMD-0805</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="UST_ID">5c70984512875079b91f8977</field>
+        <field name="UST_ID">5c70984512875079b91f8970</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C6BEB35</tstamp>
     </comp>
     <comp ref="R4">
-      <value>100R</value>
+      <value>33R</value>
       <footprint>Mlab_R:SMD-0805</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="UST_ID">5c70984512875079b91f8977</field>
+        <field name="UST_ID">5c70984512875079b91f8970</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -291,25 +291,25 @@
   </libparts>
   <libraries>
     <library logical="Device">
-      <uri>D:/GIT/Kicad/kicad-symbols/Device.lib</uri>
+      <uri>C:/Chroust/stare/KiCAD_G/kicad-symbols/Device.lib</uri>
     </library>
     <library logical="MLAB_CONNECTORS">
-      <uri>D:/G_MLAB/kicad-mlab/symbols/MLAB_CONNECTORS.lib</uri>
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_CONNECTORS.lib</uri>
     </library>
     <library logical="MLAB_D">
-      <uri>D:/G_MLAB/kicad-mlab/symbols/MLAB_D.lib</uri>
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_D.lib</uri>
     </library>
     <library logical="MLAB_HEADER">
-      <uri>D:/G_MLAB/kicad-mlab/symbols/MLAB_HEADER.lib</uri>
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_HEADER.lib</uri>
     </library>
     <library logical="MLAB_IO">
-      <uri>D:/G_MLAB/kicad-mlab/symbols/MLAB_IO.lib</uri>
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_IO.lib</uri>
     </library>
     <library logical="MLAB_Jumpers">
-      <uri>D:/G_MLAB/kicad-mlab/symbols/MLAB_Jumpers.lib</uri>
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_Jumpers.lib</uri>
     </library>
     <library logical="MLAB_MECHANICAL">
-      <uri>D:/G_MLAB/kicad-mlab/symbols/MLAB_MECHANICAL.lib</uri>
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_MECHANICAL.lib</uri>
     </library>
   </libraries>
   <nets>
