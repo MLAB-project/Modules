@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>D:\G_MLAB\Modules\RF\ISM01A\hw\sch_pcb\ISM01A.sch</source>
-    <date>24.02.2019 11:19:11</date>
-    <tool>Eeschema (5.1.0-rc1-108-gb4c0af021)</tool>
+    <source>C:\Chroust\stare\MLAB_G\Modules\RF\ISM01A\hw\sch_pcb\ISM01A.sch</source>
+    <date>04.03.2019 14:38:59</date>
+    <tool>Eeschema (6.0.0-rc1-dev-205-gc0615c5ef)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>NAME</title>
@@ -85,7 +85,7 @@
       <tstamp>5C000575</tstamp>
     </comp>
     <comp ref="U1">
-      <value>LM1117</value>
+      <value>LM1117-3V3</value>
       <footprint>Mlab_IO:SOT-223</footprint>
       <fields>
         <field name="UST_ID">5c70984712875079b91f8af9</field>
@@ -1215,28 +1215,28 @@
   </libparts>
   <libraries>
     <library logical="Device">
-      <uri>D:/GIT/Kicad/kicad-symbols/Device.lib</uri>
+      <uri>C:/Chroust/stare/KiCAD_G/kicad-symbols/Device.lib</uri>
     </library>
     <library logical="MLAB_CONNECTORS">
-      <uri>D:/G_MLAB/kicad-mlab/symbols/MLAB_CONNECTORS.lib</uri>
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_CONNECTORS.lib</uri>
     </library>
     <library logical="MLAB_D">
-      <uri>D:/G_MLAB/kicad-mlab/symbols/MLAB_D.lib</uri>
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_D.lib</uri>
     </library>
     <library logical="MLAB_HEADER">
-      <uri>D:/G_MLAB/kicad-mlab/symbols/MLAB_HEADER.lib</uri>
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_HEADER.lib</uri>
     </library>
     <library logical="MLAB_IO">
-      <uri>D:/G_MLAB/kicad-mlab/symbols/MLAB_IO.lib</uri>
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_IO.lib</uri>
     </library>
     <library logical="MLAB_Jumpers">
-      <uri>D:/G_MLAB/kicad-mlab/symbols/MLAB_Jumpers.lib</uri>
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_Jumpers.lib</uri>
     </library>
     <library logical="MLAB_MECHANICAL">
-      <uri>D:/G_MLAB/kicad-mlab/symbols/MLAB_MECHANICAL.lib</uri>
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_MECHANICAL.lib</uri>
     </library>
     <library logical="MLAB_U">
-      <uri>D:/G_MLAB/kicad-mlab/symbols/MLAB_U.lib</uri>
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_U.lib</uri>
     </library>
   </libraries>
   <nets>
