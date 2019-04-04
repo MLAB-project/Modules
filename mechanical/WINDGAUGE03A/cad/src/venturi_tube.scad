@@ -40,7 +40,7 @@ module WINDGAUGE01A_S03(draft = true)
 {
 
 wall_thickness = 1.2;
-connection_tube_diameter =  4;
+c_t_b = 4;  // Connection tube diameter
 PCB_w = 14;  // PCB width
 PCB_h = 36;  // PCB height
 PCB_d = 5;  // PCB depth
@@ -102,6 +102,8 @@ cbl_d = 3;  // Cable opening diameter
             }
 
         }
+        translate([-50,-50,V_h-PCB_h-D/3+PCB_d/2])
+            cube([100,100,100]);
 
         // otvor pro narazeni na slip-ring
         translate([0,D/2,90])
@@ -115,19 +117,22 @@ cbl_d = 3;  // Cable opening diameter
                           r = S01_prumer_vnitrni/2+3*S01_sila_materialu, $fn=100);
 
         // Cabling
+        mid=(D/2 + D_Diaphragm/2)/2;
+        d = (D/2 - D_Diaphragm/2)/2;
         cbl_x = 0;
-        cbl_y = -D/2 + 2*wall_thickness-PCB_d/2;
+        cbl_y = -mid;
         cbl_z = V_h-PCB_h-D/3+PCB_d/2;
-        curvedPipe([[cbl_x, cbl_y, cbl_z],
-                    [cbl_x-D/2, cbl_y, cbl_z],
-                    [cbl_x-D/2, cbl_y+D/2, cbl_z],
-                    [cbl_x-D/2, cbl_y+D, cbl_z],
-                    [cbl_x, cbl_y+D, cbl_z],
-                    [cbl_x, cbl_y+100, cbl_z],
+        curvedPipe([[cbl_x    , cbl_y-100    , cbl_z],
+                    [cbl_x    , cbl_y        , cbl_z],
+                    [cbl_x-mid, cbl_y        , cbl_z],
+                    [cbl_x-mid, cbl_y+mid    , cbl_z],
+                    [cbl_x-mid, cbl_y+2*mid  , cbl_z],
+                    [cbl_x    , cbl_y+2*mid  , cbl_z],
+                    [cbl_x    , cbl_y+100    , cbl_z],
                    ],
-                    5,
-                    [22,0,10,5],
-                    PCB_d,
+                    6,
+                    [mid/6,mid,0,mid/1.1,mid/6],
+                    d,
                     0);
 
         // Venturi upper opening
@@ -143,24 +148,30 @@ cbl_d = 3;  // Cable opening diameter
             cylinder (h = 3*D, d1 = D , d2 = D_Diaphragm , $fn=100);
 
         //  Venturi upper pipe
-        curvedPipe([[0,0,V_h-D/2.5],
-                    [-connection_tube_diameter/2,-D/4,V_h-D/2.5],
-                    [-connection_tube_diameter,-D/2 - 1,V_h-D/2.5],
+        vup_x = 0;
+        vup_y = 0;
+        vup_z = V_h-D/2.5;
+        curvedPipe([[vup_x      ,vup_y    ,vup_z],
+                    [vup_x      ,vup_y-D/4,vup_z],
+                    [vup_x-c_t_b,vup_y-D/4,vup_z],
+                    [vup_x-c_t_b,vup_y-D/2,vup_z],
                    ],
-                    2,
-                    [1],
-                    connection_tube_diameter,
+                    3,
+                    [c_t_b/2,c_t_b/2],
+                    c_t_b,
                     0);
 
         // Venturi lower pipe
-        curvedPipe([[0, 0, 3*D + D_Diaphragm/2],
-                    [0, -D/2+connection_tube_diameter, 3*D + D_Diaphragm/2],
-                    [0, -D/2+connection_tube_diameter, V_h-D/2.25],
-                    [connection_tube_diameter, -D/2 - 1, V_h-D/2.25],
+        vlp_x = 0;
+        vlp_y = 0;
+        curvedPipe([[vlp_x      ,vlp_y          ,3*D + D_Diaphragm/2],
+                    [vlp_x      ,vlp_y-D/2+c_t_b,3*D + D_Diaphragm/2],
+                    [vlp_x+c_t_b,vlp_y-D/2+c_t_b,V_h-D/2.5],
+                    [vlp_x+c_t_b,vlp_y-D/2-1    ,V_h-D/2.5],
                    ],
                     3,
-                    [5,5],
-                    connection_tube_diameter,
+                    [c_t_b/2,c_t_b/2],
+                    c_t_b,
                     0);
 
         translate([0,0,3*D + D_Diaphragm + D])
@@ -169,28 +180,27 @@ cbl_d = 3;  // Cable opening diameter
         pcb_casing();
     }
 
-    // Drop shape - TOP.
-    //translate([0,-D/2,V_h]) // original without separation
-    translate([0,-1.5*D,V_h])  // temporary separation
-        difference()
-        {
-            drop_shape(2*D);
-            translate([0,0,-Lid_t/2])
-                drop_shape(2*D - 5);
-            translate([-D/2,0,-2*D])
-                cube([D,D/2,2*D]);
-            pcb_casing();
-            //  TODO screw hole
-            //translate([0,0,-D/2.5])
-            //    rotate([90,0,0])
-            //        cylinder (h = 2*D, d = connection_tube_diameter , $fn=100);
-        }
+//  |    // Drop shape - TOP.
+//  |    //translate([0,-D/2,V_h]) // original without separation
+//  |    translate([0,-1.5*D,V_h])  // temporary separation
+//  |        difference()
+//  |        {
+//  |            drop_shape(2*D);
+//  |            translate([0,0,-Lid_t/2])
+//  |                drop_shape(2*D - 5);
+//  |            translate([-D/2,0,-2*D])
+//  |                cube([D,D/2,2*D]);
+//  |            pcb_casing();
+//  |            //  TODO screw hole
+//  |            //translate([0,0,-D/2.5])
+//  |            //    rotate([90,0,0])
+//  |            //        cylinder (h = 2*D, d = c_t_b , $fn=100);
+//  |        }
 
 
     fins(2*D, D/2, wall_thickness, 20, 6, 16);
 
 }
-
 
 WINDGAUGE01A_S03();
 
