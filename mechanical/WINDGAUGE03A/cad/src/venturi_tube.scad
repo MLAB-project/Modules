@@ -153,9 +153,9 @@ cbl_d = 3;  // Cable opening diameter
         vup_y = 0;
         vup_z = V_h-D/2.5;
         curvedPipe([[vup_x      ,vup_y    ,vup_z],
-                    [vup_x      ,vup_y-D/4,vup_z],
-                    [vup_x-c_t_b,vup_y-D/4,vup_z],
-                    [vup_x-c_t_b,vup_y-D/2,vup_z],
+                    [vup_x      ,vup_y-D/2.2,vup_z],
+                    [vup_x-c_t_b,vup_y-D/2.2,vup_z],
+                    [vup_x-c_t_b,vup_y-D,vup_z],
                    ],
                     3,
                     [c_t_b/1.5,c_t_b/1.5],
