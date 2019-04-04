@@ -102,8 +102,9 @@ cbl_d = 3;  // Cable opening diameter
             }
 
         }
-        translate([0,-50,V_h-PCB_h-D/3+PCB_d/2])
-            cube([100,100,100]);
+        // Prototyping cut-out cube.
+//  |        translate([0,-50,V_h-PCB_h-D/3+PCB_d/2])
+//  |            cube([100,100,100]);
 
         // otvor pro narazeni na slip-ring
         translate([0,D/2,90])
