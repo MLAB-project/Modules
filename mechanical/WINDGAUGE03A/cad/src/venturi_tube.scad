@@ -102,7 +102,7 @@ cbl_d = 3;  // Cable opening diameter
             }
 
         }
-        translate([-50,-50,V_h-PCB_h-D/3+PCB_d/2])
+        translate([0,-50,V_h-PCB_h-D/3+PCB_d/2])
             cube([100,100,100]);
 
         // otvor pro narazeni na slip-ring
@@ -122,16 +122,16 @@ cbl_d = 3;  // Cable opening diameter
         cbl_x = 0;
         cbl_y = -mid;
         cbl_z = V_h-PCB_h-D/3+PCB_d/2;
-        curvedPipe([[cbl_x    , cbl_y-100    , cbl_z],
+        curvedPipe([[cbl_x    , cbl_y-2*mid    , cbl_z],
                     [cbl_x    , cbl_y        , cbl_z],
                     [cbl_x-mid, cbl_y        , cbl_z],
                     [cbl_x-mid, cbl_y+mid    , cbl_z],
                     [cbl_x-mid, cbl_y+2*mid  , cbl_z],
                     [cbl_x    , cbl_y+2*mid  , cbl_z],
-                    [cbl_x    , cbl_y+100    , cbl_z],
+                    [cbl_x    , cbl_y+4*mid  , cbl_z],
                    ],
                     6,
-                    [mid/6,mid,0,mid/1.1,mid/6],
+                    [mid/5,mid/1.5,0,mid/1.5,mid/5],
                     d,
                     0);
 
@@ -157,7 +157,7 @@ cbl_d = 3;  // Cable opening diameter
                     [vup_x-c_t_b,vup_y-D/2,vup_z],
                    ],
                     3,
-                    [c_t_b/2,c_t_b/2],
+                    [c_t_b/1.5,c_t_b/1.5],
                     c_t_b,
                     0);
 
@@ -170,7 +170,7 @@ cbl_d = 3;  // Cable opening diameter
                     [vlp_x+c_t_b,vlp_y-D/2-1    ,V_h-D/2.5],
                    ],
                     3,
-                    [c_t_b/2,c_t_b/2],
+                    [c_t_b/1.5,c_t_b/1.5],
                     c_t_b,
                     0);
 
