@@ -1,4 +1,4 @@
-$fn=40; // model faces resolution.
+//$fn=40; // model faces resolution.
 
 //OBECNE PARAMETRY 
 //----------------------------------------------------------------

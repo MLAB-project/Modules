@@ -1,6 +1,7 @@
 $fn=40; // model faces resolution.
 include <../configuration.scad>
 include <./lib/polyScrewThread_r1.scad>
+use <WINDGAUGE_R03.scad>
 
 //podložka u ložiska - nahrazena kovovou
 WINDGAUGE01A_R04();
@@ -8,29 +9,23 @@ WINDGAUGE01A_R04();
 //Model lopatky
 module WINDGAUGE01A_R04()
 {
-    //závit
-    difference()
-    {      
-        union()
-        { 
-            //materiál na závit
-            cylinder (h = R04_zavit_vyska, r=R03_prumer_zavitu/2+S01_sila_materialu, $fn=100);          
-
-            //krycí válec
-            difference()
-            {                  
-                //spodní válec        
-                cylinder (h = R01_vyska_preryti_statoru+R04_zavit_vyska, r=S01_prumer_vnitrni/2+5*S01_sila_materialu, $fn=100); 
-                //Odečet spodního válce
-                translate([0,0,S01_sila_materialu])
-                    cylinder (h = R01_vyska_preryti_statoru+R04_zavit_vyska+0.01, r=S01_prumer_vnitrni/2+4*S01_sila_materialu, $fn=100);
-                
-            }  
+    // Drop shape - TOP.
+    //translate([0,-D/2,V_h]) // original without separation
+    translate([0,-1.5*D,V_h])  // temporary separation
+        difference()
+        {
+            drop_shape(2*D);
+            translate([0,0,-Lid_t/2])
+                drop_shape(2*D - 5);
+            translate([-D/2,0,-2*D])
+                cube([D,D/2,2*D]);
+            pcb_casing();
+            //  TODO screw hole
+            //translate([0,0,-D/2.5])
+            //    rotate([90,0,0])
+            //        cylinder (h = 2*D, d = c_t_b , $fn=100);
         }
-      
-        translate([0,0,-10])
-            screw_thread((R03_prumer_zavitu),S01_hloubka_zavitu,55,R04_zavit_vyska+R02_zavit_vyska+R01_zavit_vyska,PI/2,2);   
-    }
- }
+
+}
 
 
