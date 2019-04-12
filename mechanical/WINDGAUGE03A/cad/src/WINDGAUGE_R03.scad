@@ -3,6 +3,19 @@ use <./lib/naca4.scad>
 use <./lib/curvedPipe.scad>
 use <WINDGAUGE_R06.scad>
 
+wall_thickness = 1.2;
+c_t_b = 4;  // Connection tube diameter
+PCB_w = 14;  // PCB width
+PCB_h = 36;  // PCB height
+PCB_d = 5;  // PCB depth
+D = max(PCB_w * 2, PCB_h, PCB_d * 4);  // venturi tube base diameter
+//D = 25;  // original venturi base diameter
+D_Diaphragm = D/2;
+V_h = 150;  // Venturi tube height
+Lid_t = 5;  // Drop lid thickness
+cbl_d = 3;  // Cable opening diameter
+sr_off = 10;  // Slip-ring offset
+
 module fins(outer_r, inner_r, wall, height, count, angle, draft) {
     for (i = [1 : count]) {
         rotate([0, 0, i * 360/count])
@@ -36,19 +49,6 @@ module fins(outer_r, inner_r, wall, height, count, angle, draft) {
 
 module drop_shape(drop_length, draft)
 {
-
-wall_thickness = 1.2;
-c_t_b = 4;  // Connection tube diameter
-PCB_w = 14;  // PCB width
-PCB_h = 36;  // PCB height
-PCB_d = 5;  // PCB depth
-D = max(PCB_w * 2, PCB_h, PCB_d * 4);  // venturi tube base diameter
-//D = 25;  // original venturi base diameter
-D_Diaphragm = D/2;
-V_h = 150;  // Venturi drop height
-Lid_t = 5;  // Venturi drop lid thickness
-cbl_d = 3;  // Cable opening diameter
-
     rotate_extrude($fn = draft ? 10 : 200)
         rotate([0,180,90])
             difference()
@@ -61,19 +61,6 @@ cbl_d = 3;  // Cable opening diameter
 
 module pcb_casing()
 {
-wall_thickness = 1.2;
-c_t_b = 4;  // Connection tube diameter
-PCB_w = 14;  // PCB width
-PCB_h = 36;  // PCB height
-PCB_d = 5;  // PCB depth
-D = max(PCB_w * 2, PCB_h, PCB_d * 4);  // venturi tube base diameter
-//D = 25;  // original venturi base diameter
-D_Diaphragm = D/2;
-V_h = 150;  // Venturi drop height
-Lid_t = 5;  // Venturi drop lid thickness
-cbl_d = 3;  // Cable opening diameter
-
-
     translate([-PCB_w/2,-D/2-PCB_d*10,V_h-PCB_h-D/3])
         cube([PCB_w,PCB_d*10,PCB_h]);
 }
@@ -81,18 +68,6 @@ cbl_d = 3;  // Cable opening diameter
 
 module WINDGAUGE03A_R03(draft = true)
 {
-wall_thickness = 1.2;
-c_t_b = 4;  // Connection tube diameter
-PCB_w = 14;  // PCB width
-PCB_h = 36;  // PCB height
-PCB_d = 5;  // PCB depth
-D = max(PCB_w * 2, PCB_h, PCB_d * 4);  // venturi tube base diameter
-//D = 25;  // original venturi base diameter
-D_Diaphragm = D/2;
-V_h = 150;  // Venturi drop height
-Lid_t = 5;  // Venturi drop lid thickness
-cbl_d = 3;  // Cable opening diameter
-
     difference()
     {
         union(){
@@ -112,13 +87,13 @@ cbl_d = 3;  // Cable opening diameter
                     }
                 }
 
-            cylinder (h = 150, d = D + 2*wall_thickness, $fn=draft ? 10 : 100);
+            cylinder (h = V_h, d = D + 2*wall_thickness, $fn=draft ? 10 : 100);
 
-            translate([0,0,150-3*D])
+            translate([0,0,V_h-3*D])
                 hull(){
                     cylinder (h = 3*D, d = D + 2*wall_thickness, $fn=draft ? 10 :100);
 
-                    translate([0,D/2,140-3*D])
+                    translate([0,D/2,V_h-sr_off-3*D])
                         rotate([-90,0,0])
                             cylinder (h = R01_vyska_preryti_statoru+R04_zavit_vyska+0.01,
                                       r = S01_prumer_vnitrni/2+4*S01_sila_materialu,
@@ -131,12 +106,12 @@ cbl_d = 3;  // Cable opening diameter
 //  |            cube([100,100,100]);
 
         // otvor pro narazeni na slip-ring
-        translate([0,D/2,74])
+        translate([0,D/2,2*V_h-sr_off-6*D])
             rotate([90,0,0])
                 WINDGAUGE01A_R06();
 
         //lem proti vode
-        translate([0,D/2,74])
+        translate([0,D/2,2*V_h-sr_off-6*D])
             rotate([-90,0,0])
                 cylinder (h = R01_vyska_preryti_statoru+R04_zavit_vyska+0.01,
                           r = S01_prumer_vnitrni/2+3*S01_sila_materialu,
@@ -209,7 +184,7 @@ cbl_d = 3;  // Cable opening diameter
     }
 
     fins(2*D, D/2, wall_thickness, 20, 6, 16);
+
 }
 
 WINDGAUGE03A_R03(draft = true);
-
