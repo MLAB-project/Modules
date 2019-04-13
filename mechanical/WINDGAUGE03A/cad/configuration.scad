@@ -124,9 +124,19 @@ R05_delka_kridla=100;
  I2CDIFF01A_vyska_PCB=2; //vyska mezi albase a konektorem
 S04_sila_materialu=2;
 
-
-
-
-
-
-
+//WINDGAUGE03A_R03 // Venturi tube
+R03_wide_D = 36; // Venturi wide tube inner diameter
+R03_narrow_D = R03_wide_D/2; // Venturi narrow tube inner diameter
+R03_global_clearance = 0.5; // additional space for PCB - set according to printer precision
+R03_PCB_top_rim = 5; // vertical distance from top of tube to top of PCB
+R03_PCB_height = 41 + R03_global_clearance; // height of PCB casing - if changed check casing
+R03_PCB_width = 14 + R03_global_clearance; // width of PCB casing - if changed check casing
+R03_PCB_depth = 5 + R03_global_clearance; // depth of PCB casing - if changed check casing
+R03_air_tube_diameter = 2; // air tubes diameter
+R03_sensor_offset = 2.2;  // distance from PCB border to sensor
+R03_sensor_pitch = 4.3;  // distance between sensors
+R03_slip_ring_offset = 0; // slip-ring offset from tube center
+R03_venturi_tube_height = 150;  // Venturi tube height (limited by max print size)
+R03_wall_thickness = 3; // Venturi tube wall thickness
+R03_inner_screw_diameter = 5; // PCB casing screw inner diameter
+R03_thread_tolerance = 0.5; // PCB casing screw thread tolerance

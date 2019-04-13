@@ -3,18 +3,14 @@ use <./lib/naca4.scad>
 use <./lib/curvedPipe.scad>
 use <WINDGAUGE_R06.scad>
 
-wall_thickness = 1.2;
-c_t_b = 4;  // Connection tube diameter
-PCB_w = 14;  // PCB width
-PCB_h = 36;  // PCB height
-PCB_d = 5;  // PCB depth
-D = max(PCB_w * 2, PCB_h, PCB_d * 4);  // venturi tube base diameter
-//D = 25;  // original venturi base diameter
-D_Diaphragm = D/2;
-V_h = 150;  // Venturi tube height
-Lid_t = 5;  // Drop lid thickness
-cbl_d = 3;  // Cable opening diameter
-sr_off = 10;  // Slip-ring offset
+slip_ring_z = 2*R03_venturi_tube_height - R03_slip_ring_offset - 6*R03_wide_D;
+// length of tube narrowing part
+intake_length = ((R03_wide_D - R03_narrow_D) / 2) / tan(23 / 2);
+// length of tube widening part
+exhaust_length = ((R03_wide_D - R03_narrow_D) / 2) / tan(15 / 2);
+// length of wide tube part on bottom and top
+wide_body_length = (R03_venturi_tube_height - intake_length - exhaust_length
+                    - R03_narrow_D) / 2;
 
 module fins(outer_r, inner_r, wall, height, count, angle, draft) {
     for (i = [1 : count]) {
@@ -49,141 +45,173 @@ module fins(outer_r, inner_r, wall, height, count, angle, draft) {
 
 module drop_shape(drop_length, draft)
 {
-    rotate_extrude($fn = draft ? 10 : 200)
-        rotate([0,180,90])
-            difference()
+    difference()
+    {
+        rotate_extrude($fn = draft ? 10 : 200)
+            rotate([0, 180, 90])
+                difference()
+                {
+                    polygon(points = airfoil_data(naca=0050, L =2*R03_wide_D,
+                                                  N=draft ? 50 : 200));
+                    square(2*R03_wide_D);
+                }
+        // Right screw
+        translate([R03_PCB_width/2 + R03_inner_screw_diameter,
+                   R03_wide_D, -R03_PCB_height/2])
+            rotate([90, 0, 0])
             {
-                polygon(points = airfoil_data(naca=0050, L =drop_length ,
-                                              N=draft ? 50 : 200));
-                square(150);
+                screw_thread(R03_inner_screw_diameter - R03_thread_tolerance,
+                             4, 55, 2*R03_wide_D, PI/2, 2);
+                // Screw head
+                translate([0, 0, 45])
+                    cylinder (h = R03_wide_D, d = R03_inner_screw_diameter,
+                              $fn=draft ? 10 :100);
             }
+        // Left screw
+        translate([-R03_PCB_width/2 - R03_inner_screw_diameter,
+                   R03_wide_D, -R03_PCB_height/2])
+            rotate([90, 0, 0])
+            {
+                screw_thread(R03_inner_screw_diameter - R03_thread_tolerance,
+                             4, 55, 2*R03_wide_D, PI/2, 2);
+                // Screw head
+                translate([0, 0, 45])
+                    cylinder (h = R03_wide_D, d = R03_inner_screw_diameter,
+                              $fn=draft ? 10 :100);
+            }
+    }
 }
-
-module pcb_casing()
-{
-    translate([-PCB_w/2,-D/2-PCB_d*10,V_h-PCB_h-D/3])
-        cube([PCB_w,PCB_d*10,PCB_h]);
-}
-
 
 module WINDGAUGE03A_R03(draft = true)
 {
     difference()
     {
-        union(){
+        union()
+        {
             // Drop shape - BOTTOM with PCB casing.
-            translate([0,-D/2,V_h])
+            translate([0, -R03_wide_D/2, R03_venturi_tube_height])
+                difference()
                 {
-                    difference()
-                    {
-                        drop_shape(2*D, draft);
-                        translate([-D/2,-D/2,-2*D])
-                            cube([D,D/2,2*D]);
-                    }
-                    difference()
-                    {
-                        translate([0,0,-Lid_t/2])
-                            drop_shape(2*D-5, draft);
-                    }
+                    drop_shape(2*R03_wide_D, draft);
+                    translate([-R03_wide_D/2, -R03_wide_D/2 - R03_PCB_depth,
+                               - 2*R03_wide_D])
+                        cube([R03_wide_D, R03_wide_D/2, 2*R03_wide_D]);
+                    translate([-R03_PCB_width/2, -R03_PCB_depth - R03_wall_thickness,
+                               -R03_PCB_height - R03_PCB_top_rim])
+                        cube([R03_PCB_width, R03_PCB_depth, R03_PCB_height]);
                 }
 
-            cylinder (h = V_h, d = D + 2*wall_thickness, $fn=draft ? 10 : 100);
+            // Main body
+            cylinder (h = R03_venturi_tube_height, d = R03_wide_D + 2*R03_wall_thickness,
+                      $fn=draft ? 10 : 100);
 
-            translate([0,0,V_h-3*D])
-                hull(){
-                    cylinder (h = 3*D, d = D + 2*wall_thickness, $fn=draft ? 10 :100);
-
-                    translate([0,D/2,V_h-sr_off-3*D])
-                        rotate([-90,0,0])
-                            cylinder (h = R01_vyska_preryti_statoru+R04_zavit_vyska+0.01,
-                                      r = S01_prumer_vnitrni/2+4*S01_sila_materialu,
-                                      $fn=draft ? 10 :100);
-                }
+            hull()
+            {
+                translate([0, 0, R03_venturi_tube_height - 3*R03_wide_D])
+                    cylinder (h = 3*R03_wide_D, d = R03_wide_D + 2*R03_wall_thickness,
+                              $fn=draft ? 10 :100);
+                translate([0, R03_wide_D/2 + 5, slip_ring_z])
+                    rotate([-90, 0, 0])
+                        cylinder (h = R01_vyska_preryti_statoru + R04_zavit_vyska + 0.01,
+                                  r = S01_prumer_vnitrni/2 + 4*S01_sila_materialu,
+                                  $fn=draft ? 10 :100);
+            }
 
         }
-        // Prototyping cut-out cube.
-//  |        translate([0,-50,V_h-PCB_h-D/3+PCB_d/2])
-//  |            cube([100,100,100]);
+//  |        // Prototyping cut-out cube.
+//  |        translate([0, -75, 0])
+//  |            cube([150, 150, 150]);
 
-        // otvor pro narazeni na slip-ring
-        translate([0,D/2,2*V_h-sr_off-6*D])
-            rotate([90,0,0])
+        // Slip-ring opening
+        translate([0, R03_wide_D/2 + 5, slip_ring_z])
+            rotate([90, 0, 0])
                 WINDGAUGE01A_R06();
 
-        //lem proti vode
-        translate([0,D/2,2*V_h-sr_off-6*D])
-            rotate([-90,0,0])
-                cylinder (h = R01_vyska_preryti_statoru+R04_zavit_vyska+0.01,
-                          r = S01_prumer_vnitrni/2+3*S01_sila_materialu,
+        // Waterproofing
+        translate([0, R03_wide_D/2 + 5,
+                   2*R03_venturi_tube_height - R03_slip_ring_offset - 6*R03_wide_D])
+            rotate([-90, 0, 0])
+                cylinder (h = R01_vyska_preryti_statoru + R04_zavit_vyska + 0.01,
+                          r = S01_prumer_vnitrni/2 + 3*S01_sila_materialu,
                           $fn=draft ? 10 :100);
 
-        // Venturi upper opening
-        translate([0,0,3*D + D_Diaphragm])
-            cylinder (h = D, d1 = D_Diaphragm , d2 = D , $fn=draft ? 10 :100);
+        // Venturi wide in
+        translate([0, 0, R03_venturi_tube_height - wide_body_length])
+            cylinder (h = wide_body_length, d = R03_wide_D, $fn=draft ? 10 :100);
 
-        // Venturi middle opening
-        translate([0,0,0])
-            cylinder (h = 6*D, d = D_Diaphragm , $fn=draft ? 10 :100);
+        // Venturi intake
+        translate([0, 0, wide_body_length + exhaust_length + R03_narrow_D])
+            cylinder (h = intake_length, d1 = R03_narrow_D, d2 = R03_wide_D,
+                      $fn=draft ? 10 :100);
 
-        // Venturi lower opening
-        translate([0,0,0])
-            cylinder (h = 3*D, d1 = D , d2 = D_Diaphragm , $fn=draft ? 10 :100);
+        // Venturi narrow
+        translate([0, 0, wide_body_length + exhaust_length])
+            cylinder (h = R03_narrow_D, d = R03_narrow_D, $fn=draft ? 10 :100);
 
+        // Venturi exhaust
+        translate([0, 0, wide_body_length])
+            cylinder (h = exhaust_length, d1 = R03_wide_D, d2 = R03_narrow_D,
+                      $fn=draft ? 10 :100);
 
-        translate([0,0,3*D + D_Diaphragm + D])
-            cylinder (h = 2*D,d = D , $fn=draft ? 10 :100);
-
-        pcb_casing();
+        // Venturi wide out
+        translate([0, 0, 0])
+            cylinder (h = wide_body_length, d = R03_wide_D, $fn=draft ? 10 :100);
 
         // Cabling
-        mid=(D/2 + D_Diaphragm/2)/2;
-        d = (D/2 - D_Diaphragm/2)/2;
+        mid_body_horizontal = (R03_wide_D/2 + R03_narrow_D/2) / 2;
+        mid_body_vertical = wide_body_length + exhaust_length + R03_narrow_D/2;
+        PCB_y = -R03_wide_D/2 - R03_wall_thickness - R03_PCB_depth/2;
+        PCB_z = R03_venturi_tube_height - R03_PCB_height - 5;
+        pipe_elevation = PCB_z - slip_ring_z;
+        d = (R03_wide_D/2 - R03_narrow_D/2)/2;
         cbl_x = 0;
-        cbl_y = -mid;
-        cbl_z = V_h-PCB_h-D/3+d/2;
-        curvedPipe([[cbl_x    , cbl_y-2*mid  , cbl_z],
-                    [cbl_x    , cbl_y        , cbl_z],
-                    [cbl_x-mid, cbl_y        , cbl_z-10],
-                    [cbl_x-mid, cbl_y+mid    , cbl_z-10],
-                    [cbl_x-mid, cbl_y+2*mid  , cbl_z-10],
-                    [cbl_x    , cbl_y+2*mid  , cbl_z-10],
-                    [cbl_x    , cbl_y+4*mid  , cbl_z-10],
+        curvedPipe([[0                   , PCB_y                   , PCB_z + 10       ],
+                    [0                   , PCB_y + 5               , PCB_z - 10       ],
+                    [-mid_body_horizontal, -mid_body_horizontal    , mid_body_vertical],
+                    [-mid_body_horizontal, 0                       , mid_body_vertical],
+                    [-mid_body_horizontal, mid_body_horizontal     , mid_body_vertical],
+                    [0                   , mid_body_horizontal     , slip_ring_z      ],
+                    [0                   , mid_body_horizontal + 10, slip_ring_z      ],
                    ],
                     6,
-                    [mid/5,mid/1.5,0,mid/1.5,mid/5],
+                    [d/2 + 0.1, mid_body_horizontal, d/2 + 0.1,
+                     mid_body_horizontal - 2, d/2 + 0.1],
                     d,
                     0);
 
         //  Venturi upper pipe
         vup_x = 0;
         vup_y = 0;
-        vup_z = V_h-D/2.5;
-        curvedPipe([[vup_x      ,vup_y    ,vup_z],
-                    [vup_x      ,vup_y-D/2.2,vup_z],
-                    [vup_x-c_t_b,vup_y-D/2.2,vup_z],
-                    [vup_x-c_t_b,vup_y-D,vup_z],
+        vup_z_in = R03_venturi_tube_height - (wide_body_length / 2);
+        vup_z_out = R03_venturi_tube_height - R03_PCB_top_rim - R03_sensor_offset;
+        curvedPipe([[vup_x, vup_y                              , vup_z_in ],
+                    [vup_x, vup_y - R03_wide_D/2 - R03_wall_thickness/2 , vup_z_in ],
+                    [vup_x, vup_y - R03_wide_D/2 - R03_wall_thickness/2 , vup_z_out],
+                    [vup_x, vup_y - R03_wide_D                          , vup_z_out],
                    ],
                     3,
-                    [c_t_b/1.5,c_t_b/1.5],
-                    c_t_b,
+                    [R03_air_tube_diameter/2 + 0.1, R03_air_tube_diameter/2 + 0.1],
+                    R03_air_tube_diameter,
                     0);
 
         // Venturi lower pipe
         vlp_x = 0;
         vlp_y = 0;
-        curvedPipe([[vlp_x      ,vlp_y          ,3*D + D_Diaphragm/2],
-                    [vlp_x      ,vlp_y-D/2+c_t_b,3*D + D_Diaphragm/2],
-                    [vlp_x+c_t_b,vlp_y-D/2+c_t_b,V_h-D/2.5],
-                    [vlp_x+c_t_b,vlp_y-D/2-1    ,V_h-D/2.5],
+        vlp_z_in = wide_body_length + exhaust_length + (R03_narrow_D / 2);
+        vlp_z_out = (R03_venturi_tube_height - R03_PCB_top_rim - R03_sensor_offset
+                     - R03_sensor_pitch);
+        curvedPipe([[vlp_x, vlp_y                                        , vlp_z_in ],
+                    [vlp_x, vlp_y - R03_narrow_D/2 - R03_wall_thickness/2, vlp_z_in ],
+                    [vlp_x, vlp_y - R03_wide_D/2 - R03_wall_thickness/2  , vlp_z_out],
+                    [vlp_x, vlp_y - R03_wide_D                           , vlp_z_out],
                    ],
                     3,
-                    [c_t_b/1.5,c_t_b/1.5],
-                    c_t_b,
+                    [R03_air_tube_diameter/2 + 0.1, R03_air_tube_diameter/2 + 0.1],
+                    R03_air_tube_diameter,
                     0);
-
     }
 
-    fins(2*D, D/2, wall_thickness, 20, 6, 16);
+    fins(2*R03_wide_D, R03_wide_D/2, R03_wall_thickness, 20, 6, 16);
 
 }
 
