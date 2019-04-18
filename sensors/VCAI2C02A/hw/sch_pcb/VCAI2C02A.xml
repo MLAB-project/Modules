@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>C:\Chroust\stare\MLAB_G\Modules\sensors\VCAI2C02A\hw\sch_pcb\VCAI2C02A.sch</source>
-    <date>02.04.2019 8:05:22</date>
-    <tool>Eeschema (6.0.0-rc1-dev-205-gc0615c5ef)</tool>
+    <source>C:\Chroust\Zaloha\stare\MLAB_G\Modules\sensors\VCAI2C02A\hw\sch_pcb\VCAI2C02A.sch</source>
+    <date>16. 4. 2019 9:55:11</date>
+    <tool>Eeschema (5.1.0-rc1-3-g6bb8fde48)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>VCAI2C02A</title>
@@ -25,6 +25,7 @@
       <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/22088c.pdf</datasheet>
       <fields>
         <field name="MFPN">MCP3423-E/UN</field>
+        <field name="UST_ID">5cb589b51287500e61c996bf</field>
       </fields>
       <libsource lib="Analog_ADC" part="MCP3423" description="2-Channel, 18-Bit, Delta-Sigma AD-Converter, I²C Interface, Reference, MSOP"/>
       <sheetpath names="/" tstamps="/"/>
@@ -34,6 +35,9 @@
       <value>IN 50V(max)</value>
       <footprint>Mlab_CON:XT30PW-M</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984812875079b91f8ba8</field>
+      </fields>
       <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C6DCE91</tstamp>
@@ -42,6 +46,9 @@
       <value>1M</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984712875079b91f8aaa</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C6E40F4</tstamp>
@@ -50,6 +57,9 @@
       <value>1M</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984712875079b91f8aaa</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C6E4168</tstamp>
@@ -58,6 +68,9 @@
       <value>3k9</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984612875079b91f8994</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8090E6</tstamp>
@@ -66,6 +79,9 @@
       <value>MM5Z10VT1G</value>
       <footprint>Diode_SMD:D_SOD-523</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5cb5832e1287500e61c99679</field>
+      </fields>
       <libsource lib="Device" part="D_Zener" description="Zener diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C809774</tstamp>
@@ -90,6 +106,9 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984612875079b91f899f</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8924B2</tstamp>
@@ -98,6 +117,9 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984612875079b91f899f</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8924E8</tstamp>
@@ -106,6 +128,9 @@
       <value>100n</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984712875079b91f8b4c</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8A0466</tstamp>
@@ -114,6 +139,9 @@
       <value>1u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984812875079b91f8bc2</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8A04A8</tstamp>
@@ -122,6 +150,9 @@
       <value>100n</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984712875079b91f8b4c</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8A6324</tstamp>
@@ -130,6 +161,9 @@
       <value>10uF</value>
       <footprint>Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984412875079b91f8865</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8A6366</tstamp>
@@ -138,6 +172,9 @@
       <value>BLM21PG300SN1D</value>
       <footprint>Mlab_L:BLM21PG_3Amp</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984412875079b91f87fd</field>
+      </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8A8653</tstamp>
@@ -146,6 +183,9 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984612875079b91f899f</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8AAAE0</tstamp>
@@ -154,6 +194,9 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984612875079b91f899f</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8AAB4C</tstamp>
@@ -163,6 +206,7 @@
       <footprint>Mlab_IO:QSOP-16_3.9x4.9mm_P0.635mm</footprint>
       <fields>
         <field name="MFPN">ADuM3190ARQZ</field>
+        <field name="UST_ID">5cb589091287500e61c996a0</field>
       </fields>
       <libsource lib="ADuM3190" part="ADuM3190" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -172,6 +216,9 @@
       <value>1u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984812875079b91f8bc2</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8CF1BA</tstamp>
@@ -180,6 +227,9 @@
       <value>180k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984712875079b91f8a9c</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8E3320</tstamp>
@@ -188,6 +238,9 @@
       <value>10n</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984712875079b91f8b49</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8E3393</tstamp>
@@ -197,6 +250,7 @@
       <footprint>Mlab_TR:L01ZxxxS05</footprint>
       <fields>
         <field name="MFPN">L01Z100S05</field>
+        <field name="UST_ID">5cb581511287500e61c99631</field>
       </fields>
       <libsource lib="L01ZxxxS05" part="L01ZxxxS05" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -206,6 +260,9 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984612875079b91f899f</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C90159B</tstamp>
@@ -214,6 +271,9 @@
       <value>33k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984712875079b91f8a8a</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C919F9E</tstamp>
@@ -222,6 +282,9 @@
       <value>180k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984712875079b91f8a9c</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C92232D</tstamp>
@@ -230,6 +293,9 @@
       <value>10n</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984712875079b91f8b49</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C922334</tstamp>
@@ -238,6 +304,9 @@
       <value>33k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984712875079b91f8a8a</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C92234E</tstamp>
@@ -275,9 +344,12 @@
       <tstamp>5C9365F0</tstamp>
     </comp>
     <comp ref="D2">
-      <value>+5V</value>
+      <value>+5V -Green</value>
       <footprint>Mlab_D:LED_1206</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984412875079b91f8895</field>
+      </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C94E66A</tstamp>
@@ -286,6 +358,9 @@
       <value>330R</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984512875079b91f8984</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C94E7B6</tstamp>
@@ -302,6 +377,9 @@
       <value>100n</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984712875079b91f8b4c</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8C3E84</tstamp>
@@ -310,6 +388,9 @@
       <value>1u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984812875079b91f8bc2</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8E124A</tstamp>
@@ -318,6 +399,9 @@
       <value>CDBHM260L-HF</value>
       <footprint>Mlab_D:MSB-2</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5cb5829a1287500e61c99661</field>
+      </fields>
       <libsource lib="Device" part="D_Bridge_+-AA" description="Diode bridge, +ve/-ve/AC/AC"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C954A3E</tstamp>
@@ -326,6 +410,9 @@
       <value>1k5</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984512875079b91f898e</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C9D03B3</tstamp>
@@ -350,6 +437,9 @@
       <value>50k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5cb585391287500e61c9968c</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C9EFCAC</tstamp>
@@ -358,6 +448,9 @@
       <value>1M</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984712875079b91f8aaa</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C99B770</tstamp>
@@ -366,6 +459,9 @@
       <value>1M</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984712875079b91f8aaa</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C99B7E6</tstamp>
@@ -604,22 +700,22 @@
   </libparts>
   <libraries>
     <library logical="ADuM3190">
-      <uri>C:\Chroust\stare\MLAB_G\Modules\sensors\VCAI2C02A\hw\sch_pcb/lib/ADuM3190.lib</uri>
+      <uri>C:\Chroust\Zaloha\stare\MLAB_G\Modules\sensors\VCAI2C02A\hw\sch_pcb/lib/ADuM3190.lib</uri>
     </library>
     <library logical="Analog_ADC">
-      <uri>C:/Chroust/stare/KiCAD_G/kicad-symbols/Analog_ADC.lib</uri>
+      <uri>C:/Chroust/Zaloha/stare/kicad_lib/kicad-symbols/Analog_ADC.lib</uri>
     </library>
     <library logical="Connector_Generic">
-      <uri>C:/Chroust/stare/KiCAD_G/kicad-symbols/Connector_Generic.lib</uri>
+      <uri>C:/Chroust/Zaloha/stare/kicad_lib/kicad-symbols/Connector_Generic.lib</uri>
     </library>
     <library logical="Device">
-      <uri>C:/Chroust/stare/KiCAD_G/kicad-symbols/Device.lib</uri>
+      <uri>C:/Chroust/Zaloha/stare/kicad_lib/kicad-symbols/Device.lib</uri>
     </library>
     <library logical="L01ZxxxS05">
-      <uri>C:\Chroust\stare\MLAB_G\Modules\sensors\VCAI2C02A\hw\sch_pcb/lib/L01ZxxxS05.lib</uri>
+      <uri>C:\Chroust\Zaloha\stare\MLAB_G\Modules\sensors\VCAI2C02A\hw\sch_pcb/lib/L01ZxxxS05.lib</uri>
     </library>
     <library logical="Mechanical">
-      <uri>C:/Chroust/stare/KiCAD_G/kicad-symbols/Mechanical.lib</uri>
+      <uri>C:/Chroust/Zaloha/stare/kicad_lib/kicad-symbols/Mechanical.lib</uri>
     </library>
   </libraries>
   <nets>

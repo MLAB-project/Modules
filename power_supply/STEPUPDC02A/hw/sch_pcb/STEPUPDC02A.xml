@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:\Chroust\Zaloha\stare\MLAB_G\Modules\power_supply\STEPUPDC02A\hw\sch_pcb\STEPUPDC02A.sch</source>
+    <date>15. 4. 2019 13:22:15</date>
+    <tool>Eeschema (5.1.0-rc1-3-g6bb8fde48)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>STEPUPDC02A.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J1">
+      <value>POWER</value>
+      <footprint>Mlab_Pin_Headers:Straight_2x03</footprint>
+      <libsource lib="STEPUPDC02A-rescue" part="HEADER_2x03_PARALLEL" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A05CF9A</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>TPS61041</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5_HandSoldering</footprint>
+      <fields>
+        <field name="UST_ID">5c70984612875079b91f8a0e</field>
+      </fields>
+      <libsource lib="tps6104" part="TPS6104" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A0BB51A</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>4u7</value>
+      <footprint>Mlab_R:SMD-0805</footprint>
+      <fields>
+        <field name="UST_ID">5c70984712875079b91f8b52</field>
+      </fields>
+      <libsource lib="device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A0BBF24</tstamp>
+    </comp>
+    <comp ref="L1">
+      <value>10u-DJNR5040-100-S</value>
+      <footprint>Mlab_L:DJNR5040</footprint>
+      <fields>
+        <field name="UST_ID">5c70984412875079b91f882a</field>
+      </fields>
+      <libsource lib="device" part="L" description="Inductor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A0BC312</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>STPS340U</value>
+      <footprint>Diode_SMD:D_SMB</footprint>
+      <fields>
+        <field name="UST_ID">5c70984512875079b91f88ba</field>
+      </fields>
+      <libsource lib="device" part="D_Schottky" description="Schottky diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A0BC5D0</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>1M8</value>
+      <footprint>Mlab_R:SMD-0805</footprint>
+      <fields>
+        <field name="UST_ID">5c70984712875079b91f8aab</field>
+      </fields>
+      <libsource lib="device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A0BC719</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>80k6</value>
+      <footprint>Mlab_R:SMD-0805</footprint>
+      <fields>
+        <field name="UST_ID">5cb467d31287500e61c242d2</field>
+      </fields>
+      <libsource lib="device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A0BC925</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>22p</value>
+      <footprint>Mlab_R:SMD-0805</footprint>
+      <fields>
+        <field name="UST_ID">5c70984712875079b91f8b34</field>
+      </fields>
+      <libsource lib="device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A0BCC3C</tstamp>
+    </comp>
+    <comp ref="M1">
+      <value>HOLE</value>
+      <footprint>Mlab_Mechanical:MountingHole_3mm</footprint>
+      <libsource lib="STEPUPDC02A-rescue" part="HOLE" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A0E262A</tstamp>
+    </comp>
+    <comp ref="M2">
+      <value>HOLE</value>
+      <footprint>Mlab_Mechanical:MountingHole_3mm</footprint>
+      <libsource lib="STEPUPDC02A-rescue" part="HOLE" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A0E273F</tstamp>
+    </comp>
+    <comp ref="M3">
+      <value>HOLE</value>
+      <footprint>Mlab_Mechanical:MountingHole_3mm</footprint>
+      <libsource lib="STEPUPDC02A-rescue" part="HOLE" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A0E281C</tstamp>
+    </comp>
+    <comp ref="M4">
+      <value>HOLE</value>
+      <footprint>Mlab_Mechanical:MountingHole_3mm</footprint>
+      <libsource lib="STEPUPDC02A-rescue" part="HOLE" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A0E28FA</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>15uF/35V</value>
+      <footprint>Mlab_C:TantalC_SizeC_Reflow</footprint>
+      <fields>
+        <field name="UST_ID">5c70984812875079b91f8bac</field>
+      </fields>
+      <libsource lib="device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A13EE1F</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>10k</value>
+      <footprint>Mlab_R:SMD-0805</footprint>
+      <fields>
+        <field name="UST_ID">5c70984612875079b91f899f</field>
+      </fields>
+      <libsource lib="device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CAD1A19</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>1uF/50V</value>
+      <footprint>Mlab_R:SMD-0805</footprint>
+      <fields>
+        <field name="UST_ID">5c70984712875079b91f8b6f</field>
+      </fields>
+      <libsource lib="device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CAD3AE2</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>HEADER_2x04_PARALLEL</value>
+      <footprint>Mlab_Pin_Headers:Straight_2x04</footprint>
+      <libsource lib="MLAB_HEADER" part="HEADER_2x04_PARALLEL" description="2x04 2.54 mm pitch header, 2 pins next to each other are connected"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CAD5C42</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>HEADER_1x02</value>
+      <footprint>Mlab_Pin_Headers:Straight_2x01</footprint>
+      <libsource lib="MLAB_HEADER" part="HEADER_1x02" description="1x02 2.54 mm pitch header"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CAB2981</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>ZSMD-5V6</value>
+      <footprint>Diode_SMD:D_MiniMELF</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984512875079b91f88bc</field>
+      </fields>
+      <libsource lib="device" part="D_Zener" description="Zener diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CAB4ADA</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="MLAB_HEADER" part="HEADER_1x02">
+      <description>1x02 2.54 mm pitch header</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">HEADER_1x02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="MLAB_HEADER" part="HEADER_2x04_PARALLEL">
+      <description>2x04 2.54 mm pitch header, 2 pins next to each other are connected</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">HEADER_2x04_PARALLEL</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+        <pin num="3" name="~" type="input"/>
+        <pin num="4" name="~" type="input"/>
+        <pin num="5" name="~" type="input"/>
+        <pin num="6" name="~" type="input"/>
+        <pin num="7" name="~" type="input"/>
+        <pin num="8" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="STEPUPDC02A-rescue" part="HEADER_2x03_PARALLEL">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">HEADER_2x03_PARALLEL</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+        <pin num="3" name="~" type="input"/>
+        <pin num="4" name="~" type="input"/>
+        <pin num="5" name="~" type="input"/>
+        <pin num="6" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="STEPUPDC02A-rescue" part="HOLE">
+      <fields>
+        <field name="Reference">M</field>
+        <field name="Value">HOLE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="CP">
+      <description>Polarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="D_Schottky">
+      <description>Schottky diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="D_Zener">
+      <description>Zener diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Zener</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="L">
+      <description>Inductor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="tps6104" part="TPS6104">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS6104</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SW" type="BiDi"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="FB" type="BiDi"/>
+        <pin num="4" name="EN" type="BiDi"/>
+        <pin num="5" name="VIN" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="MLAB_HEADER">
+      <uri>C:/Chroust/Zaloha/stare/MLAB_G/kicad-mlab/symbols/MLAB_HEADER.lib</uri>
+    </library>
+    <library logical="STEPUPDC02A-rescue">
+      <uri>C:\Chroust\Zaloha\stare\MLAB_G\Modules\power_supply\STEPUPDC02A\hw\sch_pcb/STEPUPDC02A-rescue.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>C:\Program Files\KiCad\share\kicad\library/device.lib</uri>
+    </library>
+    <library logical="tps6104">
+      <uri>C:\Chroust\Zaloha\stare\MLAB_G\Modules\power_supply\STEPUPDC02A\hw\sch_pcb/lib/tps6104.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="GND">
+      <node ref="J4" pin="8"/>
+      <node ref="C6" pin="2"/>
+      <node ref="R4" pin="2"/>
+      <node ref="J4" pin="7"/>
+      <node ref="U1" pin="2"/>
+      <node ref="J2" pin="1"/>
+      <node ref="D2" pin="2"/>
+      <node ref="J1" pin="1"/>
+      <node ref="C5" pin="2"/>
+      <node ref="J1" pin="2"/>
+      <node ref="J1" pin="5"/>
+      <node ref="J1" pin="6"/>
+      <node ref="C2" pin="2"/>
+      <node ref="J4" pin="2"/>
+      <node ref="J4" pin="1"/>
+    </net>
+    <net code="2" name="/PowerOUT">
+      <node ref="D1" pin="1"/>
+      <node ref="R2" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="J4" pin="6"/>
+      <node ref="C5" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="J4" pin="5"/>
+      <node ref="J4" pin="4"/>
+      <node ref="J4" pin="3"/>
+    </net>
+    <net code="3" name="/Power">
+      <node ref="J1" pin="3"/>
+      <node ref="J1" pin="4"/>
+      <node ref="C6" pin="1"/>
+      <node ref="R1" pin="1"/>
+      <node ref="D2" pin="1"/>
+      <node ref="L1" pin="1"/>
+      <node ref="U1" pin="5"/>
+    </net>
+    <net code="4" name="/ENABLE">
+      <node ref="R1" pin="2"/>
+      <node ref="J2" pin="2"/>
+      <node ref="U1" pin="4"/>
+    </net>
+    <net code="5" name="Net-(C1-Pad2)">
+      <node ref="U1" pin="3"/>
+      <node ref="C1" pin="2"/>
+      <node ref="R4" pin="1"/>
+      <node ref="R2" pin="2"/>
+    </net>
+    <net code="6" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2"/>
+      <node ref="U1" pin="1"/>
+      <node ref="L1" pin="2"/>
+    </net>
+    <net code="7" name="Net-(M4-Pad1)">
+      <node ref="M4" pin="1"/>
+    </net>
+    <net code="8" name="Net-(M3-Pad1)">
+      <node ref="M3" pin="1"/>
+    </net>
+    <net code="9" name="Net-(M2-Pad1)">
+      <node ref="M2" pin="1"/>
+    </net>
+    <net code="10" name="Net-(M1-Pad1)">
+      <node ref="M1" pin="1"/>
+    </net>
+  </nets>
+</export>
