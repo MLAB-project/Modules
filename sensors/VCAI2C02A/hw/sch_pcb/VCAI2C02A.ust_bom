@@ -4,6 +4,7 @@
         "Footprint": "Capacitor_SMD:C_0805_2012Metric", 
         "Ref": "C3", 
         "Tstamp": "5C8E124A", 
+        "UST_ID": "5c70984812875079b91f8bc2", 
         "Value": "1u"
     }, 
     {
@@ -11,6 +12,7 @@
         "Footprint": "Capacitor_SMD:C_0805_2012Metric", 
         "Ref": "C4", 
         "Tstamp": "5C8A0466", 
+        "UST_ID": "5c70984712875079b91f8b4c", 
         "Value": "100n"
     }, 
     {
@@ -18,6 +20,7 @@
         "Footprint": "Capacitor_SMD:C_0805_2012Metric", 
         "Ref": "C5", 
         "Tstamp": "5C8A04A8", 
+        "UST_ID": "5c70984812875079b91f8bc2", 
         "Value": "1u"
     }, 
     {
@@ -25,6 +28,7 @@
         "Footprint": "Capacitor_SMD:C_0805_2012Metric", 
         "Ref": "C6", 
         "Tstamp": "5C8CF1BA", 
+        "UST_ID": "5c70984812875079b91f8bc2", 
         "Value": "1u"
     }, 
     {
@@ -32,6 +36,7 @@
         "Footprint": "Capacitor_SMD:C_0805_2012Metric", 
         "Ref": "C7", 
         "Tstamp": "5C922334", 
+        "UST_ID": "5c70984712875079b91f8b49", 
         "Value": "10n"
     }, 
     {
@@ -39,6 +44,7 @@
         "Footprint": "Capacitor_SMD:C_0805_2012Metric", 
         "Ref": "C8", 
         "Tstamp": "5C8E3393", 
+        "UST_ID": "5c70984712875079b91f8b49", 
         "Value": "10n"
     }, 
     {
@@ -46,6 +52,7 @@
         "Footprint": "Capacitor_SMD:C_0805_2012Metric", 
         "Ref": "C9", 
         "Tstamp": "5C8C3E84", 
+        "UST_ID": "5c70984712875079b91f8b4c", 
         "Value": "100n"
     }, 
     {
@@ -53,6 +60,7 @@
         "Footprint": "Capacitor_SMD:C_0805_2012Metric", 
         "Ref": "C10", 
         "Tstamp": "5C8A6324", 
+        "UST_ID": "5c70984712875079b91f8b4c", 
         "Value": "100n"
     }, 
     {
@@ -60,6 +68,7 @@
         "Footprint": "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B", 
         "Ref": "C11", 
         "Tstamp": "5C8A6366", 
+        "UST_ID": "5c70984412875079b91f8865", 
         "Value": "10uF"
     }, 
     {
@@ -67,6 +76,7 @@
         "Footprint": "Diode_SMD:D_SOD-523", 
         "Ref": "D1", 
         "Tstamp": "5C809774", 
+        "UST_ID": "5cb5832e1287500e61c99679", 
         "Value": "MM5Z10VT1G"
     }, 
     {
@@ -74,13 +84,15 @@
         "Footprint": "Mlab_D:LED_1206", 
         "Ref": "D2", 
         "Tstamp": "5C94E66A", 
-        "Value": "+5V"
+        "UST_ID": "5c70984412875079b91f8895", 
+        "Value": "+5V -Green"
     }, 
     {
         "Datasheet": "~", 
         "Footprint": "Mlab_D:MSB-2", 
         "Ref": "D3", 
         "Tstamp": "5C954A3E", 
+        "UST_ID": "5cb5829a1287500e61c99661", 
         "Value": "CDBHM260L-HF"
     }, 
     {
@@ -88,6 +100,7 @@
         "Footprint": "Mlab_CON:XT30PW-M", 
         "Ref": "J1", 
         "Tstamp": "5C6DCE91", 
+        "UST_ID": "5c70984812875079b91f8ba8", 
         "Value": "IN 50V(max)"
     }, 
     {
@@ -116,6 +129,7 @@
         "Footprint": "Mlab_L:BLM21PG_3Amp", 
         "Ref": "L1", 
         "Tstamp": "5C8A8653", 
+        "UST_ID": "5c70984412875079b91f87fd", 
         "Value": "BLM21PG300SN1D"
     }, 
     {
@@ -151,6 +165,7 @@
         "Footprint": "Resistor_SMD:R_0805_2012Metric", 
         "Ref": "R1", 
         "Tstamp": "5C6E40F4", 
+        "UST_ID": "5c70984712875079b91f8aaa", 
         "Value": "1M"
     }, 
     {
@@ -158,6 +173,7 @@
         "Footprint": "Resistor_SMD:R_0805_2012Metric", 
         "Ref": "R2", 
         "Tstamp": "5C6E4168", 
+        "UST_ID": "5c70984712875079b91f8aaa", 
         "Value": "1M"
     }, 
     {
@@ -165,6 +181,7 @@
         "Footprint": "Resistor_SMD:R_0805_2012Metric", 
         "Ref": "R3", 
         "Tstamp": "5C9EFCAC", 
+        "UST_ID": "5cb585391287500e61c9968c", 
         "Value": "50k"
     }, 
     {
@@ -179,6 +196,7 @@
         "Footprint": "Resistor_SMD:R_0805_2012Metric", 
         "Ref": "R5", 
         "Tstamp": "5C9D03B3", 
+        "UST_ID": "5c70984512875079b91f898e", 
         "Value": "1k5"
     }, 
     {
@@ -193,6 +211,7 @@
         "Footprint": "Resistor_SMD:R_0805_2012Metric", 
         "Ref": "R7", 
         "Tstamp": "5C99B770", 
+        "UST_ID": "5c70984712875079b91f8aaa", 
         "Value": "1M"
     }, 
     {
@@ -200,6 +219,7 @@
         "Footprint": "Resistor_SMD:R_0805_2012Metric", 
         "Ref": "R8", 
         "Tstamp": "5C99B7E6", 
+        "UST_ID": "5c70984712875079b91f8aaa", 
         "Value": "1M"
     }, 
     {
@@ -207,6 +227,7 @@
         "Footprint": "Resistor_SMD:R_0805_2012Metric", 
         "Ref": "R10", 
         "Tstamp": "5C8924B2", 
+        "UST_ID": "5c70984612875079b91f899f", 
         "Value": "10k"
     }, 
     {
@@ -214,6 +235,7 @@
         "Footprint": "Resistor_SMD:R_0805_2012Metric", 
         "Ref": "R11", 
         "Tstamp": "5C8090E6", 
+        "UST_ID": "5c70984612875079b91f8994", 
         "Value": "3k9"
     }, 
     {
@@ -221,6 +243,7 @@
         "Footprint": "Resistor_SMD:R_0805_2012Metric", 
         "Ref": "R12", 
         "Tstamp": "5C8924E8", 
+        "UST_ID": "5c70984612875079b91f899f", 
         "Value": "10k"
     }, 
     {
@@ -228,6 +251,7 @@
         "Footprint": "Resistor_SMD:R_0805_2012Metric", 
         "Ref": "R13", 
         "Tstamp": "5C94E7B6", 
+        "UST_ID": "5c70984512875079b91f8984", 
         "Value": "330R"
     }, 
     {
@@ -235,6 +259,7 @@
         "Footprint": "Resistor_SMD:R_0805_2012Metric", 
         "Ref": "R14", 
         "Tstamp": "5C90159B", 
+        "UST_ID": "5c70984612875079b91f899f", 
         "Value": "10k"
     }, 
     {
@@ -242,6 +267,7 @@
         "Footprint": "Resistor_SMD:R_0805_2012Metric", 
         "Ref": "R15", 
         "Tstamp": "5C92232D", 
+        "UST_ID": "5c70984712875079b91f8a9c", 
         "Value": "180k"
     }, 
     {
@@ -249,6 +275,7 @@
         "Footprint": "Resistor_SMD:R_0805_2012Metric", 
         "Ref": "R16", 
         "Tstamp": "5C8E3320", 
+        "UST_ID": "5c70984712875079b91f8a9c", 
         "Value": "180k"
     }, 
     {
@@ -256,6 +283,7 @@
         "Footprint": "Resistor_SMD:R_0805_2012Metric", 
         "Ref": "R17", 
         "Tstamp": "5C92234E", 
+        "UST_ID": "5c70984712875079b91f8a8a", 
         "Value": "33k"
     }, 
     {
@@ -263,6 +291,7 @@
         "Footprint": "Resistor_SMD:R_0805_2012Metric", 
         "Ref": "R18", 
         "Tstamp": "5C919F9E", 
+        "UST_ID": "5c70984712875079b91f8a8a", 
         "Value": "33k"
     }, 
     {
@@ -270,6 +299,7 @@
         "Footprint": "Resistor_SMD:R_0805_2012Metric", 
         "Ref": "R22", 
         "Tstamp": "5C8AAAE0", 
+        "UST_ID": "5c70984612875079b91f899f", 
         "Value": "10k"
     }, 
     {
@@ -277,6 +307,7 @@
         "Footprint": "Resistor_SMD:R_0805_2012Metric", 
         "Ref": "R24", 
         "Tstamp": "5C8AAB4C", 
+        "UST_ID": "5c70984612875079b91f899f", 
         "Value": "10k"
     }, 
     {
@@ -285,6 +316,7 @@
         "MFPN": "L01Z100S05", 
         "Ref": "TR1", 
         "Tstamp": "5C9014AB", 
+        "UST_ID": "5cb581511287500e61c99631", 
         "Value": "L01ZxxxS05"
     }, 
     {
@@ -293,6 +325,7 @@
         "MFPN": "ADuM3190ARQZ", 
         "Ref": "U1", 
         "Tstamp": "5C8B9DAD", 
+        "UST_ID": "5cb589091287500e61c996a0", 
         "Value": "ADuM3190ARQZ"
     }, 
     {
@@ -301,6 +334,7 @@
         "MFPN": "MCP3423-E/UN", 
         "Ref": "U2", 
         "Tstamp": "5C6C7D4A", 
+        "UST_ID": "5cb589b51287500e61c996bf", 
         "Value": "MCP3423-E/UN"
     }
 ]
