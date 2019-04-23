@@ -25,16 +25,21 @@ module fins(outer_r, inner_r, wall, height, count, angle, draft) {
             cube([wall + 2, (outer_r - inner_r) + height, height]);
         }
     }
-    inner_points = [ for (i = [0 : count - 1]) [sin(i * 360/count) * (outer_r) , cos(i * 360/count) * (outer_r)]];
+    inner_points = [ for (i = [0 : count - 1]) [sin(i * 360/count) * (outer_r),
+                                                cos(i * 360/count) * (outer_r)]];
     // calculate coordinates of external fins polygon
     vertex_angle = (180*(count-2)) / count;   // angle in external fins polygon corner.
-    outer_points = [ for (i = [0 : count - 1]) [sin(i * 360/count) * (outer_r + wall/sin(vertex_angle/2)) , cos(i * 360/count) * (outer_r + wall/sin(vertex_angle/2))]];
-    polygon_paths = [ [ for (i = [0 : count-1]) i ], [ for (i = [count : 2*count-1]) i ]];
+    outer_points = [ for (i = [0 : count - 1]) [
+                         sin(i * 360/count) * (outer_r + wall/sin(vertex_angle/2)),
+                         cos(i * 360/count) * (outer_r + wall/sin(vertex_angle/2))
+                   ]];
+    polygon_paths = [ [ for (i = [0 : count-1]) i ],
+                      [ for (i = [count : 2*count-1]) i ]];
 
-    echo("outer points = ", outer_points);
-    echo("inner points = ", inner_points);
-    echo("paths = ", polygon_paths);
-    echo("vertex_angle = ", vertex_angle);
+//    echo("outer points = ", outer_points);
+//    echo("inner points = ", inner_points);
+//    echo("paths = ", polygon_paths);
+//    echo("vertex_angle = ", vertex_angle);
 
     linear_extrude(height = height - (tan(angle)*(outer_r - inner_r)))
         polygon(
@@ -47,7 +52,7 @@ module drop_shape(drop_length, draft)
 {
     difference()
     {
-        rotate_extrude($fn = draft ? 10 : 200)
+        rotate_extrude($fn = draft ? 20 : 200)
             rotate([0, 180, 90])
                 difference()
                 {
@@ -65,7 +70,7 @@ module drop_shape(drop_length, draft)
                 // Screw head
                 translate([0, 0, 45])
                     cylinder (h = R03_wide_D, d = R03_inner_screw_diameter,
-                              $fn=draft ? 10 :100);
+                              $fn=draft ? 20 :100);
             }
         // Left screw
         translate([-R03_PCB_width/2 - R03_inner_screw_diameter,
@@ -77,7 +82,7 @@ module drop_shape(drop_length, draft)
                 // Screw head
                 translate([0, 0, 45])
                     cylinder (h = R03_wide_D, d = R03_inner_screw_diameter,
-                              $fn=draft ? 10 :100);
+                              $fn=draft ? 20 :100);
             }
         // PCB casing
         translate([-R03_PCB_width/2,
@@ -87,13 +92,15 @@ module drop_shape(drop_length, draft)
                   R03_PCB_depth + R03_PCB_connector_overlay + R03_PCB_elevation,
                   R03_PCB_height]);
         translate([-R03_PCB_width/2, 0, -R03_PCB_height - R03_PCB_top_rim])
-            polyhedron(
-              points = [ // 0 = bottom right
+            polyhedron
+            (
+                points = [ // 0 = bottom right
                          [R03_PCB_width, 0, -R03_PCB_height*0.1],
                          // 1 = bottom left
                          [0, 0, -R03_PCB_height*0.1],
                          // 2 = top right front
-                         [R03_PCB_width, -R03_PCB_connector_overlay - R03_PCB_elevation, 0],
+                         [R03_PCB_width,
+                          -R03_PCB_connector_overlay - R03_PCB_elevation, 0],
                          // 3 = top left front
                          [0, -R03_PCB_connector_overlay - R03_PCB_elevation, 0],
                          // 4 = top right back
@@ -101,12 +108,12 @@ module drop_shape(drop_length, draft)
                          // 5 = top left back
                          [0, 0, 0],
                        ],
-              faces = [ [2, 3, 5, 4], // top
-                        [0, 2, 4], // right
-                        [1, 3, 5], // left
-                        [0, 1, 3, 2], // front
-                        [0, 1, 5, 4], // back
-                      ]
+                faces = [ [3, 5, 4, 2], // top
+                         [1, 3, 2, 0], // front
+                         [0, 4, 5, 1], // back
+                         [0, 2, 4], // right
+                         [1, 5, 3], // left
+                       ]
             );
     }
 }
@@ -123,25 +130,30 @@ module WINDGAUGE03A_R03(draft = true)
                 difference()
                 {
                     drop_shape(2*R03_wide_D, draft);
-                    // TOP cutout
-                    translate([-R03_wide_D/2, -R03_wide_D/2, -2*R03_wide_D])
-                        cube([R03_wide_D, R03_wide_D/2, 2*R03_wide_D]);
+//                    // TOP cutout
+//                    translate([-R03_wide_D/2, -R03_wide_D/2, -2*R03_wide_D])
+//                        cube([R03_wide_D, R03_wide_D/2, 2*R03_wide_D]);
                 }
                     // PCB elevation
                     translate([-R03_PCB_width/2, 0, -R03_PCB_top_rim])
-                        polyhedron(
+                        polyhedron
+                        (
                           points = [ // 0 = top left back
                                      [0, 0, 0],
                                      // 1 = top left front
-                                     [0, -R03_PCB_elevation - R03_PCB_connector_overlay, 0],
+                                     [0,
+                                      -R03_PCB_elevation - R03_PCB_connector_overlay,
+                                      0],
                                      // 2 = top right back
                                      [R03_PCB_width, 0, 0],
                                      // 3 = top right front
-                                     [R03_PCB_width, -R03_PCB_elevation - R03_PCB_connector_overlay, 0],
+                                     [R03_PCB_width,
+                                      -R03_PCB_elevation - R03_PCB_connector_overlay, 0],
                                      // 4 = bottom right back
                                      [R03_PCB_width, 0, -R03_PCB_height*1.1],
                                      // 5 = bottom right front
-                                     [R03_PCB_width, -R03_PCB_elevation, -R03_PCB_height],
+                                     [R03_PCB_width, -R03_PCB_elevation,
+                                      -R03_PCB_height],
                                      // 6 = bottom left back
                                      [0, 0, -R03_PCB_height*1.1],
                                      // 7 = bottom left front
@@ -149,11 +161,14 @@ module WINDGAUGE03A_R03(draft = true)
                                      // 8 = bottom left sensor back
                                      [0, 0, -R03_PCB_height/3],
                                      // 9 = bottom left sensor front
-                                     [0, -R03_PCB_elevation - R03_PCB_connector_overlay, -R03_PCB_height/3],
+                                     [0, -R03_PCB_elevation - R03_PCB_connector_overlay,
+                                      -R03_PCB_height/3],
                                      // 10 = bottom right sensor back
                                      [R03_PCB_width, 0, -R03_PCB_height/3],
                                      // 11 = bottom right sensor front
-                                     [R03_PCB_width, -R03_PCB_elevation - R03_PCB_connector_overlay, -R03_PCB_height/3],
+                                     [R03_PCB_width,
+                                      -R03_PCB_elevation - R03_PCB_connector_overlay,
+                                      -R03_PCB_height/3],
                                      // 12 = top left connector back
                                      [0, 0, -R03_PCB_height/3 * 2],
                                      // 13 = top left connector front
@@ -161,40 +176,59 @@ module WINDGAUGE03A_R03(draft = true)
                                      // 14 = top right connector back
                                      [R03_PCB_width, 0, -R03_PCB_height/3 * 2],
                                      // 15 = top right connector front
-                                     [R03_PCB_width, -R03_PCB_elevation, -R03_PCB_height/3 * 2],
+                                     [R03_PCB_width, -R03_PCB_elevation,
+                                      -R03_PCB_height/3 * 2],
                                    ],
-                          faces = [ [2, 3, 1, 0], // top bank
-                                    [10, 11, 3, 2], [14, 15, 11, 10], [4, 5, 15, 14], // right banks
-                                    [6, 7, 5, 4], // bottom bank
-                                    [12, 13, 7, 6], [8, 9, 13, 12], [0, 1, 9, 8], // left banks
-                                    [9, 1, 3, 11], // front top
-                                    [13, 9, 11, 15], // front middle
-                                    [7, 13, 15, 5], // front bottom
-                                    [6, 0, 2, 4], // back
+                                    //
+                                    // FRONT:   BACK:
+                                    // 1 - 3    0 - 2
+                                    // |   |    |   |
+                                    // 9   11   |   |
+                                    // |   |    |   |
+                                    // 13  15   |   |
+                                    // |   |    |   |
+                                    // 7 - 5    |   |
+                                    //          6 - 4
+                          faces = [ // top bank
+                                    [2, 3, 1, 0],
+                                    // right bank
+                                    [4, 5, 15, 11, 3, 2],
+                                    // bottom bank
+                                    [6, 7, 5, 4],
+                                    // left bank
+                                    [0, 1, 9, 13, 7, 6],
+                                    // front top
+                                    [9, 1, 3, 11],
+                                    // front middle
+                                    [13, 9, 11, 15],
+                                    // front bottom
+                                    [7, 13, 15, 5],
+                                    // back
+                                    [4, 2, 0, 6],
                                   ]
                         );
             }
 
             // Main body
             cylinder (h = R03_venturi_tube_height, d = R03_wide_D + 2*R03_wall_thickness,
-                      $fn=draft ? 10 : 100);
+                      $fn=draft ? 20 : 100);
 
             hull()
             {
                 translate([0, 0, R03_venturi_tube_height - 3*R03_wide_D])
                     cylinder (h = 3*R03_wide_D, d = R03_wide_D + 2*R03_wall_thickness,
-                              $fn=draft ? 10 :100);
+                              $fn=draft ? 20 :100);
                 translate([0, R03_wide_D/2 + 5, slip_ring_z])
                     rotate([-90, 0, 0])
                         cylinder (h = R01_vyska_preryti_statoru + R04_zavit_vyska + 0.01,
                                   r = S01_prumer_vnitrni/2 + 4*S01_sila_materialu,
-                                  $fn=draft ? 10 :100);
+                                  $fn=draft ? 20 :100);
             }
 
         }
-//  |        // Prototyping cut-out cube.
-//  |        translate([0, -75, 0])
-//  |            cube([150, 150, 150]);
+        // Prototyping cut-out cube.
+        translate([0, -75, 0])
+            cube([150, 150, 150]);
 
         // Slip-ring opening
         translate([0, R03_wide_D/2 + 5, slip_ring_z])
@@ -207,53 +241,74 @@ module WINDGAUGE03A_R03(draft = true)
             rotate([-90, 0, 0])
                 cylinder (h = R01_vyska_preryti_statoru + R04_zavit_vyska + 0.01,
                           r = S01_prumer_vnitrni/2 + 3*S01_sila_materialu,
-                          $fn=draft ? 10 :100);
+                          $fn=draft ? 20 :100);
 
         // Venturi wide in
         translate([0, 0, R03_venturi_tube_height - wide_body_length])
-            cylinder (h = wide_body_length, d = R03_wide_D, $fn=draft ? 10 :100);
+            cylinder (h = wide_body_length, d = R03_wide_D, $fn=draft ? 20 :100);
 
         // Venturi intake
         translate([0, 0, wide_body_length + exhaust_length + R03_narrow_D])
             cylinder (h = intake_length, d1 = R03_narrow_D, d2 = R03_wide_D,
-                      $fn=draft ? 10 :100);
+                      $fn=draft ? 20 :100);
 
         // Venturi narrow
         translate([0, 0, wide_body_length + exhaust_length])
-            cylinder (h = R03_narrow_D, d = R03_narrow_D, $fn=draft ? 10 :100);
+            cylinder (h = R03_narrow_D, d = R03_narrow_D, $fn=draft ? 20 :100);
 
         // Venturi exhaust
         translate([0, 0, wide_body_length])
             cylinder (h = exhaust_length, d1 = R03_wide_D, d2 = R03_narrow_D,
-                      $fn=draft ? 10 :100);
+                      $fn=draft ? 20 :100);
 
         // Venturi wide out
         translate([0, 0, 0])
-            cylinder (h = wide_body_length, d = R03_wide_D, $fn=draft ? 10 :100);
+            cylinder (h = wide_body_length, d = R03_wide_D, $fn=draft ? 20 :100);
 
         // Cabling
         mid_body_horizontal = (R03_wide_D/2 + R03_narrow_D/2) / 2;
         mid_body_vertical = wide_body_length + exhaust_length + R03_narrow_D/2;
-        PCB_y = -R03_wide_D/2 - R03_wall_thickness - R03_PCB_depth/2;
-        PCB_z = R03_venturi_tube_height - R03_PCB_height - 5;
+        PCB_y = -R03_wide_D/2 - R03_wall_thickness - R03_PCB_elevation;
+        PCB_z = R03_venturi_tube_height - R03_PCB_height*1.1 - 5;
         pipe_elevation = PCB_z - slip_ring_z;
         d = (R03_wide_D/2 - R03_narrow_D/2)/2;
         cbl_x = 0;
-        curvedPipe([[0                   , PCB_y                   , PCB_z + 10       ],
-                    [0                   , PCB_y + 5               , PCB_z - 10       ],
-                    [-mid_body_horizontal, -mid_body_horizontal    , mid_body_vertical],
-                    [-mid_body_horizontal, 0                       , mid_body_vertical],
-                    [-mid_body_horizontal, mid_body_horizontal     , mid_body_vertical],
-                    [0                   , mid_body_horizontal     , slip_ring_z      ],
-                    [0                   , mid_body_horizontal + 10, slip_ring_z      ],
+        curvedPipe([[0                   , PCB_y + d + R03_wall_thickness/2, PCB_z     ],
+                    [0                   , PCB_y + d + R03_wall_thickness/2, PCB_z - 10],
+                    [-mid_body_horizontal, -mid_body_horizontal    , mid_body_vertical ],
+                    [-mid_body_horizontal, 0                       , mid_body_vertical ],
+                    [-mid_body_horizontal, mid_body_horizontal     , mid_body_vertical ],
+                    [0                   , mid_body_horizontal     , slip_ring_z       ],
+                    [0                   , mid_body_horizontal + 10, slip_ring_z       ],
                    ],
                     6,
                     [d/2 + 0.1, mid_body_horizontal, d/2 + 0.1,
                      mid_body_horizontal - 2, d/2 + 0.1],
                     d,
                     0);
-        translate([-d/2, PCB_y -d/2, PCB_z - 10])
-            cube([d, d, 20]);
+        translate([-d/2, PCB_y, PCB_z])
+            polyhedron
+            (
+                points = [ // 0 = bottom right front
+                         [d, 0, 0],
+                         // 1 = bottom left front
+                         [0, 0, 0],
+                         // 2 = bottom right back
+                         [d, 1.5*d + R03_wall_thickness/2, 0],
+                         // 3 = bottom left back
+                         [0, 1.5*d + R03_wall_thickness/2, 0],
+                         // 4 = top right
+                         [d, 0, R03_PCB_height/3],
+                         // 5 = top left
+                         [0, 0, R03_PCB_height/3],
+                       ],
+                faces = [ [1, 5, 4, 0], // front
+                          [2, 4, 5, 3], // back
+                          [3, 1, 0, 2], // bottom
+                          [0, 4, 2], // right
+                          [3, 5, 1], // left
+                       ]
+            );
 
         //  Venturi upper pipe
         vup_x = 0;
@@ -285,6 +340,7 @@ module WINDGAUGE03A_R03(draft = true)
                     [R03_air_tube_diameter/2 + 0.1, R03_air_tube_diameter/2 + 0.1],
                     R03_air_tube_diameter,
                     0);
+
     }
 
     fins(2*R03_wide_D, R03_wide_D/2, R03_wall_thickness, 20, 6, 16);
