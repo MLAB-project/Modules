@@ -357,7 +357,7 @@ module WINDGAUGE03A_R03(draft = true)
 
     }
 
-    fins(2*R03_wide_D, R03_wide_D/2, R03_wall_thickness, 20, 6, 16);
+    fins(1.5*R03_wide_D, R03_wide_D/2, R03_wall_thickness, 20, 6, 20);
 
 }
 
