@@ -130,9 +130,9 @@ module WINDGAUGE03A_R03(draft = true)
                 difference()
                 {
                     drop_shape(2*R03_wide_D, draft);
-//                    // TOP cutout
-//                    translate([-R03_wide_D/2, -R03_wide_D/2, -2*R03_wide_D])
-//                        cube([R03_wide_D, R03_wide_D/2, 2*R03_wide_D]);
+                    // TOP cutout
+                    translate([-R03_wide_D/2, -R03_wide_D/2, -2*R03_wide_D])
+                        cube([R03_wide_D, R03_wide_D/2, 2*R03_wide_D]);
                 }
                     // PCB elevation
                     translate([-R03_PCB_width/2, 0, -R03_PCB_top_rim])
@@ -226,9 +226,9 @@ module WINDGAUGE03A_R03(draft = true)
             }
 
         }
-        // Prototyping cut-out cube.
-        translate([0, -75, 0])
-            cube([150, 150, 150]);
+//        // Prototyping cut-out cube.
+//        translate([0, -75, 0])
+//            cube([150, 150, 150]);
 
         // Slip-ring opening
         translate([0, R03_wide_D/2 + 5, slip_ring_z])
