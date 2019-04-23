@@ -324,6 +324,13 @@ module WINDGAUGE03A_R03(draft = true)
                     [R03_air_tube_diameter/2 + 0.1, R03_air_tube_diameter/2 + 0.1],
                     R03_air_tube_diameter,
                     0);
+        // Sealing ring extension
+        translate([vup_x, vup_y - R03_wide_D/2 - R03_wall_thickness, vup_z_out])
+            rotate([90, 0, 0])
+                cylinder (h = R03_PCB_elevation + R03_PCB_connector_overlay,
+                          d1 = R03_air_tube_diameter,
+                          d2 = R03_air_tube_diameter + R03_sealing_ring_thickness,
+                          $fn=draft ? 20 :100);
 
         // Venturi lower pipe
         vlp_x = 0;
@@ -340,6 +347,13 @@ module WINDGAUGE03A_R03(draft = true)
                     [R03_air_tube_diameter/2 + 0.1, R03_air_tube_diameter/2 + 0.1],
                     R03_air_tube_diameter,
                     0);
+        // Sealing ring extension
+        translate([vlp_x, vlp_y - R03_wide_D/2 - R03_wall_thickness, vlp_z_out])
+            rotate([90, 0, 0])
+                cylinder (h = R03_PCB_elevation + R03_PCB_connector_overlay,
+                          d1 = R03_air_tube_diameter,
+                          d2 = R03_air_tube_diameter + R03_sealing_ring_thickness,
+                          $fn=draft ? 20 :100);
 
     }
 

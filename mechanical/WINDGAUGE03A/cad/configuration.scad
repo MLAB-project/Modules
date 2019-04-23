@@ -142,3 +142,4 @@ R03_venturi_tube_height = 150;  // Venturi tube height (limited by max print siz
 R03_wall_thickness = 3; // Venturi tube wall thickness
 R03_inner_screw_diameter = 5; // PCB casing screw inner diameter
 R03_thread_tolerance = 0.5; // PCB casing screw thread tolerance
+R03_sealing_ring_thickness = 1; // air tubes diameters are enlarged by this amount to account for sealing rings thickness
