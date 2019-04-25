@@ -10,8 +10,8 @@ module WINDGAUGE01A_R04(draft = true)
             difference()
             {
                 drop_shape(2*R03_wide_D, draft);
-                translate([-R03_wide_D/2, 0, -2*R03_wide_D])
-                    cube([R03_wide_D, R03_wide_D/2, 2*R03_wide_D]);
+                translate([-R03_wide_D, 0, -3*R03_wide_D])
+                    cube([2*R03_wide_D, R03_wide_D, 4*R03_wide_D]);
             }
 }
 

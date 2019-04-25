@@ -85,28 +85,31 @@ module drop_shape(drop_length, draft)
                               $fn=draft ? 20 :100);
             }
         // PCB casing
-        translate([-R03_PCB_width/2,
+        translate([-R03_PCB_width/2 - R03_global_clearance,
                    -R03_PCB_depth - R03_PCB_connector_overlay - R03_PCB_elevation,
                    -R03_PCB_height - R03_PCB_top_rim])
-            cube([R03_PCB_width,
+            cube([R03_PCB_width + 2*R03_global_clearance,
                   R03_PCB_depth + R03_PCB_connector_overlay + R03_PCB_elevation,
-                  R03_PCB_height]);
+                  R03_PCB_height + R03_global_clearance]);
         translate([-R03_PCB_width/2, 0, -R03_PCB_height - R03_PCB_top_rim])
             polyhedron
             (
                 points = [ // 0 = bottom right
-                         [R03_PCB_width, 0, -R03_PCB_height*0.1],
+                         [R03_PCB_width + R03_global_clearance, 0,
+                          -R03_PCB_height*0.1 - R03_global_clearance],
                          // 1 = bottom left
-                         [0, 0, -R03_PCB_height*0.1],
+                         [-R03_global_clearance, 0,
+                          -R03_PCB_height*0.1 - R03_global_clearance],
                          // 2 = top right front
-                         [R03_PCB_width,
+                         [R03_PCB_width + R03_global_clearance,
                           -R03_PCB_connector_overlay - R03_PCB_elevation, 0],
                          // 3 = top left front
-                         [0, -R03_PCB_connector_overlay - R03_PCB_elevation, 0],
+                         [-R03_global_clearance,
+                          -R03_PCB_connector_overlay - R03_PCB_elevation, 0],
                          // 4 = top right back
-                         [R03_PCB_width, 0, 0],
+                         [R03_PCB_width + R03_global_clearance, 0, 0],
                          // 5 = top left back
-                         [0, 0, 0],
+                         [-R03_global_clearance, 0, 0],
                        ],
                 faces = [ [3, 5, 4, 2], // top
                          [1, 3, 2, 0], // front
