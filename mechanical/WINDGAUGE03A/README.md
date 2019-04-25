@@ -1,6 +1,6 @@
 <!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
 <!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:2019-04-25 17:54:06.444400: ---> 
+<!--- Created:2019-04-25 18:00:26.656088: ---> 
 <!--- Author:: ---> 
 <!--- AuthorEmail:: ---> 
 <!--- Tags:: ---> 
@@ -17,7 +17,7 @@
 Venturi tube based anemometer
 <!--- ELead ---> 
 
-![WINDGAUGE03A](doc/img/WINDGAUGE03A_QRcode.png) 
+![WINDGAUGE03A](doc/img/WINDGAUGE_S04.png) 
 
 
 <!--- Description --->
