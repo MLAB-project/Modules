@@ -60,30 +60,32 @@ module drop_shape(drop_length, draft)
                                                   N=draft ? 50 : 200));
                     square(drop_length);
                 }
-        // Right screw
+        // Right bolt
         translate([R03_PCB_width/2 + R03_inner_screw_diameter,
-                   R03_wide_D, -R03_PCB_height/2])
+                   R03_wide_D/2, -R03_PCB_height/2])
             rotate([90, 0, 0])
-            {
-                screw_thread(R03_inner_screw_diameter - R03_thread_tolerance,
-                             4, 55, 2*R03_wide_D, PI/2, 2);
-                // Screw head
-                translate([0, 0, 45])
-                    cylinder (h = R03_wide_D, d = R03_inner_screw_diameter,
-                              $fn=draft ? 20 :100);
-            }
-        // Left screw
+                cylinder (h = R03_wide_D, d = M3_bolt_diameter,
+                          $fn=draft ? 20 :100);
+        // Right bolt head
+        translate([R03_PCB_width/2 + R03_inner_screw_diameter,
+                   R03_wall_thickness + M3_nut_height - M3_bolt_length,
+                   -R03_PCB_height/2])
+            rotate([90, 0, 0])
+                cylinder (h = R03_wide_D, d = R03_inner_screw_diameter,
+                          $fn=draft ? 20 :100);
+        // Left bolt
         translate([-R03_PCB_width/2 - R03_inner_screw_diameter,
-                   R03_wide_D, -R03_PCB_height/2])
+                   R03_wide_D/2, -R03_PCB_height/2])
             rotate([90, 0, 0])
-            {
-                screw_thread(R03_inner_screw_diameter - R03_thread_tolerance,
-                             4, 55, 2*R03_wide_D, PI/2, 2);
-                // Screw head
-                translate([0, 0, 45])
+                cylinder (h = R03_wide_D, d = M3_bolt_diameter,
+                          $fn=draft ? 20 :100);
+        // Left bolt head
+        translate([-R03_PCB_width/2 - R03_inner_screw_diameter,
+                   R03_wall_thickness + M3_nut_height - M3_bolt_length,
+                   -R03_PCB_height/2])
+            rotate([90, 0, 0])
                     cylinder (h = R03_wide_D, d = R03_inner_screw_diameter,
                               $fn=draft ? 20 :100);
-            }
         // PCB casing
         translate([-R03_PCB_width/2 - R03_global_clearance,
                    -R03_PCB_depth - R03_PCB_connector_overlay - R03_PCB_elevation,
@@ -267,6 +269,27 @@ module WINDGAUGE03A_R03(draft = true)
         // Venturi wide out
         translate([0, 0, 0])
             cylinder (h = wide_body_length, d = R03_wide_D, $fn=draft ? 20 :100);
+
+        // Left nut cut-out
+        translate([-R03_PCB_width/2 - R03_inner_screw_diameter, -R03_wide_D/2,
+                   R03_venturi_tube_height - R03_PCB_height/2])
+            rotate([270, 90, 0])
+            {
+                translate([- M3_nut_diameter/2, 0, 0])
+                    cube([M3_nut_diameter, M3_nut_diameter+20, M3_nut_height]);
+                cylinder(h = M3_nut_height, r = M3_nut_diameter/2, $fn = 6);
+            }
+
+        // Right nut cut-out
+        translate([R03_PCB_width/2 + R03_inner_screw_diameter,
+                   -R03_wide_D/2 + M3_nut_height,
+                   R03_venturi_tube_height - R03_PCB_height/2])
+            rotate([90, 90, 0])
+            {
+                translate([- M3_nut_diameter/2, 0, 0])
+                    cube([M3_nut_diameter, M3_nut_diameter+20, M3_nut_height]);
+                cylinder(h = M3_nut_height, r = M3_nut_diameter/2, $fn = 6);
+            }
 
         // Cabling
         mid_body_horizontal = (R03_wide_D/2 + R03_narrow_D/2) / 2;

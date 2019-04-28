@@ -1,6 +1,12 @@
 //$fn=40; // model faces resolution.
 
-//OBECNE PARAMETRY 
+//COMMON PARAMETERS
+//M3 x 12 Bolt
+M3_nut_diameter=6.6;
+M3_nut_height=2.7;
+M3_bolt_diameter = 3.2;
+M3_bolt_head_height = 3;
+M3_bolt_length = 12;
 //----------------------------------------------------------------
 //----------------------------------------------------------------
 //WINDGAUGE02A_S02 - Parametry pro hlavni valec anemometru
