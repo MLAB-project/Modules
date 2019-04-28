@@ -300,7 +300,7 @@ module WINDGAUGE03A_R03(draft = true)
         d = (R03_wide_D/2 - R03_narrow_D/2)/2;
         cbl_x = 0;
         curvedPipe([[0                   , PCB_y + d + R03_wall_thickness/2, PCB_z     ],
-                    [0                   , PCB_y + d + R03_wall_thickness/2, PCB_z - 10],
+                    [0                   , PCB_y + d + R03_wall_thickness/2, PCB_z - 5 ],
                     [-mid_body_horizontal, -mid_body_horizontal    , mid_body_vertical ],
                     [-mid_body_horizontal, 0                       , mid_body_vertical ],
                     [-mid_body_horizontal, mid_body_horizontal     , mid_body_vertical ],
@@ -308,7 +308,7 @@ module WINDGAUGE03A_R03(draft = true)
                     [0                   , mid_body_horizontal + 10, slip_ring_z       ],
                    ],
                     6,
-                    [d/2 + 0.1, mid_body_horizontal, d/2 + 0.1,
+                    [1.5*d, mid_body_horizontal, d/2 + 0.1,
                      mid_body_horizontal - 2, d/2 + 0.1],
                     d,
                     0);
