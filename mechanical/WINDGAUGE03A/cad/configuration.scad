@@ -6,6 +6,7 @@ M3_nut_diameter=6.6;
 M3_nut_height=2.7;
 M3_bolt_diameter = 3.2;
 M3_bolt_head_height = 3;
+M3_bolt_head_diameter = 5.5;
 M3_bolt_length = 12;
 //----------------------------------------------------------------
 //----------------------------------------------------------------
@@ -133,7 +134,7 @@ S04_sila_materialu=2;
 //WINDGAUGE03A_R03 // Venturi tube
 R03_wide_D = 36; // Venturi wide tube inner diameter
 R03_narrow_D = R03_wide_D/2; // Venturi narrow tube inner diameter
-R03_global_clearance = 0.5; // additional space for PCB - set according to printer precision
+R03_global_clearance = 0.5; // additional space where needed due to printer precision
 R03_PCB_top_rim = 5; // vertical distance from top of tube to top of PCB
 R03_PCB_height = 41; // height of PCB casing - if changed check casing
 R03_PCB_width = 14; // width of PCB casing - if changed check casing
@@ -146,6 +147,4 @@ R03_sensor_pitch = 4.3;  // distance between sensors
 R03_slip_ring_offset = 0; // slip-ring offset from tube center
 R03_venturi_tube_height = 150;  // Venturi tube height (limited by max print size)
 R03_wall_thickness = 3; // Venturi tube wall thickness
-R03_inner_screw_diameter = 5; // PCB casing screw inner diameter
-R03_thread_tolerance = 0.5; // PCB casing screw thread tolerance
 R03_sealing_ring_thickness = 1; // air tubes diameters are enlarged by this amount to account for sealing rings thickness
