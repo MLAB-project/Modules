@@ -95,7 +95,7 @@ D02_vyska_matky=3;
 
 
 //WINDGAUGE02A_R01 //rotor s prekritim statoru
-R01_vyska_preryti_statoru=10;
+R01_vyska_prekryti_statoru=10;
 R01_sila_materialu_pro_prekriti=1.3;
 R01_mezera_mezi_statorem_rotorem=3;
 

@@ -97,28 +97,28 @@ module drop_shape(drop_length, draft)
             polyhedron
             (
                 points = [ // 0 = bottom right
-                         [R03_PCB_width + R03_global_clearance, 0,
-                          -R03_PCB_height*0.1 - R03_global_clearance],
-                         // 1 = bottom left
-                         [-R03_global_clearance, 0,
-                          -R03_PCB_height*0.1 - R03_global_clearance],
-                         // 2 = top right front
-                         [R03_PCB_width + R03_global_clearance,
-                          -R03_PCB_connector_overlay - R03_PCB_elevation, 0],
-                         // 3 = top left front
-                         [-R03_global_clearance,
-                          -R03_PCB_connector_overlay - R03_PCB_elevation, 0],
-                         // 4 = top right back
-                         [R03_PCB_width + R03_global_clearance, 0, 0],
-                         // 5 = top left back
-                         [-R03_global_clearance, 0, 0],
-                       ],
+                           [R03_PCB_width + R03_global_clearance, 0,
+                            -R03_PCB_height*0.1 - R03_global_clearance],
+                           // 1 = bottom left
+                           [-R03_global_clearance, 0,
+                            -R03_PCB_height*0.1 - R03_global_clearance],
+                           // 2 = top right front
+                           [R03_PCB_width + R03_global_clearance,
+                            -R03_PCB_connector_overlay - R03_PCB_elevation, 0],
+                           // 3 = top left front
+                           [-R03_global_clearance,
+                            -R03_PCB_connector_overlay - R03_PCB_elevation, 0],
+                           // 4 = top right back
+                           [R03_PCB_width + R03_global_clearance, 0, 0],
+                           // 5 = top left back
+                           [-R03_global_clearance, 0, 0],
+                         ],
                 faces = [ [3, 5, 4, 2], // top
-                         [1, 3, 2, 0], // front
-                         [0, 4, 5, 1], // back
-                         [0, 2, 4], // right
-                         [1, 5, 3], // left
-                       ]
+                          [1, 3, 2, 0], // front
+                          [0, 4, 5, 1], // back
+                          [0, 2, 4], // right
+                          [1, 5, 3], // left
+                        ]
             );
     }
 }
@@ -220,12 +220,15 @@ module WINDGAUGE03A_R03(draft = true)
 
             hull()
             {
-                translate([0, 0, R03_venturi_tube_height - 3*R03_wide_D])
-                    cylinder (h = 3*R03_wide_D, d = R03_wide_D + 2*R03_wall_thickness,
+                hull_bottom = slip_ring_z - S01_prumer_vnitrni/2 - 5
+                              - R01_vyska_prekryti_statoru - R04_zavit_vyska;
+                translate([0, 0, hull_bottom])
+                    cylinder (h = R03_venturi_tube_height - hull_bottom,
+                              d = R03_wide_D + 2*R03_wall_thickness,
                               $fn=draft ? 20 :100);
                 translate([0, R03_wide_D/2 + 5, slip_ring_z])
                     rotate([-90, 0, 0])
-                        cylinder (h = R01_vyska_preryti_statoru + R04_zavit_vyska + 0.01,
+                        cylinder (h = R01_vyska_prekryti_statoru + R04_zavit_vyska + 0.01,
                                   r = S01_prumer_vnitrni/2 + 4*S01_sila_materialu,
                                   $fn=draft ? 20 :100);
             }
@@ -241,10 +244,9 @@ module WINDGAUGE03A_R03(draft = true)
                 WINDGAUGE01A_R06();
 
         // Waterproofing
-        translate([0, R03_wide_D/2 + 5,
-                   2*R03_venturi_tube_height - R03_slip_ring_offset - 6*R03_wide_D])
+        translate([0, R03_wide_D/2 + 5, slip_ring_z])
             rotate([-90, 0, 0])
-                cylinder (h = R01_vyska_preryti_statoru + R04_zavit_vyska + 0.01,
+                cylinder (h = R01_vyska_prekryti_statoru + R04_zavit_vyska + 0.01,
                           r = S01_prumer_vnitrni/2 + 3*S01_sila_materialu,
                           $fn=draft ? 20 :100);
 
