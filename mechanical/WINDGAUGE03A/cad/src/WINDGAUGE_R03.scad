@@ -61,32 +61,32 @@ module drop_shape(drop_length, draft)
                     square(drop_length);
                 }
         // Right bolt
-        translate([R03_PCB_width/2 + M3_bolt_head_diameter,
+        translate([R03_PCB_width/2 + M3_nut_diameter,
                    R03_wide_D/2, -R03_PCB_height/2])
             rotate([90, 0, 0])
-                cylinder (h = R03_wide_D, d = M3_bolt_diameter + R03_global_clearance,
+                cylinder (h = R03_wide_D, d = M3_bolt_diameter,
                           $fn=draft ? 20 :100);
         // Right bolt head
-        translate([R03_PCB_width/2 + M3_bolt_head_diameter,
+        translate([R03_PCB_width/2 + M3_nut_diameter,
                    R03_wall_thickness + M3_nut_height - M3_bolt_length,
                    -R03_PCB_height/2])
             rotate([90, 0, 0])
                 cylinder (h = R03_wide_D,
-                          d = M3_bolt_head_diameter + R03_global_clearance,
+                          d = M3_nut_diameter,
                           $fn=draft ? 20 :100);
         // Left bolt
-        translate([-R03_PCB_width/2 - M3_bolt_head_diameter,
+        translate([-R03_PCB_width/2 - M3_nut_diameter,
                    R03_wide_D/2, -R03_PCB_height/2])
             rotate([90, 0, 0])
-                cylinder (h = R03_wide_D, d = M3_bolt_diameter + R03_global_clearance,
+                cylinder (h = R03_wide_D, d = M3_bolt_diameter,
                           $fn=draft ? 20 :100);
         // Left bolt head
-        translate([-R03_PCB_width/2 - M3_bolt_head_diameter,
+        translate([-R03_PCB_width/2 - M3_nut_diameter,
                    R03_wall_thickness + M3_nut_height - M3_bolt_length,
                    -R03_PCB_height/2])
             rotate([90, 0, 0])
                     cylinder (h = R03_wide_D,
-                              d = M3_bolt_head_diameter + R03_global_clearance,
+                              d = M3_nut_diameter,
                               $fn=draft ? 20 :100);
         // PCB casing
         translate([-R03_PCB_width/2 - R03_global_clearance,
@@ -295,28 +295,26 @@ module WINDGAUGE03A_R03(draft = true)
             cylinder (h = wide_body_length, d = R03_wide_D, $fn=draft ? 20 :100);
 
         // Left nut cut-out
-        translate([-R03_PCB_width/2 - M3_bolt_head_diameter, -R03_wide_D/2,
+        translate([-R03_PCB_width/2 - M3_nut_diameter, -R03_wide_D/2,
                    R03_venturi_tube_height - R03_PCB_height/2])
             rotate([270, 90, 0])
             {
-                translate([-M3_nut_diameter/2 - R03_global_clearance/2, 0, 0])
-                    cube([M3_nut_diameter + R03_global_clearance,
-                          R03_wide_D, M3_nut_height]);
+                translate([-M3_nut_diameter/2, 0, 0])
+                    cube([M3_nut_diameter, R03_wide_D, M3_nut_height]);
                 cylinder(h = M3_nut_height,
-                         d = M3_nut_diameter + R03_global_clearance, $fn = 6);
+                         d = M3_nut_diameter, $fn = 6);
             }
 
         // Right nut cut-out
-        translate([R03_PCB_width/2 + M3_bolt_head_diameter,
+        translate([R03_PCB_width/2 + M3_nut_diameter,
                    -R03_wide_D/2 + M3_nut_height,
                    R03_venturi_tube_height - R03_PCB_height/2])
             rotate([90, 90, 0])
             {
-                translate([-M3_nut_diameter/2 - R03_global_clearance/2, 0, 0])
-                    cube([M3_nut_diameter + R03_global_clearance,
-                          R03_wide_D, M3_nut_height]);
+                translate([-M3_nut_diameter/2, 0, 0])
+                    cube([M3_nut_diameter, R03_wide_D, M3_nut_height]);
                 cylinder(h = M3_nut_height,
-                         d = M3_nut_diameter + R03_global_clearance, $fn = 6);
+                         d = M3_nut_diameter, $fn = 6);
             }
 
         // Cabling
