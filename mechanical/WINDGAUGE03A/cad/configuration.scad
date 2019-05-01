@@ -148,4 +148,4 @@ R03_sensor_depth = 2.5;  // SDP33 sensor depth
 R03_slip_ring_offset = 0; // slip-ring offset from tube center
 R03_venturi_tube_height = 150;  // Venturi tube height (limited by max print size)
 R03_wall_thickness = 3; // Venturi tube wall thickness
-R03_sealing_ring_thickness = 1; // air tubes diameters are enlarged by this amount to account for sealing rings thickness
+R03_sealing_ring_thickness = 1.5; // Sealing ring size
