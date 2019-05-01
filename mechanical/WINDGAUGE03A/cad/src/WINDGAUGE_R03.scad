@@ -125,6 +125,26 @@ module drop_shape(drop_length, draft)
     }
 }
 
+module sealing_ring_extension(x, sensor_y, pipe_y, z, draft)
+{
+        translate([x, sensor_y, z])
+        {
+            rotate([90, 0, 0])
+                cylinder (h = R03_sensor_depth,
+                          d = R03_sensor_diameter,
+                          $fn=draft ? 20 :100);
+            translate([0, abs(sensor_y) - abs(pipe_y), 0])
+            {
+
+                rotate([90, 0, 0])
+                    cylinder (h = abs(sensor_y) - abs(pipe_y),
+                              d1 = R03_air_tube_diameter,
+                              d2 = R03_sealing_ring_thickness,
+                              $fn=draft ? 20 :100);
+            }
+        }
+}
+
 module WINDGAUGE03A_R03(draft = true)
 {
     difference()
@@ -346,48 +366,42 @@ module WINDGAUGE03A_R03(draft = true)
 
         //  Venturi upper pipe
         vup_x = 0;
-        vup_y = 0;
+        vup_y_in = 0;
+        vup_y_out = vup_y_in - R03_wide_D/2 - R03_wall_thickness;
         vup_z_in = R03_venturi_tube_height - (wide_body_length / 2);
         vup_z_out = R03_venturi_tube_height - R03_PCB_top_rim - R03_sensor_offset;
-        curvedPipe([[vup_x, vup_y                              , vup_z_in ],
-                    [vup_x, vup_y - R03_wide_D/2 - R03_wall_thickness/2 , vup_z_in ],
-                    [vup_x, vup_y - R03_wide_D/2 - R03_wall_thickness/2 , vup_z_out],
-                    [vup_x, vup_y - R03_wide_D                          , vup_z_out],
+        curvedPipe([[vup_x, vup_y_in                                      , vup_z_in ],
+                    [vup_x, vup_y_in - R03_wide_D/2 - R03_wall_thickness/2, vup_z_in ],
+                    [vup_x, vup_y_out + R03_wall_thickness/2              , vup_z_out],
+                    [vup_x, vup_y_out                                     , vup_z_out],
                    ],
                     3,
                     [R03_air_tube_diameter/2 + 0.1, R03_air_tube_diameter/2 + 0.1],
                     R03_air_tube_diameter,
                     0);
         // Sealing ring extension
-        translate([vup_x, vup_y - R03_wide_D/2 - R03_wall_thickness, vup_z_out])
-            rotate([90, 0, 0])
-                cylinder (h = R03_PCB_elevation + R03_PCB_connector_overlay,
-                          d1 = R03_air_tube_diameter,
-                          d2 = R03_air_tube_diameter + R03_sealing_ring_thickness,
-                          $fn=draft ? 20 :100);
+        sensor_y = vup_y_out - R03_PCB_elevation - R03_PCB_connector_overlay
+                   + R03_sensor_depth;
+        sealing_ring_extension(vup_x, sensor_y, vup_y_out, vup_z_out, draft);
 
         // Venturi lower pipe
         vlp_x = 0;
-        vlp_y = 0;
+        vlp_y_in = 0;
+        vlp_y_out = vlp_y_in - R03_wide_D/2 - R03_wall_thickness;
         vlp_z_in = wide_body_length + exhaust_length + (R03_narrow_D / 2);
         vlp_z_out = (R03_venturi_tube_height - R03_PCB_top_rim - R03_sensor_offset
                      - R03_sensor_pitch);
-        curvedPipe([[vlp_x, vlp_y                                        , vlp_z_in ],
-                    [vlp_x, vlp_y - R03_narrow_D/2 - R03_wall_thickness/2, vlp_z_in ],
-                    [vlp_x, vlp_y - R03_wide_D/2 - R03_wall_thickness/2  , vlp_z_out],
-                    [vlp_x, vlp_y - R03_wide_D                           , vlp_z_out],
+        curvedPipe([[vlp_x, vlp_y_in                                        , vlp_z_in ],
+                    [vlp_x, vlp_y_in - R03_narrow_D/2 - R03_wall_thickness/2, vlp_z_in ],
+                    [vlp_x, vlp_y_out + R03_wall_thickness/2                , vlp_z_out],
+                    [vlp_x, vlp_y_out                                       , vlp_z_out],
                    ],
                     3,
                     [R03_air_tube_diameter/2 + 0.1, R03_air_tube_diameter/2 + 0.1],
                     R03_air_tube_diameter,
                     0);
         // Sealing ring extension
-        translate([vlp_x, vlp_y - R03_wide_D/2 - R03_wall_thickness, vlp_z_out])
-            rotate([90, 0, 0])
-                cylinder (h = R03_PCB_elevation + R03_PCB_connector_overlay,
-                          d1 = R03_air_tube_diameter,
-                          d2 = R03_air_tube_diameter + R03_sealing_ring_thickness,
-                          $fn=draft ? 20 :100);
+        sealing_ring_extension(vlp_x, sensor_y, vlp_y_out, vlp_z_out, draft);
 
     }
 
