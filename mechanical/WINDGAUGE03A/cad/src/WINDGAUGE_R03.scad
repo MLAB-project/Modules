@@ -1,6 +1,7 @@
 include <../configuration.scad>
 use <./lib/naca4.scad>
 use <./lib/curvedPipe.scad>
+use <./lib/copyFunctions.scad>
 use <WINDGAUGE_R06.scad>
 
 slip_ring_z = 2*R03_venturi_tube_height - R03_slip_ring_offset - 6*R03_wide_D;
@@ -12,41 +13,41 @@ exhaust_length = ((R03_wide_D - R03_narrow_D) / 2) / tan(15 / 2);
 wide_body_length = (R03_venturi_tube_height - intake_length - exhaust_length
                     - R03_narrow_D) / 2;
 
-module fins(outer_r, inner_r, wall, height, count, angle, draft) {
-    for (i = [1 : count]) {
-        rotate([0, 0, i * 360/count])
-        translate([-wall / 2, inner_r, 0])
-        difference () {
-            cube([wall, outer_r - inner_r, height]);
-
-            color("red")
-            translate([-1, 0, height])
-            rotate([-angle, 0, 0])
-            cube([wall + 2, (outer_r - inner_r) + height, height]);
-        }
-    }
-    inner_points = [ for (i = [0 : count - 1]) [sin(i * 360/count) * (outer_r),
-                                                cos(i * 360/count) * (outer_r)]];
-    // calculate coordinates of external fins polygon
-    vertex_angle = (180*(count-2)) / count;   // angle in external fins polygon corner.
-    outer_points = [ for (i = [0 : count - 1]) [
-                         sin(i * 360/count) * (outer_r + wall/sin(vertex_angle/2)),
-                         cos(i * 360/count) * (outer_r + wall/sin(vertex_angle/2))
-                   ]];
-    polygon_paths = [ [ for (i = [0 : count-1]) i ],
-                      [ for (i = [count : 2*count-1]) i ]];
-
+//module fins(outer_r, inner_r, wall, height, count, angle, draft) {
+//    for (i = [1 : count]) {
+//        rotate([0, 0, i * 360/count])
+//        translate([-wall / 2, inner_r, 0])
+//        difference () {
+//            cube([wall, outer_r - inner_r, height]);
+//
+//            color("red")
+//            translate([-1, 0, height])
+//            rotate([-angle, 0, 0])
+//            cube([wall + 2, (outer_r - inner_r) + height, height]);
+//        }
+//    }
+//    inner_points = [ for (i = [0 : count - 1]) [sin(i * 360/count) * (outer_r),
+//                                                cos(i * 360/count) * (outer_r)]];
+//    // calculate coordinates of external fins polygon
+//    vertex_angle = (180*(count-2)) / count;   // angle in external fins polygon corner.
+//    outer_points = [ for (i = [0 : count - 1]) [
+//                         sin(i * 360/count) * (outer_r + wall/sin(vertex_angle/2)),
+//                         cos(i * 360/count) * (outer_r + wall/sin(vertex_angle/2))
+//                   ]];
+//    polygon_paths = [ [ for (i = [0 : count-1]) i ],
+//                      [ for (i = [count : 2*count-1]) i ]];
+//
 //    echo("outer points = ", outer_points);
 //    echo("inner points = ", inner_points);
 //    echo("paths = ", polygon_paths);
 //    echo("vertex_angle = ", vertex_angle);
-
-    linear_extrude(height = height - (tan(angle)*(outer_r - inner_r)))
-        polygon(
-            points =  concat(outer_points, inner_points),
-            paths = polygon_paths
-        );
-}
+//
+//    linear_extrude(height = height - (tan(angle)*(outer_r - inner_r)))
+//        polygon(
+//            points =  concat(outer_points, inner_points),
+//            paths = polygon_paths
+//        );
+//}
 
 module drop_shape(drop_length, draft)
 {
@@ -255,10 +256,38 @@ module WINDGAUGE03A_R03(draft = true)
                                   $fn=draft ? 20 :100);
             }
 
+            // Fin holders
+            rotate_copy([0, 0, 180])
+            difference()
+            {
+                // Holder
+                translate([-R03_fin_holder_width/2, 0, 0])
+                    cube([R03_fin_holder_width, R03_fin_holder_depth, R03_fin_holder_height]);
+                // Bolt hole
+                    translate([-R03_fin_holder_width/2,
+                               R03_fin_holder_depth - R03_fin_holder_height/2,
+                               R03_fin_holder_height/2])
+                        rotate([0, 90, 0])
+                            cylinder(h = R03_fin_holder_width, d = M3_bolt_diameter,
+                                     $fn=draft ? 20 :100);
+                // Nut holes
+                mirror_copy([1, 0, 0])
+                    translate([R03_fin_holder_width/2 - M3_nut_height,
+                               R03_fin_holder_depth - R03_fin_holder_height/2,
+                               R03_fin_holder_height/2])
+                        rotate([0, 90, 0])
+                            cylinder(h = M3_nut_height, d = M3_nut_diameter,
+                                     $fn=6);
+            }
+
         }
 //        // Prototyping cut-out cube.
 //        translate([0, -75, 0])
 //            cube([150, 150, 150]);
+
+        // Fin cut-out
+        translate([-R03_fin_width/2, -R03_fin_holder_depth, 0])
+            cube([R03_fin_width, 2*R03_fin_holder_depth, 2*R03_fin_holder_height]);
 
         // Slip-ring opening
         translate([0, R03_wide_D/2 + 5, slip_ring_z])
@@ -403,7 +432,8 @@ module WINDGAUGE03A_R03(draft = true)
 
     }
 
-    fins(1.5*R03_wide_D, R03_wide_D/2, R03_wall_thickness, 20, 6, 20);
+//    Replaced by single fin in issue #15
+//    fins(1.5*R03_wide_D, R03_wide_D/2, R03_wall_thickness, 20, 6, 20);
 
 }
 

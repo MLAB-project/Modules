@@ -28,9 +28,9 @@ module WINDGAUGE01A_S01()
             //krycí ovál - usnadnění povolení
             difference()
             {
-            cylinder (h = R01_vyska_preryti_statoru+5, r=S01_prumer_vnitrni/2+5/2*S01_sila_materialu, $fn=100); 
+            cylinder (h = R01_vyska_prekryti_statoru+5, r=S01_prumer_vnitrni/2+5/2*S01_sila_materialu, $fn=100);
 
-            cylinder (h = R01_vyska_preryti_statoru+5+0.01, r=S01_prumer_vnitrni/2+3/2*S01_sila_materialu, $fn=100);            
+            cylinder (h = R01_vyska_prekryti_statoru+5+0.01, r=S01_prumer_vnitrni/2+3/2*S01_sila_materialu, $fn=100);
             
             } 
          
@@ -97,13 +97,13 @@ translate([0,0,S01_sila_materialu])
     difference () 
     {
         
-        cylinder (h = R01_vyska_preryti_statoru+2*lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky, r= sirka_matky/2+S01_sila_materialu, $fn=20);
+        cylinder (h = R01_vyska_prekryti_statoru+2*lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky, r= sirka_matky/2+S01_sila_materialu, $fn=20);
         
-        translate([0,0,R01_vyska_preryti_statoru+2*lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky-vyska_matky]) 
+        translate([0,0,R01_vyska_prekryti_statoru+2*lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky-vyska_matky])
             cylinder (h = vyska_matky+0.01, r= (sirka_matky+0.2)/2, $fn=6);
         
         translate([0,0,-0.01]) 
-            cylinder (h = R01_vyska_preryti_statoru+2*lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky+0.01, r= (prumer_sroubu+0.2)/2, $fn=40);
+            cylinder (h = R01_vyska_prekryti_statoru+2*lozisko_vyska+2*S01_sila_materialu+2*S01_sila_materialu+vyska_hlavy_sroubu+magnet_vyska+vyska_matky+0.01, r= (prumer_sroubu+0.2)/2, $fn=40);
                
         translate([0,0,-0.01]) 
             cylinder (h = vyska_hlavy_sroubu-S01_sila_materialu, r= (prumer_hlavy_sroubu)/2, $fn=40);
@@ -117,5 +117,3 @@ translate([0,0,S01_sila_materialu])
 
   
 WINDGAUGE01A_S01(); 
-
- 
