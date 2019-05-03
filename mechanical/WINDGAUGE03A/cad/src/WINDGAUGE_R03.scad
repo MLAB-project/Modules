@@ -430,6 +430,12 @@ module WINDGAUGE03A_R03(draft = true)
         // Sealing ring extension
         sealing_ring_extension(vlp_x, sensor_y, vlp_y_out, vlp_z_out, draft);
 
+        // Balance adjustments shelf
+        translate([-R03_balance_shelf_width/2, R03_wide_D/2 + R03_wall_thickness,
+                   slip_ring_z + S01_prumer_vnitrni/2 + 4*S01_sila_materialu])
+            cube([R03_balance_shelf_width, R03_balance_shelf_height,
+                  R03_venturi_tube_height]);
+
     }
 
 //    Replaced by single fin in issue #15

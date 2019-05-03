@@ -155,3 +155,5 @@ R03_fin_height = 150; // Height of vertical stabilizator
 R03_fin_holder_width = M3_bolt_head_height + M3_bolt_length + M3_nut_height;
 R03_fin_holder_height = M3_nut_diameter + 2*R03_wall_thickness;
 R03_fin_holder_depth = R03_wide_D/2 + R03_fin_holder_height;
+R03_balance_shelf_width = 20; // Width of shelf for balance weights
+R03_balance_shelf_height = 10; // Height of shelf for balance weights
