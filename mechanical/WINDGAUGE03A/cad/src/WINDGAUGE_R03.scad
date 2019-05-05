@@ -346,6 +346,12 @@ module WINDGAUGE03A_R03(draft = true)
                          d = M3_nut_diameter, $fn = 6);
             }
 
+        // Balance adjustments shelf
+        translate([-R03_balance_shelf_width/2, R03_wide_D/2 + R03_wall_thickness,
+                   slip_ring_z + S01_prumer_vnitrni/2 + 4*S01_sila_materialu])
+            cube([R03_balance_shelf_width, R03_balance_shelf_height,
+                  R03_venturi_tube_height]);
+
         // Cabling
         mid_body_horizontal = (R03_wide_D/2 + R03_narrow_D/2) / 2;
         mid_body_vertical = wide_body_length + exhaust_length + R03_narrow_D/2;
@@ -367,21 +373,21 @@ module WINDGAUGE03A_R03(draft = true)
                      mid_body_horizontal - 2, d/2 + 0.1],
                     d,
                     0);
-        translate([-d/2, PCB_y, PCB_z])
+        translate([0, PCB_y, PCB_z])
             polyhedron
             (
                 points = [ // 0 = bottom right front
-                         [d, 0, 0],
+                         [d/2, 0, 0],
                          // 1 = bottom left front
-                         [0, 0, 0],
+                         [-d/2, 0, 0],
                          // 2 = bottom right back
-                         [d, 1.5*d + R03_wall_thickness/2, 0],
+                         [d/2, 1.5*d + R03_wall_thickness/2, 0],
                          // 3 = bottom left back
-                         [0, 1.5*d + R03_wall_thickness/2, 0],
+                         [-d/2, 1.5*d + R03_wall_thickness/2, 0],
                          // 4 = top right
-                         [d, 0, R03_PCB_height/3],
+                         [R03_PCB_width/2, 0, R03_PCB_height/3],
                          // 5 = top left
-                         [0, 0, R03_PCB_height/3],
+                         [-R03_PCB_width/2, 0, R03_PCB_height/3],
                        ],
                 faces = [ [1, 5, 4, 0], // front
                           [2, 4, 5, 3], // back
@@ -429,12 +435,6 @@ module WINDGAUGE03A_R03(draft = true)
                     0);
         // Sealing ring extension
         sealing_ring_extension(vlp_x, sensor_y, vlp_y_out, vlp_z_out, draft);
-
-        // Balance adjustments shelf
-        translate([-R03_balance_shelf_width/2, R03_wide_D/2 + R03_wall_thickness,
-                   slip_ring_z + S01_prumer_vnitrni/2 + 4*S01_sila_materialu])
-            cube([R03_balance_shelf_width, R03_balance_shelf_height,
-                  R03_venturi_tube_height]);
 
     }
 
