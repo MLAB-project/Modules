@@ -89,13 +89,15 @@ module drop_shape(drop_length, draft)
                     cylinder (h = R03_wide_D,
                               d = M3_nut_diameter,
                               $fn=draft ? 20 :100);
-        // PCB casing - Ceiling is moved 0.75mm upwards due to problems with
-        // bridge printing.
+        // PCB casing - Ceiling is moved 1.5xR03_global_clearance upwards due to
+        // problems with bridge printing.
         translate([-R03_PCB_width/2 - R03_global_clearance,
-                   -R03_PCB_depth - R03_PCB_connector_overlay - R03_PCB_elevation - 0.75,
+                   -R03_PCB_depth - R03_PCB_connector_overlay - R03_PCB_elevation
+                   - 1.5*R03_global_clearance,
                    -R03_PCB_height - R03_PCB_top_rim])
             cube([R03_PCB_width + 2*R03_global_clearance,
-                  R03_PCB_depth + R03_PCB_connector_overlay + R03_PCB_elevation + 0.75,
+                  R03_PCB_depth + R03_PCB_connector_overlay + R03_PCB_elevation
+                  + 1.5*R03_global_clearance,
                   R03_PCB_height + R03_global_clearance]);
         translate([-R03_PCB_width/2, 0, -R03_PCB_height - R03_PCB_top_rim])
             polyhedron
