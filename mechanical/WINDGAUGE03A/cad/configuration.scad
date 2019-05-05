@@ -7,6 +7,15 @@ M3_nut_height=2.7;
 M3_bolt_diameter = 3.2;
 M3_bolt_head_height = 3;
 M3_bolt_length = 12;
+//M5 Bolt
+M5_bolt_diameter = 5.5;
+M5_nut_height = 4.5;
+M5_nut_diameter = 9.4;
+//M6 Bolt
+M6_bolt_diameter = 6.5;
+M6_nut_height = 4.9;
+M6_nut_diameter = 11.8;
+
 //----------------------------------------------------------------
 //----------------------------------------------------------------
 //WINDGAUGE02A_S02 - Parametry pro hlavni valec anemometru
@@ -69,20 +78,38 @@ L01_delka_uchytu=19;
 L01_prumer_lopatky=40;
 L01_sila_materialu_lopatky=0.9;
 
-//WINDGAUGE02A_D01 //uchyt velky
-D01_material_pod_zavitem=5;
-D01_material_za_zavitem=3;
-D01_material_pred_zavitem=2;
-D01_polomer_zakladny=40;
-D01_sila_setny_spodniho_drzaku=5;
-D01_vyska_spodni_casti_drzaku=60;
-D01_sirka_otvoru_pro_konektor=40;
-//Šroub M6
-D01_uchytna_matice_vyska=6;
-D01_uchytna_matice_sirka=11.1;
-D01_ucyhtna_matice_material_nad=2;
-D01_uchytny_sroub_prumer=6.2;
+//WINDGAUGE02A_D02 Anemometer holder
+//   | |   Top ring with Screw-thread
+//  /   \  Body
+// |_____| Base
+D02_global_clearance = 0.5; // additional space where needed due to printer precision
+D02_magnet_base_height = 4.5 + 1.5*D02_global_clearance; // HS-13 M5 magnet height without bolt
+D02_magnet_diameter = 13; // HS-13 M5 magnet diameter
+D02_wall_thickness = 5; // body wall thickness
+D02_connector_spacing = 40; // main body cut-through for connectors
+D02_base_diameter = 80; // diameter of holder base
+D02_base_height = max(M6_nut_height + 1.5,
+                      D02_magnet_base_height + M5_nut_height/2 + 1.5); // height of holder base
+D02_body_height = 60 - D02_base_height; // height of body between base and top ring
+D02_screw_diameter = S01_prumer_vnitrni - S01_tolerance_zavit; // scew-thread diameter based on stand S01
+D02_thread_height = S01_vyska_spodniho_zavitu; // screw-thread height based on stand S01
+D02_top_ring_inner_diameter = D02_screw_diameter - 6; // inner diameter of top ring
+D02_top_ring_outer_diameter = D02_screw_diameter + 4; // outer diameter of top ring
+D02_top_ring_height = D02_thread_height + 5; // height of top ring
+// Following parameters are obsolete, maintained only for compatibility.
+D01_material_pod_zavitem = D02_top_ring_height - D02_thread_height;
+D01_material_za_zavitem = D02_screw_diameter - D02_top_ring_inner_diameter;
+D01_material_pred_zavitem = D02_top_ring_outer_diameter - D02_screw_diameter;
+D01_polomer_zakladny = D02_base_diameter/2;
+D01_sila_setny_spodniho_drzaku=D02_wall_thickness;
+D01_vyska_spodni_casti_drzaku = D02_body_height + D02_base_height;
+D01_sirka_otvoru_pro_konektor = D02_connector_spacing;
+D01_ucyhtna_matice_material_nad = D02_base_height - M6_nut_height;
+D01_uchytna_matice_vyska = M6_nut_height;
+D01_uchytna_matice_sirka = M6_nut_diameter;
+D01_uchytny_sroub_prumer = M6_bolt_diameter;
 
+// Following parameters are actually used in D01 model.
 //WINDGAUGE02A_D02 //uchyt na sloup
 D02_sila_materialu=6;
 D02_vyska_uchytky=40;
@@ -148,12 +175,12 @@ R03_sensor_depth = 2.5;  // SDP33 sensor depth
 R03_slip_ring_offset = 0; // slip-ring offset from tube center
 R03_venturi_tube_height = 150;  // Venturi tube height (limited by max print size)
 R03_wall_thickness = 3; // Venturi tube wall thickness
-R03_sealing_ring_thickness = 1.5; // Sealing ring size
-R03_fin_width = 0.8; // Width of vertical stabilizator
-R03_fin_length = 150; // Length of vertical stabilizator
-R03_fin_height = 150; // Height of vertical stabilizator
+R03_sealing_ring_thickness = 1.5; // sealing ring size
+R03_fin_width = 0.8; // width of vertical stabilizator
+R03_fin_length = 150; // length of vertical stabilizator
+R03_fin_height = 150; // height of vertical stabilizator
 R03_fin_holder_width = M3_bolt_head_height + M3_bolt_length + M3_nut_height;
 R03_fin_holder_height = M3_nut_diameter + 2*R03_wall_thickness;
 R03_fin_holder_depth = R03_wide_D/2 + R03_fin_holder_height;
-R03_balance_shelf_width = 20; // Width of shelf for balance weights
-R03_balance_shelf_height = 10; // Height of shelf for balance weights
+R03_balance_shelf_width = 20; // width of shelf for balance weights
+R03_balance_shelf_height = 10; // height of shelf for balance weights
