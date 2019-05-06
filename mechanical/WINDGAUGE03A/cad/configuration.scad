@@ -96,6 +96,7 @@ D02_thread_height = S01_vyska_spodniho_zavitu; // screw-thread height based on s
 D02_top_ring_inner_diameter = D02_screw_diameter - 6; // inner diameter of top ring
 D02_top_ring_outer_diameter = D02_screw_diameter + 4; // outer diameter of top ring
 D02_top_ring_height = D02_thread_height + 5; // height of top ring
+D02_total_height = D02_base_height + D02_body_height + D02_top_ring_height; // total height of anemometer holder
 // Following parameters are obsolete, maintained only for compatibility.
 D01_material_pod_zavitem = D02_top_ring_height - D02_thread_height;
 D01_material_za_zavitem = D02_screw_diameter - D02_top_ring_inner_diameter;
@@ -179,7 +180,7 @@ R03_sealing_ring_thickness = 1.5; // sealing ring size
 R03_fin_width = 0.8; // width of vertical stabilizator
 R03_fin_length = 150; // length of vertical stabilizator
 R03_fin_height = 150; // height of vertical stabilizator
-R03_fin_holder_width = M3_bolt_head_height + M3_bolt_length + M3_nut_height;
+R03_fin_holder_width = M3_bolt_length + M3_nut_height;
 R03_fin_holder_height = M3_nut_diameter + 2*R03_wall_thickness;
 R03_fin_holder_depth = R03_wide_D/2 + R03_fin_holder_height;
 R03_balance_shelf_width = 20; // width of shelf for balance weights
