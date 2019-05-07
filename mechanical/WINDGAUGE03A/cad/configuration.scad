@@ -1,9 +1,11 @@
 //$fn=40; // model faces resolution.
 
 //COMMON PARAMETERS
+global_clearance = 0.5; // additional space where needed due to printer precision
+layer_thickness = 0.3; // layer which is going to be removed after printing
 //M3 x 12 Bolt
-M3_nut_diameter=6.6;
-M3_nut_height=2.7;
+M3_nut_diameter = 6.6;
+M3_nut_height = 2.7;
 M3_bolt_diameter = 3.2;
 M3_bolt_head_height = 3;
 M3_bolt_length = 12;
@@ -15,6 +17,7 @@ M5_nut_diameter = 9.4;
 M6_bolt_diameter = 6.5;
 M6_nut_height = 4.9;
 M6_nut_diameter = 11.8;
+
 
 //----------------------------------------------------------------
 //----------------------------------------------------------------
@@ -82,9 +85,8 @@ L01_sila_materialu_lopatky=0.9;
 //   | |   Top ring with Screw-thread
 //  /   \  Body
 // |_____| Base
-D02_global_clearance = 0.5; // additional space where needed due to printer precision
-D02_magnet_base_height = 4.5 + 1.5*D02_global_clearance; // HS-13 M5 magnet height without bolt
-D02_magnet_diameter = 13; // HS-13 M5 magnet diameter
+D02_magnet_base_height = 4.5 + 1.5*global_clearance; // HS-13 M5 magnet height without bolt
+D02_magnet_diameter = 13 + global_clearance; // HS-13 M5 magnet diameter
 D02_wall_thickness = 5; // body wall thickness
 D02_connector_spacing = 40; // main body cut-through for connectors
 D02_base_diameter = 80; // diameter of holder base
@@ -161,7 +163,7 @@ S04_sila_materialu=2;
 //WINDGAUGE03A_R03 // Venturi tube
 R03_wide_D = 36; // Venturi wide tube inner diameter
 R03_narrow_D = R03_wide_D/2; // Venturi narrow tube inner diameter
-R03_global_clearance = 0.5; // additional space where needed due to printer precision
+R03_global_clearance = global_clearance; // additional space where needed due to printer precision
 R03_PCB_top_rim = 5; // vertical distance from top of tube to top of PCB
 R03_PCB_height = 41; // height of PCB casing - if changed check casing
 R03_PCB_width = 14; // width of PCB casing - if changed check casing
