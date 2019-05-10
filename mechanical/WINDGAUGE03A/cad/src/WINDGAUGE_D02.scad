@@ -4,7 +4,21 @@ include <./lib/polyScrewThread_r1.scad>
 use <./lib/copyFunctions.scad>
 
 PI=3.141592;
-magnet_offset = D02_base_diameter/2 - D02_wall_thickness - M5_nut_diameter/2 - 2;
+//   |\
+//   | \
+// c |  \ b
+//   |   \
+//   |____\
+//     a
+a1 = (D02_base_diameter - D02_top_ring_outer_diameter)/2;
+//a2 = ?; // minimum distance from wall to leave space for nut
+c1 = D02_body_height;
+c2 = M5_nut_height + global_clearance;
+// c1/a1 = c2/a2
+// a2 = c2 / (c1 / a1)
+wall_distance = (c2 / (c1 / a1));
+magnet_offset = (D02_base_diameter/2 - D02_wall_thickness
+                 - M5_nut_diameter/2 - wall_distance);
 
 // Anemometer holder
 module WINDGAUGE01A_D02()
