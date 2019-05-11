@@ -1,8 +1,9 @@
-$fn=100; // model faces resolution.
 include <../configuration.scad>
 include <./lib/polyScrewThread_r1.scad>
 use <./lib/copyFunctions.scad>
 
+draft = true;
+$fn=draft ? 20 :100; // model faces resolution
 PI=3.141592;
 //   |\
 //   | \
@@ -21,7 +22,7 @@ magnet_offset = (D02_base_diameter/2 - D02_wall_thickness
                  - M5_nut_diameter/2 - wall_distance);
 
 // Anemometer holder
-module WINDGAUGE01A_D02()
+module WINDGAUGE01A_D02(draft = true)
 {
     //   | |   Top ring with screw-thread
     //  /   \  Body
@@ -31,9 +32,12 @@ module WINDGAUGE01A_D02()
     {
         union()
         {
-            // Screw-thread
+            // Screw-thread (for draft draw cylinder instead)
             translate([0, 0, D02_top_ring_height - D02_thread_height])
-                screw_thread(D02_screw_diameter, 4, 55, D02_thread_height, PI/2, 2);
+                if (draft)
+                    cylinder(h = D02_thread_height, d = D02_screw_diameter);
+                else
+                    screw_thread(D02_screw_diameter, 4, 55, D02_thread_height, PI/2, 2);
             // Top ring below screw-thread
             cylinder(h = D02_top_ring_height - D02_thread_height,
                      d = D02_top_ring_outer_diameter);
@@ -104,8 +108,15 @@ module WINDGAUGE01A_D02()
 
 difference()
 {
-    WINDGAUGE01A_D02();
+    // If not draft -> move to print position.
+    if (!draft)
+        rotate([0, 0, 0])
+            translate([0,0,D02_base_height + D02_body_height])
+                WINDGAUGE01A_D02(false);
+    else
+        WINDGAUGE01A_D02();
     // Cut-out cube
-    translate([0,0,-50])
-        cube(100);
+    if (draft)
+        translate([0,0,-D02_total_height])
+            cube(2*D02_total_height);
 }
