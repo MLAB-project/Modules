@@ -1,6 +1,8 @@
 include <../configuration.scad>
 use <./lib/copyFunctions.scad>
 
+draft = true;
+
 module WINDGAUGE01A_R05(draft = true)
 {
     mirror_copy([0, 1, 0])
@@ -24,4 +26,17 @@ module WINDGAUGE01A_R05(draft = true)
         }
 }
 
-WINDGAUGE01A_R05(draft = true);
+difference()
+{
+    // If not draft -> move to print position.
+    if (!draft)
+        translate([0, 0, 0])
+            rotate([0, 0, 0])
+                WINDGAUGE01A_R05(false);
+    else
+        WINDGAUGE01A_R05();
+    // Cut-out cube not needed in this model
+    //if (draft)
+    //    translate([0, -R03_wide_D, -2*R03_wide_D])
+    //        cube(2*R03_wide_D);
+}

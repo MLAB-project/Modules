@@ -3,8 +3,8 @@ include <./lib/polyScrewThread_r1.scad>
 use <./lib/copyFunctions.scad>
 
 draft = true;
-$fn=draft ? 20 :100; // model faces resolution
-PI=3.141592;
+$fn = draft ? 20 : 100; // model faces resolution
+PI = 3.141592;
 //   |\
 //   | \
 // c |  \ b
@@ -110,13 +110,13 @@ difference()
 {
     // If not draft -> move to print position.
     if (!draft)
-        rotate([0, 0, 0])
-            translate([0,0,D02_base_height + D02_body_height])
+        translate([0, 0, D02_base_height + D02_body_height])
+            rotate([0, 0, 0])
                 WINDGAUGE01A_D02(false);
     else
         WINDGAUGE01A_D02();
     // Cut-out cube
     if (draft)
-        translate([0,0,-D02_total_height])
+        translate([0, 0, -D02_total_height])
             cube(2*D02_total_height);
 }

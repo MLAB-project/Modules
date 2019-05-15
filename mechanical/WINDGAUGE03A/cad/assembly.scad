@@ -1,75 +1,43 @@
-use <src/WINDGAUGE_D01.scad>
-use <src/WINDGAUGE_D02.scad>
-use <src/WINDGAUGE_R01.scad>
-use <src/WINDGAUGE_R02.scad>
-use <src/WINDGAUGE_R03.scad>
-use <src/WINDGAUGE_R04.scad>
-use <src/WINDGAUGE_R05.scad>
-use <src/WINDGAUGE_S01.scad>
-use <src/WINDGAUGE_S02.scad>
-use <src/WINDGAUGE_S04.scad>
-
 include <configuration.scad>
 
-//R01 - kryt který je možné přilepit na trubici 
-//R03 - horní díl na ložicko
-//R04 - kryt kvůli vodě
-//D02 - drzak na strechu
-//S01 - držák ložiska
-//S02 - hlavní válec
-//S03 - držák pro RJ12
-//S04 - držák pro I2CDIFF
+parts_separation = 0;
 
+//D02 - Anemometer holder
+D02_z0 = 0;
+translate([0, 0, D02_z0])
+    rotate([0, 0, 0])
+        import("../amf/P_WINDGAUGE03A_D02.stl");
 
+//S02 - Extender
+S02_z0 = D02_z0 + D02_total_height - D02_thread_height + parts_separation;
+translate([0, 0, S02_z0])
+    rotate([0, 0, 0])
+        import("../amf/P_WINDGAUGE03A_S02.stl");
 
+//S01 - Bearings holder
+S01_z0 = S02_z0 + S01_vyska + parts_separation;
+translate([0, 0, S01_z0])
+    rotate([180, 0, 0])
+        import("../amf/P_WINDGAUGE03A_S01.stl");
 
-posunuti_dilu=0; //posunuti dilu od sebe
-difference()
-{     
-    union()
-    {  
-    //WINDGAUGE1A_D01  DRŽÁK
-    //-------------------------------------------------------------
-    //-------------------------------------------------------------
+//R03 - Venturi tube
+R03_y0 = -2*R03_venturi_tube_height + R03_slip_ring_offset + 6*R03_wide_D;
+R03_z0 = S01_z0 + R03_wide_D/2 + 5 + parts_separation;
+translate([0, R03_y0, R03_z0])
+    rotate([270, 0, 0])
+        import("../amf/P_WINDGAUGE03A_R03.stl");
 
+//R04 - PCB lid
+R04_y0 = R03_venturi_tube_height + R03_y0 - R03_wide_D/2;
+R04_z0 = R03_z0 + R03_wide_D/2 + R03_wall_thickness + parts_separation;
+translate([0, R04_y0, R04_z0])
+    rotate([0, 0, 0])
+        import("../amf/P_WINDGAUGE03A_R04.stl");
 
-      
-           
-
-        translate([0,0,-2*posunuti_dilu])        
-            WINDGAUGE01A_D02();
-
-        translate([0,0,S01_vyska+S01_sila_materialu+3*posunuti_dilu])
-            rotate(a=[0,180,0])
-                WINDGAUGE01A_S01();        
-
-        WINDGAUGE01A_S02(); 
-
-        translate([0,0,S01_vyska_spodniho_zavitu+S01_sila_drzaku_RJ11-0.3-4*posunuti_dilu])
-
-        WINDGAUGE01A_S04(); 
-
-        translate([0,0,S01_vyska+2*S01_sila_materialu+3*posunuti_dilu+8*posunuti_dilu+R04_zavit_vyska])
-            rotate(a=[0,0,0])
-                WINDGAUGE01A_R01(); 
-
-
-       
-                
-      
-
-        translate([0,0,S01_vyska+2*S01_sila_materialu+3*posunuti_dilu+3*posunuti_dilu])
-
-        WINDGAUGE01A_R03(); 
-
-
-        translate([0,0,S01_vyska+2*S01_sila_materialu+3*posunuti_dilu+1*posunuti_dilu+R04_zavit_vyska])
-            rotate(a=[0,180,0])
-                WINDGAUGE01A_R04(); 
-      
-    }     
-    translate([3,0,0])
-        cube(300); // cut to show internal relief
-}
-  
-  
+//R05 - Fin
+R05_y0 = (-R03_fin_length/2 - R03_venturi_tube_height/2
+          + M3_nut_diameter/2 - parts_separation);
+R05_z0 = R03_z0;
+translate([0, R05_y0, R05_z0])
+    rotate([90, 0, 270])
+        import("../amf/P_WINDGAUGE03A_R05.stl");
