@@ -1,11 +1,11 @@
 ../amf/WINDGAUGE_R03.stl: \
-	/Users/jkt/playground/OpenSCAD/kaklik/Modules/mechanical/WINDGAUGE03A/cad/src/WINDGAUGE_R06.scad \
-	/Users/jkt/playground/OpenSCAD/kaklik/Modules/mechanical/WINDGAUGE03A/cad/src/lib/maths.scad \
-	/Users/jkt/playground/OpenSCAD/kaklik/Modules/mechanical/WINDGAUGE03A/cad/src/lib/vector.scad \
-	/Users/jkt/playground/OpenSCAD/kaklik/Modules/mechanical/WINDGAUGE03A/cad/src/lib/curvedPipe.scad \
-	/Users/jkt/playground/OpenSCAD/kaklik/Modules/mechanical/WINDGAUGE03A/cad/src/lib/naca4.scad \
-	/Users/jkt/playground/OpenSCAD/kaklik/Modules/mechanical/WINDGAUGE03A/cad/src/lib/copyFunctions.scad \
-	/Users/jkt/playground/OpenSCAD/kaklik/Modules/mechanical/WINDGAUGE03A/cad/src/lib/moreShapes.scad \
-	/Users/jkt/playground/OpenSCAD/kaklik/Modules/mechanical/WINDGAUGE03A/cad/src/lib/polyScrewThread_r1.scad \
-	/Users/jkt/playground/OpenSCAD/kaklik/Modules/mechanical/WINDGAUGE03A/cad/configuration.scad \
+	src/WINDGAUGE_R06.scad \
+	src/lib/maths.scad \
+	src/lib/vector.scad \
+	src/lib/curvedPipe.scad \
+	src/lib/naca4.scad \
+	src/lib/copyFunctions.scad \
+	src/lib/moreShapes.scad \
+	src/lib/polyScrewThread_r1.scad \
+	configuration.scad \
 	src/WINDGAUGE_R03.scad
