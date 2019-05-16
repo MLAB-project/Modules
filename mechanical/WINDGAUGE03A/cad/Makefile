@@ -24,8 +24,10 @@ $(STL_DIR)/%.stl : $(SRC_DIR)/%.scad
 	$(OPENSCAD_APP) -D "draft = false" -m make -o $@ -d $(patsubst $(STL_DIR)/%.stl, $(DEP_DIR)/%.deps, $@) $<
 	# Remove absolute paths in dependencies.
 	sed -i "s|$(shell pwd)/||" $(patsubst $(STL_DIR)/%.stl, $(DEP_DIR)/%.deps, $@)
-	# Sort stl file to keep git changes to minimum.
+	# Sort stl and deps file to keep git changes to minimum.
 	$(STLSORT) $@ || :
+	sort -bf $(patsubst $(STL_DIR)/%.stl, $(DEP_DIR)/%.deps, $@) -o $(patsubst $(STL_DIR)/%.stl, $(DEP_DIR)/%.deps, $@)
+	sed -i 's|[^\]$$|& \\|' $(patsubst $(STL_DIR)/%.stl, $(DEP_DIR)/%.deps, $@)
 
 include $(wildcard $(DEP_DIR)/*.deps)
 

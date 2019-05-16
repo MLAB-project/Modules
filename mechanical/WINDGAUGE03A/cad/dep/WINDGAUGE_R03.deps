@@ -1,11 +1,11 @@
 ../amf/WINDGAUGE_R03.stl: \
-	src/WINDGAUGE_R06.scad \
-	src/lib/maths.scad \
-	src/lib/vector.scad \
-	src/lib/curvedPipe.scad \
-	src/lib/naca4.scad \
-	src/lib/copyFunctions.scad \
-	src/lib/moreShapes.scad \
-	src/lib/polyScrewThread_r1.scad \
 	configuration.scad \
-	src/WINDGAUGE_R03.scad
+	src/lib/copyFunctions.scad \
+	src/lib/curvedPipe.scad \
+	src/lib/maths.scad \
+	src/lib/moreShapes.scad \
+	src/lib/naca4.scad \
+	src/lib/polyScrewThread_r1.scad \
+	src/lib/vector.scad \
+	src/WINDGAUGE_R03.scad \
+	src/WINDGAUGE_R06.scad \

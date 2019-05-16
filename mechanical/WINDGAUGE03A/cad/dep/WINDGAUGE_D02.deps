@@ -1,5 +1,5 @@
 ../amf/WINDGAUGE_D02.stl: \
-	src/lib/polyScrewThread_r1.scad \
-	src/lib/copyFunctions.scad \
 	configuration.scad \
-	src/WINDGAUGE_D02.scad
+	src/lib/copyFunctions.scad \
+	src/lib/polyScrewThread_r1.scad \
+	src/WINDGAUGE_D02.scad \
