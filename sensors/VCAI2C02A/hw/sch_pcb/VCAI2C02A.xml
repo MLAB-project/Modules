@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>C:\Chroust\Zaloha\stare\MLAB_G\Modules\sensors\VCAI2C02A\hw\sch_pcb\VCAI2C02A.sch</source>
-    <date>16. 4. 2019 9:55:11</date>
-    <tool>Eeschema (5.1.0-rc1-3-g6bb8fde48)</tool>
+    <source>C:\Chroust\stare\MLAB_G\Modules\sensors\VCAI2C02A\hw\sch_pcb\VCAI2C02A.sch</source>
+    <date>18.04.2019 10:50:43</date>
+    <tool>Eeschema (6.0.0-rc1-dev-205-gc0615c5ef)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>VCAI2C02A</title>
@@ -418,17 +418,23 @@
       <tstamp>5C9D03B3</tstamp>
     </comp>
     <comp ref="R6">
-      <value>17k</value>
+      <value>16k9</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5cb83a291287500e61c99759</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C9D04CD</tstamp>
     </comp>
     <comp ref="R4">
-      <value>40k</value>
+      <value>40k2</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5cb839571287500e61c9974a</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C9D0549</tstamp>
@@ -700,22 +706,22 @@
   </libparts>
   <libraries>
     <library logical="ADuM3190">
-      <uri>C:\Chroust\Zaloha\stare\MLAB_G\Modules\sensors\VCAI2C02A\hw\sch_pcb/lib/ADuM3190.lib</uri>
+      <uri>C:\Chroust\stare\MLAB_G\Modules\sensors\VCAI2C02A\hw\sch_pcb/lib/ADuM3190.lib</uri>
     </library>
     <library logical="Analog_ADC">
-      <uri>C:/Chroust/Zaloha/stare/kicad_lib/kicad-symbols/Analog_ADC.lib</uri>
+      <uri>C:/Chroust/stare/KiCAD_G/kicad-symbols/Analog_ADC.lib</uri>
     </library>
     <library logical="Connector_Generic">
-      <uri>C:/Chroust/Zaloha/stare/kicad_lib/kicad-symbols/Connector_Generic.lib</uri>
+      <uri>C:/Chroust/stare/KiCAD_G/kicad-symbols/Connector_Generic.lib</uri>
     </library>
     <library logical="Device">
-      <uri>C:/Chroust/Zaloha/stare/kicad_lib/kicad-symbols/Device.lib</uri>
+      <uri>C:/Chroust/stare/KiCAD_G/kicad-symbols/Device.lib</uri>
     </library>
     <library logical="L01ZxxxS05">
-      <uri>C:\Chroust\Zaloha\stare\MLAB_G\Modules\sensors\VCAI2C02A\hw\sch_pcb/lib/L01ZxxxS05.lib</uri>
+      <uri>C:\Chroust\stare\MLAB_G\Modules\sensors\VCAI2C02A\hw\sch_pcb/lib/L01ZxxxS05.lib</uri>
     </library>
     <library logical="Mechanical">
-      <uri>C:/Chroust/Zaloha/stare/kicad_lib/kicad-symbols/Mechanical.lib</uri>
+      <uri>C:/Chroust/stare/KiCAD_G/kicad-symbols/Mechanical.lib</uri>
     </library>
   </libraries>
   <nets>
