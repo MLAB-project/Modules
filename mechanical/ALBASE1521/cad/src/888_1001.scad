@@ -1,4 +1,4 @@
-include <../Parameters.scad>
+include <../parameters.scad>
 
 //variable
 length_total = 50;
