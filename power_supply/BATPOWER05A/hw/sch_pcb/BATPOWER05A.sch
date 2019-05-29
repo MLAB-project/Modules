@@ -58,16 +58,6 @@ F 3 "" H 10700 750 60  0000 C CNN
 	1    10700 750 
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	10100 650  10100 700 
-Wire Wire Line
-	10300 700  10300 650 
-Connection ~ 10300 650 
-Wire Wire Line
-	10500 700  10500 650 
-Connection ~ 10500 650 
-Wire Wire Line
-	10700 700  10700 650 
 Wire Notes Line
 	10000 600  11000 600 
 Wire Notes Line
@@ -78,12 +68,6 @@ Wire Notes Line
 	10000 1000 10000 600 
 Text Notes 10000 1000 0    60   ~ 0
 MOUNTING HOLES
-Wire Wire Line
-	10300 650  10100 650 
-Wire Wire Line
-	10500 650  10300 650 
-Wire Wire Line
-	10700 650  10500 650 
 $Comp
 L Regulator_Switching:TPS563200 U3
 U 1 1 5CE684FE
