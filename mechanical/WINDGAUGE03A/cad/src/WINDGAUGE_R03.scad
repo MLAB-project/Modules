@@ -4,7 +4,7 @@ use <./lib/curvedPipe.scad>
 use <./lib/copyFunctions.scad>
 use <WINDGAUGE_R06.scad>
 
-draft = false;
+draft = true;
 $fn = draft ? 20 : 100;
 slip_ring_z = 2*R03_venturi_tube_height - R03_slip_ring_offset - 6*R03_wide_D;
 // length of tube narrowing part
@@ -206,12 +206,12 @@ module WINDGAUGE03A_R03(draft = true)
             translate([0, -R03_wide_D/2 - R03_wall_thickness, R03_venturi_tube_height])
             {
                 difference()
-//  |                {
-//  |                    drop_shape(2*R03_wide_D, draft);
-//  |                    // TOP cutout
-//  |                    translate([-R03_wide_D/2, -R03_wide_D/2, -2*R03_wide_D])
-//  |                        cube([R03_wide_D, R03_wide_D/2, 2*R03_wide_D]);
-//  |                }
+                {
+                    drop_shape(2*R03_wide_D, draft);
+                    // TOP cutout
+                    translate([-R03_wide_D/2, -R03_wide_D/2, -2*R03_wide_D])
+                        cube([R03_wide_D, R03_wide_D/2, 2*R03_wide_D]);
+                }
                     // PCB elevation
                     translate([-R03_PCB_width/2, 0, -R03_PCB_top_rim])
                         polyhedron
@@ -418,7 +418,7 @@ difference()
     else
         WINDGAUGE03A_R03();
     // Cut-out cube
-    if (!draft)
-        translate([0, -R03_venturi_tube_height/2, R03_venturi_tube_height/2])
+    if (draft)
+        translate([0, -R03_venturi_tube_height/2, 0])
             cube([R03_wide_D, R03_venturi_tube_height, R03_venturi_tube_height]);
 }
