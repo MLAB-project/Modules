@@ -344,7 +344,12 @@ module WINDGAUGE03A_R03(draft = true)
         // Slip-ring opening
         translate([0, R03_wide_D/2 + 5, slip_ring_z])
             rotate([90, 0, 0])
+            {
                 WINDGAUGE01A_R06();
+                // Cabling bay
+                translate([0, 0, 5])
+                    cylinder (h = 5, r = 10);
+            }
 
         // Waterproofing
         translate([0, R03_wide_D/2 + 5, slip_ring_z])

@@ -70,13 +70,13 @@ module torusSlice(r1, r2, start_angle, end_angle, convexity=10, r3=0, $fn=64) {
     ry = rx;
     trx = rx* sqrt(2) + 1;
     try = ry* sqrt(2) + 1;
-    a0 = (4 * start_angle + 0 * end_angle) / 4;
-    a1 = (3 * start_angle + 1 * end_angle) / 4;
-    a2 = (2 * start_angle + 2 * end_angle) / 4;
-    a3 = (1 * start_angle + 3 * end_angle) / 4;
-    a4 = (0 * start_angle + 4 * end_angle) / 4;
+    a0 = (4 * end_angle + 0 * 360 - start_angle) / 4;
+    a1 = (3 * end_angle + 1 * 360 - start_angle) / 4;
+    a2 = (2 * end_angle + 2 * 360 - start_angle) / 4;
+    a3 = (1 * end_angle + 3 * 360 - start_angle) / 4;
+    a4 = (0 * end_angle + 4 * 360 - start_angle) / 4;
     if(end_angle > start_angle)
-        intersection() {
+        difference() {
 			rotate_extrude(convexity=convexity, $fn=64) translate([r1,0,0]) difference() {
 				circle(r2, $fn=30);
 				circle(r3, $fn=30);
@@ -84,15 +84,15 @@ module torusSlice(r1, r2, start_angle, end_angle, convexity=10, r3=0, $fn=64) {
 
 			translate([0,0,-r2-1])
 			linear_extrude(height=2*r2+2)
-        		polygon([
-		            [0,0],
-		            [trx * cos(a0), try * sin(a0)],
-		            [trx * cos(a1), try * sin(a1)],
-		            [trx * cos(a2), try * sin(a2)],
-		            [trx * cos(a3), try * sin(a3)],
-		            [trx * cos(a4), try * sin(a4)],
-		            [0,0]
-		       ]);
+			polygon([
+				[0,0],
+				[trx * cos(a0), try * sin(a0)],
+				[trx * cos(a1), try * sin(a1)],
+				[trx * cos(a2), try * sin(a2)],
+				[trx * cos(a3), try * sin(a3)],
+				[trx * cos(a4), try * sin(a4)],
+				[0,0]
+			]);
     }
 }
 
