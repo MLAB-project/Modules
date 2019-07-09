@@ -6,7 +6,7 @@ thickness_set=5;//nastavení minimální tlouštky
 
 cables_quantity = 4 ;//počet kabelů
 clamp_quantity = 2;//počet svazků
-wires =  [[12,12],[12,12]];//rozložení a jejich velikosti
+wires =  [[10,10],[10,10]];//rozložení a jejich velikosti
 pomocna= [[0,1],[2,3]];//indexace kabelů... nahradit funkcí
 adjusment=5;//připůsobení dély...-> automatizace??
 
