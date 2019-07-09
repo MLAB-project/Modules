@@ -1,4 +1,4 @@
-include <../Parameters.scad>
+include <../parameters.scad>
 //minimal length_total is 18
 
 //variable

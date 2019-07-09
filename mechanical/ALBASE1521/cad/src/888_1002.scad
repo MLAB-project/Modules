@@ -1,13 +1,13 @@
-include <../Parameters.scad>
+include <../parameters.scad>
 
 spacing_cable_clamp = 15; //odsazeni jednotlivych modulu
 width=15;
 thickness_set=5;//nastavení minimální tlouštky
 
-cables_quantity = 5 ;//počet kabelů
+cables_quantity = 4 ;//počet kabelů
 clamp_quantity = 2;//počet svazků
-wires =  [[12,8,20],[5,20]];//rozložení a jejich velikosti
-pomocna= [[0,1,2],[3,4]];//indexace kabelů... nahradit funkcí
+wires =  [[12,12],[12,12]];//rozložení a jejich velikosti
+pomocna= [[0,1],[2,3]];//indexace kabelů... nahradit funkcí
 adjusment=5;//připůsobení dély...-> automatizace??
 
 function add(v, i = 0, result = 0) = i < len(v) ? add(v, i + 1, result + v[i]) : result; //metoda na počítání prvků po dimenzích
