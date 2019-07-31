@@ -1,10 +1,87 @@
-EESchema Schematic File Version 4
-LIBS:QFHMIX01A-cache
-EELAYER 29 0
+EESchema Schematic File Version 2
+LIBS:74xgxx
+LIBS:74xx
+LIBS:ac-dc
+LIBS:actel
+LIBS:adc-dac
+LIBS:Altera
+LIBS:analog_devices
+LIBS:analog_switches
+LIBS:atmel
+LIBS:audio
+LIBS:brooktre
+LIBS:cmos4000
+LIBS:cmos_ieee
+LIBS:conn
+LIBS:contrib
+LIBS:cypress
+LIBS:dc-dc
+LIBS:device
+LIBS:digital-audio
+LIBS:diode
+LIBS:display
+LIBS:dsp
+LIBS:elec-unifil
+LIBS:ESD_Protection
+LIBS:ftdi
+LIBS:gennum
+LIBS:graphic
+LIBS:hc11
+LIBS:intel
+LIBS:interface
+LIBS:ir
+LIBS:Lattice
+LIBS:linear
+LIBS:logo
+LIBS:maxim
+LIBS:memory
+LIBS:microchip_dspic33dsc
+LIBS:microchip
+LIBS:microchip_pic10mcu
+LIBS:microchip_pic12mcu
+LIBS:microchip_pic16mcu
+LIBS:microchip_pic18mcu
+LIBS:microchip_pic32mcu
+LIBS:microcontrollers
+LIBS:motor_drivers
+LIBS:motorola
+LIBS:msp430
+LIBS:nordicsemi
+LIBS:nxp_armmcu
+LIBS:onsemi
+LIBS:opto
+LIBS:Oscillators
+LIBS:philips
+LIBS:powerint
+LIBS:power
+LIBS:Power_Management
+LIBS:pspice
+LIBS:references
+LIBS:regul
+LIBS:relays
+LIBS:rfcom
+LIBS:sensors
+LIBS:silabs
+LIBS:siliconi
+LIBS:stm32
+LIBS:stm8
+LIBS:supertex
+LIBS:switches
+LIBS:texas
+LIBS:transf
+LIBS:transistors
+LIBS:ttl_ieee
+LIBS:valves
+LIBS:video
+LIBS:Xicor
+LIBS:xilinx
+LIBS:Zilog
+LIBS:module-cache
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
+Sheet 1 1
 Title "NAME"
 Date "%F"
 Rev "REV"
@@ -15,7 +92,7 @@ Comment3 "nickname <email@example.com>"
 Comment4 "BSD"
 $EndDescr
 $Comp
-L QFHMIX01A-rescue:HEADER_2x03_PARALLEL J1
+L HEADER_2x03_PARALLEL J1
 U 1 1 549D65BC
 P 10550 1050
 F 0 "J1" H 10550 850 60  0000 C CNN
@@ -26,7 +103,7 @@ F 3 "" H 10550 1150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power1:VCC #PWR1
+L VCC #PWR1
 U 1 1 549D7353
 P 9350 1000
 F 0 "#PWR1" H 9350 850 60  0001 C CNN
@@ -37,7 +114,7 @@ F 3 "" H 9350 1000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power1:GND #PWR2
+L GND #PWR2
 U 1 1 549D73B2
 P 9350 1400
 F 0 "#PWR2" H 9350 1150 60  0001 C CNN
@@ -50,7 +127,7 @@ $EndComp
 Text Notes 9200 1700 0    60   ~ 0
 POWER INPUT
 $Comp
-L QFHMIX01A-rescue:HOLE M1
+L HOLE M1
 U 1 1 549D7549
 P 10050 1900
 F 0 "M1" V 9950 1900 60  0000 C CNN
@@ -61,7 +138,7 @@ F 3 "" H 10050 1900 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L QFHMIX01A-rescue:HOLE M2
+L HOLE M2
 U 1 1 549D7628
 P 10250 1900
 F 0 "M2" V 10150 1900 60  0000 C CNN
@@ -72,7 +149,7 @@ F 3 "" H 10250 1900 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L QFHMIX01A-rescue:HOLE M3
+L HOLE M3
 U 1 1 549D7646
 P 10450 1900
 F 0 "M3" V 10350 1900 60  0000 C CNN
@@ -83,7 +160,7 @@ F 3 "" H 10450 1900 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L QFHMIX01A-rescue:HOLE M4
+L HOLE M4
 U 1 1 549D7665
 P 10650 1900
 F 0 "M4" V 10550 1900 60  0000 C CNN
@@ -94,7 +171,7 @@ F 3 "" H 10650 1900 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power1:GND #PWR3
+L GND #PWR3
 U 1 1 549D770F
 P 10850 1850
 F 0 "#PWR3" H 10850 1600 60  0001 C CNN
@@ -107,7 +184,7 @@ $EndComp
 Wire Wire Line
 	10850 1850 10850 1800
 Wire Wire Line
-	10850 1800 10650 1800
+	10850 1800 10050 1800
 Wire Wire Line
 	10050 1800 10050 1850
 Wire Wire Line
@@ -130,7 +207,7 @@ Wire Notes Line
 Text Notes 9950 2150 0    60   ~ 0
 MOUNTING HOLES
 $Comp
-L device:D_Small D1
+L D_Small D1
 U 1 1 55622FB7
 P 9950 1200
 F 0 "D1" V 9850 1200 50  0000 R CNN
@@ -141,7 +218,7 @@ F 3 "" V 9950 1200 60  0000 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L device:C_Small C2
+L C_Small C2
 U 1 1 5562302C
 P 9650 1200
 F 0 "C2" H 9650 1300 50  0000 L CNN
@@ -152,7 +229,7 @@ F 3 "" H 9650 1200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:CP_Small C1
+L CP_Small C1
 U 1 1 55623093
 P 9350 1200
 F 0 "C1" H 9350 1300 50  0000 L CNN
@@ -163,9 +240,9 @@ F 3 "" H 9350 1200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10300 1050 9950 1050
+	10300 1050 9350 1050
 Wire Wire Line
-	9350 1000 9350 1050
+	9350 1000 9350 1100
 Connection ~ 9350 1050
 Wire Wire Line
 	9650 1100 9650 1050
@@ -176,11 +253,11 @@ Connection ~ 9950 1050
 Wire Wire Line
 	10300 950  10250 950 
 Wire Wire Line
-	10250 950  10250 1150
+	10250 950  10250 1350
 Wire Wire Line
-	10250 1350 9950 1350
+	10250 1350 9350 1350
 Wire Wire Line
-	9350 1300 9350 1350
+	9350 1300 9350 1400
 Connection ~ 9350 1350
 Wire Wire Line
 	9650 1300 9650 1350
@@ -199,97 +276,4 @@ Wire Notes Line
 	9200 1700 9200 750 
 Wire Notes Line
 	9200 750  10950 750 
-Wire Wire Line
-	10250 1800 10050 1800
-Wire Wire Line
-	10450 1800 10250 1800
-Wire Wire Line
-	10650 1800 10450 1800
-Wire Wire Line
-	9350 1050 9350 1100
-Wire Wire Line
-	9650 1050 9350 1050
-Wire Wire Line
-	9950 1050 9650 1050
-Wire Wire Line
-	9350 1350 9350 1400
-Wire Wire Line
-	9650 1350 9350 1350
-Wire Wire Line
-	9950 1350 9650 1350
-Wire Wire Line
-	10250 1150 10250 1350
-$Comp
-L MLAB_IO:AD8343 U?
-U 1 1 5D55C719
-P 5800 2500
-F 0 "U?" H 5800 3087 60  0000 C CNN
-F 1 "AD8343" H 5800 2981 60  0000 C CNN
-F 2 "" H 5350 2900 60  0001 C CNN
-F 3 "" H 5350 2900 60  0001 C CNN
-F 4 "5c70984612875079b91f89f7" H 5800 2500 50  0001 C CNN "UST_ID"
-	1    5800 2500
-	1    0    0    -1  
-$EndComp
-$Comp
-L MLAB_IO:AD8343 U?
-U 1 1 5D55DC2B
-P 5850 4550
-F 0 "U?" H 5850 5137 60  0000 C CNN
-F 1 "AD8343" H 5850 5031 60  0000 C CNN
-F 2 "" H 5400 4950 60  0001 C CNN
-F 3 "" H 5400 4950 60  0001 C CNN
-F 4 "5c70984612875079b91f89f7" H 5850 4550 50  0001 C CNN "UST_ID"
-	1    5850 4550
-	1    0    0    -1  
-$EndComp
-$Comp
-L MLAB_IO:LT6604-10 U?
-U 1 1 5D55E7B4
-P 8150 4000
-F 0 "U?" H 8125 4853 60  0000 C CNN
-F 1 "LT6604-10" H 8125 4747 60  0000 C CNN
-F 2 "" H 6900 4650 60  0001 C CNN
-F 3 "" H 6900 4650 60  0001 C CNN
-F 4 "5c70984712875079b91f8b83" H 8150 4000 50  0001 C CNN "UST_ID"
-	1    8150 4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L MLAB_IO:LT6604-10 U?
-U 2 1 5D56022C
-P 8150 4800
-F 0 "U?" H 8125 4769 60  0000 C CNN
-F 1 "LT6604-10" H 8125 4663 60  0000 C CNN
-F 2 "" H 6900 5450 60  0001 C CNN
-F 3 "" H 6900 5450 60  0001 C CNN
-	2    8150 4800
-	1    0    0    -1  
-$EndComp
-$Comp
-L MLAB_IO:Si53322 U?
-U 1 1 5D56171D
-P 3100 6450
-F 0 "U?" H 3050 7103 60  0000 C CNN
-F 1 "Si53322" H 3050 6997 60  0000 C CNN
-F 2 "" H 2575 7005 60  0001 C CNN
-F 3 "" H 2575 7005 60  0001 C CNN
-F 4 "5c70984712875079b91f8b82" H 3100 6450 50  0001 C CNN "UST_ID"
-	1    3100 6450
-	1    0    0    -1  
-$EndComp
-$Sheet
-S 1850 1300 1400 900 
-U 5D563B7A
-F0 "LNA" 60
-F1 "LNA.sch" 60
-F2 "LNA_IN1_P" I L 1850 1450 60 
-F3 "LNA_IN1_N" I L 1850 1600 60 
-F4 "LNA_IN2_P" I L 1850 1800 60 
-F5 "LNA_IN2_N" I L 1850 1950 60 
-F6 "LNA_OUT1_P" O R 3250 1450 60 
-F7 "LNA_OUT1_N" O R 3250 1600 60 
-F8 "LNA_OUT2_P" O R 3250 1800 60 
-F9 "LNA_OUT2_N" O R 3250 1950 60 
-$EndSheet
 $EndSCHEMATC
