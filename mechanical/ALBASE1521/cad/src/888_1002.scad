@@ -56,7 +56,7 @@ module cable_clam_a(){
                             //fialova otvory
                             if(u==0){
                                 translate([-(M3_screw_diameter/2+wires[i][u]/2+1),width/2,-thickness]){
-                                    color([1,0,1])cylinder(h=M3_screw_head_height,d=M3_nut_diameter,$fn=50);
+                                    color([1,0,1])cylinder(h=1.5*M3_screw_head_height,d=M3_nut_diameter,$fn=6);
                                     color([1,0,1])cylinder(h=thickness,d=M3_screw_diameter,$fn=50);
                                 }
                             }
@@ -64,7 +64,7 @@ module cable_clam_a(){
                             //bila
                             if(u+1==len(wires[i])){
                                 translate([M3_screw_diameter/2+wires[i][u]/2+1,width/2,-thickness]){
-                                    color([1,1,1])cylinder(h=M3_screw_head_height,d=M3_nut_diameter,$fn=50);
+                                    color([1,1,1])cylinder(h=1.5*M3_screw_head_height,d=M3_nut_diameter,$fn=6);
                                     color([1,1,1])cylinder(h=thickness,d=M3_screw_diameter,$fn=50,center=false);
                                 }
                             }
@@ -102,18 +102,16 @@ module cable_clam_b(){
                         translate([(sumv(list2,pomocna[i][u],cislo2)-wires[i][u]/2),0,thickness2]){
                             rotate([-90,0,0]) color([0,1,0])  cylinder(h=width,d=wires[i][u],$fn=50);
                             //otvory pro pripojeni jednotlivých modulu
-                            //fialova
                             if(u==0){
                                 translate([-(M3_screw_diameter/2+wires[i][u]/2+1),width/2,-thickness2]){
-                                    color([1,0,1])cylinder(h=M3_screw_head_height,d=M3_nut_diameter,$fn=6);
+                                //    color([1,0,1])cylinder(h=M3_screw_head_height,d=M3_nut_diameter,$fn=6);
                                     color([1,0,1])cylinder(h=thickness2,d=M3_screw_diameter,$fn=50);
                                 }
                             }
-                            //bila
                             if(u+1==len(wires[i])){
                                 translate([M3_screw_diameter/2+wires[i][u]/2+1,width/2,-thickness2]){
-                                    color([1,1,1])cylinder(h=M3_screw_head_height,d=M3_nut_diameter,$fn=6);
-                                    color([1,1,1])cylinder(h=thickness2,d=M3_screw_diameter,$fn=50,center=false);
+                            //        #color([1,1,1])cylinder(h=M3_screw_head_height,d=M3_nut_diameter,$fn=6);
+                                    color([1,1,1])cylinder(h=thickness2,d=M3_screw_diameter,$fn=50, center=false);
                                 }
                             }
                         }
@@ -123,4 +121,5 @@ module cable_clam_b(){
         }
     }
 }
+
 cable_clam_b();
