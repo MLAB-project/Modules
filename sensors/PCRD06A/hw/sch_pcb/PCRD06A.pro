@@ -1,4 +1,4 @@
-update=10/1/2018 8:35:04 AM
+update=5. 8. 2019 9:07:57
 version=1
 last_client=kicad
 [general]
@@ -6,20 +6,10 @@ version=1
 [eeschema]
 version=1
 LibDir=
-[schematic_editor]
-version=1
-PageLayoutDescrFile=module.kicad_wks
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceAjustPassiveValues=0
-LabSize=60
-ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=module.kicad_wks
-LastNetListRead=PCRD05A.net
+LastNetListRead=PCRD06A.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
@@ -56,7 +46,8 @@ CopperTextSizeH=1.5
 CopperTextThickness=0.3
 CopperTextItalic=0
 CopperTextUpright=1
-EdgesAndCourtyardsLineWidth=0.15
+EdgeCutLineWidth=0.15
+CourtyardLineWidth=0.05
 OthersLineWidth=0.15
 OthersTextSizeV=1
 OthersTextSizeH=1
@@ -90,3 +81,13 @@ uViaDrill=0.1
 dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
+[schematic_editor]
+version=1
+PageLayoutDescrFile=module.kicad_wks
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceAjustPassiveValues=0
+LabSize=60
+ERC_TestSimilarLabels=1
