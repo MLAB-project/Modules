@@ -253,10 +253,6 @@ F 3 "" H 8450 3800 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	8200 4950 8150 4950
-Wire Wire Line
-	8200 5150 8150 5150
-Wire Wire Line
-	8150 5150 8150 5300
 $Comp
 L power:GND #PWR010
 U 1 1 5B405D30
@@ -365,20 +361,6 @@ F 3 "" H 8450 5050 60  0000 C CNN
 	1    8450 5050
 	1    0    0    -1  
 $EndComp
-$Comp
-L MLAB_HEADER:HEADER_2x01_PARALLEL J4
-U 1 1 5B4550A5
-P 8450 5150
-F 0 "J4" H 8650 5150 60  0000 C CNN
-F 1 "HEADER_2x01_PARALLEL" H 8368 5291 60  0001 C CNN
-F 2 "Mlab_Pin_Headers:Straight_2x01" H 8450 5150 60  0001 C CNN
-F 3 "" H 8450 5150 60  0000 C CNN
-	1    8450 5150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8150 4950 8150 5150
-Connection ~ 8150 5150
 Text Label 8100 3700 1    60   ~ 0
 A/D
 Wire Wire Line
@@ -916,4 +898,6 @@ Wire Notes Line
 	9750 1750 10950 1750
 Wire Notes Line
 	9750 2150 10950 2150
+Wire Wire Line
+	8150 4950 8150 5300
 $EndSCHEMATC
