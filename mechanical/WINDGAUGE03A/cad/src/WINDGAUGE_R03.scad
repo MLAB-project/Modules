@@ -312,15 +312,13 @@ module WINDGAUGE03A_R03(draft = true)
                 translate([-R03_fin_holder_width/2, 0, 0])
                     cube([R03_fin_holder_width, R03_fin_holder_depth, R03_fin_holder_height]);
                 // Bolt hole
-                if (draft) #
-                translate([-R03_fin_holder_width/2,
+                #translate([-R03_fin_holder_width/2,
                            R03_fin_holder_depth - R03_fin_holder_height/2,
                            R03_fin_holder_height/2])
                     rotate([0, 90, 0])
                         cylinder(h = R03_fin_holder_width, d = M3_bolt_diameter);
                 // Nut holes
-                if (draft) #
-                mirror_copy([1, 0, 0])
+                #mirror_copy([1, 0, 0])
                     translate([R03_fin_holder_width/2 - M3_nut_height,
                                R03_fin_holder_depth - R03_fin_holder_height/2,
                                R03_fin_holder_height/2])
