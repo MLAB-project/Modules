@@ -1,6 +1,6 @@
 <!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
 <!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:2019-09-12 10:29:15.200453: ---> 
+<!--- Created:2019-09-12 10:47:42.790074: ---> 
 <!--- Author:: ---> 
 <!--- AuthorEmail:: ---> 
 <!--- Tags:: ---> 
@@ -17,7 +17,7 @@
 
 <!--- ELead ---> 
 
-![VLFANT01B](doc/img/VLFANT01B_QRcode.png) 
+![VLFANT01B](doc/img/VLFANT01B_top_big.jpg) 
 
 
 <!--- Description --->
