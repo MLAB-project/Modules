@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
-LIBS:module-cache
-EELAYER 26 0
+LIBS:ISM02A-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -216,4 +216,15 @@ Wire Wire Line
 	10150 1350 10450 1350
 Wire Wire Line
 	10150 950  10500 950 
+$Comp
+L MLAB_IO:SX1262 U?
+U 1 1 5DA52347
+P 5600 3500
+F 0 "U?" H 5600 2311 50  0000 C CNN
+F 1 "SX1262" H 5600 2220 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm_ThermalVias" H 5600 2700 50  0001 C CNN
+F 3 "" H 5600 3300 50  0001 C CNN
+	1    5600 3500
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
