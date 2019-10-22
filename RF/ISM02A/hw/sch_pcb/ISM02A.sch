@@ -1114,7 +1114,6 @@ Text Label 2000 1500 0    60   ~ 0
 MOSI
 Text Label 2000 1600 0    60   ~ 0
 #CS
-NoConn ~ 1850 1700
 Wire Wire Line
 	1850 1300 2000 1300
 Wire Wire Line
@@ -1481,4 +1480,8 @@ F 3 "" H 2650 4050 60  0000 C CNN
 	1    2650 4050
 	1    0    0    -1  
 $EndComp
+Text Label 2000 1700 0    60   ~ 0
+BUSY
+Wire Wire Line
+	1850 1700 2000 1700
 $EndSCHEMATC
