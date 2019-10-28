@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:ISM02A-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -182,7 +182,7 @@ Connection ~ 9850 1350
 Wire Wire Line
 	9850 1250 9850 1350
 $Comp
-L Device:C_Small C2
+L ISM02A-rescue:C_Small-Device C2
 U 1 1 5562302C
 P 9850 1150
 F 0 "C2" H 9850 1250 50  0000 L CNN
@@ -201,7 +201,7 @@ Wire Wire Line
 Wire Wire Line
 	10150 950  10500 950 
 $Comp
-L MLAB_IO:SX1262 U1
+L ISM02A-rescue:SX1262-MLAB_IO U1
 U 1 1 5DA52347
 P 4550 4250
 F 0 "U1" H 4250 3200 50  0000 C CNN
@@ -236,7 +236,7 @@ F 3 "" H 9550 900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C25
+L ISM02A-rescue:C_Small-Device C25
 U 1 1 5DA75EB2
 P 9550 1150
 F 0 "C25" H 9550 1250 50  0000 L CNN
@@ -249,7 +249,7 @@ F 5 "5c70984812875079b91f8bbe" H 0   0   50  0001 C CNN "UST_ID"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Linear:MIC5504-3.3YM5 U2
+L ISM02A-rescue:MIC5504-3.3YM5-Regulator_Linear U2
 U 1 1 5DA7F0DE
 P 7900 1150
 F 0 "U2" H 7900 1517 50  0000 C CNN
@@ -279,7 +279,7 @@ Wire Wire Line
 	7350 1250 7350 1050
 Connection ~ 7350 1050
 $Comp
-L Device:C_Small C24
+L ISM02A-rescue:C_Small-Device C24
 U 1 1 5DA80313
 P 8400 1200
 F 0 "C24" H 8400 1300 50  0000 L CNN
@@ -336,7 +336,7 @@ F 3 "" H 8400 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C5
+L ISM02A-rescue:C-Device C5
 U 1 1 5DA81C07
 P 4000 2950
 F 0 "C5" H 4115 2996 50  0000 L CNN
@@ -375,7 +375,7 @@ Wire Wire Line
 	4350 2750 4350 2800
 Connection ~ 4350 2800
 $Comp
-L Device:C C3
+L ISM02A-rescue:C-Device C3
 U 1 1 5DA84AC5
 P 2350 3850
 F 0 "C3" H 2465 3896 50  0000 L CNN
@@ -386,7 +386,7 @@ F 3 "~" H 2350 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C1
+L ISM02A-rescue:C-Device C1
 U 1 1 5DA84B07
 P 1950 3850
 F 0 "C1" H 2065 3896 50  0000 L CNN
@@ -455,7 +455,7 @@ Connection ~ 4450 2800
 Wire Wire Line
 	4450 2800 4550 2800
 $Comp
-L Device:C C6
+L ISM02A-rescue:C-Device C6
 U 1 1 5DA8D998
 P 4750 2950
 F 0 "C6" H 4865 2996 50  0000 L CNN
@@ -491,7 +491,7 @@ Wire Wire Line
 Wire Wire Line
 	4750 3100 4750 3150
 $Comp
-L Device:L_Small L1
+L ISM02A-rescue:L_Small-Device L1
 U 1 1 5DA96124
 P 3750 5950
 F 0 "L1" V 3935 5950 50  0000 C CNN
@@ -504,7 +504,7 @@ F 5 "5dad55e8128750448eca1941" H 0   0   50  0001 C CNN "UST_ID"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C4
+L ISM02A-rescue:C-Device C4
 U 1 1 5DA97017
 P 3450 6200
 F 0 "C4" H 3565 6246 50  0000 L CNN
@@ -552,7 +552,7 @@ $EndComp
 Wire Wire Line
 	3450 6350 3450 6500
 $Comp
-L Device:R R1
+L ISM02A-rescue:R-Device R1
 U 1 1 5DA81670
 P 3600 3300
 F 0 "R1" H 3670 3346 50  0000 L CNN
@@ -582,7 +582,7 @@ $EndComp
 Wire Wire Line
 	3600 2750 3600 3150
 $Comp
-L Device:C C7
+L ISM02A-rescue:C-Device C7
 U 1 1 5DA87F8E
 P 5450 2950
 F 0 "C7" H 5565 2996 50  0000 L CNN
@@ -595,7 +595,7 @@ F 5 "5dad51cf128750448eca18d8" H 0   0   50  0001 C CNN "UST_ID"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C9
+L ISM02A-rescue:C-Device C9
 U 1 1 5DA87FE8
 P 5850 2950
 F 0 "C9" H 5965 2996 50  0000 L CNN
@@ -608,7 +608,7 @@ F 5 "5dad5314128750448eca18f7" H 0   0   50  0001 C CNN "UST_ID"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L L4
+L ISM02A-rescue:L-Device L4
 U 1 1 5DA8809F
 P 6200 2950
 F 0 "L4" H 6253 2996 50  0000 L CNN
@@ -621,7 +621,7 @@ F 5 "5dad56ba128750448eca1968" H 0   0   50  0001 C CNN "UST_ID"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L L3
+L ISM02A-rescue:L-Device L3
 U 1 1 5DA88141
 P 5700 3850
 F 0 "L3" V 5890 3850 50  0000 C CNN
@@ -633,7 +633,7 @@ F 4 "5c70984512875079b91f8949" H 0   0   50  0001 C CNN "UST_ID"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C13
+L ISM02A-rescue:C-Device C13
 U 1 1 5DA88209
 P 6450 3500
 F 0 "C13" V 6198 3500 50  0000 C CNN
@@ -646,7 +646,7 @@ F 5 "5cd09016128750448e45434f" H 0   0   50  0001 C CNN "UST_ID"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:L L5
+L ISM02A-rescue:L-Device L5
 U 1 1 5DA882AA
 P 6450 3850
 F 0 "L5" V 6640 3850 50  0000 C CNN
@@ -659,7 +659,7 @@ F 5 "5dad56ff128750448eca1975" H 0   0   50  0001 C CNN "UST_ID"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C11
+L ISM02A-rescue:C-Device C11
 U 1 1 5DA88312
 P 6200 4050
 F 0 "C11" H 6315 4096 50  0000 L CNN
@@ -670,7 +670,7 @@ F 3 "~" H 6200 4050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C14
+L ISM02A-rescue:C-Device C14
 U 1 1 5DA88380
 P 6650 4050
 F 0 "C14" H 6765 4096 50  0000 L CNN
@@ -683,7 +683,7 @@ F 5 "5dad5450128750448eca1919" H 0   0   50  0001 C CNN "UST_ID"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C15
+L ISM02A-rescue:C-Device C15
 U 1 1 5DA88461
 P 6900 3850
 F 0 "C15" V 6648 3850 50  0000 C CNN
@@ -696,7 +696,7 @@ F 5 "5dad549f128750448eca1926" H 0   0   50  0001 C CNN "UST_ID"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:L L6
+L ISM02A-rescue:L-Device L6
 U 1 1 5DA884CB
 P 7250 3850
 F 0 "L6" V 7440 3850 50  0000 C CNN
@@ -709,7 +709,7 @@ F 5 "5dad574f128750448eca1986" H 0   0   50  0001 C CNN "UST_ID"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C16
+L ISM02A-rescue:C-Device C16
 U 1 1 5DA8853F
 P 7500 4050
 F 0 "C16" H 7615 4096 50  0000 L CNN
@@ -835,7 +835,7 @@ Wire Wire Line
 Wire Wire Line
 	4550 6300 4550 6350
 $Comp
-L Device:L L2
+L ISM02A-rescue:L-Device L2
 U 1 1 5DAC2C20
 P 5450 5450
 F 0 "L2" H 5409 5404 50  0000 R CNN
@@ -848,7 +848,7 @@ F 5 "5dad566c128750448eca1959" H 0   0   50  0001 C CNN "UST_ID"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:C C10
+L ISM02A-rescue:C-Device C10
 U 1 1 5DAC2D3C
 P 5850 5200
 F 0 "C10" V 5598 5200 50  0000 C CNN
@@ -861,7 +861,7 @@ F 5 "5dad53d8128750448eca1906" H 0   0   50  0001 C CNN "UST_ID"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C12
+L ISM02A-rescue:C-Device C12
 U 1 1 5DAC2DCA
 P 6200 5450
 F 0 "C12" H 6315 5496 50  0000 L CNN
@@ -872,7 +872,7 @@ F 3 "~" H 6200 5450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C8
+L ISM02A-rescue:C-Device C8
 U 1 1 5DAC31FB
 P 5450 5900
 F 0 "C8" H 5565 5946 50  0000 L CNN
@@ -1060,7 +1060,7 @@ F 3 "" H 9800 4000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MLAB_CONNECTORS_JST:SM07B-GHS-TB J2
+L ISM02A-rescue:SM07B-GHS-TB-MLAB_CONNECTORS_JST J2
 U 1 1 5DB8DA2B
 P 1650 1550
 F 0 "J2" H 1569 2147 60  0000 C CNN
@@ -1125,7 +1125,7 @@ Wire Wire Line
 Text Notes 1400 2100 1    60   ~ 0
 SPI - Dronecode Autopilot\nConnector Standard
 $Comp
-L Device:C_Small C21
+L ISM02A-rescue:C_Small-Device C21
 U 1 1 5DA9BB24
 P 7100 1200
 F 0 "C21" H 7100 1300 50  0000 L CNN
@@ -1158,7 +1158,7 @@ Wire Wire Line
 	7100 1000 7100 1050
 Connection ~ 7100 1050
 $Comp
-L Device:C C17
+L ISM02A-rescue:C-Device C17
 U 1 1 5DAC3B52
 P 7900 3850
 F 0 "C17" V 7648 3850 50  0000 C CNN
@@ -1171,7 +1171,7 @@ F 5 "5dad549f128750448eca1926" H 0   0   50  0001 C CNN "UST_ID"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C19
+L ISM02A-rescue:C-Device C19
 U 1 1 5DAC3C31
 P 8200 4050
 F 0 "C19" H 8085 4004 50  0000 R CNN
@@ -1184,7 +1184,7 @@ F 5 "5cd09016128750448e45434f" H 0   0   50  0001 C CNN "UST_ID"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:L L7
+L ISM02A-rescue:L-Device L7
 U 1 1 5DAC3DB8
 P 8500 3850
 F 0 "L7" V 8690 3850 50  0000 C CNN
@@ -1197,7 +1197,7 @@ F 5 "5dad5789128750448eca1995" H 0   0   50  0001 C CNN "UST_ID"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C22
+L ISM02A-rescue:C-Device C22
 U 1 1 5DAC4D3C
 P 8800 4050
 F 0 "C22" H 8685 4004 50  0000 R CNN
@@ -1308,7 +1308,7 @@ F 3 "" H 9800 5350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C18
+L ISM02A-rescue:C-Device C18
 U 1 1 5DB176E1
 P 7900 5200
 F 0 "C18" V 7648 5200 50  0000 C CNN
@@ -1321,7 +1321,7 @@ F 5 "5dad549f128750448eca1926" H 0   0   50  0001 C CNN "UST_ID"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C20
+L ISM02A-rescue:C-Device C20
 U 1 1 5DB176E8
 P 8200 5400
 F 0 "C20" H 8085 5354 50  0000 R CNN
@@ -1334,7 +1334,7 @@ F 5 "5cd09016128750448e45434f" H 0   0   50  0001 C CNN "UST_ID"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:L L8
+L ISM02A-rescue:L-Device L8
 U 1 1 5DB176EE
 P 8500 5200
 F 0 "L8" V 8690 5200 50  0000 C CNN
@@ -1347,7 +1347,7 @@ F 5 "5dad5789128750448eca1995" H 0   0   50  0001 C CNN "UST_ID"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C23
+L ISM02A-rescue:C-Device C23
 U 1 1 5DB176F5
 P 8800 5400
 F 0 "C23" H 8685 5354 50  0000 R CNN
@@ -1438,7 +1438,7 @@ Wire Wire Line
 	6200 5200 7750 5200
 Connection ~ 6200 5200
 $Comp
-L Device:Crystal_GND24 Y1
+L ISM02A-rescue:Crystal_GND24-Device Y1
 U 1 1 5DB3724C
 P 2850 3500
 F 0 "Y1" V 2804 3741 50  0000 L CNN
