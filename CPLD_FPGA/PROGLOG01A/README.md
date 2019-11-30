@@ -1,26 +1,27 @@
 <!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
 <!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:Time: ---> 
-<!--- Author:Mlab: ---> 
-<!--- AuthorEmail:mlab@mlab.cz: ---> 
-<!--- Tags:imported: ---> 
-<!--- Ust:None: ---> 
+<!--- Created:2019-12-01 00:30:56.960578: ---> 
+<!--- Author:: ---> 
+<!--- AuthorEmail:: ---> 
+<!--- Tags:: ---> 
+<!--- Ust:: ---> 
 <!--- Label --->
 <!--- ELabel ---> 
-<!--- Name:module: --->
-#module 
+<!--- Name:PROGLOG01A: --->
+# PROGLOG01A
 <!--- LongName --->
-module description
+## PROGLOG01A module
 <!--- ELongName ---> 
 
 <!--- Lead --->
-module lead text
+Module with a small programmable gate-array
 <!--- ELead ---> 
 
-![LeadImg](doc/img/module_top_big.jpg) 
+![PROGLOG01A](doc/img/PROGLOG01A_QRcode.png) 
 
 
 <!--- Description --->
 <!--- EDescription --->
 <!--- Content --->
 <!--- EContent --->
+<sub><sup> Generated with [MLABweb](https://github.com/MLAB-project/MLABweb). (2019-12-01)</sup></sub>
