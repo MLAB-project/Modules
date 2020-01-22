@@ -25,12 +25,12 @@ module WINDGAUGE01A_S02(draft = true)
         //otvor na drzak rj11
         translate([0, 0, S01_vyska_spodniho_zavitu + S01_sila_drzaku_RJ11 - 0.3])
             cylinder(2*S01_sila_drzaku_RJ11,
-                     d1 = (S01_prumer_vnitrni) - 1 - 1.5*S01_hloubka_zavitu,
+                     d1 = (S01_prumer_vnitrni) - 1 - 2.2*S01_hloubka_zavitu,
                      d2 = S01_prumer_vnitrni);
 
         translate([0, 0, S01_vyska_spodniho_zavitu])
             cylinder(h = S01_sila_drzaku_RJ11 - 0.3,
-                     r = (S01_prumer_vnitrni)/2 - S01_hloubka_zavitu/2 + 0.5);
+                     r = (S01_prumer_vnitrni)/2 - S01_hloubka_zavitu/2 - 0.5);
 
         //spodní závit (draft kresli pouze valec)
         translate([0, 0, -5])

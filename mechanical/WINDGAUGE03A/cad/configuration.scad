@@ -160,6 +160,13 @@ R05_delka_kridla=100;
  I2CDIFF01A_vyska_PCB=2; //vyska mezi albase a konektorem
 S04_sila_materialu=2;
 
+//S04_USBI2C01A
+ USBI2C01A_sirka_kon=12; //sirka konektoru
+ USBI2C01A_vyska_kon=11; //vyska konektoru
+ USBI2C01A_sirka_mod_otvory=3; //kolik modul zabira der
+ USBI2C01A_vyska_PCB=2; //vyska mezi albase a konektorem
+
+
 //WINDGAUGE03A_R03 // Venturi tube
 R03_wide_D = 36; // Venturi wide tube inner diameter
 R03_narrow_D = R03_wide_D/2; // Venturi narrow tube inner diameter
