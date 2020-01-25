@@ -1,6 +1,5 @@
-EESchema Schematic File Version 4
-LIBS:WINDGAUGE03A_PCB01A-cache
-EELAYER 29 0
+EESchema Schematic File Version 5
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -13,6 +12,11 @@ Comment1 "VERSION"
 Comment2 "Short description \\nTwo lines are maximum"
 Comment3 "nickname <email@example.com>"
 Comment4 "BSD"
+Comment5 ""
+Comment6 ""
+Comment7 ""
+Comment8 ""
+Comment9 ""
 $EndDescr
 $Comp
 L MLAB_IO:SDP3x U1
@@ -1082,4 +1086,8 @@ Wire Wire Line
 	6650 3400 6750 3400
 NoConn ~ 6650 3900
 NoConn ~ 5850 3900
+Text Notes 2450 1550 0    60   ~ 0
+SDA
+Text Notes 2450 1350 0    60   ~ 0
+SCL
 $EndSCHEMATC
