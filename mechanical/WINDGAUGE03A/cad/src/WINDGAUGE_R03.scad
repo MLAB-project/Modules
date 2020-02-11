@@ -214,7 +214,7 @@ module WINDGAUGE03A_R03(draft = true)
                 }
                     // PCB elevation
                     translate([-R03_PCB_width/2, 0, -R03_PCB_top_rim])
-                        polyhedron
+                        #polyhedron
                         (
                           points = [ // 0 = top left back
                                      [0, 0, 0],
@@ -399,10 +399,10 @@ module WINDGAUGE03A_R03(draft = true)
             }
 
         // Balance adjustments shelf
-        translate([-R03_balance_shelf_width/2, R03_wide_D/2 + R03_wall_thickness,
+        /*translate([-R03_balance_shelf_width/2, R03_wide_D/2 + R03_wall_thickness,
                    slip_ring_z + S01_prumer_vnitrni/2 + 4*S01_sila_materialu])
             cube([R03_balance_shelf_width, R03_balance_shelf_height,
-                  R03_venturi_tube_height]);
+                  R03_venturi_tube_height]);*/
     }
 }
 
