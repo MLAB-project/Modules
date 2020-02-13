@@ -214,77 +214,88 @@ module WINDGAUGE03A_R03(draft = true)
                 }
                     // PCB elevation
                     translate([-R03_PCB_width/2, 0, -R03_PCB_top_rim])
-                        #polyhedron
-                        (
-                          points = [ // 0 = top left back
-                                     [0, 0, 0],
-                                     // 1 = top left front
-                                     [0,
-                                      -R03_PCB_elevation - R03_PCB_connector_overlay,
-                                      0],
-                                     // 2 = top right back
-                                     [R03_PCB_width, 0, 0],
-                                     // 3 = top right front
-                                     [R03_PCB_width,
-                                      -R03_PCB_elevation - R03_PCB_connector_overlay, 0],
-                                     // 4 = bottom right back
-                                     [R03_PCB_width, 0, -R03_PCB_height*1.1],
-                                     // 5 = bottom right front
-                                     [R03_PCB_width, -R03_PCB_elevation,
-                                      -R03_PCB_height],
-                                     // 6 = bottom left back
-                                     [0, 0, -R03_PCB_height*1.1],
-                                     // 7 = bottom left front
-                                     [0, -R03_PCB_elevation, -R03_PCB_height],
-                                     // 8 = bottom left sensor back
-                                     [0, 0, -R03_PCB_height/3],
-                                     // 9 = bottom left sensor front
-                                     [0, -R03_PCB_elevation - R03_PCB_connector_overlay,
-                                      -R03_PCB_height/3],
-                                     // 10 = bottom right sensor back
-                                     [R03_PCB_width, 0, -R03_PCB_height/3],
-                                     // 11 = bottom right sensor front
-                                     [R03_PCB_width,
-                                      -R03_PCB_elevation - R03_PCB_connector_overlay,
-                                      -R03_PCB_height/3],
-                                     // 12 = top left connector back
-                                     [0, 0, -R03_PCB_height/3 * 2],
-                                     // 13 = top left connector front
-                                     [0, -R03_PCB_elevation, -R03_PCB_height/3 * 2],
-                                     // 14 = top right connector back
-                                     [R03_PCB_width, 0, -R03_PCB_height/3 * 2],
-                                     // 15 = top right connector front
-                                     [R03_PCB_width, -R03_PCB_elevation,
-                                      -R03_PCB_height/3 * 2],
-                                   ],
-                                    //
-                                    // FRONT:   BACK:
-                                    // 1 - 3    0 - 2
-                                    // |   |    |   |
-                                    // 9   11   |   |
-                                    // |   |    |   |
-                                    // 13  15   |   |
-                                    // |   |    |   |
-                                    // 7 - 5    |   |
-                                    //          6 - 4
-                          faces = [ // top bank
-                                    [2, 3, 1, 0],
-                                    // right bank
-                                    [4, 5, 15, 11, 3, 2],
-                                    // bottom bank
-                                    [6, 7, 5, 4],
-                                    // left bank
-                                    [0, 1, 9, 13, 7, 6],
-                                    // front top
-                                    [9, 1, 3, 11],
-                                    // front middle
-                                    [13, 9, 11, 15],
-                                    // front bottom
-                                    [7, 13, 15, 5],
-                                    // back
-                                    [4, 2, 0, 6],
-                                  ]
-                        );
+                        intersection(){
+                            polyhedron
+                            (
+                              points = [ // 0 = top left back
+                                         [0, 0, 0],
+                                         // 1 = top left front
+                                         [0,
+                                          -R03_PCB_elevation - R03_PCB_connector_overlay,
+                                          0],
+                                         // 2 = top right back
+                                         [R03_PCB_width, 0, 0],
+                                         // 3 = top right front
+                                         [R03_PCB_width,
+                                          -R03_PCB_elevation - R03_PCB_connector_overlay, 0],
+                                         // 4 = bottom right back
+                                         [R03_PCB_width, 0, -R03_PCB_height*1.1],
+                                         // 5 = bottom right front
+                                         [R03_PCB_width, -R03_PCB_elevation,
+                                          -R03_PCB_height],
+                                         // 6 = bottom left back
+                                         [0, 0, -R03_PCB_height*1.1],
+                                         // 7 = bottom left front
+                                         [0, -R03_PCB_elevation, -R03_PCB_height],
+                                         // 8 = bottom left sensor back
+                                         [0, 0, -R03_PCB_height/3],
+                                         // 9 = bottom left sensor front
+                                         [0, -R03_PCB_elevation - R03_PCB_connector_overlay,
+                                          -R03_PCB_height/3],
+                                         // 10 = bottom right sensor back
+                                         [R03_PCB_width, 0, -R03_PCB_height/3],
+                                         // 11 = bottom right sensor front
+                                         [R03_PCB_width,
+                                          -R03_PCB_elevation - R03_PCB_connector_overlay,
+                                          -R03_PCB_height/3],
+                                         // 12 = top left connector back
+                                         [0, 0, -R03_PCB_height/3 * 2],
+                                         // 13 = top left connector front
+                                         [0, -R03_PCB_elevation, -R03_PCB_height/3 * 2],
+                                         // 14 = top right connector back
+                                         [R03_PCB_width, 0, -R03_PCB_height/3 * 2],
+                                         // 15 = top right connector front
+                                         [R03_PCB_width, -R03_PCB_elevation,
+                                          -R03_PCB_height/3 * 2],
+                                       ],
+                                        //
+                                        // FRONT:   BACK:
+                                        // 1 - 3    0 - 2
+                                        // |   |    |   |
+                                        // 9   11   |   |
+                                        // |   |    |   |
+                                        // 13  15   |   |
+                                        // |   |    |   |
+                                        // 7 - 5    |   |
+                                        //          6 - 4
+                              faces = [ // top bank
+                                        [2, 3, 1, 0],
+                                        // right bank
+                                        [4, 5, 15, 11, 3, 2],
+                                        // bottom bank
+                                        [6, 7, 5, 4],
+                                        // left bank
+                                        [0, 1, 9, 13, 7, 6],
+                                        // front top
+                                        [9, 1, 3, 11],
+                                        // front middle
+                                        [13, 9, 11, 15],
+                                        // front bottom
+                                        [7, 13, 15, 5],
+                                        // back
+                                        [4, 2, 0, 6],
+                                      ]
+                            );
+                            cable_rouding_radius=3;
+                            translate([cable_rouding_radius,0,-R03_PCB_height])
+                            {
+                              rotate([90,0,0])
+                                minkowski(){
+                                    cylinder (h = R03_PCB_elevation, r=cable_rouding_radius, center = true, $fn=100);
+                                    cube([R03_PCB_width-2*cable_rouding_radius, R03_PCB_height-cable_rouding_radius,R03_PCB_elevation]);
+                               }
+                            }
+                        }
             }
 
             // Main body
