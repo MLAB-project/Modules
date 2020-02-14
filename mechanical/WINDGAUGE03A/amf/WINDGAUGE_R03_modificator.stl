@@ -1,0 +1,86 @@
+solid model
+  facet normal 0 0 1
+    outer loop
+      vertex -72 -72 156
+      vertex 72 -72 156
+      vertex -72 72 156
+    endloop
+  endfacet
+  facet normal -1 -0 0
+    outer loop
+      vertex -72 -72 84
+      vertex -72 -72 156
+      vertex -72 72 156
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex -72 -72 84
+      vertex -72 72 156
+      vertex -72 72 84
+    endloop
+  endfacet
+  facet normal -0 0 -1
+    outer loop
+      vertex -72 -72 84
+      vertex -72 72 84
+      vertex 72 72 84
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex -72 -72 84
+      vertex 72 -72 156
+      vertex -72 -72 156
+    endloop
+  endfacet
+  facet normal 0 -1 -0
+    outer loop
+      vertex -72 -72 84
+      vertex 72 -72 84
+      vertex 72 -72 156
+    endloop
+  endfacet
+  facet normal 0 0 -1
+    outer loop
+      vertex -72 -72 84
+      vertex 72 72 84
+      vertex 72 -72 84
+    endloop
+  endfacet
+  facet normal -0 0 1
+    outer loop
+      vertex -72 72 156
+      vertex 72 -72 156
+      vertex 72 72 156
+    endloop
+  endfacet
+  facet normal 0 1 -0
+    outer loop
+      vertex -72 72 156
+      vertex 72 72 156
+      vertex 72 72 84
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex -72 72 84
+      vertex -72 72 156
+      vertex 72 72 84
+    endloop
+  endfacet
+  facet normal 1 -0 0
+    outer loop
+      vertex 72 -72 156
+      vertex 72 72 84
+      vertex 72 72 156
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 72 -72 84
+      vertex 72 72 84
+      vertex 72 -72 156
+    endloop
+  endfacet
+endsolid model
