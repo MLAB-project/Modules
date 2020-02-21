@@ -2,7 +2,7 @@ include <../configuration.scad>
 include <./lib/polyScrewThread_r1.scad>
 use <./lib/copyFunctions.scad>
 
-draft = true;
+draft = $preview;
 $fn = draft ? 20 : 100; // model faces resolution
 PI = 3.141592;
 //   |\
@@ -78,9 +78,9 @@ module WINDGAUGE01A_D02(draft = true)
         translate([0, 0, -D02_body_height - D02_base_height])
             cylinder (h = D02_base_height,
                       d = M6_bolt_diameter);
-        // Magnet holes
-        rotate_copy([0, 0, 120])
-            rotate_copy([0, 0, 120])
+        // Bolt Magnet holes
+        rotate_copy([0, 0, 90])
+            rotate_copy([0, 0, 180])
                 translate([magnet_offset, 0, -D02_body_height - D02_base_height])
                 {
                     // Nut pocket
@@ -95,10 +95,21 @@ module WINDGAUGE01A_D02(draft = true)
                     cylinder (h = D02_base_height,
                               d = M5_bolt_diameter);
                 }
+
+        // Flat Magnet holes
+        rotate([0,0,45])
+        rotate_copy([0, 0, 90])
+            rotate_copy([0, 0, 180])
+                translate([magnet_offset -  D02_flat_magnet_diameter/2, 0, -D02_body_height - D02_base_height+ 2* layer_thickness])
+                {
+                    // Magnet base
+                    cylinder (h = 2*D02_magnet_base_height,
+                              d = D02_flat_magnet_diameter);
+                }
     }
     // Supportive layer for magnet bolt holes
-    rotate_copy([0, 0, 120])
-        rotate_copy([0, 0, 120])
+    rotate_copy([0, 0, 90])
+        rotate_copy([0, 0, 180])
             translate([magnet_offset, 0,
                        -D02_body_height - D02_base_height + D02_magnet_base_height])
                 cylinder (h = layer_thickness,

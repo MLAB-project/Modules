@@ -86,10 +86,11 @@ L01_sila_materialu_lopatky=0.9;
 //  /   \  Body
 // |_____| Base
 D02_magnet_base_height = 4.5 + 1.5*global_clearance; // HS-13 M5 magnet height without bolt
-D02_magnet_diameter = 13 + global_clearance; // HS-13 M5 magnet diameter
+D02_magnet_diameter = 16.1 + global_clearance; // HS-13 M5 magnet diameter
+D02_flat_magnet_diameter = 16.1 + global_clearance; // HS-13 M5 magnet diameter
 D02_wall_thickness = 5; // body wall thickness
 D02_connector_spacing = 40; // main body cut-through for connectors
-D02_base_diameter = 80; // diameter of holder base
+D02_base_diameter = 140; // diameter of holder base
 D02_base_height = max(M6_nut_height + 1.5,
                       D02_magnet_base_height + M5_nut_height/2 + 1.5); // height of holder base
 D02_body_height = 60 - D02_base_height; // height of body between base and top ring
@@ -154,17 +155,17 @@ R05_delka_kridla=100;
 
 
 //S04
- I2CDIFF01A_sirka_kon=16.5; //sirka konektoru
- I2CDIFF01A_vyska_kon=13.5; //vyska konektoru
- I2CDIFF01A_sirka_mod_otvory=4; //kolik modul zabira der
- I2CDIFF01A_vyska_PCB=2; //vyska mezi albase a konektorem
+I2CDIFF01A_sirka_kon=16.5; //sirka konektoru
+I2CDIFF01A_vyska_kon=13.5; //vyska konektoru
+I2CDIFF01A_sirka_mod_otvory=4; //kolik modul zabira der
+I2CDIFF01A_vyska_PCB=2; //vyska mezi albase a konektorem
 S04_sila_materialu=2;
 
 //S04_USBI2C01A
- USBI2C01A_sirka_kon=12; //sirka konektoru
- USBI2C01A_vyska_kon=11; //vyska konektoru
- USBI2C01A_sirka_mod_otvory=3; //kolik modul zabira der
- USBI2C01A_vyska_PCB=2; //vyska mezi albase a konektorem
+USBI2C01A_sirka_kon=12; //sirka konektoru
+USBI2C01A_vyska_kon=11; //vyska konektoru
+USBI2C01A_sirka_mod_otvory=3; //kolik modul zabira der
+USBI2C01A_vyska_PCB=2; //vyska mezi albase a konektorem
 
 
 //WINDGAUGE03A_R03 // Venturi tube
