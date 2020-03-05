@@ -87,7 +87,7 @@ L01_sila_materialu_lopatky=0.9;
 // |_____| Base
 D02_magnet_base_height = 4.5 + 1.5*global_clearance; // HS-13 M5 magnet height without bolt
 D02_magnet_diameter = 16.1 + global_clearance; // HS-13 M5 magnet diameter
-D02_flat_magnet_diameter = 16.1 + global_clearance; // HS-13 M5 magnet diameter
+D02_flat_magnet_diameter = 18.1 + global_clearance; // HS-13 M5 magnet diameter
 D02_wall_thickness = 5; // body wall thickness
 D02_connector_spacing = 40; // main body cut-through for connectors
 D02_base_diameter = 140; // diameter of holder base

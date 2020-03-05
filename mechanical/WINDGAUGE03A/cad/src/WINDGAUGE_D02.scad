@@ -84,16 +84,16 @@ module WINDGAUGE01A_D02(draft = true)
                 translate([magnet_offset, 0, -D02_body_height - D02_base_height])
                 {
                     // Nut pocket
-                    translate([0, 0, D02_base_height - M5_nut_height/2])
-                        cylinder (h = 1.5*M5_nut_height,
-                                  d = M5_nut_diameter,
+                    translate([0, 0, D02_base_height - M6_nut_height/2])
+                        cylinder (h = 1.5*M6_nut_height,
+                                  d = M6_nut_diameter,
                                   $fn = 6);
                     // Magnet base
                     cylinder (h = D02_magnet_base_height,
                               d = D02_magnet_diameter);
                     // Magnet bolt
                     cylinder (h = D02_base_height,
-                              d = M5_bolt_diameter);
+                              d = M6_bolt_diameter);
                 }
 
         // Flat Magnet holes
