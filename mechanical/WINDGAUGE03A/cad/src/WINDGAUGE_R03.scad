@@ -291,7 +291,7 @@ module WINDGAUGE03A_R03(draft = true)
                             {
                               rotate([90,0,0])
                                 minkowski(){
-                                    cylinder (h = R03_PCB_elevation, r=cable_rouding_radius, center = true, $fn=100);
+                                    cylinder (h = R03_PCB_elevation*3, r=cable_rouding_radius, center = true, $fn=100);
                                     cube([R03_PCB_width-2*cable_rouding_radius, R03_PCB_height-cable_rouding_radius,R03_PCB_elevation]);
                                }
                             }
