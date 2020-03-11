@@ -8,9 +8,9 @@ draft = true;
 $fn = draft ? 20 : 100;
 slip_ring_z = 2*R03_venturi_tube_height - R03_slip_ring_offset - 6*R03_wide_D;
 // length of tube narrowing part
-intake_length = ((R03_wide_D - R03_narrow_D) / 2) / tan(23 / 2);
+intake_length = ((R03_wide_D - R03_narrow_D) / 2) / tan(15 / 2);
 // length of tube widening part
-exhaust_length = ((R03_wide_D - R03_narrow_D) / 2) / tan(15 / 2);
+exhaust_length = ((R03_wide_D - R03_narrow_D) / 2) / tan(10 / 2);
 // length of wide tube part on bottom and top
 wide_body_length = (R03_venturi_tube_height - intake_length - exhaust_length
                     - R03_narrow_D) / 2;
@@ -356,8 +356,8 @@ module WINDGAUGE03A_R03(draft = true)
             {
                 WINDGAUGE01A_R06();
                 // Cabling bay
-                translate([0, 0, 5])
-                    cylinder (h = 5, r = 10);
+                //translate([0, 0, 5])
+                //    cylinder (h = 5, r = 10);
             }
 
         // Waterproofing

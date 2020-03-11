@@ -170,7 +170,7 @@ USBI2C01A_vyska_PCB=2; //vyska mezi albase a konektorem
 
 //WINDGAUGE03A_R03 // Venturi tube
 R03_wide_D = 36; // Venturi wide tube inner diameter
-R03_narrow_D = R03_wide_D/2; // Venturi narrow tube inner diameter
+R03_narrow_D = R03_wide_D/1.4; // Venturi narrow tube inner diameter
 R03_global_clearance = global_clearance; // additional space where needed due to printer precision
 R03_PCB_top_rim = 5.5; // vertical distance from top of tube to top of PCB
 R03_PCB_height = 41; // height of PCB casing - if changed check casing
