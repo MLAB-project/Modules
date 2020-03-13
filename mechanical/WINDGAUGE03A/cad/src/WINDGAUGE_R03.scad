@@ -23,7 +23,7 @@ module pipes()
     PCB_y = -R03_wide_D/2 - R03_wall_thickness - R03_PCB_elevation;
     PCB_z = R03_venturi_tube_height - R03_PCB_height*1.1 - 5;
     pipe_elevation = PCB_z - slip_ring_z;
-    d = (R03_wide_D/2 - R03_narrow_D/2)/2;
+    d = (R03_wide_D + 2*R03_wall_thickness)/2 - R03_narrow_D/2 - R03_wall_thickness;
     cbl_x = 0;
     curvedPipe([[0                   , PCB_y + d + R03_wall_thickness/2, PCB_z     ],
                 [0                   , PCB_y + d + R03_wall_thickness/2, PCB_z - 5 ],
@@ -421,11 +421,9 @@ difference()
 {
     // If not draft -> move to print position.
     if (!draft)
-        translate([0, 0, 0])
-            rotate([0, 0, 0])
-                WINDGAUGE03A_R03(false);
+        WINDGAUGE03A_R03(false);
     else
-        WINDGAUGE03A_R03();
+        WINDGAUGE03A_R03(true);
     // Cut-out cube
     if (draft)
         translate([0, -R03_venturi_tube_height/2, 0])
