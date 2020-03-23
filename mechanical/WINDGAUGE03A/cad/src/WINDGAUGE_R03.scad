@@ -25,40 +25,43 @@ module pipes()
     pipe_elevation = PCB_z - slip_ring_z;
     d = (R03_wide_D + 2*R03_wall_thickness)/2 - R03_narrow_D/2 - R03_wall_thickness;
     cbl_x = 0;
-    curvedPipe([[0                   , PCB_y + d + R03_wall_thickness/2, PCB_z     ],
-                [0                   , PCB_y + d + R03_wall_thickness/2, PCB_z - 5 ],
-                [-mid_body_horizontal, -mid_body_horizontal    , mid_body_vertical ],
-                [-mid_body_horizontal, 0                       , mid_body_vertical ],
+    curvedPipe([[-mid_body_horizontal/2, PCB_y + d + R03_wall_thickness/2, PCB_z + d ],
+                [-mid_body_horizontal, -mid_body_horizontal    , PCB_z + d ],
+                [-mid_body_horizontal - 1, 0                   , PCB_z - 5 ],
                 [-mid_body_horizontal, mid_body_horizontal     , mid_body_vertical ],
                 [0                   , mid_body_horizontal     , slip_ring_z       ],
                 [0                   , mid_body_horizontal + 10, slip_ring_z       ],
                ],
-                6,
-                [1.5*d, mid_body_horizontal, d/2 + 0.1,
+                5,
+                [mid_body_horizontal/1.2, d/2 + 0.1,
                  mid_body_horizontal - 2, d/2 + 0.1],
                 d,
                 0);
+    // Cabling ramp
     translate([0, PCB_y, PCB_z])
         polyhedron
         (
-            points = [ // 0 = bottom right front
-                     [d/2, 0, 0],
-                     // 1 = bottom left front
-                     [-d/2, 0, 0],
-                     // 2 = bottom right back
-                     [d/2, 1.5*d + R03_wall_thickness/2, 0],
-                     // 3 = bottom left back
-                     [-d/2, 1.5*d + R03_wall_thickness/2, 0],
-                     // 4 = top right
-                     [R03_PCB_width/2, 0, R03_PCB_height/3],
-                     // 5 = top left
-                     [-R03_PCB_width/2, 0, R03_PCB_height/3],
+            // PCB casing is split into 3 main parts divided in thirds = R03_PCB_height/3
+            // Lower ramp below PCB casing is R03_PCB_height*0.1
+            // PCB_z starts at the bottom of the casing ramp.
+            points = [ // 0 = top left front
+                     [-R03_PCB_width/2 + 1, 0, 2*R03_PCB_height*0.1],
+                     // 1 = top right
+                     [R03_PCB_width/2 - 1, 0, 2*R03_PCB_height*0.1],
+                     // 2 = bottom right
+                     [R03_PCB_width/2 - 1, 0, R03_PCB_height*0.1],
+                     // 3 = bottom left front
+                     [-R03_PCB_width/2 + 1, 0, R03_PCB_height*0.1],
+                     // 4 = top left back
+                     [-R03_PCB_width/2 + 1, 1.3*d + R03_wall_thickness/2, 2*R03_PCB_height*0.1],
+                     // 5 = bottom left back
+                     [-R03_PCB_width/2 + 1, 1.3*d + R03_wall_thickness/2, R03_PCB_height*0.1],
                    ],
-            faces = [ [1, 5, 4, 0], // front
-                      [2, 4, 5, 3], // back
-                      [3, 1, 0, 2], // bottom
-                      [0, 4, 2], // right
-                      [3, 5, 1], // left
+            faces = [ [0, 1, 2, 3], // front
+                      [1, 4, 5, 2], // back
+                      [4, 0, 3, 5], // left
+                      [0, 4, 1], // top
+                      [3, 2, 5], // bottom
                    ]
         );
 
@@ -291,8 +294,12 @@ module WINDGAUGE03A_R03(draft = true)
                             {
                               rotate([90,0,0])
                                 minkowski(){
-                                    cylinder (h = R03_PCB_elevation*3, r=cable_rouding_radius, center = true, $fn=100);
-                                    cube([R03_PCB_width-2*cable_rouding_radius, R03_PCB_height-cable_rouding_radius,R03_PCB_elevation]);
+                                    cylinder (h = R03_PCB_elevation*3,
+                                              r=cable_rouding_radius,
+                                              center = true, $fn=100);
+                                    cube([R03_PCB_width-2*cable_rouding_radius,
+                                          R03_PCB_height-cable_rouding_radius,
+                                          R03_PCB_elevation]);
                                }
                             }
                         }
@@ -426,6 +433,6 @@ difference()
         WINDGAUGE03A_R03(true);
     // Cut-out cube
     if (draft)
-        translate([0, -R03_venturi_tube_height/2, 0])
+        translate([-R03_wide_D, -R03_venturi_tube_height/2, R03_venturi_tube_height/2 + 20])
             cube([R03_wide_D, R03_venturi_tube_height, R03_venturi_tube_height]);
 }
