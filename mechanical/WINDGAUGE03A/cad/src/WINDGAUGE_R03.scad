@@ -109,6 +109,7 @@ module drop_shape(drop_length, draft)
 {
     difference()
     {
+        resize(newsize=[R03_wide_D + 10, R03_wide_D + 11, 0])
         rotate_extrude($fn = draft ? 20 : 200)
             rotate([0, 180, 90])
                 difference()
@@ -143,41 +144,61 @@ module drop_shape(drop_length, draft)
                               d = M3_nut_diameter);
         // PCB casing - Ceiling is moved 1.5xR03_global_clearance upwards due to
         // problems with bridge printing.
-        translate([-R03_PCB_width/2 - R03_global_clearance,
-                   -R03_PCB_depth - R03_PCB_connector_overlay - R03_PCB_elevation
-                   - 1.5*R03_global_clearance,
-                   -R03_PCB_height - R03_PCB_top_rim])
-            cube([R03_PCB_width + 2*R03_global_clearance,
-                  R03_PCB_depth + R03_PCB_connector_overlay + R03_PCB_elevation
-                  + 1.5*R03_global_clearance,
-                  R03_PCB_height + R03_global_clearance]);
-        translate([-R03_PCB_width/2, 0, -R03_PCB_height - R03_PCB_top_rim])
-            polyhedron
-            (
-                points = [ // 0 = bottom right
-                           [R03_PCB_width + R03_global_clearance, 0,
-                            -R03_PCB_height*0.1 - R03_global_clearance],
-                           // 1 = bottom left
-                           [-R03_global_clearance, 0,
-                            -R03_PCB_height*0.1 - R03_global_clearance],
-                           // 2 = top right front
-                           [R03_PCB_width + R03_global_clearance,
-                            -R03_PCB_connector_overlay - R03_PCB_elevation, 0],
-                           // 3 = top left front
-                           [-R03_global_clearance,
-                            -R03_PCB_connector_overlay - R03_PCB_elevation, 0],
-                           // 4 = top right back
-                           [R03_PCB_width + R03_global_clearance, 0, 0],
-                           // 5 = top left back
-                           [-R03_global_clearance, 0, 0],
-                         ],
-                faces = [ [3, 5, 4, 2], // top
-                          [1, 3, 2, 0], // front
-                          [0, 4, 5, 1], // back
-                          [0, 2, 4], // right
-                          [1, 5, 3], // left
-                        ]
-            );
+        cable_spacing = 3;
+        intersection(){
+            union()
+            {
+                translate([-R03_PCB_width/2 - cable_spacing,
+                           -R03_PCB_depth - R03_PCB_connector_overlay - R03_PCB_elevation
+                           - 1.5*R03_global_clearance,
+                           -R03_PCB_height - R03_PCB_top_rim])
+                    cube([R03_PCB_width + 2*cable_spacing,
+                          R03_PCB_depth + R03_PCB_connector_overlay + R03_PCB_elevation
+                          + 1.5*R03_global_clearance,
+                          R03_PCB_height + cable_spacing]);
+                translate([-R03_PCB_width/2, 0, -R03_PCB_height - R03_PCB_top_rim])
+                    polyhedron
+                    (
+                        points = [ // 0 = bottom right
+                                   [R03_PCB_width + cable_spacing, 0,
+                                    -R03_PCB_height*0.1 - cable_spacing],
+                                   // 1 = bottom left
+                                   [-cable_spacing, 0,
+                                    -R03_PCB_height*0.1 - cable_spacing],
+                                   // 2 = top right front
+                                   [R03_PCB_width + cable_spacing,
+                                    -R03_PCB_connector_overlay - R03_PCB_elevation, 0],
+                                   // 3 = top left front
+                                   [-cable_spacing,
+                                    -R03_PCB_connector_overlay - R03_PCB_elevation, 0],
+                                   // 4 = top right back
+                                   [R03_PCB_width + cable_spacing, 0, 0],
+                                   // 5 = top left back
+                                   [-cable_spacing, 0, 0],
+                                 ],
+                        faces = [ [3, 5, 4, 2], // top
+                                  [1, 3, 2, 0], // front
+                                  [0, 4, 5, 1], // back
+                                  [0, 2, 4], // right
+                                  [1, 5, 3], // left
+                                ]
+                    );
+            }
+            cable_rounding_radius = 3;
+            translate([-R03_PCB_width/2 -cable_spacing + cable_rounding_radius, 0,
+                       -R03_PCB_height*1.1 - R03_PCB_top_rim - cable_spacing
+                       + cable_rounding_radius])
+                rotate([90,0,0])
+                    minkowski(){
+                        cylinder (h = R03_PCB_elevation*3,
+                                  r=cable_rounding_radius,
+                                  center = true, $fn=100);
+                        cube([R03_PCB_width + 2*cable_spacing - 2*cable_rounding_radius,
+                              1.1*R03_PCB_height - 2*cable_rounding_radius + 2*cable_spacing,
+                              R03_PCB_depth + R03_PCB_connector_overlay + R03_PCB_elevation
+                              + 1.5*R03_global_clearance - cable_rounding_radius]);
+                    }
+        }
     }
 }
 
@@ -212,8 +233,8 @@ module WINDGAUGE03A_R03(draft = true)
                 {
                     drop_shape(2*R03_wide_D, draft);
                     // TOP cutout
-                    translate([-R03_wide_D/2, -R03_wide_D/2, -2*R03_wide_D])
-                        cube([R03_wide_D, R03_wide_D/2, 2*R03_wide_D]);
+                    translate([-R03_wide_D, -R03_wide_D, -2*R03_wide_D])
+                        cube([R03_wide_D*2, R03_wide_D, 2*R03_wide_D]);
                 }
                     // PCB elevation
                     translate([-R03_PCB_width/2, 0, -R03_PCB_top_rim])
@@ -289,16 +310,16 @@ module WINDGAUGE03A_R03(draft = true)
                                         [4, 2, 0, 6],
                                       ]
                             );
-                            cable_rouding_radius=3;
-                            translate([cable_rouding_radius,0,-R03_PCB_height])
+                            cable_rounding_radius=3;
+                            translate([cable_rounding_radius,0,-R03_PCB_height])
                             {
                               rotate([90,0,0])
                                 minkowski(){
                                     cylinder (h = R03_PCB_elevation*3,
-                                              r=cable_rouding_radius,
+                                              r=cable_rounding_radius,
                                               center = true, $fn=100);
-                                    cube([R03_PCB_width-2*cable_rouding_radius,
-                                          R03_PCB_height-cable_rouding_radius,
+                                    cube([R03_PCB_width-2*cable_rounding_radius,
+                                          R03_PCB_height-cable_rounding_radius,
                                           R03_PCB_elevation]);
                                }
                             }
@@ -433,6 +454,6 @@ difference()
         WINDGAUGE03A_R03(true);
     // Cut-out cube
     if (draft)
-        translate([-R03_wide_D, -R03_venturi_tube_height/2, R03_venturi_tube_height/2 + 20])
+        translate([-R03_wide_D, -R03_venturi_tube_height/2, R03_venturi_tube_height/2 + 28])
             cube([R03_wide_D, R03_venturi_tube_height, R03_venturi_tube_height]);
 }
