@@ -1,4 +1,4 @@
-use <./../../../../../Library/Graphics/MLAB_logo.scad>
+use <./lib/graphics/MLAB_logo.scad>
 
 pedestal_height = 13;   // designed for use the MLAB standard 12mm screws.
 mount_hole = 3.5;
@@ -38,29 +38,29 @@ difference () {
 	translate ([1, 66 , pedestal_height - 4.5]) // HOLE for ODROD's USB and Ethernet connectors
 	   cube([54,17.5,5]);
 
-	translate ([15, 7 , pedestal_height - 3.5]) // HOLE for ODROD's Passive components 
+	translate ([15, 7 , pedestal_height - 3.5]) // HOLE for ODROD's Passive components
 	   cube([39,53,5]);
 
-	translate ([19, 45 , pedestal_height - 3.5]) // eMMc Card 
+	translate ([19, 45 , pedestal_height - 3.5]) // eMMc Card
 	   cube([14,23,5]);
 
-	translate ([0, 46 , pedestal_height - 3.5]) // SD Card 
+	translate ([0, 46 , pedestal_height - 3.5]) // SD Card
 	   cube([17,14,5]);
 
 	translate ([2, 8 , pedestal_height - 1.7]) // IO connector
 	   cube([4.5,50.5,5]);
 
-	translate ([30, 3.5, pedestal_height - 3])  // ODROID serial connector 
+	translate ([30, 3.5, pedestal_height - 3])  // ODROID serial connector
 	   cube([12,2,5]);
-    
-    translate ([52, 19.5, pedestal_height - 3])  // USB selection jumper 
+
+    translate ([52, 19.5, pedestal_height - 3])  // USB selection jumper
         cube([6,2.5,5]);
 
     translate ([52, 43, pedestal_height - 3])  // ODROID power connector
         cube([6,3,5]);
 
     rotate([30,0,0])
-        translate ([15,5.8, -3.0])  // ODROID eMMC adapter pocket 
+        translate ([15,5.8, -3.0])  // ODROID eMMC adapter pocket
             cube([25,2,15]);
 
     translate ([9,3.5, pedestal_height - 3])  // ODROID IR receiver
@@ -68,7 +68,7 @@ difference () {
 
     translate ([19,10, pedestal_height - 5])  // Heatsink mount holes
         cylinder (h = 6, r= 3, $fn=10);
-    
+
     translate ([39,61.6, pedestal_height - 5])  // Heatsink mount holes
         cylinder (h = 6, r= 3, $fn=10);
 
@@ -95,14 +95,14 @@ difference () {
                 cylinder (h = 10, r= nut_size/2, $fn=6);
         }
 
-        
-        
-        
+
+
+
 ////  lightening central holes
-        
-	translate ([9,16, 0])  // ODROIDs passive components hole. 
-	   cube([40,62,pedestal_height ]);        
-        
+
+	translate ([9,16, 0])  // ODROIDs passive components hole.
+	   cube([40,62,pedestal_height ]);
+
 // MLAB logo on the side
     union (){
         translate ([29,0.5, 6.5])  // ODROIDs passive components hole.
