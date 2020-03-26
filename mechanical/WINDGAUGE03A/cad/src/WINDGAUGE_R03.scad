@@ -340,7 +340,8 @@ module WINDGAUGE03A_R03(draft = true)
                 translate([0, R03_wide_D/2 + 5, slip_ring_z])
                     rotate([-90, 0, 0])
                         cylinder (h = R01_vyska_prekryti_statoru + R04_zavit_vyska + 0.01,
-                                  r = S01_prumer_vnitrni/2 + 4*S01_sila_materialu);
+                                  r = S01_prumer_vnitrni/2 + 3.5*S01_sila_materialu
+                                      + 2*R03_global_clearance);
             }
 
             // Fin holders
@@ -392,7 +393,8 @@ module WINDGAUGE03A_R03(draft = true)
         translate([0, R03_wide_D/2 + 5, slip_ring_z])
             rotate([-90, 0, 0])
                 cylinder (h = R01_vyska_prekryti_statoru + R04_zavit_vyska + 0.01,
-                          r = S01_prumer_vnitrni/2 + 3*S01_sila_materialu);
+                          r = S01_prumer_vnitrni/2 + 2.5*S01_sila_materialu
+                              + 2*R03_global_clearance);
 
         // Venturi wide in
         translate([0, 0, R03_venturi_tube_height - wide_body_length])
