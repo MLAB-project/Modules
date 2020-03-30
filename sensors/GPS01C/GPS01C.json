@@ -1,0 +1,24 @@
+{
+    "short_en": "", 
+    "status": 1, 
+    "name": "GPS01C", 
+    "parameters": [], 
+    "wiki": "", 
+    "longname_en": "", 
+    "image": "/doc/img/GPS01C_QRcode.png", 
+    "short_cs": "Modul umožňující příjem GPS signálu. Komunikační rozhraní I2C, USB, sériová linka.", 
+    "image_small": "/doc/img/GPS01C_QRcode.png", 
+    "mark": 0.0, 
+    "ust": "", 
+    "doc_cs": "", 
+    "longname_cs": "GPS přijímač", 
+    "doc_en": "", 
+    "_id": "GPS01C", 
+    "root": "sensors/GPS01C", 
+    "author[]": [
+        "ChroustJan"
+    ], 
+    "category[]": [
+        "sensor"
+    ]
+}
