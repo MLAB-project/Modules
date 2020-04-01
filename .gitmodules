@@ -1,3 +1,6 @@
 [submodule "MCU_CPU/ARM/ODROID-C2/cad/src/lib"]
 	path = MCU_CPU/ARM/ODROID-C2/cad/src/lib
 	url = https://github.com/MLAB-project/documents.git
+[submodule "mechanical/WINDGAUGE03"]
+	path = mechanical/WINDGAUGE03
+	url = git@github.com:mlab-modules/WINDGAUGE03.git
