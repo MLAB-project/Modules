@@ -1455,4 +1455,17 @@ Wire Wire Line
 	5050 1800 5000 1800
 Wire Wire Line
 	5000 1800 5000 1900
+Text Label 4450 4050 0    60   ~ 0
+EXTINT
+Text Label 4450 4350 0    60   ~ 0
+#RESET
+Text Label 4450 4250 0    60   ~ 0
+#SAFEB
+Text Label 4350 4450 0    60   ~ 0
+D_SEL
+Connection ~ 4650 4450
+Wire Wire Line
+	4350 4450 4650 4450
+Text Label 5450 2450 3    60   ~ 0
+VDD_USB
 $EndSCHEMATC

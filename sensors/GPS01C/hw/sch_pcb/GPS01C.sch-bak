@@ -1419,10 +1419,10 @@ Connection ~ 4600 6700
 Wire Wire Line
 	5200 6700 5400 6700
 $Comp
-L Jumper:Jumper_2_Bridged JP?
+L Jumper:Jumper_2_Bridged JP2
 U 1 1 5EC85315
 P 5700 1800
-F 0 "JP?" H 5650 1950 50  0000 C CNN
+F 0 "JP2" H 5650 1950 50  0000 C CNN
 F 1 "Jumper_2_Bridged" H 5700 1904 50  0001 C CNN
 F 2 "Mlab_Pin_Headers:Straight_1x02" H 5700 1800 50  0001 C CNN
 F 3 "~" H 5700 1800 50  0001 C CNN
@@ -1430,10 +1430,10 @@ F 3 "~" H 5700 1800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R15
 U 1 1 5EC8BE49
 P 5200 1800
-F 0 "R?" V 5100 1750 50  0000 L CNN
+F 0 "R15" V 5100 1750 50  0000 L CNN
 F 1 "10k" V 5200 1700 50  0000 L CNN
 F 2 "Mlab_R:SMD-0805" V 5130 1800 50  0001 C CNN
 F 3 "~" H 5200 1800 50  0001 C CNN
@@ -1455,4 +1455,15 @@ Wire Wire Line
 	5050 1800 5000 1800
 Wire Wire Line
 	5000 1800 5000 1900
+Text Label 4450 4050 0    60   ~ 0
+EXTINT
+Text Label 4450 4350 0    60   ~ 0
+#RESET
+Text Label 4450 4250 0    60   ~ 0
+#SAFEB
+Text Label 4350 4450 0    60   ~ 0
+D_SEL
+Connection ~ 4650 4450
+Wire Wire Line
+	4350 4450 4650 4450
 $EndSCHEMATC
