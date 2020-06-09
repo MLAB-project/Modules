@@ -1,7 +1,0 @@
-(gerbv-file-version! "2.0A")
-(define-layer! 3 (cons 'filename "/home/kaklik/MLAB/Modules/CommSerial/USB232R01B/CAM_PROFI/V1.PHO")(cons 'inverted #t)(cons 'visible #t)(cons 'color #(60138 39321 3855)))
-(define-layer! 2 (cons 'filename "/home/kaklik/MLAB/Modules/CommSerial/USB232R01B/CAM_PROFI/V2.PHO")(cons 'visible #t)(cons 'color #(59624 34952 6425)))
-(define-layer! 1 (cons 'filename "/home/kaklik/MLAB/Modules/CommSerial/USB232R01B/CAM_PROFI/T1.PHO")(cons 'visible #t)(cons 'color #(65535 65535 65535)))
-(define-layer! 0 (cons 'filename "/home/kaklik/MLAB/Modules/CommSerial/USB232R01B/CAM_PROFI/BOARD.PHO")(cons 'visible #t)(cons 'color #(65535 65535 65535)))
-(define-layer! -1 (cons 'filename "/home/kaklik/MLAB/Modules/CommSerial/USB232R01B/FZP")(cons 'visible #f)(cons 'color #(0 0 0)))
-(set-render-type! 3)
