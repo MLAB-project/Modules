@@ -39,3 +39,6 @@ version=1
 [eeschema]
 version=1
 LibDir=
+[sheetnames]
+1=1812e099-a05e-4767-bdd8-6e78175ff266:
+2=00000000-0000-0000-0000-00005d563b7a:LNA
