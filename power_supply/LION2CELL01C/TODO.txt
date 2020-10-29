@@ -1,9 +1,0 @@
-tranzistor k zenerce byl dán irlml6244
-Zrusit zapojeni se zenerkou.
-zrusit spinaci obvod delice napeti.
-Pridat pull-upy k I2C.
-
-Je potreba oznacit poradi vkladani clanku. 
-
-Neni jasne proc modul ukazuje 0 az -9mA bez zateze. Mozna je to aktivovanym balancerem. 
-Balancer by se měl aktivovat Power good výstupem z regulátoru napětí pro Gasgauge obvod. Vyřešil by se tím problém s možným zničením podbytím akumulátorů aktivním balancerem. Protože power good výstup vypne balancer při nízkém celkovém napětí na článcích. Je k tomu ale potřeba vybrat obvod, který vypne power good výstup při vybití akumulátorů tj. napětí okolo 5,8V na článcích v serii. 
