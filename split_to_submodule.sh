@@ -11,7 +11,7 @@
 ## Usage example
 #
 #
-#  ./module_create.sh PCRD06A  sensors/PCRD06A/ PCRD06
+#  ./split_to_submodule.sh BRIDGEADC01A  ADC/BRIDGEADC01A/ BRIDGEADC01
 #
 # Gather constant vars
 #CURRENTDIR=${PWD##*/}
