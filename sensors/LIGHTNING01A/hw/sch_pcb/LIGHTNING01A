@@ -1,0 +1,17 @@
+Item,Qty,Reference(s),Value,LibPart,Footprint,Datasheet,Hodnota_i2c,Hodnota_spi,comp
+1,10,C1,650pF,Device:C_Small,Mlab_R:SMD-0805,,,,
+2,10,C2,270pF,Device:C_Small,Mlab_R:SMD-0805,,,,
+3,10,C3,10uF,Device:C_Small,Mlab_R:SMD-0805,,,,C0805_10u
+4,10,C4,1uF,Device:C_Small,Mlab_R:SMD-0805,,,,C0805_1u
+5,10,C5,C/U,Device:CP_Small,Mlab_R:SMD-0805,,,,
+6,10,C6,100nF,Device:C_Small,Mlab_R:SMD-0805,,,,
+7,10,D1,M4,Device:D_Small,Mlab_D:Diode-MELF_Standard,,,,
+8,10,J1,JUMP2_2x1,MLAB_Jumpers:JUMP2_2x1,Mlab_Pin_Headers:Straight_2x01,,,,
+9,10,J10,JUMP_3X2,MLAB_Jumpers:JUMP_3X2,Mlab_Pin_Headers:Straight_2x03,,,,
+10,80,"J2, J3, J4, J5, J6, J7, J8, J9",JUMP_2x1,MLAB_Jumpers:JUMP_2x1,Mlab_Pin_Headers:Straight_2x01,,,,
+11,10,L1,MA55532-AE,Device:L_Small,Mlab_L:Coilcraft_MA5532-AE_RFID,,,,
+12,40,"M1, M2, M3, M4",HOLE,MLAB_MECHANICAL:HOLE,Mlab_Mechanical:MountingHole_3mm,,,,
+13,40,"R1, R2, R5, R10",10k,Device:R_Small,Mlab_R:SMD-0805,,,,
+14,40,"R3, R7, R8, R9",0R,Device:R_Small,Mlab_R:SMD-0805,,0R,-,
+15,20,"R4, R6",-,Device:R_Small,Mlab_R:SMD-0805,,-,0R,
+16,10,U1,AS3935,MLAB_IO:AS3935,Mlab_IO:MLPQ-16,http://ams.com/eng/content/download/249847/974777/143418,,,AS3935

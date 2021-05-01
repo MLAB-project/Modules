@@ -1,0 +1,32 @@
+﻿//
+// Toto je popisný soubor pro popis obsahu adresáře (příklad)
+//
+
+[InfoShortDescription.en]
+  Xilinx Spartan 3 XC3S50AN FPGA School Board
+  
+[InfoShortDescription.cs]
+  Školní deska Xilinx Spartan 3AN XC3S50AN
+
+[InfoLongDescription.en]
+  Replaced by an updated version S3AN01B. <br>
+
+  The school board allows interested people to play with FPGA
+  from XILINX. The board contains LED display, some switches
+  and push buttons. It has VGA video port, PS/2 ports for
+  keyboard and mouse. Because the main chip is not 5V tolerant,
+  the board is equipped with 5V tolerant buffers (inputs).
+  The board is powered from 5V, internal power supply is included.
+  For timing there is one 100MHz crystal oscillator.
+
+[InfoLongDescription.cs]
+  Nahrazeno novou verzí desky S3AN01B. <br>
+
+  Školní deska umožňuje za rozumné peníze začít pracovat
+  s obvody FPGA firmy XILINX. Obsahuje LED display, sadu
+  tlačítek a přepínačů a porty pro připojení VGA monitoru
+  a PS/2 klávesnice nebo myši. Protože obvod není 5V tolerantní,
+  je před část vstupů předřazen 5V tolerantní budič (vstup).
+  Součástí desky jsou napájecí zdroje a oscilátor 100MHz.
+
+[End]

@@ -1,0 +1,8 @@
+(gerbv-file-version! "2.0A")
+(define-layer! 4 (cons 'filename "U3_MLAB_ADAPTER-F_SilkS.gbr")(cons 'visible #t)(cons 'color #(65535 50629 13107)))
+(define-layer! 3 (cons 'filename "U3_MLAB_ADAPTER-Edge_Cuts.gbr")(cons 'visible #f)(cons 'color #(0 50115 50115)))
+(define-layer! 2 (cons 'filename "U3_MLAB_ADAPTER-B_Mask.gbr")(cons 'visible #f)(cons 'color #(49601 0 57568)))
+(define-layer! 1 (cons 'filename "U3_MLAB_ADAPTER-B_Cu.gbr")(cons 'visible #f)(cons 'color #(65535 32639 29555)))
+(define-layer! 0 (cons 'filename "U3_MLAB_ADAPTER.drl")(cons 'visible #t)(cons 'color #(29555 29555 57054))(cons 'attribs (list (list 'autodetect 'Boolean 1) (list 'zero_supression 'Enum 1) (list 'units 'Enum 0) (list 'digits 'Integer 4))))
+(define-layer! -1 (cons 'filename "/home/kaklik/svn/svnMLAB/Modules/ARM/ODROID-U3/CAM_PROFI")(cons 'visible #f)(cons 'color #(0 0 0)))
+(set-render-type! 3)

@@ -1,0 +1,22 @@
+{
+    "wiki": "None", 
+    "status": 4, 
+    "name": "PICPGR301A", 
+    "parameters": [], 
+    "short_en": "The programmer uses LPT port of PC and contains 5V voltage regulator so it can be used for powering target application. The programmer has tree state outputs and that is why it is not necessary to disconnect it from target application while debugging.", 
+    "image_small": "/doc/img/PICPGR301A_QRcode.jpgs", 
+    "image": "/doc/img/PICPGR301A_QRcode.png", 
+    "short_cs": "Programátor se připojuje k LPT portu počítače PC a obsahuje stabilizátor 5V, který je možné využít pro napájení cílové aplikace. Programátor má třístavové výstupy a není ho nutné během ladění odpojovat o cílové aplikace.", 
+    "longname_en": "Small development programmer for PIC processors", 
+    "mark": 0.0, 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
+    "longname_cs": "Malý vývojový programátor pro procesory PIC", 
+    "doc_en": "<p>None</p>", 
+    "_id": "PICPGR301A", 
+    "root": "MCU_CPU/PIC/PICPGR301A", 
+    "author[]": [], 
+    "category[]": [
+        "pic"
+    ]
+}

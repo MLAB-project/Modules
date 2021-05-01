@@ -1,0 +1,29 @@
+[PROJECT]
+Target=D:\MLAB\Modules\Sensors\HUM01A\SW\main.hex
+Development_Mode=
+Processor_Text=PIC16F877
+ToolSuite=CCS
+Processor=0x877F
+[D:\MLAB\Modules\Sensors\HUM01A\SW\main]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=D:\MLAB\Modules\Sensors\HUM01A\SW\main.c
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=main.c
+2=
+3=C:\Program Files\PICC\devices\16F877.h
+4=..\..\..\TDC\GP201A\SW\PICinterface\main.c
+5=
+[Target Data]
+OptionString=-p +FM
+FileList=D:\MLAB\Modules\Sensors\HUM01A\SW\PIC16F877\main.c
+[Units]
+Count=1
+1=main.c (main)

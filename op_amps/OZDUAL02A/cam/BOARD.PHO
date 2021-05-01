@@ -1,0 +1,78 @@
+*
+*
+G04 PADS9.0.2 Build Number: 372616 generated Gerber (RS-274-X) file*
+G04 PC Version=2.1*
+*
+%IN "OZDUAL02A.pcb"*%
+*
+%MOIN*%
+*
+%FSLAX35Y35*%
+*
+*
+*
+*
+G04 PC Standard Apertures*
+*
+*
+G04 Thermal Relief Aperture macro.*
+%AMTER*
+1,1,$1,0,0*
+1,0,$1-$2,0,0*
+21,0,$3,$4,0,0,45*
+21,0,$3,$4,0,0,135*
+%
+*
+*
+G04 Annular Aperture macro.*
+%AMANN*
+1,1,$1,0,0*
+1,0,$2,0,0*
+%
+*
+*
+G04 Odd Aperture macro.*
+%AMODD*
+1,1,$1,0,0*
+1,0,$1-0.005,0,0*
+%
+*
+*
+G04 PC Custom Aperture Macros*
+*
+*
+*
+*
+*
+*
+G04 PC Aperture Table*
+*
+%ADD024C,0.001*%
+%ADD025C,0.01*%
+*
+*
+*
+*
+G04 PC Circuitry*
+G04 Layer Name OZDUAL02A.pcb - circuitry*
+%LPD*%
+*
+*
+G04 PC Custom Flashes*
+G04 Layer Name OZDUAL02A.pcb - flashes*
+%LPD*%
+*
+*
+G04 PC Circuitry*
+G04 Layer Name OZDUAL02A.pcb - circuitry*
+%LPD*%
+*
+G54D24*
+G54D25*
+G01X101000Y101000D02*
+X259000D01*
+Y219000*
+X101000*
+Y101000*
+X0Y0D02*
+M02*

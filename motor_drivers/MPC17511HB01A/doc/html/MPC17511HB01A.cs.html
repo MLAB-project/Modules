@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> MPC17511HB01A </title>
+    <meta name="keywords" content="h-můstek h-bridge MPC17511A">
+    <meta name="description" content="Modul H-Můstku 6.8V/1A do stavebnice MLAB s obvodem Freescale MPC17511A">
+    <!-- AUTOINCLUDE START "Page/Head.cs.ihtml" DO NOT REMOVE -->
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB.css" type="text/css" title="MLAB základní styl">
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB_Print.css" type="text/css" media="print">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../Web/PIC/MLAB.ico">
+    <script type="text/javascript" src="../../../../../Web/JS/MLAB_Menu.js"></script>
+    <!-- AUTOINCLUDE END -->
+  </head>
+  <body lang="cs">
+
+    <!-- AUTOINCLUDE START "Page/Header.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== HLAVICKA ============== -->
+    <div class="Header">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawHeader();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- AUTOINCLUDE START "Page/Menu.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== MENU ============== -->
+    <div class="Menu">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawMenu();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) menu je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- ============== TEXT ============== -->
+    <div class="Text">
+      <p class="Title">
+        H-Můstek 6.8V/1A s&nbsp;obvodem MPC17511A
+      </p>
+      <p class=Autor>
+        Milan Horkel
+      </p>
+      <p class="Subtitle">
+        Je to další z&nbsp;malých budičů motorů. Tentokrát s&nbsp;obvodem
+        Freescale. Zajímavá na obvodu je jeho cena a dostupnost. Stojí cca 40Kč
+        a dá se koupit u firmy Farnell. Hodí se pro malé roboty napájené ze
+        4&nbsp; Ni-MH článků. Podporuje PWM řízení do frekvence 200&nbsp;kHz.
+      </p>
+      <p class="Subtitle">
+        <img width="256" height="336" src="MPC17511HB01A_Files/image001.jpg"
+        alt="Pohled na modul ze strany součástek">
+        &nbsp;&nbsp;
+        <img width="256" height="340" src="MPC17511HB01A_Files/image002.jpg"
+        alt="Pohled na modul ze strany spojů">
+      </p>
+
+      <p>
+        <a href="../MPC17511HB01A.cs.pdf"><img class="NoBorder"
+           src="../../../../../Web/PIC/FileIco_PDF.ico"
+           alt="Acrobat">&nbsp;PDF verze</a>
+      </p>
+
+      <h1> Technické parametry </h1>
+
+      <table>
+        <tr>
+          <th> Parametr </th>
+          <th> Hodnota  </th>
+          <th> Poznámka </th>
+        </tr>
+        <tr>
+          <td> Napájení motoru </td>
+          <td> 2.0&nbsp;–&nbsp;6.8V </td>
+          <td> Absolutní maximum 8.0V </td>
+        </tr>
+        <tr>
+          <td> Napájení logiky </td>
+          <td> 2.7&nbsp;–&nbsp;5.7V </td>
+          <td> Absolutní maximum 7.0V </td>
+        </tr>
+        <tr>
+          <td> Výstupní proud </td>
+          <td> 1A, max.&nbsp;3A </td>
+          <td> Odpor spínačů typ. 0.45Ω </td>
+        </tr>
+        <tr>
+          <td> Spotřeba </td>
+          <td> max.&nbsp;3mA </td>
+          <td> Logika </td>
+        </tr>
+        <tr>
+          <td> Frekvence PWM </td>
+          <td> 0-200kHz </td>
+          <td> Dovolen statický režim </td>
+        </tr>
+        <tr>
+          <td> Rozměry </td>
+          <td> 40&nbsp;x&nbsp;30&nbsp;x&nbsp;15mm </td>
+          <td> Výška nad základnou </td>
+        </tr>
+      </table>
+
+      <h1> Popis konstrukce </h1>
+
+      <h2> Úvodem </h2>
+
+      <p>
+        Při pátrání po vhodných obvodech jsem narazil na webu
+        <a href="http://www.farnell.com/">http://www.farnell.com</a>
+        na tento zajímavý obvod. Je totiž levný (cca 40Kč) a přitom umožňuje
+        dodávat proud 1A trvale a špičkově až 3A. Je to dvakrát tolik než
+        umožňuje obvod v&nbsp;modulu HT675101A za polovičku peněz. Drobnou
+        nevýhodou je to, že obvod je zapouzdřen v&nbsp;dost jemném pouzdru
+        s&nbsp;roztečí vývodů 0.65mm.
+      </p>
+
+      <h2> Zapojení modulu </h2>
+
+      <p>
+        Modul je osazen dvojicí obvodů MPC17511A aby stačil jedem modul pro dva
+        motory. Obvody jsou malinké a tak i modul je malinký. Je samozřejmě
+        možné osadit jen obvod jeden.
+      </p>
+
+      <p>
+        <img width="700" height="300" src="MPC17511HB01A_Files/image003.png"
+        alt="Schéma - obvod MPC17511A">
+      </p>
+
+      <p>
+        Protože má obvod zvlášť vyvedeno napájení pro motor a pro logiku, je
+        možné motor napájen přímo z&nbsp;baterií a řídící mikroprocesor ze
+        stabilizátoru nebo jiné baterie. Napětí logiky může být v&nbsp;rozsahu
+        2.7&nbsp;až&nbsp;5.7V. Výkonový výstup spíná podle pravdivostní
+        tabulky.
+      </p>
+
+      <p>
+        Kromě výkonového výstupu OUT1 a OUT2 je vyveden jeden samostatný budič
+        pro buzení tranzistoru N‑FET zapojeného v&nbsp;kladné větvi. Tento
+        tranzistor „navíc“ není na modulu umístěn protože ho moc nepotřebujeme.
+        Obvod obsahuje nábojovou pumpu a vyrábí si kladné napětí cca 13V pro
+        buzení horních tranzistorů jak v&nbsp;můstku tak i externího
+        tranzistoru v&nbsp;kladné větvi.
+      </p>
+
+      <p>
+        <img width="728" height="181" src="MPC17511HB01A_Files/image004.png"
+        alt="Schéma - napájecí obvody">
+      </p>
+
+      <p>
+        Napájecí obvodu jsou doplněny ochrannými diodami proti přepólování.
+        Předpokládá se, že napájecí proud je omezen což při napájení
+        z&nbsp;akumulátorů nemusí být splněno a tak proto pozor na polaritu
+        napájení. Zenerova dioda v&nbsp;napájení pro motor je zde proto, aby
+        omezila napětí na napájecí větvi když někdo zatočí motorem při
+        odpojeném napětí. Motor vyrábí napětí a toto napětí se přes diody
+        v&nbsp;H-Můstku dostane na napájecí nožičku a nesmí být větší než cca
+        8V.
+      </p>
+
+      <h2> Zapojení obvodu MPC17511A </h2>
+
+      <p>
+        <i>Je zajímavé, že v&nbsp;katalogovém listu jsou rozporné údaje. Pozor
+        tedy na to. Například první verze katalogu měla dokonce špatný výkres
+        pouzdra. Naštěstí obvody přišly dříve, než jsem udělal plošný spoj.
+        Nejasnost u napájecích napětí však přetrvává. Doporučuji spíše věřit
+        datům v&nbsp;tabulce než v&nbsp;obrázku. Koukněte se do aktuálního
+        katalogového listu na webu
+        <a href="http://www.freescale.com/">http://www.freescale.com</a>
+        .</i>
+      </p>
+
+      <p>
+        <img width="655" height="774" src="MPC17511HB01A_Files/image005.png"
+        alt="Vnitřní struktura obvodu MPC17511A">
+      </p>
+      
+      <p>
+        <img width="345" height="294" src="MPC17511HB01A_Files/image006.png"
+        alt="Pravdivostní tabulka obvodu MPC17511A">
+      </p>
+
+      <h2> Rušení od motoru </h2>
+
+      <p>
+        Motor s&nbsp;komutátorem je vydatný zdroj rušení a často způsobuje
+        zasekávání řídícího procesoru nebo zmatené fungování. Je nezbytné motor
+        opatřit alespoň základním odrušením tak, že se přímo k&nbsp;motoru, na
+        jeho vývody umístí odrušovací kondenzátor. Používá se obyčejný
+        keramický o hodnotě obvykle 4n7.
+      </p>
+
+      <p>
+        Když to nestačí je třeba použít odrušovací tlumivky z&nbsp;několika
+        závity drátu na kousku feritu. Zapojují se do série z&nbsp;přívody
+        k&nbsp;motoru. Když se ještě hračky dělali poctivě tak to u každého
+        motoru bylo.
+      </p>
+
+      <p>
+        <img width="330" height="138" src="MPC17511HB01A_Files/image007.png"
+        alt="Zapojení odrušení u motoru">
+      </p>
+
+      <p>
+        Dále je vhodné oddělit napájení procesoru od napájení motoru.
+        V&nbsp;extrémním případě lze použít dva zdroje (baterie). Obvykle
+        postačuje elektroniku napájen přes filtr (RC nebo lépe LC) a
+        stabilizátor. Pozor na dobré propojení výkonové země z&nbsp;H-Můstků
+        k&nbsp;baterii. <i>Zem elektroniky připojíme na zem H-Můstku, ne na
+        baterii.</i> Eliminuje se tak rušení způsobené úbytkem na spojení mezi
+        H-Můstkem a baterií.
+      </p>
+
+      <h2> Mechanická konstrukce </h2>
+
+      <p>
+        Jedná se o standardní modul do stavebnice MLAB s&nbsp;rohovými šrouby.
+      </p>
+
+      <h1> Osazení a oživení </h1>
+
+      <h2> Osazení </h2>
+
+      <p>
+        Z&nbsp;vrchní stran jsou jen hřebínky a šrouby. Ze spodní strany jsou
+        SMD součástky. Nejdříve se pájí integrované obvody protože je užitečné,
+        když nám nic překáží. Používáme minimum pájky a vhodné prstovité
+        tavidlo pro SMD. Katody diod a + konce kondenzátorů mají zakulacený
+        obrys.
+      </p>
+
+      <p>
+        <img width="351" height="468" src="MPC17511HB01A_Files/image008.jpg"
+        alt="Osazení ze strany součástek">
+        <img width="352" height="468" src="MPC17511HB01A_Files/image009.jpg"
+        alt="Osazení ze strany spojů">
+      </p>
+
+      <table class="Soupiska">
+        <tr>
+          <th> Reference </th>
+          <th> Hodnota </th>
+        </tr>
+        <tr>
+          <th colspan="2"> Odpory </th>
+        </tr>
+        <tr>
+          <td> R1, R2, R3 </td>
+          <td> 100k </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Keramické kondenzátory </th>
+        </tr>
+        <tr>
+          <td> C2, C3, C4, C5, C6, C7, C8, C9, C10, C11 </td>
+          <td> 100nF </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Elektrolytické kondenzátory </th>
+        </tr>
+        <tr>
+          <td> C1 </td>
+          <td> 33uF/10V </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Diody </th>
+        </tr>
+        <tr>
+          <td> D1, D2 </td>
+          <td> 1N4007SMD </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Zenerovy diody </th>
+        </tr>
+        <tr>
+          <td> D3 </td>
+          <td> BZV55C8.2SMD </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Integrované obvody </th>
+        </tr>
+        <tr>
+          <td> U1, U2 </td>
+          <td> MPC17511AEV </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Mechanické součástky </th>
+        </tr>
+        <tr>
+          <td> J1, J2, J4, J6, J8, J10 </td>
+          <td> JUMP2X3 </td>
+        </tr>
+        <tr>
+          <td> J3, J5, J7, J9 </td>
+          <td> JUMP2 </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Konstrukční součástky </th>
+        </tr>
+        <tr>
+          <td> 4 ks </td>
+          <td> Šroub M3x12 křížový s válcovou hlavou </td>
+        </tr>
+        <tr>
+          <td> 4 ks </td>
+          <td> Podložka M3, pozinkovaná </td>
+        </tr>
+        <tr>
+          <td> 4 ks  </td>
+          <td> DI5M3X05 distanční sloupek M3x5 </td>
+        </tr>
+      </table>
+
+      <h2> Oživení </h2>
+      
+      <p>
+        Připojíme na napájecí zdroj s&nbsp;omezením proudu a postupně zvyšujeme
+        napětí na cca 5V. Pak už stačí připojit malý motorek, třeba z&nbsp;CD
+        mechaniky, a ověřit funkčnost podle pravdivostní tabulky.
+      </p>
+      
+      <h1> Chyby a náměty </h1>
+      
+      <p>
+        Nic není dokonalé a tak ani tento design není výjimkou. Vzhledem
+        k&nbsp;tomu, že v&nbsp;obvodu MPC nejsou na vstupech IN1 a IN2 odpory
+        zajišťující definovaný stav, je vhodné (nikoli nutné) doplnit je
+        dodatečně. Stav L na obou vstupech znamená odpojený výstup, proto se
+        dávají odpory do země. Stačí hodnota 100kΩ. Více napoví detailní
+        obrázek. Osazují se celkem 4 kusy.
+      </p>
+      
+      <p>
+        <img width="345" height="266" src="MPC17511HB01A_Files/image010.jpg"
+        alt="Obrázek úpravy - připájené odpory na vstupech">.
+      </p>
+
+      <p>
+        Příště si na to dám pozor…
+      </p>
+      
+    </div>
+
+    <!-- AUTOINCLUDE START "Page/Footer.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== PATIČKA ============== -->
+    <div class="Footer">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawFooter();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+  </body>
+</html>

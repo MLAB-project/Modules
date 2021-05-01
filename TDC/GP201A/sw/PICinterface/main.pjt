@@ -1,0 +1,33 @@
+[PROJECT]
+Target=.\main.hex
+Development_Mode=
+Processor_Text=PIC16F887
+ToolSuite=CCS
+Processor=0x887F
+[.\main]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=.\main.c
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=main.c
+2=
+3=
+4=
+5=GP2.h
+6=GP2.c
+7=ds1820.c
+8=1wire.c
+9=
+[Target Data]
+OptionString=-p +FM
+FileList=D:\MLAB\Modules\TDC\GP201A\SW\PICinterface\main.c
+[Units]
+Count=1
+1=main (main)

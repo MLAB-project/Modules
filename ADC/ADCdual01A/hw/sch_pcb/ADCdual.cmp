@@ -1,0 +1,437 @@
+Cmp-Mod V01 Created by CvPcb (2014-jan-25)-product date = Tue 18 Mar 2014 14:05:50 CET
+
+BeginCmp
+TimeStamp = /5325D593;
+Reference = C1;
+ValeurCmp = C;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325D57F;
+Reference = C2;
+ValeurCmp = 100nF;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5324F075;
+Reference = C3;
+ValeurCmp = 10uF;
+IdModule  = Capacitors_SMD:c_tant_B;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325D9D7;
+Reference = C4;
+ValeurCmp = 10nF;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325D9AF;
+Reference = C5;
+ValeurCmp = 10nF;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /532504C5;
+Reference = C6;
+ValeurCmp = 100 nF;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325DE75;
+Reference = C7;
+ValeurCmp = C;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5324EC67;
+Reference = C8;
+ValeurCmp = C;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5324F061;
+Reference = C9;
+ValeurCmp = 10uF;
+IdModule  = Capacitors_SMD:c_tant_B;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325008A;
+Reference = C10;
+ValeurCmp = 100 nF;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325F38F;
+Reference = C11;
+ValeurCmp = 25pF;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325FB85;
+Reference = C12;
+ValeurCmp = 25pF;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325E012;
+Reference = C13;
+ValeurCmp = 100nF;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325F3A6;
+Reference = C14;
+ValeurCmp = 25pF;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325FB8B;
+Reference = C15;
+ValeurCmp = 25pF;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /53250076;
+Reference = C16;
+ValeurCmp = 2u2;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325E026;
+Reference = C17;
+ValeurCmp = 100nF;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325009E;
+Reference = C18;
+ValeurCmp = 100 nF;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /532506FD;
+Reference = C19;
+ValeurCmp = 2u2;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325F323;
+Reference = C20;
+ValeurCmp = 100nF;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /53275986;
+Reference = D1;
+ValeurCmp = DIODE;
+IdModule  = SMD_Packages:DO-214AC(SMA);
+EndCmp
+
+BeginCmp
+TimeStamp = /5324C7A1;
+Reference = J1;
+ValeurCmp = SATA7-67491-1030;
+IdModule  = Kaklik_konektory:SATA-7_THT_VERT;
+EndCmp
+
+BeginCmp
+TimeStamp = /5324F25A;
+Reference = J2;
+ValeurCmp = JUMP_3X2_CONN;
+IdModule  = MLAB_Jumpery:Pin_Header_Straight_2x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /5324E2D0;
+Reference = J3;
+ValeurCmp = SATA7-67491-1030;
+IdModule  = Kaklik_konektory:SATA-7_THT_VERT;
+EndCmp
+
+BeginCmp
+TimeStamp = /53250962;
+Reference = J4;
+ValeurCmp = JUMP_2_CONN;
+IdModule  = MLAB_Jumpery:Pin_Header_Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /53250976;
+Reference = J5;
+ValeurCmp = JUMP_2_CONN;
+IdModule  = MLAB_Jumpery:Pin_Header_Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325098A;
+Reference = J6;
+ValeurCmp = JUMP_2_CONN;
+IdModule  = MLAB_Jumpery:Pin_Header_Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /53250A75;
+Reference = J7;
+ValeurCmp = JUMP_2_CONN;
+IdModule  = MLAB_Jumpery:Pin_Header_Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /5324D35C;
+Reference = J8;
+ValeurCmp = SATA7-67491-1030;
+IdModule  = Kaklik_konektory:SATA-7_THT_VERT_2;
+EndCmp
+
+BeginCmp
+TimeStamp = /5324DF9F;
+Reference = J9;
+ValeurCmp = SATA7-67491-1030;
+IdModule  = Kaklik_konektory:SATA-7_THT_VERT_2;
+EndCmp
+
+BeginCmp
+TimeStamp = /5324DFD4;
+Reference = J10;
+ValeurCmp = SATA7-67491-1030;
+IdModule  = Kaklik_konektory:SATA-7_THT_VERT_2;
+EndCmp
+
+BeginCmp
+TimeStamp = /5324DFEA;
+Reference = J11;
+ValeurCmp = SATA7-67491-1030;
+IdModule  = Kaklik_konektory:SATA-7_THT_VERT_2;
+EndCmp
+
+BeginCmp
+TimeStamp = /5324E8EB;
+Reference = J12;
+ValeurCmp = SATA7-67491-1030;
+IdModule  = Kaklik_konektory:SATA-7_THT_VERT_2;
+EndCmp
+
+BeginCmp
+TimeStamp = /5324E8C7;
+Reference = J13;
+ValeurCmp = SATA7-67491-1030;
+IdModule  = Kaklik_konektory:SATA-7_THT_VERT_2;
+EndCmp
+
+BeginCmp
+TimeStamp = /53283460;
+Reference = J14;
+ValeurCmp = SENSE;
+IdModule  = MLAB_Jumpery:Pin_Header_Straight_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /53283479;
+Reference = J15;
+ValeurCmp = PAR/SER;
+IdModule  = MLAB_Jumpery:Pin_Header_Straight_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /5328458E;
+Reference = J16;
+ValeurCmp = CONN_3;
+IdModule  = MLAB_Jumpery:Pin_Header_Straight_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /532845A7;
+Reference = J17;
+ValeurCmp = CONN_1;
+IdModule  = MLAB_Jumpery:Pin_Header_Straight_1x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /53272432;
+Reference = P1;
+ValeurCmp = CONN_1;
+IdModule  = MLAB_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /53272446;
+Reference = P2;
+ValeurCmp = CONN_1;
+IdModule  = MLAB_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5327245A;
+Reference = P3;
+ValeurCmp = CONN_1;
+IdModule  = MLAB_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5327246E;
+Reference = P4;
+ValeurCmp = CONN_1;
+IdModule  = MLAB_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325CEE2;
+Reference = R1;
+ValeurCmp = 1580R;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325CEF6;
+Reference = R2;
+ValeurCmp = 1580R;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325CF0A;
+Reference = R3;
+ValeurCmp = 1580R;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325CF1E;
+Reference = R4;
+ValeurCmp = 1580R;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325F352;
+Reference = R5;
+ValeurCmp = 25R;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325F369;
+Reference = R6;
+ValeurCmp = 25R;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325FB79;
+Reference = R7;
+ValeurCmp = 25R;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325FB7F;
+Reference = R8;
+ValeurCmp = 25R;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325E606;
+Reference = R9;
+ValeurCmp = 127R;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325E5DE;
+Reference = R10;
+ValeurCmp = 82R;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325E61A;
+Reference = R11;
+ValeurCmp = 127R;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5325E5F2;
+Reference = R12;
+ValeurCmp = 82R;
+IdModule  = Kaklik_smd_pouzdra:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /532835A9;
+Reference = R13;
+ValeurCmp = 10k;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /532835BD;
+Reference = R14;
+ValeurCmp = 10k;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /532835E8;
+Reference = R15;
+ValeurCmp = 10k;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /532835EE;
+Reference = R16;
+ValeurCmp = 10k;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5324D398;
+Reference = U1;
+ValeurCmp = LT6600;
+IdModule  = SMD_Packages:SO8E;
+EndCmp
+
+BeginCmp
+TimeStamp = /5324D3AC;
+Reference = U2;
+ValeurCmp = LT6600;
+IdModule  = SMD_Packages:SO8E;
+EndCmp
+
+BeginCmp
+TimeStamp = /5324EDA7;
+Reference = U3;
+ValeurCmp = NCP1117ST18T3G;
+IdModule  = SMD_Packages:SOT223;
+EndCmp
+
+BeginCmp
+TimeStamp = /53264E4D;
+Reference = U4;
+ValeurCmp = LTC2271;
+IdModule  = Kaklik_smd_pouzdra:QFN52+1EP_HandSoldering;
+EndCmp
+
+EndListe

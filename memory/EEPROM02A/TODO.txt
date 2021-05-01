@@ -1,0 +1,4 @@
+WP (Write-protect) pin má v popisku na desce navíc znak #. 
+
+WP pin by měl mít 10k Pull-down a zasunutý jumper by měl blokovat zápis připojením k VCC. 
+Nebo může být WP 3 pinový hřebínek a logický stav pinu se bude vybírat pozicí jumperu. To je možná lepší řešení, protože jumper bak bude vždycky přítomen na modulu. 

@@ -1,0 +1,27 @@
+Deska:            S3AN01B
+
+Rozmìr:           cca 112x122mm
+Poèet vrstev:     2 (35um) prokov
+Materiál:         FR4 1.6mm
+Nepájivá maska:   2x
+Potisk:           1x
+Povrchová úprava: HAL
+
+Podklady Gerber/Excellon. Míry v MILS, vše v pohledu ze strany souèástí.
+
+BOARD.PHO      Obrys desky (na støed èáry)
+
+DRILL.DRL      Excellon vrtání, jednotkou jsou MILS (1/1000 inch)
+DRILL.rep      Rozmìry vrtání v MILS (nekritické, prùmìry po prokovení)
+
+T1.PHO         Potisk na stranì souèástí
+M1.PHO         Maska na stranì souèástí
+V1.PHO         Motiv mìdi na stranì souèástí (standard, 35um po prokovení)
+V2.PHO         Motiv mìdi na starnì spojù (standard, 35um po prokovení)
+M2.PHO         Maska na stranì spojù (obsahuje SMD souèástky)
+P2.PHO         Planžeta pro tisk cínové pasty pro SMD souèásti
+
+Motiv byl navrhován s izolaèními mezerami 7 MILS (0.178mm).
+Na celkem 6 místech je izolaèní mezera menší (vesmìs konektory),
+styk 2 kulatých ploch. Možno ponechat nebo oøíznout.
+

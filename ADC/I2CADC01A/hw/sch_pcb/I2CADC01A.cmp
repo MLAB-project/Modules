@@ -1,0 +1,234 @@
+Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 26. 8. 2015 11:17:57
+
+BeginCmp
+TimeStamp = /554603CA;
+Reference = C1;
+ValeurCmp = 100nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /55460399;
+Reference = C2;
+ValeurCmp = 100nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /55461125;
+Reference = C3;
+ValeurCmp = 10uF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /554611EB;
+Reference = C4;
+ValeurCmp = 100nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5549E770;
+Reference = C5;
+ValeurCmp = 10uF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5549E77C;
+Reference = C6;
+ValeurCmp = 100nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /55C44713;
+Reference = C7;
+ValeurCmp = 100nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /55B503B6;
+Reference = C8;
+ValeurCmp = 22nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /55460DCE;
+Reference = D1;
+ValeurCmp = M4;
+IdModule  = Mlab_D:SMA_Standard;
+EndCmp
+
+BeginCmp
+TimeStamp = /5546045E;
+Reference = D2;
+ValeurCmp = BAT46;
+IdModule  = Mlab_D:MiniMELF_Standard;
+EndCmp
+
+BeginCmp
+TimeStamp = /55460409;
+Reference = D3;
+ValeurCmp = BAT46;
+IdModule  = Mlab_D:MiniMELF_Standard;
+EndCmp
+
+BeginCmp
+TimeStamp = /55461701;
+Reference = D4;
+ValeurCmp = LM4041-adj;
+IdModule  = Mlab_IO:SOT-23;
+EndCmp
+
+BeginCmp
+TimeStamp = /55460C17;
+Reference = J1;
+ValeurCmp = JUMP_3X2;
+IdModule  = Mlab_Pin_Headers:Straight_2x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /5547082E;
+Reference = J3;
+ValeurCmp = CONN_2;
+IdModule  = Mlab_Pin_Headers:Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /55461EC0;
+Reference = J4;
+ValeurCmp = CONN_3;
+IdModule  = Mlab_Pin_Headers:Straight_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /55463896;
+Reference = J5;
+ValeurCmp = JUMP2_2x1;
+IdModule  = Mlab_Pin_Headers:Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /554638DE;
+Reference = J6;
+ValeurCmp = JUMP2_2x1;
+IdModule  = Mlab_Pin_Headers:Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /55462947;
+Reference = J7;
+ValeurCmp = JUMP_5X2;
+IdModule  = Mlab_Pin_Headers:Straight_2x05;
+EndCmp
+
+BeginCmp
+TimeStamp = /5549AD37;
+Reference = J8;
+ValeurCmp = CONN_2;
+IdModule  = Mlab_Pin_Headers:Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /5549B026;
+Reference = L1;
+ValeurCmp = BLM21PG300SN1D;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5547153E;
+Reference = M1;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5547175D;
+Reference = M2;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5547179E;
+Reference = M3;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /554717EE;
+Reference = M4;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5546028B;
+Reference = P1;
+ValeurCmp = _;
+IdModule  = Mlab_Con:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /55460302;
+Reference = P2;
+ValeurCmp = _;
+IdModule  = Mlab_Con:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /55460320;
+Reference = R1;
+ValeurCmp = 10k;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /55460379;
+Reference = R2;
+ValeurCmp = 10k;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /55461894;
+Reference = R3;
+ValeurCmp = 3K3;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /55462BF7;
+Reference = R4;
+ValeurCmp = 10k;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /55462CAD;
+Reference = R5;
+ValeurCmp = 10k;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /55C450C3;
+Reference = R6;
+ValeurCmp = 0R;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /55460260;
+Reference = U1;
+ValeurCmp = LTC2485;
+IdModule  = Housings_DFN_QFN:DFN-10-1EP_3x3mm_Pitch0.5mm;
+EndCmp
+
+EndListe

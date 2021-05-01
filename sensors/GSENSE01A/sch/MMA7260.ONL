@@ -1,0 +1,392 @@
+(PCB MMA7260
+ (description
+  (timeStamp "2009 11 27 23 03 39")
+  (program "CAPTURE.EXE" (Version "9.10.157"))
+  (source "Original data from OrCAD/CAPTURE schematic")
+  (title "Akcelerometr")
+  (date "Saturday, November 28, 2009")
+  (document "MMA7260")
+  (revision "A")
+  (organization "")
+  (address1 "")
+  (address2 "")
+  (address3 "")
+  (address4 "")
+  (partvaluecombine "{Value}")
+  (pcbfootprintcombine "{Device},{Value}@{PCB Footprint}"))
+ (structure )
+ (placement
+  (component JUMP2X3_CON
+   (place J1
+    (property 
+     ("PCB Footprint" JUMP2X3)
+     (Device JUMP2X3)
+     (timestamp 0000071A)
+     ("Source Package" JUMP2X3_CON)
+     (Value JUMP2X3)))
+   (place J5
+    (property 
+     ("PCB Footprint" JUMP2X3)
+     (Device JUMP2X3)
+     (timestamp 00000BA2)
+     ("Source Package" JUMP2X3_CON)
+     (Value JUMP2X3)))
+   (place J6
+    (property 
+     ("PCB Footprint" JUMP2X3)
+     (Device JUMP2X3)
+     (timestamp 00000C12)
+     ("Source Package" JUMP2X3_CON)
+     (Value JUMP2X3))))
+  (component 1N4007SMD
+   (place D1
+    (property 
+     ("PCB Footprint" SMA)
+     (Device D)
+     (timestamp 000001CA)
+     ("Source Package" 1N4007SMD)
+     (Value 1N4007SMD))))
+  (component JUMP2X1
+   (place J4
+    (property 
+     ("PCB Footprint" JUMP2X1)
+     (Device JUMP2X1)
+     (timestamp 0000097F)
+     ("Source Package" JUMP2X1)
+     (Value JUMP2X1))))
+  (component JUMP2X2
+   (place J3
+    (property 
+     ("PCB Footprint" JUMP2X2)
+     (Device JUMP2X2)
+     (timestamp 0000097D)
+     ("Source Package" JUMP2X2)
+     (Value JUMP2X2))))
+  (component R0805
+   (place R1
+    (property 
+     ("PCB Footprint" R0805)
+     (Device R)
+     (timestamp 00000019)
+     ("Source Package" R0805)
+     (Value 1k)))
+   (place R2
+    (property 
+     ("PCB Footprint" R0805)
+     (Device R)
+     (timestamp 0000001B)
+     ("Source Package" R0805)
+     (Value 1k)))
+   (place R3
+    (property 
+     ("PCB Footprint" R0805)
+     (Device R)
+     (timestamp 00000A26)
+     ("Source Package" R0805)
+     (Value 1k))))
+  (component LM1117MPX_SOT223
+   (place U4
+    (property 
+     ("PCB Footprint" SOT223)
+     (Device SOT223)
+     (timestamp 000005FE)
+     ("Source Package" LM1117MPX_SOT223)
+     (Value LM1117MPX))))
+  (component C0805
+   (place C1
+    (property 
+     ("PCB Footprint" C0805)
+     (Device C)
+     (timestamp 00000220)
+     ("Source Package" C0805)
+     (Value 100nF)))
+   (place C3
+    (property 
+     ("PCB Footprint" C0805)
+     (Device C)
+     (timestamp 00000013)
+     ("Source Package" C0805)
+     (Value 100nF)))
+   (place C4
+    (property 
+     ("PCB Footprint" C0805)
+     (Device C)
+     (timestamp 00000015)
+     ("Source Package" C0805)
+     (Value 100nF)))
+   (place C5
+    (property 
+     ("PCB Footprint" C0805)
+     (Device C)
+     (timestamp 00000017)
+     ("Source Package" C0805)
+     (Value 100nF)))
+   (place C6
+    (property 
+     ("PCB Footprint" C0805)
+     (Device C)
+     (timestamp 00000A28)
+     ("Source Package" C0805)
+     (Value 100nF))))
+  (component HOLE_M3
+   (place M1
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 00000C53)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3)))
+   (place M2
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 00000C55)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3)))
+   (place M3
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 00000C57)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3)))
+   (place M4
+    (property 
+     ("PCB Footprint" HOLE_M3)
+     (Device PAD)
+     (timestamp 00000C59)
+     ("Source Package" HOLE_M3)
+     (Value HOLE_M3))))
+  (component "C-ELYTA"
+   (place C2
+    (property 
+     ("PCB Footprint" ELYTC)
+     (Device "C-ELYT")
+     (timestamp 00000438)
+     ("Source Package" "C-ELYTA")
+     (Value 100uF))))
+  (component MMA6260Q_2
+   (place U1
+    (property 
+     ("PCB Footprint" MMA7260)
+     (Device MMA7260)
+     (timestamp 00000021)
+     ("Source Package" MMA6260Q_2)
+     (Value MMA7260Q)))))
+ (library
+  (image MMA6260Q_2
+   (property 
+    (sourcelib D:\\MLAB\\MODULES\\SENSORS\\MMA7260\\SCH\\MMA7260.DSN))
+   (pin 999 3
+    (property 
+     (pinname VDD)
+     (pintype 4)))
+   (pin 999 4
+    (property 
+     (pinname VSS)
+     (pintype 4)))
+   (pin 999 12
+    (property 
+     (pinname #Sleep)
+     (pintype 0)))
+   (pin 999 14
+    (property 
+     (pinname YOUT)
+     (pintype 2)))
+   (pin 999 15
+    (property 
+     (pinname XOUT)
+     (pintype 2)))
+   (pin 999 13
+    (property 
+     (pinname ZOUT)
+     (pintype 2)))
+   (pin 999 1
+    (property 
+     (pinname GS1)
+     (pintype 0)))
+   (pin 999 2
+    (property 
+     (pinname GS2)
+     (pintype 0))))
+  (image R0805
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_RLC.OLB)
+    (Device R))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4))))
+  (image LM1117MPX_SOT223
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\POWER.OLB)
+    (Device SOT223))
+   (pin 999 2
+    (property 
+     (pinname IN)
+     (pintype 4)))
+   (pin 999 3
+    (property 
+     (pinname OUT)
+     (pintype 4)))
+   (pin 999 1
+    (property 
+     (pinname ADJ)
+     (pintype 4)))
+   (pin 999 4
+    (property 
+     (pinname OUT)
+     (pintype 4))))
+  (image C0805
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_RLC.OLB)
+    (Device C))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4))))
+  (image "C-ELYTA"
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_RLC.OLB)
+    (Device "C-ELYT"))
+   (pin 999 A
+    (property 
+     (pinname A)
+     (pintype 4)))
+   (pin 999 C
+    (property 
+     (pinname C)
+     (pintype 4))))
+  (image HOLE_M3
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\PAD.OLB)
+    (Device PAD))
+   (pin 999 1
+    (property 
+     (pinname PIN)
+     (pintype 4))))
+  (image JUMP2X3_CON
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\JUMP.OLB)
+    (Device JUMP2X3))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4)))
+   (pin 999 3
+    (property 
+     (pinname 3)
+     (pintype 4)))
+   (pin 999 4
+    (property 
+     (pinname 4)
+     (pintype 4)))
+   (pin 999 5
+    (property 
+     (pinname 5)
+     (pintype 4)))
+   (pin 999 6
+    (property 
+     (pinname 6)
+     (pintype 4))))
+  (image JUMP2X2
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\JUMP.OLB)
+    (Device JUMP2X2))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4)))
+   (pin 999 3
+    (property 
+     (pinname 3)
+     (pintype 4)))
+   (pin 999 4
+    (property 
+     (pinname 4)
+     (pintype 4))))
+  (image JUMP2X1
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\JUMP.OLB)
+    (Device JUMP2X1))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4))))
+  (image 1N4007SMD
+   (property 
+    (sourcelib C:\\LIBRARY\\ORCAD9X\\COM_D.OLB)
+    (Device D))
+   (pin 999 A
+    (property 
+     (pinname A)
+     (pintype 4)))
+   (pin 999 C
+    (property 
+     (pinname C)
+     (pintype 4)))))
+ (network
+  (net N02443
+   (pins
+     J3-2 U1-1))
+  (net N02453
+   (pins
+     J3-4 U1-2))
+  (net N02433
+   (pins
+     J4-2 U1-12))
+  (net N02636
+   (pins
+     R3-2 C6-2 J5-5 J5-6))
+  (net N02626
+   (pins
+     R3-1 U1-13))
+  (net GND
+    (property 
+     (nettype S))
+   (pins
+     M4-1 D1-A M3-1 C6-1 M1-1 M2-1 C5-1 U4-1 J1-1
+     J1-2 J1-5 J1-6 J6-5 J6-6 J6-1 J6-2 U1-4 C4-1
+     C1-1 C2-C C3-1))
+  (net N01864
+   (pins
+     J1-3 J1-4 D1-C C1-2 U4-2))
+  (net N00112
+   (pins
+     R1-2 J5-1 J5-2 C4-2))
+  (net 3.3V
+    (property 
+     (nettype S))
+   (pins
+     U1-3 C3-2 J3-1 J3-3 J4-1 C2-A J6-3 J6-4 U4-4
+     U4-3))
+  (net N02216
+   (pins
+     C5-2 R2-2 J5-3 J5-4))
+  (net N02282
+   (pins
+     R1-1 U1-15))
+  (net N02292
+   (pins
+     U1-14 R2-1)))
+)

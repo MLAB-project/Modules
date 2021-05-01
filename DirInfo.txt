@@ -1,0 +1,41 @@
+//
+// Toto je popisný soubor pro popis obsahu adresáře
+//
+
+[InfoShortDescription.en]
+  Overview of MLAB Modules
+
+[InfoShortDescription.cs]
+  Přehled modulů MLAB
+  
+[InfoLongDescription.en]
+  You can find an overview of MLAB Modules here. They are organised
+  to groups by their function.
+  
+[InfoLongDescription.cs]
+  Moduly jsou univerzální "kostky" do stavebnice MLAB. Protože jich je
+  hodně, jsou dále rozčleněny po skupinách.
+
+[SortPreferences]
+  AVR
+  ARM
+  PIC
+  CommIR
+  CommRF
+  CommSerial
+  Clock
+  TDC
+  PowerSupply
+  PowerSW
+  H_Bridge
+  Sensors
+  HumanInterfaces
+  Measuring
+  Memory
+  Audio
+  OpAmps
+  ADconverters
+  Universal
+  Mechanical
+
+[End]

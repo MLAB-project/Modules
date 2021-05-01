@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> Programování AVR </title>
+    <meta name="keywords" content="stavebnice MLAB programování procesoru ATMEL ATmega8">
+    <meta name="description" content="Projekt MLAB, programování procesurů AVR ATmega8">
+    <!-- AUTOINCLUDE START "Page/Head.cs.ihtml" DO NOT REMOVE -->
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB.css" type="text/css" title="MLAB základní styl">
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB_Print.css" type="text/css" media="print">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../Web/PIC/MLAB.ico">
+    <script type="text/javascript" src="../../../../../Web/JS/MLAB_Menu.js"></script>
+    <!-- AUTOINCLUDE END -->
+  </head>
+
+  <body lang="cs">
+
+    <!-- AUTOINCLUDE START "Page/Header.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== HLAVICKA ============== -->
+    <div class="Header">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawHeader();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- AUTOINCLUDE START "Page/Menu.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== MENU ============== -->
+    <div class="Menu">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawMenu();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) menu je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- ============== TEXT ============== -->
+    <div class="Text">
+      <p class="Title">
+        Programování procesorů ATMEL AVR
+      </p>
+      <p class=Autor>
+        Milan Horkel
+      </p>
+      <p class="Subtitle">
+        Procesor bez programu je jako motor bez paliva. Tento text uvádí
+        přehled potřebných nástrojů pro napsání programu pro procesory AVR a
+        pro jejich naprogramování.
+      </p>
+      <p>
+        <a href="../Programovani AVR.cs.pdf"><img class="NoBorder"
+           src="../../../../../Web/PIC/FileIco_PDF.ico"
+           alt="Acrobat">&nbsp;PDF verze</a>
+      </p>
+
+      <h1> Programování procesoru </h1>
+
+      <p>
+        Aby jednočipový mikrořadič dělal to, co od něho chceme je třeba udělat
+        dvě věci:
+      </p>
+
+      <ul>
+        <li>Napsat program pro procesor a přeložit jej do strojového kódu </li>
+        <li>Výsledný strojový kód naprogramovat do cílového procesoru </li>
+      </ul>
+
+      <p>
+        Velkou výhodou procesorů ATMEL AVR je skutečnost, že obě výše zmíněné
+        činnosti můžeme zajistit pomocí free nástrojů a experimentovat tak
+        můžeme bez dalších nákladů na vývojové nástroje. Část prostředků
+        pochází přímo od firmy ATMEL a část od GNU komunity. Jsou k dispozici
+        tyto nástroje:
+      </p>
+
+      <ul>
+        <li>Integrované prostředí a simulátor procesorů (ATMEL) </li>
+        <li>Překladač jazyka C (GNU) </li>
+        <li>Programátor procesorů (GNU) </li>
+        <li>Programovací kabel (GNU) </li>
+      </ul>
+
+      <p>
+        Příslušné nástroje jsou pro Windows 98 až Windows XP, GNU nástroje
+        samozřejmě i pro LINUX. Nástroje jsou přátelské a bez problémů funkční.
+        Kromě těchto základních komponent jsou k dispozici i ladící nástroje.
+      </p>
+
+      <p>
+        Kromě volných nástrojů existuje samozřejmě i spousta vysoce kvalitních
+        komerčních nástrojů renovovaných firem. Těmi se zde nebudeme zabývat i
+        když pro vážnou práci mohou být vhodné (kvalita kódu, záruky, technická
+        podpora, dokumentace a podobně).
+      </p>
+
+      <h2> Volné nástroje </h2>
+
+      <h3> Integrované prostředí – AVR Studio </h3>
+
+      <p>
+        <a href="http://www.atmel.com/">http://www.atmel.com</a>
+      </p>
+
+      <p>
+        Jedná se o integrované vývojové prostředí pro vývoj programů pro
+        procesory ATMEL AVR (assembler, linker) s možností integrace překladačů
+        jazyka C/C++. Prostředí obsahuje rovněž simulátor procesorů AVR a přímo
+        podporuje základní druhy ladících nástrojů ATMEL.
+      </p>
+
+      <p>
+        Do AVR studia lze přímo integrovat GNU překladač jazyka C/C++ pro AVR
+        procesory. <b>Je vhodné nejprve nainstalovat WinAVR a teprve poté
+        instalovat AVR Studio.</b>
+      </p>
+
+      <p>
+        Balík AVR Studio potřebuje ke své činnosti IE5.0 (raději 6.0, nebo
+        balík XML od MS).
+      </p>
+
+      <h3> Překladač C/C++ – WinAVR </h3>
+
+      <p>
+        <a href="http://winavr.sourceforge.net/">http://winavr.sourceforge.net</a>
+      </p>
+
+      <p>
+        Toto je připravený balík GNU nástrojů pro AVR procesory připravený pro
+        instalaci do Windows (používá knihovny CIGWIN). Při instalaci balíku na
+        WindowsNT/2000/XP je třeba instalaci provádět pod účtem administrátora
+        jinak se nenastaví cesta do BIN adresáře tohoto balíku.
+      </p>
+
+      <p>
+        Překladač může fungovat sám o sobě nebo se může integrovat s balíkem
+        AVR Studio.
+      </p>
+
+      <h3> AVRDUDE – programátor AVR procesorů </h3>
+
+      <p>
+        <a href="http://savannah.nongnu.org/projects/avrdude">http://savannah.nongnu.org/projects/avrdude</a><br>
+        <a href="http://sourceforge.net/projects/avrdude-gui">http://sourceforge.net/projects/avrdude-gui</a>
+      </p>
+
+      <p>
+        Program AVRDUDE je jeden z volných programátorů procesorů AVR a je
+        součástí balíku WinAVR. K programu je připravena grafická nadstavba
+        AVRDUDE-GUI, která usnadňuje použití programu.
+      </p>
+
+      <p>
+        Program má svůj konfigurační soubor, ve kterém jsou nadefinovány jednak
+        parametry mnoha programovacích kabelů (včetně čísel vývodů LPT portu
+        pro jednotlivé funkce) tak i parametry jednotlivých procesorů.
+      </p>
+
+      <h4> Konfigurační slova </h4>
+
+      <p>
+        Současná verze má drobný problém při programování a čtení
+        konfiguračních slov procesoru z grafické nadstavby (grafická nadstavba
+        není ještě dodělaná a dle slov autora možná vznikne nová verze
+        programu, která bude rovnou plně grafická). Při čtení slov se nepřenáší
+        přečtená data do grafického programu a při zápisu se zadané hexa
+        parametry chybně chápou jako jména souborů. Naštěstí se zápis do
+        konfiguračních slov procesoru neprovádí často.
+      </p>
+
+      <h4> Čtení konfiguračních slov </h4>
+
+      <p>
+        Konfigurační slova nelze číst z grafické nadstavby ale grafickou
+        nadstavbu můžeme použít pro sestavení příkazové řádky, kterou pak jen
+        opravíme. Viz příklad, opravy jsou zvýrazněny:
+      </p>
+
+      <p>
+        <samp>"avrdude" -p m8 -c picoweb -P lpt1 -U lfuse:r:con:<b>i</b> -U hfuse:r:con:<b>i</b></samp>
+      </p>
+
+      <p>
+        Přečtená data jsou ve formátu INTEL HEX (parametr i):
+      </p>
+
+      <p>
+        <samp>:01000000<b>EF</b>10</samp> -- lfuse (spodní konfigurační slovo)<br>
+        <samp> :00000001FF<br>
+               :01000000<b>D9</b>26</samp> -- hfuse (horní konfigurační slovo)<br>
+        <samp> :00000001FF</samp>
+      </p>
+
+      <p>
+        Příčinou je to, že program AVRDUDE vypisuje všechno do standardního
+        chybového výstupu a tak výpisy na zařízení CON pak padají do kanálu
+        místo do AVRDUDE-GUI (který chytá jen chybové výstupy).
+      </p>
+
+      <h4> Programování konfiguračních slov </h4>
+
+      <p>
+        Pro přeprogramování konfiguračního slova vyžaduje AVRDUDE dodatečný
+        parametr „-u“. Je to z bezpečnostních důvodů aby nedošlo k
+        přeprogramování omylem. Pro zápis není třeba příkazovou řádku spouštět
+        z konsole, stačí ji jen opravit dle příkladu:
+      </p>
+
+      <p>
+        <samp>"avrdude" -p m8 -c picoweb -P lpt1 -U lfuse:w:<b>0x</b>ef:<b>m</b></samp>
+      </p>
+
+      <p>
+        Doplněný parametr zajistí, že místo jména souboru je parametr chápán
+        přímo jako hodnota (nutno doplnit 0x protože je hodnota hexadecimální).
+        Výše uvedená řádka naprogramuje do procesoru ATmega8 pomocí kabelu typu
+        picoweb přes LPT1 spodní konfigurační slovo na hodnotu 0xEF (krystalový
+        oscilátor).
+      </p>
+
+      <h3> Paralelní programovací kabel </h3>
+
+      <p>
+        Nejjednodušší programátor procesorů AVR sestává z kabelu, který se
+        zapojuje do LPT portu počítače na jednom konci a do programovacího
+        konektoru u procesoru na konci druhém. Kromě drátů neobsahuje žádnou
+        další elektroniku. Jedním z možných kabelů je tento:
+      </p>
+
+      <p>
+        <img width="258" height="326" src="Programovani AVR/Programator.gif"
+         alt="Schema programátoru">
+      </p>
+
+      <p>
+        Propojovací dráty je vhodné udělat přiměřené délky cca 1/2 metru.
+        Nezapomeňte výrazně označit vývod 1 ISP konektoru protože konektor nemá
+        žádný klíč.
+      </p>
+
+      <p>
+        Při použití se zadává v programu AVRDUDE jako PicoWeb kabel.
+      </p>
+
+      <p>
+        Pokud máte nějaký jiný kabel/programátor je možné kouknout se do
+        konfiguračního souboru programu AVRDUDE a vybrat vhodný kabel nebo svůj
+        kabel doplnit do konfigurace.
+      </p>
+
+      <h2> Konfigurační slova procesoru </h2>
+
+      <p>
+        Konfigurační slova procesoru určují (mimo jiné) jaký se použije
+        oscilátor pro procesor. Pokud skutečná konfigurace neodpovídá
+        naprogramovanému slovu (například je nastaven externí krystalový
+        oscilátor ale krystal není připojen) procesor se nerozběhne a nepůjde
+        ani přeprogramovat. Pozor tedy při programování konfiguračních slov
+        procesoru.
+      </p>
+
+      <p>
+        Jednotlivé procesory mají různá konfigurační slova a různý počet
+        konfiguračních slov (například spodní a horní označená lfuse a hfuse).
+      </p>
+
+    </div>
+
+    <!-- AUTOINCLUDE START "Page/Footer.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== PATIČKA ============== -->
+    <div class="Footer">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawFooter();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+  </body>
+</html>

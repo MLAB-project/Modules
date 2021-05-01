@@ -1,0 +1,2325 @@
+CCS PCM C Compiler, Version 4.106, 47914               02-4-13 17:32
+
+               Filename: C:\Users\Honza\Documents\pic\I2C_baterka\main.lst
+
+               ROM used: 2455 words (30%)
+                         Largest free fragment is 2048
+               RAM used: 8 (2%) at main() level
+                         56 (15%) worst case
+               Stack:    2 locations
+
+*
+0000:  MOVLW  08
+0001:  MOVWF  0A
+0002:  GOTO   000
+0003:  NOP
+.................... #include "C:\Users\Honza\Documents\pic\I2C_magnetometr\main.h" 
+.................... #include <16F887.h> 
+.................... //////// Standard Header file for the PIC16F887 device //////////////// 
+.................... #device PIC16F887 
+.................... #list 
+....................  
+.................... #device adc=8 
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES INTRC                 	//Internal RC Osc 
+.................... #FUSES NOPUT                 	//No Power Up Timer 
+.................... #FUSES MCLR                  	//Master Clear pin enabled 
+.................... #FUSES NOPROTECT             	//Code not protected from reading 
+.................... #FUSES NOCPD                 	//No EE protection 
+.................... #FUSES NOBROWNOUT            	//No brownout reset 
+.................... #FUSES IESO                  	//Internal External Switch Over mode enabled 
+.................... #FUSES FCMEN                 	//Fail-safe clock monitor enabled 
+.................... #FUSES NOLVP                 	//No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES NODEBUG               	//No Debug mode for ICD 
+.................... #FUSES NOWRT                 	//Program memory not write protected 
+.................... #FUSES BORV40                	//Brownout reset at 4.0V 
+....................  
+.................... #use delay(clock=8000000) 
+*
+012B:  MOVLW  4A
+012C:  MOVWF  04
+012D:  BCF    03.7
+012E:  MOVF   00,W
+012F:  BTFSC  03.2
+0130:  GOTO   13E
+0131:  MOVLW  02
+0132:  MOVWF  78
+0133:  CLRF   77
+0134:  DECFSZ 77,F
+0135:  GOTO   134
+0136:  DECFSZ 78,F
+0137:  GOTO   133
+0138:  MOVLW  97
+0139:  MOVWF  77
+013A:  DECFSZ 77,F
+013B:  GOTO   13A
+013C:  DECFSZ 00,F
+013D:  GOTO   131
+013E:  BSF    0A.3
+013F:  BCF    0A.4
+0140:  GOTO   23A (RETURN)
+....................  
+....................  
+.................... #define EEPROM_SDA  PIN_B0 
+.................... #define EEPROM_SCL  PIN_B1 
+.................... #use i2c(master, sda=EEPROM_SDA, scl=EEPROM_SCL) 
+*
+00C4:  MOVLW  08
+00C5:  MOVWF  78
+00C6:  NOP
+00C7:  BCF    06.1
+00C8:  BSF    03.5
+00C9:  BCF    06.1
+00CA:  NOP
+00CB:  BCF    03.5
+00CC:  RLF    49,F
+00CD:  BCF    06.0
+00CE:  BTFSS  03.0
+00CF:  GOTO   0D3
+00D0:  BSF    03.5
+00D1:  BSF    06.0
+00D2:  BCF    03.5
+00D3:  BTFSC  03.0
+00D4:  GOTO   0D8
+00D5:  BSF    03.5
+00D6:  BCF    06.0
+00D7:  BCF    03.5
+00D8:  BSF    03.5
+00D9:  BSF    06.1
+00DA:  BCF    03.5
+00DB:  BTFSS  06.1
+00DC:  GOTO   0DB
+00DD:  DECFSZ 78,F
+00DE:  GOTO   0C6
+00DF:  NOP
+00E0:  BCF    06.1
+00E1:  BSF    03.5
+00E2:  BCF    06.1
+00E3:  NOP
+00E4:  BSF    06.0
+00E5:  NOP
+00E6:  NOP
+00E7:  BSF    06.1
+00E8:  BCF    03.5
+00E9:  BTFSS  06.1
+00EA:  GOTO   0E9
+00EB:  CLRF   78
+00EC:  NOP
+00ED:  BTFSC  06.0
+00EE:  BSF    78.0
+00EF:  BCF    06.1
+00F0:  BSF    03.5
+00F1:  BCF    06.1
+00F2:  BCF    03.5
+00F3:  BCF    06.0
+00F4:  BSF    03.5
+00F5:  BCF    06.0
+00F6:  BCF    03.5
+00F7:  RETURN
+00F8:  MOVLW  08
+00F9:  MOVWF  4A
+00FA:  MOVF   77,W
+00FB:  MOVWF  4B
+00FC:  BSF    03.5
+00FD:  BSF    06.0
+00FE:  NOP
+00FF:  BSF    06.1
+0100:  BCF    03.5
+0101:  BTFSS  06.1
+0102:  GOTO   101
+0103:  BTFSC  06.0
+0104:  BSF    03.0
+0105:  BTFSS  06.0
+0106:  BCF    03.0
+0107:  RLF    78,F
+0108:  NOP
+0109:  BSF    03.5
+010A:  BCF    06.1
+010B:  BCF    03.5
+010C:  BCF    06.1
+010D:  DECFSZ 4A,F
+010E:  GOTO   0FC
+010F:  BSF    03.5
+0110:  BSF    06.0
+0111:  NOP
+0112:  BCF    03.5
+0113:  BCF    06.0
+0114:  MOVF   4B,W
+0115:  BTFSC  03.2
+0116:  GOTO   11A
+0117:  BSF    03.5
+0118:  BCF    06.0
+0119:  BCF    03.5
+011A:  NOP
+011B:  BSF    03.5
+011C:  BSF    06.1
+011D:  BCF    03.5
+011E:  BTFSS  06.1
+011F:  GOTO   11E
+0120:  NOP
+0121:  BCF    06.1
+0122:  BSF    03.5
+0123:  BCF    06.1
+0124:  NOP
+0125:  BCF    03.5
+0126:  BCF    06.0
+0127:  BSF    03.5
+0128:  BCF    06.0
+0129:  BCF    03.5
+012A:  RETURN
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_B3,rcv=PIN_B2,bits=8) //rcv TXD xmit RXD 
+*
+005A:  BSF    03.5
+005B:  BCF    06.3
+005C:  BCF    03.5
+005D:  BCF    06.3
+005E:  MOVLW  08
+005F:  MOVWF  78
+0060:  GOTO   061
+0061:  NOP
+0062:  BSF    78.7
+0063:  GOTO   072
+0064:  BCF    78.7
+0065:  RRF    52,F
+0066:  BTFSC  03.0
+0067:  BSF    06.3
+0068:  BTFSS  03.0
+0069:  BCF    06.3
+006A:  BSF    78.6
+006B:  GOTO   072
+006C:  BCF    78.6
+006D:  DECFSZ 78,F
+006E:  GOTO   065
+006F:  GOTO   070
+0070:  NOP
+0071:  BSF    06.3
+0072:  MOVLW  3F
+0073:  MOVWF  04
+0074:  DECFSZ 04,F
+0075:  GOTO   074
+0076:  NOP
+0077:  BTFSC  78.7
+0078:  GOTO   064
+0079:  BTFSC  78.6
+007A:  GOTO   06C
+007B:  RETURN
+....................  
+....................  
+.................... void main() 
+.................... { 
+*
+0059:  DATA 00,00
+*
+0800:  CLRF   04
+0801:  BCF    03.7
+0802:  MOVLW  1F
+0803:  ANDWF  03,F
+0804:  MOVLW  71
+0805:  BSF    03.5
+0806:  MOVWF  0F
+0807:  MOVF   0F,W
+0808:  BCF    06.3
+0809:  BCF    03.5
+080A:  BSF    06.3
+080B:  BSF    03.5
+080C:  BSF    03.6
+080D:  MOVF   09,W
+080E:  ANDLW  C0
+080F:  MOVWF  09
+0810:  BCF    03.6
+0811:  BCF    1F.4
+0812:  BCF    1F.5
+0813:  MOVLW  00
+0814:  BSF    03.6
+0815:  MOVWF  08
+0816:  BCF    03.5
+0817:  CLRF   07
+0818:  CLRF   08
+0819:  CLRF   09
+....................  
+....................    setup_adc_ports(NO_ANALOGS|VSS_VDD); 
+*
+081D:  BSF    03.5
+081E:  BSF    03.6
+081F:  MOVF   09,W
+0820:  ANDLW  C0
+0821:  MOVWF  09
+0822:  BCF    03.6
+0823:  BCF    1F.4
+0824:  BCF    1F.5
+0825:  MOVLW  00
+0826:  BSF    03.6
+0827:  MOVWF  08
+....................    setup_adc(ADC_CLOCK_DIV_2); 
+0828:  BCF    03.5
+0829:  BCF    03.6
+082A:  BCF    1F.6
+082B:  BCF    1F.7
+082C:  BSF    03.5
+082D:  BCF    1F.7
+082E:  BCF    03.5
+082F:  BSF    1F.0
+....................    setup_spi(SPI_SS_DISABLED); 
+0830:  BCF    14.5
+0831:  BCF    20.5
+0832:  MOVF   20,W
+0833:  BSF    03.5
+0834:  MOVWF  07
+0835:  BCF    03.5
+0836:  BSF    20.4
+0837:  MOVF   20,W
+0838:  BSF    03.5
+0839:  MOVWF  07
+083A:  BCF    03.5
+083B:  BCF    20.3
+083C:  MOVF   20,W
+083D:  BSF    03.5
+083E:  MOVWF  07
+083F:  MOVLW  01
+0840:  BCF    03.5
+0841:  MOVWF  14
+0842:  MOVLW  00
+0843:  BSF    03.5
+0844:  MOVWF  14
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_1); 
+0845:  MOVF   01,W
+0846:  ANDLW  C7
+0847:  IORLW  08
+0848:  MOVWF  01
+....................    setup_timer_1(T1_DISABLED); 
+0849:  BCF    03.5
+084A:  CLRF   10
+....................    setup_timer_2(T2_DISABLED,0,1); 
+084B:  MOVLW  00
+084C:  MOVWF  78
+084D:  MOVWF  12
+084E:  MOVLW  00
+084F:  BSF    03.5
+0850:  MOVWF  12
+....................    setup_ccp1(CCP_OFF); 
+0851:  BCF    03.5
+0852:  BSF    20.2
+0853:  MOVF   20,W
+0854:  BSF    03.5
+0855:  MOVWF  07
+0856:  BCF    03.5
+0857:  CLRF   17
+0858:  BSF    03.5
+0859:  CLRF   1B
+085A:  CLRF   1C
+085B:  MOVLW  01
+085C:  MOVWF  1D
+....................    setup_comparator(NC_NC_NC_NC);// This device COMP currently not supported by the PICWizard 
+085D:  BCF    03.5
+085E:  BSF    03.6
+085F:  CLRF   07
+0860:  CLRF   08
+0861:  CLRF   09
+....................  
+.................... printf("Simple Thermomether  \r\n",); 
+0862:  MOVLW  04
+0863:  MOVWF  0D
+0864:  MOVLW  00
+0865:  MOVWF  0F
+0866:  BCF    0A.3
+0867:  BCF    03.6
+0868:  GOTO   07C
+0869:  BSF    0A.3
+.................... unsigned int8 XH,XL,YH,YL,ZH,ZL,INTEP,INTEP1, NAP,NAP1, PROUD,PROUD1,KAPZ,KAPZ1,KAPC,KAPC1, STAV,STAV1; 
+.................... unsigned int8 XW,YW,ZW,AW; 
+....................  
+.................... int16 data1; 
+.................... int16 data2; 
+.................... int16 data3; 
+.................... int16 data4; 
+.................... int16 data5; 
+.................... int16 data6; 
+.................... int16 data7; 
+.................... int16 data8; 
+.................... int16 data9; 
+....................    
+....................   while(TRUE) 
+....................  {  
+....................    XL=0; 
+086A:  CLRF   22
+.................... XH= 0; 
+086B:  CLRF   21
+.................... YL= 0; 
+086C:  CLRF   24
+.................... YH= 0; 
+086D:  CLRF   23
+.................... ZL= 0; 
+086E:  CLRF   26
+.................... ZH= 0; 
+086F:  CLRF   25
+....................      
+....................    i2c_start(); 
+0870:  BSF    03.5
+0871:  BSF    06.0
+0872:  NOP
+0873:  BSF    06.1
+0874:  NOP
+0875:  BCF    03.5
+0876:  BCF    06.0
+0877:  BSF    03.5
+0878:  BCF    06.0
+0879:  NOP
+087A:  BCF    03.5
+087B:  BCF    06.1
+087C:  BSF    03.5
+087D:  BCF    06.1
+....................    I2C_Write(0x3C); 
+087E:  MOVLW  3C
+087F:  BCF    03.5
+0880:  MOVWF  49
+0881:  BCF    0A.3
+0882:  CALL   0C4
+0883:  BSF    0A.3
+....................    I2C_write(0x03); 
+0884:  MOVLW  03
+0885:  MOVWF  49
+0886:  BCF    0A.3
+0887:  CALL   0C4
+0888:  BSF    0A.3
+....................    i2c_stop(); 
+0889:  BSF    03.5
+088A:  BCF    06.0
+088B:  NOP
+088C:  BSF    06.1
+088D:  BCF    03.5
+088E:  BTFSS  06.1
+088F:  GOTO   08E
+0890:  NOP
+0891:  GOTO   092
+0892:  NOP
+0893:  BSF    03.5
+0894:  BSF    06.0
+0895:  NOP
+....................    i2c_start(); 
+0896:  BSF    06.0
+0897:  NOP
+0898:  BSF    06.1
+0899:  NOP
+089A:  BCF    03.5
+089B:  BCF    06.0
+089C:  BSF    03.5
+089D:  BCF    06.0
+089E:  NOP
+089F:  BCF    03.5
+08A0:  BCF    06.1
+08A1:  BSF    03.5
+08A2:  BCF    06.1
+....................    I2C_Write(0x3D); 
+08A3:  MOVLW  3D
+08A4:  BCF    03.5
+08A5:  MOVWF  49
+08A6:  BCF    0A.3
+08A7:  CALL   0C4
+08A8:  BSF    0A.3
+....................    XH=i2c_read(0); 
+08A9:  CLRF   77
+08AA:  BCF    0A.3
+08AB:  CALL   0F8
+08AC:  BSF    0A.3
+08AD:  MOVF   78,W
+08AE:  MOVWF  21
+....................    i2c_stop(); 
+08AF:  BSF    03.5
+08B0:  BCF    06.0
+08B1:  NOP
+08B2:  BSF    06.1
+08B3:  BCF    03.5
+08B4:  BTFSS  06.1
+08B5:  GOTO   0B4
+08B6:  NOP
+08B7:  GOTO   0B8
+08B8:  NOP
+08B9:  BSF    03.5
+08BA:  BSF    06.0
+08BB:  NOP
+....................    i2c_start(); 
+08BC:  BSF    06.0
+08BD:  NOP
+08BE:  BSF    06.1
+08BF:  NOP
+08C0:  BCF    03.5
+08C1:  BCF    06.0
+08C2:  BSF    03.5
+08C3:  BCF    06.0
+08C4:  NOP
+08C5:  BCF    03.5
+08C6:  BCF    06.1
+08C7:  BSF    03.5
+08C8:  BCF    06.1
+....................    I2C_Write(0x3C); 
+08C9:  MOVLW  3C
+08CA:  BCF    03.5
+08CB:  MOVWF  49
+08CC:  BCF    0A.3
+08CD:  CALL   0C4
+08CE:  BSF    0A.3
+....................    I2C_write(0x04); 
+08CF:  MOVLW  04
+08D0:  MOVWF  49
+08D1:  BCF    0A.3
+08D2:  CALL   0C4
+08D3:  BSF    0A.3
+....................    i2c_stop(); 
+08D4:  BSF    03.5
+08D5:  BCF    06.0
+08D6:  NOP
+08D7:  BSF    06.1
+08D8:  BCF    03.5
+08D9:  BTFSS  06.1
+08DA:  GOTO   0D9
+08DB:  NOP
+08DC:  GOTO   0DD
+08DD:  NOP
+08DE:  BSF    03.5
+08DF:  BSF    06.0
+08E0:  NOP
+....................    i2c_start(); 
+08E1:  BSF    06.0
+08E2:  NOP
+08E3:  BSF    06.1
+08E4:  NOP
+08E5:  BCF    03.5
+08E6:  BCF    06.0
+08E7:  BSF    03.5
+08E8:  BCF    06.0
+08E9:  NOP
+08EA:  BCF    03.5
+08EB:  BCF    06.1
+08EC:  BSF    03.5
+08ED:  BCF    06.1
+....................    I2C_Write(0x3D); 
+08EE:  MOVLW  3D
+08EF:  BCF    03.5
+08F0:  MOVWF  49
+08F1:  BCF    0A.3
+08F2:  CALL   0C4
+08F3:  BSF    0A.3
+....................    XL=i2c_read(0); 
+08F4:  CLRF   77
+08F5:  BCF    0A.3
+08F6:  CALL   0F8
+08F7:  BSF    0A.3
+08F8:  MOVF   78,W
+08F9:  MOVWF  22
+....................    i2c_stop(); 
+08FA:  BSF    03.5
+08FB:  BCF    06.0
+08FC:  NOP
+08FD:  BSF    06.1
+08FE:  BCF    03.5
+08FF:  BTFSS  06.1
+0900:  GOTO   0FF
+0901:  NOP
+0902:  GOTO   103
+0903:  NOP
+0904:  BSF    03.5
+0905:  BSF    06.0
+0906:  NOP
+....................    i2c_start(); 
+0907:  BSF    06.0
+0908:  NOP
+0909:  BSF    06.1
+090A:  NOP
+090B:  BCF    03.5
+090C:  BCF    06.0
+090D:  BSF    03.5
+090E:  BCF    06.0
+090F:  NOP
+0910:  BCF    03.5
+0911:  BCF    06.1
+0912:  BSF    03.5
+0913:  BCF    06.1
+....................    I2C_Write(0x3C); 
+0914:  MOVLW  3C
+0915:  BCF    03.5
+0916:  MOVWF  49
+0917:  BCF    0A.3
+0918:  CALL   0C4
+0919:  BSF    0A.3
+....................    I2C_write(0x05); 
+091A:  MOVLW  05
+091B:  MOVWF  49
+091C:  BCF    0A.3
+091D:  CALL   0C4
+091E:  BSF    0A.3
+....................    i2c_stop(); 
+091F:  BSF    03.5
+0920:  BCF    06.0
+0921:  NOP
+0922:  BSF    06.1
+0923:  BCF    03.5
+0924:  BTFSS  06.1
+0925:  GOTO   124
+0926:  NOP
+0927:  GOTO   128
+0928:  NOP
+0929:  BSF    03.5
+092A:  BSF    06.0
+092B:  NOP
+....................    i2c_start(); 
+092C:  BSF    06.0
+092D:  NOP
+092E:  BSF    06.1
+092F:  NOP
+0930:  BCF    03.5
+0931:  BCF    06.0
+0932:  BSF    03.5
+0933:  BCF    06.0
+0934:  NOP
+0935:  BCF    03.5
+0936:  BCF    06.1
+0937:  BSF    03.5
+0938:  BCF    06.1
+....................    I2C_Write(0x3D); 
+0939:  MOVLW  3D
+093A:  BCF    03.5
+093B:  MOVWF  49
+093C:  BCF    0A.3
+093D:  CALL   0C4
+093E:  BSF    0A.3
+....................    ZH=i2c_read(0); 
+093F:  CLRF   77
+0940:  BCF    0A.3
+0941:  CALL   0F8
+0942:  BSF    0A.3
+0943:  MOVF   78,W
+0944:  MOVWF  25
+....................    i2c_stop(); 
+0945:  BSF    03.5
+0946:  BCF    06.0
+0947:  NOP
+0948:  BSF    06.1
+0949:  BCF    03.5
+094A:  BTFSS  06.1
+094B:  GOTO   14A
+094C:  NOP
+094D:  GOTO   14E
+094E:  NOP
+094F:  BSF    03.5
+0950:  BSF    06.0
+0951:  NOP
+....................    i2c_start(); 
+0952:  BSF    06.0
+0953:  NOP
+0954:  BSF    06.1
+0955:  NOP
+0956:  BCF    03.5
+0957:  BCF    06.0
+0958:  BSF    03.5
+0959:  BCF    06.0
+095A:  NOP
+095B:  BCF    03.5
+095C:  BCF    06.1
+095D:  BSF    03.5
+095E:  BCF    06.1
+....................    I2C_Write(0x3C); 
+095F:  MOVLW  3C
+0960:  BCF    03.5
+0961:  MOVWF  49
+0962:  BCF    0A.3
+0963:  CALL   0C4
+0964:  BSF    0A.3
+....................    I2C_write(0x06); 
+0965:  MOVLW  06
+0966:  MOVWF  49
+0967:  BCF    0A.3
+0968:  CALL   0C4
+0969:  BSF    0A.3
+....................    i2c_stop(); 
+096A:  BSF    03.5
+096B:  BCF    06.0
+096C:  NOP
+096D:  BSF    06.1
+096E:  BCF    03.5
+096F:  BTFSS  06.1
+0970:  GOTO   16F
+0971:  NOP
+0972:  GOTO   173
+0973:  NOP
+0974:  BSF    03.5
+0975:  BSF    06.0
+0976:  NOP
+....................    i2c_start(); 
+0977:  BSF    06.0
+0978:  NOP
+0979:  BSF    06.1
+097A:  NOP
+097B:  BCF    03.5
+097C:  BCF    06.0
+097D:  BSF    03.5
+097E:  BCF    06.0
+097F:  NOP
+0980:  BCF    03.5
+0981:  BCF    06.1
+0982:  BSF    03.5
+0983:  BCF    06.1
+....................    I2C_Write(0x3D); 
+0984:  MOVLW  3D
+0985:  BCF    03.5
+0986:  MOVWF  49
+0987:  BCF    0A.3
+0988:  CALL   0C4
+0989:  BSF    0A.3
+....................    ZL=i2c_read(0); 
+098A:  CLRF   77
+098B:  BCF    0A.3
+098C:  CALL   0F8
+098D:  BSF    0A.3
+098E:  MOVF   78,W
+098F:  MOVWF  26
+....................    i2c_stop(); 
+0990:  BSF    03.5
+0991:  BCF    06.0
+0992:  NOP
+0993:  BSF    06.1
+0994:  BCF    03.5
+0995:  BTFSS  06.1
+0996:  GOTO   195
+0997:  NOP
+0998:  GOTO   199
+0999:  NOP
+099A:  BSF    03.5
+099B:  BSF    06.0
+099C:  NOP
+....................    i2c_start(); 
+099D:  BSF    06.0
+099E:  NOP
+099F:  BSF    06.1
+09A0:  NOP
+09A1:  BCF    03.5
+09A2:  BCF    06.0
+09A3:  BSF    03.5
+09A4:  BCF    06.0
+09A5:  NOP
+09A6:  BCF    03.5
+09A7:  BCF    06.1
+09A8:  BSF    03.5
+09A9:  BCF    06.1
+....................    I2C_Write(0x3C); 
+09AA:  MOVLW  3C
+09AB:  BCF    03.5
+09AC:  MOVWF  49
+09AD:  BCF    0A.3
+09AE:  CALL   0C4
+09AF:  BSF    0A.3
+....................    I2C_write(0x07); 
+09B0:  MOVLW  07
+09B1:  MOVWF  49
+09B2:  BCF    0A.3
+09B3:  CALL   0C4
+09B4:  BSF    0A.3
+....................    i2c_stop(); 
+09B5:  BSF    03.5
+09B6:  BCF    06.0
+09B7:  NOP
+09B8:  BSF    06.1
+09B9:  BCF    03.5
+09BA:  BTFSS  06.1
+09BB:  GOTO   1BA
+09BC:  NOP
+09BD:  GOTO   1BE
+09BE:  NOP
+09BF:  BSF    03.5
+09C0:  BSF    06.0
+09C1:  NOP
+....................    i2c_start(); 
+09C2:  BSF    06.0
+09C3:  NOP
+09C4:  BSF    06.1
+09C5:  NOP
+09C6:  BCF    03.5
+09C7:  BCF    06.0
+09C8:  BSF    03.5
+09C9:  BCF    06.0
+09CA:  NOP
+09CB:  BCF    03.5
+09CC:  BCF    06.1
+09CD:  BSF    03.5
+09CE:  BCF    06.1
+....................    I2C_Write(0x3D); 
+09CF:  MOVLW  3D
+09D0:  BCF    03.5
+09D1:  MOVWF  49
+09D2:  BCF    0A.3
+09D3:  CALL   0C4
+09D4:  BSF    0A.3
+....................    YH=i2c_read(0); 
+09D5:  CLRF   77
+09D6:  BCF    0A.3
+09D7:  CALL   0F8
+09D8:  BSF    0A.3
+09D9:  MOVF   78,W
+09DA:  MOVWF  23
+....................    i2c_stop(); 
+09DB:  BSF    03.5
+09DC:  BCF    06.0
+09DD:  NOP
+09DE:  BSF    06.1
+09DF:  BCF    03.5
+09E0:  BTFSS  06.1
+09E1:  GOTO   1E0
+09E2:  NOP
+09E3:  GOTO   1E4
+09E4:  NOP
+09E5:  BSF    03.5
+09E6:  BSF    06.0
+09E7:  NOP
+....................    i2c_start(); 
+09E8:  BSF    06.0
+09E9:  NOP
+09EA:  BSF    06.1
+09EB:  NOP
+09EC:  BCF    03.5
+09ED:  BCF    06.0
+09EE:  BSF    03.5
+09EF:  BCF    06.0
+09F0:  NOP
+09F1:  BCF    03.5
+09F2:  BCF    06.1
+09F3:  BSF    03.5
+09F4:  BCF    06.1
+....................    I2C_Write(0x3C); 
+09F5:  MOVLW  3C
+09F6:  BCF    03.5
+09F7:  MOVWF  49
+09F8:  BCF    0A.3
+09F9:  CALL   0C4
+09FA:  BSF    0A.3
+....................    I2C_write(0x08); 
+09FB:  MOVLW  08
+09FC:  MOVWF  49
+09FD:  BCF    0A.3
+09FE:  CALL   0C4
+09FF:  BSF    0A.3
+....................    i2c_stop(); 
+0A00:  BSF    03.5
+0A01:  BCF    06.0
+0A02:  NOP
+0A03:  BSF    06.1
+0A04:  BCF    03.5
+0A05:  BTFSS  06.1
+0A06:  GOTO   205
+0A07:  NOP
+0A08:  GOTO   209
+0A09:  NOP
+0A0A:  BSF    03.5
+0A0B:  BSF    06.0
+0A0C:  NOP
+....................    i2c_start(); 
+0A0D:  BSF    06.0
+0A0E:  NOP
+0A0F:  BSF    06.1
+0A10:  NOP
+0A11:  BCF    03.5
+0A12:  BCF    06.0
+0A13:  BSF    03.5
+0A14:  BCF    06.0
+0A15:  NOP
+0A16:  BCF    03.5
+0A17:  BCF    06.1
+0A18:  BSF    03.5
+0A19:  BCF    06.1
+....................    I2C_Write(0x3D); 
+0A1A:  MOVLW  3D
+0A1B:  BCF    03.5
+0A1C:  MOVWF  49
+0A1D:  BCF    0A.3
+0A1E:  CALL   0C4
+0A1F:  BSF    0A.3
+....................    YL=i2c_read(0); 
+0A20:  CLRF   77
+0A21:  BCF    0A.3
+0A22:  CALL   0F8
+0A23:  BSF    0A.3
+0A24:  MOVF   78,W
+0A25:  MOVWF  24
+....................    i2c_stop(); 
+0A26:  BSF    03.5
+0A27:  BCF    06.0
+0A28:  NOP
+0A29:  BSF    06.1
+0A2A:  BCF    03.5
+0A2B:  BTFSS  06.1
+0A2C:  GOTO   22B
+0A2D:  NOP
+0A2E:  GOTO   22F
+0A2F:  NOP
+0A30:  BSF    03.5
+0A31:  BSF    06.0
+0A32:  NOP
+....................     
+....................   Delay_ms(3700);   
+0A33:  MOVLW  14
+0A34:  BCF    03.5
+0A35:  MOVWF  49
+0A36:  MOVLW  B9
+0A37:  MOVWF  4A
+0A38:  BCF    0A.3
+0A39:  GOTO   12B
+0A3A:  BSF    0A.3
+0A3B:  DECFSZ 49,F
+0A3C:  GOTO   236
+....................  
+.................... data1 = (((unsigned int16) XH << 8) + XL ); 
+0A3D:  CLRF   4A
+0A3E:  MOVF   21,W
+0A3F:  MOVWF  49
+0A40:  MOVWF  4A
+0A41:  CLRF   49
+0A42:  MOVF   22,W
+0A43:  ADDWF  49,W
+0A44:  MOVWF  37
+0A45:  MOVF   4A,W
+0A46:  MOVWF  38
+0A47:  BTFSC  03.0
+0A48:  INCF   38,F
+.................... data2 = (((unsigned int16) YH << 8) + YL ); 
+0A49:  CLRF   4A
+0A4A:  MOVF   23,W
+0A4B:  MOVWF  49
+0A4C:  MOVWF  4A
+0A4D:  CLRF   49
+0A4E:  MOVF   24,W
+0A4F:  ADDWF  49,W
+0A50:  MOVWF  39
+0A51:  MOVF   4A,W
+0A52:  MOVWF  3A
+0A53:  BTFSC  03.0
+0A54:  INCF   3A,F
+.................... data3 = (((unsigned int16) ZH << 8) + ZL ); 
+0A55:  CLRF   4A
+0A56:  MOVF   25,W
+0A57:  MOVWF  49
+0A58:  MOVWF  4A
+0A59:  CLRF   49
+0A5A:  MOVF   26,W
+0A5B:  ADDWF  49,W
+0A5C:  MOVWF  3B
+0A5D:  MOVF   4A,W
+0A5E:  MOVWF  3C
+0A5F:  BTFSC  03.0
+0A60:  INCF   3C,F
+....................  
+....................    i2c_start(); 
+0A61:  BSF    03.5
+0A62:  BSF    06.0
+0A63:  NOP
+0A64:  BSF    06.1
+0A65:  NOP
+0A66:  BCF    03.5
+0A67:  BCF    06.0
+0A68:  BSF    03.5
+0A69:  BCF    06.0
+0A6A:  NOP
+0A6B:  BCF    03.5
+0A6C:  BCF    06.1
+0A6D:  BSF    03.5
+0A6E:  BCF    06.1
+....................    I2C_Write(0xAA); 
+0A6F:  MOVLW  AA
+0A70:  BCF    03.5
+0A71:  MOVWF  49
+0A72:  BCF    0A.3
+0A73:  CALL   0C4
+0A74:  BSF    0A.3
+....................    I2C_write(0x0c); 
+0A75:  MOVLW  0C
+0A76:  MOVWF  49
+0A77:  BCF    0A.3
+0A78:  CALL   0C4
+0A79:  BSF    0A.3
+....................    
+....................    i2c_start(); 
+0A7A:  BSF    03.5
+0A7B:  BSF    06.0
+0A7C:  NOP
+0A7D:  BSF    06.1
+0A7E:  NOP
+0A7F:  BCF    03.5
+0A80:  BTFSS  06.1
+0A81:  GOTO   280
+0A82:  BCF    06.0
+0A83:  BSF    03.5
+0A84:  BCF    06.0
+0A85:  NOP
+0A86:  BCF    03.5
+0A87:  BCF    06.1
+0A88:  BSF    03.5
+0A89:  BCF    06.1
+....................    I2C_Write(0xAB); 
+0A8A:  MOVLW  AB
+0A8B:  BCF    03.5
+0A8C:  MOVWF  49
+0A8D:  BCF    0A.3
+0A8E:  CALL   0C4
+0A8F:  BSF    0A.3
+....................    INTEP=i2c_read(0); 
+0A90:  CLRF   77
+0A91:  BCF    0A.3
+0A92:  CALL   0F8
+0A93:  BSF    0A.3
+0A94:  MOVF   78,W
+0A95:  MOVWF  27
+....................    i2c_stop(); 
+0A96:  BSF    03.5
+0A97:  BCF    06.0
+0A98:  NOP
+0A99:  BSF    06.1
+0A9A:  BCF    03.5
+0A9B:  BTFSS  06.1
+0A9C:  GOTO   29B
+0A9D:  NOP
+0A9E:  GOTO   29F
+0A9F:  NOP
+0AA0:  BSF    03.5
+0AA1:  BSF    06.0
+0AA2:  NOP
+....................     
+....................   i2c_start(); 
+0AA3:  BSF    06.0
+0AA4:  NOP
+0AA5:  BSF    06.1
+0AA6:  NOP
+0AA7:  BCF    03.5
+0AA8:  BCF    06.0
+0AA9:  BSF    03.5
+0AAA:  BCF    06.0
+0AAB:  NOP
+0AAC:  BCF    03.5
+0AAD:  BCF    06.1
+0AAE:  BSF    03.5
+0AAF:  BCF    06.1
+....................    I2C_Write(0xAA); 
+0AB0:  MOVLW  AA
+0AB1:  BCF    03.5
+0AB2:  MOVWF  49
+0AB3:  BCF    0A.3
+0AB4:  CALL   0C4
+0AB5:  BSF    0A.3
+....................    I2C_write(0x0d); 
+0AB6:  MOVLW  0D
+0AB7:  MOVWF  49
+0AB8:  BCF    0A.3
+0AB9:  CALL   0C4
+0ABA:  BSF    0A.3
+....................    i2c_start(); 
+0ABB:  BSF    03.5
+0ABC:  BSF    06.0
+0ABD:  NOP
+0ABE:  BSF    06.1
+0ABF:  NOP
+0AC0:  BCF    03.5
+0AC1:  BTFSS  06.1
+0AC2:  GOTO   2C1
+0AC3:  BCF    06.0
+0AC4:  BSF    03.5
+0AC5:  BCF    06.0
+0AC6:  NOP
+0AC7:  BCF    03.5
+0AC8:  BCF    06.1
+0AC9:  BSF    03.5
+0ACA:  BCF    06.1
+....................    I2C_Write(0xAB); 
+0ACB:  MOVLW  AB
+0ACC:  BCF    03.5
+0ACD:  MOVWF  49
+0ACE:  BCF    0A.3
+0ACF:  CALL   0C4
+0AD0:  BSF    0A.3
+....................    INTEP1=i2c_read(0); 
+0AD1:  CLRF   77
+0AD2:  BCF    0A.3
+0AD3:  CALL   0F8
+0AD4:  BSF    0A.3
+0AD5:  MOVF   78,W
+0AD6:  MOVWF  28
+....................    i2c_stop(); 
+0AD7:  BSF    03.5
+0AD8:  BCF    06.0
+0AD9:  NOP
+0ADA:  BSF    06.1
+0ADB:  BCF    03.5
+0ADC:  BTFSS  06.1
+0ADD:  GOTO   2DC
+0ADE:  NOP
+0ADF:  GOTO   2E0
+0AE0:  NOP
+0AE1:  BSF    03.5
+0AE2:  BSF    06.0
+0AE3:  NOP
+....................     
+....................    i2c_start(); 
+0AE4:  BSF    06.0
+0AE5:  NOP
+0AE6:  BSF    06.1
+0AE7:  NOP
+0AE8:  BCF    03.5
+0AE9:  BCF    06.0
+0AEA:  BSF    03.5
+0AEB:  BCF    06.0
+0AEC:  NOP
+0AED:  BCF    03.5
+0AEE:  BCF    06.1
+0AEF:  BSF    03.5
+0AF0:  BCF    06.1
+....................    I2C_Write(0xAA); 
+0AF1:  MOVLW  AA
+0AF2:  BCF    03.5
+0AF3:  MOVWF  49
+0AF4:  BCF    0A.3
+0AF5:  CALL   0C4
+0AF6:  BSF    0A.3
+....................    I2C_write(0x08); 
+0AF7:  MOVLW  08
+0AF8:  MOVWF  49
+0AF9:  BCF    0A.3
+0AFA:  CALL   0C4
+0AFB:  BSF    0A.3
+....................    i2c_stop(); 
+0AFC:  BSF    03.5
+0AFD:  BCF    06.0
+0AFE:  NOP
+0AFF:  BSF    06.1
+0B00:  BCF    03.5
+0B01:  BTFSS  06.1
+0B02:  GOTO   301
+0B03:  NOP
+0B04:  GOTO   305
+0B05:  NOP
+0B06:  BSF    03.5
+0B07:  BSF    06.0
+0B08:  NOP
+....................    i2c_start(); 
+0B09:  BSF    06.0
+0B0A:  NOP
+0B0B:  BSF    06.1
+0B0C:  NOP
+0B0D:  BCF    03.5
+0B0E:  BCF    06.0
+0B0F:  BSF    03.5
+0B10:  BCF    06.0
+0B11:  NOP
+0B12:  BCF    03.5
+0B13:  BCF    06.1
+0B14:  BSF    03.5
+0B15:  BCF    06.1
+....................    I2C_Write(0xAB); 
+0B16:  MOVLW  AB
+0B17:  BCF    03.5
+0B18:  MOVWF  49
+0B19:  BCF    0A.3
+0B1A:  CALL   0C4
+0B1B:  BSF    0A.3
+....................    NAP=i2c_read(0); 
+0B1C:  CLRF   77
+0B1D:  BCF    0A.3
+0B1E:  CALL   0F8
+0B1F:  BSF    0A.3
+0B20:  MOVF   78,W
+0B21:  MOVWF  29
+....................    i2c_stop(); 
+0B22:  BSF    03.5
+0B23:  BCF    06.0
+0B24:  NOP
+0B25:  BSF    06.1
+0B26:  BCF    03.5
+0B27:  BTFSS  06.1
+0B28:  GOTO   327
+0B29:  NOP
+0B2A:  GOTO   32B
+0B2B:  NOP
+0B2C:  BSF    03.5
+0B2D:  BSF    06.0
+0B2E:  NOP
+....................  
+....................    i2c_start(); 
+0B2F:  BSF    06.0
+0B30:  NOP
+0B31:  BSF    06.1
+0B32:  NOP
+0B33:  BCF    03.5
+0B34:  BCF    06.0
+0B35:  BSF    03.5
+0B36:  BCF    06.0
+0B37:  NOP
+0B38:  BCF    03.5
+0B39:  BCF    06.1
+0B3A:  BSF    03.5
+0B3B:  BCF    06.1
+....................    I2C_Write(0xAA); 
+0B3C:  MOVLW  AA
+0B3D:  BCF    03.5
+0B3E:  MOVWF  49
+0B3F:  BCF    0A.3
+0B40:  CALL   0C4
+0B41:  BSF    0A.3
+....................    I2C_write(0x09); 
+0B42:  MOVLW  09
+0B43:  MOVWF  49
+0B44:  BCF    0A.3
+0B45:  CALL   0C4
+0B46:  BSF    0A.3
+....................    i2c_stop(); 
+0B47:  BSF    03.5
+0B48:  BCF    06.0
+0B49:  NOP
+0B4A:  BSF    06.1
+0B4B:  BCF    03.5
+0B4C:  BTFSS  06.1
+0B4D:  GOTO   34C
+0B4E:  NOP
+0B4F:  GOTO   350
+0B50:  NOP
+0B51:  BSF    03.5
+0B52:  BSF    06.0
+0B53:  NOP
+....................    i2c_start(); 
+0B54:  BSF    06.0
+0B55:  NOP
+0B56:  BSF    06.1
+0B57:  NOP
+0B58:  BCF    03.5
+0B59:  BCF    06.0
+0B5A:  BSF    03.5
+0B5B:  BCF    06.0
+0B5C:  NOP
+0B5D:  BCF    03.5
+0B5E:  BCF    06.1
+0B5F:  BSF    03.5
+0B60:  BCF    06.1
+....................    I2C_Write(0xAB); 
+0B61:  MOVLW  AB
+0B62:  BCF    03.5
+0B63:  MOVWF  49
+0B64:  BCF    0A.3
+0B65:  CALL   0C4
+0B66:  BSF    0A.3
+....................    NAP1=i2c_read(0); 
+0B67:  CLRF   77
+0B68:  BCF    0A.3
+0B69:  CALL   0F8
+0B6A:  BSF    0A.3
+0B6B:  MOVF   78,W
+0B6C:  MOVWF  2A
+....................    i2c_stop(); 
+0B6D:  BSF    03.5
+0B6E:  BCF    06.0
+0B6F:  NOP
+0B70:  BSF    06.1
+0B71:  BCF    03.5
+0B72:  BTFSS  06.1
+0B73:  GOTO   372
+0B74:  NOP
+0B75:  GOTO   376
+0B76:  NOP
+0B77:  BSF    03.5
+0B78:  BSF    06.0
+0B79:  NOP
+....................     
+....................     i2c_start(); 
+0B7A:  BSF    06.0
+0B7B:  NOP
+0B7C:  BSF    06.1
+0B7D:  NOP
+0B7E:  BCF    03.5
+0B7F:  BCF    06.0
+0B80:  BSF    03.5
+0B81:  BCF    06.0
+0B82:  NOP
+0B83:  BCF    03.5
+0B84:  BCF    06.1
+0B85:  BSF    03.5
+0B86:  BCF    06.1
+....................    I2C_Write(0xAA); 
+0B87:  MOVLW  AA
+0B88:  BCF    03.5
+0B89:  MOVWF  49
+0B8A:  BCF    0A.3
+0B8B:  CALL   0C4
+0B8C:  BSF    0A.3
+....................    I2C_write(0x0a); 
+0B8D:  MOVLW  0A
+0B8E:  MOVWF  49
+0B8F:  BCF    0A.3
+0B90:  CALL   0C4
+0B91:  BSF    0A.3
+....................    i2c_stop(); 
+0B92:  BSF    03.5
+0B93:  BCF    06.0
+0B94:  NOP
+0B95:  BSF    06.1
+0B96:  BCF    03.5
+0B97:  BTFSS  06.1
+0B98:  GOTO   397
+0B99:  NOP
+0B9A:  GOTO   39B
+0B9B:  NOP
+0B9C:  BSF    03.5
+0B9D:  BSF    06.0
+0B9E:  NOP
+....................    i2c_start(); 
+0B9F:  BSF    06.0
+0BA0:  NOP
+0BA1:  BSF    06.1
+0BA2:  NOP
+0BA3:  BCF    03.5
+0BA4:  BCF    06.0
+0BA5:  BSF    03.5
+0BA6:  BCF    06.0
+0BA7:  NOP
+0BA8:  BCF    03.5
+0BA9:  BCF    06.1
+0BAA:  BSF    03.5
+0BAB:  BCF    06.1
+....................    I2C_Write(0xAB); 
+0BAC:  MOVLW  AB
+0BAD:  BCF    03.5
+0BAE:  MOVWF  49
+0BAF:  BCF    0A.3
+0BB0:  CALL   0C4
+0BB1:  BSF    0A.3
+....................    PROUD=i2c_read(0); 
+0BB2:  CLRF   77
+0BB3:  BCF    0A.3
+0BB4:  CALL   0F8
+0BB5:  BSF    0A.3
+0BB6:  MOVF   78,W
+0BB7:  MOVWF  2B
+....................    i2c_stop(); 
+0BB8:  BSF    03.5
+0BB9:  BCF    06.0
+0BBA:  NOP
+0BBB:  BSF    06.1
+0BBC:  BCF    03.5
+0BBD:  BTFSS  06.1
+0BBE:  GOTO   3BD
+0BBF:  NOP
+0BC0:  GOTO   3C1
+0BC1:  NOP
+0BC2:  BSF    03.5
+0BC3:  BSF    06.0
+0BC4:  NOP
+....................  
+....................    i2c_start(); 
+0BC5:  BSF    06.0
+0BC6:  NOP
+0BC7:  BSF    06.1
+0BC8:  NOP
+0BC9:  BCF    03.5
+0BCA:  BCF    06.0
+0BCB:  BSF    03.5
+0BCC:  BCF    06.0
+0BCD:  NOP
+0BCE:  BCF    03.5
+0BCF:  BCF    06.1
+0BD0:  BSF    03.5
+0BD1:  BCF    06.1
+....................    I2C_Write(0xAA); 
+0BD2:  MOVLW  AA
+0BD3:  BCF    03.5
+0BD4:  MOVWF  49
+0BD5:  BCF    0A.3
+0BD6:  CALL   0C4
+0BD7:  BSF    0A.3
+....................    I2C_write(0x0b); 
+0BD8:  MOVLW  0B
+0BD9:  MOVWF  49
+0BDA:  BCF    0A.3
+0BDB:  CALL   0C4
+0BDC:  BSF    0A.3
+....................    i2c_stop(); 
+0BDD:  BSF    03.5
+0BDE:  BCF    06.0
+0BDF:  NOP
+0BE0:  BSF    06.1
+0BE1:  BCF    03.5
+0BE2:  BTFSS  06.1
+0BE3:  GOTO   3E2
+0BE4:  NOP
+0BE5:  GOTO   3E6
+0BE6:  NOP
+0BE7:  BSF    03.5
+0BE8:  BSF    06.0
+0BE9:  NOP
+....................    i2c_start(); 
+0BEA:  BSF    06.0
+0BEB:  NOP
+0BEC:  BSF    06.1
+0BED:  NOP
+0BEE:  BCF    03.5
+0BEF:  BCF    06.0
+0BF0:  BSF    03.5
+0BF1:  BCF    06.0
+0BF2:  NOP
+0BF3:  BCF    03.5
+0BF4:  BCF    06.1
+0BF5:  BSF    03.5
+0BF6:  BCF    06.1
+....................    I2C_Write(0xAB); 
+0BF7:  MOVLW  AB
+0BF8:  BCF    03.5
+0BF9:  MOVWF  49
+0BFA:  BCF    0A.3
+0BFB:  CALL   0C4
+0BFC:  BSF    0A.3
+....................    PROUD1=i2c_read(0); 
+0BFD:  CLRF   77
+0BFE:  BCF    0A.3
+0BFF:  CALL   0F8
+0C00:  BSF    0A.3
+0C01:  MOVF   78,W
+0C02:  MOVWF  2C
+....................    i2c_stop();   
+0C03:  BSF    03.5
+0C04:  BCF    06.0
+0C05:  NOP
+0C06:  BSF    06.1
+0C07:  BCF    03.5
+0C08:  BTFSS  06.1
+0C09:  GOTO   408
+0C0A:  NOP
+0C0B:  GOTO   40C
+0C0C:  NOP
+0C0D:  BSF    03.5
+0C0E:  BSF    06.0
+0C0F:  NOP
+....................     
+....................     
+....................        i2c_start(); 
+0C10:  BSF    06.0
+0C11:  NOP
+0C12:  BSF    06.1
+0C13:  NOP
+0C14:  BCF    03.5
+0C15:  BCF    06.0
+0C16:  BSF    03.5
+0C17:  BCF    06.0
+0C18:  NOP
+0C19:  BCF    03.5
+0C1A:  BCF    06.1
+0C1B:  BSF    03.5
+0C1C:  BCF    06.1
+....................    I2C_Write(0xAA); 
+0C1D:  MOVLW  AA
+0C1E:  BCF    03.5
+0C1F:  MOVWF  49
+0C20:  BCF    0A.3
+0C21:  CALL   0C4
+0C22:  BSF    0A.3
+....................    I2C_write(0x04); 
+0C23:  MOVLW  04
+0C24:  MOVWF  49
+0C25:  BCF    0A.3
+0C26:  CALL   0C4
+0C27:  BSF    0A.3
+....................    i2c_stop(); 
+0C28:  BSF    03.5
+0C29:  BCF    06.0
+0C2A:  NOP
+0C2B:  BSF    06.1
+0C2C:  BCF    03.5
+0C2D:  BTFSS  06.1
+0C2E:  GOTO   42D
+0C2F:  NOP
+0C30:  GOTO   431
+0C31:  NOP
+0C32:  BSF    03.5
+0C33:  BSF    06.0
+0C34:  NOP
+....................    i2c_start(); 
+0C35:  BSF    06.0
+0C36:  NOP
+0C37:  BSF    06.1
+0C38:  NOP
+0C39:  BCF    03.5
+0C3A:  BCF    06.0
+0C3B:  BSF    03.5
+0C3C:  BCF    06.0
+0C3D:  NOP
+0C3E:  BCF    03.5
+0C3F:  BCF    06.1
+0C40:  BSF    03.5
+0C41:  BCF    06.1
+....................    I2C_Write(0xAB); 
+0C42:  MOVLW  AB
+0C43:  BCF    03.5
+0C44:  MOVWF  49
+0C45:  BCF    0A.3
+0C46:  CALL   0C4
+0C47:  BSF    0A.3
+....................    KAPZ=i2c_read(0); 
+0C48:  CLRF   77
+0C49:  BCF    0A.3
+0C4A:  CALL   0F8
+0C4B:  BSF    0A.3
+0C4C:  MOVF   78,W
+0C4D:  MOVWF  2D
+....................    i2c_stop(); 
+0C4E:  BSF    03.5
+0C4F:  BCF    06.0
+0C50:  NOP
+0C51:  BSF    06.1
+0C52:  BCF    03.5
+0C53:  BTFSS  06.1
+0C54:  GOTO   453
+0C55:  NOP
+0C56:  GOTO   457
+0C57:  NOP
+0C58:  BSF    03.5
+0C59:  BSF    06.0
+0C5A:  NOP
+....................  
+....................    i2c_start(); 
+0C5B:  BSF    06.0
+0C5C:  NOP
+0C5D:  BSF    06.1
+0C5E:  NOP
+0C5F:  BCF    03.5
+0C60:  BCF    06.0
+0C61:  BSF    03.5
+0C62:  BCF    06.0
+0C63:  NOP
+0C64:  BCF    03.5
+0C65:  BCF    06.1
+0C66:  BSF    03.5
+0C67:  BCF    06.1
+....................    I2C_Write(0xAA); 
+0C68:  MOVLW  AA
+0C69:  BCF    03.5
+0C6A:  MOVWF  49
+0C6B:  BCF    0A.3
+0C6C:  CALL   0C4
+0C6D:  BSF    0A.3
+....................    I2C_write(0x05); 
+0C6E:  MOVLW  05
+0C6F:  MOVWF  49
+0C70:  BCF    0A.3
+0C71:  CALL   0C4
+0C72:  BSF    0A.3
+....................    i2c_stop(); 
+0C73:  BSF    03.5
+0C74:  BCF    06.0
+0C75:  NOP
+0C76:  BSF    06.1
+0C77:  BCF    03.5
+0C78:  BTFSS  06.1
+0C79:  GOTO   478
+0C7A:  NOP
+0C7B:  GOTO   47C
+0C7C:  NOP
+0C7D:  BSF    03.5
+0C7E:  BSF    06.0
+0C7F:  NOP
+....................    i2c_start(); 
+0C80:  BSF    06.0
+0C81:  NOP
+0C82:  BSF    06.1
+0C83:  NOP
+0C84:  BCF    03.5
+0C85:  BCF    06.0
+0C86:  BSF    03.5
+0C87:  BCF    06.0
+0C88:  NOP
+0C89:  BCF    03.5
+0C8A:  BCF    06.1
+0C8B:  BSF    03.5
+0C8C:  BCF    06.1
+....................    I2C_Write(0xAB); 
+0C8D:  MOVLW  AB
+0C8E:  BCF    03.5
+0C8F:  MOVWF  49
+0C90:  BCF    0A.3
+0C91:  CALL   0C4
+0C92:  BSF    0A.3
+....................    KAPZ1=i2c_read(0); 
+0C93:  CLRF   77
+0C94:  BCF    0A.3
+0C95:  CALL   0F8
+0C96:  BSF    0A.3
+0C97:  MOVF   78,W
+0C98:  MOVWF  2E
+....................    i2c_stop();  
+0C99:  BSF    03.5
+0C9A:  BCF    06.0
+0C9B:  NOP
+0C9C:  BSF    06.1
+0C9D:  BCF    03.5
+0C9E:  BTFSS  06.1
+0C9F:  GOTO   49E
+0CA0:  NOP
+0CA1:  GOTO   4A2
+0CA2:  NOP
+0CA3:  BSF    03.5
+0CA4:  BSF    06.0
+0CA5:  NOP
+....................     
+....................     
+....................    i2c_start(); 
+0CA6:  BSF    06.0
+0CA7:  NOP
+0CA8:  BSF    06.1
+0CA9:  NOP
+0CAA:  BCF    03.5
+0CAB:  BCF    06.0
+0CAC:  BSF    03.5
+0CAD:  BCF    06.0
+0CAE:  NOP
+0CAF:  BCF    03.5
+0CB0:  BCF    06.1
+0CB1:  BSF    03.5
+0CB2:  BCF    06.1
+....................    I2C_Write(0xAA); 
+0CB3:  MOVLW  AA
+0CB4:  BCF    03.5
+0CB5:  MOVWF  49
+0CB6:  BCF    0A.3
+0CB7:  CALL   0C4
+0CB8:  BSF    0A.3
+....................    I2C_write(0x06); 
+0CB9:  MOVLW  06
+0CBA:  MOVWF  49
+0CBB:  BCF    0A.3
+0CBC:  CALL   0C4
+0CBD:  BSF    0A.3
+....................    i2c_stop(); 
+0CBE:  BSF    03.5
+0CBF:  BCF    06.0
+0CC0:  NOP
+0CC1:  BSF    06.1
+0CC2:  BCF    03.5
+0CC3:  BTFSS  06.1
+0CC4:  GOTO   4C3
+0CC5:  NOP
+0CC6:  GOTO   4C7
+0CC7:  NOP
+0CC8:  BSF    03.5
+0CC9:  BSF    06.0
+0CCA:  NOP
+....................    i2c_start(); 
+0CCB:  BSF    06.0
+0CCC:  NOP
+0CCD:  BSF    06.1
+0CCE:  NOP
+0CCF:  BCF    03.5
+0CD0:  BCF    06.0
+0CD1:  BSF    03.5
+0CD2:  BCF    06.0
+0CD3:  NOP
+0CD4:  BCF    03.5
+0CD5:  BCF    06.1
+0CD6:  BSF    03.5
+0CD7:  BCF    06.1
+....................    I2C_Write(0xAB); 
+0CD8:  MOVLW  AB
+0CD9:  BCF    03.5
+0CDA:  MOVWF  49
+0CDB:  BCF    0A.3
+0CDC:  CALL   0C4
+0CDD:  BSF    0A.3
+....................    KAPC=i2c_read(0); 
+0CDE:  CLRF   77
+0CDF:  BCF    0A.3
+0CE0:  CALL   0F8
+0CE1:  BSF    0A.3
+0CE2:  MOVF   78,W
+0CE3:  MOVWF  2F
+....................    i2c_stop(); 
+0CE4:  BSF    03.5
+0CE5:  BCF    06.0
+0CE6:  NOP
+0CE7:  BSF    06.1
+0CE8:  BCF    03.5
+0CE9:  BTFSS  06.1
+0CEA:  GOTO   4E9
+0CEB:  NOP
+0CEC:  GOTO   4ED
+0CED:  NOP
+0CEE:  BSF    03.5
+0CEF:  BSF    06.0
+0CF0:  NOP
+....................  
+....................    i2c_start(); 
+0CF1:  BSF    06.0
+0CF2:  NOP
+0CF3:  BSF    06.1
+0CF4:  NOP
+0CF5:  BCF    03.5
+0CF6:  BCF    06.0
+0CF7:  BSF    03.5
+0CF8:  BCF    06.0
+0CF9:  NOP
+0CFA:  BCF    03.5
+0CFB:  BCF    06.1
+0CFC:  BSF    03.5
+0CFD:  BCF    06.1
+....................    I2C_Write(0xAA); 
+0CFE:  MOVLW  AA
+0CFF:  BCF    03.5
+0D00:  MOVWF  49
+0D01:  BCF    0A.3
+0D02:  CALL   0C4
+0D03:  BSF    0A.3
+....................    I2C_write(0x07); 
+0D04:  MOVLW  07
+0D05:  MOVWF  49
+0D06:  BCF    0A.3
+0D07:  CALL   0C4
+0D08:  BSF    0A.3
+....................    i2c_stop(); 
+0D09:  BSF    03.5
+0D0A:  BCF    06.0
+0D0B:  NOP
+0D0C:  BSF    06.1
+0D0D:  BCF    03.5
+0D0E:  BTFSS  06.1
+0D0F:  GOTO   50E
+0D10:  NOP
+0D11:  GOTO   512
+0D12:  NOP
+0D13:  BSF    03.5
+0D14:  BSF    06.0
+0D15:  NOP
+....................    i2c_start(); 
+0D16:  BSF    06.0
+0D17:  NOP
+0D18:  BSF    06.1
+0D19:  NOP
+0D1A:  BCF    03.5
+0D1B:  BCF    06.0
+0D1C:  BSF    03.5
+0D1D:  BCF    06.0
+0D1E:  NOP
+0D1F:  BCF    03.5
+0D20:  BCF    06.1
+0D21:  BSF    03.5
+0D22:  BCF    06.1
+....................    I2C_Write(0xAB); 
+0D23:  MOVLW  AB
+0D24:  BCF    03.5
+0D25:  MOVWF  49
+0D26:  BCF    0A.3
+0D27:  CALL   0C4
+0D28:  BSF    0A.3
+....................    KAPC1=i2c_read(0); 
+0D29:  CLRF   77
+0D2A:  BCF    0A.3
+0D2B:  CALL   0F8
+0D2C:  BSF    0A.3
+0D2D:  MOVF   78,W
+0D2E:  MOVWF  30
+....................    i2c_stop(); 
+0D2F:  BSF    03.5
+0D30:  BCF    06.0
+0D31:  NOP
+0D32:  BSF    06.1
+0D33:  BCF    03.5
+0D34:  BTFSS  06.1
+0D35:  GOTO   534
+0D36:  NOP
+0D37:  GOTO   538
+0D38:  NOP
+0D39:  BSF    03.5
+0D3A:  BSF    06.0
+0D3B:  NOP
+....................     
+....................       i2c_start(); 
+0D3C:  BSF    06.0
+0D3D:  NOP
+0D3E:  BSF    06.1
+0D3F:  NOP
+0D40:  BCF    03.5
+0D41:  BCF    06.0
+0D42:  BSF    03.5
+0D43:  BCF    06.0
+0D44:  NOP
+0D45:  BCF    03.5
+0D46:  BCF    06.1
+0D47:  BSF    03.5
+0D48:  BCF    06.1
+....................    I2C_Write(0xAA); 
+0D49:  MOVLW  AA
+0D4A:  BCF    03.5
+0D4B:  MOVWF  49
+0D4C:  BCF    0A.3
+0D4D:  CALL   0C4
+0D4E:  BSF    0A.3
+....................    I2C_write(0x02); 
+0D4F:  MOVLW  02
+0D50:  MOVWF  49
+0D51:  BCF    0A.3
+0D52:  CALL   0C4
+0D53:  BSF    0A.3
+....................    i2c_stop(); 
+0D54:  BSF    03.5
+0D55:  BCF    06.0
+0D56:  NOP
+0D57:  BSF    06.1
+0D58:  BCF    03.5
+0D59:  BTFSS  06.1
+0D5A:  GOTO   559
+0D5B:  NOP
+0D5C:  GOTO   55D
+0D5D:  NOP
+0D5E:  BSF    03.5
+0D5F:  BSF    06.0
+0D60:  NOP
+....................    i2c_start(); 
+0D61:  BSF    06.0
+0D62:  NOP
+0D63:  BSF    06.1
+0D64:  NOP
+0D65:  BCF    03.5
+0D66:  BCF    06.0
+0D67:  BSF    03.5
+0D68:  BCF    06.0
+0D69:  NOP
+0D6A:  BCF    03.5
+0D6B:  BCF    06.1
+0D6C:  BSF    03.5
+0D6D:  BCF    06.1
+....................    I2C_Write(0xAB); 
+0D6E:  MOVLW  AB
+0D6F:  BCF    03.5
+0D70:  MOVWF  49
+0D71:  BCF    0A.3
+0D72:  CALL   0C4
+0D73:  BSF    0A.3
+....................    STAV=i2c_read(0); 
+0D74:  CLRF   77
+0D75:  BCF    0A.3
+0D76:  CALL   0F8
+0D77:  BSF    0A.3
+0D78:  MOVF   78,W
+0D79:  MOVWF  31
+....................    i2c_stop(); 
+0D7A:  BSF    03.5
+0D7B:  BCF    06.0
+0D7C:  NOP
+0D7D:  BSF    06.1
+0D7E:  BCF    03.5
+0D7F:  BTFSS  06.1
+0D80:  GOTO   57F
+0D81:  NOP
+0D82:  GOTO   583
+0D83:  NOP
+0D84:  BSF    03.5
+0D85:  BSF    06.0
+0D86:  NOP
+....................  
+....................    i2c_start(); 
+0D87:  BSF    06.0
+0D88:  NOP
+0D89:  BSF    06.1
+0D8A:  NOP
+0D8B:  BCF    03.5
+0D8C:  BCF    06.0
+0D8D:  BSF    03.5
+0D8E:  BCF    06.0
+0D8F:  NOP
+0D90:  BCF    03.5
+0D91:  BCF    06.1
+0D92:  BSF    03.5
+0D93:  BCF    06.1
+....................    I2C_Write(0xAA); 
+0D94:  MOVLW  AA
+0D95:  BCF    03.5
+0D96:  MOVWF  49
+0D97:  BCF    0A.3
+0D98:  CALL   0C4
+0D99:  BSF    0A.3
+....................    I2C_write(0x03); 
+0D9A:  MOVLW  03
+0D9B:  MOVWF  49
+0D9C:  BCF    0A.3
+0D9D:  CALL   0C4
+0D9E:  BSF    0A.3
+....................    i2c_stop(); 
+0D9F:  BSF    03.5
+0DA0:  BCF    06.0
+0DA1:  NOP
+0DA2:  BSF    06.1
+0DA3:  BCF    03.5
+0DA4:  BTFSS  06.1
+0DA5:  GOTO   5A4
+0DA6:  NOP
+0DA7:  GOTO   5A8
+0DA8:  NOP
+0DA9:  BSF    03.5
+0DAA:  BSF    06.0
+0DAB:  NOP
+....................    i2c_start(); 
+0DAC:  BSF    06.0
+0DAD:  NOP
+0DAE:  BSF    06.1
+0DAF:  NOP
+0DB0:  BCF    03.5
+0DB1:  BCF    06.0
+0DB2:  BSF    03.5
+0DB3:  BCF    06.0
+0DB4:  NOP
+0DB5:  BCF    03.5
+0DB6:  BCF    06.1
+0DB7:  BSF    03.5
+0DB8:  BCF    06.1
+....................    I2C_Write(0xAB); 
+0DB9:  MOVLW  AB
+0DBA:  BCF    03.5
+0DBB:  MOVWF  49
+0DBC:  BCF    0A.3
+0DBD:  CALL   0C4
+0DBE:  BSF    0A.3
+....................    STAV1=i2c_read(0); 
+0DBF:  CLRF   77
+0DC0:  BCF    0A.3
+0DC1:  CALL   0F8
+0DC2:  BSF    0A.3
+0DC3:  MOVF   78,W
+0DC4:  MOVWF  32
+....................    i2c_stop();  
+0DC5:  BSF    03.5
+0DC6:  BCF    06.0
+0DC7:  NOP
+0DC8:  BSF    06.1
+0DC9:  BCF    03.5
+0DCA:  BTFSS  06.1
+0DCB:  GOTO   5CA
+0DCC:  NOP
+0DCD:  GOTO   5CE
+0DCE:  NOP
+0DCF:  BSF    03.5
+0DD0:  BSF    06.0
+0DD1:  NOP
+....................     
+....................  
+.................... data4 = (((unsigned int16) INTEP1 << 8) + INTEP ); 
+0DD2:  BCF    03.5
+0DD3:  CLRF   4A
+0DD4:  MOVF   28,W
+0DD5:  MOVWF  49
+0DD6:  MOVWF  4A
+0DD7:  CLRF   49
+0DD8:  MOVF   27,W
+0DD9:  ADDWF  49,W
+0DDA:  MOVWF  3D
+0DDB:  MOVF   4A,W
+0DDC:  MOVWF  3E
+0DDD:  BTFSC  03.0
+0DDE:  INCF   3E,F
+.................... data4 = (data4/10)-273; 
+0DDF:  MOVF   3E,W
+0DE0:  MOVWF  4A
+0DE1:  MOVF   3D,W
+0DE2:  MOVWF  49
+0DE3:  CLRF   4C
+0DE4:  MOVLW  0A
+0DE5:  MOVWF  4B
+0DE6:  BCF    0A.3
+0DE7:  GOTO   141
+0DE8:  BSF    0A.3
+0DE9:  MOVF   79,W
+0DEA:  MOVWF  4A
+0DEB:  MOVF   78,W
+0DEC:  MOVWF  49
+0DED:  MOVLW  11
+0DEE:  SUBWF  49,W
+0DEF:  MOVWF  3D
+0DF0:  MOVF   4A,W
+0DF1:  MOVWF  3E
+0DF2:  MOVLW  01
+0DF3:  BTFSS  03.0
+0DF4:  MOVLW  02
+0DF5:  SUBWF  3E,F
+.................... data5 = (((unsigned int16) NAP1 << 8) + NAP ); 
+0DF6:  CLRF   4A
+0DF7:  MOVF   2A,W
+0DF8:  MOVWF  49
+0DF9:  MOVWF  4A
+0DFA:  CLRF   49
+0DFB:  MOVF   29,W
+0DFC:  ADDWF  49,W
+0DFD:  MOVWF  3F
+0DFE:  MOVF   4A,W
+0DFF:  MOVWF  40
+0E00:  BTFSC  03.0
+0E01:  INCF   40,F
+.................... data6 = (((unsigned int16) PROUD1 << 8) + PROUD ); 
+0E02:  CLRF   4A
+0E03:  MOVF   2C,W
+0E04:  MOVWF  49
+0E05:  MOVWF  4A
+0E06:  CLRF   49
+0E07:  MOVF   2B,W
+0E08:  ADDWF  49,W
+0E09:  MOVWF  41
+0E0A:  MOVF   4A,W
+0E0B:  MOVWF  42
+0E0C:  BTFSC  03.0
+0E0D:  INCF   42,F
+.................... data7 = (((unsigned int16) KAPZ1 << 8) + KAPZ ); 
+0E0E:  CLRF   4A
+0E0F:  MOVF   2E,W
+0E10:  MOVWF  49
+0E11:  MOVWF  4A
+0E12:  CLRF   49
+0E13:  MOVF   2D,W
+0E14:  ADDWF  49,W
+0E15:  MOVWF  43
+0E16:  MOVF   4A,W
+0E17:  MOVWF  44
+0E18:  BTFSC  03.0
+0E19:  INCF   44,F
+.................... data8 = (((unsigned int16) KAPC1 << 8) + KAPC ); 
+0E1A:  CLRF   4A
+0E1B:  MOVF   30,W
+0E1C:  MOVWF  49
+0E1D:  MOVWF  4A
+0E1E:  CLRF   49
+0E1F:  MOVF   2F,W
+0E20:  ADDWF  49,W
+0E21:  MOVWF  45
+0E22:  MOVF   4A,W
+0E23:  MOVWF  46
+0E24:  BTFSC  03.0
+0E25:  INCF   46,F
+.................... data9 = (((unsigned int16) STAV1 << 8) + STAV ); 
+0E26:  CLRF   4A
+0E27:  MOVF   32,W
+0E28:  MOVWF  49
+0E29:  MOVWF  4A
+0E2A:  CLRF   49
+0E2B:  MOVF   31,W
+0E2C:  ADDWF  49,W
+0E2D:  MOVWF  47
+0E2E:  MOVF   4A,W
+0E2F:  MOVWF  48
+0E30:  BTFSC  03.0
+0E31:  INCF   48,F
+....................  
+....................   
+....................     
+....................  
+....................  
+.................... printf("X %Ld \r\n", data1); 
+0E32:  MOVLW  58
+0E33:  MOVWF  52
+0E34:  BCF    0A.3
+0E35:  CALL   05A
+0E36:  BSF    0A.3
+0E37:  MOVLW  20
+0E38:  MOVWF  52
+0E39:  BCF    0A.3
+0E3A:  CALL   05A
+0E3B:  BSF    0A.3
+0E3C:  MOVLW  10
+0E3D:  MOVWF  04
+0E3E:  MOVF   38,W
+0E3F:  MOVWF  4A
+0E40:  MOVF   37,W
+0E41:  MOVWF  49
+0E42:  BCF    0A.3
+0E43:  CALL   168
+0E44:  BSF    0A.3
+0E45:  MOVLW  20
+0E46:  MOVWF  52
+0E47:  BCF    0A.3
+0E48:  CALL   05A
+0E49:  BSF    0A.3
+0E4A:  MOVLW  0D
+0E4B:  MOVWF  52
+0E4C:  BCF    0A.3
+0E4D:  CALL   05A
+0E4E:  BSF    0A.3
+0E4F:  MOVLW  0A
+0E50:  MOVWF  52
+0E51:  BCF    0A.3
+0E52:  CALL   05A
+0E53:  BSF    0A.3
+.................... printf("Y %Ld \r\n", data2); 
+0E54:  MOVLW  59
+0E55:  MOVWF  52
+0E56:  BCF    0A.3
+0E57:  CALL   05A
+0E58:  BSF    0A.3
+0E59:  MOVLW  20
+0E5A:  MOVWF  52
+0E5B:  BCF    0A.3
+0E5C:  CALL   05A
+0E5D:  BSF    0A.3
+0E5E:  MOVLW  10
+0E5F:  MOVWF  04
+0E60:  MOVF   3A,W
+0E61:  MOVWF  4A
+0E62:  MOVF   39,W
+0E63:  MOVWF  49
+0E64:  BCF    0A.3
+0E65:  CALL   168
+0E66:  BSF    0A.3
+0E67:  MOVLW  20
+0E68:  MOVWF  52
+0E69:  BCF    0A.3
+0E6A:  CALL   05A
+0E6B:  BSF    0A.3
+0E6C:  MOVLW  0D
+0E6D:  MOVWF  52
+0E6E:  BCF    0A.3
+0E6F:  CALL   05A
+0E70:  BSF    0A.3
+0E71:  MOVLW  0A
+0E72:  MOVWF  52
+0E73:  BCF    0A.3
+0E74:  CALL   05A
+0E75:  BSF    0A.3
+.................... printf("Z %Ld \r\n", data3); 
+0E76:  MOVLW  5A
+0E77:  MOVWF  52
+0E78:  BCF    0A.3
+0E79:  CALL   05A
+0E7A:  BSF    0A.3
+0E7B:  MOVLW  20
+0E7C:  MOVWF  52
+0E7D:  BCF    0A.3
+0E7E:  CALL   05A
+0E7F:  BSF    0A.3
+0E80:  MOVLW  10
+0E81:  MOVWF  04
+0E82:  MOVF   3C,W
+0E83:  MOVWF  4A
+0E84:  MOVF   3B,W
+0E85:  MOVWF  49
+0E86:  BCF    0A.3
+0E87:  CALL   168
+0E88:  BSF    0A.3
+0E89:  MOVLW  20
+0E8A:  MOVWF  52
+0E8B:  BCF    0A.3
+0E8C:  CALL   05A
+0E8D:  BSF    0A.3
+0E8E:  MOVLW  0D
+0E8F:  MOVWF  52
+0E90:  BCF    0A.3
+0E91:  CALL   05A
+0E92:  BSF    0A.3
+0E93:  MOVLW  0A
+0E94:  MOVWF  52
+0E95:  BCF    0A.3
+0E96:  CALL   05A
+0E97:  BSF    0A.3
+.................... printf("Teplota uvnitr io: %Ld C\r\n", data4); 
+0E98:  MOVLW  10
+0E99:  BSF    03.6
+0E9A:  MOVWF  0D
+0E9B:  MOVLW  00
+0E9C:  MOVWF  0F
+0E9D:  BCF    03.0
+0E9E:  MOVLW  13
+0E9F:  BCF    03.6
+0EA0:  MOVWF  49
+0EA1:  BCF    0A.3
+0EA2:  CALL   1E8
+0EA3:  BSF    0A.3
+0EA4:  MOVLW  10
+0EA5:  MOVWF  04
+0EA6:  MOVF   3E,W
+0EA7:  MOVWF  4A
+0EA8:  MOVF   3D,W
+0EA9:  MOVWF  49
+0EAA:  BCF    0A.3
+0EAB:  CALL   168
+0EAC:  BSF    0A.3
+0EAD:  MOVLW  1B
+0EAE:  BSF    03.6
+0EAF:  MOVWF  0D
+0EB0:  MOVLW  00
+0EB1:  MOVWF  0F
+0EB2:  BCF    03.0
+0EB3:  MOVLW  04
+0EB4:  BCF    03.6
+0EB5:  MOVWF  49
+0EB6:  BCF    0A.3
+0EB7:  CALL   1E8
+0EB8:  BSF    0A.3
+.................... printf("Napeti clanku: %Ld mV \r\n", data5); 
+0EB9:  MOVLW  1E
+0EBA:  BSF    03.6
+0EBB:  MOVWF  0D
+0EBC:  MOVLW  00
+0EBD:  MOVWF  0F
+0EBE:  BCF    03.0
+0EBF:  MOVLW  0F
+0EC0:  BCF    03.6
+0EC1:  MOVWF  49
+0EC2:  BCF    0A.3
+0EC3:  CALL   1E8
+0EC4:  BSF    0A.3
+0EC5:  MOVLW  10
+0EC6:  MOVWF  04
+0EC7:  MOVF   40,W
+0EC8:  MOVWF  4A
+0EC9:  MOVF   3F,W
+0ECA:  MOVWF  49
+0ECB:  BCF    0A.3
+0ECC:  CALL   168
+0ECD:  BSF    0A.3
+0ECE:  MOVLW  27
+0ECF:  BSF    03.6
+0ED0:  MOVWF  0D
+0ED1:  MOVLW  00
+0ED2:  MOVWF  0F
+0ED3:  BCF    03.0
+0ED4:  MOVLW  06
+0ED5:  BCF    03.6
+0ED6:  MOVWF  49
+0ED7:  BCF    0A.3
+0ED8:  CALL   1E8
+0ED9:  BSF    0A.3
+.................... printf("Proud: %Ld mA \r\n", data6); 
+0EDA:  MOVLW  2B
+0EDB:  BSF    03.6
+0EDC:  MOVWF  0D
+0EDD:  MOVLW  00
+0EDE:  MOVWF  0F
+0EDF:  BCF    03.0
+0EE0:  MOVLW  07
+0EE1:  BCF    03.6
+0EE2:  MOVWF  49
+0EE3:  BCF    0A.3
+0EE4:  CALL   1E8
+0EE5:  BSF    0A.3
+0EE6:  MOVLW  10
+0EE7:  MOVWF  04
+0EE8:  MOVF   42,W
+0EE9:  MOVWF  4A
+0EEA:  MOVF   41,W
+0EEB:  MOVWF  49
+0EEC:  BCF    0A.3
+0EED:  CALL   168
+0EEE:  BSF    0A.3
+0EEF:  MOVLW  30
+0EF0:  BSF    03.6
+0EF1:  MOVWF  0D
+0EF2:  MOVLW  00
+0EF3:  MOVWF  0F
+0EF4:  BCF    03.0
+0EF5:  MOVLW  06
+0EF6:  BCF    03.6
+0EF7:  MOVWF  49
+0EF8:  BCF    0A.3
+0EF9:  CALL   1E8
+0EFA:  BSF    0A.3
+.................... printf("Kapacita zbytek: %Ld mAh\r\n", data7); 
+0EFB:  MOVLW  34
+0EFC:  BSF    03.6
+0EFD:  MOVWF  0D
+0EFE:  MOVLW  00
+0EFF:  MOVWF  0F
+0F00:  BCF    03.0
+0F01:  MOVLW  11
+0F02:  BCF    03.6
+0F03:  MOVWF  49
+0F04:  BCF    0A.3
+0F05:  CALL   1E8
+0F06:  BSF    0A.3
+0F07:  MOVLW  10
+0F08:  MOVWF  04
+0F09:  MOVF   44,W
+0F0A:  MOVWF  4A
+0F0B:  MOVF   43,W
+0F0C:  MOVWF  49
+0F0D:  BCF    0A.3
+0F0E:  CALL   168
+0F0F:  BSF    0A.3
+0F10:  MOVLW  3E
+0F11:  BSF    03.6
+0F12:  MOVWF  0D
+0F13:  MOVLW  00
+0F14:  MOVWF  0F
+0F15:  BCF    03.0
+0F16:  MOVLW  06
+0F17:  BCF    03.6
+0F18:  MOVWF  49
+0F19:  BCF    0A.3
+0F1A:  CALL   1E8
+0F1B:  BSF    0A.3
+.................... printf("Kapacita max: %Ld mAh\r\n", data8); 
+0F1C:  MOVLW  42
+0F1D:  BSF    03.6
+0F1E:  MOVWF  0D
+0F1F:  MOVLW  00
+0F20:  MOVWF  0F
+0F21:  BCF    03.0
+0F22:  MOVLW  0E
+0F23:  BCF    03.6
+0F24:  MOVWF  49
+0F25:  BCF    0A.3
+0F26:  CALL   1E8
+0F27:  BSF    0A.3
+0F28:  MOVLW  10
+0F29:  MOVWF  04
+0F2A:  MOVF   46,W
+0F2B:  MOVWF  4A
+0F2C:  MOVF   45,W
+0F2D:  MOVWF  49
+0F2E:  BCF    0A.3
+0F2F:  CALL   168
+0F30:  BSF    0A.3
+0F31:  MOVLW  4A
+0F32:  BSF    03.6
+0F33:  MOVWF  0D
+0F34:  MOVLW  00
+0F35:  MOVWF  0F
+0F36:  BSF    03.0
+0F37:  MOVLW  06
+0F38:  BCF    03.6
+0F39:  MOVWF  49
+0F3A:  BCF    0A.3
+0F3B:  CALL   1E8
+0F3C:  BSF    0A.3
+.................... printf("Stav: %Ld (procenta)\r\n", data9); 
+0F3D:  MOVLW  4E
+0F3E:  BSF    03.6
+0F3F:  MOVWF  0D
+0F40:  MOVLW  00
+0F41:  MOVWF  0F
+0F42:  BCF    03.0
+0F43:  MOVLW  06
+0F44:  BCF    03.6
+0F45:  MOVWF  49
+0F46:  BCF    0A.3
+0F47:  CALL   1E8
+0F48:  BSF    0A.3
+0F49:  MOVLW  10
+0F4A:  MOVWF  04
+0F4B:  MOVF   48,W
+0F4C:  MOVWF  4A
+0F4D:  MOVF   47,W
+0F4E:  MOVWF  49
+0F4F:  BCF    0A.3
+0F50:  CALL   168
+0F51:  BSF    0A.3
+0F52:  MOVLW  52
+0F53:  BSF    03.6
+0F54:  MOVWF  0D
+0F55:  MOVLW  00
+0F56:  MOVWF  0F
+0F57:  BSF    03.0
+0F58:  MOVLW  0D
+0F59:  BCF    03.6
+0F5A:  MOVWF  49
+0F5B:  BCF    0A.3
+0F5C:  CALL   1E8
+0F5D:  BSF    0A.3
+....................  
+....................  }  
+0F5E:  GOTO   06A
+.................... } 
+0F5F:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2CF5   INTRC NOWDT NOPUT MCLR NOPROTECT NOCPD NOBROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 3FFF   NOWRT BORV40

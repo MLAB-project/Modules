@@ -1,0 +1,10 @@
+Pro pøíští verzi doplnit Schottkyho diodu mezi VCTR a VDD+1.8V (ochrana vstupu VCTR).
+Možná pøesunout blokovací C na VCTR a pøidat sériový rezistor.
+
+Pøidat 2xC ke krystalu (standardnì se neosazuje).
+
+Jako variantu osazení soklu na krystal (nevím, jestli nepokazí stabilitu).
+
+Zvážit dojitý konektor pro I2C navíc s napájením.
+
+Zvážit (alespoò) jeden výstup na SMA konektor.

@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> S3AN01A </title>
+    <meta name="keywords" content="stavebnice MLAB univerzální moduly FPGA XILINX Spartan3">
+    <meta name="description" content="Projekt MLAB, školní vývojová deska pro práci s obvody FPGA XILINX Spartan3">
+    <!-- AUTOINCLUDE START "Page/Head.cs.ihtml" DO NOT REMOVE -->
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB.css" type="text/css" title="MLAB základní styl">
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB_Print.css" type="text/css" media="print">
+    <link rel="shortcut icon" type="image/x-icon" href="../../Web/PIC/MLAB.ico">
+    <script type="text/javascript" src="../../../../../Web/JS/MLAB_Menu.js"></script>
+    <!-- AUTOINCLUDE END -->
+  </head>
+
+  <body lang="cs">
+
+    <!-- AUTOINCLUDE START "Page/Header.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== HLAVICKA ============== -->
+    <div class="Header">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawHeader();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- AUTOINCLUDE START "Page/Menu.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== MENU ============== -->
+    <div class="Menu">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawMenu();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) menu je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- ============== TEXT ============== -->
+    <div class="Text">
+      <p class="Title">
+        Školní deska s FPGA XILINX Spartan 3AN
+      </p>
+      <p class=Autor>
+        Milan Horkel
+      </p>
+      <p class="Subtitle">
+        Školní deska vznikla protože jsem se nechal přesvědčit kluky na radiotechnickém kroužku, že
+        by je zajímalo jak fungují obvody FPGA a že by si rádi zkusili něco s nimi udělat. Tento
+        dokument ale nepopisuje desku,  spíše ukazuje, že i taková deska se dá vyrobit podomácku.
+        Skutečnou dokumentaci naleznete u verze S3AN01B, která se od této liší jen minimálně.
+      </p>
+
+      <p class="Subtitle">
+        <img width="401" height="441" src="S3AN01A_files/image001.jpg" alt="Image">
+      </p>
+
+      <p>
+        <a href="../S3AN01A.cs.pdf"><img class="NoBorder"
+           src="../../../../../Web/PIC/FileIco_PDF.ico"
+           alt="Acrobat">&nbsp;PDF verze</a>
+      </p>
+      
+      <h1> Technické parametry </h1>
+      <table>
+        <tr>
+          <td> Parametr </td>
+          <td> Hodnota  </td>
+          <td> Poznámka </td>
+        </tr>
+        <tr>
+          <td> Použitý obvod FPGA </td>
+          <td> XILINX Spartan3 XC3S50AN </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> Náhrada </td>
+          <td> Deska S3AN01B </td>
+          <td> &nbsp; </td>
+        </tr>
+      </table>
+
+      <h1> Popis konstrukce </h1>
+
+      <h2> Úvodem </h2>
+
+      <p>
+        Jak jsem psal v úvodu, motivace byla jednoznačná. Postavit dostatečně
+				jednoduchou školní vývojovou desku s obvodem programovatelné logiky.
+				Původně jsem uvažoval o obvodu CPLD, ale ukázalo se, že obvod FPGA se dá
+				koupit za velmi podobnou cenu a přitom přináší nesrovnatelně bohatší
+				možnosti.
+      </p>
+
+      <p>
+        Protože jsem od přírody skeptik, rozhodl jsem se nejdříve realizovat
+				prototyp podomácku. Jen tak pro případ, že bych udělal nějakou chybu
+				v návrhu. Přeci jenom objednání plošných spojů není úplně zdarma.
+				A ukázalo se, že se to vyplatilo. Jak člověk dělá konstrukci po kouskách
+				po večerech, skoro jako televizní seriál, přehlédne snadno spoustu
+				drobností. Až se sám diví.
+      </p>
+
+      <p>
+        Takže jaké chyby se objevily? Tyhle:
+      </p>
+
+      <ul>
+        <li> Chyběly odpory v sérii s LED displejem, né že by displej nesvítil… </li>
+        <li> Přehlédl jsem, že některé nožičky jsou jen vstupní, ty pak neumí budit LED… </li>
+      </ul>
+
+      <p>
+        První chyba, je skoro nepochopitelná. Normálně bych jí neudělal, ale
+				protože jsem schéma kreslil na pokračování, snadno jsem zapomněl, že
+				odpory nejsou ani stránce schématu s obvodem FPGA, ani na stránce
+				schématu s LED displejem.
+      </p>
+
+      <p>
+        Druhá chyba je taková hloupá. Je trochu nepochopitelné, proč u tak
+				komplexní součástky je několik nožiček (asi 6) jen vstupních.
+      </p>
+
+      <h2> Návrh desky </h2>
+
+      <p>
+        Základem je chytrý návrh desky. Součástka je dost rychlá (stovky MHz) a
+				tomu musí odpovídat kvalita zemní plochy a rozvod napájení. Protože
+				design je dost složitý, nelze vystačit s jednou stranou spojů a jednou
+				stranou zemní plochy. Snahou bylo navrhnout desku tak, aby zemní plocha
+				byla nezbytnými spoji narušena co nejméně. I na straně zemní plochy musí
+				být pár spojů.
+      </p>
+
+      <p>
+        Profesionální deska bude tedy klasická dvoustranná se spoji na jedné
+				straně a se zemní plochou a několika spoji na straně druhé.
+      </p>
+
+      <p>
+        <img width="286" height="227" src="S3AN01A_files/image002.jpg"
+				alt="Image">
+				<img width="283" height="227" src="S3AN01A_files/image003.jpg"
+				alt="Image">
+      </p>
+
+      <p>
+        Obrázek vlevo ukazuje detail rozvodu napájení pro obvod FPGA. Jsou tam
+				pěkně vidět prokovy a propojky. Velká plocha uprostřed je plocha
+				napájecího napětí +1.2V pro jádro obvodu a tlustý vodič okolo plochy je
+				+3.3V pro napájení IO vývodů. Blokování zajišťují kondenzátory vně
+				obvodu FPGA zapojené do zemní ploch pomocí prokovů. Obrázek vpravo
+				ukazuje celý motiv zemní strany včetně rozlité zemní plochy.
+      </p>
+
+      <h2> Amatérská výroba desky </h2>
+
+      <p>
+        Pro amatérskou výrobu si život usnadníme tím, že strana součástek bude
+				celá měděná (zemní plocha přes celou desku) a chybějící spoje
+				realizujeme propojkami. Prokovy realizujeme drátovými spoji pájenými z
+				obou stran desky. To je běžné.
+      </p>
+
+      <p>
+        Chybějící spoje nahradíme drátovými propojkami. Pokud na desku nalepíme
+				na samolepce vytištěný „potisk“, zabijeme tím dvě mouchy najednou.
+				Nebudeme muset při používání desky koukat do dokumentace a propojky
+				můžeme udělat z pocínovaného drátu. <i>Jen nesmíme zapomenou vrtákem
+				odvrtat okraje zemní plochy kolem otvorů, které nemají být uzemněné.</i>
+        Spoje od prokovů na straně součástí děláme co nejplacatější aby nevadily
+				pod samolepkou.
+      </p>
+
+      <p>
+        <img width="197" height="201" src="S3AN01A_files/image004.jpg"
+				alt="Image">
+      </p>
+
+      <p>
+        Problém je co se spoji pod obvodem FPGA? Obvod je velmi placatý a pod
+				břichem má opravdu velmi málo místa. Tak asi 50um.
+      </p>
+
+      <p>
+        <img width="192" height="69" src="S3AN01A_files/image005.jpg"
+				alt="Image">
+      </p>
+
+      <h2> 50um, co s tím? </h2>
+
+      <p>
+        Jde to kupodivu snadno. Vezmeme dobrou vrtačku a upneme do ní malou
+				frézu o průměru 2-3mm. Naštelujeme si doraz tak, abychom neodfrézovali
+				měď, ale jen nadbytečný cín.
+      </p>
+
+      <p>
+        <img width="166" height="227" src="S3AN01A_files/image006.jpg"
+				alt="Image">
+				<img width="256" height="227" src="S3AN01A_files/image007.jpg"
+				alt="Image">
+      </p>
+
+      <p>
+        Po dokončení ozkoušíme, jestli přeci jen spoje pod obvodem FPGA
+				nepřečuhují a jestli se obvod neviklá a když je vše v pořádku pustíme se
+				do osazování.
+      </p>
+
+      <h1> Osazení a oživení </h1>
+
+      <p>
+        Aby deska mohla fungovat, je třeba udělat tyto opravy.
+      </p>
+
+      <h2> Oprava chyb </h2>
+
+      <p>
+        Doplníme 2 drátové spoje dle obrázku. Tím se připojí LED displej chybně
+				připojený na vývody FPGA, které jsou jen vstupní na vývody, které jsou i
+				výstupní.
+      </p>
+
+			<p>
+        <img width="256" height="173" src="S3AN01A_files/image008.jpg"
+				alt="Image">
+      </p>
+
+      <p>
+        Tyto použité vývody patřily rozhraní PS/2 a proto je třeba jejich
+				spojení s PS/2 rozraním přerušit. Přiškrábneme dva spoje na obrázku
+				vpravo od odporů 4k7. Aby mohlo PS/2 rozhraní fungovat doplníme 2 nové
+				spoje směrem dolu na dosud nevyužité vývody (testovací body).
+      </p>
+
+      <p>
+        <img width="255" height="302" src="S3AN01A_files/image009.jpg"
+				alt="Image">
+				<img width="243" height="302" src="S3AN01A_files/image010.jpg"
+				alt="Image">
+      </p>
+
+      <p>
+        Po dokončení těchto úprav získáme desku, která je kompatibilní s
+				aktualizovanou deskou S3AN01B.
+      </p>
+
+    </div>
+
+    <!-- AUTOINCLUDE START "Page/Footer.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== PATIČKA ============== -->
+    <div class="Footer">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawFooter();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+  </body>
+</html>

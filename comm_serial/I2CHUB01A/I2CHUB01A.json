@@ -1,0 +1,22 @@
+{
+    "wiki": "None", 
+    "status": 3, 
+    "name": "I2CHUB01A", 
+    "parameters": [], 
+    "short_en": "The module allow conecting multiple I2C devices together. It does not consist any configurable IO. It is a simple bus multiplyer.", 
+    "image_small": "/doc/img/I2CHUB01A_QRcode.jpgs", 
+    "image": "/doc/img/I2CHUB01A_QRcode.png", 
+    "longname_cs": "Hub pro sběrnici I2C (TWI)", 
+    "longname_en": "I2C (TWI) bus HUB", 
+    "mark": 50.0, 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
+    "short_cs": "Umožňuje propojení většího počtu I2C zařízení. Neobsahuje žádnou konfigurovatelnou logiku.", 
+    "doc_en": "<p>None</p>", 
+    "_id": "I2CHUB01A", 
+    "root": "comm_serial/I2CHUB01A", 
+    "author[]": [], 
+    "category[]": [
+        "commserial"
+    ]
+}

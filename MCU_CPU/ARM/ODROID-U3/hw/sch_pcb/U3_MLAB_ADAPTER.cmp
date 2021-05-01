@@ -1,0 +1,157 @@
+Cmp-Mod V01 Created by Cvpcb 0.201503110816+5502~22~ubuntu14.10.1-product   date = St 11. březen 2015, 17:38:58 CET
+
+BeginCmp
+TimeStamp = /5485FFA7;
+Reference = C1;
+ValeurCmp = 10uF;
+IdModule  = Capacitors_Tantalum_SMD:TantalC_SizeB_EIA-3528_Reflow;
+EndCmp
+
+BeginCmp
+TimeStamp = /548601CE;
+Reference = C2;
+ValeurCmp = 10uF;
+IdModule  = Capacitors_Tantalum_SMD:TantalC_SizeB_EIA-3528_Reflow;
+EndCmp
+
+BeginCmp
+TimeStamp = /5485FEF7;
+Reference = D1;
+ValeurCmp = BAS85;
+IdModule  = Diodes_SMD:Diode-SMA_Standard;
+EndCmp
+
+BeginCmp
+TimeStamp = /548601BC;
+Reference = D2;
+ValeurCmp = BAS85;
+IdModule  = Diodes_SMD:Diode-MiniMELF_Standard;
+EndCmp
+
+BeginCmp
+TimeStamp = /5485F9FC;
+Reference = J1;
+ValeurCmp = 5V POWER;
+IdModule  = Mlab_Pin_Headers:Straight_2x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /5486108C;
+Reference = J2;
+ValeurCmp = GPIO199;
+IdModule  = MLAB_hreb:Pin_Header_Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /54861113;
+Reference = J3;
+ValeurCmp = GPIO200;
+IdModule  = MLAB_hreb:Pin_Header_Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /54861163;
+Reference = J4;
+ValeurCmp = GPIO204;
+IdModule  = MLAB_hreb:Pin_Header_Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /548601AA;
+Reference = J5;
+ValeurCmp = 1,8V CPU Core;
+IdModule  = Mlab_Pin_Headers:Straight_2x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /5485F8D0;
+Reference = J6;
+ValeurCmp = IOS_PORT_#1;
+IdModule  = MLAB_hreb:2mm_Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /54861315;
+Reference = J7;
+ValeurCmp = UART_RX;
+IdModule  = MLAB_hreb:Pin_Header_Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /5486130F;
+Reference = J8;
+ValeurCmp = UART_TX;
+IdModule  = MLAB_hreb:Pin_Header_Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /5486082B;
+Reference = J9;
+ValeurCmp = SCLK;
+IdModule  = MLAB_hreb:Pin_Header_Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /54860825;
+Reference = J10;
+ValeurCmp = MOSI;
+IdModule  = MLAB_hreb:Pin_Header_Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /5485F97F;
+Reference = J11;
+ValeurCmp = IO_PORT_#2;
+IdModule  = MLAB_hreb:2mm_Pin_Header_Straight_2x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /54860610;
+Reference = J12;
+ValeurCmp = #SS;
+IdModule  = MLAB_hreb:Pin_Header_Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /54860710;
+Reference = J13;
+ValeurCmp = MISO;
+IdModule  = MLAB_hreb:Pin_Header_Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /54862BF8;
+Reference = J14;
+ValeurCmp = M3;
+IdModule  = MLAB_dira:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /54862A8F;
+Reference = J15;
+ValeurCmp = M3;
+IdModule  = MLAB_dira:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /54862E35;
+Reference = J16;
+ValeurCmp = M3;
+IdModule  = MLAB_dira:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /54862E8B;
+Reference = J17;
+ValeurCmp = M3;
+IdModule  = MLAB_dira:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /54862E2F;
+Reference = J18;
+ValeurCmp = M3;
+IdModule  = MLAB_dira:MountingHole_3mm;
+EndCmp
+
+EndListe

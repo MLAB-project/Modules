@@ -1,0 +1,569 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> PICPGR301A </title>
+    <meta name="keywords" content="stavebnice MLAB programátor procesrů PIC Microchip">
+    <meta name="description" content="Projekt MLAB, Programátor PICPGR">
+    <!-- AUTOINCLUDE START "Page/Head.cs.ihtml" DO NOT REMOVE -->
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB.css" type="text/css" title="MLAB základní styl">
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB_Print.css" type="text/css" media="print">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../Web/PIC/MLAB.ico">
+    <script type="text/javascript" src="../../../../../Web/JS/MLAB_Menu.js"></script>
+    <!-- AUTOINCLUDE END -->
+  </head>
+
+  <body lang="cs">
+
+    <!-- AUTOINCLUDE START "Page/Header.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== HLAVICKA ============== -->
+    <div class="Header">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawHeader();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- AUTOINCLUDE START "Page/Menu.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== MENU ============== -->
+    <div class="Menu">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawMenu();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) menu je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- ============== TEXT ============== -->
+    <div class="Text">
+      <p class="Title">
+        Programátor procesorů PIC
+      </p>
+      <p class=Autor>
+        Milan Horkel
+      </p>
+      <p class="Subtitle">
+        Programátor PICPGR3 je malý vývojový programátor pro programování
+        procesorů PIC firmy MICROCHIP. Umožňuje programované zařízení spustit
+        bez odpojování programátoru a může jej resetovat i napájet.
+      </p>
+      <p class="Subtitle">
+        <img width="568" height="515" src="PICPGR301A_files/image001.jpg"
+         alt="Deska programátoru">
+      </p>
+      <p>
+        <a href="../PICPGR301A.cs.pdf"><img class="NoBorder"
+           src="../../../../../Web/PIC/FileIco_PDF.ico"
+           alt="Acrobat">&nbsp;PDF verze</a>
+      </p>
+
+      <h1> Technické parametry </h1>
+
+      <table>
+        <tr>
+          <th> Parametr </th>
+          <th> Hodnota </th>
+          <th> Poznámka </th>
+        </tr>
+        <tr>
+          <td> Napájení </td>
+          <td> +15V </td>
+          <td> Ochrana proti přepólování </td>
+        </tr>
+        <tr>
+          <td> Spotřeba </td>
+          <td> 80mA / 100mA </td>
+          <td> Bez připojené aplikace / při programování </td>
+        </tr>
+        <tr>
+          <td> Rozměry </td>
+          <td> 71 x 61 x 20 </td>
+          <td> Výška nad upevňovací deskou, bez přečnívajícího konektoru </td>
+        </tr>
+      </table>
+
+      <h1> Popis konstrukce </h1>
+
+      <h2> Úvodem </h2>
+
+      <p>
+        Programátor PICPGR3 vychází ze starších verzí programátoru, je s nimi
+        funkčně kompatibilní a na rozdíl od nich je mechanicky řešen jako modul
+        pro stavebnici.
+      </p>
+
+      <p>
+        Programátor umožňuje programovat vybrané procesory PIC v režimu
+        standardního programování (používá k tomu programovací napětí 12V).
+        Sortiment podporovaných procesorů není dán konstrukcí hardwaru ale tím,
+        co podporuje software.
+      </p>
+
+      <p>
+        Programátor umožňuje aplikace s procesory PIC nejen programovat v
+        zapojení ale i přímo spouštět, resetovat i pouze napájet napájecím
+        napětím +5V a to bez odpojování programovacích vodičů (to kupodivu
+        neumí zdaleka každý programátor ale vývojář programů to velmi ocení).
+      </p>
+
+      <h2> Zapojení modulu </h2>
+
+      <p>
+        <img width="1360" height="661" src="PICPGR301A_files/image002.png"
+         alt="Schéma zapojení">
+        <img width="802" height="201" src="PICPGR301A_files/image003.png"
+         alt="Schéma zapojení zdroje">
+      </p>
+
+      <p>
+        Napájecí napětí programátoru (konektor J1) by mělo být +15V aby byl
+        programátor schopen generovat programovací napětí VPP o hodnotě +12.5V.
+        Tato hodnota je vyžadována pro programování procesorů s OTP pamětí.
+        Procesory s pamětí FLASH nejsou tak striktní co se týká velikosti VPP
+        protože VPP používají pouze pro aktivaci programovacího režimu a stačí,
+        pokud je podstatně větší než základní napájecí napětí VDD (pozor,
+        neplatí to pro některé starší procesory, které měli starší provedení
+        FLASH či EEPROM paměti).
+      </p>
+
+      <p>
+        Napájecí napětí +5V pro elektroniku programátoru se získává ve
+        stabilizátoru U1 a je používáno i pro napájení cílové aplikace. Spínání
+        napájení pro cílovou aplikaci zajišťují tranzistory Q1 a Q2 a ruční
+        spínač SW1.
+      </p>
+
+      <p>
+        Programovací napětí VPP o hodnotě +12.5V stabilizuje U2 a spínají Q3 a
+        Q4. Tranzistor Q5 aktivuje MCLR# (RESET) procesoru. Vzhledem k tomu, že
+        signál MCLR# i programovací napětí VPP sdílejí společný vývod procesoru
+        MCLR#/VPP, musí být zajištěno, že nedojde k aktivaci signálu MCLR#
+        současně s programovacím napětím VPP. To zajišťuje ochranná logika,
+        která je realizována v obvodu GAL U3.
+      </p>
+
+      <p>
+        V obvodu GAL je kromě ochranné logiky realizován i třístavový budič
+        řídících signálů. Volné vývody obvodu GAL jsou připraveny pro budoucí
+        rozšíření. Odpory R14, R15 a R16 zajišťují klidový stav na vstupech
+        obvodu GAL tak, aby programátor byl v neaktivním stavu pokud není
+        připojen k počítači PC. <i>Na rychlosti obvodu GAL nezáleží, vyhoví
+        kterýkoli GAL16V8 v pouzdru DIL.</i>
+      </p>
+
+      <p>
+        Propojovací kabel mezi PC a PICPGR3 je zapojen 1:1 samec-samec.
+      </p>
+
+      <h2> Mechanická konstrukce </h2>
+
+      <p>
+        Programátor je proveden jako standardní stavebnicový modul.
+      </p>
+
+      <h2> Zapojení obvodu GAL </h2>
+      
+      <p>
+        Verze GAL4.EQN a jeho schématický ekvivalent.
+      </p>
+
+      <p>
+        <img width="454" height="448" src="PICPGR301A_files/image004.png"
+         alt="Zapojení obvodu GAL">
+      </p>
+
+      <h2> Programátorský model </h2>
+      
+      <p>
+        Programátor se připojuje na LPT port PC. Bázové adresy řídících
+        registrů LPT portů ukládá BIOS počítače do paměti na adresy 0:408H
+        (hodnota 16 bitů) a obvykle bývá 3BCH, 378H nebo 278H.
+      </p>
+      
+      <p>
+        Používá se nejzákladnější jednosměrný režim LPT portu. Řídící registry
+        LPT mají pak tento význam:
+      </p>
+
+      <ul>
+        <li> 3BCH/378H/278H Data směrem do tiskárny (v programátoru signály D0 až D7) </li>
+        <li>
+          <ul>
+            <li> bit 0 – signál D0 - DATA </li>
+            <li> bit 1 – signál D1 – DATA output anable </li>
+            <li> bit 2 – signál D2 – CLOCK </li>
+            <li> bit 3 – signál D3 – CLOCK output enable </li>
+            <li> bit 4 – signál D4 – VCCON </li>
+            <li> bit 5 – signál D5 – VPPON (lze jen spolu s VCCON) </li>
+            <li> bit 6 – signál D6 – RESET (lze jen není-li VPPON) </li>
+            <li> bit 7 – signál D7 – musí být 0 aby byl programátor aktivní </li>
+          </ul>
+        </li>
+        <li> 3BEH/37AH/27AH Řízení tiskárny (v programátoru se nepoužívá) </li>
+        <li> 3BDH/379H/279H Čtení stavu tiskárny (používá se jen 1 signál) <li>
+        <li>
+          <ul>
+            <li> bit 6 – signál ACK – čtená data DQ alias DATA </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h1> Osazení a oživení </h1>
+
+      <h2> Osazení </h2>
+
+      <p>
+        <img width="146" height="118" src="PICPGR301A_files/image005.png"
+         alt="Programovací konektor">
+      </p>
+
+      <p>
+        <a href="PICPGR301A_files/O1.png">
+        <img width="441" height="465" src="PICPGR301A_files/image006.jpg"
+         alt="Osazovák"></a>
+      </p>
+
+      <table class="Soupiska">
+        <tr>
+          <th> Reference </th>
+          <th> Název </th>
+        </tr>
+        <tr>
+          <th colspan="2"> Odpory </th>
+        </tr>
+        <tr>
+          <td> R9,R10,R11,R12 </td>
+          <td> 100 </td>
+        </tr>
+        <tr>
+          <td> R4,R13 </td>
+          <td> 470 </td>
+        </tr>
+        <tr>
+          <td> R1,R2,R3,R5,R6,R7 </td>
+          <td> 1k </td>
+        </tr>
+        <tr>
+          <td> R8,R14,R15,R16 </td>
+          <td> 4k7 </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Kondenzátory </th>
+        </tr>
+        <tr>
+          <td> C2,C3,C5,C6 </td>
+          <td> M1 </td>
+        </tr>
+        <tr>
+          <td> C4 </td>
+          <td> 10uF/35V </td>
+        </tr>
+        <tr>
+          <td> C1 </td>
+          <td> 220uF/25V </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Diody </th>
+        </tr>
+        <tr>
+          <td> D1 </td>
+          <td> 1N4007 </td>
+        </tr>
+        <tr>
+          <td> D2 </td>
+          <td> 1N4148 </td>
+        </tr>
+        <tr>
+          <td> D3 </td>
+          <td> LED3mm, zelená </td>
+        </tr>
+        <tr>
+          <td> D4 </td>
+          <td> LED3mm, červená </td>
+        </tr>
+        <tr>
+          <td> D5 </td>
+          <td> BZX85V006.2 </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Tranzistory </th>
+        </tr>
+        <tr>
+          <td> Q1,Q3,Q5 </td>
+          <td> BC337 </td>
+        </tr>
+        <tr>
+          <td> Q2,Q4 </td>
+          <td> BC640 </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Integrované obvody </th>
+        </tr>
+        <tr>
+          <td> U1 </td>
+          <td> LM7805T </td>
+        </tr>
+        <tr>
+          <td> U2 </td>
+          <td> LM78L12Z </td>
+        </tr>
+        <tr>
+          <td> U3 </td>
+          <td> GAL16V8 </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Mechanické součásti </th>
+        </tr>
+        <tr>
+          <td> J1 </td>
+          <td> K375A </td>
+        </tr>
+        <tr>
+          <td> J2 </td>
+          <td> DB25F_90 </td>
+        </tr>
+        <tr>
+          <td> J3 </td>
+          <td> JUMP3 </td>
+        </tr>
+        <tr>
+          <td> J4 </td>
+          <td> PIC_ISP </td>
+        </tr>
+        <tr>
+          <td> J5 </td>
+          <td> JUMP2 </td>
+        </tr>
+        <tr>
+          <td> SW1 </td>
+          <td> P-B143 </td>
+        </tr>
+      </table>
+
+      <h2> Oživení </h2>
+
+      <p>
+        Pokud jsou použité správné součástky (obvod GAL musí být naprogramovaný
+        !) a není chyba v zapojení (zkraty či jiné chyby) bude programátor
+        fungovat na první zapojení.
+      </p>
+
+      <p>
+        Základní oživení se provádí pomocí laboratorního zdroje. Nejprve
+        přesuneme vypínač SW1 do vypnutého stavu (směrem k LED indikátorům).
+        Při postupném zvyšování napájecího napětí kontrolujeme, zda
+        stabilizátor U1 stabilizuje napětí +5V a zda stabilizátor U2
+        stabilizuje na cca +12.7V. Spotřeba programátoru by měla být řádu do
+        100mA (konkrétní hodnota záleží na tom, jakou spotřebu má použitý obvod
+        GAL.
+      </p>
+
+      <p>
+        K dalšímu oživování používáme testovací program TSTPGR.EXE, který
+        umožňuje postupnou aktivaci jednotlivých signálů a jejich kombinací.
+        Jednotlivé položky testu vypisují jednak co program nastavil a
+        informaci o tom, co by se mělo objevit na jednotlivých pinech
+        programovacího konektoru.
+      </p>
+
+      <p>
+        Stav H je napětí kolem +4V, stav L je obvykle napětí pod +0.1V a stav X
+        je napětí kolem +3V s tím, že po připojení odporu 10k na zem nebo na
+        napájení +5V dostaneme napětí 0V nebo +5V. Pro testování, zda funguje
+        vstup PGD se na tento pin připojuje GND a VDD přes odpor 10k.
+      </p>
+
+      <p>
+        Napětí VDD by mělo být v rozmezí +4.5V až +5.5V a VPP v rozmezí +12V až
+        +13V
+      </p>
+
+      <h1> Programové vybavení (MS DOS) </h1>
+
+      <p>
+        <i> Poznámka: Pod systémem Windows XP je možné použít program WinPic.
+        Instalace a konfigurace tohoto programu je popsána v dokumentu
+        <a href="PICPGR3_WindowsXP.cs.html">PICPGR3_WindowsXP.cs.html</a>.</i>
+      </p>
+
+      <h2> Uživatelský návod PICPGR.EXE </h2>
+
+      <p>
+        Program PICPGR.EXE je DOS program a přímo ovládá zadaný LPT port. V
+        případě procesorů s pamětí FLASH je možné spouštět jej i z DOS okna pod
+        Windows 95/98. Program při spuštění bez parametrů vypíše nápovědu
+        včetně úplného seznamu podporovaných procesorů a možností nastavení
+        přepínačů.
+      </p>
+
+      <p>
+        Program zpracovává jednak standardní HEX soubor (takový, který generují
+        obvyklé překladače pro procesor PIC) a alternativně textový soubor,
+        který je výhodný zejména při ladění (vyčtení stavu, vizuální kontrola,
+        definování parametrů v EEPROM paměti a podobně). Součástí datového
+        souboru mohou být data pro paměť programu, pro paměť EEPROM, pro
+        testovací pole i pro konfigurační slovo. Nastavení konfiguračního slova
+        lze (pouze pro procesory s pamětí FLASH) změnit uvedením přepínačů.
+        Různé procesory mají různé přepínače.
+      </p>
+
+      <p>
+        Pro většinu akcí je nutné uvést typ procesoru a případně i formát
+        vstupního či výstupního souboru (přepínač HEX nebo TXT). Na pořadí
+        přepínačů nezáleží.
+      </p>
+
+      <h3> Nápověda </h3>
+
+      <p>
+        <samp>PICPGR</samp>
+      </p>
+
+      <p>
+        Vypíše úplnou nápovědu včetně seznamu všech podporovaných procesorů,
+        jejich vlastností a přepínačů.
+      </p>
+
+      <p>
+        <samp>PICPGR &lt;procesor&gt;</samp>
+      </p>
+
+      <p>
+        Nápověda vypíše vlastnosti procesoru a jeho sady přepínačů pro
+        předefinování stavu konfiguračních přepínačů.
+      </p>
+
+      <h3> Mazání procesoru </h3>
+
+      <p>
+        <samp>PICPGR ERASE &lt;procesor&gt;</samp>
+      </p>
+
+      <p>
+        Smaže obsah všech pamětí procesoru i v případě, že je procesor zamčený.
+        Funguje pouze pro procesory s pamětí FLASH.
+      </p>
+
+      <h3> Čtení procesoru </h3>
+
+      <p>
+        <samp>PICPGR READ &lt;soubor&gt; HEX &lt;procesor&gt;</samp>
+      </p>
+
+      <p>
+        <samp>PICPGR READ &lt;soubor&gt; TXT &lt;procesor&gt;</samp>
+      </p>
+
+      <p>
+        Přečte obsah všech pamětí procesoru a uloží je do výsledného HEX nebo
+        TXT souboru.
+      </p>
+
+      <h3> Programování procesoru a verifikace </h3>
+
+      <p>
+        <samp>PICPGR PROGAM &lt;soubor&gt; HEX &lt;procesor&gt;</samp>
+      </p>
+
+      <p>
+        <samp>PICPGR VERIFY &lt;soubor&gt; HEX &lt;procesor&gt;</samp>
+      </p>
+
+      <p>
+        Provede naprogramování a kontrolu naprogramování procesoru dle zadaného
+        souboru (HEX nebo TXT). Programování automaticky provádí i kontrolu a
+        vypisuje případné nesrovnalosti.
+      </p>
+
+      <p>
+        V případě potřeby je možné změnit nastavení konfiguračního slova. Níže
+        uvedený příklad provede naprogramování procesoru PIC16F873 obsahem
+        souboru TEST.HEX ve formátu HEX s tím, že změní konfigurační bit CP
+        (Code Protection) do stavu zapnuto a pole FOSC v konfiguračním slově
+        (konfigurace oscilátoru) nastaví do stavu 01.
+      </p>
+
+      <p>
+        <samp>PICPGR PROGRAM TEST.HEX HEX PIC16F873 CP_ON FOSC_01</samp>
+      </p>
+
+      <h3> Spouštění aplikace </h3>
+
+      <p>
+        <samp>PICPGR RUN</samp>
+      </p>
+
+      <p>
+        <samp>PICPGR RESET</samp>
+      </p>
+
+      <p>
+        <samp>PICPGR STOP</samp>
+      </p>
+
+      <p>
+        Zapne napájení a spustí aplikaci, provede reset aplikace a vypne
+        napájení aplikace. Používá se při ladění aplikace při kterém se
+        neodpojuje programovací kabel od laděné aplikace.
+      </p>
+
+      <h3> Konverze formátu datového souboru </h3>
+
+      <p>
+        <samp>PICPGR CONVERT &lt;vstup&gt; &lt;vystup&gt; HEX
+        &lt;procesor&gt;</samp>
+      </p>
+
+      <p>
+        <samp>PICPGR CONVERT &lt;vstup&gt; &lt;vystup&gt; TXT
+        &lt;procesor&gt;</samp>
+      </p>
+
+      <p>
+        Převede soubor ve formátu HEX na TXT nebo naopak. Uváděný typ procesoru
+        slouží ke kontrole rozsahu.
+      </p>
+
+      <h2> Popis programu </h2>
+
+      <p>
+        Program je napsaný v jazyce Turbo Pascal verze 6 a vznikl postupným
+        rozšiřováním původního jednoduchého programu pro programování obvodů
+        PIC16F84. Zdrojové texty jsou dostupné a komentované.
+      </p>
+
+      <p>
+        Program podporuje kromě programátoru PICPGR i profesionální programátor
+        ALL-03.
+      </p>
+
+    </div>
+
+    <!-- AUTOINCLUDE START "Page/Footer.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== PATIČKA ============== -->
+    <div class="Footer">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawFooter();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+  </body>
+</html>

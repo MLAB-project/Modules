@@ -1,0 +1,430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> NFET4X01A </title>
+    <meta name="keywords" content="výkonové spínače NFET MLAB">
+    <meta name="description" content="Modul 4 výkonových spínačů NFET do stavebnice MLAB">
+    <!-- AUTOINCLUDE START "Page/Head.cs.ihtml" DO NOT REMOVE -->
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB.css" type="text/css" title="MLAB základní styl">
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB_Print.css" type="text/css" media="print">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../Web/PIC/MLAB.ico">
+    <script type="text/javascript" src="../../../../../Web/JS/MLAB_Menu.js"></script>
+    <!-- AUTOINCLUDE END -->
+  </head>
+
+  <body lang="cs">
+
+    <!-- AUTOINCLUDE START "Page/Header.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== HLAVICKA ============== -->
+    <div class="Header">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawHeader();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- AUTOINCLUDE START "Page/Menu.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== MENU ============== -->
+    <div class="Menu">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawMenu();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) menu je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- ============== TEXT ============== -->
+    <div class="Text">
+      <p class="Title">
+        Modul výkonových spínačů s&nbsp;tranzistory N-FET
+      </p>
+      <p class=Autor>
+        Milan Horkel
+      </p>
+      <p class="Subtitle">
+        Ve starých&nbsp;mainboardech počítačů PC bývají pěkné veliké
+        tranzistory N-FET, které je možné využít. Tranzistory bývají tak asi na
+        proud&nbsp;30A při napětí kolem&nbsp;30V. Modul je osazen čtyřmi
+        tranzistory zapojenými proti zemi.
+      </p>
+      <p class="Subtitle">
+        <img width="324" height="322" src="NFET4X01A_Files/image001.jpg"
+        alt="Pohled ze strany součástek">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <img width="331" height="328" src="NFET4X01A_Files/image002.jpg"
+        alt="Pohled ze strany spojů">
+      </p>
+      <p>
+        <a href="../NFET4X01A.cs.pdf"><img class="NoBorder"
+           src="../../../../../Web/PIC/FileIco_PDF.ico"
+           alt="Acrobat">&nbsp;PDF verze</a>
+      </p>
+
+      <h1> Technické parametry </h1>
+      
+      <table>
+        <tr>
+          <th> Parametr </th>
+          <th> Hodnota  </th>
+          <th> Poznámka </th>
+        </tr>
+        <tr>
+          <td> Pracovní napětí </td>
+          <td> do cca.&nbsp;30V </td>
+          <td> Podle tranzistorů </td>
+        </tr>
+        <tr>
+          <td> Spínaný proud </td>
+          <td> do cca.&nbsp;10A </td>
+          <td> Omezeno tranzistory, svorkami a plošným spojem </td>
+        </tr>
+        <tr>
+          <td> Rozměry </td>
+          <td> 61&nbsp;x&nbsp;61&nbsp;x&nbsp;25mm </td>
+          <td> Výška nad základnou </td>
+        </tr>
+      </table>
+      
+      <h1> Popis konstrukce </h1>
+      
+      <h2> Úvodem </h2>
+      
+      <p>
+        Na mainboardech asi tak od procesoru Pentium&nbsp;II jsou pomocné
+        spínané napájecí zdroje pro napájení procesorů. Vzhledem
+        k&nbsp;proudovým nárokům procesorů jsou používány diskrétní výkonové
+        tranzistory, které je snadné z&nbsp;mainboardu získat. Tranzistory jsou
+        to obvykle úctyhodných parametrů. Proudy tak v&nbsp;řádu 30A-50A a
+        bývají na napětí minimálně 30V. Na jedné desce bývají 2 nebo 4 kusy,
+        někdy i více.
+      </p>
+      
+      <p>
+        Tranzistory se nejsnáze odpájí pomocí elektrické horkovzdušné pistole.
+        Je dobré na jeden modul dát 4 stejné tranzistory.
+      </p>
+      
+      <p>
+        Modul se dá použít i pro buzení krokových motorů s&nbsp;pěti vývody.
+      </p>
+      
+      <h2> Zapojení modulu </h2>
+      
+      <p>
+        Tranzistory mohou být osazeny až 4 kusy. Všechny jsou pak zapojené
+        stejně. Na vstupu je hřebínek, na výstupu je hřebínek a šroubovací
+        svorky.
+      </p>
+      
+      <p>
+        <img width="125" height="145" src="NFET4X01A_Files/image003.png"
+        alt="Zapojení - vstupní konektor">
+        &nbsp;
+        <img width="388" height="282" src="NFET4X01A_Files/image004.png"
+        alt="Zapojení - tranzistor">
+        &nbsp;
+        <img width="140" height="245" src="NFET4X01A_Files/image005.png"
+        alt="Zapojení - výstupní konektor">
+      </p>
+      
+      <p>
+        Napájecí část je doplněna blokovacím kondenzátorem. Konektor je opět
+        hřebínek a šroubovací svorky.
+      </p>
+      
+      <p>
+        <img width="202" height="169" src="NFET4X01A_Files/image006.png"
+        alt="Zapojení - napájení">
+      </p>
+      
+      <h3> Střídavá vazba na vstupu </h3>
+      
+      <p>
+        Spínače jsou na vstupu opatřeny volitelnou střídavou vazbou. Vazba se
+        volí přesunem propojky, která buď zkratuje vazební kondenzátor, nebo ho
+        naopak nechá vřazený a připojí diodu, která zajišťuje, že se bude
+        napětí na řídící elektrodě tranzistoru upínat k&nbsp;zemnímu potenciálu
+        (nebude klesat pod nulovou hodnotu a tím omezovat kladou hodnotu pro
+        sepnutí tranzistoru).
+      </p>
+      
+      <p>
+        Střídavá vazba se používá pro zamezení zničení zátěže (často cívky)
+        pokud by se řídící elektronika zasekla zrovna ve stavu, kdy je
+        tranzistor otevřený.
+      </p>
+      
+      <p>
+        <i>Procesory PIC tohle umějí a může se stát, že procesor drží výstup
+        ve stavu H ještě před tím, než proběhne vnitřní reset procesoru.
+        Nastává to v&nbsp;případě, že poklesne napájecí napětí, ale ně úplně
+        k&nbsp;nule. Výstupní budiče zůstanou ve stavu H a pokud má spínací
+        tranzistor prahové napětí nižší než je napětí od kterého zafunguje
+        reset obvod procesoru, zůstane výkonový tranzistor sepnutý a
+        v&nbsp;podstatě zkratuje napájecí zdroj. Tranzistor 30A obvykle
+        napájecí zdroj nepřetlačí a tak se procesor nikdy neresetuje.</i>
+      </p>
+      
+      <p>
+        Na řídící elektrodě je dále umístěn velký odpor do země aby byl
+        nepřipojený tranzistor rozpojený.
+      </p>
+      
+      <h3> Dioda v&nbsp;kolektoru </h3>
+      
+      <p>
+        Při rozpínání indukční zátěže se zátěž brání změně protékajícího proudu
+        tím, že indukuje napětí, které má takovou orientaci, aby se udržel
+        proud. Může tak vznikat velké napětí na kolektorech tranzistorů. Jeho
+        hodnota je dána rychlostí rozepnutí tranzistoru a indukčností zátěže.
+        Aby nedošlo k&nbsp;poškození (průrazu) tranzistorů, jsou v&nbsp;modulu
+        osazeny záchytné diody. Nezapomeňte horní konec diod připojit ke
+        kladnému zdroji výkonové části.
+      </p>
+      
+      <p>
+        Pokud se spíná (pulsně šířkovou modulací) obyčejný kartáčový motor a
+        dioda se nepřipojí, motor se moc netočí, protože se při rozpojení
+        energie magnetického obvodu motoru spotřebuje k&nbsp;pokusu o proražení
+        tranzistoru (velké napětí) místo toho, aby se energie spotřebovala
+        v&nbsp;zátěži (motoru).
+      </p>
+      
+      <h2> Typické parametry tranzistorů </h2>
+      
+      <p>
+        Pro konkrétní tranzistory je třeba parametry vygooglovat. Zde jsem
+        vypsal hlavní parametry konkrétního tranzistoru CEB703AL protože jsem
+        zrovna tento tranzistor použil. Tranzistory bývají tomuto konkrétnímu
+        typu podobné.
+      </p>
+      
+      <p>
+        Zvlášť je třeba upozornit na výkon tranzistoru. Výkon 50W je možné
+        využít pouze pokud je tranzistor dostatečně chlazený. Používá-li se
+        tranzistor jako spínač nebude využit a skutečný (ztrátový) výkon je pak
+        řádu 1W což vystačí s&nbsp;minimálním chladičem nebo plochou na plošném
+        spoji.
+      </p>
+      
+      <p>
+        Druhý zrádný parametr je kapacita řídící elektrody. Kapacita elektrody
+        proti zemi (elektrodě S) je značná, mnohem větší než u bipolárních
+        tranzistorů a navíc se zde projevuje i vliv kapacity s&nbsp;elektrodou
+        D. Kapacita je navíc nelineární právě v&nbsp;okolí bodu sepnutí. Proto
+        je třeba tranzistor spínat dost razantně aby sepnutí i rozepnutí
+        proběhlo tak rychle, aby se tranzistor nepřehřál (velký proud krát
+        nenulové napětí na tranzistoru po delší dobu).
+      </p>
+      
+      <table>
+        <tr>
+          <th colspan="3">
+              Tranzistor CEB703AL
+          </th>
+        </tr>
+        <tr>
+          <th> Parametr </th>
+          <th> Označení </th>
+          <th> Hodnota  </th>
+        </tr>
+        <tr>
+          <td> Napětí kolektoru </td>
+          <td> V<sub>DS</sub> </td>
+          <td> 30V </td>
+        </tr>
+        <tr>
+          <td> Proud kolektorem trvalý </td>
+          <td> I<sub>D</sub> </td>
+          <td> 40A </td>
+        </tr>
+        <tr>
+          <td> Proud kolektorem krátkodobý </td>
+          <td> I<sub>DM</sub> </td>
+          <td> 120A </td>
+        </tr>
+        <tr>
+          <td> Výkon (při 25ºC) </td>
+          <td> P<sub>D</sub> </td>
+          <td> 50W </td>
+        </tr>
+        <tr>
+          <td> Tepelný odpor pouzdra </td>
+          <td> R<sub>TH(JC)</sub> </td>
+          <td> 3K/W </td>
+        </tr>
+        <tr>
+          <td> Tepelný odpor bez chladiče </td>
+          <td> T<sub>TH(JA)</sub> </td>
+          <td> 63K/W </td>
+        </tr>
+        <tr>
+          <td> Maximální napětí na řídící elektrodě </td>
+          <td> V<sub>GS</sub> </td>
+          <td> +/-20V </td>
+        </tr>
+        <tr>
+          <td> Kapacita řídící elektrody </td>
+          <td> C<sub>ISS</sub> </td>
+          <td> 1500pF </td>
+        </tr>
+        <tr>
+          <td> Napětí pro sepnutí </td>
+          <td> V<sub>GS(TH)</sub> </td>
+          <td> 1.7V&nbsp;(1-3V) </td>
+        </tr>
+        <tr>
+          <td> Odpor v&nbsp;sepnutém stavu, typicky při buzení 4.5/10V </td>
+          <td> R<sub>DS(ON)</sub> </td>
+          <td> 14mΩ&nbsp;/&nbsp;17mΩ </td>
+        </tr>
+        <tr>
+          <td> Rychlost sepnutí / rozepnutí </td>
+          <td> T<sub>DS(OFF)</sub> </td>
+          <td> 20ns&nbsp;/&nbsp;80ns </td>
+        </tr>
+      </table>
+      
+      <h2> Mechanická konstrukce </h2>
+      
+      <p>
+        Modul je standardní, se šrouby v&nbsp;rozích.
+      </p>
+      
+      <h1> Osazení a oživení </h1>
+      
+      <h2> Osazení </h2>
+      
+      <p>
+        Při pájení tranzistorů je třeba použít dostatečně výkonnou páječku.
+      </p>
+      
+      <p>
+        <img width="708" height="220" src="NFET4X01A_Files/image007.png"
+        alt="Osazení - strana spojů">
+      </P>
+      
+      <P>
+        <img width="705" height="705" src="NFET4X01A_Files/image008.png"
+        alt="Osazení - strana součástí">
+      </p>
+      
+      <table class="Soupiska">
+        <tr>
+          <th colspan="2"> Odpory </th>
+        </tr>
+        <tr>
+          <td> R1, R3, R5, R7 </td>
+          <td> 100 </td>
+        </tr>
+        <tr>
+          <td> R2, R4, R6, R8 </td>
+          <td> 100k </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Keramické kondenzátory </th>
+        </tr>
+        <tr>
+          <td> C1, C2, C3, C4 </td>
+          <td> 100nF </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Elektrolytické kondenzátory </th>
+        </tr>
+        <tr>
+          <td> C5 </td>
+          <td> 470M/35V </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Diody </th>
+        </tr>
+        <tr>
+          <td> D1, D3, D5, D7 </td>
+          <td> BAT43SMD </td>
+        </tr>
+        <tr>
+          <td> D2, D4, D6, D8 </td>
+          <td> 1N5818 </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Tranzistory </th>
+        </tr>
+        <tr>
+          <td> Q1, Q2, Q3, Q4 </td>
+          <td> AP60N03S </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Mechanické součástky </th>
+        </tr>
+        <tr>
+          <td> J1, J3, J5 </td>
+          <td> JUMP2X4 </td>
+        </tr>
+        <tr>
+          <td> J6, J7, J8, J9 </td>
+          <td> JUMP3 </td>
+        </tr>
+        <tr>
+          <td> J2 </td>
+          <td> ARK210/4 </td>
+        </tr>
+        <tr>
+          <td> J4 </td>
+          <td> ARK210/2 </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Konstrukční součástky </th>
+        </tr>
+        <tr>
+          <td> 4 ks </td>
+          <td> Šroub M3x12 křížový s&nbsp;válcovou hlavou </td>
+        </tr>
+        <tr>
+          <td> 4 ks </td>
+          <td> Podložka M3 </td>
+        </tr>
+        <tr>
+          <td> 4 ks </td>
+          <td> DI5M3X05 distanční sloupek M3x5 </td>
+        </tr>
+      </table>
+      
+      <h2> Oživení </h2>
+      
+      <p>
+        Stačí vyzkoušet, že tranzistory spínají. Použijeme napájecí zdroj 5 až
+        10V s&nbsp;omezením proudu a například žárovky. Testujeme v&nbsp;režimu
+        stejnosměrného buzení (propojky v&nbsp;poloze DC).
+      </p>
+      
+    </div>
+
+    <!-- AUTOINCLUDE START "Page/Footer.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== PATIČKA ============== -->
+    <div class="Footer">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawFooter();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+  </body>
+</html>

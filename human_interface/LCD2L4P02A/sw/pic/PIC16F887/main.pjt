@@ -1,0 +1,36 @@
+[PROJECT]
+Target=main.hex
+Development_Mode=
+Processor_Text=PIC16F887
+ToolSuite=CCS
+Processor=0x887F
+[main]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=main.c
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=main.c
+2=
+3=C:\Program Files (x86)\PICC\devices\16F887.h
+4=C:\Program Files (x86)\PICC\drivers\lcd.c
+5=..\SHT25.h
+6=..\SHT25.c
+7=..\LTS01.h
+8=..\LTS01.c
+9=..\HMC5883L.h
+10=..\HMC5883L.c
+11=C:\Program Files (x86)\PICC\drivers\math.h
+12=
+[Target Data]
+OptionString=-p +FM
+FileList=main.c
+[Units]
+Count=1
+1=main (main)

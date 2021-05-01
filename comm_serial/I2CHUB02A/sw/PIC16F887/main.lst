@@ -1,0 +1,500 @@
+CCS PCM C Compiler, Version 4.106, 47914               14-V-13 19:16
+
+               Filename: Z:\home\kaklik\svnMLAB\Modules\CommSerial\I2CHUB02A\SW\PIC16F887\main.lst
+
+               ROM used: 468 words (6%)
+                         Largest free fragment is 2048
+               RAM used: 7 (2%) at main() level
+                         11 (3%) worst case
+               Stack:    3 locations
+
+*
+0000:  MOVLW  01
+0001:  MOVWF  0A
+0002:  GOTO   155
+0003:  NOP
+.................... #include "main.h" 
+.................... #include <16F887.h> 
+.................... //////// Standard Header file for the PIC16F887 device //////////////// 
+.................... #device PIC16F887 
+.................... #list 
+....................  
+.................... #device adc=8 
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES INTRC                 	//Internal RC Osc 
+.................... #FUSES NOPUT                 	//No Power Up Timer 
+.................... #FUSES MCLR                  	//Master Clear pin enabled 
+.................... #FUSES NOPROTECT             	//Code not protected from reading 
+.................... #FUSES NOCPD                 	//No EE protection 
+.................... #FUSES NOBROWNOUT            	//No brownout reset 
+.................... #FUSES IESO                  	//Internal External Switch Over mode enabled 
+.................... #FUSES FCMEN                 	//Fail-safe clock monitor enabled 
+.................... #FUSES NOLVP                 	//No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES NODEBUG               	//No Debug mode for ICD 
+.................... #FUSES NOWRT                 	//Program memory not write protected 
+.................... #FUSES BORV40                	//Brownout reset at 4.0V 
+....................  
+.................... #use delay(clock=8000000) 
+*
+013F:  MOVLW  22
+0140:  MOVWF  04
+0141:  BCF    03.7
+0142:  MOVF   00,W
+0143:  BTFSC  03.2
+0144:  GOTO   152
+0145:  MOVLW  02
+0146:  MOVWF  78
+0147:  CLRF   77
+0148:  DECFSZ 77,F
+0149:  GOTO   148
+014A:  DECFSZ 78,F
+014B:  GOTO   147
+014C:  MOVLW  97
+014D:  MOVWF  77
+014E:  DECFSZ 77,F
+014F:  GOTO   14E
+0150:  DECFSZ 00,F
+0151:  GOTO   145
+0152:  BCF    0A.3
+0153:  BCF    0A.4
+0154:  GOTO   1D0 (RETURN)
+....................  
+....................  
+.................... //I2CHUB 
+.................... //ADRESA pro èteni 0xE1 
+.................... //pro zápis 0xE0 
+....................  
+.................... #use i2c(master, sda=PIN_C4, scl=PIN_C3) 
+*
+0083:  MOVLW  08
+0084:  MOVWF  78
+0085:  NOP
+0086:  BCF    07.3
+0087:  BCF    20.3
+0088:  MOVF   20,W
+0089:  BSF    03.5
+008A:  MOVWF  07
+008B:  NOP
+008C:  BCF    03.5
+008D:  RLF    22,F
+008E:  BCF    07.4
+008F:  BTFSS  03.0
+0090:  GOTO   097
+0091:  BSF    20.4
+0092:  MOVF   20,W
+0093:  BSF    03.5
+0094:  MOVWF  07
+0095:  GOTO   09B
+0096:  BCF    03.5
+0097:  BCF    20.4
+0098:  MOVF   20,W
+0099:  BSF    03.5
+009A:  MOVWF  07
+009B:  NOP
+009C:  BCF    03.5
+009D:  BSF    20.3
+009E:  MOVF   20,W
+009F:  BSF    03.5
+00A0:  MOVWF  07
+00A1:  BCF    03.5
+00A2:  BTFSS  07.3
+00A3:  GOTO   0A2
+00A4:  DECFSZ 78,F
+00A5:  GOTO   085
+00A6:  NOP
+00A7:  BCF    07.3
+00A8:  BCF    20.3
+00A9:  MOVF   20,W
+00AA:  BSF    03.5
+00AB:  MOVWF  07
+00AC:  NOP
+00AD:  BCF    03.5
+00AE:  BSF    20.4
+00AF:  MOVF   20,W
+00B0:  BSF    03.5
+00B1:  MOVWF  07
+00B2:  NOP
+00B3:  NOP
+00B4:  BCF    03.5
+00B5:  BSF    20.3
+00B6:  MOVF   20,W
+00B7:  BSF    03.5
+00B8:  MOVWF  07
+00B9:  BCF    03.5
+00BA:  BTFSS  07.3
+00BB:  GOTO   0BA
+00BC:  CLRF   78
+00BD:  NOP
+00BE:  BTFSC  07.4
+00BF:  BSF    78.0
+00C0:  BCF    07.3
+00C1:  BCF    20.3
+00C2:  MOVF   20,W
+00C3:  BSF    03.5
+00C4:  MOVWF  07
+00C5:  BCF    03.5
+00C6:  BCF    07.4
+00C7:  BCF    20.4
+00C8:  MOVF   20,W
+00C9:  BSF    03.5
+00CA:  MOVWF  07
+00CB:  BCF    03.5
+00CC:  RETURN
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_C7,rcv=PIN_C6,bits=8) //rcv TXD xmit RXD 
+*
+0019:  BCF    20.7
+001A:  MOVF   20,W
+001B:  BSF    03.5
+001C:  MOVWF  07
+001D:  BCF    03.5
+001E:  BCF    07.7
+001F:  MOVLW  08
+0020:  MOVWF  78
+0021:  GOTO   022
+0022:  NOP
+0023:  BSF    78.7
+0024:  GOTO   033
+0025:  BCF    78.7
+0026:  RRF    25,F
+0027:  BTFSC  03.0
+0028:  BSF    07.7
+0029:  BTFSS  03.0
+002A:  BCF    07.7
+002B:  BSF    78.6
+002C:  GOTO   033
+002D:  BCF    78.6
+002E:  DECFSZ 78,F
+002F:  GOTO   026
+0030:  GOTO   031
+0031:  NOP
+0032:  BSF    07.7
+0033:  MOVLW  3F
+0034:  MOVWF  04
+0035:  DECFSZ 04,F
+0036:  GOTO   035
+0037:  NOP
+0038:  BTFSC  78.7
+0039:  GOTO   025
+003A:  BTFSC  78.6
+003B:  GOTO   02D
+003C:  RETURN
+....................  
+.................... void setHUB(int d) //vstupuje 1-8 
+.................... //hodnota udava jaky port bude pripojen na master I2C 
+.................... //zde je nastaveno propojeni jen jedne brany, je mozne propojit i vice bran naraz 
+.................... { 
+.................... switch (d) { 
+*
+00CD:  MOVF   21,W
+00CE:  XORLW  01
+00CF:  BTFSC  03.2
+00D0:  GOTO   0E7
+00D1:  XORLW  03
+00D2:  BTFSC  03.2
+00D3:  GOTO   0EA
+00D4:  XORLW  01
+00D5:  BTFSC  03.2
+00D6:  GOTO   0ED
+00D7:  XORLW  07
+00D8:  BTFSC  03.2
+00D9:  GOTO   0F0
+00DA:  XORLW  01
+00DB:  BTFSC  03.2
+00DC:  GOTO   0F3
+00DD:  XORLW  03
+00DE:  BTFSC  03.2
+00DF:  GOTO   0F6
+00E0:  XORLW  01
+00E1:  BTFSC  03.2
+00E2:  GOTO   0F9
+00E3:  XORLW  0F
+00E4:  BTFSC  03.2
+00E5:  GOTO   0FC
+00E6:  GOTO   0FF
+....................  
+....................     case 1: d=0x01; 
+00E7:  MOVLW  01
+00E8:  MOVWF  21
+....................  
+....................            break; 
+00E9:  GOTO   107
+....................  
+....................     case 2: d=0x02; 
+00EA:  MOVLW  02
+00EB:  MOVWF  21
+....................  
+....................            break; 
+00EC:  GOTO   107
+....................             
+....................     case 3: d=0x04; 
+00ED:  MOVLW  04
+00EE:  MOVWF  21
+....................  
+....................            break; 
+00EF:  GOTO   107
+....................  
+....................     case 4: d=0x08; 
+00F0:  MOVLW  08
+00F1:  MOVWF  21
+....................  
+....................            break; 
+00F2:  GOTO   107
+....................     case 5: d=0x10; 
+00F3:  MOVLW  10
+00F4:  MOVWF  21
+....................  
+....................            break; 
+00F5:  GOTO   107
+....................  
+....................     case 6: d=0x20; 
+00F6:  MOVLW  20
+00F7:  MOVWF  21
+....................  
+....................            break; 
+00F8:  GOTO   107
+....................     case 7: d=0x40; 
+00F9:  MOVLW  40
+00FA:  MOVWF  21
+....................  
+....................            break; 
+00FB:  GOTO   107
+....................  
+....................     case 8: d=0x80; 
+00FC:  MOVLW  80
+00FD:  MOVWF  21
+....................  
+....................            break; 
+00FE:  GOTO   107
+....................     
+....................    default:printf("chyba"); 
+00FF:  MOVLW  04
+0100:  BSF    03.6
+0101:  MOVWF  0D
+0102:  MOVLW  00
+0103:  MOVWF  0F
+0104:  BCF    03.6
+0105:  CALL   03D
+....................  
+....................            break; } 
+0106:  GOTO   107
+....................     
+....................    i2c_start(); 
+0107:  BSF    20.4
+0108:  MOVF   20,W
+0109:  BSF    03.5
+010A:  MOVWF  07
+010B:  NOP
+010C:  BCF    03.5
+010D:  BSF    20.3
+010E:  MOVF   20,W
+010F:  BSF    03.5
+0110:  MOVWF  07
+0111:  NOP
+0112:  BCF    03.5
+0113:  BCF    07.4
+0114:  BCF    20.4
+0115:  MOVF   20,W
+0116:  BSF    03.5
+0117:  MOVWF  07
+0118:  NOP
+0119:  BCF    03.5
+011A:  BCF    07.3
+011B:  BCF    20.3
+011C:  MOVF   20,W
+011D:  BSF    03.5
+011E:  MOVWF  07
+....................    I2C_Write(0xE0); 
+011F:  MOVLW  E0
+0120:  BCF    03.5
+0121:  MOVWF  22
+0122:  CALL   083
+....................     
+....................    I2C_write(d); 
+0123:  MOVF   21,W
+0124:  MOVWF  22
+0125:  CALL   083
+....................    i2c_stop();            
+0126:  BCF    20.4
+0127:  MOVF   20,W
+0128:  BSF    03.5
+0129:  MOVWF  07
+012A:  NOP
+012B:  BCF    03.5
+012C:  BSF    20.3
+012D:  MOVF   20,W
+012E:  BSF    03.5
+012F:  MOVWF  07
+0130:  BCF    03.5
+0131:  BTFSS  07.3
+0132:  GOTO   131
+0133:  NOP
+0134:  GOTO   135
+0135:  NOP
+0136:  BSF    20.4
+0137:  MOVF   20,W
+0138:  BSF    03.5
+0139:  MOVWF  07
+013A:  NOP
+....................  
+.................... } 
+013B:  BCF    03.5
+013C:  BCF    0A.3
+013D:  BCF    0A.4
+013E:  GOTO   1CB (RETURN)
+....................  
+....................  
+.................... void main() 
+.................... { 
+*
+0018:  DATA 00,00
+*
+0155:  CLRF   04
+0156:  BCF    03.7
+0157:  MOVLW  1F
+0158:  ANDWF  03,F
+0159:  MOVLW  71
+015A:  BSF    03.5
+015B:  MOVWF  0F
+015C:  MOVF   0F,W
+015D:  BCF    03.5
+015E:  BCF    20.7
+015F:  MOVF   20,W
+0160:  BSF    03.5
+0161:  MOVWF  07
+0162:  BCF    03.5
+0163:  BSF    07.7
+0164:  BSF    03.5
+0165:  BSF    03.6
+0166:  MOVF   09,W
+0167:  ANDLW  C0
+0168:  MOVWF  09
+0169:  BCF    03.6
+016A:  BCF    1F.4
+016B:  BCF    1F.5
+016C:  MOVLW  00
+016D:  BSF    03.6
+016E:  MOVWF  08
+016F:  BCF    03.5
+0170:  CLRF   07
+0171:  CLRF   08
+0172:  CLRF   09
+....................  
+....................    setup_adc_ports(NO_ANALOGS|VSS_VDD); 
+*
+0176:  BSF    03.5
+0177:  BSF    03.6
+0178:  MOVF   09,W
+0179:  ANDLW  C0
+017A:  MOVWF  09
+017B:  BCF    03.6
+017C:  BCF    1F.4
+017D:  BCF    1F.5
+017E:  MOVLW  00
+017F:  BSF    03.6
+0180:  MOVWF  08
+....................    setup_adc(ADC_CLOCK_DIV_2); 
+0181:  BCF    03.5
+0182:  BCF    03.6
+0183:  BCF    1F.6
+0184:  BCF    1F.7
+0185:  BSF    03.5
+0186:  BCF    1F.7
+0187:  BCF    03.5
+0188:  BSF    1F.0
+....................    setup_spi(SPI_SS_DISABLED); 
+0189:  BCF    14.5
+018A:  BCF    20.5
+018B:  MOVF   20,W
+018C:  BSF    03.5
+018D:  MOVWF  07
+018E:  BCF    03.5
+018F:  BSF    20.4
+0190:  MOVF   20,W
+0191:  BSF    03.5
+0192:  MOVWF  07
+0193:  BCF    03.5
+0194:  BCF    20.3
+0195:  MOVF   20,W
+0196:  BSF    03.5
+0197:  MOVWF  07
+0198:  MOVLW  01
+0199:  BCF    03.5
+019A:  MOVWF  14
+019B:  MOVLW  00
+019C:  BSF    03.5
+019D:  MOVWF  14
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_1); 
+019E:  MOVF   01,W
+019F:  ANDLW  C7
+01A0:  IORLW  08
+01A1:  MOVWF  01
+....................    setup_timer_1(T1_DISABLED); 
+01A2:  BCF    03.5
+01A3:  CLRF   10
+....................    setup_timer_2(T2_DISABLED,0,1); 
+01A4:  MOVLW  00
+01A5:  MOVWF  78
+01A6:  MOVWF  12
+01A7:  MOVLW  00
+01A8:  BSF    03.5
+01A9:  MOVWF  12
+....................    setup_ccp1(CCP_OFF); 
+01AA:  BCF    03.5
+01AB:  BSF    20.2
+01AC:  MOVF   20,W
+01AD:  BSF    03.5
+01AE:  MOVWF  07
+01AF:  BCF    03.5
+01B0:  CLRF   17
+01B1:  BSF    03.5
+01B2:  CLRF   1B
+01B3:  CLRF   1C
+01B4:  MOVLW  01
+01B5:  MOVWF  1D
+....................    setup_comparator(NC_NC_NC_NC);// This device COMP currently not supported by the PICWizard 
+01B6:  BCF    03.5
+01B7:  BSF    03.6
+01B8:  CLRF   07
+01B9:  CLRF   08
+01BA:  CLRF   09
+....................  
+.................... printf("I2CHUB  \r\n",); 
+01BB:  MOVLW  07
+01BC:  MOVWF  0D
+01BD:  MOVLW  00
+01BE:  MOVWF  0F
+01BF:  BCF    03.6
+01C0:  CALL   03D
+.................... printf("(c)MLAB 2013 JACHO  \r\n",); 
+01C1:  MOVLW  0D
+01C2:  BSF    03.6
+01C3:  MOVWF  0D
+01C4:  MOVLW  00
+01C5:  MOVWF  0F
+01C6:  BCF    03.6
+01C7:  CALL   03D
+....................  
+....................   while(TRUE) 
+....................  {  
+....................    setHUB(3); //pripoji prislusnou branu 
+01C8:  MOVLW  03
+01C9:  MOVWF  21
+01CA:  GOTO   0CD
+....................    delay_ms(1000); 
+01CB:  MOVLW  04
+01CC:  MOVWF  21
+01CD:  MOVLW  FA
+01CE:  MOVWF  22
+01CF:  GOTO   13F
+01D0:  DECFSZ 21,F
+01D1:  GOTO   1CD
+....................  }  
+01D2:  GOTO   1C8
+.................... } 
+....................  
+01D3:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2CF5   INTRC NOWDT NOPUT MCLR NOPROTECT NOCPD NOBROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 3FFF   NOWRT BORV40

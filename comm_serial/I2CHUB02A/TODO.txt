@@ -1,0 +1,9 @@
+Adresy na modulu by mely byt oznacene v 7bit formatu.
+Je nesikovne, ze nelze menit jumperem adresu modulu alespon v omezenem rozsahu. 
+u kazdeho konektoru by melo byt lepe viditelne oznaceni vyvodu.
+chybi QRkod.
+Je trochu neprakticke, ze aktivace pull-upu je svazana se zapojenim vystupniho napajeni. Resenim tohoto problemu by mohlo byt osazeni vetsich pull-up rezistoru, treba 47 nebo 100k.
+
+Obecne prilis tenke detove cesticky. 
+Male plosky u integrovaneho obvodu.
+Blokovaci kondenzator C1 je zbytecne daleko od IO. 

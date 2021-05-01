@@ -1,0 +1,19 @@
+ÀÄmain
+   ÀÄMAIN  0/169  Ram=4
+      ÃÄ??0??
+      ÃÄ@PSTRINGC7_9600_62_63  0/72  Ram=3
+      ÃÄ@PSTRINGC7_9600_62_63  0/72  Ram=3
+      ÃÄLTS01_get_temp  0/164  Ram=4
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_READ_1  0/69  Ram=3
+      ³  ÃÄ@I2C_READ_1  0/69  Ram=3
+      ³  ÃÄ@ITOF  (Inline)  Ram=2
+      ³  ÀÄ@MULFF  0/117  Ram=13
+      ÃÄ@PRINTF_L32D_9600_62_63FPFPF  0/237  Ram=13
+      ³  ÃÄ@MULFF  0/117  Ram=13
+      ³  ÃÄ@FTOSD  (Inline)  Ram=5
+      ³  ÃÄ@DIV3232  0/66  Ram=13
+      ³  ÀÄ@DIV3232  0/66  Ram=13
+      ÀÄ@delay_ms1  0/22  Ram=1

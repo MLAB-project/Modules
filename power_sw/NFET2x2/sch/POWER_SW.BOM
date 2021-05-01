@@ -1,0 +1,35 @@
+4x Power Switch  Revised: Tuesday, December 12, 2006
+PowerSW          Revision: 1
+
+
+
+
+
+
+
+Bill Of Materials       December 12,2006      0:55:24	Page1
+
+Quantity	Reference	Part	PCB Footprint 
+______________________________________________
+
+5	D1	1N5818	DO41
+	D2	1N5818	DO41
+	D3	1N5818	DO41
+	D4	1N5818	DO41
+	D5	1N5818	DO41
+1	J1	JUMP2X1	JUMP2X1
+1	J2	JUMP2X4	JUMP2X4
+4	J3	ARK210/2	ARK210/2
+	J4	ARK210/2	ARK210/2
+	J5	ARK210/2	ARK210/2
+	J6	ARK210/2	ARK210/2
+4	M1	HOLE_M3	HOLE_M3
+	M2	HOLE_M3	HOLE_M3
+	M3	HOLE_M3	HOLE_M3
+	M4	HOLE_M3	HOLE_M3
+2	Q1	SO8_2xNFET_9926	SO8_2FET
+	Q2	SO8_2xNFET_9926	SO8_2FET
+4	R1	47	R0805
+	R2	47	R0805
+	R3	47	R0805
+	R4	47	R0805

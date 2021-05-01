@@ -1,0 +1,213 @@
+Cmp-Mod V01 Created by Cvpcb 0.201503110816+5502~22~ubuntu14.10.1-product   date = St 11. březen 2015, 19:39:16 CET
+
+BeginCmp
+TimeStamp = /5476F528;
+Reference = C1;
+ValeurCmp = 47uF;
+IdModule  = Capacitors_Tantalum_SMD:TantalC_SizeC_EIA-6032_Reflow;
+EndCmp
+
+BeginCmp
+TimeStamp = /5477060F;
+Reference = C2;
+ValeurCmp = 100nF;
+IdModule  = Capacitors_SMD:C_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5476F755;
+Reference = C3;
+ValeurCmp = 1nF;
+IdModule  = Capacitors_SMD:C_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5477033B;
+Reference = C4;
+ValeurCmp = 100pF;
+IdModule  = Capacitors_SMD:C_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5477069D;
+Reference = C5;
+ValeurCmp = 470pF;
+IdModule  = Capacitors_SMD:C_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /547707A4;
+Reference = C6;
+ValeurCmp = 100uF;
+IdModule  = Capacitors_Tantalum_SMD:TantalC_SizeD_EIA-7343_Reflow;
+EndCmp
+
+BeginCmp
+TimeStamp = /54770930;
+Reference = C7;
+ValeurCmp = 100uF;
+IdModule  = Capacitors_Tantalum_SMD:TantalC_SizeD_EIA-7343_Reflow;
+EndCmp
+
+BeginCmp
+TimeStamp = /5476F499;
+Reference = D1;
+ValeurCmp = M4;
+IdModule  = MLAB_D:Diode-SMA_Standard;
+EndCmp
+
+BeginCmp
+TimeStamp = /5477039D;
+Reference = D2;
+ValeurCmp = 15MQ040N;
+IdModule  = MLAB_D:Diode-SMA_Standard;
+EndCmp
+
+BeginCmp
+TimeStamp = /5476F306;
+Reference = J1;
+ValeurCmp = JUMP_4X2;
+IdModule  = Hrebinky:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /5476F3AB;
+Reference = J2;
+ValeurCmp = CONN1_1;
+IdModule  = MLAB_CON:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /5476F449;
+Reference = J3;
+ValeurCmp = CONN1_1;
+IdModule  = MLAB_CON:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /54777542;
+Reference = J4;
+ValeurCmp = JUMP2_2x1;
+IdModule  = Hrebinky:Pin_Header_Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /5477762B;
+Reference = J5;
+ValeurCmp = JUMP2_2x1;
+IdModule  = Hrebinky:Pin_Header_Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /5477765E;
+Reference = J6;
+ValeurCmp = JUMP2_2x1;
+IdModule  = Hrebinky:Pin_Header_Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /547710E9;
+Reference = J7;
+ValeurCmp = CONN1_1;
+IdModule  = MLAB_CON:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /54770EF4;
+Reference = J8;
+ValeurCmp = CONN1_1;
+IdModule  = MLAB_CON:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /54770CCE;
+Reference = J9;
+ValeurCmp = JUMP_4X2;
+IdModule  = Hrebinky:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /547704A3;
+Reference = L1;
+ValeurCmp = 22uH;
+IdModule  = MLAB_L:DE1205-10;
+EndCmp
+
+BeginCmp
+TimeStamp = /54779F4D;
+Reference = P1;
+ValeurCmp = _;
+IdModule  = Dira:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5477A27E;
+Reference = P2;
+ValeurCmp = _;
+IdModule  = Dira:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5477A2B0;
+Reference = P3;
+ValeurCmp = _;
+IdModule  = Dira:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5477A2F5;
+Reference = P4;
+ValeurCmp = _;
+IdModule  = Dira:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /54770268;
+Reference = Q1;
+ValeurCmp = IRF7416;
+IdModule  = MLAB_IO:SO-8;
+EndCmp
+
+BeginCmp
+TimeStamp = /5476F659;
+Reference = R1;
+ValeurCmp = 22k;
+IdModule  = Resistors_SMD:R_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54770570;
+Reference = R2;
+ValeurCmp = 20k;
+IdModule  = Resistors_SMD:R_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5477050C;
+Reference = R3;
+ValeurCmp = 33k;
+IdModule  = Resistors_SMD:R_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /547705D0;
+Reference = R4;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:R_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5478B6A0;
+Reference = R5;
+ValeurCmp = 20k;
+IdModule  = Resistors_SMD:R_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5476F060;
+Reference = U1;
+ValeurCmp = LM3485;
+IdModule  = MLAB_IO:MSOP-8_3x3mm_Pitch0.65mm;
+EndCmp
+
+EndListe

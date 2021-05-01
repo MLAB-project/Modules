@@ -1,0 +1,34 @@
+{
+    "short_en": "Lightning sensor module based on AS3935 Franklin Lightning Sensor IO. Sensor can be connected via I2C or SPI bus.", 
+    "status": 2, 
+    "name": "LIGHTNING01A", 
+    "parameters": [
+        {
+            "name": "$io", 
+            "description_cs": "", 
+            "description_en": "", 
+            "name_cs": "", 
+            "value": "AS3935", 
+            "name_en": "", 
+            "unit": ""
+        }
+    ], 
+    "longname_en": "Digital lightning sensor", 
+    "wiki": "", 
+    "short_cs": "Detektor blesků založený na integrovaném obvodu AS3935. Senzor může být připojen přes I2C nebo SPI.", 
+    "image_small": "/doc/img/LIGHTNING01A_top.jpg", 
+    "mark": 45.0, 
+    "ust": "", 
+    "doc_cs": "", 
+    "image": "/doc/img/LIGHTNING01A_top.jpg", 
+    "longname_cs": "Digitální detektor blesků.", 
+    "doc_en": "", 
+    "_id": "LIGHTNING01A", 
+    "root": "sensors/LIGHTNING01A", 
+    "author[]": [
+        "roman-dvorak"
+    ], 
+    "category[]": [
+        "sensor"
+    ]
+}

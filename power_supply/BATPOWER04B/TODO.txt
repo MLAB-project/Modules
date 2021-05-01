@@ -1,0 +1,6 @@
+Problém s účinností měniče byl v této verzi vyřešen přidáním dalšího kapacitoru 470pF do zpětné napěťové vazby.  Důvod nutnosti jeho přidání je pravděpodobně v tom, že do zpětné vazby se indukuje parazitní napětí, které znemožňuje správnou funkci regulace.. Tento kondenzátor vazbu tlumí. 
+Primární důvod nutnosti jeho přidání je pravděpodobně layout PCB, který aktuálně neakceptuje doporučení uvedená v datasheetu obvodu. 
+Ve skutečnosti je tak potřeba přepracovat většinu layoutu PCB.  Jde o vedení POWERGND a GND, umístění shottky diody a prokovy.
+
+Dále je pravděpodobně zbytečně složitě řešeno přěpínání výstupních napětí. Protože reálně by mělo stačit přepínat pouze spodní stranu odporového děliče. Nevýhodou aktuálního řešení je skutečnost, že v případě náhodného nezapojení jumperu na výstup je aktuálně nedefinovaná hodnota výstupního napětí.
+

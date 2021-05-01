@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> ATmegaTQ4401A </title>
+    <meta name="keywords" content="ATMEL ATmega TQFP44 modul procesoru">
+    <meta name="description" content="Modul pro procesory ATEML ATmega v pouzdru TQFP44">
+    <!-- AUTOINCLUDE START "Page/Head.cs.ihtml" DO NOT REMOVE -->
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB.css" type="text/css" title="MLAB základní styl">
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB_Print.css" type="text/css" media="print">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../Web/PIC/MLAB.ico">
+    <script type="text/javascript" src="../../../../../Web/JS/MLAB_Menu.js"></script>
+    <!-- AUTOINCLUDE END -->
+  </head>
+
+  <body lang="cs">
+
+    <!-- AUTOINCLUDE START "Page/Header.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== HLAVICKA ============== -->
+    <div class="Header">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawHeader();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- AUTOINCLUDE START "Page/Menu.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== MENU ============== -->
+    <div class="Menu">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawMenu();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) menu je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- ============== TEXT ============== -->
+    <div class="Text">
+      <p class="Title">
+        Modul procesoru ATmega v&nbsp;pouzdru TQFP44
+      </p>
+      <p class=Autor>
+        Milan Horkel
+      </p>
+      <p class="Subtitle">
+        Procesorový modul pro práci s&nbsp;procesory ATMEL ATmega v&nbsp;pouzdru
+        TQFP44. Modul obsahuje procesor a může být osazen krystalem standardní
+        velikosti nebo hodinkovým krystalem 32768Hz. Modul je dále vybaven
+        tlačítkem RESET a programovacím konektorem ATMEL ISP 6 PIN a konektorem
+        JTAG.
+      </p>
+      <p class="Subtitle">
+        <img width=460 height=386 src="ATmegaTQ4401A_Pictures/image001.jpg"
+        alt="Pohled na modul ATmegaTQ4401A">
+      </p>
+      <p>
+        <a href="../ATmegaTQ4401A.cs.pdf"><img class="NoBorder"
+           src="../../../../../Web/PIC/FileIco_PDF.ico"
+           alt="Acrobat">&nbsp;PDF verze</a>
+      </p>
+
+      <h1> Technické parametry </h1>
+      
+      <table>
+        <tr>
+          <th> Parametr </th>
+          <th> Hodnota  </th>
+          <th> Poznámka </th>
+        </tr>
+        <tr>
+          <td> Napájení </td>
+          <td> (1.8V) .. 2.7V .. 5.5V </td>
+          <td> Dle použitého procesoru </td>
+        </tr>
+        <tr>
+          <td> Spotřeba </td>
+          <td> 20mA </td>
+          <td> Dle použitého procesoru </td>
+        </tr>
+        <tr>
+          <td> Procesor </td>
+          <td> ATmega16, ATmega32, ATmeg164P, ATmega324P, ATmega644P,
+               ATmega8535, a&nbsp;další… </td>
+          <td> Nebo jiný v pouzdru TQFP44, nutno zkontrolovat zapojení vývodů </td>
+        </tr>
+        <tr>
+          <td> Rozměry </td>
+          <td> 51x61x16mm </td>
+          <td> Výška nad nosnou deskou </td>
+        </tr>
+      </table>
+      
+      <h1> Popis konstrukce </h1>
+      
+      <h2> Úvodem </h2>
+      
+      <p>
+        Jedná se o standardní modul pro procesory AVR firmy ATMEL
+        v&nbsp;pouzdru TQFP44. Kromě výše uvedených typů lze použít i další
+        typy v&nbsp;pouzdru TQFP44 ale vždy je nezbytné zkontrolovat zapojení
+        vývodů (programovací porty a zejména napájení). Jak ATMEL uvádí nové
+        procesory tak postupně přibývají vhodné typy pro tento modul.
+      </p>
+      
+      <h2> Zapojení modulu </h2>
+      
+      <p>
+        <img width="892" height="924" src="ATmegaTQ4401A_Pictures/image002.png"
+        alt="Schéma modulu">
+      </p>
+      
+      <p>
+        <img width="208" height="162" src="ATmegaTQ4401A_Pictures/image003.png"
+        alt="Náhradní odpory">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <img width="208" height="162" src="ATmegaTQ4401A_Pictures/image004.png"
+        alt="Náhradní kondenzátory">
+      </p>
+      
+      <p>
+        Modul je napájen přes napájecí konektor J45. Dioda D1 slouží jako
+        ochrana před přepólováním zdroje (předpokládá se, že zdroj má proudové
+        omezení cca 1A). Velikost napájecího napětí je dána použitým
+        procesorem. Tlumivka L1 s&nbsp;kondenzátorem C5 slouží jako filtr
+        napájení pro A/D převodník v&nbsp;procesoru. Kondenzátor C6 slouží
+        k&nbsp;filtraci referenčního napětí.
+      </p>
+      
+      <p>
+        Zdrojem hodinového kmitočtu procesoru může být:
+      </p>
+      
+      <ul>
+        <li> Vnitřní kalibrovaný RC oscilátor (defaultní nastavení nového
+             procesoru, kmitočet 1MHz) </li>
+        <li> Vnější krystalový oscilátor s&nbsp;krystalem X1 nebo X2 (hodinkový
+             krystal) </li>
+        <li> Vnější RC oscilátor R3/C8 (jen u některých typů procesorů) </li>
+        <li> Zdroj vnějšího hodinového signálu na vývod XTAL1 </li>
+      </ul>
+      
+      <p>
+        Zdroj hodinového kmitočtu a konfigurace (frekvenční rozsah) oscilátoru
+        se volí programováním konfiguračního slova procesoru. Nový procesor
+        přichází s&nbsp;nastavením interní RC oscilátor s&nbsp;nastavením
+        frekvence na 1MHz.
+      </p>
+      
+      <p>
+        Firma ATMEL definovala dvě „standardní“ zapojení programovacího ISP
+        konektoru. Modul používá menší verzi se 6 vývody.
+      </p>
+
+      <p>
+        Dále je na desce osazen konektor pro JATG programování a ladění. JTAG
+        rozhraní se povoluje v&nbsp;konfiguračním slově a defaultně je zakázané.
+        Když se používá JTAG nesmí být osazen kondenzátor C7.
+      </p>
+      
+      <p>
+        Volitelně je možné osadit krystal X3 pro čítač/časovač, který se dá
+        použít jako RTC.
+      </p>
+      
+      <h2> Mechanická konstrukce </h2>
+      
+      <p>
+        Jedná se o standardní modul do stavebnice s&nbsp;upevňovacími rohovými
+        sloupky.
+      </p>
+      
+      <h1> Osazení a oživení </h1>
+      
+      <h2> Osazení </h2>
+      
+      <p>
+        Při osazování procesoru použijte minimum pájky. V&nbsp;případě, že
+        nemáte vhodné vybavení je nejsnazší plošky pro procesor předem
+        pocínovat (co nejméně) a pak přiložený procesor nejprve přichytit za
+        dvě protilehlé nožičky. Další pájka se již přidávat nemusí. Zbylé
+        vývody stačí jeden po druhém připájet. V&nbsp;případě, že je
+        k&nbsp;dispozici jen pistolová páječka používá se smyčka ze zvonkového
+        drátu (průměr drátu cca 0.8mm).
+      </p>
+      
+      <p>
+        Krystal je možné buď osadit rovnou na desku (pokud víme předem jakou
+        budeme potřebovat frekvenci) nebo se osadí jen dutinky z&nbsp;precizní
+        patice do kterých se pak dá zasunout krystal dle potřeby.
+      </p>
+      
+      <p>
+        Na desce jsou 4 drátové propojky.
+      </p>
+      
+      <p>
+        SMD tlumivku je možné v&nbsp;nouzi nahradit propojkou. Zhorší se tím
+        šum A/D převodníku.
+      </p>
+
+      <p>
+        <img width="699" height="583" src="ATmegaTQ4401A_Pictures/image005.png"
+        alt="Osazení ze strany součástek">
+        <img width="702" height="584" src="ATmegaTQ4401A_Pictures/image006.png"
+        alt="Osazení ze strany spojů">
+      </p>
+      
+      <table class="Soupiska">
+        <tr>
+          <th> Reference </th>
+          <th> Hodnota </th>
+        </tr>
+        <tr>
+          <th colspan="2"> Odpory </th>
+        </tr>
+        <tr>
+          <td> R1 </td>
+          <td> 100 </td>
+        </tr>
+        <tr>
+          <td> R2, R101, R102, R103 </td>
+          <td> 10k </td>
+        </tr>
+        <tr>
+          <td> R3 </td>
+          <td> # (volitelné) </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Keramické kondenzátory </th>
+        </tr>
+        <tr>
+          <td> C8, C9 </td>
+          <td> 15pF </td>
+        </tr>
+        <tr>
+          <td> C101, C102, C103 </td>
+          <td> 10nF </td>
+        </tr>
+        <tr>
+          <td> C2, C3, C4, C5, C6 </td>
+          <td> 100nF </td>
+        </tr>
+        <tr>
+          <td> C7 </td>
+          <td> #100nF (neosazovat) </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Elektrolytické kondenzátory </th>
+        </tr>
+        <tr>
+          <td> C1 </td>
+          <td> 22uF/6.3V </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Indukčnosti </th>
+        </tr>
+        <tr>
+          <td> L1 </td>
+          <td> 10uH </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Diody </th>
+        </tr>
+        <tr>
+          <td> D1 </td>
+          <td> 1N4007SMD </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Integrované obvody </th>
+        </tr>
+        <tr>
+          <td> U1 </td>
+          <td> ATmega (výběr) </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Krystaly </th>
+        </tr>
+        <tr>
+          <td> X1 </td>
+          <td> 8MHz (volitelné) </td>
+        </tr>
+        <tr>
+          <td> X2, X3 </td>
+          <td> #32768Hz (volitelné) </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Mechanické součástky </th>
+        </tr>
+        <tr>
+          <td> J1-J11, J12-J22,<br>
+               J23-J33, J34-J44 </td>
+          <td> JUMP2x11 </td>
+        </tr>
+        <tr>
+          <td> J45, J46 </td>
+          <td> JUMP2x3 </td>
+        </tr>
+        <tr>
+          <td> J47 </td>
+          <td> JUMP2x5 </td>
+        </tr>
+        <tr>
+          <td> J101+J103+J105,<br>
+               J102+J104+J106,<br>
+               J107+J109+J111,<br>
+               J108+J110+J112 </td>
+          <td> JUMP3 </td>
+        </tr>
+        <tr>
+          <td> SW1 </td>
+          <td> P-B1720 </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Konstrukční součástky </th>
+        </tr>
+        <tr>
+          <td> 4ks </td>
+          <td> Šroub M3x12 křížový s&nbsp;válcovou hlavou </td>
+        </tr>
+        <tr>
+          <td> 4ks </td>
+          <td> Podložka M3 </td>
+        </tr>
+        <tr>
+          <td> 4ks </td>
+          <td> Distanční sloupek M3x5 </td>
+        </tr>
+      </table>
+
+      <p>
+        Připomínáme, že na modul lze osadit různé procesory a podle toho volíme
+        osazení krystalů a jejich hodnoty.
+      </p>
+
+    </div>
+
+    <!-- AUTOINCLUDE START "Page/Footer.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== PATIČKA ============== -->
+    <div class="Footer">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawFooter();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+  </body>
+</html>

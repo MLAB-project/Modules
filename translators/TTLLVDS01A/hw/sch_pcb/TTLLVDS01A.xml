@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:\Chroust\stare\MLAB_G\Modules\translators\TTLLVDS01A\hw\sch_pcb\TTLLVDS01A.sch</source>
+    <date>04.03.2019 14:37:21</date>
+    <tool>Eeschema (6.0.0-rc1-dev-205-gc0615c5ef)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>NAME</title>
+        <company>Mlab www.mlab.cz</company>
+        <rev>REV</rev>
+        <date>%F</date>
+        <source>TTLLVDS01A.sch</source>
+        <comment number="1" value="VERSION"/>
+        <comment number="2" value="Short description \nTwo lines are maximum"/>
+        <comment number="3" value="nickname &lt;email@example.com&gt;"/>
+        <comment number="4" value="BSD"/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="M1">
+      <value>HOLE</value>
+      <footprint>Mlab_Mechanical:MountingHole_3mm</footprint>
+      <libsource lib="MLAB_MECHANICAL" part="HOLE" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>549D7549</tstamp>
+    </comp>
+    <comp ref="M2">
+      <value>HOLE</value>
+      <footprint>Mlab_Mechanical:MountingHole_3mm</footprint>
+      <libsource lib="MLAB_MECHANICAL" part="HOLE" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>549D7628</tstamp>
+    </comp>
+    <comp ref="M3">
+      <value>HOLE</value>
+      <footprint>Mlab_Mechanical:MountingHole_3mm</footprint>
+      <libsource lib="MLAB_MECHANICAL" part="HOLE" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>549D7646</tstamp>
+    </comp>
+    <comp ref="M4">
+      <value>HOLE</value>
+      <footprint>Mlab_Mechanical:MountingHole_3mm</footprint>
+      <libsource lib="MLAB_MECHANICAL" part="HOLE" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>549D7665</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>BZV55C-3,6V</value>
+      <footprint>Diode_SMD:D_MiniMELF</footprint>
+      <libsource lib="MLAB_D" part="D_ZENER" description="Diode zener"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B4DE0B5</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>JUMP_3X2</value>
+      <footprint>Mlab_Pin_Headers:Straight_2x03</footprint>
+      <libsource lib="MLAB_Jumpers" part="JUMP_3X2" description="MLAB modified doubled pinheader connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B4DDE60</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>100nF</value>
+      <footprint>Mlab_R:SMD-0805</footprint>
+      <fields>
+        <field name="UST_id">C0805_100n</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5562302C</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>SN65LVDS9638D</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/ds90lv027a.pdf</datasheet>
+      <fields>
+        <field name="UST_ID">5c7268ed1287500b4e112f34</field>
+      </fields>
+      <libsource lib="MLAB_IO" part="SN65LVDS9638D" description="LVDS Dual High Speed Differential Driver, &gt;600MBps, SOIC-8"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C6BE27C</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>SATA7-67491-1030</value>
+      <footprint>Mlab_CON:SATA-7_THT_VERT_2</footprint>
+      <fields>
+        <field name="UST_ID">5c70984712875079b91f8a7b</field>
+      </fields>
+      <libsource lib="MLAB_CONNECTORS" part="SATA7-67491-1030" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C6BE664</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>33R</value>
+      <footprint>Mlab_R:SMD-0805</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984512875079b91f8970</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C6BEB35</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>33R</value>
+      <footprint>Mlab_R:SMD-0805</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984512875079b91f8970</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C6BECC5</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>HEADER_2x01_PARALLEL</value>
+      <footprint>Mlab_Pin_Headers:Straight_2x01</footprint>
+      <libsource lib="MLAB_HEADER" part="HEADER_2x01_PARALLEL" description="2x01 2.54 mm pitch header, 2 pins next to each other are connected"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C6C6CEA</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>HEADER_2x01_PARALLEL</value>
+      <footprint>Mlab_Pin_Headers:Straight_2x01</footprint>
+      <libsource lib="MLAB_HEADER" part="HEADER_2x01_PARALLEL" description="2x01 2.54 mm pitch header, 2 pins next to each other are connected"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C6C6E55</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>HEADER_2x01_PARALLEL</value>
+      <footprint>Mlab_Pin_Headers:Straight_2x01</footprint>
+      <libsource lib="MLAB_HEADER" part="HEADER_2x01_PARALLEL" description="2x01 2.54 mm pitch header, 2 pins next to each other are connected"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C6C6E85</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>HEADER_2x01_PARALLEL</value>
+      <footprint>Mlab_Pin_Headers:Straight_2x01</footprint>
+      <libsource lib="MLAB_HEADER" part="HEADER_2x01_PARALLEL" description="2x01 2.54 mm pitch header, 2 pins next to each other are connected"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C6C6EBF</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>33R</value>
+      <footprint>Mlab_R:SMD-0805</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984512875079b91f8970</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C6CC9E7</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>33R</value>
+      <footprint>Mlab_R:SMD-0805</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="UST_ID">5c70984512875079b91f8970</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C6CCB45</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MLAB_CONNECTORS" part="SATA7-67491-1030">
+      <aliases>
+        <alias>SATA</alias>
+      </aliases>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">SATA7-67491-1030</field>
+        <field name="Footprint">MOLEX_67491-1030</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MLAB_D" part="D_ZENER">
+      <description>Diode zener</description>
+      <footprints>
+        <fp>D?</fp>
+        <fp>SO*</fp>
+        <fp>SM*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_ZENER</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MLAB_HEADER" part="HEADER_2x01_PARALLEL">
+      <description>2x01 2.54 mm pitch header, 2 pins next to each other are connected</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">HEADER_2x01_PARALLEL</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="MLAB_IO" part="SN65LVDS9638D">
+      <description>LVDS Dual High Speed Differential Driver, &gt;600MBps, SOIC-8</description>
+      <docs>http://www.ti.com/lit/ds/symlink/ds90lv027a.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SN65LVDS9638D</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VCC" type="power_in"/>
+        <pin num="2" name="1A" type="input"/>
+        <pin num="3" name="2A" type="input"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="2Z" type="output"/>
+        <pin num="6" name="2Y" type="output"/>
+        <pin num="7" name="1Z" type="output"/>
+        <pin num="8" name="1Y" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="MLAB_Jumpers" part="JUMP_3X2">
+      <description>MLAB modified doubled pinheader connector</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">JUMP_3X2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="2" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="4" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="6" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MLAB_MECHANICAL" part="HOLE">
+      <fields>
+        <field name="Reference">M</field>
+        <field name="Value">HOLE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Device">
+      <uri>C:/Chroust/stare/KiCAD_G/kicad-symbols/Device.lib</uri>
+    </library>
+    <library logical="MLAB_CONNECTORS">
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_CONNECTORS.lib</uri>
+    </library>
+    <library logical="MLAB_D">
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_D.lib</uri>
+    </library>
+    <library logical="MLAB_HEADER">
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_HEADER.lib</uri>
+    </library>
+    <library logical="MLAB_IO">
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_IO.lib</uri>
+    </library>
+    <library logical="MLAB_Jumpers">
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_Jumpers.lib</uri>
+    </library>
+    <library logical="MLAB_MECHANICAL">
+      <uri>C:/Chroust/stare/MLAB_G/kicad-mlab/symbols/MLAB_MECHANICAL.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="GND">
+      <node ref="M2" pin="1"/>
+      <node ref="M1" pin="1"/>
+      <node ref="J1" pin="6"/>
+      <node ref="J1" pin="5"/>
+      <node ref="J1" pin="2"/>
+      <node ref="D1" pin="2"/>
+      <node ref="M3" pin="1"/>
+      <node ref="J1" pin="1"/>
+      <node ref="J5" pin="2"/>
+      <node ref="J5" pin="1"/>
+      <node ref="J3" pin="2"/>
+      <node ref="J3" pin="1"/>
+      <node ref="U1" pin="4"/>
+      <node ref="C2" pin="2"/>
+      <node ref="J6" pin="7"/>
+      <node ref="J6" pin="1"/>
+      <node ref="J6" pin="4"/>
+      <node ref="M4" pin="1"/>
+    </net>
+    <net code="2" name="VCC">
+      <node ref="D1" pin="1"/>
+      <node ref="J1" pin="3"/>
+      <node ref="J1" pin="4"/>
+      <node ref="C2" pin="1"/>
+      <node ref="U1" pin="1"/>
+    </net>
+    <net code="3" name="/2-">
+      <node ref="J6" pin="6"/>
+      <node ref="U1" pin="5"/>
+      <node ref="R4" pin="2"/>
+    </net>
+    <net code="4" name="/1+">
+      <node ref="R3" pin="1"/>
+      <node ref="J6" pin="2"/>
+      <node ref="U1" pin="8"/>
+    </net>
+    <net code="5" name="/1-">
+      <node ref="J6" pin="3"/>
+      <node ref="U1" pin="7"/>
+      <node ref="R3" pin="2"/>
+    </net>
+    <net code="6" name="/2+">
+      <node ref="R4" pin="1"/>
+      <node ref="J6" pin="5"/>
+      <node ref="U1" pin="6"/>
+    </net>
+    <net code="7" name="Net-(R1-Pad1)">
+      <node ref="U1" pin="2"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="8" name="/1A">
+      <node ref="R1" pin="2"/>
+      <node ref="J2" pin="2"/>
+      <node ref="J2" pin="1"/>
+    </net>
+    <net code="9" name="Net-(R2-Pad1)">
+      <node ref="U1" pin="3"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="10" name="/2A">
+      <node ref="R2" pin="2"/>
+      <node ref="J4" pin="2"/>
+      <node ref="J4" pin="1"/>
+    </net>
+  </nets>
+</export>

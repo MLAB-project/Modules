@@ -1,0 +1,143 @@
+Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 2. 12. 2015 7:35:01
+
+BeginCmp
+TimeStamp = /564C23E1;
+Reference = C1;
+ValeurCmp = 1uF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /564C5CF3;
+Reference = C2;
+ValeurCmp = 4,7uF;
+IdModule  = Mlab_C:TantalC_SizeC_Reflow;
+EndCmp
+
+BeginCmp
+TimeStamp = /564C245B;
+Reference = C3;
+ValeurCmp = 4,7uF;
+IdModule  = Mlab_C:TantalC_SizeC_Reflow;
+EndCmp
+
+BeginCmp
+TimeStamp = /564CE757;
+Reference = D1;
+ValeurCmp = TMMBAT48;
+IdModule  = Mlab_D:Diode-MiniMELF_Standard;
+EndCmp
+
+BeginCmp
+TimeStamp = /565F3CDF;
+Reference = D2;
+ValeurCmp = D_Schottky;
+IdModule  = Mlab_D:Diode-MiniMELF_Standard;
+EndCmp
+
+BeginCmp
+TimeStamp = /564C6381;
+Reference = J1;
+ValeurCmp = JUMP_2x1;
+IdModule  = Mlab_Pin_Headers:Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /564C66D6;
+Reference = J2;
+ValeurCmp = JUMP_2x1;
+IdModule  = Mlab_Pin_Headers:Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /564C46DC;
+Reference = J3;
+ValeurCmp = WAGO256;
+IdModule  = Mlab_Con:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /564C45D7;
+Reference = J4;
+ValeurCmp = WAGO256;
+IdModule  = Mlab_Con:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /564C472F;
+Reference = J5;
+ValeurCmp = JUMP_4X2;
+IdModule  = Mlab_Pin_Headers:Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /564C6DCF;
+Reference = J6;
+ValeurCmp = WAGO256;
+IdModule  = Mlab_Con:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /564C7D80;
+Reference = J7;
+ValeurCmp = WAGO256;
+IdModule  = Mlab_Con:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /564C22DA;
+Reference = L1;
+ValeurCmp = DE1207-22 (22uH);
+IdModule  = Mlab_L:DE1205-10;
+EndCmp
+
+BeginCmp
+TimeStamp = /564C252E;
+Reference = P1;
+ValeurCmp = M3;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /564CD7AE;
+Reference = P2;
+ValeurCmp = M3;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /564CD84E;
+Reference = P3;
+ValeurCmp = M3;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /564CD8D0;
+Reference = P4;
+ValeurCmp = M3;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /564C2218;
+Reference = R1;
+ValeurCmp = 0,565;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /564C555E;
+Reference = R2;
+ValeurCmp = 47k;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /564C4B7F;
+Reference = U1;
+ValeurCmp = LM3407;
+IdModule  = Mlab_IO:MSOP-8-1EP_3x3mm_Pitch0.65mm;
+EndCmp
+
+EndListe

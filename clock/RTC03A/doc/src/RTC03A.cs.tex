@@ -1,0 +1,34 @@
+\documentclass[12pt,a4paper,final,titlepage,twoside]{article}
+\usepackage{MLABdoc}
+\fancyhead[L]{{\huge RTC03A}}
+\fancyfoot[RE,LO]{\today\hspace{1pt}|  | mlab.cz}
+
+\includeonly{RTC03A.cs.title, RTC03A.cs.assembly}
+
+\begin{document}
+%vytvori uvodni stranku
+\include{RTC03A.cs.title}
+
+
+\section{Popis konstrukce}
+
+\subsection{Zapojení}
+%naimportuje schema 
+\includepdf[angle=90]{../../hw/sch_pcb/RTC03A.pdf}
+
+\subsection{Odrušení}
+
+\subsection{Mechanická konstrukce}
+
+\section{Výroba a testování}
+
+% totot naimportuje cast, kde jsou osazováky a BOM tabulka
+\input{RTC03A.cs.assembly}
+
+Krystal $Y1$ a kondenzátory $C1$ a $C2$ jsou volitenlé. Pro režim čítání nejsou potřeba. Krystal je vhodné osadit, pokud použití modulu se předpokládá jako zdroj reálných hodin a interní čítač není dostatečně přesný.
+\subsection{Nastavení}
+
+\section{Programové vybavení}
+
+
+\end{document}

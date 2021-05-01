@@ -1,0 +1,11 @@
+(sym_lib_table
+  (lib (name SHT31V01A-rescue)(type Legacy)(uri ${KIPRJMOD}/SHT31V01A-rescue.lib)(options "")(descr ""))
+  (lib (name MLAB_BATERY1)(type Legacy)(uri ${MLAB}/symbols/MLAB_BATERY.lib)(options "")(descr ""))
+  (lib (name MLAB_CONNECTORS1)(type Legacy)(uri ${MLAB}/symbols/MLAB_CONNECTORS.lib)(options "")(descr ""))
+  (lib (name MLAB_D1)(type Legacy)(uri ${MLAB}/symbols/MLAB_D.lib)(options "")(descr ""))
+  (lib (name MLAB_IO1)(type Legacy)(uri ${MLAB}/symbols/MLAB_IO.lib)(options "")(descr ""))
+  (lib (name MLAB_Jumpers1)(type Legacy)(uri ${MLAB}/symbols/MLAB_Jumpers.lib)(options "")(descr ""))
+  (lib (name MLAB_SW1)(type Legacy)(uri ${MLAB}/symbols/MLAB_SW.lib)(options "")(descr ""))
+  (lib (name MLAB_T1)(type Legacy)(uri ${MLAB}/symbols/MLAB_T.lib)(options "")(descr ""))
+  (lib (name MLAB_U1)(type Legacy)(uri ${MLAB}/symbols/MLAB_U.lib)(options "")(descr ""))
+)

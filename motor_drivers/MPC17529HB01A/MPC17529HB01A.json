@@ -1,0 +1,22 @@
+{
+    "wiki": "None", 
+    "status": 4, 
+    "name": "MPC17529HB01A", 
+    "parameters": [], 
+    "short_en": "The module uses dual H-Bridge made by Freescale MC17529.The power voltage is 2.0-6.8V, the current 2x0.7A, maximum current max 2x1.4A. It is intended for small motors.", 
+    "image_small": "/doc/img/MPC17529HB01A_QRcode.jpgs", 
+    "image": "/doc/img/MPC17529HB01A_QRcode.png", 
+    "longname_cs": "Dvojitý H-Můstek 6.8V/2x0.7A s obvodem Freescale MC17529", 
+    "longname_en": "Dual H-Bridge 6.8V/2x0.7A with Freescale MC17529", 
+    "mark": 50.0, 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
+    "short_cs": "Modul je osazen dvojitým integrovaným H-Můstkem Freescale MC17529. Napájení je 2.0-6.8V, proud trvalý 2x0.7A, špičkový až 2x1.4A. Hodí se jako výkonový budič pro malé motorky.", 
+    "doc_en": "<p>None</p>", 
+    "_id": "MPC17529HB01A", 
+    "root": "motor_drivers/MPC17529HB01A", 
+    "author[]": [], 
+    "category[]": [
+        "motor_drivers"
+    ]
+}

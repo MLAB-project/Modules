@@ -1,0 +1,22 @@
+Podklady pro vyrobu plosneho spoje
+----------------------------------
+
+Jednostranny plosny spoj s nepajivou maskou, vrtanim a potiskem.
+
+Rozmer desky cca 61x71mm, tloustka cca 1.5mm, standardni med 35um.
+
+Gerber data ve formatu RS274X, Excellon vrtani. Cisla ve formatu 3.5 .
+Vsechny vrstvy vykresleny jako pohled ze strany soucastek.
+
+Otvory nejsou prokovene.
+
+Design obsahuje 3 otvory typu SLOT.
+
+BOARD.PHO	Obrys desky a koty
+V2.PHO		Motiv spoju
+M2.PHO		Motiv nepajive masky
+T1.PHO		Motiv potisku
+DRILL.DRL	Excellon vrtani
+DRILL.REP	Seznam nastroju, udavane prumery vrtaku, jednotky mils
+
+

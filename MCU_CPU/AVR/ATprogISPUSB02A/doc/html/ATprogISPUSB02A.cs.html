@@ -1,0 +1,695 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> ATprogISPUSB02A </title>
+    <meta name="keywords" content="stavebnice MLAB USB ISP programátor ATMEL AVR">
+    <meta name="description" content="Projekt MLAB, USB ISP programátor pro procesory ATMEL AVR">
+    <!-- AUTOINCLUDE START "Page/Head.cs.ihtml" DO NOT REMOVE -->
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB.css" type="text/css" title="MLAB základní styl">
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB_Print.css" type="text/css" media="print">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../Web/PIC/MLAB.ico">
+    <script type="text/javascript" src="../../../../../Web/JS/MLAB_Menu.js"></script>
+    <!-- AUTOINCLUDE END -->
+  </head>
+
+  <body lang="cs">
+
+    <!-- AUTOINCLUDE START "Page/Header.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== HLAVICKA ============== -->
+    <div class="Header">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawHeader();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- AUTOINCLUDE START "Page/Menu.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== MENU ============== -->
+    <div class="Menu">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawMenu();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) menu je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- ============== TEXT ============== -->
+    <div class="Text">
+      <p class="Title">
+        Programátor pro procesory AVR
+      </p>
+      <p class=Autor>
+        Miroslav Janás, Milan Horkel
+      </p>
+      <p class="Subtitle">
+        Modul USB programátoru procesorů AVR s&nbsp;šestipinovým ISP rozhraním.
+        Programátor patří do rodiny programátorů STK500. Programátor obsahuje
+        tlačítko RESET pro resetování cílového procesoru a přepínač VTG pro
+        napájení cílového zařízení napětím 5V přímo z&nbsp;USB nebo 3.3V
+        z&nbsp;vnitřního stabilizátoru.
+      </p>
+      <p class="Subtitle">
+        <img width="561" height="282" src="Pictures/image001.jpg" 
+         alt="Osazený programátor, pohled zhora">     
+      </p>
+      <p>
+        <a href="../ATprogISPUSB02A.cs.pdf"><img class="NoBorder"
+           src="../../../../../Web/PIC/FileIco_PDF.ico"
+           alt="Acrobat">&nbsp;PDF verze</a>
+      </p>
+      
+      <h1> Technické parametry </h1>
+      
+      <table>
+        <tr>
+          <th> Parametr </th>
+          <th> Hodnota </th>
+          <th> Poznámka </th>
+        </tr>
+        <tr>
+          <td> Napájení </td>
+          <td> 5V </td>
+          <td> Napájeno z&nbsp;USB rozhraní
+          </td>
+        </tr>
+        <tr>
+          <td> Napájení cílového zařízení </td>
+          <td> 5V z&nbsp;USB<br>
+               3.3V z&nbsp;vlastního stabilizátoru </td>
+          <td> Omezeno USB portem<br>
+               Maximálně cca 90mA/490mA <sup>1)</sup> </td>
+        </tr>
+        <tr>
+          <td> Spotřeba </td>
+          <td> cca 10mA </td>
+          <td> Bez cílového zařízení </td>
+        </tr>
+        <tr>
+          <td> Interface </td>
+          <td> USB 1.1, USB 2.0 </td>
+          <td> USB kabel A-B </td>
+        </tr>
+        <tr>
+          <td> Kompatibilita </td>
+          <td> AVR Studio 4<br>
+               AVRDUDE </td>
+          <td> STK500<br>
+               STK500v2 </td>
+        </tr>
+        <tr>
+          <td> Rozměry </td>
+          <td> 65x25x20mm </td>
+          <td> Výška nad nosnou deskou </td>
+        </tr>
+      </table>
+      
+      <p>
+        <sup>1)</sup> Proud je omezen na cca 90mA pokud je osazen menší 
+        stabilizátor a nebo pokud je použit nenapájený USB HUB
+      </p>
+      
+      <h1> Popis konstrukce </h1>
+      
+      <h2> Úvodem </h2>
+      
+      <p>
+        Protože nové počítače a zejména notebooky již nemají oblíbený LPT port
+        ke kterému se připojují různé jednoduché programátory procesorů,
+        naklonovali jsme z&nbsp;dostupných pramenů tento programátor, který se
+        připojuje přes všudypřítomnou USB sběrnici. Konstrukce vychází zejména
+        z&nbsp;EVERTOOL – <span lang="EN-US">combined AVR programmer and
+        debugger</span>. Aby byla konstrukce jednodušší, nahrává se firmware
+        přes ISP konektor z&nbsp;jiného programátoru. Podrobnosti viz kapitola
+        oživení dále v&nbsp;textu.
+      </p>
+      
+      <h2> Zapojení modulu </h2>
+      
+      <p>
+        Modul je připojen k&nbsp;USB sběrnici prostřednictvím převodníku
+        USR-RS232 s&nbsp;obvodem FTDI TF232R. Tento převodník je běžně
+        rozšířený s&nbsp;podporovaný ve všech používaných operačních systémech.
+        Pokud ve vaší instalaci OS není driver přítomen, bude jej třeba
+        nainstalovat.
+      </p>
+      
+      <p>
+        Pojistka F1 omezuje proud na cca 0.75A protože některé počítače nemají
+        napájecí proud z&nbsp;USB portů omezen. Pojistka je samoopravná. Dioda
+        D1 chrání programátor před zničením, pokud je špatně zapojený USB kabel
+        nebo port.
+      </p>
+      
+      <p>
+        <img width="922" height="471" src="Pictures/image002.png" 
+         alt="Schéma USB rozhraní">
+      </p>
+      
+      <p>
+        Napájecí napětí pro programátor se bere z&nbsp;USB portu. Z&nbsp;USB
+        konektoru běžného počítače lze odebírat proud až 500mA. Z&nbsp;portu
+        z&nbsp;nenapájeného USB rozbočovače (a z&nbsp;malých PDA počítačů) lze
+        odebírat jen 100mA. Vlastní spotřeba programátoru je cca 10mA a zbytek
+        lze použít pro napájení cílové aplikace. Aby bylo možné napájet cílovou
+        aplikaci i napětím 3.3V je programátor vybaven stabilizátorem U2. Menší
+        obvod U2_1 poskytne cílové aplikaci cca 90mA, větší obvod U2_2 pak až
+        490mA. <i>Osazuje se jen jeden z nich!</i> Propojkou J2 se volí
+        napětí 3.3V (stav rozpojeno) nebo 5V (stav spojeno).
+      </p>
+      
+      <p>
+        <img width="585" height="408" src="Pictures/image003.png" 
+         alt="Schéma napájecí části">
+      </p>
+      
+      <p>
+        Srdcem programátoru je procesor U3 ATmega8535. Použití právě tohoto
+        procesoru je dáno tím, že do programátoru musí pasovat firmware pro
+        programátor STK500. Procesor komunikuje sériově přes USB-RS232
+        převodník U1. Odpory 100Ω v&nbsp;sérii s&nbsp;ISP signály jsou
+        ochranné, aby nebylo tak snadné zničit programátor nebo cílovou
+        aplikaci, zejména při nevhodném napájení.
+      </p>
+      
+      <p>
+        <img width="1029" height="431" src="Pictures/image004.png" 
+         alt="Schéma části s procesorem">
+      </p>
+      
+      <p>
+        Přepínač (propojka) J4 přepíná ISP signály buď do režimu normální
+        funkce (poloha 2-3) kdy programátor funguje jako programátor nebo do
+        režimu programování firmwaru vlastního programátoru (poloha 1-2).
+        V&nbsp;tomto režimu se ISP konektor J5 použije jako vstupní pro
+        připojení externího programátoru.
+      </p>
+      
+      <p>
+        Je třeba si uvědomit, že 5V na USB nemusí znamenat 5V v&nbsp;cílové
+        aplikaci protože se zde projeví úbytky na kabelech, pojistkách a
+        tolerance napájecího zdroje PC. Napájení cílové aplikace se zapíná
+        přepínačem SW2.
+      </p>
+      
+      <p>
+        <img width="672" height="260" src="Pictures/image005.png" 
+         alt="Schéma ISP konektoru">
+      </p>
+      
+      <p>
+        Tlačítko SW1 slouží pro resetování cílové aplikace, ale neresetuje
+        samotný programátor. Je nutné ho osadit, protože současně funguje jako
+        drátová propojka na plošném spoji.
+      </p>
+      
+      <p>
+        Zelená&nbsp; LED dioda D2 značí připravenost programátoru, červená LED
+        dioda D3 oznamuje právě probíhající programování.
+      </p>
+      
+      <h2> Mechanická konstrukce </h2>
+      
+      <p>
+        Modul je navržen jako standardní modul do stavebnice MLAB
+        s&nbsp;upevňovacími sloupky v&nbsp;rozích.
+      </p>
+      
+      <p>
+        <img width="561" height="282" src="Pictures/image006.jpg" 
+         alt="Pohled ze strany součástek">
+      </p>
+      
+      <p>
+        <img width="561" height="274" src="Pictures/image007.jpg" 
+         alt="Pohled ze strany spojů">
+      </p>
+      
+      <h1> Osazení a oživení </h1>
+      
+      <h2> Osazení </h2>
+      
+      <p>
+        Modul je navržen na jednostranné desce a obsahuje dvě propojky. Jedna
+        propojka je realizována prostřednictvím tlačítka RESET. Pokud se
+        tlačítko neosadí, je třeba osadit propojku. Druhá propojka se nachází u
+        konektoru J4. Katody LED diod jsou označeny v&nbsp;potisku a jsou
+        směrem k&nbsp;procesoru.
+      </p>
+      
+      <p>
+        Deska při pohledu ze strany součástek
+      </p>
+      
+      <p>
+        <img width="705" height="358" src="Pictures/image008.png" 
+         alt="Osazovák ze strany součástek">
+      </p>
+      
+      <p>
+        Deska při&nbsp;pohledu ze strany spojů
+      </p>
+      
+      <p>
+        <img width="699" height="354" src="Pictures/image009.png" 
+         alt="Osazovák ze strany spojů">
+      </p>
+      
+      <p>
+        Seznam použitých součástek
+      </p>
+      
+      <table class="Soupiska">
+        <tr>
+          <th> Počet </th>
+          <th> Reference </th>
+          <th> Název </th>
+          <th> Pouzdro </th>
+        </tr>
+        <tr>
+          <th colspan="4"> Odpory </th>
+        </tr>
+        <tr>
+          <td> 4 </td>
+          <td> R5, R6, R7, R17 </td>
+          <td> 100 </td>
+          <td> R0805 </td>
+        </tr>
+        <tr>
+          <td> 2 </td>
+          <td> R15, R16 </td>
+          <td> 1k5 </td>
+          <td> R0805 </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> R1 </td>
+          <td> 4k7 </td>
+          <td> R0805 </td>
+        </tr>
+        <tr>
+          <td> 8 </td>
+          <td> R2, R3, R4, R8, R9, R10, R11, R12 </td>
+          <td> 10k </td>
+          <td> R0805 </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> R14 </td>
+          <td> 33k </td>
+          <td> R0805 </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> R13 </td>
+          <td> 68k </td>
+          <td> R0805 </td>
+        </tr>
+        <tr>
+          <th colspan="4"> Keramické kondenzátory </th>
+        </tr>
+        <tr>
+          <td> 2 </td>
+          <td> C14, C15 </td>
+          <td> 22p </td>
+          <td> C0805 </td>
+        </tr>
+        <tr>
+          <td> 11 </td>
+          <td> C1, C3, C4, C5, C6, C8, C9, C10, C11, C12, C13 </td>
+          <td> 100n </td>
+          <td> C0805 </td>
+        </tr>
+        <tr>
+          <td> 3 </td>
+          <td> C2, C7, C16 </td>
+          <td> 2.2uF/6.3V/C0805 </td>
+          <td> C0805 </td>
+        </tr>
+        <tr>
+          <th colspan="4"> Indukčnosti </th>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> L1 </td>
+          <td> BLM21P300SPT </td>
+          <td> R0805 </td>
+        </tr>
+        <tr>
+          <th colspan="4"> Pojistky </th>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> F1 </td>
+          <td> RXE075E_SMD </td>
+          <td> F1812 </td>
+        </tr>
+        <tr>
+          <th colspan="4"> Diody </th>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> D1 </td>
+          <td> 1N4007SMD </td>
+          <td> MELF </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> D2 </td>
+          <td> green </td>
+          <td> LED3 </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> D3 </td>
+          <td> red </td>
+          <td> LED3 </td>
+        </tr>
+        <tr>
+          <th colspan="4"> Integrované obvody </th>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> U1 </td>
+          <td> FT232RL </td>
+          <td> SSO28_210 </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> U3 </td>
+          <td> ATmega8535L-8AU </td>
+          <td> TQFP44 </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> U2_1 </td>
+          <td> LE33CD </td>
+          <td> SO8_150 </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> U2_2 </td>
+          <td> LT1117-3.3 </td>
+          <td> SOT223 </td>
+        </tr>
+        <tr>
+          <th colspan="4"> Krystaly </th>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> X1 </td>
+          <td> 3.6864MHz </td>
+          <td> XTAL050 </td>
+        </tr>
+        <tr>
+          <th colspan="4"> Mechanické součástky </th>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> SW1 </td>
+          <td> P-B1720A </td>
+          <td> PUSH050x050 </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> SW2 </td>
+          <td> P-B143 </td>
+          <td> P-B143 </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> J1 </td>
+          <td> USB_B_01 </td>
+          <td> USB_B_01 </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> J2 </td>
+          <td> JUMP2 </td>
+          <td> JUMP2 </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> J4 </td>
+          <td> JUMP3 </td>
+          <td> JUMP3 </td>
+        </tr>
+        <tr>
+          <td> 2 </td>
+          <td> J3, J5 </td>
+          <td> JUMP2X3 </td>
+          <td> JUMP2X3 </td>
+        </tr>
+        <tr>
+          <th colspan="4"> Konstrukční součástky </th>
+        </tr>
+        <tr>
+          <td> 2 </td>
+          <td> &nbsp; </td>
+          <td> Jumper propojka </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 4 </td>
+          <td> &nbsp; </td>
+          <td> Šroub M3x12 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 4 </td>
+          <td> &nbsp; </td>
+          <td> Podložka M3 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 4 </td>
+          <td> Sloupek M3x5mm </td>
+          <td> DI5M3X05 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 2 </td>
+          <td> Konektor 2x3 piny na kabel </td>
+          <td> NDR-06 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 12 </td>
+          <td> Piny do konektoru </td>
+          <td> NDR-T </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> Plošný spoj </td>
+          <td> ATprogISPUSB02A </td>
+          <td> &nbsp; </td>
+        </tr>
+      </table>
+      
+      <h2> Oživení </h2>
+      
+      <p>
+        Pokud je deska dobře osazená, zbývá jen do procesoru nahrát firmware.
+        Aby se zjednodušila konstrukce, byl vynechán pomocný procesor, který
+        firmware nahrával do programátoru. Do tohoto pomocného procesoru se
+        musel stejně nahrát další firmware, který pak už komunikoval
+        s&nbsp;aplikaci AVR studio. Do našeho programátoru tedy nahrajeme jen
+        patřičný HEX soubor s&nbsp;pojistkami pomocí externího programátoru.
+        Nemáme tedy možnost automatického upgrade firmware. Pro upgrade je
+        nutné zase použít externí programátor jako při prvotním programování
+        firmwaru.
+      </p>
+      
+      <p>
+        Jednoduchý externí programátor (pro LPT port) je uveden v&nbsp;návodu
+        v&nbsp;sekci „Modules/AVR“ na webu 
+        <a href="http://www.mlab.cz/">http://www.mlab.cz</a>.
+      </p>
+      
+      <p>
+        <img width="701" height="355" src="Pictures/image010.png" 
+         alt="Osazení zhora">
+      </p>
+      
+      <table>
+        <tr>
+          <th> J1 </th>
+          <td> je USB konektor pro připojení k&nbsp;počítači PC </td>
+        </tr>
+        <tr>
+          <th> J2 </th>
+          <td> slouží pro volbu napájecího napětí programátoru a cílové aplikace </td>
+        </tr>
+        <tr>
+          <th> J3 </th>
+          <td> je konektor napájení programátoru (3.3V nebo 5V) </td>
+        </tr>
+        <tr>
+          <th> J4 </th>
+          <td> přepíná režim normální funkce nebo režim programování programátoru </td>
+        </tr>
+        <tr>
+          <th> J5 </th>
+          <td> je ISP programovací konektor </td>
+        </tr>
+        <tr>
+          <th> SW1 </th>
+          <td> je RESET pro cílovou aplikaci </td>
+        </tr>
+        <tr>
+          <th> SW2 </th>
+          <td> zapíná napájecí napětí pro cílovou aplikaci pokud nemá aplikace vlastní zdroj </td>
+        </tr>
+      </table>
+  
+      <h3> Nahrání procesoru v programátoru </h3>
+      
+      <p>
+        Budeme potřebovat soubor <i>stk500.hex</i> s&nbsp;firmwarem. Ten
+        naleznete v&nbsp;sekci HW tohoto projektu (na webu 
+        <a href="http://www.mlab.cz/">http://www.mlab.cz</a>).
+      </p>
+      
+      <p>
+        Dále budete potřebovat nějaký fungující programátor pro procesory
+        ATMEL. Aby popis byl konkrétní, popíšeme použití jednoduchého
+        programátoru <i>picoweb</i> spolu s&nbsp;aplikací <i>avrdude</i>.
+      </p>
+      
+      <p>
+        Do procesoru je třeba nahrát i správné hodnoty konfiguračních přepínačů
+        <i>lfuse</i> a <i>hfuse</i>.
+      </p>
+      
+      <p>
+        Přepneme propojku J4 (ISP SELECTION) do polohy 1-2 a připojíme externí
+        programátor k&nbsp;ISP konektoru J5. Pokud použitý externí programátor
+        potřebuje ke své činnosti napájení z cílového zařízení, zapneme
+        napájení přepínačem SW2 (TARGET POWER) přepnutím do polohy ON a zvolíme
+        programovací napětí pomocí propojky J1 (SELECT) na 5V nebo 3,3V podle
+        toho, co vyžaduje externí programátor. Obvyklá hodnota je 5V. Připojíme
+        oživovaný programátor k&nbsp;USB portu počítače, tím se přivede
+        napájení a druhým programátorem pak můžeme nahrát do procesoru firmware
+        a konfigurační slova.
+      </p>
+      
+      <p>
+        Pro nahrání je připraven dávkový soubor <i>flash.bat</i>, který si
+        budete muset přizpůsobit podle vaší konfigurace. Linuxoví uživatelé
+        mají připravený shell script <i>flash.sh</i>, který si přizpůsobí
+        podle svého. Dělá to samé.
+      </p>
+      
+      <p>
+        <samp>avrdude -p atmega8535 -P lpt1 -c picoweb -v -U lfuse:w:0xff:m -U
+        hfuse:w:0xdb:m</samp>
+      </p>
+      
+      <p>
+        <samp>avrdude -p atmega8535 -P lpt1 -c picoweb -U flash:w:stk500.hex:a</samp>
+      </p>
+      
+      <p>
+        Po naprogramování se propojka J4 vrátí do pracovní polohy 2-3 (režim
+        normal).
+      </p>
+      
+      <h1> Programové vybavení </h1>
+      
+      <p>
+        Pro uživatele Windows XP je nutné ještě nainstalovat ovladače USB
+        převodníku FTDI. Aktuální drivery jsou na webu výrobce na adrese
+        <a href="http://www.ftdichip.com/">http://www.ftdichip.com</a>. Hledáme
+        drivery pro obvod FTDI232R pro Windows XP. Je jedno, zda zvolíme driver
+        VCP nebo D2XX protože driver je ve skutečnosti jen jeden společný pro
+        obě API.
+      </p>
+      
+      <p>
+        Programátor se v&nbsp;systému jeví jako nový COM port. Windows XP
+        číslují použité COM porty pořád dál a po nějaké době začne přidělovat
+        velká čísla (třeba COM11). AVR Studio umí použít jen port COM1 až COM9.
+        V&nbsp;případě potřeby je možné systému vnutit pro dané zařízení
+        libovolné číslo COM portu. Dělá se to ve správci zařízení
+        v&nbsp;pokročilých volbách (je nutné být pro tuto chvíli
+        administrátorem).
+      </p>
+      
+      <h2> Použití programátoru v&nbsp;programu AVR Studio 4 </h2>
+      
+      <p>
+        Po spuštění AVR studia vybereme na horní liště nástroje <samp>Tools /
+        Program&nbsp;AVR / Auto&nbsp;Connect</samp>. A&nbsp;můžeme programovat.
+        Pokud &nbsp;<samp>Auto&nbsp;Connect</samp> nic nenajde, zvolíme
+        <samp>Tools / Program&nbsp;AVR / Connect</samp>… a vybereme
+        <samp>Platform</samp>: „<i>STK500 or AVRISP</i>“ a případně nastavíme
+        ve volbě <samp>Port</samp>: správný COM port, na kterém je náš
+        programátor.
+      </p>
+      
+      <p>
+        Který COM port byl přiřazen USB programátoru můžeme poznat pomocí
+        programu <samp>Příslušenství / Komunikace / Hyper&nbsp;Terminal</samp>,
+        který zobrazuje přítomné COM porty i pro USB zařízení. Také je to vidět
+        ve správci zařízení v&nbsp;sekci sériových portů.
+      </p>
+      
+      <h2> Použití s&nbsp;programem AVRDUDE a AVRDUDEGUI </h2>
+      
+      <p>
+        Při použití AVRDUDE zadáváme v&nbsp;příkazové řádce parametry
+        programátoru a portu dle příkladu:
+      </p>
+      
+      <p>
+        <samp>avrdude –p xxx –c stk500v2 –P comx – U flash:w:muj.hex:a</samp>
+      </p>
+      
+      <p>
+        -p xxx … určuje typ cílového procesoru
+        <br>
+        -c xxx … určuje druh programátoru, tento programátor je kompatibilní
+        s&nbsp;stk500v2
+        <br>
+        -P comx … určuje komunikační com port, kde je náš programátor
+        <br>
+        muj.hex … soubor, který se programuje
+      </p>
+
+      <p>
+        Ostatní parametry viz příkaz <samp>avrdude –?</samp>, který vypíše
+        nápovědu. Při použití nadstavby AVRDUDEGUI opět volíme programátor typu
+        stk500v2 a vybíráme správný COM port.
+      </p>
+      
+    </div>
+
+    <!-- AUTOINCLUDE START "Page/Footer.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== PATIČKA ============== -->
+    <div class="Footer">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawFooter();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+  </body>
+</html>

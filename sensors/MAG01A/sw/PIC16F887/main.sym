@@ -1,0 +1,95 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004     @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @TRIS_C
+021-026 compass
+027     hmc5883l_write_reg.reg
+027     @delay_ms1.P1
+027     hmc5883l_read_data.x_lsb
+027-028 @PRINTF_LD_9600_62_63.P1
+027     @PSTRINGC7_9600_62_63.@SCRATCH1
+028     hmc5883l_write_reg.data
+028     hmc5883l_read_data.x_msb
+028     @PSTRINGC7_9600_62_63.@SCRATCH2
+029     hmc5883l_read_data.y_lsb
+029     @PSTRINGC7_9600_62_63.@SCRATCH3
+029     @PRINTF_LD_9600_62_63.@SCRATCH1
+02A     hmc5883l_read_data.y_msb
+02A     @PRINTF_LD_9600_62_63.@SCRATCH2
+02B     hmc5883l_read_data.z_lsb
+02B     @PRINTF_LD_9600_62_63.@SCRATCH3
+02C     hmc5883l_read_data.z_msb
+02C     @PRINTF_LD_9600_62_63.@SCRATCH4
+02D     @I2C_READ_1.P1
+02D     @I2C_WRITE_1.P2
+02D     @PRINTF_LD_9600_62_63.@SCRATCH5
+02E     @I2C_READ_1.@SCRATCH1
+02E     @PRINTF_LD_9600_62_63.@SCRATCH6
+02F     @I2C_READ_1.@SCRATCH2
+02F     @PRINTF_LD_9600_62_63.@SCRATCH7
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+0226  @delay_ms1
+00EC  @I2C_READ_1
+0069  @I2C_WRITE_1
+00B3  hmc5883l_write_reg
+0131  hmc5883l_read_data
+023C  MAIN
+0004  @const229
+0021  @PSTRINGC7_9600_62_63
+000D  @const231
+001B  @const232
+01B0  @PRINTF_LD_9600_62_63
+023C  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    Z:\home\kaklik\svnMLAB\Modules\Sensors\MAG01A\SW\PIC16F887\
+
+Project Files:
+    main.c
+    main.h
+    C:\Program Files (x86)\PICC\devices\16F887.h
+    HMC5883L.h
+    HMC5883L.c
+    C:\Program Files (x86)\PICC\drivers\math.h
+
+Units:
+    Z:\home\kaklik\svnMLAB\Modules\Sensors\MAG01A\SW\PIC16F887\main (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.PJT
+    Call Tree:   main.tre
+    Statistics:  main.sta

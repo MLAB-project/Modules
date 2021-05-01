@@ -1,0 +1,30 @@
+USBasp firmware customized for MLAB hardware AVRUSB01
+http://www.mlab.cz/PermaLink/AVRUSB01
+-----------------------------------------------------
+
+- original firmare from http://www.fischl.de/usbasp/usbasp.2011-05-28.tar.gz
+- the original package contains drivers as well, please use them
+
+- hardware supports Green LED (always on)
+- hardware supports Red LED (busy indicator)
+- hardware supports jumper for slowing down SPI clocks (just install jumper on J6 to position RX-GND)
+
+- the code itself has to be modifyied so that it vas possible to reconfigure IO pins for
+  different hardware (minor changes in main function and in header file)
+- make process was automated so that "make all" creates all configured target binaries 
+  (for ATmega8 and ATmega88)
+
+- binary files for MLAB hardware is in bin directory
+
+- hardware configuration is this:
+
+	XTAL            12.0MHz
+	USB D+          PD2/INT0
+	USB D-          PD4
+	ISP_RES#        PB2
+	ISP_MOSI        PB3
+	ISP_MISO        PB4
+	ISP_SCK         PB5
+	GreenLED        PC1 (active L)
+	RedLedLED       PC0 (active L)
+	Slow SPI CLK    PD0 (to GND)

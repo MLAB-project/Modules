@@ -1,0 +1,23 @@
+# Rule for unbinding XVC_FT220X device from ftdi_sio driver and setting permissions for everyone
+# Put this file to /etc/udev/rules.d
+
+# MLAB Module XVC_FT220X for JTAG programming of Xilinx uses standard VendorID and DeviceID
+# of used FTDI chips. Unfortunately on latest Linux there is udev automaticaly loading
+# device driver ftdi_sio which creates ttyUSBxx device for any attached FTDI chip.
+# This driver prevents XVC program to comunicate with FTDI chip via FT2XX library.
+# It is necessary to disconnect (unbind) our FTDI device (identifyed by its name) from
+# ftdi_sio driver.
+
+# (c)miho 2013 http://www.mlab.cz
+
+# Hints:
+#   sudo lsusb -d 0403:6015 -v
+#   udevadm info -a -p /devices/pci0000:00/0000:00:06.0/usb1/1-2/1-2:1.0
+#   udevadm control --reload-rules
+
+# Ubind "MLAB XVC with FTxxxx" form ftdi_sio driver to release it for mlab_xvc program
+SUBSYSTEM=="usb", ATTRS{interface}=="MLAB XVC with FT*", RUN="/bin/sh -c 'echo %k > /sys/bus/usb/drivers/ftdi_sio/unbind'"
+
+# Set permissions to the device to enable run mlab_xvc program without root permissions
+# If you do not want everyone remove MODE and add GROUP
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{product}=="MLAB XVC with FT*", MODE:="0666", RUN+="/bin/sh -c 'echo k: %k p: %p >> /tmp/XVC'"

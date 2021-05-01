@@ -1,0 +1,23 @@
+{
+    "wiki": "None", 
+    "status": 4, 
+    "name": "TTLPROBE01A", 
+    "parameters": [], 
+    "short_en": "", 
+    "image_small": "/doc/img/TTLPROBE01A_QRcode.jpgs", 
+    "image": "/doc/img/TTLPROBE01A_QRcode.png", 
+    "longname_cs": "Logická sonda", 
+    "longname_en": "Logic probe.", 
+    "mark": 50.0, 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
+    "short_cs": "Logická sonda slouží k zobrazování logických stavů H a L a neurčitého stavu X TTL logiky na třech LED. Logická sonda zobrazuje krátké impulsy na vstupu tak, aby byly viditelné.", 
+    "doc_en": "<p>None</p>", 
+    "_id": "TTLPROBE01A", 
+    "root": "sensors/TTLPROBE01A", 
+    "author[]": [], 
+    "category[]": [
+        "sensor", 
+        "measuring"
+    ]
+}

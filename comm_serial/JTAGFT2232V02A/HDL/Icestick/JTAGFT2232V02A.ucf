@@ -1,0 +1,22 @@
+NET "FT_SCK"   LOC = "P60"; # ADBUS0
+NET "FT_SI"		LOC = "P58"; # ADBUS1
+NET "FT_SO"		LOC = "P56"; # ADBUS2
+# skip ADBUS3
+NET "FT_SS"		LOC = "P53"; # ADBUS4
+# skip ADBUS5
+NET "FT_CDONE"	LOC = "P50"; # ADBUS6
+NET "FT_CREST"	LOC = "P49"; # ADBUS7
+
+NET "FT_B_RX"  LOC = "P16";
+NET "FT_B_TX"  LOC = "P17";
+
+NET "NRST" LOC = "P1";
+NET "SCK"  LOC = "P2";
+NET "SO"   LOC = "P3";
+NET "SI"   LOC = "P4";
+NET "SS"   LOC = "P6";
+
+NET "RX"   LOC = "P12";
+NET "TX"   LOC = "P13";
+
+NET "LED"  LOC = "P64";

@@ -1,0 +1,28 @@
+antiparalelni diody, blokovaci elektrolyt na vykonovem napajeni
+Napajeni 10.0V, Rgate = 100 Ohm
+NENI-LI UVEDENO, MERENO PROTI GND
+
+13 - vstup
+14 - pin 5 - Lo
+15 - pin 6 - Vs
+17 - pin 7 - Hi
+18 - pin 8 - VB
+-----------------------
+Rgate = 18 Ohm
+
+36 - IN zluty, pin 5 cerveny (Lo), detail nabezna
+----------------------------------------------------------------
+Rgate = 18 Ohm, Dioda + R=3,3 Ohm vybijeci pro dolni FET
+MERENI DEAD-TIMU BEZ ZATEZE
+
+41 - IN zeleny, HO-VS modry (G-S horniho fetu), detail nabezna
+42 - IN zeleny, HO-VS modry (G-S horniho fetu), detail sestupna
+43 - zeleny LO-GND (G-S dolniho fetu), modry HO-VS (G-S horniho fetu)
+44 - zeleny LO-GND (G-S dolniho fetu), modry HO-VS (G-S horniho fetu)
+45 - zeleny LO-GND (G-S dolniho fetu), modry HO-VS (G-S horniho fetu)
+46 - zeleny LO-GND (G-S dolniho fetu), modry HO-VS (G-S horniho fetu)
+47 - zeleny LO-GND (G-S dolniho fetu), modry HO-VS (G-S horniho fetu)
+
+MERENI DEAD-TIMU SE ZATEZi proti GND
+48 - zeleny LO-GND (G-S dolniho fetu), modry HO-VS (G-S horniho fetu)
+49 - zeleny LO-GND (G-S dolniho fetu), modry HO-VS (G-S horniho fetu)

@@ -1,0 +1,22 @@
+﻿//
+// Toto je popisný soubor pro popis obsahu adresáře
+//
+
+[InfoShortDescription.en]
+RGB Feeler - proximity colour sensitive sensor
+
+[InfoShortDescription.cs]
+RGB tykadlo - bravocitlivý senzor na překážky
+
+[InfoLongDescription.en]
+The sensor uses modulated RGB LEDs to iluminate distant object and to detect it's colour.
+It uses A/D convertor to analyse bounced colour illumination.
+
+[InfoLongDescription.cs]
+Čidlo využívá modulované RGB světlo pro bezdotykovou detekci předmětů a jejich barvy.
+Pro vyhodnocení signálu využívá A/D převodník procesoru. Barvu určuje podle síly 
+odraženého záření v závislosti na barvě.
+
+[SortPreferences]
+
+[End]

@@ -1,0 +1,15 @@
+Srovnat potisk
+zkontrolovat, ze nejsou potreba prokovy pod PoE IO, v opacnem pripade udelat v dalsi verzi termalni prokovy do dalsi vrstvy.
+
+odstranit ostre uhly u odrusovaciho toroidu a napajeni integrovaneho obvodu.
+
+pridat kondenzator k napajeni transformaturu v konektoru.
+
+Doporucena hodnota kondenzatoru u krystalu je 20pF 
+vylepsit blokovani PFBOUT
+
+Tloustka car v textu potisku by mela byt zmensena na 8 mils
+
+Pri testovani v polnich podminkach na Upicke hvezdarne doslo k nahodnemu zniceni PHY IO. Mozna to ale souvisi s elektrostatickymi vyboji za bourky.  
+
+

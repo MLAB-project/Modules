@@ -1,0 +1,44 @@
+
+ROM used: 188 (2%)
+          188 (2%) including unused fragments
+
+          0 Average locations per line
+          11 Average locations per statement
+
+RAM used: 5 (1%) at main() level
+          6 (1%) worst case
+
+Stack used: 1 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   30    17 100  blik.c
+   25     0   0  blik.h
+  481     0   0  ..\..\..\..\..\..\..\..\..\Program Files\PICC\Devices\18F8310.h
+----- -----
+  536    17 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     40  11   1             @delay_ms1
+0    144  38   1   388  2.8  main
+
+Program metrics:
+    Functions               1
+    Statements              17
+    Comments                105
+    Volume (V)              391
+    Difficilty (D)          2.8
+    Effort to implement (E) 1077
+    Time to implement (T)   1 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    86
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-01FFE   184  8004  
+
+
+

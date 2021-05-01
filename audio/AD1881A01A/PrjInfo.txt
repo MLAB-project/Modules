@@ -1,0 +1,21 @@
+﻿//
+// Toto je popisný soubor pro popis obsahu adresáře (příklad)
+//
+
+[InfoShortDescription.en]
+  Audio Codec Module
+  
+[InfoShortDescription.cs]
+  Modul audiokodeku
+    
+[InfoLongDescription.en]
+  Module is audio in and audio out interface for development 
+  board NGW100 with processor ATMEL AVR32. It uses common 
+  codec AD1881A.
+
+[InfoLongDescription.cs]
+  Modul sklouží jako audio vstup a výstup pro vývojovou 
+  desku NGW100 s procesorem ATMEL AVR32. Používá běžný 
+  kodek AD1881A.
+
+[End]

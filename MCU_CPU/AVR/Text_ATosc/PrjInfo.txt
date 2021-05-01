@@ -1,0 +1,21 @@
+﻿//
+// Toto je popisný soubor pro popis obsahu adresáře (příklad)
+//
+
+[InfoShortDescription.en]
+  External oscillator for ATmega
+  
+[InfoShortDescription.cs]
+  Externí oscilátor pro ATmega  
+    
+[InfoLongDescription.en]
+  When you have mistakenly switched external oscillator for ATmega 
+  processor you can't do anything but connect external oscillator. 
+  This is how to unlock locked processor.
+
+[InfoLongDescription.cs]
+  Když se (omylem) nastaví v konfiguračním slově procesoru ATmega externí 
+  oscilátor, nezbývá, než nějaký připojit. Aneb jak odseknout zaseknutý 
+  procesor.
+
+[End]

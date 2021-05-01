@@ -1,0 +1,22 @@
+{
+    "wiki": "None", 
+    "status": 2, 
+    "name": "XVC_FT220X02A", 
+    "parameters": [], 
+    "short_en": "XVC JTAG programming cable for downloading and debug projects with XILINX FPGA/CPLD device. It is directly supported by ISE design software (and Chipscope as well). The design software sends commands across network to the computer with this cable attached to it and supporting software sends data to JTAG interface. This XVC cable is based on a cheap FTDI FT220X chip.", 
+    "image_small": "/doc/img/XVC_FT220X02A_QRcode.jpgs", 
+    "image": "/doc/img/XVC_FT220X02A_QRcode.png", 
+    "longname_cs": "Xilinx Virtual (JTAG) Cable s obvodem FTDI FT220X", 
+    "longname_en": "Xilinx Virtual (JTAG) Cable with FTDI FT220X chip", 
+    "mark": 50.0, 
+    "ust": "http://www.ust.cz/shop/product_info.php?products_id=237", 
+    "doc_cs": "<p>None</p>", 
+    "short_cs": "XVC JTAG programovací kabel pro nahrávání konfigurace a ladění zařízení s obvody FPGA/CPLD firmy XILINX. Návrhový systém ISE komunikuje po síti s obslužným programem, který přijaté JTAG příkazy odesílá prostřednictvím obvodu FTDI FT220X do obvodu XILINX.", 
+    "doc_en": "<p>None</p>", 
+    "_id": "XVC_FT220X02A", 
+    "root": "CPLD_FPGA/XILINX_XVC/XVC_FT220X02A", 
+    "author[]": [], 
+    "category[]": [
+        "cpld_fpga"
+    ]
+}

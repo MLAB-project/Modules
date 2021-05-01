@@ -1,0 +1,126 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004     @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @TRIS_C
+021     main.XH
+022     main.XL
+023     main.YH
+024     main.YL
+025     main.ZH
+026     main.ZL
+027     main.INTEP
+028     main.INTEP1
+029     main.NAP
+02A     main.NAP1
+02B     main.PROUD
+02C     main.PROUD1
+02D     main.KAPZ
+02E     main.KAPZ1
+02F     main.KAPC
+030     main.KAPC1
+031     main.STAV
+032     main.STAV1
+033     main.XW
+034     main.YW
+035     main.ZW
+036     main.AW
+037-038 main.data1
+039-03A main.data2
+03B-03C main.data3
+03D-03E main.data4
+03F-040 main.data5
+041-042 main.data6
+043-044 main.data7
+045-046 main.data8
+047-048 main.data9
+049-04A @DIV1616.P1
+049     @PRINTF_X_68.P2
+049     @I2C_WRITE_1.P3
+049     @PSTRINGCN7_68.P4
+049-04A @PRINTF_LD_68.P5
+049     @I2C_READ_1.P6
+049     main.@SCRATCH1
+049     @PSTRINGC7_68.@SCRATCH1
+04A     @PRINTF_X_68.P1
+04A     @delay_ms1.P2
+04A     @I2C_READ_1.@SCRATCH1
+04A     main.@SCRATCH2
+04A     @PSTRINGC7_68.@SCRATCH2
+04A     @PSTRINGCN7_68.@SCRATCH1
+04B-04C @DIV1616.P1
+04B     @I2C_READ_1.@SCRATCH2
+04B     @PSTRINGC7_68.@SCRATCH3
+04B     @PRINTF_LD_68.@SCRATCH1
+04B     @PSTRINGCN7_68.@SCRATCH2
+04C     @PRINTF_LD_68.@SCRATCH2
+04C     @PSTRINGCN7_68.@SCRATCH3
+04D     @DIV1616.@SCRATCH1
+04D     @PRINTF_LD_68.@SCRATCH3
+04E     @PRINTF_LD_68.@SCRATCH4
+04F     @PRINTF_LD_68.@SCRATCH5
+050     @PRINTF_LD_68.@SCRATCH6
+051     @PRINTF_LD_68.@SCRATCH7
+052     @PUTCHAR_1_.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+0136  @delay_ms1
+0103  @I2C_READ_1
+00CF  @I2C_WRITE_1
+0065  @PUTCHAR_1_
+0004  @const78
+0087  @PSTRINGC7_68
+014C  @DIV1616
+0173  @PRINTF_LD_68
+0010  @const119
+01F3  @PSTRINGCN7_68
+001E  @const122
+002B  @const123
+0034  @const124
+0042  @const125
+004E  @const126
+005A  @const127
+0242  @PRINTF_X_68
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Honza\Documents\pic\I2C_baterka\
+
+Project Files:
+    main.c
+    ..\I2C_magnetometr\main.h
+    ..\..\..\..\..\Program Files (x86)\PICC\devices\16F887.h
+
+Units:
+    C:\Users\Honza\Documents\pic\I2C_baterka\main (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      main.err
+    Ext Symbols: main.esym
+    Symbols:     main.sym
+    Call Tree:   main.tre

@@ -1,0 +1,40 @@
+CHIP GAL1 PAL16V8
+; Pro druhou verzi PCB
+; s ochranami proti chyne manipulaci
+
+; WORK VERZE
+
+D0=9
+D1=8
+D2=7
+D3=6
+D4=5
+D5=4
+D6=3
+D7=2
+GND=10
+CLOCK=12
+DATA=13
+RES=15
+VPPON=18
+VCCON=17
+DQ=19
+VCC=20
+
+@UES PICPRG
+
+EQUATIONS
+
+DATA     =  D0
+DATA.OE  =  D1 * /D7
+
+CLOCK    =  D2
+CLOCK.OE =  D3 * /D7
+
+VCCON    =  D4 * /D7
+
+VPPON    =  D5 * /D7 *  D4
+
+RES      =  D6 * /D7 * /D5
+
+DQ       =  DATA

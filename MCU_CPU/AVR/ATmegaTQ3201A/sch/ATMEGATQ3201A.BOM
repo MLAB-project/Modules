@@ -1,0 +1,38 @@
+MLAB  Revised: Tuesday, September 20, 2011
+ATmegaTQ3201A          Revision: 1.00
+
+
+
+
+
+
+
+Bill Of Materials        October 23,2015      22:41:10	Page1
+
+Item	Quantity	Reference	Part
+______________________________________________
+
+1	1	C1	10uF/6.3V
+2	4	C2,C3,C6,C7	100nF
+3	2	C4,C5	22pF
+4	3	C101,C102,C103	C0805
+5	1	C104	470nF
+6	1	C105	4,7uF
+7	1	D1	M4SMD
+8	33	J1,J2,J3,J4,J5,J6,J7,J8,	UNIPAD2
+		J9,J10,J11,J12,J13,J14,
+		J15,J16,J17,J18,J19,J20,
+		J21,J22,J23,J24,J25,J26,
+		J27,J28,J29,J30,J31,J32,
+		J33
+9	6	J35,J36,J37,J38,J39,J40	JUMP2X3
+10	1	L1	10uH
+11	4	M1,M2,M3,M4	HOLE_M3
+12	1	M5	FIDU
+13	1	M6	FIDU_PASTE
+14	1	R1	100
+15	1	R2	10K
+16	3	R101,R102,R103	R0805
+17	1	SW1	P-B1720
+18	1	U1	ATmega8L-8AU
+19	1	X1	XTAL050

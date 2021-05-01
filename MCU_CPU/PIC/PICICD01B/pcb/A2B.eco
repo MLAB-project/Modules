@@ -1,0 +1,23 @@
+*PADS-ECO-V3.0-MILS*
+*REMARK*  old file: C:\SW32\padspwr50\Files\ecogtmp0.asc
+*REMARK*  new file: C:\SW32\padspwr50\Files\ecogtmp1.asc
+*REMARK*  created by ECOGEN (Version 6.0g) on 7.5.2005 11:21:19
+*CHGPART*
+J1  DB9M@DB9M_90  DB9F@DB9F_90
+*PART*
+J4  JUMP2X3@JUMP2X3
+*NET*
+*SIGNAL*  GND
+J4.1  J4.2  J4.5  J4.6
+*SIGNAL*  VDD
+J4.3  J4.4
+*SET_ATTRIBUTE*	PART	J1
+"Value"	DB9F_90
+"Description"	konektor Cannon  9 pinu uhlovy, samice
+"Geometry.Height"	13 mm
+"Description"	konektor Cannon  9 pinu uhlovy, samice
+*SET_ATTRIBUTE*	PART	J4
+"Value"	JUMP2X3
+
+*REMARK*  Deleted pins: 0,  Added pins: 6
+*END*

@@ -1,0 +1,60 @@
+*PADS-ECO-V2007.0-MILS*
+
+*REMARK* -- RTC.pcb -- Thu Aug 05 12:31:55 2010
+
+
+*SWPPINS*
+U1 1.2
+*END*
+*PADS-ECO-V2007.0-MILS*
+
+*REMARK* -- RTC.pcb -- Fri Aug 06 12:27:22 2010
+
+
+*DELPIN*
+U2.2    X2
+U2.1    X1
+
+*NET*
+*SIGNAL* X1 40
+U1.2 U2.2
+*SIGNAL* X2 40
+U1.1 U2.1
+*END*
+*PADS-ECO-V2007.0-MILS*
+
+*REMARK* -- RTC.pcb -- Fri Aug 06 13:32:42 2010
+
+*END*
+*PADS-ECO-V2007.0-MILS*
+
+*REMARK* -- RTC.pcb -- Mon Aug 09 10:14:37 2010
+
+*END*
+*PADS-ECO-V2007.0-MILS*
+
+*REMARK* -- RTC.pcb -- Mon Aug 16 09:16:27 2010
+
+
+*PART*
+U3 BAT2032@BAT2032
+
+*SET_ATTRIBUTE* DECAL BAT2032
+"Description" pouzdro na baterii 2032 fy RENATA
+
+*SET_ATTRIBUTE* PART U3
+"Description" pouzdro na baterii 2032 fy RENATA
+
+*NET*
+*SIGNAL* BAT 40
+B2.A U3.1
+*SIGNAL* GND 40
+M3.1 U3.2
+
+*DELPIN*
+B2.A    BAT
+B2.C    GND
+
+*DELPART*
+B2 BAT
+*END*

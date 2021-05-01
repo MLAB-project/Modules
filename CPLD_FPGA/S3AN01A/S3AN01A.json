@@ -1,0 +1,22 @@
+{
+    "wiki": "None", 
+    "status": 4, 
+    "name": "S3AN01A", 
+    "parameters": [], 
+    "short_en": "Replaced by an updated version S3AN01B. <br> The school board allows interested people to play with FPGA from XILINX. The board contains LED display, some switches and push buttons. It has VGA video port, PS/2 ports for keyboard and mouse. Because the main chip is not 5V tolerant, the board is equipped with 5V tolerant buffers (inputs). The board is powered from 5V, internal power supply is included. For timing there is one 100MHz crystal oscillator.", 
+    "image_small": "/doc/img/S3AN01A_QRcode.jpgs", 
+    "image": "/doc/img/S3AN01A_QRcode.png", 
+    "short_cs": "Nahrazeno novou verzí desky S3AN01B. <br> Školní deska umožňuje za rozumné peníze začít pracovat s obvody FPGA firmy XILINX. Obsahuje LED display, sadu tlačítek a přepínačů a porty pro připojení VGA monitoru a PS/2 klávesnice nebo myši. Protože obvod není 5V tolerantní, je před část vstupů předřazen 5V tolerantní budič (vstup). Součástí desky jsou napájecí zdroje a oscilátor 100MHz.", 
+    "longname_en": "Xilinx Spartan 3 XC3S50AN FPGA School Board", 
+    "mark": 0.0, 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
+    "longname_cs": "Školní deska Xilinx Spartan 3AN XC3S50AN", 
+    "doc_en": "<p>None</p>", 
+    "_id": "S3AN01A", 
+    "root": "CPLD_FPGA/S3AN01A", 
+    "author[]": [], 
+    "category[]": [
+        "cpld_fpga"
+    ]
+}

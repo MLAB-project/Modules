@@ -1,0 +1,94 @@
+(ExpressProject "BP"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\bp.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (Netlist_TAB "8")
+    (OTHER_Part_Value "{Value}")
+    (OTHER_Netlist_File "BP.asc")
+    (OTHER_Netlist_File2 "BP.CMP")
+    (OTHER_View_Output "FALSE")
+    (OTHER_View_Output2 "FALSE")
+    (OTHER_PCB_Footprint "{Device},{Value}@{PCB Footprint}")
+    (OTHER_Switch0 "FALSE")
+    (OTHER_Switch1 "FALSE")
+    (OTHER_Switch2 "FALSE")
+    (OTHER_Switch3 "FALSE")
+    (OTHER_Switch4 "FALSE")
+    (OTHER_Switch5 "FALSE")
+    (OTHER_Switch6 "FALSE")
+    (OTHER_Formatter "orPadspcb.dll")
+    (BOM_Scope "0")
+    (BOM_Mode "0")
+    (BOM_Report_File
+       "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\COMMRF\BP01A\SCH\BP.BOM")
+    (BOM_Merge_Include "FALSE")
+    (BOM_Property_Combine_7.0
+       "{Quantity}\t{Reference}\t{PCB footprint}\t{Value}")
+    (BOM_Header "Quantity\tReference\tPCBfootprint\tPart")
+    (BOM_Include_File
+       "C:\USERS\KAKLIK\DOCUMENTS\MLAB\MODULES\COMMRF\BP01A\SCH\BP.INC")
+    (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_One_Part_Per_Line "FALSE")
+    (Open_BOM_in_Excel "FALSE")
+    (BOM_View_Output "FALSE"))
+  (Folder "Outputs"
+    (File ".\bp.asc"
+      (Type "Report"))
+    (File ".\bp.bom"
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (BZX83
+      (FullPartName "BZX83.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_D.OLB")
+      (DeviceIndex "0"))
+    (1N4007
+      (FullPartName "1N4007.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_D.OLB")
+      (DeviceIndex "0"))
+    (C-ELYTC
+      (FullPartName "C-ELYTC.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (C-ELYTB
+      (FullPartName "C-ELYTB.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (C0805
+      (FullPartName "C0805.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0"))
+    (HOLE_M3
+      (FullPartName "HOLE_M3.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\PAD.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName "C:\LIBRARY\ORCAD16X\SYMBOLS.OLB")
+      (DeviceIndex "0"))
+    (L1210
+      (FullPartName "L1210.Normal")
+      (LibraryName "C:\LIBRARY\ORCAD16X\COM_RLC.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\kaklik\Documents\MLAB\Modules\CommRF\BP01A\SCH\bp.dsn")
+      (Path "Design Resources"
+         "C:\Users\kaklik\Documents\MLAB\Modules\CommRF\BP01A\SCH\bp.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 367"))
+      (Tab 0)))
+  (ISPCBBASICLICENSE "false")
+  (MPSSessionName "kaklik"))

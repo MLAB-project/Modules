@@ -1,0 +1,30 @@
+Partlist
+
+Exported from untitled.sch at 22.7.2012 17:10:32
+
+EAGLE Version 6.1.0 Copyright (c) 1988-2012 CadSoft
+
+Assembly variant: 
+
+Part     Value          Device                    Package           Library       Sheet
+
+D1                      D_LED_3MM                 D_LED_3           moje          1
+D4       M4             D-OB.SMA                  SMA               moje          1
+FIR3                    FILTR0805                 F0805             moje          1
+P1                      POJISTKA_1812             1812              moje          1
+R2                      R-EU_R0805                R0805             rcl           1
+R3       0R pro 12V     R-EU_R0805                R0805             rcl           1
+R5       0R pro 5V      R-EU_R0805                R0805             rcl           1
+SV1                     MA02-1                    MA02-1            moje_hrebinky 1
+SV5      JUMP2*4        MA04-2                    MA04-2            con-lstb      1
+SV6      JUMP2X4        MA04-2                    MA04-2            con-lstb      1
+SW1                     PREPINAC_POSUVNY_SL19-121 PREPINAC-POSUVNÝ  moje          1
+X1       WAGO256        WAGO256                   WAGO256           PaJa_22       1
+X2       WAGO256        WAGO256                   WAGO256           PaJa_22       1
+X3       WAGO256        WAGO256                   WAGO256           PaJa_22       1
+X4       M3             SROUB3M                   SROUB3M           moje          1
+X5       M3             SROUB3M                   SROUB3M           moje          1
+X6       M3             SROUB3M                   SROUB3M           moje          1
+X7       M3             SROUB3M                   SROUB3M           moje          1
+X8       WAGO256        WAGO256                   WAGO256           PaJa_22       1
+X9       DC 2.1MM       KONEKTOR_DC_2.1MM         KONEKTOR_DC_2.1MM moje          1

@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> Programování AVR </title>
+    <meta name="keywords" content="stavebnice MLAB programování procesoru ATMEL ATmega8">
+    <meta name="description" content="Metody programování ATmega8">
+    <!-- AUTOINCLUDE START "Page/Head.cs.ihtml" DO NOT REMOVE -->
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB.css" type="text/css" title="MLAB základní styl">
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB_Print.css" type="text/css" media="print">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../Web/PIC/MLAB.ico">
+    <script type="text/javascript" src="../../../../../Web/JS/MLAB_Menu.js"></script>
+    <!-- AUTOINCLUDE END -->
+  </head>
+
+  <body lang="cs">
+
+    <!-- AUTOINCLUDE START "Page/Header.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== HLAVICKA ============== -->
+    <div class="Header">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawHeader();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- AUTOINCLUDE START "Page/Menu.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== MENU ============== -->
+    <div class="Menu">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawMenu();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) menu je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- ============== TEXT ============== -->
+    <div class="Text">
+      <p class="Title">
+        Grafická nadstavba AVR8 Burn-O-Mat
+      </p>
+      <p class=Autor>
+        Milan Horkel
+      </p>
+      <p class="Subtitle">
+        Grafická nadstavba AVR8 Burn-O-Mat pro programátor AVRDUDE je náhradou
+        za AVRDUDE-GUI. Umožňuje pohodlné programování procesorů ATMEL včetně
+        nastavování konfiguračních slov.
+      </p>
+      <p>
+        <a href="../AVR8 Burn-O-Mat.cs.pdf"><img class="NoBorder"
+           src="../../../../../Web/PIC/FileIco_PDF.ico"
+           alt="Acrobat">&nbsp;PDF verze</a>
+      </p>
+
+      <h1> Úvodem </h1>
+
+      <p>
+        Programátor AVRDUDE je zahrnut do vývojového balíku WinAVR a umožňuje
+        programování procesorů ATMEL pomocí mnoha programátorů (HW přípravků).
+        Pro pohodlnější programování procesorů vznikl program AVRDUDE-GUI jako
+        klikací nadstavba nad AVRDUDE aby se uživatel nemusel trápit
+        s&nbsp;parametry programu AVRDUDE.
+      </p>
+
+      <p>
+        Bohužel tato grafická nadstavba se již nevyvíjí a vyvíjet patrně nebude
+        (již 2 roky zůstala na verzi 0.2.0) a má některé neřešené chyby. Zejména
+        problémy s&nbsp;programováním konfiguračních slov.
+      </p>
+
+      <h1> AVR8 Burn-O-Mat </h1>
+
+      <p>
+        Verze 1.4b ze 17.12.2006
+      </p>
+
+      <h2> Co umí AVR8 Burn-O-Mat </h2>
+
+      <p>
+        Tento program je náhradou starého programu AVRDUDE-GUI, tedy je to
+        grafická nadstavba nad program AVRDUDE. Je napsaný zcela znova
+        v&nbsp;jazyce JAVA a na rozdíl od AVRDUDE-GUI umí zobrazovat, nastavovat
+        a programovat konfigurační slova procesů ATMEL řady AVR.
+      </p>
+
+      <h1> Instalace </h1>
+
+      <h2> Download </h2>
+
+      <p>
+        Program stáhneme ze stránky autora:
+      </p>
+
+      <p>
+        <a href="http://www.brischalle.de/avr8_burn-o-mat_avrdude_gui/avr8_burn_o_mat_avrdude_gui_en.html"
+           title="Stránka autora">http://www.brischalle.de/avr8_burn-o-mat_avrdude_gui/avr8_burn_o_mat_avrdude_gui_en.html</a>
+      </p>
+
+      <p>
+        Program vyžaduje jazyk JAVA alespoň verze 1.5, který je možno stáhnout
+        zde:
+      </p>
+
+      <p>
+        <a href="http://java.sun.com/javase/downloads"
+           title="Stáhnout JAVA">http://java.sun.com/javase/downloads</a>
+      </p>
+
+      <h2> Instalace </h2>
+
+      <p>
+        Program rozpakujeme do adresáře dle své volby (tam, kam dáváme programy,
+        které nemají instalační program). Pro spouštění je připraven dávkový
+        soubor nebo je možno spouštět přímo JAVA aplikaci
+        <samp>AVR8_Burn_O_Mat.jar</samp>.
+      </p>
+
+      <p>
+        Můžeme do adresáře (typicky) <samp>&quot;C:\Documents and Settings\All
+        Users\Nabídka Start\Programy\AVR8 Burn-O-Mat\&quot;</samp> dát odkaz na
+        program <samp>AVR8_Burn_O_Mat.jar.lnk</samp>. Pak je již spouštění
+        hračka.
+      </p>
+
+      <h2> Konfigurace </h2>
+
+      <p>
+        Konfigurace se provádí pomocí volby <samp>Settings/AVRDUDE</samp>.
+        Mezi jednotlivými nastaveními je třeba program ukončit a spustit znovu
+        aby se načetly změněné hodnoty.
+      </p>
+
+      <p>
+        Nově nainstalovaný program musíme naučit kde je nainstalovaný program
+        AVRDUDE (soubor <samp>avrdude.exe</samp>) a kde má tento program
+        konfigurační soubor (soubor <samp>avrdude.conf</samp>).
+      </p>
+
+      <p>
+        Dále nastavíme používaný programátor (například <samp>picoweb</samp>)
+        a použitý port (například <samp>lpt1</samp>).
+      </p>
+
+      <h1> Použití </h1>
+
+      <p>
+        Použití je triviální, s&nbsp;chutí do toho.
+      </p>
+
+      <p>
+        Hlavní dialog:
+      </p>
+
+      <p>
+        <img width=588 height=421
+          src="Pictures_AVR8 Burn-O-Mat/image001.jpg"
+          alt="Hlavní dialog">
+      </p>
+
+      <p>
+        Dialog pro nastavování přepínačů:
+      </p>
+
+      <p>
+        <img width=600 height=500
+        src="Pictures_AVR8 Burn-O-Mat/image002.jpg"
+        alt="Nastavení přepínačů">
+      </p>
+    </div>
+
+    <!-- AUTOINCLUDE START "Page/Footer.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== PATIČKA ============== -->
+    <div class="Footer">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawFooter();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+  </body>
+</html>

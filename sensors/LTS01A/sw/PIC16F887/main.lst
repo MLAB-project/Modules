@@ -1,0 +1,572 @@
+CCS PCM C Compiler, Version 4.106, 47914               26-VIII-13 18:26
+
+               Filename: Z:\home\kaklik\svnMLAB\Modules\Sensors\LTS01A\SW\PIC16F887\main.lst
+
+               ROM used: 1029 words (13%)
+                         Largest free fragment is 2048
+               RAM used: 10 (3%) at main() level
+                         36 (10%) worst case
+               Stack:    2 locations
+
+*
+0000:  MOVLW  03
+0001:  MOVWF  0A
+0002:  GOTO   35C
+0003:  NOP
+.................... #include "main.h" 
+.................... #include <16F887.h> 
+.................... //////// Standard Header file for the PIC16F887 device //////////////// 
+.................... #device PIC16F887 
+.................... #list 
+....................  
+.................... #device adc=8 
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES INTRC                 	//Internal RC Osc 
+.................... #FUSES NOPUT                 	//No Power Up Timer 
+.................... #FUSES MCLR                  	//Master Clear pin enabled 
+.................... #FUSES NOPROTECT             	//Code not protected from reading 
+.................... #FUSES NOCPD                 	//No EE protection 
+.................... #FUSES NOBROWNOUT            	//No brownout reset 
+.................... #FUSES IESO                  	//Internal External Switch Over mode enabled 
+.................... #FUSES FCMEN                 	//Fail-safe clock monitor enabled 
+.................... #FUSES NOLVP                 	//No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES NODEBUG               	//No Debug mode for ICD 
+.................... #FUSES NOWRT                 	//Program memory not write protected 
+.................... #FUSES BORV40                	//Brownout reset at 4.0V 
+....................  
+.................... #use delay(clock=8000000) 
+*
+0346:  MOVLW  22
+0347:  MOVWF  04
+0348:  BCF    03.7
+0349:  MOVF   00,W
+034A:  BTFSC  03.2
+034B:  GOTO   359
+034C:  MOVLW  02
+034D:  MOVWF  78
+034E:  CLRF   77
+034F:  DECFSZ 77,F
+0350:  GOTO   34F
+0351:  DECFSZ 78,F
+0352:  GOTO   34E
+0353:  MOVLW  97
+0354:  MOVWF  77
+0355:  DECFSZ 77,F
+0356:  GOTO   355
+0357:  DECFSZ 00,F
+0358:  GOTO   34C
+0359:  BCF    0A.3
+035A:  BCF    0A.4
+035B:  GOTO   401 (RETURN)
+....................  
+....................  
+....................  
+.................... #define S_SDA  PIN_C4 
+.................... #define S_SCL  PIN_C3 
+.................... #use i2c(master, sda=S_SDA, scl=S_SCL) 
+*
+006F:  MOVLW  08
+0070:  MOVWF  78
+0071:  NOP
+0072:  BCF    07.3
+0073:  BCF    20.3
+0074:  MOVF   20,W
+0075:  BSF    03.5
+0076:  MOVWF  07
+0077:  NOP
+0078:  BCF    03.5
+0079:  RLF    23,F
+007A:  BCF    07.4
+007B:  BTFSS  03.0
+007C:  GOTO   083
+007D:  BSF    20.4
+007E:  MOVF   20,W
+007F:  BSF    03.5
+0080:  MOVWF  07
+0081:  GOTO   087
+0082:  BCF    03.5
+0083:  BCF    20.4
+0084:  MOVF   20,W
+0085:  BSF    03.5
+0086:  MOVWF  07
+0087:  NOP
+0088:  BCF    03.5
+0089:  BSF    20.3
+008A:  MOVF   20,W
+008B:  BSF    03.5
+008C:  MOVWF  07
+008D:  BCF    03.5
+008E:  BTFSS  07.3
+008F:  GOTO   08E
+0090:  DECFSZ 78,F
+0091:  GOTO   071
+0092:  NOP
+0093:  BCF    07.3
+0094:  BCF    20.3
+0095:  MOVF   20,W
+0096:  BSF    03.5
+0097:  MOVWF  07
+0098:  NOP
+0099:  BCF    03.5
+009A:  BSF    20.4
+009B:  MOVF   20,W
+009C:  BSF    03.5
+009D:  MOVWF  07
+009E:  NOP
+009F:  NOP
+00A0:  BCF    03.5
+00A1:  BSF    20.3
+00A2:  MOVF   20,W
+00A3:  BSF    03.5
+00A4:  MOVWF  07
+00A5:  BCF    03.5
+00A6:  BTFSS  07.3
+00A7:  GOTO   0A6
+00A8:  CLRF   78
+00A9:  NOP
+00AA:  BTFSC  07.4
+00AB:  BSF    78.0
+00AC:  BCF    07.3
+00AD:  BCF    20.3
+00AE:  MOVF   20,W
+00AF:  BSF    03.5
+00B0:  MOVWF  07
+00B1:  BCF    03.5
+00B2:  BCF    07.4
+00B3:  BCF    20.4
+00B4:  MOVF   20,W
+00B5:  BSF    03.5
+00B6:  MOVWF  07
+00B7:  BCF    03.5
+00B8:  RETURN
+00B9:  MOVLW  08
+00BA:  MOVWF  24
+00BB:  MOVF   77,W
+00BC:  MOVWF  25
+00BD:  BSF    20.4
+00BE:  MOVF   20,W
+00BF:  BSF    03.5
+00C0:  MOVWF  07
+00C1:  NOP
+00C2:  BCF    03.5
+00C3:  BSF    20.3
+00C4:  MOVF   20,W
+00C5:  BSF    03.5
+00C6:  MOVWF  07
+00C7:  BCF    03.5
+00C8:  BTFSS  07.3
+00C9:  GOTO   0C8
+00CA:  BTFSC  07.4
+00CB:  BSF    03.0
+00CC:  BTFSS  07.4
+00CD:  BCF    03.0
+00CE:  RLF    78,F
+00CF:  NOP
+00D0:  BCF    20.3
+00D1:  MOVF   20,W
+00D2:  BSF    03.5
+00D3:  MOVWF  07
+00D4:  BCF    03.5
+00D5:  BCF    07.3
+00D6:  DECFSZ 24,F
+00D7:  GOTO   0BD
+00D8:  BSF    20.4
+00D9:  MOVF   20,W
+00DA:  BSF    03.5
+00DB:  MOVWF  07
+00DC:  NOP
+00DD:  BCF    03.5
+00DE:  BCF    07.4
+00DF:  MOVF   25,W
+00E0:  BTFSC  03.2
+00E1:  GOTO   0E7
+00E2:  BCF    20.4
+00E3:  MOVF   20,W
+00E4:  BSF    03.5
+00E5:  MOVWF  07
+00E6:  BCF    03.5
+00E7:  NOP
+00E8:  BSF    20.3
+00E9:  MOVF   20,W
+00EA:  BSF    03.5
+00EB:  MOVWF  07
+00EC:  BCF    03.5
+00ED:  BTFSS  07.3
+00EE:  GOTO   0ED
+00EF:  NOP
+00F0:  BCF    07.3
+00F1:  BCF    20.3
+00F2:  MOVF   20,W
+00F3:  BSF    03.5
+00F4:  MOVWF  07
+00F5:  NOP
+00F6:  BCF    03.5
+00F7:  BCF    07.4
+00F8:  BCF    20.4
+00F9:  MOVF   20,W
+00FA:  BSF    03.5
+00FB:  MOVWF  07
+00FC:  BCF    03.5
+00FD:  RETURN
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8) 
+....................  
+.................... #include "../LTS01.h" 
+.................... //Adresa pro VDD, VDD, VDD W 0x9E R 0x9F 
+.................... //Adresa pro GND GND GND W 0x90 R 0x91 
+....................  
+.................... #define LTS01A_address 0x90 
+....................  
+.................... #include "LTS01.c" 
+.................... float LTS01_get_temp() 
+.................... { 
+.................... int8 MSB, LSB; 
+....................  
+....................    i2c_start(); 
+*
+0173:  BSF    20.4
+0174:  MOVF   20,W
+0175:  BSF    03.5
+0176:  MOVWF  07
+0177:  NOP
+0178:  BCF    03.5
+0179:  BSF    20.3
+017A:  MOVF   20,W
+017B:  BSF    03.5
+017C:  MOVWF  07
+017D:  NOP
+017E:  BCF    03.5
+017F:  BCF    07.4
+0180:  BCF    20.4
+0181:  MOVF   20,W
+0182:  BSF    03.5
+0183:  MOVWF  07
+0184:  NOP
+0185:  BCF    03.5
+0186:  BCF    07.3
+0187:  BCF    20.3
+0188:  MOVF   20,W
+0189:  BSF    03.5
+018A:  MOVWF  07
+....................    I2C_Write(LTS01A_address); 
+018B:  MOVLW  90
+018C:  BCF    03.5
+018D:  MOVWF  23
+018E:  CALL   06F
+....................    I2C_write(0x00); 
+018F:  CLRF   23
+0190:  CALL   06F
+....................    i2c_stop(); 
+0191:  BCF    20.4
+0192:  MOVF   20,W
+0193:  BSF    03.5
+0194:  MOVWF  07
+0195:  NOP
+0196:  BCF    03.5
+0197:  BSF    20.3
+0198:  MOVF   20,W
+0199:  BSF    03.5
+019A:  MOVWF  07
+019B:  BCF    03.5
+019C:  BTFSS  07.3
+019D:  GOTO   19C
+019E:  NOP
+019F:  GOTO   1A0
+01A0:  NOP
+01A1:  BSF    20.4
+01A2:  MOVF   20,W
+01A3:  BSF    03.5
+01A4:  MOVWF  07
+01A5:  NOP
+....................    i2c_start(); 
+01A6:  BCF    03.5
+01A7:  BSF    20.4
+01A8:  MOVF   20,W
+01A9:  BSF    03.5
+01AA:  MOVWF  07
+01AB:  NOP
+01AC:  BCF    03.5
+01AD:  BSF    20.3
+01AE:  MOVF   20,W
+01AF:  BSF    03.5
+01B0:  MOVWF  07
+01B1:  NOP
+01B2:  BCF    03.5
+01B3:  BCF    07.4
+01B4:  BCF    20.4
+01B5:  MOVF   20,W
+01B6:  BSF    03.5
+01B7:  MOVWF  07
+01B8:  NOP
+01B9:  BCF    03.5
+01BA:  BCF    07.3
+01BB:  BCF    20.3
+01BC:  MOVF   20,W
+01BD:  BSF    03.5
+01BE:  MOVWF  07
+....................    I2C_Write(LTS01A_address+1); 
+01BF:  MOVLW  91
+01C0:  BCF    03.5
+01C1:  MOVWF  23
+01C2:  CALL   06F
+....................    MSB=i2c_read(1); 
+01C3:  MOVLW  01
+01C4:  MOVWF  77
+01C5:  CALL   0B9
+01C6:  MOVF   78,W
+01C7:  MOVWF  21
+....................    LSB=i2c_read(0); 
+01C8:  CLRF   77
+01C9:  CALL   0B9
+01CA:  MOVF   78,W
+01CB:  MOVWF  22
+....................    i2c_stop();  
+01CC:  BCF    20.4
+01CD:  MOVF   20,W
+01CE:  BSF    03.5
+01CF:  MOVWF  07
+01D0:  NOP
+01D1:  BCF    03.5
+01D2:  BSF    20.3
+01D3:  MOVF   20,W
+01D4:  BSF    03.5
+01D5:  MOVWF  07
+01D6:  BCF    03.5
+01D7:  BTFSS  07.3
+01D8:  GOTO   1D7
+01D9:  NOP
+01DA:  GOTO   1DB
+01DB:  NOP
+01DC:  BSF    20.4
+01DD:  MOVF   20,W
+01DE:  BSF    03.5
+01DF:  MOVWF  07
+01E0:  NOP
+....................     
+....................   return (MAKE16(MSB,LSB) * 0.00390625 ); 
+01E1:  BCF    03.5
+01E2:  MOVF   21,W
+01E3:  MOVWF  24
+01E4:  MOVF   22,W
+01E5:  MOVWF  23
+01E6:  MOVF   24,W
+01E7:  MOVWF  26
+01E8:  MOVF   23,W
+01E9:  MOVWF  25
+*
+0206:  MOVF   7A,W
+0207:  MOVWF  35
+0208:  MOVF   79,W
+0209:  MOVWF  34
+020A:  MOVF   78,W
+020B:  MOVWF  33
+020C:  MOVF   77,W
+020D:  MOVWF  32
+020E:  CLRF   39
+020F:  CLRF   38
+0210:  CLRF   37
+0211:  MOVLW  77
+0212:  MOVWF  36
+0213:  CALL   0FE
+.................... } 
+0214:  BCF    0A.3
+0215:  BCF    0A.4
+0216:  GOTO   3D3 (RETURN)
+....................  
+....................  
+....................  
+....................  
+.................... void main() 
+.................... { 
+*
+035C:  CLRF   04
+035D:  BCF    03.7
+035E:  MOVLW  1F
+035F:  ANDWF  03,F
+0360:  MOVLW  71
+0361:  BSF    03.5
+0362:  MOVWF  0F
+0363:  MOVF   0F,W
+0364:  BSF    03.6
+0365:  BCF    07.3
+0366:  MOVLW  0C
+0367:  BCF    03.6
+0368:  MOVWF  19
+0369:  MOVLW  A2
+036A:  MOVWF  18
+036B:  MOVLW  90
+036C:  BCF    03.5
+036D:  MOVWF  18
+036E:  BSF    03.5
+036F:  BSF    03.6
+0370:  MOVF   09,W
+0371:  ANDLW  C0
+0372:  MOVWF  09
+0373:  BCF    03.6
+0374:  BCF    1F.4
+0375:  BCF    1F.5
+0376:  MOVLW  00
+0377:  BSF    03.6
+0378:  MOVWF  08
+0379:  BCF    03.5
+037A:  CLRF   07
+037B:  CLRF   08
+037C:  CLRF   09
+....................  
+....................    setup_adc_ports(NO_ANALOGS|VSS_VDD); 
+*
+0380:  BSF    03.5
+0381:  BSF    03.6
+0382:  MOVF   09,W
+0383:  ANDLW  C0
+0384:  MOVWF  09
+0385:  BCF    03.6
+0386:  BCF    1F.4
+0387:  BCF    1F.5
+0388:  MOVLW  00
+0389:  BSF    03.6
+038A:  MOVWF  08
+....................    setup_adc(ADC_CLOCK_DIV_2); 
+038B:  BCF    03.5
+038C:  BCF    03.6
+038D:  BCF    1F.6
+038E:  BCF    1F.7
+038F:  BSF    03.5
+0390:  BCF    1F.7
+0391:  BCF    03.5
+0392:  BSF    1F.0
+....................    setup_spi(SPI_SS_DISABLED); 
+0393:  BCF    14.5
+0394:  BCF    20.5
+0395:  MOVF   20,W
+0396:  BSF    03.5
+0397:  MOVWF  07
+0398:  BCF    03.5
+0399:  BSF    20.4
+039A:  MOVF   20,W
+039B:  BSF    03.5
+039C:  MOVWF  07
+039D:  BCF    03.5
+039E:  BCF    20.3
+039F:  MOVF   20,W
+03A0:  BSF    03.5
+03A1:  MOVWF  07
+03A2:  MOVLW  01
+03A3:  BCF    03.5
+03A4:  MOVWF  14
+03A5:  MOVLW  00
+03A6:  BSF    03.5
+03A7:  MOVWF  14
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_1); 
+03A8:  MOVF   01,W
+03A9:  ANDLW  C7
+03AA:  IORLW  08
+03AB:  MOVWF  01
+....................    setup_timer_1(T1_DISABLED); 
+03AC:  BCF    03.5
+03AD:  CLRF   10
+....................    setup_timer_2(T2_DISABLED,0,1); 
+03AE:  MOVLW  00
+03AF:  MOVWF  78
+03B0:  MOVWF  12
+03B1:  MOVLW  00
+03B2:  BSF    03.5
+03B3:  MOVWF  12
+....................    setup_ccp1(CCP_OFF); 
+03B4:  BCF    03.5
+03B5:  BSF    20.2
+03B6:  MOVF   20,W
+03B7:  BSF    03.5
+03B8:  MOVWF  07
+03B9:  BCF    03.5
+03BA:  CLRF   17
+03BB:  BSF    03.5
+03BC:  CLRF   1B
+03BD:  CLRF   1C
+03BE:  MOVLW  01
+03BF:  MOVWF  1D
+....................    setup_comparator(NC_NC_NC_NC);// This device COMP currently not supported by the PICWizard 
+03C0:  BCF    03.5
+03C1:  BSF    03.6
+03C2:  CLRF   07
+03C3:  CLRF   08
+03C4:  CLRF   09
+....................  
+.................... printf("Simple Thermomether with LTS01A sensor \r\n",); 
+03C5:  MOVLW  04
+03C6:  MOVWF  0D
+03C7:  MOVLW  00
+03C8:  MOVWF  0F
+03C9:  BCF    03.6
+03CA:  CALL   027
+.................... printf("(c) MLAB.cz 2013 JACHO  \r\n",); 
+03CB:  MOVLW  19
+03CC:  BSF    03.6
+03CD:  MOVWF  0D
+03CE:  MOVLW  00
+03CF:  MOVWF  0F
+03D0:  BCF    03.6
+03D1:  CALL   027
+....................    
+....................   while(TRUE) 
+....................  {  
+....................    printf("T: %f\r\n", LTS01_get_temp()); 
+03D2:  GOTO   173
+03D3:  MOVF   77,W
+03D4:  MOVWF  21
+03D5:  MOVF   78,W
+03D6:  MOVWF  22
+03D7:  MOVF   79,W
+03D8:  MOVWF  23
+03D9:  MOVF   7A,W
+03DA:  MOVWF  24
+03DB:  MOVLW  54
+03DC:  BTFSS  0C.4
+03DD:  GOTO   3DC
+03DE:  MOVWF  19
+03DF:  MOVLW  3A
+03E0:  BTFSS  0C.4
+03E1:  GOTO   3E0
+03E2:  MOVWF  19
+03E3:  MOVLW  20
+03E4:  BTFSS  0C.4
+03E5:  GOTO   3E4
+03E6:  MOVWF  19
+03E7:  MOVLW  89
+03E8:  MOVWF  04
+03E9:  MOVF   24,W
+03EA:  MOVWF  28
+03EB:  MOVF   23,W
+03EC:  MOVWF  27
+03ED:  MOVF   22,W
+03EE:  MOVWF  26
+03EF:  MOVF   21,W
+03F0:  MOVWF  25
+03F1:  MOVLW  02
+03F2:  MOVWF  29
+03F3:  GOTO   259
+03F4:  MOVLW  0D
+03F5:  BTFSS  0C.4
+03F6:  GOTO   3F5
+03F7:  MOVWF  19
+03F8:  MOVLW  0A
+03F9:  BTFSS  0C.4
+03FA:  GOTO   3F9
+03FB:  MOVWF  19
+....................    delay_ms(500); 
+03FC:  MOVLW  02
+03FD:  MOVWF  21
+03FE:  MOVLW  FA
+03FF:  MOVWF  22
+0400:  GOTO   346
+0401:  DECFSZ 21,F
+0402:  GOTO   3FE
+....................  }  
+0403:  GOTO   3D2
+.................... } 
+....................  
+0404:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2CF5   INTRC NOWDT NOPUT MCLR NOPROTECT NOCPD NOBROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 3FFF   NOWRT BORV40

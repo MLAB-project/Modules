@@ -1,0 +1,35 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (File ".\jtagft2232v01a.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (NoModify))
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (PartMRUSelector)
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\jtagft2232v01a.dsn")
+      (Path "Design Resources" ".\jtagft2232v01a.dsn" "SCHEMATIC1")
+      (Select "Design Resources" ".\jtagft2232v01a.dsn" "SCHEMATIC1" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 0 200 0 591"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -4 -23 44 1038 44 662")
+        (Scroll "0 0")
+        (Zoom "104")
+        (Occurrence "/"))
+      (Path "C:\PROJEKTS\JTAGFT2232\JTAG\SCH\JTAGFT2232V01A.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1"))))

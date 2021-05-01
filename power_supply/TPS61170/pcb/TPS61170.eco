@@ -1,0 +1,46 @@
+*PADS-ECO-V2007.0-MILS*
+
+*REMARK* -- TPS61170.pcb -- Thu Aug 12 14:07:12 2010
+
+
+*PART*
+R6 R@R0805
+
+*SET_ATTRIBUTE* PARTTYPE R
+"Description" rezistory ruznych typu
+
+*SET_ATTRIBUTE* PART R1
+"Description" rezistory ruznych typu
+
+*SET_ATTRIBUTE* PART R2
+"Description" rezistory ruznych typu
+
+*SET_ATTRIBUTE* PART R3
+"Description" rezistory ruznych typu
+
+*SET_ATTRIBUTE* PART R4
+"Description" rezistory ruznych typu
+
+*SET_ATTRIBUTE* PART R5
+"Description" rezistory ruznych typu
+
+*SET_ATTRIBUTE* DECAL R0805
+"Description" rezistor SMD velikost 0805
+
+*SET_ATTRIBUTE* PART R6
+"Value" 82K
+"Description" rezistory ruznych typu
+
+*NET*
+*SIGNAL* GND 12
+J3.3 R6.1
+
+*NET*
+*SIGNAL* N00340 12
+J3.2 R6.2
+*END*
+*PADS-ECO-V2007.0-MILS*
+
+*REMARK* -- TPS61170.pcb -- Fri Aug 13 12:06:46 2010
+
+*END*

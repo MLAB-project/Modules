@@ -1,0 +1,73 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004     @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @TRIS_C
+021     setHUB.d
+021     MAIN.@SCRATCH1
+022     @delay_ms1.P1
+022     @I2C_WRITE_1.P2
+022     @PSTRINGC7_69.@SCRATCH1
+023     @PSTRINGC7_69.@SCRATCH2
+024     @PSTRINGC7_69.@SCRATCH3
+025     @PUTCHAR_1_.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+013F  @delay_ms1
+0083  @I2C_WRITE_1
+0019  @PUTCHAR_1_
+00CD  setHUB
+0004  @const78
+003D  @PSTRINGC7_69
+0155  MAIN
+0007  @const82
+000D  @const83
+0155  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    Z:\home\kaklik\svnMLAB\Modules\CommSerial\I2CHUB02A\SW\PIC16F887\
+
+Project Files:
+    main.c
+    main.h
+    C:\Program Files (x86)\PICC\devices\16F887.h
+
+Units:
+    Z:\home\kaklik\svnMLAB\Modules\CommSerial\I2CHUB02A\SW\PIC16F887\main (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.PJT
+    Call Tree:   main.tre
+    Statistics:  main.sta

@@ -1,0 +1,22 @@
+{
+    "wiki": "None", 
+    "status": 1, 
+    "name": "RTC02A", 
+    "parameters": [], 
+    "short_en": "Real Time Clock controlled through I2C with battery backup. The accuracy of the order of 20 ppm.", 
+    "image_small": "/doc/img/RTC02A_QRcode.jpgs", 
+    "image": "/doc/img/RTC02A_QRcode.png", 
+    "longname_cs": "Hodiny reálného času", 
+    "longname_en": "Real Time Clock Modules", 
+    "mark": 50.0, 
+    "ust": "", 
+    "doc_cs": "<p>None</p>", 
+    "short_cs": "Hodiny reálného času ovládané přes I2C se záložní baterií. Přesnost řádově 20 ppm.", 
+    "doc_en": "<p>None</p>", 
+    "_id": "RTC02A", 
+    "root": "clock/RTC02A", 
+    "author[]": [], 
+    "category[]": [
+        "clock"
+    ]
+}

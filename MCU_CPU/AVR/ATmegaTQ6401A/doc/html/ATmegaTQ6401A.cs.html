@@ -1,0 +1,360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> ATmegaTQ6401A </title>
+    <meta name="keywords" content="stavebnice MLAB ATmega ATmega64 ATMEL TQFP64">
+    <meta name="description" content="Projekt MLAB, Modul pro procesory ATMEL ATmega v pouzdru TQFP64">
+    <!-- AUTOINCLUDE START "Page/Head.cs.ihtml" DO NOT REMOVE -->
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB.css" type="text/css" title="MLAB základní styl">
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB_Print.css" type="text/css" media="print">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../Web/PIC/MLAB.ico">
+    <script type="text/javascript" src="../../../../../Web/JS/MLAB_Menu.js"></script>
+    <!-- AUTOINCLUDE END -->
+  </head>
+
+  <body lang="cs">
+
+    <!-- AUTOINCLUDE START "Page/Header.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== HLAVICKA ============== -->
+    <div class="Header">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawHeader();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- AUTOINCLUDE START "Page/Menu.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== MENU ============== -->
+    <div class="Menu">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawMenu();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) menu je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- ============== TEXT ============== -->
+    <div class="Text">
+      <p class="Title">
+        Modul procesoru ATmega v&nbsp;pouzdru TQFP64
+      </p>
+      <p class=Autor>
+        Milan Horkel
+      </p>
+      <p class="Subtitle">
+        Procesorový modul může být osazen jedním z&nbsp;procesorů rodiny ATmega
+        v&nbsp;pouzdru TQFP64. Podle varianty se osadí i příslušný programovací
+        ISP 6 PIN konektor a ladicí JTAG 10 PIN konektor. Dále je možné osadit
+        krystal (hlavní i hodinkový). Na desce je dále RESET tlačítko.
+      </p>
+      <p class="Subtitle">
+        <img width=351 height=404 src="ATmegaTQ6401A.cs_files/image001.jpg"
+        alt="Pohled ze strany součástek">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <img width=350 height=405 src="ATmegaTQ6401A.cs_files/image002.jpg"
+        alt="Pohled ze strany spojů">
+      </p>
+      <p>
+        <a href="../ATmegaTQ6401A.cs.pdf"><img class="NoBorder"
+           src="../../../../../Web/PIC/FileIco_PDF.ico"
+           alt="Acrobat">&nbsp;PDF verze</a>
+      </p>
+
+      <h1> Technické parametry </h1>
+
+      <table>
+        <tr>
+          <th> Parametr </th>
+          <th> Hodnota  </th>
+          <th> Poznámka </th>
+        </tr>
+        <tr>
+          <td> Napájení </td>
+          <td> 2.7V .. 4.5V .. 5.5V </td>
+          <td> Podle procesoru a rychlosti </td>
+        </tr>
+        <tr>
+          <td> Spotřeba </td>
+          <td> 7mA/5.0V </td>
+          <td> ATmega64-16AI, 1MHz vnitřní RC oscilátor </td>
+        </tr>
+        <tr>
+          <td> Procesor </td>
+          <td> ATmega64/ATmega64L </td>
+          <td> Volitelně další typy v&nbsp;pouzdru TQFP64 </td>
+        </tr>
+        <tr>
+          <td> Interface </td>
+          <td> ISP 6pin, JTAG 10pin </td>
+          <td> ISP ve dvou variantách dle procesoru </td>
+        </tr>
+        <tr>
+          <td> Rozměry </td>
+          <td> 61 x 71 x 16mm </td>
+          <td> Výška nad nosnou deskou </td>
+        </tr>
+      </table>
+
+      <h1> Popis konstrukce </h1>
+      
+      <h2> Úvodem </h2>
+      
+      <p>
+        Jedná se o standardní procesorový modul do stavebnice pro procesory
+        ATMEL v&nbsp;pouzdru TQFP64. Takových procesorů je mnoho a jistě budou
+        přibývat další. Před osazením je třeba zkontrolovat podle katalogu
+        zapojení programovacích (ISP) konektorů a osadit jen ten konektor,
+        který patří k&nbsp;vybranému procesoru. Deska podporuje obě
+        v&nbsp;současné době aktuální varianty zapojení.
+      </p>
+      
+      <h2> Zapojení modulu </h2>
+      
+      <p>
+        Zapojení modulu je triviální. Podle katalogu je třeba zajistit, kterou
+        variantu ISP konektoru je třeba osadit (J66 nebo J67). Zapojení ISP
+        odpovídá doporučení firmy ATMEL. Dále je na desce JTAG ladící konektor
+        J68 zapojený obvyklým způsobem. Deska je doplněna několika kondenzátory
+        a odpory pro volné použití.
+      </p>
+      
+      <p>
+        <img width="262" height="352" src="ATmegaTQ6401A.cs_files/image003.png"
+        alt="Schéma, ISP konektor">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <img width="275" height="288" src="ATmegaTQ6401A.cs_files/image004.png"
+        alt="Schéma, JTAG konektor">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <img width="208" height="338" src="ATmegaTQ6401A.cs_files/image005.png"
+        alt="Schéma, rezervní součástky">
+      </p>
+      
+      <p>
+        Napájecí konektor J65 je opatřen ochrannou diodou D1 proti přepólování
+        (jen pro napájecí zdroj s&nbsp;omezením proudu) a napájení je běžným
+        způsobem filtrováno. Filtrační tlumivka L1 zajišťuje minimalizaci
+        rušení v&nbsp;napájení analogové části obvodu. V&nbsp;nouzi je možné
+        nahradit ji propojkou.
+      </p>
+      
+      <p>
+        Procesor může běžet z&nbsp;vnitřního oscilátoru nebo může používat
+        vnější krystal X1 (standardní velký) nebo X2 (malý hodinkový), případně
+        RC oscilátor R3/C8 (jen u některých procesorů). Místo krystalů se dají
+        osadit kontaktní dutinky aby bylo možno krystaly měnit dle potřeby.
+      </p>
+      
+      <p>
+        Krystal X3 (malý hodinkový) je připojen na oscilátor časovače.
+      </p>
+      
+      <p>
+        Zbývá již jen tlačítko RESET. Kondenzátor C7 se nesmí osadit pokud se
+        používá ladění pomocí JTAG rozhraní. Připomínám, že nový procesor má od
+        výrobce JTAG rozhraní zakázané a musí se povolit přeprogramováním
+        konfiguračního slova procesoru.
+      </p>
+      
+      <p>
+        <img width="850" height="924" src="ATmegaTQ6401A.cs_files/image006.png"
+        alt="Schéma, procesor">
+      </p>
+      
+      <h2> Zapojení použitých IO </h2>
+      
+      <p>
+        Zapojení konkrétního procesoru je vhodné konzultovat s&nbsp;katalogovým
+        listem. Na první straně schématu jsou uvedeny vybrané procesory, které
+        je možné osadit ale mohou se použít i další.
+      </p>
+      
+      <h2> Mechanická konstrukce </h2>
+      
+      <p>
+        Jedná se o standardní modul do stavebnice s upevňovacími rohovými
+        sloupky.
+      </p>
+      
+      <h1> Osazení a oživení </h1>
+      
+      <h2> Osazení </h2>
+      
+      <p>
+        Při osazování požíváme minimum pájky a raději použijeme mikropáječku.
+        Procesor připájíme nejdříve za jednu rohovou nožičku a pak za druhou a
+        pokud jsme se trefili tak připájíme zbytek nožiček. Na desce je 6
+        drátových propojek.
+      </p>
+      
+      <p>
+        <img width=384 height=446 src="ATmegaTQ6401A.cs_files/image007.jpg"
+        alt="Osazení, strana součástek">
+        &nbsp;
+        <img width=382 height=445 src="ATmegaTQ6401A.cs_files/image008.jpg"
+        alt="Osazení, strana spojů">
+      </p>
+
+      <table class="Soupiska">
+        <tr>
+          <th> Reference </th>
+          <th> Hodnota </th>
+        </tr>
+        <tr>
+          <th colspan="2"> Odpory </th>
+        </tr>
+        <tr>
+          <td> R1, R4 </td>
+          <td> 1k </td>
+        </tr>
+        <tr>
+          <td> R2, R101, R102, R103 </td>
+          <td> 10k </td>
+        </tr>
+        <tr>
+          <td> R3 </td>
+          <td> # </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Keramické kondenzátory </th>
+        </tr>
+        <tr>
+          <td> C8, C9 </td>
+          <td> 15pF </td>
+        </tr>
+        <tr>
+          <td> C101, C102, C103 </td>
+          <td> 10nF </td>
+        </tr>
+        <tr>
+          <td> C2, C3, C4, C5, C6 </td>
+          <td> 100nF </td>
+        </tr>
+        <tr>
+          <td> C7 </td>
+          <td> #100nF </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Elektrolytické kondenzátory </th>
+        </tr>
+        <tr>
+          <td> C1 </td>
+          <td> 22uF/6.3V </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Indukčnosti </th>
+        </tr>
+        <tr>
+          <td> L1 </td>
+          <td> 10uH </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Diody </th>
+        </tr>
+        <tr>
+          <td> D1 </td>
+          <td> 1N4007SMD </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Integrované obvody </th>
+        </tr>
+        <tr>
+          <td> U1 </td>
+          <td> Atmega64_128_TQ64 </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Krystaly </th>
+        </tr>
+        <tr>
+          <td> X1 </td>
+          <td> 8MHz </td>
+        </tr>
+        <tr>
+          <td> X2, X3 </td>
+          <td> #32768Hz </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Mechanické součástky </th>
+        </tr>
+        <tr>
+          <td> J1-J16, J17-J32,<br>
+               J33-J48, J49-64 </td>
+          <td> JUMP2x16 </td>
+        </tr>
+        <tr>
+          <td> J69 </td>
+          <td> JUMP2 </td>
+        </tr>
+        <tr>
+          <td> J65,J66,J67 </td>
+          <td> JUMP2x3 </td>
+        </tr>
+        <tr>
+          <td> J68 </td>
+          <td> JUMP2x5 </td>
+        </tr>
+        <tr>
+          <td> J101+J103+J105,<br>
+               J102+J204+J106,<br>
+               J107+J109+J111,<br>
+               J108+J110+J112 </td>
+          <td> JUMP3 </td>
+        </tr>
+        <tr>
+          <td> SW1 </td>
+          <td> P-B1720 </td>
+        </tr>
+        <tr>
+          <th colspan="2"> Konstrukční součástky </th>
+        </tr>
+        <tr>
+          <td> 4ks </td>
+          <td> Šroub M3x12 křížový s válcovou hlavou </td>
+        </tr>
+        <tr>
+          <td> 4ks </td>
+          <td> Podložka M3 </td>
+        </tr>
+        <tr>
+          <td> 4ks </td>
+          <td> Distanční sloupek M3x5 </td>
+        </tr>
+      </table>
+
+      <p>
+        Šestipinový ISP konektor osazujeme jen jeden (podle procesoru).
+        Krystaly můžeme osadit rovnou pokud víme frekvence nebo místo nich
+        osadíme dutinky z&nbsp;precizní patice a pak se mohou krystaly volně
+        vyměňovat.
+      </p>
+
+    </div>
+
+    <!-- AUTOINCLUDE START "Page/Footer.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== PATIČKA ============== -->
+    <div class="Footer">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawFooter();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+  </body>
+</html>

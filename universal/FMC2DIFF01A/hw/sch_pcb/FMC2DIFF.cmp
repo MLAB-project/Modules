@@ -1,0 +1,213 @@
+Cmp-Mod V01 Created by CvPcb (2014-jan-25)-product date = Wed 19 Mar 2014 12:02:06 CET
+
+BeginCmp
+TimeStamp = /531CAD57/53236524;
+Reference = C1;
+ValeurCmp = C;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/5321D20F;
+Reference = C2;
+ValeurCmp = C;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/53236848;
+Reference = C3;
+ValeurCmp = CP1;
+IdModule  = Capacitors_SMD:c_tant_B;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CA823/53247A6E;
+Reference = C4;
+ValeurCmp = C;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CA823/5318C1F0;
+Reference = J1;
+ValeurCmp = ASP-134604-01_(FMC);
+IdModule  = Kaklik_konektory:FMC_LPC_ASP-134604-01;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/531CCCDB;
+Reference = J2;
+ValeurCmp = SATA7-67491-1030;
+IdModule  = Kaklik_konektory:SATA-7_THT_VERT;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/531F7F71;
+Reference = J3;
+ValeurCmp = SATA7-67491-1030;
+IdModule  = Kaklik_konektory:SATA-7_THT_VERT;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/531F7EF3;
+Reference = J4;
+ValeurCmp = SATA7-67491-1030;
+IdModule  = Kaklik_konektory:SATA-7_THT_VERT;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/531F7F93;
+Reference = J5;
+ValeurCmp = SATA7-67491-1030;
+IdModule  = Kaklik_konektory:SATA-7_THT_VERT;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD5A/531F7DD7;
+Reference = J6;
+ValeurCmp = SAS_mini_1888174;
+IdModule  = Kaklik_konektory:SAS_mini_1888174;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD5A/531F9589;
+Reference = J7;
+ValeurCmp = SAS_mini_1888174;
+IdModule  = Kaklik_konektory:SAS_mini_1888174;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD5A/531F9E3C;
+Reference = J8;
+ValeurCmp = JUMP_3X2_CONN;
+IdModule  = Jumpery_MLAB:Pin_Header_Straight_2x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/5320E4FA;
+Reference = J9;
+ValeurCmp = SATA7-67491-1030;
+IdModule  = Kaklik_konektory:SATA-7_THT_VERT;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/5320E51C;
+Reference = J10;
+ValeurCmp = SATA7-67491-1030;
+IdModule  = Kaklik_konektory:SATA-7_THT_VERT;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CA823/53237068;
+Reference = J11;
+ValeurCmp = JUMP_2X2_CONN;
+IdModule  = MLAB_Jumpery:Pin_Header_Straight_2x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CA823/5324751D;
+Reference = P1;
+ValeurCmp = CONN_1;
+IdModule  = Measurement_Points:Measurement_Point_Round-SMD-Pad_Small;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CA823/532474F5;
+Reference = P2;
+ValeurCmp = CONN_1;
+IdModule  = Measurement_Points:Measurement_Point_Round-SMD-Pad_Small;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CA823/53247509;
+Reference = P3;
+ValeurCmp = CONN_1;
+IdModule  = Measurement_Points:Measurement_Point_Round-SMD-Pad_Small;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/53237CC8;
+Reference = R1;
+ValeurCmp = 100R;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/53237CB4;
+Reference = R2;
+ValeurCmp = 100R;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/53238482;
+Reference = R3;
+ValeurCmp = 127R;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/53238496;
+Reference = R4;
+ValeurCmp = 82R;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/532384D2;
+Reference = R5;
+ValeurCmp = 127R;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/532384FA;
+Reference = R6;
+ValeurCmp = 82R;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/532384E6;
+Reference = R7;
+ValeurCmp = 127R;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/5323850E;
+Reference = R8;
+ValeurCmp = 82R;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/532384AA;
+Reference = R9;
+ValeurCmp = 127R;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/532384BE;
+Reference = R10;
+ValeurCmp = 82R;
+IdModule  = SMD_Packages:SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/53235FD1;
+Reference = U1;
+ValeurCmp = SY55857L;
+IdModule  = SMD_Packages:MSOP10-0.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /531CAD57/53234889;
+Reference = U2;
+ValeurCmp = SY55855V;
+IdModule  = SMD_Packages:MSOP10-0.5;
+EndCmp
+
+EndListe

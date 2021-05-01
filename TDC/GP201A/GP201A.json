@@ -1,0 +1,22 @@
+{
+    "wiki": "None", 
+    "status": 4, 
+    "name": "GP201A", 
+    "parameters": [], 
+    "short_en": "Measure time intervals up to 4us with precision 65ps. Also is capable for measure temperature (with 16bit resolution) if module is connected to temperature sensor such as PT1000.", 
+    "image_small": "/doc/img/GP201A_QRcode.jpgs", 
+    "image": "/doc/img/GP201A_QRcode.png", 
+    "short_cs": "Měří časové intervaly do 4us s rozlišeením 65ps. Po připojení teplotního čidla, jako například PT1000 umožňuje také měřit teplotu s 16ti bitovým rozlišením.", 
+    "longname_en": "Basic Time to Digital converter", 
+    "mark": 0.0, 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
+    "longname_cs": "Základní časově digitální převodník.", 
+    "doc_en": "<p>None</p>", 
+    "_id": "GP201A", 
+    "root": "TDC/GP201A", 
+    "author[]": [], 
+    "category[]": [
+        "tdc"
+    ]
+}

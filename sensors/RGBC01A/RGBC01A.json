@@ -1,0 +1,24 @@
+{
+    "wiki": "None", 
+    "status": 1, 
+    "name": "RGBC01A", 
+    "parameters": [], 
+    "short_en": "The sensor comprises a sensor red, green, blue and clear colors. Communication takes place via the I2C interface. Circuit includes a power supply for external IR LED. The sensor can be used to measure lighting conditions, or also for detection of the line for the bar and the robot for sensing rotation of automotive wheels.", 
+    "image_small": "/doc/img/RGBC01A_QRcode.png", 
+    "image": "/doc/img/RGBC01A_QRcode.png", 
+    "longname_cs": "I2C snímač barevného světla", 
+    "longname_en": "I2C sensor colored light", 
+    "mark": 50.0, 
+    "autor": "", 
+    "ust": "None", 
+    "doc_cs": "<p>None</p>", 
+    "short_cs": "Čidlo obsahuje snímač červené, zelené, modré a jasné (clear) barvy. Komunikace probíhá přes I2C rozhraní. Obvod obsahuje i napájení pro externí IR LED. Senzor je možné využít pro měření světelných podmínek, nebo také pro detekci čáry pro čárového robota i pro snímání otáčení pohonných kol.", 
+    "category[]": [
+        "sensor"
+    ], 
+    "doc_en": "<p>None</p>", 
+    "_id": "RGBC01A", 
+    "root": "sensors/RGBC01A", 
+    "author[]": [], 
+    "category": ""
+}

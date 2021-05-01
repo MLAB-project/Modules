@@ -1,0 +1,58 @@
+
+ROM used: 859 (10%)
+          859 (10%) including unused fragments
+
+          2 Average locations per line
+          23 Average locations per statement
+
+RAM used: 7 (2%) at main() level
+          19 (5%) worst case
+
+Stack used: 2 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   71    37 100  main.c
+   20     0   0  ..\I2C_magnetometr\main.h
+  423     0   0  ..\..\..\..\..\Program Files (x86)\PICC\devices\16F887.h
+----- -----
+  514    37 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     22   3   1             @delay_ms1
+0     51   6   3             @I2C_READ_1
+0     52   6   1             @I2C_WRITE_1
+0     34   4   1             @PUTCHAR_1_
+0    378  44   1  1045  3.9  main
+0     12   1   0             @const78
+0     72   8   3             @PSTRINGC7_68
+0     11   1   0             @const83
+0     79   9   4             @PSTRINGCN7_68
+0     21   2   3             @DIV88
+0    101  12   6             @PRINTF_D_68
+0     11   1   0             @const92
+0     11   1   0             @const93
+
+Program metrics:
+    Functions               1
+    Statements              37
+    Comments                87
+    Volume (V)              1076
+    Difficilty (D)          3.4
+    Effort to implement (E) 3626
+    Time to implement (T)   3 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    124
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   855  1189  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

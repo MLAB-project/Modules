@@ -1,0 +1,29 @@
+FTDI D2XX library (for Windows), use latest version from http://www.ftdichip.com/Drivers/D2XX.htm
+
+	lib_win\ftd2xx.h		<-- CDM v2.08.28 Certified\ftd2xx.h
+	lib_win\ftd2xx.lib		<-- CDM v2.08.28 Certified\i386\ftd2xx.lib
+
+FTDI D2XX library (for Linux), use latest version from http://www.ftdichip.com/Drivers/D2XX.htm
+
+	lib_linux\WinTypes.h	<-- libftd2xx1.1.12.tar.gz/release/WinTypes.h
+	lib_linux\ftd2xx.h		<-- libftd2xx1.1.12.tar.gz/release/examples/ftd2xx.h
+	lib_linux\i386\libftd2xx.a	<-- libftd2xx1.1.12.tar.gz/release/build/i386/libftd2xx.a
+	lib_linux\x86_64\libftd2xx.a	<-- libftd2xx1.1.12.tar.gz/release/build/x86_64/libftd2xx.a
+
+Software depend on mulitlib package. Install it by: 
+ sudo apt-get install g++-multilib
+
+FTDI D2XX library (for Raspberry Linux), use Raspberry fixed library (I have one from http://lightput.com/download.html)
+The difference is in vfp setting.
+
+	lib_linux\arm926vfp\libftd2xx.a	<-- libftd2xx1.1.12_Raspberry_Pi_Fix.tar.gz/release/build/arm926/libftd2xx.a
+
+Main program, pin configuration is here in .h file
+
+	mlab_xvcd.h
+	mlab_xvcd.cpp
+
+Hardware layer, uses FTDI D2XX library
+
+	mlab_xvcd_port_FTDI.h
+	mlab_xvcd_port_FTDI.cpp

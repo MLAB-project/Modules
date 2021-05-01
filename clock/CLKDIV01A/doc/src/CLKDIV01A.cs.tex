@@ -1,0 +1,109 @@
+\documentclass[12pt,a4paper,oneside]{article}
+\usepackage[colorlinks=true,unicode]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\textwidth 16cm \textheight 25cm
+\topmargin -1.3cm 
+\oddsidemargin 0cm
+\usepackage{footnote}
+\pagestyle{empty}
+\begin{document}
+\title{Dělička hodin s differenčním vstupem }
+\author{Jakub Kákona, Martin Kákona, kaklik@mlab.cz}
+\maketitle
+
+\thispagestyle{empty}
+\begin{abstract}
+Může být nastaveno více dělících poměrů. Možnosti jsou ($\div$1, $\div$2, $\div$4, $\div$8) nebo ($\div$2, $\div$4, $\div$8, $\div$16). EN vstup je synchronní s interními hodinami, proto dojde k vypnutí výstupu při návratu na nulu.
+\end{abstract}
+
+\begin{figure} [htbp]
+\begin{center}
+\includegraphics [width=80mm] {./img/CLKDIV01A_Top_Big.jpg} 
+\end{center}
+\end{figure}
+
+\begin{figure} [b]
+\includegraphics [width=25mm] {./img/CLKDIV01A_QRcode.png} 
+\end{figure}
+
+\newpage
+\tableofcontents
+
+
+\section{Technické parametry}
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{Parametr} & \multicolumn{1}{|c|}{Hodnota} & \multicolumn{1}{|c|}{Poznámka} \\ \hline
+Napájecí napětí & 3.3 V &  cca 100 mA \\ \hline
+Typy vstupní diff logiky  & LVDS, LVPECL, CML, HSTL, HCSL & \\ \hline
+Logika řídících signálů  & LVTTL, LVCMOS & \\ \hline
+Pracovní frekvence vstupu  & $<$ 3 GHz & \\ \hline
+Dělící poměry QA & $\div$1, $\div$2, $\div$4, $\div$8 & \\ \hline
+Dělící poměry QB & $\div$2, $\div$4, $\div$8, $\div$16 & \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\newpage
+\section{Popis konstrukce}
+
+\subsection{Zapojení}
+
+Zapojení modulů je identické s doporučeným zapojením z katalogového listu. Vstupy a výstupy jsou vyvedeny na diferenční signály SATA konektorů. Řídící signály lze ovládat přímo z procesoru připojením výstupního pinu na hřebínek, nebo lze dělící poměr navolit pevně Jumpery. 
+
+\includepdf[pages={1},landscape=true]{../../SCH/clkdiv.pdf}
+
+\subsection{Odrušení}
+
+Tento digitální modul může produkovat rušení v napájení. Je proto vhodné jej v citlivých analogových aplikacích připojovat krátkým napájecím kablíkem.
+
+\section{Výroba a testování}
+
+Modul se testuje optickou kontrolou spojů a následným připojením na laboratorní zdroj s omezením proudu. Dále by po připojení zdroje hodinového signálu například CLKGEN01B musí být na všech jeho výstupech přítomný digitální vydělený signál odpovídající nastavenému dělícímu poměru. To lze ověřit například zařízením ACOUNTER02A.
+
+\subsection{Osazení}
+
+Modul se osazuje standardním postupem požívaným pro SMD součástky.
+
+\begin{figure} [h!tbp]
+  \centering
+  \includegraphics[trim = 8cm 12cm 8cm 12cm, clip, width=10cm]{../../CAM_DOC/O1.pdf}
+  \includegraphics[trim = 8cm 12cm 8cm 12cm, clip, width=10cm]{../../CAM_DOC/O2.pdf}
+  \caption{Osazovací plán horní a spodní strany plošného spoje}
+  \label{fig:osazovaci_plan}
+\end{figure}
+
+\begin{savenotes}
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{ |c|c|c|c| }
+\hline 
+Počet & Označení & Typ  & Pouzdro  \\ 
+\hline 
+2	&	C2,C3	&	100nF	&	C0805	\\
+1	&	C1	&	10uF	&	ELYTB	\\
+1	&	D1	&	M4	&	SMA	\\
+1	&	R2	&	50	&	R0805	\\
+1	&	U1	&	NB6L239	&	QFN16-3x3	\\
+4	&	J1,J2,J3,J4	&	SATA\_MALE	&	SATA7	\\
+2	&	J6,J7	&	JUMP2X1	&	JUMP2X1	\\
+3	&	J8,J9,J5	&	JUMP2X3	&	JUMP2X3	\\
+\hline 
+\end{tabular}
+\end{center}
+\caption{Seznam součástek osazovaných na desku plošného spoje.}
+\label{seznam_soucastek_galvanic_isolation}
+\end{table}
+\end{savenotes}
+
+\begin{thebibliography}{99}
+\bibitem{CLKDIV_Wiki}{Wiki stránka modulu} 
+\href{http://wiki.mlab.cz/doku.php?id=cs:clkdiv}{MLAB wiki stránka modulu CLKDIV01A}
+
+\end{thebibliography}
+\end{document}

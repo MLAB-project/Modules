@@ -1,0 +1,1074 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> S3AN01B HW Reference </title>
+    <meta name="keywords" content="stavebnice MLAB univerzální moduly FPGA XILINX Spartan3AN development board LED VGA">
+    <meta name="description" content="Projekt MLAB, vývojová deska pro obvod FPGA XILINX Spartan3AN s LED displejem a VGA výstupem">
+    <!-- AUTOINCLUDE START "Page/Head.cs.ihtml" DO NOT REMOVE -->
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB.css" type="text/css" title="MLAB základní styl">
+    <link rel="StyleSheet" href="../../../../../Web/CSS/MLAB_Print.css" type="text/css" media="print">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../Web/PIC/MLAB.ico">
+    <script type="text/javascript" src="../../../../../Web/JS/MLAB_Menu.js"></script>
+    <!-- AUTOINCLUDE END -->
+    <style type="text/css">
+      .Big {
+        font-size: 200%;
+      }
+    </style>
+  </head>
+
+  <body lang="cs">
+
+    <!-- AUTOINCLUDE START "Page/Header.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== HLAVICKA ============== -->
+    <div class="Header">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawHeader();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- AUTOINCLUDE START "Page/Menu.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== MENU ============== -->
+    <div class="Menu">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawMenu();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) menu je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+    <!-- ============== TEXT ============== -->
+    <div class="Text">
+
+      <p class="Title">
+        Vývojová deska s&nbsp;obvodem FPGA XILINX Spartan&nbsp;3AN
+      </p>
+
+      <p class="Autor">
+        Milan Horkel
+      </p>
+
+      <p class="Subtitle">
+        Před časem mne kluci na kroužku ukecali, abych udělal jednoduchou
+        vývojovou desku s&nbsp;nějakým programovatelným obvodem. Nakonec jsem
+        zvolil obvod FPGA od firmy XILINX z&nbsp;řady Spartan3AN, protože
+        poskytuje rozumné možnosti za rozumnou cenu. Deska je osazena obvodem
+        XC3S50AN v&nbsp;pouzdru TQFP&nbsp;144.
+      </p>
+
+      <p class="Subtitle">
+        Tento dokument popisuje hardware desky, její testování a použití
+        naleznete v&nbsp;dalších dokumentech.
+      </p>
+
+      <p class="Subtitle">
+        <img width="453" height="517"
+        src="S3AN01B_HW_Reference.cs_soubory/image001.jpg"
+        alt="Deska S3AN01B, pohled shora">
+      </p>
+
+      <p>
+        <a href="../S3AN01B_HW_Reference.cs.pdf"><img class="NoBorder"
+           src="../../../../../Web/PIC/FileIco_PDF.ico"
+           alt="Acrobat">&nbsp;PDF verze</a>
+      </p>
+
+      <h1> Technické parametry </h1>
+
+      <table>
+        <tr>
+          <th> Parametr </th>
+          <th> Hodnota </th>
+          <th> Poznámka </th>
+        </tr>
+        <tr>
+          <td> Použitý obvod </td>
+          <td> XC3S50AN, TQFP144 </td>
+          <td> XILINX FPGA Spartan 3AN </td>
+        </tr>
+        <tr>
+          <td> Napájení desky </td>
+          <td> +5V </td>
+          <td> Cca. 250mA (závisí na funkci) </td>
+        </tr>
+        <tr>
+          <td> Vnitřní napájení </td>
+          <td> +3.3V (napájení logiky) </td>
+          <td> Vlastní stabilizátor </td>
+        </tr>
+        <tr>
+          <td> &nbsp; </td>
+          <td> +1.2V (napájení jádra FPGA) </td>
+          <td> Vlastní stabilizátor </td>
+        </tr>
+        <tr>
+          <td> Periferie na desce </td>
+          <td> LED displej 8 míst </td>
+          <td> Zapojený multiplexně </td>
+        </tr>
+        <tr>
+          <td> &nbsp; </td>
+          <td> LED indikátory 8 bitů </td>
+          <td> Zapojené na samostatné výstupy </td>
+        </tr>
+        <tr>
+          <td> &nbsp; </td>
+          <td> DIP spínače 8 bitů </td>
+          <td> Zapojené na samostatné vstupy </td>
+        </tr>
+        <tr>
+          <td> &nbsp; </td>
+          <td> Tlačítka 4 bity </td>
+          <td> Zapojené na samostatné vstupy </td>
+        </tr>
+        <tr>
+          <td> &nbsp; </td>
+          <td> VGA výstup </td>
+          <td> 2 bity na barvu </td>
+        </tr>
+        <tr>
+          <td> &nbsp; </td>
+          <td> PS/2 rozhraní 2 kusy </td>
+          <td> 5V tolerantní </td>
+        </tr>
+        <tr>
+          <td> &nbsp; </td>
+          <td> I2C rozhraní </td>
+          <td> 5V tolerantní </td>
+        </tr>
+        <tr>
+          <td> &nbsp; </td>
+          <td> Obvod 5V tolerantních vstupů </td>
+          <td> Celkem 32 vstupů </td>
+        </tr>
+        <tr>
+          <td> &nbsp; </td>
+          <td> Jednoduchý A/D a D/A </td>
+          <td> Pomocí PWM </td>
+        </tr>
+        <tr>
+          <td> Konfigurace </td>
+          <td> Interní paměť obvodu FPGA </td>
+          <td> Platí pro obvody řady AN </td>
+        </tr>
+        <tr>
+          <td> &nbsp; </td>
+          <td> Volitelně paměť SPI FLASH </td>
+          <td> Pro obvody řady A i AN </td>
+        </tr>
+        <tr>
+          <td> Rozměry </td>
+          <td> Cca 112x122x20mm </td>
+          <td> Výška nad základnou </td>
+        </tr>
+      </table>
+
+      <p>
+        <i class="Big">Důrazně</i> <i>připomínám hned na začátku, že obvod FPGA
+        není 5V tolerantní! Znamená to, že se na jeho vstupy smí připojit pouze
+        signály do velikosti +3.3V (absolutní maximum je +4.6V).</i>
+      </p>
+
+      <p>
+        <i>Stejně důrazně musím upozornit na to, že na vstupech obvodu nejsou 
+        ochranné diody mezi vstupem a kladným napájecím napětím! To je zásadní
+        rozdíl od většiny jednočipových mikroprocesorů. Nelze se tedy spoléhat
+        na to, že když budeme vstupy budit přes velký sériový odpor, že se nic
+        nestane. Stane! Při zvýšeném napětí na vstupech může být životnost
+        vstupních tranzistorů v&nbsp;řádu minut nebo hodin.</i>
+      </p>
+
+      <h1> Popis konstrukce </h1>
+
+      <h2> Úvodem </h2>
+
+      <p>
+        Školní deska pro práci s obvody FPGA XILINX řady Spartan 3AN vznikla na
+        popud kluků v kroužku radiotechniky. Protože s obvody FPGA firmy XILINX
+        pracuji, ujal jsem se tohoto úkolu. Nejdřív jsem uvažoval, že bychom
+        začali s&nbsp;deskou s&nbsp;některým obvodem CPLD, ale po prozkoumání
+        ceníku, jsem se přiklonil k&nbsp;obvodu FPGA řady Spartan3AN.
+      </p>
+
+      <p>
+        Obvody FPGA mají mnohem propracovanější vnitřní architekturu a obsahují
+        mnohem víc logiky než obvody CPLD. Obvod samotný stojí pouhých 210Kč
+        včetně DPH (podzim 2010).
+      </p>
+
+      <p>
+        Je to vlastně nejpokročilejší obvod FPGA v&nbsp;pouzdru TQFP, tedy
+        v&nbsp;pouzdru, které si dokážeme sami připájet a v&nbsp;nouzi si
+        dokonce dokážeme sami vyrobit i plošný spoj. Viz dokumentace od první
+        verze této desky na adrese
+        <a href="http://www.mlab.cz/PermaLink/S3AN01A">http://www.mlab.cz/PermaLink/S3AN01A</a>
+      </p>
+
+      <p>
+        Snad by měl existovat i obvod z&nbsp;řady Spartan6 v&nbsp;pouzdru TQFP,
+        ale nikde jsem ho neviděl na skladě. Až ho uvidím, tak z&nbsp;něj možná
+        taky něco udělám, pokud čas dovolí.
+      </p>
+
+      <h2> Zapojení modulu </h2>
+
+      <p>
+        Zapojení desky odpovídá účelu desky. Jako vývojová a školní deska je
+        vybavena obvody pro snadnou práci s&nbsp;obvodem FPGA. Na desce
+        nalezneme LED displej, skupinu LED diod, několik tlačítek a DIP
+        přepínačů. Vstupy a výstupy jsou vyvedeny na propojovací hřebínky.
+      </p>
+
+      <h3> Napájení </h3>
+
+      <p>
+        Celá deska se napájí napětím +5V přivedeným na konektor J1. Opět
+        důrazně připomínám, že použitý obvod FPGA vydrží na vývodech napětí
+        3.3V, ale ne 5V!
+      </p>
+
+      <p>
+        <img width="697" height="308"
+        src="S3AN01B_HW_Reference.cs_soubory/image002.png"
+        alt="Schéma napájecí části">
+      </p>
+
+      <p>
+        Z&nbsp;napětí +5V se lineárním stabilizátorem U2 vytváří napětí +3.3V
+        pro napájení vstupů a výstupů obvodu FPGA. Přítomnost napětí +3.3V
+        indikuje dioda D10 umístěná v&nbsp;rohu desky. Napětí +3.3V je vyvedeno
+        na konektor J2 k&nbsp;dalšímu použití. <i>Pozor, nezapojit sem napájení
+        +5V, došlo by ke zničení obvodu FPGA!</i> Abych na tento konektor
+        omylem nepřipojil +5V, dávám si ta prostřední vývody zkratovací
+        propojku. Dioda D9 slouží jako ochrana před přepólováním napájení.
+      </p>
+
+      <p>
+        Z&nbsp;napětí +3.3V se&nbsp;lineárním stabilizátorem vytváří napětí
+        +1.2V pro napájení jádra obvodu FPGA.
+      </p>
+
+      <h3> Konfigurace obvodu FPGA </h3>
+
+      <p>
+        Po zapnutí napájení je obvod FPGA potřeba naplnit obsahem, tedy
+        definovat, jak bude uvnitř zapojen. Toto vnitřní zapojení se nahrává do
+        vnitřní konfigurační paměti RAM a lze to udělat několika způsoby:
+      </p>
+
+      <ul>
+        <li> Prostřednictvím JTAG rozhraní přímo z&nbsp;návrhového systému </li>
+        <li> Z&nbsp;interní paměti obvodu FPGA </li>
+        <li> Z&nbsp;vnější SPI paměti FLASH (obvod U5/U6/U7 nebo U8) – volitelná možnost </li>
+        <li> Z&nbsp;nadřazeného procesoru (paralelně nebo sériově) – zde se tento způsob neužívá </li>
+      </ul>
+
+      <p>
+        Při úspěšném nahrání konfigurace obvodu FPGA se rozsvítí LED D8
+        s&nbsp;nápisem DONE. Při vypnutí napájení se samozřejmě obsah vnitřní
+        konfigurační paměti RAM ztratí.
+      </p>
+
+      <p>
+        Pro JTAG programování slouží konektor J3, který je zapojen obvyklým
+        způsobem (jako například na programátoru XILINX Parallel Cable III).
+        Jeho prostřednictví lze nahrát obsah do konfigurační paměti RAM obvodu
+        FPGA, naprogramovat vnitřní paměť FLASH obvodu FPGA (jen obvod AN),
+        nebo provádět další činnosti, které tento port umožňuje (pokud
+        k&nbsp;tomu máte příslušné nástroje). JTAG rozhraní lze použít vždy.
+      </p>
+
+      <p>
+        <img width="240" height="176"
+        src="S3AN01B_HW_Reference.cs_soubory/image003.png"
+        alt="JTAG programovací konektor">
+      </p>
+
+      <p>
+        Další způsoby načítání konfigurace se volí prostřednictvím signálů M0
+        M1 a M2 dle tabulky na schématu. Pro defaultní způsob konfigurace
+        z&nbsp;interní FLASH paměti FPGA musí být zkratován signál M0 na zem
+        prostřednictvím propojky mezi vývody J4.1 a J4.2. V&nbsp;takovém
+        případě, pokud je nahraný platný obsah interní FLASH paměti obvodu FPGA
+        dojde k&nbsp;automatické konfiguraci součástky při každém zapnutí
+        napájení (konfigurace trvá řádově milisekundy).
+      </p>
+
+      <p>
+        <img width="250" height="260"
+        src="S3AN01B_HW_Reference.cs_soubory/image004.png"
+        alt="Konfigurace (mode)">
+        <img width="258" height="230"
+        src="S3AN01B_HW_Reference.cs_soubory/image005.png"
+        alt="Konfigurace (SPI režim)">
+      </p>
+
+      <p>
+        Při načítání konfigurace z&nbsp;vnější SPI paměti FLASH je třeba podle
+        použitého typu paměti nastavit propojky na konektoru J5 aby se použil
+        správný příkaz pro čtení dat. Externí paměť SPI osazujeme samozřejmě
+        jen jednu podle zapojení osazované paměti a velikosti jejího pouzdra.
+        Tuto možnost využijeme zejména pokud osadíme obvod Spartan3A (nemá
+        interní FLASH paměť) místo obvodu Spartan3AN (má interní FLASH paměť).
+      </p>
+
+      <p>
+        V&nbsp;případě potřeby lze konfigurovat obvod FPGA i z&nbsp;nadřazeného
+        systému, ale jen v&nbsp;režimu sériového přenosu (režim slave serial).
+        K&nbsp;tomu slouží konektory J33 až J38.
+      </p>
+
+      <h3> Oscilátor </h3>
+      
+      <p>
+        Jako zdroj hodinového signálu je na desce osazen obvod U4, oscilátor
+        s&nbsp;kmitočtem 100MHz. Pokud potřebuje aplikace jiný kmitočet, lze
+        osadit oscilátor s&nbsp;odlišným kmitočtem, nebo využít vnitřních
+        programovatelných obvodů (blok DCM) pro generování potřebného kmitočtu.
+        Vnitřními obvody lze generovat kmitočty odvozené od externích hodin
+        v&nbsp;dosti širokém rozmezí.
+      </p>
+
+      <h3> Řada LED indikátorů </h3>
+
+      <p>
+        Asi první školní aplikací je blikání LED indikátory. Proto tu je
+        osazeno 8 LED diod s&nbsp;příslušnými rezistory. Výstupy jsou dále
+        vyvedeny na konektor J26.
+      </p>
+
+      <p>
+        <img width="640" height="306" 
+        src="S3AN01B_HW_Reference.cs_soubory/image006.png"
+        alt="Schéma LED indikátorů">
+      </p>
+
+      <h3> Display LED </h3>
+
+      <p>
+        Pro sofistikovanější výpisy je zde umístěn osmimístný LED displej,
+        který je zapojený v&nbsp;multiplexním režimu, abychom nespotřebovali
+        zbytečně mnoho vývodů.
+      </p>
+
+      <p>
+        <img width="714" height="368"
+        src="S3AN01B_HW_Reference.cs_soubory/image007.png"
+        alt="Schéma LED displeje">
+      </p>
+
+      <h3> Vstupní tlačítka a přepínače </h3>
+
+      <p>
+        Pro jednoduché vstupy jsou na desce umístěna 4 tlačítka a jeden
+        osminásobný DIP přepínač. Vstupy jsou dále opatřeny hřebínky pro další
+        využití vývodů. Protože se jedná o školní desku, jsou zde osazeny
+        ochranné sériové rezistory. Použití tlačítek a přepínačů předpokládá,
+        že jsou vstupy nakonfigurovány s pull-down odpory.
+      </p>
+
+      <p>
+        <img width="359" height="216" 
+        src="S3AN01B_HW_Reference.cs_soubory/image008.png"
+        alt="Schéma tlačítek">
+        <img width="366" height="406"
+        src="S3AN01B_HW_Reference.cs_soubory/image009.png"
+        alt="Schéma DIP přepínačů">
+      </p>
+
+      <h3> Rozhraní PS/2 a I²C </h3>
+
+      <p>
+        Deska je osazena dvěma porty PS/2 a jedním portem I²C.
+      </p>
+
+      <p>
+        Rozhraní PS/2 se používá pro připojení klávesnice a/nebo myši. Obě tyto
+        periferie se liší pouze protokolem. Rozhraní I²C je určeno pro
+        připojení periferií pro toto rozhraní.
+      </p>
+
+      <p>
+        Obě rozhraní jsou po hardwarové stránce triviální, neboť se jedná vždy
+        o dva vodiče (hodiny a data) buzené výstupy s&nbsp;otevřeným
+        kolektorem. Komunikace je obousměrná. Protože signalizační napětí
+        těchto rozhraní může být větší, než je +3.3V, je zde osazen omezovací
+        obvod s&nbsp;tranzistorem FET, který zajistí, že napětí na vstupu FPGA
+        nikdy nepřekročí napájecí napětí.
+      </p>
+
+      <p>
+        <img width="334" height="296" 
+        src="S3AN01B_HW_Reference.cs_soubory/image010.png" 
+        alt="Schéma ochrannýcj obvodů pro PS/2 port">
+        <img width="318" height="296" 
+        src="S3AN01B_HW_Reference.cs_soubory/image011.png"
+        alt="Schéma ochranných obvodů pro I2C port">
+      </p>
+
+      <h3> VGA port </h3>
+
+      <p>
+        Pro připojení VGA monitoru k&nbsp;desce je zde realizováno triviální
+        VGA rozhraní. Využívá se jen 4 úrovní (2 bity) pro každou základní
+        barvu (tedy celkem 64 barev). Převod na analogové úrovně je realizován
+        pomocí rezistorové sítě. Deska je osazena standardním VGA konektorem
+        DB15.
+      </p>
+
+      <p>
+        <img width="348" height="516" 
+        src="S3AN01B_HW_Reference.cs_soubory/image012.png"
+        alt="Schéma VGA portu">
+      </p>
+
+      <h3> Diferenciální signály </h3>
+
+      <p>
+        Protože obvod FPGA řady Spartan3A/3AN podporuje diferenciální signály,
+        je několik těchto signálů vyvedeno na konektor. Hledal jsem vhodný
+        konektor a na konec jsem použil konektor SATA, protože jej lze snadno
+        získat ze šrotu. Standardně se tyto konektory neosazují. Signály
+        z&nbsp;těchto konektorů jsou připojeny na vývody obvodu FPGA, které
+        mohou sloužit i jako hodinové vstupy.
+      </p>
+
+      <p>
+        <img width="332" height="196" 
+        src="S3AN01B_HW_Reference.cs_soubory/image013.png"
+        alt="Konektory pro diferenciální signály">
+        <img width="158" height="110"
+        src="S3AN01B_HW_Reference.cs_soubory/image014.png"
+        alt="Hřebínek pro diferenciální signály">
+      </p>
+
+      <p>
+        Další diferenciální signály jsou vyvedeny na hřebínek J7 k&nbsp;volnému
+        použití.
+      </p>
+
+      <p>
+        Protože jsou pro diferenciální signály využity banky 0 a 2, mohou být
+        použity jako vstupní i výstupní. Banky 1 a 3 mají naproti tomu silnější
+        výstupní budiče ale nepodporují diferenciální výstupy. Něco za něco.
+      </p>
+
+      <h3> 5V tolerantní vstupy </h3>
+
+      <p>
+        Protože obvod FPGA samotný (stejně jako všechny novější a rychlejší
+        obvody) nesnese na svých vstupech 5V signály, použili jsme na desce
+        vstupní budiče SN74LVC16244, které poskytují 2x16 vstupů. Jsou to
+        obvody U11 a U12 a prvních 22 signálů je připojeno rovnou na vstupy
+        FPGA (zbývajících 10 signálů je vyvedeno na hřebínky). Kdo nepotřebuje
+        5V tolerantní vstupy, nemusí tyto obvody vůbec osazovat.
+      </p>
+
+      <p>
+        Vstupní budiče je možné po čtveřicích (nibble) aktivovat propojkami J13
+        až J20. Zkratovací propojka povoluje příslušnou čtveřici budičů
+        (otevírá třístavový výstup obvodu SN74LVC16244).
+      </p>
+
+      <p>
+        <i>Použité budiče nemají na vstupu ochranné diody do
+        plusu! Nesmějí se tedy budit signály většími než 5V a to ani přes velký
+        sériová rezistor.</i>
+      </p>
+
+      <p>
+        Aby byla definována logická úroveň na vstupu budičů, jsou na všech
+        vstupech rezistory 100KΩ do země.
+      </p>
+
+      <p>
+        <img width="642" height="690" 
+        src="S3AN01B_HW_Reference.cs_soubory/image015.png"
+        alt="Schéma převodníku 5V signálů - první část">
+      </p>
+
+      <p>
+        <img width="642" height="672"
+        src="S3AN01B_HW_Reference.cs_soubory/image016.png"
+        alt="Schéma převodníku 5V signálů - druhá část">
+      </p>
+
+      <h3> Analogové obvody </h3>
+
+      <p>
+        Pro pokusy s&nbsp;analogovými obvody je na desce osazen zesilovač
+        s&nbsp;dolní propustí a komparátor. Lze tak realizovat jednoduchý D/A i
+        A/D převodník. Viz aplikační poznámky XILINX XAPP154 a XAPP155. Nicméně
+        neočekávejte zázraky, poctivý převodník tím nenhradíte.
+      </p>
+
+      <p>
+        <img width="669" height="279" 
+        src="S3AN01B_HW_Reference.cs_soubory/image017.png"
+        alt="Schéma A/D a D/A analogových obvodů">
+      </p>
+
+      <h2> Mechanická konstrukce </h2>
+
+      <p>
+        Vývojová deska má standardní rozměry a upevňovací šrouby v&nbsp;rozích
+        jako ostatní desky stavebnice MLAB.
+      </p>
+
+      <h1> Osazení a oživení </h1>
+
+      <h2> Osazení </h2>
+
+      <p>
+        Pro osazování je vhodné použít mikropáječku a postupovat obezřetně
+        z&nbsp;hlediska elektrostatického náboje. Dále je potřeba jemná pinzeta
+        a další obvyklé nářadí.
+      </p>
+
+      <p>
+        Při osazování je vhodné nejprve osadit obvody napájecích zdrojů U2 a U3
+        a SMD součástky okolo nich. Poté je vhodné připojit +5V na vstup a
+        zkontrolovat výstupní napětí +3.3V a +1.2V dokud nemáme osazeny další
+        obvody.
+      </p>
+
+      <p>
+        Poté osadíme obvod FPGA U1 a obvody budičů U11 a U12. Tyto obvody
+        osazujeme s&nbsp;velkou pečlivostí, protože mají hodně vývodů
+        s&nbsp;malou roztečí. Používáme minimální množství pájky a vhodné
+        pastovité tavidlo. Obvod vždy nejprve připájíme za 2 protilehlé nožičky
+        a teprve poté, co se ujistíme, že jsou obvody umístěny na všech
+        stranách správně postupně zapájíme všechny vývody. Po osazení
+        zkontrolujeme pod lupou kvalitu pájení a zda nejsou zkraty mezi vývody.
+      </p>
+
+      <p>
+        Pak osadíme zbývající SMD součástky podle schématu a osazovacího plánu.
+        Pak následují klasické součástky. Začínáme LED displejem, všemi
+        hřebínky a nakonec konektory pro PS/2 a VGA port.
+      </p>
+
+      <p>
+        Na závěr desku opticky zkontrolujeme (orientace součástek, zkraty,
+        zapomenuté spoje a podobně) a přišroubujeme rohové šrouby se sloupky.
+        Poslední operací je umytí zbytků tavidla, vysušení a finální optická
+        kontrola.
+      </p>
+
+      <h3> Osazovací plán, horní strana </h3>
+
+      <p>
+        <img width="676" height="737"
+        src="S3AN01B_HW_Reference.cs_soubory/image018.jpg"
+        alt="Osazení - strana součástek">
+      </p>
+
+      <h3> Osazovací plán, spodní strana </h3>
+
+      <p>
+        <img width="677" height="737" 
+        src="S3AN01B_HW_Reference.cs_soubory/image019.jpg"
+        alt="Osazení - strana spojů">
+      </p>
+
+      <h3> Seznam součástek </h3>
+
+      <table class="Soupiska">
+        <tr>
+          <th> Počet </th>
+          <th> Reference </th>
+          <th> Hodnota </th>
+          <th> Pouzdro </th>
+          <th> Poznámka </th>
+        </tr>
+        <tr>
+          <th colspan="5"> Rezistory </th>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> R28 </td>
+          <td> 0R </td>
+          <td> &nbsp; </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 20 </td>
+          <td> R1-R10, R66, R67, R81-R88 </td>
+          <td> 100 </td>
+          <td> R0805 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 3 </td>
+          <td> R59, R62, R65 </td>
+          <td> 120 </td>
+          <td> R0805 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 3 </td>
+          <td> R58, R61, R64 </td>
+          <td> 270 </td>
+          <td> R0805 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 22 </td>
+          <td> R12, R14, R29, R30-R40, R49-R56 </td>
+          <td> 390 </td>
+          <td> R0805 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 3 </td>
+          <td> R57, R60, R63 </td>
+          <td> 510 </td>
+          <td> R0805 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 9 </td>
+          <td> R11, R41-R48 </td>
+          <td> 820 </td>
+          <td> R0805 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> R80 </td>
+          <td> 1k2 </td>
+          <td> R0805 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 4 </td>
+          <td> R16, R17, R18, R19 </td>
+          <td> 3k3 </td>
+          <td> R0805 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 21 </td>
+          <td> R13, R15, R20-R27, R68, R70, R72-R79, R89 </td>
+          <td> 4k7 </td>
+          <td> R0805 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 2 </td>
+          <td> R69, R71 </td>
+          <td> #4k7 </td>
+          <td> R0805 </td>
+          <td> Neosazuje se </td>
+        </tr>
+        <tr>
+          <td> 32 </td>
+          <td> R100-R131 </td>
+          <td> 100k </td>
+          <td> R0603 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <th colspan="5"> Kondenzátory keramické </th>
+        </tr>
+        <tr>
+          <td> 3 </td>
+          <td> C20-C22 </td>
+          <td> 4n7 </td>
+          <td> C0805 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> C34 </td>
+          <td> 10nF </td>
+          <td> C0805 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 27 </td>
+          <td> C4-C19, C23-C33 </td>
+          <td> 100nF </td>
+          <td> C0805 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <th colspan="5"> Kondenzátory tantalové </th>
+        </tr>
+        <tr>
+          <td> 3 </td>
+          <td> C1, C2, C3 </td>
+          <td> 22uF/6.3V </td>
+          <td> ELYTB </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <th colspan="5"> Diody </th>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> D9 </td>
+          <td> 1N5820 </td>
+          <td> DO201 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <th colspan="5"> Diody LED a displeje LED </th>
+        </tr>
+        <tr>
+          <td> 10 </td>
+          <td> D0-D8, D10 </td>
+          <td> LED3mm_RED </td>
+          <td> LED3 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 2 </td>
+          <td> LD0, LD1 </td>
+          <td> FT-M514RD </td>
+          <td> 4LED7_12PIN_14_2 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <th colspan="5"> Tranzistory </th>
+        </tr>
+        <tr>
+          <td> 8 </td>
+          <td> Q0-Q7 </td>
+          <td> BC856 </td>
+          <td> SOT23 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 6 </td>
+          <td> Q8-Q13 </td>
+          <td> BS170SMD </td>
+          <td> SOT23 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <th colspan="5"> Integrované obvody </th>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> U1 </td>
+          <td> XC3S50AN-4TQG144C </td>
+          <td> TQFP144 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> U2 </td>
+          <td> AP1086K33G-13 </td>
+          <td> TO263 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> U3 </td>
+          <td> TS1117BCP12R0 </td>
+          <td> TO252 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> U4 </td>
+          <td> CFPS-73-100M </td>
+          <td> SG8002 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> U5 </td>
+          <td> AT45DB011D-SSH-B </td>
+          <td> SO8_150 </td>
+          <td> Volitelné </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> U6 </td>
+          <td> AT45DB011D-SH-B </td>
+          <td> SO8_210 </td>
+          <td> Volitelné </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> U7 </td>
+          <td> AT25DF0xxA-SSH </td>
+          <td> SO8_150 </td>
+          <td> Volitelné </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> U8 </td>
+          <td> SST24LF040A-33-4C-S2AE </td>
+          <td> SO8_210 </td>
+          <td> Volitelné </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> U9 </td>
+          <td> MCP6001T-I/OT </td>
+          <td> SOT23-5 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> U10 </td>
+          <td> MCP6546T-E/OT </td>
+          <td> SOT23-5 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 2 </td>
+          <td> U11, U12 </td>
+          <td> SN74LVC16244ADL </td>
+          <td> SSOIII_48_300 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <th colspan="5"> Mechanické součástky </th>
+        </tr>
+        <tr>
+          <td> 4 </td>
+          <td> SW0-SW3 </td>
+          <td> PUSH050x050 </td>
+          <td> PUSH050x050 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> SW4 </td>
+          <td> DIPSW8 </td>
+          <td> DIPSW8 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 12 </td>
+          <td> Propojka </td>
+          <td> &nbsp; </td>
+          <td> &nbsp; </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <th colspan="5"> Konektory </th>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> J27 </td>
+          <td> DB15F_3L_90 </td>
+          <td> DB15F_3L_90 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 2 </td>
+          <td> J31, J32 </td>
+          <td> MINIDIN6_PS2 </td>
+          <td> MINIDIN6 </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 2 </td>
+          <td> J28, J29 </td>
+          <td> #SATA_DATA </td>
+          <td> SATA_DATA </td>
+          <td> Neosazuje se </td>
+        </tr>
+        <tr>
+          <th colspan="5"> Jednořadé hřebínky </th>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> J33+J34+J35+J36+J37+J38 </td>
+          <td> JUMP9 </td>
+          <td> JUMP9 </td>
+          <td> Nalámat </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> J22 </td>
+          <td> #JUMP1 </td>
+          <td> JUMP1 </td>
+          <td> Neosazuje se </td>
+        </tr>
+        <tr>
+          <td> 9 </td>
+          <td> J6, J13, J14, J15, J16, J17, J18, J19, J20 </td>
+          <td> JUMP2 </td>
+          <td> JUMP2 </td>
+          <td> Nalámat </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> J30 </td>
+          <td> JUMP4 </td>
+          <td> JUMP4 </td>
+          <td> Nalámat </td>
+        </tr>
+        <tr>
+          <td> 3 </td>
+          <td> J12, J21, J100 </td>
+          <td> JUMP10 </td>
+          <td> JUMP10 </td>
+          <td> Nalámat </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> J10 </td>
+          <td> JUMP22 </td>
+          <td> JUMP22 </td>
+          <td> Nalámat </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> J3 </td>
+          <td> JUMP9_X3_X5_X8</td>
+          <td> JUMP9_X3_X5_X8</td>
+          <td> Nalámat </td>
+        </tr>
+        <tr>
+          <th colspan="5"> Douřadé hřebínky </th>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> J24 </td>
+          <td> JUMP2X2 </td>
+          <td> JUMP2X2 </td>
+          <td> Nalámat </td>
+        </tr>
+        <tr>
+          <td> 5 </td>
+          <td> J1, J2, J4, J5, J8 </td>
+          <td> JUMP2X3 </td>
+          <td> JUMP2X3 </td>
+          <td> Nalámat </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> J7 </td>
+          <td> JUMP2X4 </td>
+          <td> JUMP2X4 </td>
+          <td> Nalámat </td>
+        </tr>
+        <tr>
+          <td> 2 </td>
+          <td> J25, J26 </td>
+          <td> JUMP2X8 </td>
+          <td> JUMP2X8 </td>
+          <td> Nalámat </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> J11 </td>
+          <td> JUMP2X10 </td>
+          <td> JUMP2X10 </td>
+          <td> Nalámat </td>
+        </tr>
+        <tr>
+          <td> 2 </td>
+          <td> J9, J23 </td>
+          <td> JUMP2X22 </td>
+          <td> JUMP2X22 </td>
+          <td> Nalámat </td>
+        </tr>
+        <tr>
+          <th colspan="5"> Konstrukční součástky </th>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> Plošný spoj </td>
+          <td> PCB S3AN01B </td>
+          <td> &nbsp; </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 4 </td>
+          <td> Šroub M3x12mm křížový, válcová hlava, pozinkovaný </td>
+          <td> &nbsp; </td>
+          <td> &nbsp; </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 4 </td>
+          <td> Matice M3, pozinkovaná </td>
+          <td> &nbsp; /td>
+          <td> &nbsp; </td>
+          <td> &nbsp; </td>
+        </tr>
+        <tr>
+          <td> 4 </td>
+          <td> Podložka M3, pozinkovaná </td>
+          <td> &nbsp; </td>
+          <td> &nbsp; </td>
+          <td> &nbsp; </td>
+        </tr>
+      </table>
+
+      <h2> Oživení </h2>
+
+      <h3> První zapnutí </h3>
+
+      <p>
+        Prvním krokem je připojení k&nbsp;laboratornímu zdroji a kontrola
+        funkčnosti napájecích zdrojů. Postupně zvyšujeme napájecí napětí až
+        k&nbsp;hranici +5V a měříme spotřebu (orientačně) a napětí na vnitřních
+        stabilizátorech U2 a U3. Vnitřní napájecí napětí jsou +3.3V a +1.2V
+        (mohou se lišit řekněme o desítky milivoltů). Spotřeba desky bez
+        nahrané konfigurace je cca 50-60mA.
+      </p>
+
+      <p>
+        Nyní je třeba ověřit, zda pracují ochranné obvody na PS/2 portech.
+        Měříme napětí na Q10.D, které má být cca +5V a Q10.S, které má být o
+        něco menší, než +3.3V. Toto měření opakujeme pro všechny 4 tranzistory,
+        tedy pro Q10 až Q13.
+      </p>
+
+      <p>
+        Podobně zkontrolujeme i ochranné obvody I²C portu. Jen je třeba
+        z&nbsp;vnějšku připojit +4V na hřebínek J30.2 a J30.3 a měřit na
+        tranzistorech Q8 a Q9. Opět se nesmí směrem k&nbsp;FPGA dostávat napětí
+        větší, než je napájení +3.3V.
+      </p>
+
+      <h3> Testovací obsah </h3>
+
+      <p>
+        Protože samotný obvod FPGA bez nahrané konfigurace je „mrtvým broukem“
+        je pro další oživování a testování potřeba použít nějaký vhodný obsah,
+        aby bylo možno otestovat celou funkčnost desky. Testování desky je
+        popsáno v&nbsp;dokumentu S3AN01B_HW_Test.
+      </p>
+
+    </div>
+
+    <!-- AUTOINCLUDE START "Page/Footer.cs.ihtml" DO NOT REMOVE -->
+    <!-- ============== PATIČKA ============== -->
+    <div class="Footer">
+      <script type="text/javascript">
+      <!--
+        SetRelativePath("../../../../../");
+        DrawFooter();
+      // -->
+      </script>
+      <noscript>
+        <p><b> Pro zobrazení (vložení) hlavičky je potřeba JavaScript </b></p>
+      </noscript>
+    </div>
+    <!-- AUTOINCLUDE END -->
+
+  </body>
+</html>

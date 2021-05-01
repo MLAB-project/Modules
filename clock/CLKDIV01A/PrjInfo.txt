@@ -1,0 +1,16 @@
+[InfoShortDescription.en]
+Differential input Clock divider
+
+[InfoShortDescription.cs]
+Dělička hodin s differenčním vstupem
+
+[InfoLongDescription.en]
+Multiple division ratios can be selected by jumpers. Possible division ratios are: (÷1, ÷2, ÷4, ÷8) or (÷2, ÷4, ÷8, ÷16) every output is synchronous each other. The common enable (EN) is synchronous so that the internal dividers will only be enabled/disabled when the internal clock is already in the LOW state.
+
+[InfoLongDescription.cs]
+Může být nastaveno více dělících poměrů. Možnosti jsou (÷1, ÷2, ÷4, ÷8) nebo (÷2, ÷4, ÷8, ÷16). EN vstup je synchronní s interními hodinami, proto dojde k vypnutí při návratu na nulu.
+
+[InfoBuyUST]
+http://www.ust.cz/shop/product_info.php?products_id=245
+
+[End]

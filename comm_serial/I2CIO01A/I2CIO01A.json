@@ -1,0 +1,19 @@
+{
+    "wiki": "None", 
+    "status": "2", 
+    "name": "I2CIO01A", 
+    "short_en": "This GPIO expander module is designed for 1.65 to 5.5 V operation. It provides general-purpose remote I/O expansion via the I\u00b2C interface.The module consists of two 8-bit Configurable, Input Port, Output Port, and Polarity Inversion registers.", 
+    "image": "/doc/img/I2CIO01A_top_big.jpg", 
+    "longname_cs": "I2C I/O expander", 
+    "longname_en": "I2C IO expander", 
+    "mark": "50.0", 
+    "ust": "http://www.ust.cz/shop/product_info.php?cPath=22_27&products_id=249", 
+    "doc_cs": "<p>None</p>", 
+    "short_cs": "Modul GPIO expanderu \u0159\u00edzen\u00e9ho p\u0159es sb\u011brnici I\u00b2C. M\u016f\u017ee b\u00fdt pou\u017e\u00edv\u00e1n v rozsahu logick\u00fdch \u00farovn\u00ed 1,65 a\u017e 5,5V. Vstupy a v\u00fdstupy jsou konfigurovateln\u00e9 p\u0159es 8bitov\u00e9 registry stejn\u011b jako inverze logick\u00fdch \u00farovn\u00ed vstup\u016f.", 
+    "doc_en": "<p>None</p>", 
+    "root": "comm_serial/I2CIO01A", 
+    "author[]": [], 
+    "category[]": [
+        "commserial"
+    ]
+}

@@ -1,0 +1,9 @@
+Strana top modulu by měla být vylita vrstvou mědi připojené ke GND. V této vrstvě by pak napájení mělo být vedeno pouze jako ceste. Tedy přesně opačně, než jak je to teď. 
+
+Svod od SMA konektoru stále nerespektuje požadavky uvedené v datasheetu obvodu na impedanci cesty k anténě. Cesta by měla být určitě alespoň tlustčí. V kicadu je integrovaná kalkulačka, která umožňuje výpočet tloušťky cesty pro požadovanou impedanci. V tomto případě jde o Coplanar waveguide with ground plane.
+
+Vývody SMA konektoru a díry pro šrouby by měly být připojené ke GND v obou vrtvách.  Modul by měl obsahovat prokovy vzájemně spojující zemní vrstvy. 
+
+Jsou zřejmě špatně rozměry modulu. Protože nerespektují požadavky na toleranční rezervu pro skládání modulů vedle sebe na desku.
+http://wiki.mlab.cz/doku.php?id=cs:rules#rozmer
+

@@ -1,0 +1,178 @@
+Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = 4. 1. 2016 11:04:31
+
+BeginCmp
+TimeStamp = /568A4AA7;
+Reference = C1;
+ValeurCmp = 100nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A668C;
+Reference = C2;
+ValeurCmp = 100nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A6840;
+Reference = C3;
+ValeurCmp = 100uF;
+IdModule  = Mlab_C:TantalC_SizeD_Reflow;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A4616;
+Reference = D1;
+ValeurCmp = BZV55C-5,6V;
+IdModule  = Mlab_D:Diode-MiniMELF_Standard;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A6E08;
+Reference = D2;
+ValeurCmp = M4;
+IdModule  = Mlab_D:Diode-SMA_Standard;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A41E0;
+Reference = J1;
+ValeurCmp = JUMP_3X2;
+IdModule  = Mlab_Pin_Headers:Straight_2x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A7A34;
+Reference = J2;
+ValeurCmp = CONN1_1;
+IdModule  = Mlab_Pin_Headers:Straight_1x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A395F;
+Reference = J3;
+ValeurCmp = JUMP_2x1;
+IdModule  = Mlab_Pin_Headers:Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A3AB6;
+Reference = J4;
+ValeurCmp = JUMP_2x1;
+IdModule  = Mlab_Pin_Headers:Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A3ADE;
+Reference = J5;
+ValeurCmp = JUMP_2x1;
+IdModule  = Mlab_Pin_Headers:Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A3B04;
+Reference = J6;
+ValeurCmp = JUMP_2x1;
+IdModule  = Mlab_Pin_Headers:Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A534D;
+Reference = J7;
+ValeurCmp = JUMP2_2x1;
+IdModule  = Mlab_Pin_Headers:Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A344A;
+Reference = J8;
+ValeurCmp = WAGO256;
+IdModule  = Mlab_Con:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A3515;
+Reference = J9;
+ValeurCmp = WAGO256;
+IdModule  = Mlab_Con:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A3533;
+Reference = J10;
+ValeurCmp = WAGO256;
+IdModule  = Mlab_Con:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A3553;
+Reference = J11;
+ValeurCmp = WAGO256;
+IdModule  = Mlab_Con:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A62FA;
+Reference = J12;
+ValeurCmp = WAGO256;
+IdModule  = Mlab_Con:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A7369;
+Reference = J13;
+ValeurCmp = WAGO256;
+IdModule  = Mlab_Con:WAGO256;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A8657;
+Reference = M1;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A8954;
+Reference = M2;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A89B8;
+Reference = M3;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A8A2C;
+Reference = M4;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A4BD0;
+Reference = R1;
+ValeurCmp = 22k;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A5566;
+Reference = R2;
+ValeurCmp = 22k;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /568A36A7;
+Reference = U1;
+ValeurCmp = DRV8835;
+IdModule  = Mlab_IO:WSON-12;
+EndCmp
+
+EndListe

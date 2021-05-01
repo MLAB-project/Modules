@@ -1,0 +1,114 @@
+004     @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @TRIS_C
+021     LTS01_get_temp.MSB
+021     MAIN.@SCRATCH1
+021     @PSTRINGC7_9600_62_63.@SCRATCH1
+022     @delay_ms1.P1
+022     LTS01_get_temp.LSB
+022     MAIN.@SCRATCH2
+022     @PSTRINGC7_9600_62_63.@SCRATCH2
+023     @I2C_WRITE_1.P1
+023     @I2C_READ_1.P2
+023     LTS01_get_temp.@SCRATCH1
+023     MAIN.@SCRATCH3
+023     @PSTRINGC7_9600_62_63.@SCRATCH3
+024     @I2C_READ_1.@SCRATCH1
+024     LTS01_get_temp.@SCRATCH2
+024     MAIN.@SCRATCH4
+025-026 @ITOF.P1
+025-028 @PRINTF_L32D_9600_62_63FPFPF.P2
+025     @I2C_READ_1.@SCRATCH2
+029     @PRINTF_L32D_9600_62_63FPFPF.P1
+02A     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH1
+02B     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH2
+02C     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH3
+02D     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH4
+02E     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH5
+02F     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH6
+030     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH7
+031     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH8
+032-035 @MULFF.P1
+032-035 @DIV3232.P2
+032-035 @FTOSD.P3
+036-039 @MULFF.P1
+036-039 @DIV3232.P2
+036     @FTOSD.@SCRATCH1
+03A     @MULFF.@SCRATCH1
+03A     @DIV3232.@SCRATCH1
+03B     @MULFF.@SCRATCH2
+03B     @DIV3232.@SCRATCH2
+03C     @MULFF.@SCRATCH3
+03C     @DIV3232.@SCRATCH3
+03D     @MULFF.@SCRATCH4
+03D     @DIV3232.@SCRATCH4
+03E     @MULFF.@SCRATCH5
+03E     @DIV3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+0346  @delay_ms1
+00B9  @I2C_READ_1
+006F  @I2C_WRITE_1
+0173  LTS01_get_temp
+01EA  @ITOF
+00FE  @MULFF
+035C  MAIN
+0004  @const83
+0027  @PSTRINGC7_9600_62_63
+0019  @const85
+0280  @FTOSD
+0217  @DIV3232
+0259  @PRINTF_L32D_9600_62_63FPFPF
+035C  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    Z:\home\kaklik\svnMLAB\Modules\Sensors\LTS01A\SW\PIC16F887\
+
+Project Files:
+    main.c
+    main.h
+    C:\Program Files (x86)\PICC\devices\16F887.h
+    ..\LTS01.h
+    ..\LTS01.c
+
+Units:
+    Z:\home\kaklik\svnMLAB\Modules\Sensors\LTS01A\SW\PIC16F887\main (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.PJT
+    Call Tree:   main.tre
+    Statistics:  main.sta

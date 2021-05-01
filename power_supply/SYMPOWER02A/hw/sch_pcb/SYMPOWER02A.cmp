@@ -1,0 +1,283 @@
+Cmp-Mod V01 Created by PcbNew   date = 23. 2. 2017 8:41:15
+
+BeginCmp
+TimeStamp = 58244A4B
+Path = /549D7549
+Reference = M1;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 58244A51
+Path = /549D7628
+Reference = M2;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 58244A57
+Path = /549D7646
+Reference = M3;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 58244A5D
+Path = /549D7665
+Reference = M4;
+ValeurCmp = HOLE;
+IdModule  = Mlab_Mechanical:MountingHole_3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD41A2
+Path = /58AC46C8
+Reference = C1;
+ValeurCmp = NFM21PC105;
+IdModule  = Mlab_L:FIR1;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD41A8
+Path = /58AC6E0E
+Reference = C2;
+ValeurCmp = 10uF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD41AE
+Path = /58AC6BEC
+Reference = C3;
+ValeurCmp = 1uF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD41B4
+Path = /58AB595A
+Reference = C4;
+ValeurCmp = 100nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD41BA
+Path = /58AC7744
+Reference = C5;
+ValeurCmp = 100nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD41C0
+Path = /58AB4D2E
+Reference = C6;
+ValeurCmp = 1uF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD41C6
+Path = /58ACF53C
+Reference = C7;
+ValeurCmp = 10uF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD41CC
+Path = /58ACE8C7
+Reference = C8;
+ValeurCmp = 100nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD41D2
+Path = /58ACEBE3
+Reference = C9;
+ValeurCmp = 100nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD41D8
+Path = /58ACE482
+Reference = C10;
+ValeurCmp = 1uF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD41DE
+Path = /58ACEC58
+Reference = C11;
+ValeurCmp = 1uF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD41E4
+Path = /58AB43F7
+Reference = C12;
+ValeurCmp = 10uF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD41F1
+Path = /58AD3FCC
+Reference = C14;
+ValeurCmp = NFM21PC105;
+IdModule  = Mlab_L:FIR1;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD41F8
+Path = /58AD3911
+Reference = C15;
+ValeurCmp = NFM21PC105;
+IdModule  = Mlab_L:FIR1;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD41FE
+Path = /58ADAA58
+Reference = C16;
+ValeurCmp = 100nF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD4204
+Path = /58ADE973
+Reference = D1;
+ValeurCmp = M4;
+IdModule  = Mlab_D:SMA_Standard;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD420E
+Path = /58ADD035
+Reference = J1;
+ValeurCmp = HEADER_2x03_PARALLEL;
+IdModule  = Mlab_Pin_Headers:Straight_2x03;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD4214
+Path = /58ACC53F
+Reference = J2;
+ValeurCmp = HEADER_2x01_PARALLEL;
+IdModule  = Mlab_Pin_Headers:Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD421A
+Path = /58ACC5F6
+Reference = J3;
+ValeurCmp = HEADER_2x01_PARALLEL;
+IdModule  = Mlab_Pin_Headers:Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD4220
+Path = /58AC8B36
+Reference = J4;
+ValeurCmp = HEADER_2x01_PARALLEL;
+IdModule  = Mlab_Pin_Headers:Straight_2x01;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD422E
+Path = /58AE1304
+Reference = J5;
+ValeurCmp = HEADER_2x05_PARALLEL;
+IdModule  = Mlab_Pin_Headers:Straight_2x05;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD4234
+Path = /58ACB0E5
+Reference = R1;
+ValeurCmp = 10k;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD423A
+Path = /58ACB3FA
+Reference = R2;
+ValeurCmp = 10k;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD4240
+Path = /58AC5C0C
+Reference = R3;
+ValeurCmp = 100k;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD4246
+Path = /58AB3AC5
+Reference = R4;
+ValeurCmp = 210k;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD424C
+Path = /58AB3B4A
+Reference = R5;
+ValeurCmp = 120k;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD4252
+Path = /58AB3D64
+Reference = R6;
+ValeurCmp = 120k;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD4258
+Path = /58AB3DCD
+Reference = R7;
+ValeurCmp = 210;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD425E
+Path = /58AD9FB4
+Reference = R8;
+ValeurCmp = 1k;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD4276
+Path = /58AAF79A
+Reference = U1;
+ValeurCmp = LM27762;
+IdModule  = Mlab_IO:WSON-12;
+EndCmp
+
+BeginCmp
+TimeStamp = 58AD62A1
+Path = /58AB4784
+Reference = C13;
+ValeurCmp = 10uF;
+IdModule  = Mlab_R:SMD-0805;
+EndCmp
+
+EndListe
