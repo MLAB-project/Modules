@@ -1,6 +1,6 @@
 <!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
 <!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:2021-06-02 23:45:24.024291: ---> 
+<!--- Created:2021-06-02 23:56:06.934828: ---> 
 <!--- Author:: ---> 
 <!--- AuthorEmail:: ---> 
 <!--- Tags:: ---> 
@@ -17,7 +17,7 @@
 Device for measurement of electric fields in the atmosphere.
 <!--- ELead ---> 
 
-![FIELDMILL01A](doc/img/FIELDMILL01A_QRcode.png) 
+![FIELDMILL01A](doc/img/FIELDMILL01A_sensor.png) 
 
 
 <!--- Description --->
