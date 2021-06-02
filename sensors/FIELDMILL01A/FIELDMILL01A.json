@@ -1,0 +1,22 @@
+{
+    "wiki": "None", 
+    "status": 2, 
+    "name": "FIELDMILL01A", 
+    "parameters": [], 
+    "short_en": "Device for measurement of electric fields in the atmosphere.", 
+    "image_small": "/doc/img/FIELDMILL01A_QRcode.png", 
+    "image": "/doc/img/FIELDMILL01A_QRcode.png", 
+    "longname_cs": "Mlýnek elektrického pole", 
+    "longname_en": "Electric Field mill interface module", 
+    "mark": 50.0, 
+    "ust": "", 
+    "doc_cs": "<h1>FIELDMILL01A</h1>\n<p>&nbsp;</p>\n<p>Ml&yacute;nek elektrick&eacute;ho pole</p>\n<p>&nbsp;</p>\n<p>Konstrukce je určen&aacute; k realizaci lok&aacute;ln&iacute;ho měřen&iacute; elektrick&eacute;ho pole. K měřen&iacute; je použit ml&yacute;nek elektrick&eacute;ho pole um&iacute;stěn&yacute; ve vhodn&eacute; lokalitě.</p>\n<p>&nbsp;</p>\n<p>Podporovan&aacute; komunikačn&iacute; rozhran&iacute; jsou:</p>\n<p>&nbsp;</p>\n<ul>\n<li>RS485</li>\n<li>RS232</li>\n<li>USB (emulovan&yacute; UART)</li>\n</ul>\n<p>&nbsp;</p>\n<p>Potřebn&eacute; nap&aacute;jen&iacute; je 1A@12V.</p>\n<h2>Způsob mont&aacute;že</h2>\n<p>&nbsp;</p>\n<p>Ml&yacute;nek elektrick&eacute;ho pole je vhodn&eacute; um&iacute;stit na vhodnou konstrukci kter&aacute; neakumuluje elektrick&yacute; n&aacute;boj. Vhodn&eacute; jsou tak v&scaron;echny dřevěn&eacute;, př&iacute;padně kovov&eacute; materi&aacute;ly. Velmi nevhodn&eacute; jsou plastov&eacute; v&yacute;ložn&iacute;ky a n&aacute;stavce.</p>", 
+    "short_cs": "Měřič elektrického pole využívající mlýnek elektrického pole jako snímač", 
+    "doc_en": "<p>None</p>", 
+    "_id": "FIELDMILL01A", 
+    "root": "sensors/FIELDMILL01A", 
+    "author[]": [], 
+    "category[]": [
+        "sensor"
+    ]
+}
