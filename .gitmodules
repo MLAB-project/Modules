@@ -112,3 +112,6 @@
 [submodule "power_supply/STEPUPDC02A"]
 	path = power_supply/STEPUPDC02A
 	url = https://github.com/mlab-modules/STEPUPDC02
+[submodule "power_supply/STEPUPDC01A/doc/assets"]
+	path = power_supply/STEPUPDC01A/doc/assets
+	url = git@github.com:MLAB-project/documents.git
