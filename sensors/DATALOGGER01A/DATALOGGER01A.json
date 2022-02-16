@@ -1,0 +1,24 @@
+{
+    "short_en": "", 
+    "status": 2, 
+    "name": "DATALOGGER01A", 
+    "parameters": [], 
+    "longname_en": "", 
+    "wiki": "", 
+    "short_cs": "Modul pro záznam měřených dat ze senzorů s I2C, SPI nebo analogovým výstupem. Pro aplikace bez síťového napájení, s požadavkem na dlouhý provoz na baterie (řádově měsíce).", 
+    "image_small": "/doc/img/DATALOGGER01A_top.png", 
+    "mark": 50.0, 
+    "ust": "", 
+    "doc_cs": "", 
+    "image": "/doc/img/DATALOGGER01A_top.png", 
+    "longname_cs": "Univerzální datalogger s procesorem, SD kartou, bateriemi", 
+    "doc_en": "", 
+    "_id": "DATALOGGER01A", 
+    "root": "sensors/DATALOGGER01A", 
+    "author[]": [
+        "ChroustJan"
+    ], 
+    "category[]": [
+        "sensor"
+    ]
+}
