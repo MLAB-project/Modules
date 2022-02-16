@@ -1,12 +1,27 @@
-
-[Czech](./README.cs.md)
-<!--- module --->
+<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
+<!--- 00a56be08b96043df9e37d6aff7b6990 --->
+<!--- Created:2022-02-16 21:45:04.990123: ---> 
+<!--- Author:: ---> 
+<!--- AuthorEmail:: ---> 
+<!--- Tags:: ---> 
+<!--- Ust:: ---> 
+<!--- Label --->
+<!--- ELabel ---> 
+<!--- Name:TRIMQUAD01A: --->
 # TRIMQUAD01A
-<!--- Emodule --->
+<!--- LongName --->
+## Trimmer unit
+<!--- ELongName ---> 
 
-<!--- subtitle --->Trimmer unit <!--- Esubtitle --->
+<!--- Lead --->
+There are four trimmers conected parallely to supply voltage. Allow generetion analog signals to setup system behavivour.
+<!--- ELead ---> 
 
-![TRIMQUAD01A](/doc/img/TRIMQUAD01A_QRcode.png)
+![TRIMQUAD01A](doc/img/TRIMQUAD01A_big.jpg) 
 
-<!--- description --->There are four trimmers conected parallely to supply voltage. Allow generetion analog signals to setup system behavivour. <!--- Edescription --->
-            
+
+<!--- Description --->
+<!--- EDescription --->
+<!--- Content --->
+<!--- EContent --->
+<sub><sup> Generated with [MLABweb](https://github.com/MLAB-project/MLABweb). (2022-02-16)</sup></sub>
