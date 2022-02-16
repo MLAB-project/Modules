@@ -1,0 +1,22 @@
+{
+    "wiki": "None", 
+    "status": 3, 
+    "name": "LION2CELL01C", 
+    "parameters": [], 
+    "short_en": "Integrated battery management solution for 18650 li-ion batteries. It can measure remaining energy in battery, perform charging cycle from external power source and protect batteries against over voltage or over draining conditions.", 
+    "image_small": "/doc/img/LION2CELL01B_small.jpg", 
+    "image": "/doc/img/LION2CELL01B_small.jpg", 
+    "longname_cs": "Napájecí modul s Li-ion akumulátory", 
+    "longname_en": "Li-ion battery management module", 
+    "mark": 50.0, 
+    "ust": "", 
+    "doc_cs": "<p>None</p>", 
+    "short_cs": "Modul umožňuje nabíjení dvou LI-ION akumulátorů v pouzdru 18650. Je vybaven obvodem umožňujícím měřit aktuální kapacitu, napětí a teplotu článku. Obvod měří i aktuální proud z nebo do článku. Samozřejmostí je ochrana proti přebití článku.", 
+    "doc_en": "<p>None</p>", 
+    "_id": "LION2CELL01C", 
+    "root": "power_supply/LION2CELL01C", 
+    "author[]": [], 
+    "category[]": [
+        "powersupply"
+    ]
+}
