@@ -1,16 +1,22 @@
 {
     "wiki": "None", 
-    "status": "2", 
+    "status": 2, 
     "name": "RFM01SMD01A", 
+    "parameters": [], 
     "short_en": "None", 
-    "image": "/doc/img/RFM01SMD01A_QRcode.png", 
+    "image_small": "/doc/img/RFM01SMD01A_big.jpg", 
+    "image": "/doc/img/RFM01SMD01A_big.jpg", 
     "longname_cs": "RFM01SMD01A", 
     "longname_en": "RFM01SMD01A", 
-    "mark": "50.0", 
+    "mark": 50.0, 
     "ust": "None", 
     "doc_cs": "<p>None</p>", 
     "short_cs": "None", 
     "doc_en": "<p>None</p>", 
+    "_id": "RFM01SMD01A", 
     "root": "RF/RFM01SMD01A", 
-    "category[]": "commrf"
+    "author[]": [], 
+    "category[]": [
+        "commrf"
+    ]
 }

@@ -1,12 +1,27 @@
-
-[Czech](./README.cs.md)
-<!--- module --->
+<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
+<!--- 00a56be08b96043df9e37d6aff7b6990 --->
+<!--- Created:2022-02-16 21:33:29.178330: ---> 
+<!--- Author:: ---> 
+<!--- AuthorEmail:: ---> 
+<!--- Tags:: ---> 
+<!--- Ust:: ---> 
+<!--- Label --->
+<!--- ELabel ---> 
+<!--- Name:RFM01SMD01A: --->
 # RFM01SMD01A
-<!--- Emodule --->
+<!--- LongName --->
+## RFM01SMD01A
+<!--- ELongName ---> 
 
-<!--- subtitle --->RFM01SMD01A<!--- Esubtitle --->
+<!--- Lead --->
+None
+<!--- ELead ---> 
 
-![RFM01SMD01A](/doc/img/RFM01SMD01A_QRcode.png)
+![RFM01SMD01A](doc/img/RFM01SMD01A_big.jpg) 
 
-<!--- description --->None<!--- Edescription --->
-            
+
+<!--- Description --->
+<!--- EDescription --->
+<!--- Content --->
+<!--- EContent --->
+<sub><sup> Generated with [MLABweb](https://github.com/MLAB-project/MLABweb). (2022-02-16)</sup></sub>
