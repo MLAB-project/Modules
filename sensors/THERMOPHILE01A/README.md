@@ -1,6 +1,6 @@
 <!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
 <!--- 00a56be08b96043df9e37d6aff7b6990 --->
-<!--- Created:2019-02-18 14:38:00.637668: ---> 
+<!--- Created:2022-02-16 22:03:18.335367: ---> 
 <!--- Author:: ---> 
 <!--- AuthorEmail:: ---> 
 <!--- Tags:: ---> 
@@ -17,11 +17,11 @@
 Contact less IR temperature sensor with SMBus interface.
 <!--- ELead ---> 
 
-![THERMOPHILE01A](doc/img/THERMOPHILE01A_QRcode.png) 
+![THERMOPHILE01A](doc/img/THERMOPILE01A_small.jpg) 
 
 
 <!--- Description --->
 <!--- EDescription --->
 <!--- Content --->
 <!--- EContent --->
-<sub><sup> Generated with [MLABweb](https://github.com/MLAB-project/MLABweb). (2019-02-18)</sup></sub>
+<sub><sup> Generated with [MLABweb](https://github.com/MLAB-project/MLABweb). (2022-02-16)</sup></sub>
