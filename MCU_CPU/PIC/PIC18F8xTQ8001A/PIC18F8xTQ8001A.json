@@ -1,16 +1,22 @@
 {
     "wiki": "None", 
-    "status": "2", 
+    "status": 2, 
     "name": "PIC18F8xTQ8001A", 
+    "parameters": [], 
     "short_en": "Module for work with PIC18F MCU in TQFP80 package. On PCB is a bias resistor for Ethernet peripheral.", 
-    "image": "/doc/img/PIC18F8xTQ8001A_QRcode.png", 
+    "image_small": "/doc/img/PIC18F8xTQ8001A_top_small.jpg", 
+    "image": "/doc/img/PIC18F8xTQ8001A_top_small.jpg", 
     "longname_cs": "Modul pro procesor PIC", 
     "longname_en": "module for PIC microprocesor", 
-    "mark": "50.0", 
+    "mark": 50.0, 
     "ust": "http://www.ust.cz/shop/product_info.php?cPath=22_25&products_id=79", 
     "doc_cs": "<p>None</p>", 
-    "short_cs": "Modul je ur\u010den pro pr\u00e1ci s procesory PIC \u0159ady PIC18F v pouzdru TQFP s 80 v\u00fdvody. Modul obsahuje krom\u011b samotn\u00e9ho procesoru jen nezbytn\u00e9 mno\u017estv\u00ed sou\u010d\u00e1st\u00ed. Ale i bias rezistor pro Ethetnet PIC.", 
+    "short_cs": "Modul je určen pro práci s procesory PIC řady PIC18F v pouzdru TQFP s 80 vývody. Modul obsahuje kromě samotného procesoru jen nezbytné množství součástí. Ale i bias rezistor pro Ethetnet PIC.", 
     "doc_en": "<p>None</p>", 
+    "_id": "PIC18F8xTQ8001A", 
     "root": "MCU_CPU/PIC/PIC18F8xTQ8001A", 
-    "category[]": "pic"
+    "author[]": [], 
+    "category[]": [
+        "pic"
+    ]
 }
