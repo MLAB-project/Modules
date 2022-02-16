@@ -1,12 +1,27 @@
-
-[Czech](./README.cs.md)
-<!--- module --->
+<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
+<!--- 00a56be08b96043df9e37d6aff7b6990 --->
+<!--- Created:2022-02-16 22:10:43.808831: ---> 
+<!--- Author:: ---> 
+<!--- AuthorEmail:: ---> 
+<!--- Tags:: ---> 
+<!--- Ust:: ---> 
+<!--- Label --->
+<!--- ELabel ---> 
+<!--- Name:NFET4X01A: --->
 # NFET4X01A
-<!--- Emodule --->
+<!--- LongName --->
+## 4NFET Power Driver
+<!--- ELongName ---> 
 
-<!--- subtitle --->4NFET Power Driver <!--- Esubtitle --->
+<!--- Lead --->
+There are 4 NFETs switching to earth. Inductive load is allowed.
+<!--- ELead ---> 
 
-![NFET4X01A](/doc/img/NFET4X01A_QRcode.png)
+![NFET4X01A](doc/img/NFET4X01A_top.jpg) 
 
-<!--- description --->There are 4 NFETs switching to earth. Inductive load is allowed.<!--- Edescription --->
-            
+
+<!--- Description --->
+<!--- EDescription --->
+<!--- Content --->
+<!--- EContent --->
+<sub><sup> Generated with [MLABweb](https://github.com/MLAB-project/MLABweb). (2022-02-16)</sup></sub>
