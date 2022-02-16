@@ -1,12 +1,27 @@
-
-[Czech](./README.cs.md)
-<!--- module --->
+<!--- PrjInfo ---> <!--- Please remove this line after manually editing --->
+<!--- 00a56be08b96043df9e37d6aff7b6990 --->
+<!--- Created:2022-02-16 22:07:57.791436: ---> 
+<!--- Author:: ---> 
+<!--- AuthorEmail:: ---> 
+<!--- Tags:: ---> 
+<!--- Ust:: ---> 
+<!--- Label --->
+<!--- ELabel ---> 
+<!--- Name:OZpower01A: --->
 # OZpower01A
-<!--- Emodule --->
+<!--- LongName --->
+## Power operational amplifier
+<!--- ELongName ---> 
 
-<!--- subtitle --->Power operational amplifier <!--- Esubtitle --->
+<!--- Lead --->
+Construction of single power operational aplifier suitable for 18V/3A
+<!--- ELead ---> 
 
-![OZpower01A](/doc/img/OZpower01A_QRcode.png)
+![OZpower01A](doc/img/OZPOWER01A_big.jpg) 
 
-<!--- description --->Construction of single power operational aplifier suitable for 18V/3A<!--- Edescription --->
-            
+
+<!--- Description --->
+<!--- EDescription --->
+<!--- Content --->
+<!--- EContent --->
+<sub><sup> Generated with [MLABweb](https://github.com/MLAB-project/MLABweb). (2022-02-16)</sup></sub>
