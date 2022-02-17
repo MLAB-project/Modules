@@ -1,16 +1,22 @@
 {
     "wiki": "None", 
-    "status": "2", 
+    "status": 3, 
     "name": "CLKHUB01A", 
+    "parameters": [], 
     "short_en": "None", 
+    "image_small": "/doc/img/CLKHUB01A_QRcode.png", 
     "image": "/doc/img/CLKHUB01A_QRcode.png", 
     "longname_cs": "CLKHUB01A", 
     "longname_en": "CLKHUB01A", 
-    "mark": "50.0", 
+    "mark": 50.0, 
     "ust": "None", 
     "doc_cs": "", 
     "short_cs": "None", 
     "doc_en": "", 
+    "_id": "CLKHUB01A", 
     "root": "clock/CLKHUB01A", 
-    "category[]": "clock"
+    "author[]": [], 
+    "category[]": [
+        "clock"
+    ]
 }
