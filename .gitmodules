@@ -6,73 +6,73 @@
 	url = git@github.com:mlab-modules/WINDGAUGE03.git
 [submodule "comm_serial/USB232R01A"]
 	path = comm_serial/USB232R01A
-	url = https://github.com/mlab-modules/USB232R01.git
+	url = git@github.com:mlab-modules/USB232R01.git
 [submodule "comm_serial/USB232R01B"]
 	path = comm_serial/USB232R01B
-	url = https://github.com/mlab-modules/USB232R01.git
+	url = git@github.com:mlab-modules/USB232R01.git
 [submodule "comm_serial/USB232R01B/sw/ft232r_prog"]
 	path = comm_serial/USB232R01B/sw/ft232r_prog
 	url = https://github.com/effeerre75/ft232r_prog.git
 [submodule "RF/ISM01"]
 	path = RF/ISM01A
-	url = https://github.com/mlab-modules/ISM01.git
+	url = git@github.com:mlab-modules/ISM01.git
 [submodule "sensors/GPS02A"]
 	path = sensors/GPS02A
-	url = https://github.com/mlab-modules/GPS02.git
+	url = git@github.com:mlab-modules/GPS02.git
 [submodule "RF/ISM02"]
 	path = RF/ISM02A
-	url = https://github.com/mlab-modules/ISM02.git
+	url = git@github.com:mlab-modules/ISM02.git
 [submodule "sensors/DATALOGGER01A"]
 	path = sensors/DATALOGGER01A
-	url = https://github.com/mlab-modules/DATALOGGER01.git
+	url = git@github.com:mlab-modules/DATALOGGER01.git
 [submodule "power_supply/LION2CELL01D"]
 	path = power_supply/LION2CELL01D
-	url = https://github.com/mlab-modules/LION2CELL01.git
+	url = git@github.com:mlab-modules/LION2CELL01.git
 [submodule "power_supply/LION2CELL01B"]
 	path = power_supply/LION2CELL01B
-	url = https://github.com/mlab-modules/LION2CELL01.git
+	url = git@github.com:mlab-modules/LION2CELL01.git
 [submodule "power_supply/LION2CELL01C"]
 	path = power_supply/LION2CELL01C
-	url = https://github.com/mlab-modules/LION2CELL01.git
+	url = git@github.com:mlab-modules/LION2CELL01.git
 [submodule "RF/SDRX01A"]
 	path = RF/SDRX01A
-	url = https://github.com/mlab-modules/SDRX01.git
+	url = git@github.com:mlab-modules/SDRX01.git
 [submodule "RF/SDRX01B"]
 	path = RF/SDRX01B
-	url = https://github.com/mlab-modules/SDRX01.git
+	url = git@github.com:mlab-modules/SDRX01.git
 [submodule "sensors/PCRD01A"]
 	path = sensors/PCRD01A
-	url = https://github.com/mlab-modules/PCRD01.git
+	url = git@github.com:mlab-modules/PCRD01.git
 [submodule "sensors/PCRD02A"]
 	path = sensors/PCRD02A
-	url = https://github.com/mlab-modules/PCRD02.git
+	url = git@github.com:mlab-modules/PCRD02.git
 [submodule "sensors/PCRD03A"]
 	path = sensors/PCRD03A
-	url = https://github.com/mlab-modules/PCRD03.git
+	url = git@github.com:mlab-modules/PCRD03.git
 [submodule "sensors/PCRD04A"]
 	path = sensors/PCRD04A
-	url = https://github.com/mlab-modules/PCRD04.git
+	url = git@github.com:mlab-modules/PCRD04.git
 [submodule "sensors/PCRD04B"]
 	path = sensors/PCRD04B
-	url = https://github.com/mlab-modules/PCRD04.git
+	url = git@github.com:mlab-modules/PCRD04.git
 [submodule "sensors/PCRD05A"]
 	path = sensors/PCRD05A
-	url = https://github.com/mlab-modules/PCRD05.git
+	url = git@github.com:mlab-modules/PCRD05.git
 [submodule "sensors/PCRD06A"]
 	path = sensors/PCRD06A
-	url = https://github.com/mlab-modules/PCRD06.git
+	url = git@github.com:mlab-modules/PCRD06.git
 [submodule "ADC/BRIDGEADC01A"]
 	path = ADC/BRIDGEADC01A
-	url = https://github.com/mlab-modules/BRIDGEADC01.git
+	url = git@github.com:mlab-modules/BRIDGEADC01.git
 [submodule "sensors/GPS01B"]
 	path = sensors/GPS01B
-	url = https://github.com/mlab-modules/GPS01.git
+	url = git@github.com:mlab-modules/GPS01.git
 [submodule "sensors/GPS01A"]
 	path = sensors/GPS01A
-	url = https://github.com/mlab-modules/GPS01.git
+	url = git@github.com:mlab-modules/GPS01.git
 [submodule "sensors/ALTIMET01A"]
 	path = sensors/ALTIMET01A
-	url = https://github.com/mlab-modules/ALTIMET01.git
+	url = git@github.com:mlab-modules/ALTIMET01.git
 [submodule "RF/BP02A"]
 	path = RF/BP02A
 	url = git@github.com:mlab-modules/BP02.git
@@ -88,3 +88,39 @@
 [submodule "sensors/FIELDMILL01A"]
 	path = sensors/FIELDMILL01A
 	url = git@github.com:mlab-modules/FIELDMILL01.git
+[submodule "RF/QFHBAL01A"]
+	path = RF/QFHBAL01A
+	url = git@github.com:mlab-modules/QFHBAL01.git
+[submodule "RF/VLFANT01B"]
+	path = RF/VLFANT01B
+	url = git@github.com:mlab-modules/VLFANT01.git
+[submodule "RF/VLFANT01A"]
+	path = RF/VLFANT01A
+	url = git@github.com:mlab-modules/VLFANT01.git
+[submodule "power_supply/LION1CELL01A"]
+	path = power_supply/LION1CELL01A
+	url = git@github.com:mlab-modules/LION1CELL01.git
+[submodule "power_supply/LION1CELL01B"]
+	path = power_supply/LION1CELL01B
+	url = git@github.com:mlab-modules/LION1CELL01.git
+[submodule "power_supply/TPS63060V01A"]
+	path = power_supply/TPS63060V01A
+	url = git@github.com:mlab-modules/TPS63060V01.git
+[submodule "power_supply/SOLARMINI01A"]
+	path = power_supply/SOLARMINI01A
+	url = git@github.com:mlab-modules/SOLARMINI01.git
+[submodule "power_supply/STEPUPDC02A"]
+	path = power_supply/STEPUPDC02A
+	url = git@github.com:mlab-modules/STEPUPDC02.git
+[submodule "power_supply/STEPUPDC01A/doc/assets"]
+	path = power_supply/STEPUPDC01A/doc/assets
+	url = git@github.com:MLAB-project/documents.git
+[submodule "CPLD_FPGA/PROGLOG01A"]
+	path = CPLD_FPGA/PROGLOG01A
+	url = git@github.com:mlab-modules/PROGLOG01.git
+[submodule "power_supply/SOLARMINI01B"]
+	path = power_supply/SOLARMINI01B
+	url = git@github.com:mlab-modules/SOLARMINI01.git
+[submodule "ADC/ADCoctoSPI01A"]
+	path = ADC/ADCoctoSPI01A
+	url = git@github.com:mlab-modules/ADCoctoSPI01.git
