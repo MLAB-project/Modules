@@ -133,3 +133,9 @@
 [submodule "comm_serial/USBI2C01A"]
 	path = comm_serial/USBI2C01A
 	url = git@github.com:mlab-modules/USBI2C01.git
+[submodule "comm_serial/I2CHUB02B"]
+	path = comm_serial/I2CHUB02B
+	url = https://github.com/mlab-modules/I2CHUB02
+[submodule "comm_serial/I2CHUB02A"]
+	path = comm_serial/I2CHUB02A
+	url = https://github.com/mlab-modules/I2CHUB02
