@@ -130,3 +130,6 @@
 [submodule "power_supply/STEPUPDC01A"]
 	path = power_supply/STEPUPDC01A
 	url = git@github.com:mlab-modules/STEPUPDC01.git
+[submodule "comm_serial/USBI2C01A"]
+	path = comm_serial/USBI2C01A
+	url = git@github.com:mlab-modules/USBI2C01.git
