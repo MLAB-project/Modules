@@ -142,3 +142,9 @@
 [submodule "sensors/GPS02B"]
 	path = sensors/GPS02B
 	url = git@github.com:mlab-modules/GPS02.git
+[submodule "sensors/VCAI2C01A"]
+	path = sensors/VCAI2C01A
+	url = git@github.com:mlab-modules/VCAI2C01.git
+[submodule "sensors/VCAI2C02A"]
+	path = sensors/VCAI2C02A
+	url = git@github.com:mlab-modules/VCAI2C02.git
