@@ -16,11 +16,11 @@
 
 git branch $1
 git checkout $1
-git filter-repo --subdirectory-filter $2 --refs $1
+git-filter-repo --subdirectory-filter $2 --refs $1
 
 gh repo create mlab-modules/$3  --disable-wiki --public
 
 # Set the freshly created repo to the origin and push
 # You'll need to have added your public key to your github account
-git remote set-url $3 git@github.com:mlab-modules/${REPONAME}.git
+git remote add $3 git@github.com:mlab-modules/$3.git
 git push -u $3 $1
