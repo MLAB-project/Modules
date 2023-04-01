@@ -16,7 +16,7 @@
 
 git branch $1
 git checkout $1
-git-filter-repo --subdirectory-filter $2 --refs $1
+git-filter-repo --force --subdirectory-filter $2 --refs $1
 
 gh repo create mlab-modules/$3  --disable-wiki --public
 
