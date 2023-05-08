@@ -26,4 +26,4 @@ Thanks to careful design, most of the modules are dimensionally and electrically
 
 ## Applications
 
-See the [list of designs](http://www.mlab.cz/Server/GenIndex/GenIndex.php?path=%2FDesigns&lang=en) for an illustration of the wide spectrum of possible applications.
+See the [list of designs](http://home.mlab.cz/Server/GenIndex/GenIndex.php?path=%2FDesigns&lang=en) for an illustration of the wide spectrum of possible applications.
