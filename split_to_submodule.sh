@@ -26,7 +26,9 @@ git remote add $3 git@github.com:mlab-modules/$3.git
 git push -u $3 $1
 
 git checkout origin/master
+
+rm -r $2
 git add $2
 git submodule add -b $1 git@github.com:mlab-modules/$3.git $2
-git add .
+git add $2
 
