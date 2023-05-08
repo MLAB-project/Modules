@@ -25,7 +25,7 @@ gh repo create mlab-modules/$3  --disable-wiki --public
 git remote add $3 git@github.com:mlab-modules/$3.git
 git push -u $3 $1
 
-git checkout origin/master
+git checkout -f master
 
 rm -r $2
 git add $2
