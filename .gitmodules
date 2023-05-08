@@ -192,3 +192,7 @@
 	path = mechanical/ALBASE0401
 	url = git@github.com:mlab-modules/ALBASE0401.git
 	branch = ALBASE0401
+[submodule "power_supply/UNIPOWER02A"]
+	path = power_supply/UNIPOWER02A
+	url = git@github.com:mlab-modules/UNIPOWER02.git
+	branch = UNIPOWER02A
