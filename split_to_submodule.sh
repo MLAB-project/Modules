@@ -24,3 +24,9 @@ gh repo create mlab-modules/$3  --disable-wiki --public
 # You'll need to have added your public key to your github account
 git remote add $3 git@github.com:mlab-modules/$3.git
 git push -u $3 $1
+
+git checkout origin/master
+git add $2
+git submodule add -b $1 git@github.com:mlab-modules/$3.git $2
+git add .
+
