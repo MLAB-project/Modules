@@ -30,5 +30,5 @@ git checkout origin/master
 rm -r $2
 git add $2
 git submodule add -b $1 git@github.com:mlab-modules/$3.git $2
-git add $2
-
+git add $2 .gitmodules
+git commit -m"Removing $1 modules splitted to separate repositories."
