@@ -196,3 +196,7 @@
 	path = power_supply/UNIPOWER02A
 	url = git@github.com:mlab-modules/UNIPOWER02.git
 	branch = UNIPOWER02A
+[submodule "power_supply/BATPOWER04C"]
+	path = power_supply/BATPOWER04C
+	url = git@github.com:mlab-modules/BATPOWER04.git
+	branch = BATPOWER04C
