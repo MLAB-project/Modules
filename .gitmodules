@@ -7,9 +7,11 @@
 [submodule "comm_serial/USB232R01A"]
 	path = comm_serial/USB232R01A
 	url = git@github.com:mlab-modules/USB232R01.git
+	branch = USB232R01A
 [submodule "comm_serial/USB232R01B"]
 	path = comm_serial/USB232R01B
 	url = git@github.com:mlab-modules/USB232R01.git
+	branch = USB232R01B
 [submodule "comm_serial/USB232R01B/sw/ft232r_prog"]
 	path = comm_serial/USB232R01B/sw/ft232r_prog
 	url = https://github.com/effeerre75/ft232r_prog.git
@@ -19,57 +21,74 @@
 [submodule "sensors/GPS02A"]
 	path = sensors/GPS02A
 	url = git@github.com:mlab-modules/GPS02.git
+	branch = GPS02A
 [submodule "RF/ISM02"]
 	path = RF/ISM02A
 	url = git@github.com:mlab-modules/ISM02.git
+	branch = ISB02A
 [submodule "sensors/DATALOGGER01A"]
 	path = sensors/DATALOGGER01A
 	url = git@github.com:mlab-modules/DATALOGGER01.git
 [submodule "power_supply/LION2CELL01D"]
 	path = power_supply/LION2CELL01D
 	url = git@github.com:mlab-modules/LION2CELL01.git
+	branch = LION2CELL01D
 [submodule "power_supply/LION2CELL01B"]
 	path = power_supply/LION2CELL01B
 	url = git@github.com:mlab-modules/LION2CELL01.git
+	branch = LION2CELL01B
 [submodule "power_supply/LION2CELL01C"]
 	path = power_supply/LION2CELL01C
 	url = git@github.com:mlab-modules/LION2CELL01.git
+	branch = LION2CELL01C
 [submodule "RF/SDRX01A"]
 	path = RF/SDRX01A
 	url = git@github.com:mlab-modules/SDRX01.git
+	branch = SDRX01A
 [submodule "RF/SDRX01B"]
 	path = RF/SDRX01B
 	url = git@github.com:mlab-modules/SDRX01.git
+	branch = SDRX01B
 [submodule "sensors/PCRD01A"]
 	path = sensors/PCRD01A
 	url = git@github.com:mlab-modules/PCRD01.git
+	branch = PCRD01A
 [submodule "sensors/PCRD02A"]
 	path = sensors/PCRD02A
 	url = git@github.com:mlab-modules/PCRD02.git
+	branch = PCRD02A
 [submodule "sensors/PCRD03A"]
 	path = sensors/PCRD03A
 	url = git@github.com:mlab-modules/PCRD03.git
+	branch = PCRD03A
 [submodule "sensors/PCRD04A"]
 	path = sensors/PCRD04A
 	url = git@github.com:mlab-modules/PCRD04.git
+	branch = PCRD04A
 [submodule "sensors/PCRD04B"]
 	path = sensors/PCRD04B
 	url = git@github.com:mlab-modules/PCRD04.git
+	branch = PCRD04B
 [submodule "sensors/PCRD05A"]
 	path = sensors/PCRD05A
 	url = git@github.com:mlab-modules/PCRD05.git
+	branch = PCRD05A
 [submodule "sensors/PCRD06A"]
 	path = sensors/PCRD06A
 	url = git@github.com:mlab-modules/PCRD06.git
+	branch = PCRD06A
 [submodule "ADC/BRIDGEADC01A"]
 	path = ADC/BRIDGEADC01A
 	url = git@github.com:mlab-modules/BRIDGEADC01.git
+	branch = BRIDGEADC01A
 [submodule "sensors/GPS01B"]
 	path = sensors/GPS01B
 	url = git@github.com:mlab-modules/GPS01.git
+	branch = GPS01B
 [submodule "sensors/GPS01A"]
 	path = sensors/GPS01A
 	url = git@github.com:mlab-modules/GPS01.git
+	branch = GPS01A
 [submodule "sensors/ALTIMET01A"]
 	path = sensors/ALTIMET01A
 	url = git@github.com:mlab-modules/ALTIMET01.git
@@ -85,6 +104,7 @@
 [submodule "RF/ISM02B"]
 	path = RF/ISM02B
 	url = git@github.com:mlab-modules/ISM02.git
+	branch = ISM02B
 [submodule "sensors/FIELDMILL01A"]
 	path = sensors/FIELDMILL01A
 	url = git@github.com:mlab-modules/FIELDMILL01.git
@@ -94,15 +114,19 @@
 [submodule "RF/VLFANT01B"]
 	path = RF/VLFANT01B
 	url = git@github.com:mlab-modules/VLFANT01.git
+	branch = VLFANT01B
 [submodule "RF/VLFANT01A"]
 	path = RF/VLFANT01A
 	url = git@github.com:mlab-modules/VLFANT01.git
+	branch = VLFANT01A
 [submodule "power_supply/LION1CELL01A"]
 	path = power_supply/LION1CELL01A
 	url = git@github.com:mlab-modules/LION1CELL01.git
+	branch = LION1CELL01A
 [submodule "power_supply/LION1CELL01B"]
 	path = power_supply/LION1CELL01B
 	url = git@github.com:mlab-modules/LION1CELL01.git
+	branch = LION1CELL01B
 [submodule "power_supply/TPS63060V01A"]
 	path = power_supply/TPS63060V01A
 	url = git@github.com:mlab-modules/TPS63060V01.git
@@ -112,9 +136,6 @@
 [submodule "power_supply/STEPUPDC02A"]
 	path = power_supply/STEPUPDC02A
 	url = git@github.com:mlab-modules/STEPUPDC02.git
-[submodule "power_supply/STEPUPDC01A/doc/assets"]
-	path = power_supply/STEPUPDC01A/doc/assets
-	url = git@github.com:MLAB-project/documents.git
 [submodule "CPLD_FPGA/PROGLOG01A"]
 	path = CPLD_FPGA/PROGLOG01A
 	url = git@github.com:mlab-modules/PROGLOG01.git
@@ -136,9 +157,11 @@
 [submodule "comm_serial/I2CHUB02B"]
 	path = comm_serial/I2CHUB02B
 	url = https://github.com/mlab-modules/I2CHUB02
+	branch = I2CHUB02B
 [submodule "comm_serial/I2CHUB02A"]
 	path = comm_serial/I2CHUB02A
 	url = https://github.com/mlab-modules/I2CHUB02
+	branch = I2CHUB02A
 [submodule "sensors/GPS02B"]
 	path = sensors/GPS02B
 	url = git@github.com:mlab-modules/GPS02.git
