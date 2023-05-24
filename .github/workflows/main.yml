@@ -17,8 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with: 
-          repository: org/parent_repository
-          token: ${{ secrets.PRIVATE_TOKEN_GITHUB }}
           submodules: true
 
       - name: Pull & update submodules recursively
