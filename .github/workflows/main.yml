@@ -3,8 +3,11 @@ name: Send submodule updates to parent repo
 on:
   push:
     branches: 
-      - main
-
+      - master
+  workflow_dispatch:
+  schedule:
+  - cron: "0 0 * * *"
+  
 permissions: read-all|write-all
 
 jobs:
