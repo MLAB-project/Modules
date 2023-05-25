@@ -279,3 +279,7 @@
 	path = sensors/SHT31V01A
 	url = git@github.com:mlab-modules/SHT31V01.git
 	branch = SHT31V01A
+[submodule "sensors/SIPM01A"]
+	path = sensors/SIPM01A
+	url = git@github.com:mlab-modules/SIPM01.git
+	branch = SIPM01A
