@@ -295,3 +295,7 @@
 	path = sensors/TTLPROBE02A
 	url = git@github.com:mlab-modules/TTLPROBE02.git
 	branch = TTLPROBE02A
+[submodule "translators/I2CDIFF01A"]
+	path = translators/I2CDIFF01A
+	url = git@github.com:mlab-modules/I2CDIFF01.git
+	branch = I2CDIFF01A
