@@ -347,3 +347,7 @@
 	path = sensors/LCM01A
 	url = git@github.com:mlab-modules/LCM01.git
 	branch = LCM01A
+[submodule "sensors/LIGHTNING01A"]
+	path = sensors/LIGHTNING01A
+	url = git@github.com:mlab-modules/LIGHTNING01.git
+	branch = LIGHTNING01A
