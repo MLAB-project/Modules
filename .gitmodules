@@ -271,3 +271,7 @@
 	path = sensors/RPS01A
 	url = git@github.com:mlab-modules/RPS01.git
 	branch = RPS01A
+[submodule "sensors/SHT25V01A"]
+	path = sensors/SHT25V01A
+	url = git@github.com:mlab-modules/SHT25V01.git
+	branch = SHT25V01A
