@@ -339,3 +339,7 @@
 	path = sensors/ISL2902001A
 	url = git@github.com:mlab-modules/ISL2902001.git
 	branch = ISL2902001A
+[submodule "sensors/IUC01A"]
+	path = sensors/IUC01A
+	url = git@github.com:mlab-modules/IUC01.git
+	branch = IUC01A
