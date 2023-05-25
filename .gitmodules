@@ -235,3 +235,7 @@
 	path = power_supply/BATPOWER04A
 	url = git@github.com:mlab-modules/BATPOWER04.git
 	branch = BATPOWER04A
+[submodule "sensors/CCP2019V01A"]
+	path = sensors/CCP2019V01A
+	url = git@github.com:mlab-modules/CCP2019V01.git
+	branch = CCP2019V01A
