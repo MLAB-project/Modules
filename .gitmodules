@@ -343,3 +343,7 @@
 	path = sensors/IUC01A
 	url = git@github.com:mlab-modules/IUC01.git
 	branch = IUC01A
+[submodule "sensors/LCM01A"]
+	path = sensors/LCM01A
+	url = git@github.com:mlab-modules/LCM01.git
+	branch = LCM01A
