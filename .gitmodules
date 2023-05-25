@@ -291,3 +291,7 @@
 	path = sensors/TTLPROBE01A
 	url = git@github.com:mlab-modules/TTLPROBE01.git
 	branch = TTLPROBE01A
+[submodule "sensors/TTLPROBE02A"]
+	path = sensors/TTLPROBE02A
+	url = git@github.com:mlab-modules/TTLPROBE02.git
+	branch = TTLPROBE02A
