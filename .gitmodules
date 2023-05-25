@@ -243,3 +243,7 @@
 	path = sensors/GSENSE01A
 	url = git@github.com:mlab-modules/GSENSE01.git
 	branch = GSENSE01A
+[submodule "sensors/HCS01A"]
+	path = sensors/HCS01A
+	url = git@github.com:mlab-modules/HCS01.git
+	branch = HCS01A
