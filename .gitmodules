@@ -287,3 +287,7 @@
 	path = sensors/THERMOPHILE01A
 	url = git@github.com:mlab-modules/THERMOPHILE01.git
 	branch = THERMOPHILE01A
+[submodule "sensors/TTLPROBE01A"]
+	path = sensors/TTLPROBE01A
+	url = git@github.com:mlab-modules/TTLPROBE01.git
+	branch = TTLPROBE01A
