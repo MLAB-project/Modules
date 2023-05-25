@@ -323,3 +323,7 @@
 	path = sensors/IMU01A
 	url = git@github.com:mlab-modules/IMU01.git
 	branch = IMU01A
+[submodule "sensors/IRFEE01A"]
+	path = sensors/IRFEE01A
+	url = git@github.com:mlab-modules/IRFEE01.git
+	branch = IRFEE01A
