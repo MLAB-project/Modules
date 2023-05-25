@@ -327,3 +327,7 @@
 	path = sensors/IRFEE01A
 	url = git@github.com:mlab-modules/IRFEE01.git
 	branch = IRFEE01A
+[submodule "sensors/ISL02A"]
+	path = sensors/ISL02A
+	url = git@github.com:mlab-modules/ISL02.git
+	branch = ISL02A
