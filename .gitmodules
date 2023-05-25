@@ -263,3 +263,7 @@
 	path = sensors/RGBC01A
 	url = git@github.com:mlab-modules/RGBC01.git
 	branch = RGBC01A
+[submodule "sensors/RGBFEE01A"]
+	path = sensors/RGBFEE01A
+	url = git@github.com:mlab-modules/RGBFEE01.git
+	branch = RGBFEE01A
