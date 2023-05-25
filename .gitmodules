@@ -255,3 +255,7 @@
 	path = sensors/PIND01A
 	url = git@github.com:mlab-modules/PIND01.git
 	branch = PIND01A
+[submodule "sensors/R1S01A"]
+	path = sensors/R1S01A
+	url = git@github.com:mlab-modules/R1S01.git
+	branch = R1S01A
