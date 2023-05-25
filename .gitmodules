@@ -355,3 +355,7 @@
 	path = sensors/LTS01A
 	url = git@github.com:mlab-modules/LTS01.git
 	branch = LTS01A
+[submodule "sensors/MAG01A"]
+	path = sensors/MAG01A
+	url = git@github.com:mlab-modules/MAG01.git
+	branch = MAG01A
