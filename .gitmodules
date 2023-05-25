@@ -335,3 +335,7 @@
 	path = sensors/ISL03A
 	url = git@github.com:mlab-modules/ISL03.git
 	branch = ISL03A
+[submodule "sensors/ISL2902001A"]
+	path = sensors/ISL2902001A
+	url = git@github.com:mlab-modules/ISL2902001.git
+	branch = ISL2902001A
