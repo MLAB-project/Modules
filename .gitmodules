@@ -247,3 +247,7 @@
 	path = sensors/HCS01A
 	url = git@github.com:mlab-modules/HCS01.git
 	branch = HCS01A
+[submodule "sensors/PIEZO01A"]
+	path = sensors/PIEZO01A
+	url = git@github.com:mlab-modules/PIEZO01.git
+	branch = PIEZO01A
