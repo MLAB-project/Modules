@@ -359,3 +359,7 @@
 	path = sensors/MAG01A
 	url = git@github.com:mlab-modules/MAG01.git
 	branch = MAG01A
+[submodule "sensors/Pulse_catch01B"]
+	path = sensors/Pulse_catch01B
+	url = git@github.com:mlab-modules/Pulse_catch01.git
+	branch = Pulse_catch01B
