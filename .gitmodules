@@ -315,3 +315,7 @@
 	path = translators/VLT01A
 	url = git@github.com:mlab-modules/VLT01.git
 	branch = VLT01A
+[submodule "sensors/HUM01A"]
+	path = sensors/HUM01A
+	url = git@github.com:mlab-modules/HUM01.git
+	branch = HUM01A
