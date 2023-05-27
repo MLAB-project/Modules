@@ -15,14 +15,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3.5.2
         with: 
           submodules: true
+          fetch-depth: 1
 
       - name: Pull & update submodules recursively
         run: |
-          git submodule update --init --recursive
-          git submodule update --recursive --remote
+          # git submodule update --init --remote
+          git submodule init
+          git submodule sync
+          SM=`git submodule | cut -c2- | cut -d' ' -f2`
+          for f in $SM
+          do
+            echo $f
+            git submodule update --remote ${f} || echo "CHYBA"
+          done
+
 
       - name: Commit
         run: |
