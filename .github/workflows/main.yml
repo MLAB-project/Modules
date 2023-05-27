@@ -23,8 +23,12 @@ jobs:
       - name: Pull & update submodules recursively
         run: |
           # git submodule update --init --remote
-          A=`git submodule | cut -c2- | cut -d' ' -f2`
-          for f in $A; do echo $f; git submodule update --remote ${f}; done
+          SM=`git submodule | cut -c2- | cut -d' ' -f2`
+          for f in $SM
+          do
+            echo $f
+            git submodule update --remote ${f} || echo "CHYBA"
+          done
 
 
       - name: Commit
