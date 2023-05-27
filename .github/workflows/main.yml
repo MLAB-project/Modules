@@ -25,6 +25,7 @@ jobs:
           # git submodule update --init --remote
           git submodule init
           git submodule sync
+          git submodule foreach git fetch -v --depth=1
           SM=`git submodule | cut -c2- | cut -d' ' -f2`
           for f in $SM
           do
