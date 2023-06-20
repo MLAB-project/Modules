@@ -1,6 +1,0 @@
-init
-reset halt
-stm32x mass_erase 0
-flash write_image flash
-reset run
-shutdown
