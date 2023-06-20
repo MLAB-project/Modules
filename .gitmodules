@@ -1055,3 +1055,7 @@
 	path = power_supply/THERMOGEN01A
 	url = git@github.com:mlab-modules/THERMOGEN01.git
 	branch = THERMOGEN01A
+[submodule "power_supply/TPS63036V01A"]
+	path = power_supply/TPS63036V01A
+	url = git@github.com:mlab-modules/TPS63036V01.git
+	branch = TPS63036V01A
