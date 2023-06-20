@@ -723,3 +723,7 @@
 	path = comm_serial/TTLRS48501A
 	url = git@github.com:mlab-modules/TTLRS48501.git
 	branch = TTLRS48501A
+[submodule "comm_serial/RS232SINGLE01A"]
+	path = comm_serial/RS232SINGLE01A
+	url = git@github.com:mlab-modules/RS232SINGLE01.git
+	branch = RS232SINGLE01A
