@@ -991,3 +991,7 @@
 	path = power_supply/BATPOWER01A
 	url = git@github.com:mlab-modules/BATPOWER01.git
 	branch = BATPOWER01A
+[submodule "power_supply/BATPOWER02A"]
+	path = power_supply/BATPOWER02A
+	url = git@github.com:mlab-modules/BATPOWER02.git
+	branch = BATPOWER02A
