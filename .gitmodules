@@ -1031,3 +1031,7 @@
 	path = power_supply/MC3406301A
 	url = git@github.com:mlab-modules/MC3406301.git
 	branch = MC3406301A
+[submodule "power_supply/SOLAR01A"]
+	path = power_supply/SOLAR01A
+	url = git@github.com:mlab-modules/SOLAR01.git
+	branch = SOLAR01A
