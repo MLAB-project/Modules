@@ -1091,3 +1091,7 @@
 	path = power_sw/COILSW01A
 	url = git@github.com:mlab-modules/COILSW01.git
 	branch = COILSW01A
+[submodule "power_sw/DIG4SWHI01A"]
+	path = power_sw/DIG4SWHI01A
+	url = git@github.com:mlab-modules/DIG4SWHI01.git
+	branch = DIG4SWHI01A
