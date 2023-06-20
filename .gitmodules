@@ -811,3 +811,7 @@
 	path = human_interface/SW01A
 	url = git@github.com:mlab-modules/SW01.git
 	branch = SW01A
+[submodule "human_interface/TL01A"]
+	path = human_interface/TL01A
+	url = git@github.com:mlab-modules/TL01.git
+	branch = TL01A
