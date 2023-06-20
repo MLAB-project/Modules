@@ -871,3 +871,7 @@
 	path = mechanical/WINDGAUGE02B
 	url = git@github.com:mlab-modules/WINDGAUGE02.git
 	branch = WINDGAUGE02B
+[submodule "memory/EEPROM02A"]
+	path = memory/EEPROM02A
+	url = git@github.com:mlab-modules/EEPROM02.git
+	branch = EEPROM02A
