@@ -415,3 +415,7 @@
 	path = MCU_CPU/ARM/STM32F10xRxT01A
 	url = git@github.com:mlab-modules/STM32F10xRxT01.git
 	branch = STM32F10xRxT01A
+[submodule "MCU_CPU/ARM/STM32F30xRx01A"]
+	path = MCU_CPU/ARM/STM32F30xRx01A
+	url = git@github.com:mlab-modules/STM32F30xRx01.git
+	branch = STM32F30xRx01A
