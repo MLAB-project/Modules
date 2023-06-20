@@ -747,3 +747,7 @@
 	path = comm_serial/ETH02A
 	url = git@github.com:mlab-modules/ETH02.git
 	branch = ETH02A
+[submodule "comm_serial/TTLCAN01A"]
+	path = comm_serial/TTLCAN01A
+	url = git@github.com:mlab-modules/TTLCAN01.git
+	branch = TTLCAN01A
