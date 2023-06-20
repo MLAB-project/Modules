@@ -467,3 +467,7 @@
 	path = MCU_CPU/AVR/ATtinySO801B
 	url = git@github.com:mlab-modules/ATtinySO801.git
 	branch = ATtinySO801B
+[submodule "MCU_CPU/AVR/AVRUSB01A"]
+	path = MCU_CPU/AVR/AVRUSB01A
+	url = git@github.com:mlab-modules/AVRUSB01.git
+	branch = AVRUSB01A
