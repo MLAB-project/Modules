@@ -1019,3 +1019,7 @@
 	path = power_supply/CHPUMP01A
 	url = git@github.com:mlab-modules/CHPUMP01.git
 	branch = CHPUMP01A
+[submodule "power_supply/LINREG01A"]
+	path = power_supply/LINREG01A
+	url = git@github.com:mlab-modules/LINREG01.git
+	branch = LINREG01A
