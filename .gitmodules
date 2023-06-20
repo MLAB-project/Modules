@@ -1131,3 +1131,7 @@
 	path = power_sw/REL1SW01A
 	url = git@github.com:mlab-modules/REL1SW01.git
 	branch = REL1SW01A
+[submodule "power_sw/REL8SW01A"]
+	path = power_sw/REL8SW01A
+	url = git@github.com:mlab-modules/REL8SW01.git
+	branch = REL8SW01A
