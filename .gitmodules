@@ -607,3 +607,7 @@
 	path = TDC/GP201A
 	url = git@github.com:mlab-modules/GP201.git
 	branch = GP201A
+[submodule "audio/LM38601A"]
+	path = audio/LM38601A
+	url = git@github.com:mlab-modules/LM38601.git
+	branch = LM38601A
