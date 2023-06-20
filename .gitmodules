@@ -683,3 +683,7 @@
 	path = comm_serial/JTAGFT2232V01A
 	url = git@github.com:mlab-modules/JTAGFT2232V01.git
 	branch = JTAGFT2232V01A
+[submodule "comm_serial/JTAGFT2232V02A"]
+	path = comm_serial/JTAGFT2232V02A
+	url = git@github.com:mlab-modules/JTAGFT2232V02.git
+	branch = JTAGFT2232V02A
