@@ -1083,3 +1083,7 @@
 	path = power_supply/UNIPOWER08A
 	url = git@github.com:mlab-modules/UNIPOWER08.git
 	branch = UNIPOWER08A
+[submodule "power_supply/UPCONV01A"]
+	path = power_supply/UPCONV01A
+	url = git@github.com:mlab-modules/UPCONV01.git
+	branch = UPCONV01A
