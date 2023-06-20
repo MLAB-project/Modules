@@ -1107,3 +1107,7 @@
 	path = power_sw/NFET2X01A
 	url = git@github.com:mlab-modules/NFET2X01.git
 	branch = NFET2X01A
+[submodule "power_sw/NFET4X01A"]
+	path = power_sw/NFET4X01A
+	url = git@github.com:mlab-modules/NFET4X01.git
+	branch = NFET4X01A
