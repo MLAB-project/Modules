@@ -611,3 +611,7 @@
 	path = audio/LM38601A
 	url = git@github.com:mlab-modules/LM38601.git
 	branch = LM38601A
+[submodule "audio/ADCaudio01B"]
+	path = audio/ADCaudio01B
+	url = git@github.com:mlab-modules/ADCaudio01.git
+	branch = ADCaudio01B
