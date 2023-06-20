@@ -875,3 +875,7 @@
 	path = memory/EEPROM02A
 	url = git@github.com:mlab-modules/EEPROM02.git
 	branch = EEPROM02A
+[submodule "memory/SDcard01A"]
+	path = memory/SDcard01A
+	url = git@github.com:mlab-modules/SDcard01.git
+	branch = SDcard01A
