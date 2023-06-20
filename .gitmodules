@@ -927,3 +927,7 @@
 	path = motor_drivers/HB1FET01A
 	url = git@github.com:mlab-modules/HB1FET01.git
 	branch = HB1FET01A
+[submodule "motor_drivers/HB2FET01A"]
+	path = motor_drivers/HB2FET01A
+	url = git@github.com:mlab-modules/HB2FET01.git
+	branch = HB2FET01A
