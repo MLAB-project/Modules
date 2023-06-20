@@ -1099,3 +1099,7 @@
 	path = power_sw/DIG4SW01A
 	url = git@github.com:mlab-modules/DIG4SW01.git
 	branch = DIG4SW01A
+[submodule "power_sw/LDD01A"]
+	path = power_sw/LDD01A
+	url = git@github.com:mlab-modules/LDD01.git
+	branch = LDD01A
