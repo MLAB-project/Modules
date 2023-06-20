@@ -947,3 +947,7 @@
 	path = motor_drivers/NEMASTEP01A
 	url = git@github.com:mlab-modules/NEMASTEP01.git
 	branch = NEMASTEP01A
+[submodule "motor_drivers/3PHBRIDGE01A"]
+	path = motor_drivers/3PHBRIDGE01A
+	url = git@github.com:mlab-modules/3PHBRIDGE01.git
+	branch = 3PHBRIDGE01A
