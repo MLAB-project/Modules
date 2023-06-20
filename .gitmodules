@@ -755,3 +755,7 @@
 	path = comm_serial/TBPCIE01A
 	url = git@github.com:mlab-modules/TBPCIE01.git
 	branch = TBPCIE01A
+[submodule "comm_serial/USBHUB01A"]
+	path = comm_serial/USBHUB01A
+	url = git@github.com:mlab-modules/USBHUB01.git
+	branch = USBHUB01A
