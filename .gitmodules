@@ -719,3 +719,7 @@
 	path = comm_serial/I2C232V01A
 	url = git@github.com:mlab-modules/I2C232V01.git
 	branch = I2C232V01A
+[submodule "comm_serial/TTLRS48501A"]
+	path = comm_serial/TTLRS48501A
+	url = git@github.com:mlab-modules/TTLRS48501.git
+	branch = TTLRS48501A
