@@ -1111,3 +1111,7 @@
 	path = power_sw/NFET4X01A
 	url = git@github.com:mlab-modules/NFET4X01.git
 	branch = NFET4X01A
+[submodule "power_sw/NFET4X01B"]
+	path = power_sw/NFET4X01B
+	url = git@github.com:mlab-modules/NFET4X01.git
+	branch = NFET4X01B
