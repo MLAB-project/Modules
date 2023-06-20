@@ -691,3 +691,7 @@
 	path = comm_serial/SERVOHUB01A
 	url = git@github.com:mlab-modules/SERVOHUB01.git
 	branch = SERVOHUB01A
+[submodule "comm_serial/I2CPWM01A"]
+	path = comm_serial/I2CPWM01A
+	url = git@github.com:mlab-modules/I2CPWM01.git
+	branch = I2CPWM01A
