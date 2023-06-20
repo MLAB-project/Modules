@@ -1123,3 +1123,7 @@
 	path = power_sw/PWMLED01B
 	url = git@github.com:mlab-modules/PWMLED01.git
 	branch = PWMLED01B
+[submodule "power_sw/PWMLED01C"]
+	path = power_sw/PWMLED01C
+	url = git@github.com:mlab-modules/PWMLED01.git
+	branch = PWMLED01C
