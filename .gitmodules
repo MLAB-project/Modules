@@ -779,3 +779,7 @@
 	path = human_interface/LCD2L4P02A
 	url = git@github.com:mlab-modules/LCD2L4P02.git
 	branch = LCD2L4P02A
+[submodule "human_interface/LEDbar01A"]
+	path = human_interface/LEDbar01A
+	url = git@github.com:mlab-modules/LEDbar01.git
+	branch = LEDbar01A
