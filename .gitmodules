@@ -751,3 +751,7 @@
 	path = comm_serial/TTLCAN01A
 	url = git@github.com:mlab-modules/TTLCAN01.git
 	branch = TTLCAN01A
+[submodule "comm_serial/TBPCIE01A"]
+	path = comm_serial/TBPCIE01A
+	url = git@github.com:mlab-modules/TBPCIE01.git
+	branch = TBPCIE01A
