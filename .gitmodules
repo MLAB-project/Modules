@@ -763,3 +763,7 @@
 	path = comm_serial/LED01A
 	url = git@github.com:mlab-modules/LED01.git
 	branch = LED01A
+[submodule "human_interface/DIP8SW01A"]
+	path = human_interface/DIP8SW01A
+	url = git@github.com:mlab-modules/DIP8SW01.git
+	branch = DIP8SW01A
