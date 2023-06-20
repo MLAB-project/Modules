@@ -1043,3 +1043,7 @@
 	path = power_supply/SUPERCAP01B
 	url = git@github.com:mlab-modules/SUPERCAP01.git
 	branch = SUPERCAP01B
+[submodule "power_supply/SYMPOWER01A"]
+	path = power_supply/SYMPOWER01A
+	url = git@github.com:mlab-modules/SYMPOWER01.git
+	branch = SYMPOWER01A
