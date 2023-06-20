@@ -1027,3 +1027,7 @@
 	path = power_supply/LM108601A
 	url = git@github.com:mlab-modules/LM108601.git
 	branch = LM108601A
+[submodule "power_supply/MC3406301A"]
+	path = power_supply/MC3406301A
+	url = git@github.com:mlab-modules/MC3406301.git
+	branch = MC3406301A
