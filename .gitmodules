@@ -399,3 +399,7 @@
 	path = CPLD_FPGA/S6AN01A
 	url = git@github.com:mlab-modules/S6AN01.git
 	branch = S6AN01A
+[submodule "IR/IRDA01A"]
+	path = IR/IRDA01A
+	url = git@github.com:mlab-modules/IRDA01.git
+	branch = IRDA01A
