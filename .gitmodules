@@ -815,3 +815,7 @@
 	path = human_interface/TL01A
 	url = git@github.com:mlab-modules/TL01.git
 	branch = TL01A
+[submodule "human_interface/TOUCHBOARD01A"]
+	path = human_interface/TOUCHBOARD01A
+	url = git@github.com:mlab-modules/TOUCHBOARD01.git
+	branch = TOUCHBOARD01A
