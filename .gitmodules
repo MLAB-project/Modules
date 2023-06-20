@@ -1087,3 +1087,7 @@
 	path = power_supply/UPCONV01A
 	url = git@github.com:mlab-modules/UPCONV01.git
 	branch = UPCONV01A
+[submodule "power_sw/COILSW01A"]
+	path = power_sw/COILSW01A
+	url = git@github.com:mlab-modules/COILSW01.git
+	branch = COILSW01A
