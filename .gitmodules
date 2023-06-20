@@ -395,3 +395,7 @@
 	path = CPLD_FPGA/S3AN01B
 	url = git@github.com:mlab-modules/S3AN01.git
 	branch = S3AN01B
+[submodule "CPLD_FPGA/S6AN01A"]
+	path = CPLD_FPGA/S6AN01A
+	url = git@github.com:mlab-modules/S6AN01.git
+	branch = S6AN01A
