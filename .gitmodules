@@ -951,3 +951,7 @@
 	path = motor_drivers/3PHBRIDGE01A
 	url = git@github.com:mlab-modules/3PHBRIDGE01.git
 	branch = 3PHBRIDGE01A
+[submodule "op_amps/OZdual01A"]
+	path = op_amps/OZdual01A
+	url = git@github.com:mlab-modules/OZdual01.git
+	branch = OZdual01A
