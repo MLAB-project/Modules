@@ -1,5 +1,0 @@
-(gerbv-file-version! "2.0A")
-(define-layer! 1 (cons 'filename "/home/kaklik/MLAB/Modules/PIC/PIC18F4550v01A/CAM_PROFI/BOARD.PHO")(cons 'inverted #t)(cons 'visible #t)(cons 'color #(62194 62194 62194)))
-(define-layer! 0 (cons 'filename "/home/kaklik/MLAB/Modules/PIC/PIC18F4550v01A/CAM_PROFI/T1.PHO")(cons 'visible #t)(cons 'color #(0 0 0)))
-(define-layer! -1 (cons 'filename "/home/kaklik/MLAB/Modules/PIC/PIC18F4550v01A/CAM_PROFI")(cons 'visible #f)(cons 'color #(65535 65535 65535)))
-(set-render-type! 3)
