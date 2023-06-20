@@ -527,3 +527,7 @@
 	path = MCU_CPU/PIC/PIC16F87xTQ4401A
 	url = git@github.com:mlab-modules/PIC16F87xTQ4401.git
 	branch = PIC16F87xTQ4401A
+[submodule "RF/LNA01A"]
+	path = RF/LNA01A
+	url = git@github.com:mlab-modules/LNA01.git
+	branch = LNA01A
