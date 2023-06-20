@@ -1103,3 +1103,7 @@
 	path = power_sw/LDD01A
 	url = git@github.com:mlab-modules/LDD01.git
 	branch = LDD01A
+[submodule "power_sw/NFET2X01A"]
+	path = power_sw/NFET2X01A
+	url = git@github.com:mlab-modules/NFET2X01.git
+	branch = NFET2X01A
