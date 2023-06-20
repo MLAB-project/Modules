@@ -715,3 +715,7 @@
 	path = comm_serial/USBIO01A
 	url = git@github.com:mlab-modules/USBIO01.git
 	branch = USBIO01A
+[submodule "comm_serial/I2C232V01A"]
+	path = comm_serial/I2C232V01A
+	url = git@github.com:mlab-modules/I2C232V01.git
+	branch = I2C232V01A
