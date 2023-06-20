@@ -707,3 +707,7 @@
 	path = comm_serial/I2CHUB01B
 	url = git@github.com:mlab-modules/I2CHUB01.git
 	branch = I2CHUB01B
+[submodule "comm_serial/FT230X01A"]
+	path = comm_serial/FT230X01A
+	url = git@github.com:mlab-modules/FT230X01.git
+	branch = FT230X01A
