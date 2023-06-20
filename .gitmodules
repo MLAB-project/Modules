@@ -495,3 +495,7 @@
 	path = MCU_CPU/PIC/PICPGR301A
 	url = git@github.com:mlab-modules/PICPGR301.git
 	branch = PICPGR301A
+[submodule "MCU_CPU/PIC/PIC18F8x2001A"]
+	path = MCU_CPU/PIC/PIC18F8x2001A
+	url = git@github.com:mlab-modules/PIC18F8x2001.git
+	branch = PIC18F8x2001A
