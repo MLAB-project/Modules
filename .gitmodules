@@ -659,3 +659,7 @@
 	path = clock/CLKGEN02A
 	url = git@github.com:mlab-modules/CLKGEN02.git
 	branch = CLKGEN02A
+[submodule "clock/RTC01A"]
+	path = clock/RTC01A
+	url = git@github.com:mlab-modules/RTC01.git
+	branch = RTC01A
