@@ -735,3 +735,7 @@
 	path = comm_serial/I2CSPI01A
 	url = git@github.com:mlab-modules/I2CSPI01.git
 	branch = I2CSPI01A
+[submodule "comm_serial/USB4xUART01A"]
+	path = comm_serial/USB4xUART01A
+	url = git@github.com:mlab-modules/USB4xUART01.git
+	branch = USB4xUART01A
