@@ -1051,3 +1051,7 @@
 	path = power_supply/SYMPOWER02A
 	url = git@github.com:mlab-modules/SYMPOWER02.git
 	branch = SYMPOWER02A
+[submodule "power_supply/THERMOGEN01A"]
+	path = power_supply/THERMOGEN01A
+	url = git@github.com:mlab-modules/THERMOGEN01.git
+	branch = THERMOGEN01A
