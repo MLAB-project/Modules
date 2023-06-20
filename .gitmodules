@@ -711,3 +711,7 @@
 	path = comm_serial/FT230X01A
 	url = git@github.com:mlab-modules/FT230X01.git
 	branch = FT230X01A
+[submodule "comm_serial/USBIO01A"]
+	path = comm_serial/USBIO01A
+	url = git@github.com:mlab-modules/USBIO01.git
+	branch = USBIO01A
