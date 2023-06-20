@@ -739,3 +739,7 @@
 	path = comm_serial/USB4xUART01A
 	url = git@github.com:mlab-modules/USB4xUART01.git
 	branch = USB4xUART01A
+[submodule "comm_serial/ETH01A"]
+	path = comm_serial/ETH01A
+	url = git@github.com:mlab-modules/ETH01.git
+	branch = ETH01A
