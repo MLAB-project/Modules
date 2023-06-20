@@ -499,3 +499,7 @@
 	path = MCU_CPU/PIC/PIC18F8x2001A
 	url = git@github.com:mlab-modules/PIC18F8x2001.git
 	branch = PIC18F8x2001A
+[submodule "MCU_CPU/PIC/PIC16F87xSO2801A"]
+	path = MCU_CPU/PIC/PIC16F87xSO2801A
+	url = git@github.com:mlab-modules/PIC16F87xSO2801.git
+	branch = PIC16F87xSO2801A
