@@ -431,3 +431,7 @@
 	path = MCU_CPU/AVR/ATmega801B
 	url = git@github.com:mlab-modules/ATmega801.git
 	branch = ATmega801B
+[submodule "MCU_CPU/AVR/ATmega8DIL01A"]
+	path = MCU_CPU/AVR/ATmega8DIL01A
+	url = git@github.com:mlab-modules/ATmega8DIL01.git
+	branch = ATmega8DIL01A
