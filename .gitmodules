@@ -635,3 +635,7 @@
 	path = audio/MIC01A
 	url = git@github.com:mlab-modules/MIC01.git
 	branch = MIC01A
+[submodule "audio/AD1881A01A"]
+	path = audio/AD1881A01A
+	url = git@github.com:mlab-modules/AD1881A01.git
+	branch = AD1881A01A
