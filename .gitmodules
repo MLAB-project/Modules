@@ -1023,3 +1023,7 @@
 	path = power_supply/LINREG01A
 	url = git@github.com:mlab-modules/LINREG01.git
 	branch = LINREG01A
+[submodule "power_supply/LM108601A"]
+	path = power_supply/LM108601A
+	url = git@github.com:mlab-modules/LM108601.git
+	branch = LM108601A
