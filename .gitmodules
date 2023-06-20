@@ -1067,3 +1067,7 @@
 	path = power_supply/UNIPOWER04A
 	url = git@github.com:mlab-modules/UNIPOWER04.git
 	branch = UNIPOWER04A
+[submodule "power_supply/UNIPOWER05A"]
+	path = power_supply/UNIPOWER05A
+	url = git@github.com:mlab-modules/UNIPOWER05.git
+	branch = UNIPOWER05A
