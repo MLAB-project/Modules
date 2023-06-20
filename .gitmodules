@@ -411,3 +411,7 @@
 	path = IR/TXIR01B
 	url = git@github.com:mlab-modules/TXIR01.git
 	branch = TXIR01B
+[submodule "MCU_CPU/ARM/STM32F10xRxT01A"]
+	path = MCU_CPU/ARM/STM32F10xRxT01A
+	url = git@github.com:mlab-modules/STM32F10xRxT01.git
+	branch = STM32F10xRxT01A
