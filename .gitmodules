@@ -1003,3 +1003,7 @@
 	path = power_supply/BATPOWER05A
 	url = git@github.com:mlab-modules/BATPOWER05.git
 	branch = BATPOWER05A
+[submodule "power_supply/DOWNCONV01A"]
+	path = power_supply/DOWNCONV01A
+	url = git@github.com:mlab-modules/DOWNCONV01.git
+	branch = DOWNCONV01A
