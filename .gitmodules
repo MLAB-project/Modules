@@ -623,3 +623,7 @@
 	path = audio/SYMTRANS01A
 	url = git@github.com:mlab-modules/SYMTRANS01.git
 	branch = SYMTRANS01A
+[submodule "audio/ADCaudio01A"]
+	path = audio/ADCaudio01A
+	url = git@github.com:mlab-modules/ADCaudio01.git
+	branch = ADCaudio01A
