@@ -471,3 +471,7 @@
 	path = MCU_CPU/AVR/AVRUSB01A
 	url = git@github.com:mlab-modules/AVRUSB01.git
 	branch = AVRUSB01A
+[submodule "MCU_CPU/PIC/PICICD01A"]
+	path = MCU_CPU/PIC/PICICD01A
+	url = git@github.com:mlab-modules/PICICD01.git
+	branch = PICICD01A
