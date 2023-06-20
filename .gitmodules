@@ -887,3 +887,7 @@
 	path = motor_drivers/AXISCONTROL01A
 	url = git@github.com:mlab-modules/AXISCONTROL01.git
 	branch = AXISCONTROL01A
+[submodule "motor_drivers/DRV8835HB01A"]
+	path = motor_drivers/DRV8835HB01A
+	url = git@github.com:mlab-modules/DRV8835HB01.git
+	branch = DRV8835HB01A
