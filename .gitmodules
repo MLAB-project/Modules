@@ -1139,3 +1139,7 @@
 	path = power_sw/TRIACSHARP02A
 	url = git@github.com:mlab-modules/TRIACSHARP02.git
 	branch = TRIACSHARP02A
+[submodule "universal/C01A"]
+	path = universal/C01A
+	url = git@github.com:mlab-modules/C01.git
+	branch = C01A
