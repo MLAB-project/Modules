@@ -935,3 +935,7 @@
 	path = motor_drivers/HT675101A
 	url = git@github.com:mlab-modules/HT675101.git
 	branch = HT675101A
+[submodule "motor_drivers/MPC17511HB01A"]
+	path = motor_drivers/MPC17511HB01A
+	url = git@github.com:mlab-modules/MPC17511HB01.git
+	branch = MPC17511HB01A
