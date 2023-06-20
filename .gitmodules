@@ -899,3 +899,7 @@
 	path = motor_drivers/HBRIDGE01A
 	url = git@github.com:mlab-modules/HBRIDGE01.git
 	branch = HBRIDGE01A
+[submodule "motor_drivers/HBRIDGE01B"]
+	path = motor_drivers/HBRIDGE01B
+	url = git@github.com:mlab-modules/HBRIDGE01.git
+	branch = HBRIDGE01B
