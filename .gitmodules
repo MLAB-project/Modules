@@ -759,3 +759,7 @@
 	path = comm_serial/USBHUB01A
 	url = git@github.com:mlab-modules/USBHUB01.git
 	branch = USBHUB01A
+[submodule "comm_serial/LED01A"]
+	path = comm_serial/LED01A
+	url = git@github.com:mlab-modules/LED01.git
+	branch = LED01A
