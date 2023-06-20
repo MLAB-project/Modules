@@ -535,3 +535,7 @@
 	path = RF/RX433MHz01A
 	url = git@github.com:mlab-modules/RX433MHz01.git
 	branch = RX433MHz01A
+[submodule "RF/BLE01A"]
+	path = RF/BLE01A
+	url = git@github.com:mlab-modules/BLE01.git
+	branch = BLE01A
