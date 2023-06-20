@@ -639,3 +639,7 @@
 	path = audio/AD1881A01A
 	url = git@github.com:mlab-modules/AD1881A01.git
 	branch = AD1881A01A
+[submodule "clock/CLKGEN01A"]
+	path = clock/CLKGEN01A
+	url = git@github.com:mlab-modules/CLKGEN01.git
+	branch = CLKGEN01A
