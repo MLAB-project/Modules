@@ -663,3 +663,7 @@
 	path = clock/RTC01A
 	url = git@github.com:mlab-modules/RTC01.git
 	branch = RTC01A
+[submodule "clock/RTC02A"]
+	path = clock/RTC02A
+	url = git@github.com:mlab-modules/RTC02.git
+	branch = RTC02A
