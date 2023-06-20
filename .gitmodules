@@ -631,3 +631,7 @@
 	path = audio/POWERDAC01A
 	url = git@github.com:mlab-modules/POWERDAC01.git
 	branch = POWERDAC01A
+[submodule "audio/MIC01A"]
+	path = audio/MIC01A
+	url = git@github.com:mlab-modules/MIC01.git
+	branch = MIC01A
