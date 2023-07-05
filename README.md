@@ -2,10 +2,10 @@
 
 The MLAB Project was created to develop an universal kit to support hobbyist and professionals in the construction of simple or more complicated devices and instruments (robots, automation systems, testing kits and so on). It is primarily intended for engineers and scientists and it is in continuous development since 2003.
 
-** This repository is archived because its contents have been split into separate repositories in the [MLAB-modules](https://github.com/mlab-modules/) organization. The development of new [MLAB](https://www.mlab.cz) components is still in progress and development has not been suspended. You can read about the reasons of the repository split on the [Discussions thread](https://github.com/orgs/MLAB-project/discussions/1). **
+**This repository is archived because its contents have been split into separate repositories in the [MLAB-modules](https://github.com/mlab-modules/) organization. The development of new [MLAB](https://www.mlab.cz) components is still in progress and development has not been suspended. You can read about the reasons of the repository split on the [Discussions thread](https://github.com/orgs/MLAB-project/discussions/1).**
 
 
-**This repository is only a component of the [complete MLAB system](http://www.mlab.cz/)** 
+This repository is only a component of the [complete MLAB system](http://www.mlab.cz/)
 
 ## Modules
 
